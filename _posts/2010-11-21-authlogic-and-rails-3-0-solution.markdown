@@ -22,18 +22,18 @@ Some of you might be facing an issue with Authlogic 2.1.6 and Rails 3.0.3.
 ####Gemfile
 
 {% highlight ruby %}
-    source 'http://rubygems.org'
-    
-    gem 'rails', '3.0.3'
-    gem 'sqlite3-ruby', :require => 'sqlite3'
-    gem 'mysql2'
-    gem 'authlogic'
+source 'http://rubygems.org'
+
+gem 'rails', '3.0.3'
+gem 'sqlite3-ruby', :require => 'sqlite3'
+gem 'mysql2'
+gem 'authlogic'
 {% endhighlight %}
 
 With a Gemfile that looks like that, you're running into an error that looks like this:
 
 {% highlight ruby %}
-    undefined method `to_key' for #<UserSession: no credentials provided>
+undefined method `to_key' for #<UserSession: no credentials provided>
 {% endhighlight %}
 
 What this means is your Authlogic [authentication][5] is failing. Why? It's failing because Authlogic's UserSession.new constructor is being called without passing a username and password:
@@ -41,22 +41,22 @@ What this means is your Authlogic [authentication][5] is failing. Why? It's fail
 ####app/controllers/UserSessionsController
 
 {% highlight ruby %}
-    def create
-      @user_session = UserSession.new(params[:user_session])
-      if @user_session.save
-        redirect_to root_url
-      else
-        redirect_to admin_url
-      end
-    end
+def create
+  @user_session = UserSession.new(params[:user_session])
+  if @user_session.save
+    redirect_to root_url
+  else
+    redirect_to admin_url
+  end
+end
 {% endhighlight %}
 
 How could this happen? Routing in Rails 3.0 is different. As a result, Authlogic can't do two things: 
 
 {% highlight ruby %}
- 1. First, Authlogic can't create a hash of your username/password and store it in *:user_session*, so params[...] will fail.
- 
- 2. Finally, Authlogic doesn't know which REST method to bind the authentication routine to, so it will fail to execute your *create* method.
+1. First, Authlogic can't create a hash of your username/password and store it in *:user_session*, so params[...] will fail.
+
+2. Finally, Authlogic doesn't know which REST method to bind the authentication routine to, so it will fail to execute your *create* method.
 {% endhighlight %}
 
 My solution addresses each concern the Rails 3.0 way. As a result, I'll show you how to keep the Official Authlogic and the bonus is it will actually work in production.
@@ -65,17 +65,17 @@ My solution addresses each concern the Rails 3.0 way. As a result, I'll show you
 First, I want to address the route many are purporting in the Rails Community. Many people are recommending we use the unofficial fork of Authlogic:
 
 {% highlight ruby %}
-    gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3'
+gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3'
 {% endhighlight %}
 
 Essentially, they are suggesting you abandon the Authlogic core. I think such a decision is premature at best. At worst you're going to run into a host of support issues and I recommend against it! I'm not going to use the unofficial fork and I'll tell you why:
 
 {% highlight ruby %}
- 1. It's unnecessary since Ben has not abandoned Authlogic
- 
- 2. The branch will not work with Bundler. Bundler installs git branches separately from system gems. So instead of seeing the correct install at /ruby/gems/1.8.7/gems/authlogic-2.1.6. You're going to see something like /.bundle/ruby/1.8.7/bundler/gems/authlogic-87e75311f835. What this means is Rails won't find Authlogic. That's a big problem!
- 
- 3. I have a more simple solution for you.
+1. It's unnecessary since Ben has not abandoned Authlogic
+
+2. The branch will not work with Bundler. Bundler installs git branches separately from system gems. So instead of seeing the correct install at /ruby/gems/1.8.7/gems/authlogic-2.1.6. You're going to see something like /.bundle/ruby/1.8.7/bundler/gems/authlogic-87e75311f835. What this means is Rails won't find Authlogic. That's a big problem!
+
+3. I have a more simple solution for you.
 {% endhighlight %}
 
 ###Think Simple not Simplistic
@@ -91,13 +91,13 @@ This is a one line of code deal and it's clean. Very clean! So, just update your
 This is how it might look originally:
 
 {% highlight ruby %}
-    <%= form_for @user_session do |f| %>
+<%= form_for @user_session do |f| %>
 {% endhighlight %}
 
 Update your form_for helper to this:
 
 {% highlight ruby %}
-    <%= form_for @user_session, :as => :user_session, :url => { :action => "create" } do |f| %>
+<%= form_for @user_session, :as => :user_session, :url => { :action => "create" } do |f| %>
 {% endhighlight %}
 
 The first problem was Authlogic couldn't create a hash of your username/password. Here, the solution is to create your own user session hash using Rails 3.0 syntax :as => :user_session.
@@ -112,13 +112,13 @@ There is a second option that I don't recommend as I feel it adds technical debt
 Do this and you don't have to update your *new.html.erb* View:
 
 {% highlight ruby %}
-    def to_key
-      new_record? ? nil : [ self.send(self.class.primary_key) ]
-    end
-    
-    def persisted?
-      false
-    end
+def to_key
+  new_record? ? nil : [ self.send(self.class.primary_key) ]
+end
+
+def persisted?
+  false
+end
 {% endhighlight %}
 
 This option adds technical debt to the UserSession model since now you have to maintain Authlogic specific code. Such a move is best addressed by Authlogic's author.

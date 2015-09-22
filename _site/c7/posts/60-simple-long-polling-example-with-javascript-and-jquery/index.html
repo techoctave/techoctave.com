@@ -27,8 +27,8 @@
 	
     <div class="feat">
       <h5 class="page-date">
-        <time datetime="2011-10-16T02:20:07Z" itemprop="datePublished">
-          16 October 2011
+        <time datetime="2011-10-15T22:20:07-04:00" itemprop="datePublished">
+          15 October 2011
         </time>
       </h5>
     </div>
@@ -62,13 +62,12 @@
 
 <p>Now, if you needed to poll your web service, your first instinct might be to do something like this with JavaScript and jQuery:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="nx">setInterval</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
-        <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span> <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;server&quot;</span><span class="p">,</span> <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
-            <span class="c1">//Update your dashboard gauge</span>
-            <span class="nx">salesGauge</span><span class="p">.</span><span class="nx">setValue</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
-        <span class="p">},</span> <span class="nx">dataType</span><span class="o">:</span> <span class="s2">&quot;json&quot;</span><span class="p">});</span>
-    <span class="p">},</span> <span class="mi">30000</span><span class="p">);</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">setInterval</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span> <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;server&quot;</span><span class="p">,</span> <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+        <span class="c1">//Update your dashboard gauge</span>
+        <span class="nx">salesGauge</span><span class="p">.</span><span class="nx">setValue</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+    <span class="p">},</span> <span class="nx">dataType</span><span class="o">:</span> <span class="s2">&quot;json&quot;</span><span class="p">});</span>
+<span class="p">},</span> <span class="mi">30000</span><span class="p">);</span></code></pre></div>
 
 
 <p>Here, we have the poll ready to execute every thirty (30) seconds. This code is pretty good. It's clean and asynchronous. You're feeling confident. Things will work (and they will), but with a catch. What if it takes longer than thirty (30) seconds for the server to return your call?</p>
@@ -79,18 +78,17 @@
 
 <p>If you find yourself in a situation where you're going to bust your interval time, then a recursive <em>setTimeout</em> pattern is recommend:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="p">(</span><span class="kd">function</span> <span class="nx">poll</span><span class="p">(){</span>
-       <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
-          <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span> <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;server&quot;</span><span class="p">,</span> <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
-            <span class="c1">//Update your dashboard gauge</span>
-            <span class="nx">salesGauge</span><span class="p">.</span><span class="nx">setValue</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">(</span><span class="kd">function</span> <span class="nx">poll</span><span class="p">(){</span>
+   <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+      <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span> <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;server&quot;</span><span class="p">,</span> <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+        <span class="c1">//Update your dashboard gauge</span>
+        <span class="nx">salesGauge</span><span class="p">.</span><span class="nx">setValue</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
 
-            <span class="c1">//Setup the next poll recursively</span>
-            <span class="nx">poll</span><span class="p">();</span>
-          <span class="p">},</span> <span class="nx">dataType</span><span class="o">:</span> <span class="s2">&quot;json&quot;</span><span class="p">});</span>
-      <span class="p">},</span> <span class="mi">30000</span><span class="p">);</span>
-    <span class="p">})();</span>
-</code></pre></div>
+        <span class="c1">//Setup the next poll recursively</span>
+        <span class="nx">poll</span><span class="p">();</span>
+      <span class="p">},</span> <span class="nx">dataType</span><span class="o">:</span> <span class="s2">&quot;json&quot;</span><span class="p">});</span>
+  <span class="p">},</span> <span class="mi">30000</span><span class="p">);</span>
+<span class="p">})();</span></code></pre></div>
 
 
 <p>Using the Closure technique, <em>poll</em> becomes a self executing JavaScript function that runs the first time automatically. Sets up the thirty (30) second interval. Makes the asynchronous Ajax call to your server. Then, finally, sets up the next poll recursively.</p>
@@ -111,14 +109,13 @@
 
 <p>If you still want to do some type of client-side polling, then better to use setTimeout to set the interval in some fashion. Maybe something like:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="p">(</span><span class="kd">function</span> <span class="nx">poll</span><span class="p">()</span> <span class="p">{</span>
-       <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-           <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span> <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;server&quot;</span><span class="p">,</span> <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
-                <span class="nx">sales</span><span class="p">.</span><span class="nx">setValue</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
-           <span class="p">},</span> <span class="nx">dataType</span><span class="o">:</span> <span class="s2">&quot;json&quot;</span><span class="p">,</span> <span class="nx">complete</span><span class="o">:</span> <span class="nx">poll</span> <span class="p">});</span>
-        <span class="p">},</span> <span class="mi">30000</span><span class="p">);</span>
-    <span class="p">})();</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">(</span><span class="kd">function</span> <span class="nx">poll</span><span class="p">()</span> <span class="p">{</span>
+   <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+       <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span> <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;server&quot;</span><span class="p">,</span> <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">sales</span><span class="p">.</span><span class="nx">setValue</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+       <span class="p">},</span> <span class="nx">dataType</span><span class="o">:</span> <span class="s2">&quot;json&quot;</span><span class="p">,</span> <span class="nx">complete</span><span class="o">:</span> <span class="nx">poll</span> <span class="p">});</span>
+    <span class="p">},</span> <span class="mi">30000</span><span class="p">);</span>
+<span class="p">})();</span></code></pre></div>
 
 
 <p>If you can pull off keeping your connection open, then your application could see faster server response times and feel more responsive. That's a good thing - Good luck!</p>
@@ -133,17 +130,16 @@
 
 <p>No two browser vendors will implement the WebSockets protocol exactly alike. Socket.IO tries to normalize those differences. Here's how you might use Socket.IO with our <a href="http://techoctave.com/gauges">Dashboard Gauge Suite</a>:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;/socket.io/socket.io.js&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
-    <span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
-      <span class="kd">var</span> <span class="nx">socket</span> <span class="o">=</span> <span class="nx">io</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s2">&quot;http://localhost&quot;</span><span class="p">);</span>
-      <span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;sales&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">//Update your dashboard gauge</span>
-        <span class="nx">salesGauge</span><span class="p">.</span><span class="nx">setValue</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
-    
-        <span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;profit&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">my</span><span class="o">:</span> <span class="s1">&#39;data&#39;</span> <span class="p">});</span>
-      <span class="p">});</span>
-    <span class="o">&lt;</span><span class="err">/script&gt;</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;/socket.io/socket.io.js&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
+<span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+  <span class="kd">var</span> <span class="nx">socket</span> <span class="o">=</span> <span class="nx">io</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s2">&quot;http://localhost&quot;</span><span class="p">);</span>
+  <span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;sales&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//Update your dashboard gauge</span>
+    <span class="nx">salesGauge</span><span class="p">.</span><span class="nx">setValue</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+
+    <span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;profit&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">my</span><span class="o">:</span> <span class="s1">&#39;data&#39;</span> <span class="p">});</span>
+  <span class="p">});</span>
+<span class="o">&lt;</span><span class="err">/script&gt;</span></code></pre></div>
 
 
 <p>In order to provide realtime connectivity on every browser, Socket.IO selects the most capable transport at runtime, without it affecting the API. If WebSockets are available, it will use WebSockets.</p>

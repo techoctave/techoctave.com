@@ -31,12 +31,12 @@ Using these techniques, the same app you write for a desktop can run great on a 
 Once the UI hits a breakpoint, simply update our Gauge with the width and height that looks best for that breakpoint:
 
 {% highlight js %}
-    var knots = new Gauge("knots");
-    . . .
-    knots.set("width", width);
-    knots.set("height", height);
-    . . .    
-    knots.refresh();
+var knots = new Gauge("knots");
+. . .
+knots.set("width", width);
+knots.set("height", height);
+. . .    
+knots.refresh();
 {% endhighlight %}
 
 Using a Responsive Architecture will set your application up for success - You don't need autoresize to make that happen. We'll keep autoresize in for backwards compatibility, for a few releases at least, but we'll no longer promote it as a feature. 

@@ -27,7 +27,7 @@
 	
     <div class="feat">
       <h5 class="page-date">
-        <time datetime="2013-07-01T11:58:38Z" itemprop="datePublished">
+        <time datetime="2013-07-01T07:58:38-04:00" itemprop="datePublished">
           01 July 2013
         </time>
       </h5>
@@ -48,12 +48,11 @@
 
 <p>If the entire application look-and-feel changes - Light to Dark for example. Use the set "method" to update a style property and "refresh" the gauge instance. E.g.</p>
 
-<div class="highlight"><pre><code class="js">    <span class="kd">var</span> <span class="nx">knots</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Gauge</span><span class="p">(</span><span class="s2">&quot;knots&quot;</span><span class="p">);</span>
-    <span class="p">.</span> <span class="p">.</span> <span class="p">.</span>    
-    <span class="nx">knots</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s2">&quot;baseColor&quot;</span><span class="p">,</span> <span class="s2">&quot;#000000&quot;</span><span class="p">);</span>
-    <span class="p">.</span> <span class="p">.</span> <span class="p">.</span>
-    <span class="nx">knots</span><span class="p">.</span><span class="nx">refresh</span><span class="p">();</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">knots</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Gauge</span><span class="p">(</span><span class="s2">&quot;knots&quot;</span><span class="p">);</span>
+<span class="p">.</span> <span class="p">.</span> <span class="p">.</span>    
+<span class="nx">knots</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s2">&quot;baseColor&quot;</span><span class="p">,</span> <span class="s2">&quot;#000000&quot;</span><span class="p">);</span>
+<span class="p">.</span> <span class="p">.</span> <span class="p">.</span>
+<span class="nx">knots</span><span class="p">.</span><span class="nx">refresh</span><span class="p">();</span></code></pre></div>
 
 
 <p>That will allow you to theme the application and still maintain browser and device flexibility because we strictly use SVG attributes to style SVG elements.</p>

@@ -656,9 +656,9 @@ section#single-wrap img {
 
 /* highlights */
 
-.highlight {
-    /*display: table;
-    margin: 0 auto;*/
+.highlight { 
+    padding: 10px 5px;
+    margin: 20px 20px 20px; 
     font-size: 90%;
 }
 
@@ -790,7 +790,10 @@ section#single-wrap img {
 
   section#single-wrap blockquote { padding: 0 20px; border-left: 4px solid 333; }
 
-  /*.highlight { padding: 10px 5px; margin: 30px 20px 40px; }*/
+  /*.highlight { 
+      padding: 10px 5px;
+      margin: 20px 20px 20px; 
+  }*/
   
 }
 

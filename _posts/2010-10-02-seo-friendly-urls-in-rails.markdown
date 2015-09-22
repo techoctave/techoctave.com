@@ -18,13 +18,13 @@ Here's a quick run down of the process. Take for example a blog post called *SEO
 This is an example of how to setup RESTful routes in Rails. I'll elaborate on Rails and RESTful architecture another time.
 
 {% highlight ruby %}
-    map.resources :posts
+map.resources :posts
 {% endhighlight %}
 
 UPDATE: The above route was written for Rails 2.3.8. Here is the updated Route for Rails 3.0:
 
 {% highlight ruby %}
-    resources :posts
+resources :posts
 {% endhighlight %}
 
 ####app/models/post.rb
@@ -32,19 +32,19 @@ UPDATE: The above route was written for Rails 2.3.8. Here is the updated Route f
 In your Post domain model, override the to_param method. Here, you can specify the unique id format for each instance of a Post object:
 
 {% highlight ruby %}
-    def to_param
-      "#{id}-#{title.downcase.gsub(/[^a-zA-Z0-9]+/, '-').gsub(/-{2,}/, '-').gsub(/^-|-$/, '')}"
-    end
+def to_param
+  "#{id}-#{title.downcase.gsub(/[^a-zA-Z0-9]+/, '-').gsub(/-{2,}/, '-').gsub(/^-|-$/, '')}"
+end
 {% endhighlight %}
 
 Here, to_param is composed of three regular expressions that are worth discussing in details:
 
 {% highlight ruby %}
- 1. Removes all non alphanumeric characters from the string.
- 
- 2. No more than one of the separator in a row.
- 
- 3. Remove leading/trailing separator.
+1. Removes all non alphanumeric characters from the string.
+
+2. No more than one of the separator in a row.
+
+3. Remove leading/trailing separator.
 {% endhighlight %}
 
 ####app/views/posts/index.html.erb
@@ -52,7 +52,7 @@ Here, to_param is composed of three regular expressions that are worth discussin
 Creating a hyperlink from the Post model will create a reference of */posts/26-seo-friendly-urls-in-rails* Voila! A nice Google slug for your friendly neighborhood Google Bot spider:
 
 {% highlight ruby %}
-    <%= link_to @post.title, @post %>
+<%= link_to @post.title, @post %>
 {% endhighlight %}
 
 ####app/controllers/posts_controller.rb
@@ -60,9 +60,9 @@ Creating a hyperlink from the Post model will create a reference of */posts/26-s
 When you go to show the specific post, the actual :id is *26-seo-friendly-urls-in-rails*.
 
 {% highlight ruby %}
-    def show
-      @post = Post.find(params[:id])
-    end
+def show
+  @post = Post.find(params[:id])
+end
 {% endhighlight %}
 
 As you already know, your :id needs to be an integer value. But, don't worry, Rails is smart enough to call Ruby's to_i to convert your :id to an integer.

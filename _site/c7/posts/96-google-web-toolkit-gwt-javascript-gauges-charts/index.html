@@ -27,8 +27,8 @@
 	
     <div class="feat">
       <h5 class="page-date">
-        <time datetime="2012-12-02T02:14:00Z" itemprop="datePublished">
-          02 December 2012
+        <time datetime="2012-12-01T21:14:00-05:00" itemprop="datePublished">
+          01 December 2012
         </time>
       </h5>
     </div>
@@ -60,27 +60,25 @@
 
 <p>A JSNI comment block looks like this:</p>
 
-<div class="highlight"><pre><code class="js"> <span class="err">`</span><span class="cm">/*-{ and ends with the exact token }-*/</span><span class="err">`</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="err">`</span><span class="cm">/*-{ and ends with the exact token }-*/</span><span class="err">`</span></code></pre></div>
 
 
 <p>JSNI methods are called just like any normal Java method. They can be static or instance methods. Here, we create an instance method of the Gauge class:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="kr">public</span> <span class="kr">static</span> <span class="kr">native</span> <span class="k">void</span> <span class="nx">someEvent</span><span class="p">()</span> <span class="cm">/*-{</span>
-<span class="cm">       var cash = $entry(@...myClass::getCashSum());</span>
-<span class="cm">    </span>
-<span class="cm">       var settlements = new $wnd.Gauge(&quot;sales&quot;, { </span>
-<span class="cm">           label: &quot;Sales&quot;, </span>
-<span class="cm">           minValue: 0, </span>
-<span class="cm">           maxValue: 100, </span>
-<span class="cm">           majorTicks: 11, </span>
-<span class="cm">           minorTicks: 4 </span>
-<span class="cm">       });</span>
-<span class="cm">    </span>
-<span class="cm">       settlements.setValue(cash);</span>
-<span class="cm">    </span>
-<span class="cm">    }-*/</span><span class="p">;</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kr">public</span> <span class="kr">static</span> <span class="kr">native</span> <span class="k">void</span> <span class="nx">someEvent</span><span class="p">()</span> <span class="cm">/*-{</span>
+<span class="cm">   var cash = $entry(@...myClass::getCashSum());</span>
+
+<span class="cm">   var settlements = new $wnd.Gauge(&quot;sales&quot;, { </span>
+<span class="cm">       label: &quot;Sales&quot;, </span>
+<span class="cm">       minValue: 0, </span>
+<span class="cm">       maxValue: 100, </span>
+<span class="cm">       majorTicks: 11, </span>
+<span class="cm">       minorTicks: 4 </span>
+<span class="cm">   });</span>
+
+<span class="cm">   settlements.setValue(cash);</span>
+
+<span class="cm">}-*/</span><span class="p">;</span></code></pre></div>
 
 
 <p>This is perfectly valid Java code because the compiler sees only private static native void someEvent();. GWT parses the contents of the comment block and outputs the JavaScript verbatim.</p>

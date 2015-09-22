@@ -27,8 +27,8 @@
 	
     <div class="feat">
       <h5 class="page-date">
-        <time datetime="2011-01-28T03:40:24Z" itemprop="datePublished">
-          28 January 2011
+        <time datetime="2011-01-27T22:40:24-05:00" itemprop="datePublished">
+          27 January 2011
         </time>
       </h5>
     </div>
@@ -51,13 +51,12 @@
 
 <h4>dojo.rb</h4>
 
-<div class="highlight"><pre><code class="ruby">    <span class="nb">require</span> <span class="s1">&#39;Jedi&#39;</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">&#39;Jedi&#39;</span>
 
-    <span class="n">anakin</span> <span class="o">=</span> <span class="no">Jedi</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;Anakin&quot;</span><span class="p">)</span>
-    <span class="n">anakin</span><span class="o">.</span><span class="n">duel</span>
-    <span class="n">anakin</span><span class="o">.</span><span class="n">lightsaber</span><span class="p">(</span><span class="s2">&quot;Ruby&quot;</span><span class="p">)</span>
-    <span class="n">anakin</span><span class="o">.</span><span class="n">juyo</span>
-</code></pre></div>
+<span class="n">anakin</span> <span class="o">=</span> <span class="no">Jedi</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;Anakin&quot;</span><span class="p">)</span>
+<span class="n">anakin</span><span class="o">.</span><span class="n">duel</span>
+<span class="n">anakin</span><span class="o">.</span><span class="n">lightsaber</span><span class="p">(</span><span class="s2">&quot;Ruby&quot;</span><span class="p">)</span>
+<span class="n">anakin</span><span class="o">.</span><span class="n">juyo</span></code></pre></div>
 
 
 <p>Here, the <em>anakin</em> object is an instance of the Jedi class. Apparently, Anakin is having trouble with some galactic fraktards and fires up his Ruby lightsaber using the <em>lightsaber</em> method. Then Anakin proceeds to bring the hurt using a lightsaber combat form called <a href="http://starwars.wikia.com/wiki/Lightsaber_combat">Juyo</a>.</p>
@@ -74,42 +73,40 @@
 
 <p>Here's how a Jedi class might look:</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="nb">require</span> <span class="s1">&#39;Padawan&#39;</span>
-    <span class="nb">require</span> <span class="s1">&#39;Forms&#39;</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">&#39;Padawan&#39;</span>
+<span class="nb">require</span> <span class="s1">&#39;Forms&#39;</span>
 
-    <span class="k">class</span> <span class="nc">Jedi</span> <span class="o">&lt;</span> <span class="no">Padawan</span>
-      <span class="kp">include</span> <span class="no">Forms</span>
+<span class="k">class</span> <span class="nc">Jedi</span> <span class="o">&lt;</span> <span class="no">Padawan</span>
+  <span class="kp">include</span> <span class="no">Forms</span>
   
-      <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="nb">name</span> <span class="o">=</span> <span class="s1">&#39;Unknown&#39;</span><span class="p">)</span>
-        <span class="vi">@name</span> <span class="o">=</span> <span class="nb">name</span>
-        <span class="nb">puts</span> <span class="s2">&quot;Jedi.initialize&quot;</span>
-      <span class="k">end</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="nb">name</span> <span class="o">=</span> <span class="s1">&#39;Unknown&#39;</span><span class="p">)</span>
+    <span class="vi">@name</span> <span class="o">=</span> <span class="nb">name</span>
+    <span class="nb">puts</span> <span class="s2">&quot;Jedi.initialize&quot;</span>
+  <span class="k">end</span>
 
-      <span class="k">def</span> <span class="nf">duel</span>
-        <span class="nb">puts</span> <span class="s2">&quot;Only a Sith deals in absolutes.&quot;</span>
-      <span class="k">end</span>
-    <span class="k">end</span>
-</code></pre></div>
+  <span class="k">def</span> <span class="nf">duel</span>
+    <span class="nb">puts</span> <span class="s2">&quot;Only a Sith deals in absolutes.&quot;</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></div>
 
 
 <h4>Padawan.rb</h4>
 
 <p>And the Padawan class might look like this:</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="nb">require</span> <span class="s1">&#39;Force&#39;</span>
-    <span class="nb">require</span> <span class="s1">&#39;Lightsaber&#39;</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">&#39;Force&#39;</span>
+<span class="nb">require</span> <span class="s1">&#39;Lightsaber&#39;</span>
 
-    <span class="k">class</span> <span class="nc">Padawan</span>
-      <span class="kp">attr_accessor</span> <span class="ss">:name</span>
+<span class="k">class</span> <span class="nc">Padawan</span>
+  <span class="kp">attr_accessor</span> <span class="ss">:name</span>
   
-      <span class="kp">include</span> <span class="no">Force</span>
-      <span class="kp">include</span> <span class="no">Lightsaber</span>
+  <span class="kp">include</span> <span class="no">Force</span>
+  <span class="kp">include</span> <span class="no">Lightsaber</span>
   
-      <span class="k">def</span> <span class="nf">inspect</span>
-        <span class="nb">puts</span> <span class="s2">&quot;Force-Sensitive: &quot;</span> <span class="o">+</span> <span class="vi">@name</span>
-      <span class="k">end</span>
-    <span class="k">end</span>
-</code></pre></div>
+  <span class="k">def</span> <span class="nf">inspect</span>
+    <span class="nb">puts</span> <span class="s2">&quot;Force-Sensitive: &quot;</span> <span class="o">+</span> <span class="vi">@name</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></div>
 
 
 <p>Padawan would be derived from maybe a <em>Sentient</em> class. But for simplicity I'm including in the Padawan class attributes you might have seen in a class like <em>Sentient</em>. For example, the <em>@name</em> attribute.</p>
@@ -118,25 +115,22 @@
 
 <p>The initialized method is Ruby's constructor method for class implementations. It's called whenever a new instance of a class is created. For example, here a new instance of the Jedi class is called. The result is the <em>anakin</em> object:</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="c1">#dojo.rb</span>
-    <span class="n">anakin</span> <span class="o">=</span> <span class="no">Jedi</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;Anakin&quot;</span><span class="p">)</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1">#dojo.rb</span>
+<span class="n">anakin</span> <span class="o">=</span> <span class="no">Jedi</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;Anakin&quot;</span><span class="p">)</span></code></pre></div>
 
 
 <p>This example illustrates a beautiful feature of Ruby - <em>Flexible Initialization</em>. This means you have the option to pass a parameter or not:</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="c1">#Jedi.rb</span>
-    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="nb">name</span> <span class="o">=</span> <span class="s1">&#39;Unknown&#39;</span><span class="p">)</span>
-        <span class="vi">@name</span> <span class="o">=</span> <span class="nb">name</span>
-        <span class="o">.</span> <span class="o">.</span> <span class="o">.</span>
-    <span class="k">end</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1">#Jedi.rb</span>
+<span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="nb">name</span> <span class="o">=</span> <span class="s1">&#39;Unknown&#39;</span><span class="p">)</span>
+<span class="vi">@name</span> <span class="o">=</span> <span class="nb">name</span>
+<span class="o">.</span> <span class="o">.</span> <span class="o">.</span>
+<span class="k">end</span></code></pre></div>
 
 
 <p>You can choose not to pass a parameter. In that case, creating an instance of the Jedi object might look like this:</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="n">sith</span> <span class="o">=</span> <span class="no">Jedi</span><span class="o">.</span><span class="n">new</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">sith</span> <span class="o">=</span> <span class="no">Jedi</span><span class="o">.</span><span class="n">new</span></code></pre></div>
 
 
 <p>And the default value of the <em>@name</em> attribute would be <em>Unknown</em>.</p>
@@ -159,34 +153,31 @@
 
 <p>Ruby has a more elegant solution - the attr_accessor shortcut:</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="k">class</span> <span class="nc">Padawan</span>
-      <span class="kp">attr_accessor</span> <span class="ss">:name</span>
-      <span class="o">.</span> <span class="o">.</span> <span class="o">.</span>
-    <span class="k">end</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Padawan</span>
+  <span class="kp">attr_accessor</span> <span class="ss">:name</span>
+  <span class="o">.</span> <span class="o">.</span> <span class="o">.</span>
+<span class="k">end</span></code></pre></div>
 
 
 <p>This gets you the following Ruby class methods for FREE:</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="c1">#attr_reader</span>
-    <span class="k">def</span> <span class="nf">name</span>
-      <span class="vi">@name</span>
-    <span class="k">end</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1">#attr_reader</span>
+<span class="k">def</span> <span class="nf">name</span>
+  <span class="vi">@name</span>
+<span class="k">end</span>
 
-    <span class="c1">#attr_writer</span>
-    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
-      <span class="vi">@name</span> <span class="o">=</span> <span class="n">value</span>
-    <span class="k">end</span>
-</code></pre></div>
+<span class="c1">#attr_writer</span>
+<span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+  <span class="vi">@name</span> <span class="o">=</span> <span class="n">value</span>
+<span class="k">end</span></code></pre></div>
 
 
 <p>Awesome! This is at once elegant and beautiful. You can add as much attribute accessors as you like: attr_accessor :name, :weight, :etc.</p>
 
 <p>You're not going to always want a <em>getter</em> and <em>setter</em>. Sometimes you might only need one. You can do that in Ruby:</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="kp">attr_reader</span> <span class="ss">:midi_chlorian</span>
-    <span class="kp">attr_writer</span> <span class="ss">:heart_rate</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="kp">attr_reader</span> <span class="ss">:midi_chlorian</span>
+<span class="kp">attr_writer</span> <span class="ss">:heart_rate</span></code></pre></div>
 
 
 <p>You get the picture!</p>
@@ -195,23 +186,21 @@
 
 <p>Methods are how we interact with our Ruby classes. Methods allow us to encapsulate activities specific to the particular class:</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="c1">#Jedi.rb</span>
-    <span class="k">def</span> <span class="nf">duel</span>
-      <span class="nb">puts</span> <span class="s2">&quot;Only a Sith deals in absolutes.&quot;</span>
-    <span class="k">end</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1">#Jedi.rb</span>
+<span class="k">def</span> <span class="nf">duel</span>
+  <span class="nb">puts</span> <span class="s2">&quot;Only a Sith deals in absolutes.&quot;</span>
+<span class="k">end</span></code></pre></div>
 
 
 <p>Methods sometimes perform work on a Ruby classes' attributes. Sometimes a method just performs work specific to the class. In our Jedi class, we have a <em>duel</em> method. This method is used to convey some Jedi axiom just before battle begins.</p>
 
 <p>Like an initialize constructor, a method can take parameters. A Ruby method can even have a default parameter. So our <em>duel</em> method could have looked like:</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="c1">#Jedi.rb</span>
-    <span class="k">def</span> <span class="nf">duel</span><span class="p">(</span><span class="n">opponent</span> <span class="o">=</span> <span class="s1">&#39;Sith&#39;</span><span class="p">)</span>
-      <span class="nb">puts</span> <span class="s2">&quot;You disappoint me &quot;</span> <span class="o">+</span> <span class="n">opponent</span> <span class="o">+</span> <span class="s2">&quot;.&quot;</span>
-      <span class="nb">puts</span> <span class="s2">&quot;Only a Sith deals in absolutes.&quot;</span>
-    <span class="k">end</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1">#Jedi.rb</span>
+<span class="k">def</span> <span class="nf">duel</span><span class="p">(</span><span class="n">opponent</span> <span class="o">=</span> <span class="s1">&#39;Sith&#39;</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s2">&quot;You disappoint me &quot;</span> <span class="o">+</span> <span class="n">opponent</span> <span class="o">+</span> <span class="s2">&quot;.&quot;</span>
+  <span class="nb">puts</span> <span class="s2">&quot;Only a Sith deals in absolutes.&quot;</span>
+<span class="k">end</span></code></pre></div>
 
 
 <p>Coming from static languages, Ruby's minimalistic approach to object oriented programming is at once refreshing and inspiring.</p>
@@ -226,18 +215,16 @@
 
 <p>In Ruby, such relationships can be expressed using inheritance. Here, the Padawan class is called the parent class:</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="k">class</span> <span class="nc">Jedi</span> <span class="o">&lt;</span> <span class="no">Padawan</span>
-    <span class="o">.</span> <span class="o">.</span> <span class="o">.</span>
-    <span class="k">end</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Jedi</span> <span class="o">&lt;</span> <span class="no">Padawan</span>
+<span class="o">.</span> <span class="o">.</span> <span class="o">.</span>
+<span class="k">end</span></code></pre></div>
 
 
 <p>In this way we can reuse the Padawan class for other force-sensitives that we wouldn't consider Jedi. For example, we could have a Sith class:</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="k">class</span> <span class="nc">Sith</span> <span class="o">&lt;</span> <span class="no">Padawan</span>
-    <span class="o">.</span> <span class="o">.</span> <span class="o">.</span>
-    <span class="k">end</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Sith</span> <span class="o">&lt;</span> <span class="no">Padawan</span>
+<span class="o">.</span> <span class="o">.</span> <span class="o">.</span>
+<span class="k">end</span></code></pre></div>
 
 
 <p>Darth Vader was once a Padawan until he turned to the Dark Side and became a Sith Lord. As such, you would expect him to have the knowledge and training of a Padawan with the learning of a Dark Knight.</p>
@@ -246,12 +233,11 @@
 
 <p>There will be cases where certain methods of the parent class will need to be implemented differently in the inheriting class. For example:</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="k">class</span> <span class="nc">Sith</span> <span class="o">&lt;</span> <span class="no">Padawan</span>
-      <span class="k">def</span> <span class="nf">inspect</span>
-        <span class="nb">puts</span> <span class="s2">&quot;Peace is a lie. There is only passion. - &quot;</span> <span class="o">+</span> <span class="vi">@name</span>
-      <span class="k">end</span>
-    <span class="k">end</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Sith</span> <span class="o">&lt;</span> <span class="no">Padawan</span>
+  <span class="k">def</span> <span class="nf">inspect</span>
+    <span class="nb">puts</span> <span class="s2">&quot;Peace is a lie. There is only passion. - &quot;</span> <span class="o">+</span> <span class="vi">@name</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></div>
 
 
 <p>Here, the <em>inspect</em> method from the <em>Sith</em> class will be used instead of the <em>inspect</em> method from the <em>Padawan</em> class. Object oriented languages (like Ruby) that facilitate this type of behavior are said to be polymorphic. Therefore, the above is an example of Polymorphism.</p>
@@ -270,38 +256,35 @@
 
 <p>After requiring a Ruby module, you would then include that module in your Ruby class. This is called a Mixin:</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="nb">require</span> <span class="s1">&#39;Lightsaber&#39;</span>
-    
-    <span class="k">class</span> <span class="nc">Padawan</span>
-      <span class="o">.</span> <span class="o">.</span> <span class="o">.</span>
-      <span class="kp">include</span> <span class="no">Lightsaber</span>
-      <span class="o">.</span> <span class="o">.</span> <span class="o">.</span>
-    <span class="k">end</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">&#39;Lightsaber&#39;</span>
+
+<span class="k">class</span> <span class="nc">Padawan</span>
+  <span class="o">.</span> <span class="o">.</span> <span class="o">.</span>
+  <span class="kp">include</span> <span class="no">Lightsaber</span>
+  <span class="o">.</span> <span class="o">.</span> <span class="o">.</span>
+<span class="k">end</span></code></pre></div>
 
 
 <h4>Lightsaber.rb</h4>
 
 <p>Here is the Mixin Lightsaber module:</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="k">module</span> <span class="nn">Lightsaber</span>
-      <span class="k">def</span> <span class="nf">lightsaber</span><span class="p">(</span><span class="n">crystal</span> <span class="o">=</span> <span class="s2">&quot;Jade&quot;</span><span class="p">)</span>
-        <span class="nb">puts</span> <span class="s2">&quot;Lightsaber.initialized: &quot;</span> <span class="o">+</span> <span class="n">crystal</span>
-      <span class="k">end</span>
-    <span class="k">end</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">module</span> <span class="nn">Lightsaber</span>
+  <span class="k">def</span> <span class="nf">lightsaber</span><span class="p">(</span><span class="n">crystal</span> <span class="o">=</span> <span class="s2">&quot;Jade&quot;</span><span class="p">)</span>
+    <span class="nb">puts</span> <span class="s2">&quot;Lightsaber.initialized: &quot;</span> <span class="o">+</span> <span class="n">crystal</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></div>
 
 
 <p>So when I instantiate an instance of the Jedi class, I get access to the Lightsaber module - pure Mixin love:</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="c1">#dojo.rb</span>
-    <span class="nb">require</span> <span class="s1">&#39;Jedi&#39;</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1">#dojo.rb</span>
+<span class="nb">require</span> <span class="s1">&#39;Jedi&#39;</span>
 
-    <span class="n">anakin</span> <span class="o">=</span> <span class="no">Jedi</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;Anakin&quot;</span><span class="p">)</span>
-    <span class="o">.</span> <span class="o">.</span> <span class="o">.</span>
-    <span class="n">anakin</span><span class="o">.</span><span class="n">lightsaber</span><span class="p">(</span><span class="s2">&quot;Ruby&quot;</span><span class="p">)</span>
-    <span class="o">.</span> <span class="o">.</span> <span class="o">.</span>
-</code></pre></div>
+<span class="n">anakin</span> <span class="o">=</span> <span class="no">Jedi</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;Anakin&quot;</span><span class="p">)</span>
+<span class="o">.</span> <span class="o">.</span> <span class="o">.</span>
+<span class="n">anakin</span><span class="o">.</span><span class="n">lightsaber</span><span class="p">(</span><span class="s2">&quot;Ruby&quot;</span><span class="p">)</span>
+<span class="o">.</span> <span class="o">.</span> <span class="o">.</span></code></pre></div>
 
 
 <p>Modules are for sharing behavior (methods), while classes are for modeling relationships between objects. Ruby classes can Mixin a module and receive all its methods for free.</p>

@@ -20,7 +20,7 @@ Starters who sell online books use entourage. Transit authorities use entourage.
 Entourage.js remains unobtrusive and standards based. It's an excellent choice for developers and non-developers alike. Just drop entourage into your existing code base and you're done:
 
 {% highlight js %}
-    <script type="text/javascript" src="entourage.js"></script>
+<script type="text/javascript" src="entourage.js"></script>
 {% endhighlight %}
 
 
@@ -29,9 +29,9 @@ Need to track a large amount or even a small amount of file downloads? Checkout 
 ####Changelog
 
 {% highlight bash %}
- - Previously attached Entourage to "every" link. Here, the issue was Entourage clobbered existing link events - that's bad. Upgrade to attach Entourage only to links with a whitelisted download type.
- 
- - Refactored code base.
+- Previously attached Entourage to "every" link. Here, the issue was Entourage clobbered existing link events - that's bad. Upgrade to attach Entourage only to links with a whitelisted download type.
+
+- Refactored code base.
 {% endhighlight %}
 
 

@@ -2,7 +2,7 @@
 layout: marketing
 title:  "Automatic Download Tracking for Asynchronous Google Analytics"
 date:   2000-01-01 00:00:00
-permalink: /
+permalink: /entourage/
 ---
 
 <h4 style="font-family: Arial; font-size: 120%;">track it.</h4>

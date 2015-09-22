@@ -19,15 +19,15 @@ C++ is the [Invisible Hand][2] of the software development world. It is the forc
 Simply put, "C++ Never Left." Think about it...
 
 {% highlight js %}
- - Your favorite browser is written in C/C++
- 
- - Your favorite operating system is written in C/C++
- 
- - Your favorite video game is written in C/C++
- 
- - Your favorite SQL and NoSQL database is written in C/C++
- 
- - Your favorite dynamic language interpreter is written in C/C++
+- Your favorite browser is written in C/C++
+
+- Your favorite operating system is written in C/C++
+
+- Your favorite video game is written in C/C++
+
+- Your favorite SQL and NoSQL database is written in C/C++
+
+- Your favorite dynamic language interpreter is written in C/C++
 {% endhighlight %}
 
 Ruby, JavaScript, Node's V8 Engine, MacRuby, [RubyMotion][3]. Think about it...

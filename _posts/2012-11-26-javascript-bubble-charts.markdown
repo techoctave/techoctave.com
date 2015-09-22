@@ -39,13 +39,13 @@ To that end, we build products that inspire you to your better end and offer sup
 ####API Improvements
 
 {% highlight ruby %}
- - Raphael.js: Upgraded to version 2.1.0
- 
- - Improved chart axis rendering and mapping algorithm
- 
- - Refactored setData method to increase reuse & code quality
- 
- - Added opacity properties to data points and chart objects
+- Raphael.js: Upgraded to version 2.1.0
+
+- Improved chart axis rendering and mapping algorithm
+
+- Refactored setData method to increase reuse & code quality
+
+- Added opacity properties to data points and chart objects
 {% endhighlight %}
 
 ###Bubble Charts
@@ -57,24 +57,24 @@ Bubble charts are used to visualize a data set with 2 to 4 dimensions. The first
 Here, we have a Bubble Chart displaying a "Correlation between Estimated Sales, Annual Income and Vehicle Price of some luxury brands." Using our Bubble Chart would look something like this:
 
 {% highlight js %}
-    var vehicles = new BubbleChart("vehicles", {
-    	data: [...],
-    	legendTitle: "Luxury Brands",
-    	XAxisLabel: "Estimated Sales ($ Millions)",
-    	YAxisLabel: "Annual Income ($ Millions)",
-    	minValueX: -20,
-    	maxValueX: 70,
-    	minValueY: -50,
-    	maxValueY: 200,
-    	majorTicksX: 9,
-    	majorTicksY: 5
-    });
+var vehicles = new BubbleChart("vehicles", {
+	data: [...],
+	legendTitle: "Luxury Brands",
+	XAxisLabel: "Estimated Sales ($ Millions)",
+	YAxisLabel: "Annual Income ($ Millions)",
+	minValueX: -20,
+	maxValueX: 70,
+	minValueY: -50,
+	maxValueY: 200,
+	majorTicksX: 9,
+	majorTicksY: 5
+});
 {% endhighlight %}
 
 We need a DOM element to bind the BubbleChart instance to. That element is created with a simple div tag:
 
 {% highlight html %}
-    <div id="vehicles"></div>      
+<div id="vehicles"></div>      
 {% endhighlight %}
 
 There are seven (7) brands: Acura, Alfa Romeo, AM General, Aston Martin, Audi, BMW and Bugatti.

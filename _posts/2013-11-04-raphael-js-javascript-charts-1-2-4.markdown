@@ -27,9 +27,9 @@ Also, this release fixes a major bug limiting the number of Columns and Bars on 
 [Enhancements]
 
 {% highlight ruby %}
- - New API Documentation in /docs folder
- - Implemented Series Charts capability in both ColumnChart and BarChart charts
- - Added barSpacingFactor property to ColumnChart and BarChart charts
+- New API Documentation in /docs folder
+- Implemented Series Charts capability in both ColumnChart and BarChart charts
+- Added barSpacingFactor property to ColumnChart and BarChart charts
 {% endhighlight %}
 
 
@@ -44,9 +44,9 @@ Also, this release fixes a major bug limiting the number of Columns and Bars on 
 [API Improvement]
 
 {% highlight ruby %}
- - Deprecated hasLines from BubbleChart properties.
- - Deprecated lineColor from BubbleChart properties.
- - Deprecated lineStrokeWidth from BubbleChart properties.
+- Deprecated hasLines from BubbleChart properties.
+- Deprecated lineColor from BubbleChart properties.
+- Deprecated lineStrokeWidth from BubbleChart properties.
 {% endhighlight %}
 
 

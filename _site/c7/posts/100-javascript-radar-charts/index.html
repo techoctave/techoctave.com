@@ -27,8 +27,8 @@
 	
     <div class="feat">
       <h5 class="page-date">
-        <time datetime="2013-01-01T02:38:31Z" itemprop="datePublished">
-          01 January 2013
+        <time datetime="2012-12-31T21:38:31-05:00" itemprop="datePublished">
+          31 December 2012
         </time>
       </h5>
     </div>
@@ -46,18 +46,17 @@
 
 <p>So we set out to build a Radar Chart built on the <a href="http://techoctave.com/c7/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css">Six Core Principles</a> we established so long ago:</p>
 
-<div class="highlight"><pre><code class="js"> <span class="mi">1</span><span class="p">.</span> <span class="nx">Beautifully</span> <span class="nx">Illustrated</span>
- 
- <span class="mi">2</span><span class="p">.</span> <span class="nx">Cross</span><span class="o">-</span><span class="nx">Browser</span> <span class="nx">Compatible</span>
- 
- <span class="mi">3</span><span class="p">.</span> <span class="nx">Lightweight</span> <span class="nx">footprint</span>
- 
- <span class="mi">4</span><span class="p">.</span> <span class="nx">Vector</span> <span class="nx">Based</span> <span class="k">for</span> <span class="nx">Crisp</span> <span class="nx">Zoom</span> <span class="nx">and</span> <span class="nx">Print</span>
- 
- <span class="mi">5</span><span class="p">.</span> <span class="nx">Highly</span> <span class="nx">Configurable</span>
- 
- <span class="mi">6</span><span class="p">.</span> <span class="nx">Framework</span> <span class="nx">Agnostic</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="mi">1</span><span class="p">.</span> <span class="nx">Beautifully</span> <span class="nx">Illustrated</span>
+
+<span class="mi">2</span><span class="p">.</span> <span class="nx">Cross</span><span class="o">-</span><span class="nx">Browser</span> <span class="nx">Compatible</span>
+
+<span class="mi">3</span><span class="p">.</span> <span class="nx">Lightweight</span> <span class="nx">footprint</span>
+
+<span class="mi">4</span><span class="p">.</span> <span class="nx">Vector</span> <span class="nx">Based</span> <span class="k">for</span> <span class="nx">Crisp</span> <span class="nx">Zoom</span> <span class="nx">and</span> <span class="nx">Print</span>
+
+<span class="mi">5</span><span class="p">.</span> <span class="nx">Highly</span> <span class="nx">Configurable</span>
+
+<span class="mi">6</span><span class="p">.</span> <span class="nx">Framework</span> <span class="nx">Agnostic</span></code></pre></div>
 
 
 <p>I believed then as I believe now that these principles are central to developer happiness. They inform what we do each and every day.</p>
@@ -90,16 +89,15 @@
 
 <p>Here, NES advertising channels were:</p>
 
-<div class="highlight"><pre><code class="js"> <span class="mi">1</span><span class="p">.</span> <span class="nx">Internet</span>
- 
- <span class="mi">2</span><span class="p">.</span> <span class="nx">Television</span>
- 
- <span class="mi">3</span><span class="p">.</span> <span class="nx">Radio</span>
- 
- <span class="mi">4</span><span class="p">.</span> <span class="nx">Newspaper</span>
- 
- <span class="mi">5</span><span class="p">.</span> <span class="nx">Magazine</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="mi">1</span><span class="p">.</span> <span class="nx">Internet</span>
+
+<span class="mi">2</span><span class="p">.</span> <span class="nx">Television</span>
+
+<span class="mi">3</span><span class="p">.</span> <span class="nx">Radio</span>
+
+<span class="mi">4</span><span class="p">.</span> <span class="nx">Newspaper</span>
+
+<span class="mi">5</span><span class="p">.</span> <span class="nx">Magazine</span></code></pre></div>
 
 
 <p>These advertising channels will make perfect Radar Categories for our example. For you, your categories will be different, but the idea is to identify areas your organization needs to analyze.</p>
@@ -108,56 +106,52 @@
 
 <p>Here, for Year 1, NES spending was as follows:</p>
 
-<div class="highlight"><pre><code class="js"> <span class="mi">1</span><span class="p">.</span> <span class="nx">Internet</span> <span class="p">(</span><span class="nx">$100</span><span class="p">,</span><span class="mi">000</span><span class="p">)</span>
- 
- <span class="mi">2</span><span class="p">.</span> <span class="nx">Television</span> <span class="p">(</span><span class="nx">$200</span><span class="p">,</span><span class="mi">000</span><span class="p">)</span>
- 
- <span class="mi">3</span><span class="p">.</span> <span class="nx">Radio</span> <span class="p">(</span><span class="nx">$175</span><span class="p">,</span><span class="mi">000</span><span class="p">)</span>
- 
- <span class="mi">4</span><span class="p">.</span> <span class="nx">Newspaper</span> <span class="p">(</span><span class="nx">$100</span><span class="p">,</span><span class="mi">000</span><span class="p">)</span>
- 
- <span class="mi">5</span><span class="p">.</span> <span class="nx">Magazine</span> <span class="p">(</span><span class="nx">$100</span><span class="p">,</span><span class="mi">000</span><span class="p">)</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="mi">1</span><span class="p">.</span> <span class="nx">Internet</span> <span class="p">(</span><span class="nx">$100</span><span class="p">,</span><span class="mi">000</span><span class="p">)</span>
+
+<span class="mi">2</span><span class="p">.</span> <span class="nx">Television</span> <span class="p">(</span><span class="nx">$200</span><span class="p">,</span><span class="mi">000</span><span class="p">)</span>
+
+<span class="mi">3</span><span class="p">.</span> <span class="nx">Radio</span> <span class="p">(</span><span class="nx">$175</span><span class="p">,</span><span class="mi">000</span><span class="p">)</span>
+
+<span class="mi">4</span><span class="p">.</span> <span class="nx">Newspaper</span> <span class="p">(</span><span class="nx">$100</span><span class="p">,</span><span class="mi">000</span><span class="p">)</span>
+
+<span class="mi">5</span><span class="p">.</span> <span class="nx">Magazine</span> <span class="p">(</span><span class="nx">$100</span><span class="p">,</span><span class="mi">000</span><span class="p">)</span></code></pre></div>
 
 
 <p>For Year 2, NES spending habits made a pinnacle shift:</p>
 
-<div class="highlight"><pre><code class="js"> <span class="mi">1</span><span class="p">.</span> <span class="nx">Internet</span> <span class="p">(</span><span class="nx">$200</span><span class="p">,</span><span class="mi">000</span><span class="p">)</span>
- 
- <span class="mi">2</span><span class="p">.</span> <span class="nx">Television</span> <span class="p">(</span><span class="nx">$125</span><span class="p">,</span><span class="mi">000</span><span class="p">)</span>
- 
- <span class="mi">3</span><span class="p">.</span> <span class="nx">Radio</span> <span class="p">(</span><span class="nx">$105</span><span class="p">,</span><span class="mi">000</span><span class="p">)</span>
- 
- <span class="mi">4</span><span class="p">.</span> <span class="nx">Newspaper</span> <span class="p">(</span><span class="nx">$100</span><span class="p">,</span><span class="mi">000</span><span class="p">)</span>
- 
- <span class="mi">5</span><span class="p">.</span> <span class="nx">Magazine</span> <span class="p">(</span><span class="nx">$100</span><span class="p">,</span><span class="mi">000</span><span class="p">)</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="mi">1</span><span class="p">.</span> <span class="nx">Internet</span> <span class="p">(</span><span class="nx">$200</span><span class="p">,</span><span class="mi">000</span><span class="p">)</span>
+
+<span class="mi">2</span><span class="p">.</span> <span class="nx">Television</span> <span class="p">(</span><span class="nx">$125</span><span class="p">,</span><span class="mi">000</span><span class="p">)</span>
+
+<span class="mi">3</span><span class="p">.</span> <span class="nx">Radio</span> <span class="p">(</span><span class="nx">$105</span><span class="p">,</span><span class="mi">000</span><span class="p">)</span>
+
+<span class="mi">4</span><span class="p">.</span> <span class="nx">Newspaper</span> <span class="p">(</span><span class="nx">$100</span><span class="p">,</span><span class="mi">000</span><span class="p">)</span>
+
+<span class="mi">5</span><span class="p">.</span> <span class="nx">Magazine</span> <span class="p">(</span><span class="nx">$100</span><span class="p">,</span><span class="mi">000</span><span class="p">)</span></code></pre></div>
 
 
 <h4>Plot Your Radar Chart</h4>
 
 <p>Here we'll use our RadarChart component from our JavaScript Charts Suite. First, we'll create an HTML element to bind our chart too:</p>
 
-<div class="highlight"><pre><code class="html">    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;advertising&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;advertising&quot;</span><span class="nt">&gt;&lt;/div&gt;</span></code></pre></div>
 
 
 <p>Next, we'll create an instance of our RadarChart class:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="kd">var</span> <span class="nx">advertising</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">RadarChart</span><span class="p">(</span><span class="s2">&quot;advertising&quot;</span><span class="p">,</span> <span class="p">{</span>
-        <span class="nx">data</span><span class="o">:</span> <span class="p">[[</span><span class="mi">100000</span><span class="p">,</span> <span class="mi">200000</span><span class="p">,</span> <span class="mi">175000</span><span class="p">,</span> <span class="mi">100000</span><span class="p">,</span> <span class="mi">100000</span><span class="p">],</span> 
-               <span class="p">[</span><span class="mi">200000</span><span class="p">,</span> <span class="mi">125000</span><span class="p">,</span> <span class="mi">105000</span><span class="p">,</span> <span class="mi">100000</span><span class="p">,</span> <span class="mi">100000</span><span class="p">]],</span>
-        
-        <span class="nx">maxValue</span><span class="o">:</span> <span class="mi">250000</span><span class="p">,</span>
-            
-        <span class="nx">categories</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;Internet&quot;</span><span class="p">,</span> <span class="s2">&quot;Television&quot;</span><span class="p">,</span> <span class="s2">&quot;Radio&quot;</span><span class="p">,</span> 
-                     <span class="s2">&quot;Newspaper&quot;</span><span class="p">,</span> <span class="s2">&quot;Magazine&quot;</span><span class="p">],</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">advertising</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">RadarChart</span><span class="p">(</span><span class="s2">&quot;advertising&quot;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">data</span><span class="o">:</span> <span class="p">[[</span><span class="mi">100000</span><span class="p">,</span> <span class="mi">200000</span><span class="p">,</span> <span class="mi">175000</span><span class="p">,</span> <span class="mi">100000</span><span class="p">,</span> <span class="mi">100000</span><span class="p">],</span> 
+           <span class="p">[</span><span class="mi">200000</span><span class="p">,</span> <span class="mi">125000</span><span class="p">,</span> <span class="mi">105000</span><span class="p">,</span> <span class="mi">100000</span><span class="p">,</span> <span class="mi">100000</span><span class="p">]],</span>
     
-        <span class="nx">legend</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="nx">legendTitle</span><span class="o">:</span> <span class="s2">&quot;Advertising&quot;</span><span class="p">,</span>
-        <span class="nx">legendLabels</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;Year 1&quot;</span><span class="p">,</span> <span class="s2">&quot;Year 2&quot;</span><span class="p">],</span>
-    <span class="p">});</span>
-</code></pre></div>
+    <span class="nx">maxValue</span><span class="o">:</span> <span class="mi">250000</span><span class="p">,</span>
+        
+    <span class="nx">categories</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;Internet&quot;</span><span class="p">,</span> <span class="s2">&quot;Television&quot;</span><span class="p">,</span> <span class="s2">&quot;Radio&quot;</span><span class="p">,</span> 
+                 <span class="s2">&quot;Newspaper&quot;</span><span class="p">,</span> <span class="s2">&quot;Magazine&quot;</span><span class="p">],</span>
+
+    <span class="nx">legend</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nx">legendTitle</span><span class="o">:</span> <span class="s2">&quot;Advertising&quot;</span><span class="p">,</span>
+    <span class="nx">legendLabels</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;Year 1&quot;</span><span class="p">,</span> <span class="s2">&quot;Year 2&quot;</span><span class="p">],</span>
+<span class="p">});</span></code></pre></div>
 
 
 <p>Our data property can handle multiple sets of data. Here, the first set is the advertising spend gathered for Year 1. Finally, the last set is the advertising spend gathered for Year 2.</p>

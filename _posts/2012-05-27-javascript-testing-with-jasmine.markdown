@@ -22,30 +22,30 @@ First, download the latest [Jasmine][3] build from Github. Then rename the folde
 Now, your tests folder will look something like this:
 
 {% highlight bash %}
-    - tests
-      - lib
-        + jasmine-1.2.0
-      - spec
-        GaugeSpec.js
-      SpecRunner.html
-      + src
+- tests
+  - lib
+    + jasmine-1.2.0
+  - spec
+    GaugeSpec.js
+  SpecRunner.html
+  + src
 {% endhighlight %}
 
 SpecRunner.html will run all the spec suites you ask it to:
 
 {% highlight js %}
-    <!-- include source files here... -->
-    <script type="text/javascript" src="../javascripts/raphael.js"></script>
-    <script type="text/javascript" src="../javascripts/gauge.js"></script>
+<!-- include source files here... -->
+<script type="text/javascript" src="../javascripts/raphael.js"></script>
+<script type="text/javascript" src="../javascripts/gauge.js"></script>
 
-    <!-- include spec files here... -->
-    <script type="text/javascript" src="spec/GaugeSpec.js"></script>
+<!-- include spec files here... -->
+<script type="text/javascript" src="spec/GaugeSpec.js"></script>
 {% endhighlight %}
 
 SpecRunner is also handy for setting up DOM test harnesses:
 
 {% highlight js %}
-    <div id="tests" style="display: none;"></div>
+<div id="tests" style="display: none;"></div>
 {% endhighlight %}    
 
 ###Suites and Specs
@@ -56,11 +56,11 @@ Jasmine is composed of suites and specs.
 A spec is just a JavaScript function that takes two parameters:
 
 {% highlight js %}
-        // Gauge Properties
-    	// ----------------
-    	it("should be able to set a width", function() {
-    		expect(gauge.get("width")).toEqual(195);
-    	});
+// Gauge Properties
+// ----------------
+it("should be able to set a width", function() {
+	expect(gauge.get("width")).toEqual(195);
+});
 {% endhighlight %}
 
 The first parameter is the spec description. The second parameter is an anonymous JavaScript function that implements the spec. Here, we expect a new gauge instance to have a default width of 195.
@@ -70,22 +70,22 @@ The first parameter is the spec description. The second parameter is an anonymou
 A suite is composed of a list of specs:
 
 {% highlight js %}
-    describe("Gauge", function() {
-        // Gauge Properties
-    	// ----------------
-    	it("should be able to set a width", function() {
-    		expect(gauge.get("width")).toEqual(195);
-    	});
+describe("Gauge", function() {
+    // Gauge Properties
+	// ----------------
+	it("should be able to set a width", function() {
+		expect(gauge.get("width")).toEqual(195);
+	});
 
-        . . .
-    
-    	// Gauge Methods
-    	// -------------
-        it("should be able to set a setValue", function() {
-	        gauge.setValue(25);
-	        expect(gauge.get("value")).toEqual(25);
-        });
+    . . .
+
+	// Gauge Methods
+	// -------------
+    it("should be able to set a setValue", function() {
+      gauge.setValue(25);
+      expect(gauge.get("value")).toEqual(25);
     });
+});
 {% endhighlight %}
 
 Once you get this core concept, you're up and running. Things can get really interesting after that. But, the crux of the matter is you're testing and that's great.
@@ -108,21 +108,21 @@ Every spec must have access to an instance of the Gauge class to run.
 To accomplish this, we could've done something like this:
 
 {% highlight js %}
-    describe("Gauge", function() {
-        // Gauge Properties
-    	// ----------------
-    	it("should be able to set a width", function() {
-            var gauge = new Gauge("tests");
-            expect(gauge.get("width")).toEqual(195);
-    	});
+describe("Gauge", function() {
+    // Gauge Properties
+	// ----------------
+	it("should be able to set a width", function() {
+        var gauge = new Gauge("tests");
+        expect(gauge.get("width")).toEqual(195);
+	});
 
+    . . .
+
+    it("should be able to . . .", function() {
+        var gauge = new Gauge("tests");
         . . .
-
-        it("should be able to . . .", function() {
-            var gauge = new Gauge("tests");
-            . . .
-    	});     
-    });
+	});     
+});
 {% endhighlight %}
 
 After awhile, creating instance-after-instance becomes tedious at-best. There are better ways.
@@ -132,31 +132,31 @@ After awhile, creating instance-after-instance becomes tedious at-best. There ar
 Jasmine provides methods to help you Don't Repeat Yourself (DRY):
 
 {% highlight js %}
-    describe("Gauge", function() {
-        var gauge;
+describe("Gauge", function() {
+    var gauge;
 
-        beforeEach(function() {
-            gauge = new Gauge("tests");
-        });
-
-        afterEach(function() {
-            delete gauge;
-        });
-     
-        // Gauge Properties
-    	// ----------------
-    	it("should be able to set a width", function() {
-            expect(gauge.get("width")).toEqual(195);
-    	}); 
-
-        . . .
+    beforeEach(function() {
+        gauge = new Gauge("tests");
     });
+
+    afterEach(function() {
+        delete gauge;
+    });
+ 
+    // Gauge Properties
+	// ----------------
+	it("should be able to set a width", function() {
+        expect(gauge.get("width")).toEqual(195);
+	}); 
+
+    . . .
+});
 {% endhighlight %}
 
 Before each spec is called, I create an instance of the Gauge class and attach it to a DOM test harness called tests:
 
 {% highlight js %}
-    <div id="tests" style="display: none;"></div>
+<div id="tests" style="display: none;"></div>
 {% endhighlight %}
 
 This DOM element is located in SpecRunner.html. After each spec has finished executing, I delete the gauge instance. This technique works remarkably well for many scenarios.
@@ -166,37 +166,37 @@ This DOM element is located in SpecRunner.html. After each spec has finished exe
 Jasmine BDD has several built-in matchers. A full list of [Jasmine matchers][6] are available on the Jasmin Wiki. Here are a few of the matchers we use and how to implement them:
 
 {% highlight js %}
-    describe("Gauge", function() {
-        // Gauge Properties
-    	// ----------------
-    	it("should be able to set a width", function() {
-            expect(gauge.get("width")).toEqual(195);
-    	});
+describe("Gauge", function() {
+    // Gauge Properties
+	// ----------------
+	it("should be able to set a width", function() {
+        expect(gauge.get("width")).toEqual(195);
+	});
 
-        it("should be able to set a autoresize", function() {
-            expect(gauge.get("autoresize")).toBeUndefined();
-        });
-
-        . . .
-
-        // Gauge Parts
-        // -----------
-        it("should be able to get a base", function() {
-            expect(gauge.base.id).toBeGreaterThan(0);
-        });
-
-        . . .
-    
-    	// Gauge Methods
-    	// -------------
-        it("should be able to format thousands", function() {
-            expect(gauge.arc(...)).toContain("...");
-        });
-    
-        it("should be able to format thousands", function() {
-            expect(gauge.formatValue(1500)).toEqual("1.5k");
-        });
+    it("should be able to set a autoresize", function() {
+        expect(gauge.get("autoresize")).toBeUndefined();
     });
+
+    . . .
+
+    // Gauge Parts
+    // -----------
+    it("should be able to get a base", function() {
+        expect(gauge.base.id).toBeGreaterThan(0);
+    });
+
+    . . .
+
+	// Gauge Methods
+	// -------------
+    it("should be able to format thousands", function() {
+        expect(gauge.arc(...)).toContain("...");
+    });
+
+    it("should be able to format thousands", function() {
+        expect(gauge.formatValue(1500)).toEqual("1.5k");
+    });
+});
 {% endhighlight %}
 
 The matcher *toEqual* compares objects or primitives x and y and passes if they are equivalent.

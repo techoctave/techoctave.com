@@ -27,7 +27,7 @@
 	
     <div class="feat">
       <h5 class="page-date">
-        <time datetime="2010-10-15T04:16:38Z" itemprop="datePublished">
+        <time datetime="2010-10-15T00:16:38-04:00" itemprop="datePublished">
           15 October 2010
         </time>
       </h5>
@@ -46,12 +46,11 @@
 
 <h4>app/controllers/posts_controller.rb</h4>
 
-<div class="highlight"><pre><code class="ruby">    <span class="vi">@posts</span> <span class="o">=</span> <span class="no">Post</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="ss">:select</span> <span class="o">=&gt;</span> <span class="s2">&quot;title, author, id, content, posted_at&quot;</span><span class="p">,</span> <span class="ss">:order</span> <span class="o">=&gt;</span> <span class="s2">&quot;posted_at DESC&quot;</span><span class="p">,</span> <span class="ss">:limit</span> <span class="o">=&gt;</span> <span class="mi">20</span><span class="p">)</span> 
-        
-    <span class="n">respond_to</span> <span class="k">do</span> <span class="o">|</span><span class="nb">format</span><span class="o">|</span>
-       <span class="nb">format</span><span class="o">.</span><span class="n">rss</span> <span class="p">{</span> <span class="n">render</span> <span class="ss">:layout</span> <span class="o">=&gt;</span> <span class="kp">false</span> <span class="p">}</span>
-    <span class="k">end</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="vi">@posts</span> <span class="o">=</span> <span class="no">Post</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="ss">:select</span> <span class="o">=&gt;</span> <span class="s2">&quot;title, author, id, content, posted_at&quot;</span><span class="p">,</span> <span class="ss">:order</span> <span class="o">=&gt;</span> <span class="s2">&quot;posted_at DESC&quot;</span><span class="p">,</span> <span class="ss">:limit</span> <span class="o">=&gt;</span> <span class="mi">20</span><span class="p">)</span> 
+    
+<span class="n">respond_to</span> <span class="k">do</span> <span class="o">|</span><span class="nb">format</span><span class="o">|</span>
+   <span class="nb">format</span><span class="o">.</span><span class="n">rss</span> <span class="p">{</span> <span class="n">render</span> <span class="ss">:layout</span> <span class="o">=&gt;</span> <span class="kp">false</span> <span class="p">}</span>
+<span class="k">end</span></code></pre></div>
 
 
 <p>In Rails, this call sends all RSS calls to <em>index.rss.builder</em> by default. Let's take a look at what that View does.</p>
@@ -60,25 +59,24 @@
 
 <p>This is where all the Railsy magic happens. In another language, in another web application framework, this could've easily been ugly. But with Rails, we're talking <em>rainbows and ponies</em> baby!</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="n">xml</span><span class="o">.</span><span class="n">instruct!</span> <span class="ss">:xml</span><span class="p">,</span> <span class="ss">:version</span> <span class="o">=&gt;</span> <span class="s2">&quot;1.0&quot;</span> 
-    <span class="n">xml</span><span class="o">.</span><span class="n">rss</span> <span class="ss">:version</span> <span class="o">=&gt;</span> <span class="s2">&quot;2.0&quot;</span> <span class="k">do</span>
-      <span class="n">xml</span><span class="o">.</span><span class="n">channel</span> <span class="k">do</span>
-        <span class="n">xml</span><span class="o">.</span><span class="n">title</span> <span class="s2">&quot;Your Blog Title&quot;</span>
-        <span class="n">xml</span><span class="o">.</span><span class="n">description</span> <span class="s2">&quot;A blog about software and chocolate&quot;</span>
-        <span class="n">xml</span><span class="o">.</span><span class="n">link</span> <span class="n">posts_url</span>
-        
-        <span class="k">for</span> <span class="n">post</span> <span class="k">in</span> <span class="vi">@posts</span>
-          <span class="n">xml</span><span class="o">.</span><span class="n">item</span> <span class="k">do</span>
-            <span class="n">xml</span><span class="o">.</span><span class="n">title</span> <span class="n">post</span><span class="o">.</span><span class="n">title</span>
-            <span class="n">xml</span><span class="o">.</span><span class="n">description</span> <span class="n">post</span><span class="o">.</span><span class="n">content</span>
-            <span class="n">xml</span><span class="o">.</span><span class="n">pubDate</span> <span class="n">post</span><span class="o">.</span><span class="n">posted_at</span><span class="o">.</span><span class="n">to_s</span><span class="p">(</span><span class="ss">:rfc822</span><span class="p">)</span>
-            <span class="n">xml</span><span class="o">.</span><span class="n">link</span> <span class="n">post_url</span><span class="p">(</span><span class="n">post</span><span class="p">)</span>
-            <span class="n">xml</span><span class="o">.</span><span class="n">guid</span> <span class="n">post_url</span><span class="p">(</span><span class="n">post</span><span class="p">)</span>
-          <span class="k">end</span>
-        <span class="k">end</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">xml</span><span class="o">.</span><span class="n">instruct!</span> <span class="ss">:xml</span><span class="p">,</span> <span class="ss">:version</span> <span class="o">=&gt;</span> <span class="s2">&quot;1.0&quot;</span> 
+<span class="n">xml</span><span class="o">.</span><span class="n">rss</span> <span class="ss">:version</span> <span class="o">=&gt;</span> <span class="s2">&quot;2.0&quot;</span> <span class="k">do</span>
+  <span class="n">xml</span><span class="o">.</span><span class="n">channel</span> <span class="k">do</span>
+    <span class="n">xml</span><span class="o">.</span><span class="n">title</span> <span class="s2">&quot;Your Blog Title&quot;</span>
+    <span class="n">xml</span><span class="o">.</span><span class="n">description</span> <span class="s2">&quot;A blog about software and chocolate&quot;</span>
+    <span class="n">xml</span><span class="o">.</span><span class="n">link</span> <span class="n">posts_url</span>
+    
+    <span class="k">for</span> <span class="n">post</span> <span class="k">in</span> <span class="vi">@posts</span>
+      <span class="n">xml</span><span class="o">.</span><span class="n">item</span> <span class="k">do</span>
+        <span class="n">xml</span><span class="o">.</span><span class="n">title</span> <span class="n">post</span><span class="o">.</span><span class="n">title</span>
+        <span class="n">xml</span><span class="o">.</span><span class="n">description</span> <span class="n">post</span><span class="o">.</span><span class="n">content</span>
+        <span class="n">xml</span><span class="o">.</span><span class="n">pubDate</span> <span class="n">post</span><span class="o">.</span><span class="n">posted_at</span><span class="o">.</span><span class="n">to_s</span><span class="p">(</span><span class="ss">:rfc822</span><span class="p">)</span>
+        <span class="n">xml</span><span class="o">.</span><span class="n">link</span> <span class="n">post_url</span><span class="p">(</span><span class="n">post</span><span class="p">)</span>
+        <span class="n">xml</span><span class="o">.</span><span class="n">guid</span> <span class="n">post_url</span><span class="p">(</span><span class="n">post</span><span class="p">)</span>
       <span class="k">end</span>
     <span class="k">end</span>
-</code></pre></div>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></div>
 
 
 <p>You just implemented the RSS specification in Ruby on Rails. Congrats! Let's keep moving, we're almost done.</p>
@@ -87,14 +85,12 @@
 
 <p>You can get browsers to auto-detect your Rails blog rss feed with a single line of <em>Ruby on Rails</em> code:</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="o">&lt;%=</span> <span class="n">auto_discovery_link_tag</span><span class="p">(</span><span class="ss">:rss</span><span class="p">,</span> <span class="s2">&quot;http://iblog.com&quot;</span><span class="p">)</span> <span class="o">%&gt;</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;%=</span> <span class="n">auto_discovery_link_tag</span><span class="p">(</span><span class="ss">:rss</span><span class="p">,</span> <span class="s2">&quot;http://iblog.com&quot;</span><span class="p">)</span> <span class="o">%&gt;</span></code></pre></div>
 
 
 <p>Or, if you want, you can use straight <em>XHTML</em> to get browsers to auto-detect your Rails blog rss feed:</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="o">&lt;</span><span class="n">link</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;http://iblog.com&quot;</span> <span class="n">rel</span><span class="o">=</span><span class="s2">&quot;alternate&quot;</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;RSS&quot;</span> <span class="n">type</span><span class="o">=</span><span class="s2">&quot;application/rss+xml&quot;</span> <span class="sr">/&gt;</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;</span><span class="n">link</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;http://iblog.com&quot;</span> <span class="n">rel</span><span class="o">=</span><span class="s2">&quot;alternate&quot;</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;RSS&quot;</span> <span class="n">type</span><span class="o">=</span><span class="s2">&quot;application/rss+xml&quot;</span> <span class="sr">/&gt;</span></code></pre></div>
 
 
 <p>That's it, now mere mortals can subscribe to your feed and get inside the mind of a Rails master. Dramatic, I know!</p>

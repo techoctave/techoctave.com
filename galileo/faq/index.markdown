@@ -2,7 +2,7 @@
 layout: marketing
 title:  "Galileo FAQs"
 date:   2000-01-01 00:00:00
-permalink: /
+permalink: /galileo/faq/
 ---
 
 #Galileo FAQs

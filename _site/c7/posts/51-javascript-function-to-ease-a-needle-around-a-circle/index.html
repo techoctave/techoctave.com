@@ -27,7 +27,7 @@
 	
     <div class="feat">
       <h5 class="page-date">
-        <time datetime="2011-05-15T10:25:30Z" itemprop="datePublished">
+        <time datetime="2011-05-15T06:25:30-04:00" itemprop="datePublished">
           15 May 2011
         </time>
       </h5>
@@ -46,24 +46,22 @@
 
 <p>You may need to modify the code to fit your specific needs, but here is the JavaScript code to implement Circular Easing:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="c1">// Circular Easing: sqrt(1-t^2)</span>
-    <span class="c1">// t: current time, b: beginning value</span>
-    <span class="c1">// c: change in position, d: duration</span>
-    <span class="nx">easeInCirc</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">t</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span><span class="p">,</span> <span class="nx">d</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="o">-</span><span class="nx">c</span> <span class="o">*</span> <span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="nx">t</span><span class="o">/=</span><span class="nx">d</span><span class="p">)</span><span class="o">*</span><span class="nx">t</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
-    <span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Circular Easing: sqrt(1-t^2)</span>
+<span class="c1">// t: current time, b: beginning value</span>
+<span class="c1">// c: change in position, d: duration</span>
+<span class="nx">easeInCirc</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">t</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span><span class="p">,</span> <span class="nx">d</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="o">-</span><span class="nx">c</span> <span class="o">*</span> <span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="nx">t</span><span class="o">/=</span><span class="nx">d</span><span class="p">)</span><span class="o">*</span><span class="nx">t</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
 
 
 <p>Here, the output is in radians. So, for my <a href="http://techoctave.com/c7/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css">jquery dashboard speedometer gauge</a>, that means I need a way to map each radian to a degree on my gauge, which will in turn map to a miles-per-hour (mph) on the texture itself.</p>
 
 <p>Here is my mapping the needle texture to each easing point:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="nx">Speedometer</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">mph2deg</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="p">((</span><span class="k">this</span><span class="p">.</span><span class="nx">mph</span> <span class="o">-</span> <span class="mi">50</span><span class="p">)</span> <span class="o">*</span> <span class="mf">2.62</span><span class="p">)</span> <span class="o">+</span> 
-               <span class="p">(((</span><span class="k">this</span><span class="p">.</span><span class="nx">mph</span> <span class="o">-</span> <span class="mi">50</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1.8999</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.022900763</span><span class="p">);</span>
-    <span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">Speedometer</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">mph2deg</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">((</span><span class="k">this</span><span class="p">.</span><span class="nx">mph</span> <span class="o">-</span> <span class="mi">50</span><span class="p">)</span> <span class="o">*</span> <span class="mf">2.62</span><span class="p">)</span> <span class="o">+</span> 
+   <span class="p">(((</span><span class="k">this</span><span class="p">.</span><span class="nx">mph</span> <span class="o">-</span> <span class="mi">50</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1.8999</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.022900763</span><span class="p">);</span>
+<span class="p">}</span></code></pre></div>
 
 
 <p>The result is a degree value that directly corresponds to the needle's position on my <a href="http://techoctave.com/c7/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css">speedometer gauge</a>. This creates the degree that I need to pass to Raphael's rotation methods.</p>
@@ -72,10 +70,9 @@
 
 <p>Each needle instance I create inherits the rotate function from the Raphael prototype. So the actual image processing is handled by the Raphael core like so:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="nx">Gauge</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">RotateNeedle</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">deg</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">needle</span><span class="p">.</span><span class="nx">rotate</span><span class="p">(</span><span class="nx">deg</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">cX</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">cY</span><span class="p">);</span>
-    <span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">Gauge</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">RotateNeedle</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">deg</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">needle</span><span class="p">.</span><span class="nx">rotate</span><span class="p">(</span><span class="nx">deg</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">cX</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">cY</span><span class="p">);</span>
+<span class="p">}</span></code></pre></div>
 
 
 <p>TechOctave's <a href="http://techoctave.com/gauges">JavaScript Gauge Suite</a> really is a unique partnership between business and open source.</p>

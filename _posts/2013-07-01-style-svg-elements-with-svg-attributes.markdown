@@ -17,11 +17,11 @@ Some of you will have requirements or features where you may need to change your
 If the entire application look-and-feel changes - Light to Dark for example. Use the set "method" to update a style property and "refresh" the gauge instance. E.g.
 
 {% highlight js %}
-    var knots = new Gauge("knots");
-    . . .    
-    knots.set("baseColor", "#000000");
-    . . .
-    knots.refresh();
+var knots = new Gauge("knots");
+. . .    
+knots.set("baseColor", "#000000");
+. . .
+knots.refresh();
 {% endhighlight %}
 
 That will allow you to theme the application and still maintain browser and device flexibility because we strictly use SVG attributes to style SVG elements.

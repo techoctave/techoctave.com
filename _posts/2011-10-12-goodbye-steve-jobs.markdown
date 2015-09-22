@@ -35,27 +35,27 @@ I'm a better software developer and a better product designer because of you Ste
 Our World is a better place because you were in it:
 
 {% highlight ruby %}
-    def eulogy
-      #Rubyists miss you
-      puts "Goodbye Steve Jobs."
-    end
+def eulogy
+  #Rubyists miss you
+  puts "Goodbye Steve Jobs."
+end
 {% endhighlight %}
 
 A piece of you lives on in each of us:
 
 {% highlight ruby %}
-    var eulogy = new (function() {
-      var mourn = function() {
-        //Even ninjas miss you
-        console.log("Goodbye Steve Jobs.");
-      };
+var eulogy = new (function() {
+  var mourn = function() {
+    //Even ninjas miss you
+    console.log("Goodbye Steve Jobs.");
+  };
 
-      return {
-        farewell: mourn
-      };
-    })();
-    
-    eulogy.farewell();
+  return {
+    farewell: mourn
+  };
+})();
+
+eulogy.farewell();
 {% endhighlight %}
 
 Rest in peace Steve Jobs. May fate love you in the next life as much as she loved you in this. Say hello to Biggie and Tupac for me.

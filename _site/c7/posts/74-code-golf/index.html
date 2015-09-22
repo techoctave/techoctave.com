@@ -27,7 +27,7 @@
 	
     <div class="feat">
       <h5 class="page-date">
-        <time datetime="2012-04-29T04:03:52Z" itemprop="datePublished">
+        <time datetime="2012-04-29T00:03:52-04:00" itemprop="datePublished">
           29 April 2012
         </time>
       </h5>
@@ -52,11 +52,10 @@
 
 <p>The for loop is a fundamental iteration construct in many programming languages:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="k">for</span><span class="p">(</span><span class="kr">int</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> 
-    <span class="p">{</span>
-       <span class="nx">JustDoIt</span><span class="p">();</span>
-    <span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="k">for</span><span class="p">(</span><span class="kr">int</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> 
+<span class="p">{</span>
+   <span class="nx">JustDoIt</span><span class="p">();</span>
+<span class="p">}</span></code></pre></div>
 
 
 <p>This Code Golf's author challenges developers to:</p>
@@ -71,29 +70,26 @@
 
 <p>Entry #1:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="kd">function</span> <span class="nx">f</span><span class="p">(</span><span class="nx">m</span><span class="p">,</span><span class="nx">c</span><span class="p">)</span> <span class="p">{</span>
-       <span class="nx">m</span> <span class="o">?</span> <span class="nx">c</span><span class="p">()</span><span class="o">&amp;</span><span class="nx">f</span><span class="p">(</span><span class="o">--</span><span class="nx">m</span><span class="p">,</span><span class="nx">c</span><span class="p">)</span> <span class="o">:</span> <span class="mi">0</span>
-    <span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">f</span><span class="p">(</span><span class="nx">m</span><span class="p">,</span><span class="nx">c</span><span class="p">)</span> <span class="p">{</span>
+   <span class="nx">m</span> <span class="o">?</span> <span class="nx">c</span><span class="p">()</span><span class="o">&amp;</span><span class="nx">f</span><span class="p">(</span><span class="o">--</span><span class="nx">m</span><span class="p">,</span><span class="nx">c</span><span class="p">)</span> <span class="o">:</span> <span class="mi">0</span>
+<span class="p">}</span></code></pre></div>
 
 
 <p>Entry #2:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="kd">function</span> <span class="nx">f</span><span class="p">(</span><span class="nx">m</span><span class="p">,</span><span class="nx">c</span><span class="p">)</span> <span class="p">{</span>
-       <span class="nx">m</span><span class="o">&amp;&amp;</span><span class="nx">c</span><span class="p">()</span><span class="o">&amp;</span><span class="nx">f</span><span class="p">(</span><span class="o">--</span><span class="nx">m</span><span class="p">,</span><span class="nx">c</span><span class="p">)</span>
-    <span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">f</span><span class="p">(</span><span class="nx">m</span><span class="p">,</span><span class="nx">c</span><span class="p">)</span> <span class="p">{</span>
+   <span class="nx">m</span><span class="o">&amp;&amp;</span><span class="nx">c</span><span class="p">()</span><span class="o">&amp;</span><span class="nx">f</span><span class="p">(</span><span class="o">--</span><span class="nx">m</span><span class="p">,</span><span class="nx">c</span><span class="p">)</span>
+<span class="p">}</span></code></pre></div>
 
 
 <p>This version was inspired by Entry #1.</p>
 
 <p>Entry #3:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="p">(</span><span class="kd">function</span> <span class="nx">i</span><span class="p">(</span><span class="nx">s</span><span class="p">,</span><span class="nx">r</span><span class="p">){</span>
-        <span class="nx">r</span> <span class="o">+=</span> <span class="nx">s</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span><span class="p">;</span>
-        <span class="nx">s</span><span class="o">++</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="nx">e3</span> <span class="o">?</span> <span class="nx">i</span><span class="p">(</span><span class="nx">s</span><span class="p">,</span><span class="nx">r</span><span class="p">)</span> <span class="o">:</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">r</span><span class="p">)</span>
-    <span class="p">})(</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">(</span><span class="kd">function</span> <span class="nx">i</span><span class="p">(</span><span class="nx">s</span><span class="p">,</span><span class="nx">r</span><span class="p">){</span>
+    <span class="nx">r</span> <span class="o">+=</span> <span class="nx">s</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span><span class="p">;</span>
+    <span class="nx">s</span><span class="o">++</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="nx">e3</span> <span class="o">?</span> <span class="nx">i</span><span class="p">(</span><span class="nx">s</span><span class="p">,</span><span class="nx">r</span><span class="p">)</span> <span class="o">:</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">r</span><span class="p">)</span>
+<span class="p">})(</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span></code></pre></div>
 
 
 <p>Code Golf is pretty interesting. Hopefully, it gives you a good opportunity to sit back, relax and learn from our peers.</p>

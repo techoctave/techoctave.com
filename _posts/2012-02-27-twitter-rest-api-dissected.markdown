@@ -25,16 +25,16 @@ GET http://api.twitter.com/1/statuses/show/id.format
 **Problems:**
 
 {% highlight ruby %}
- - Operation ("Show") included in the URL
- - Status ID not a child of the "statuses" collection
+- Operation ("Show") included in the URL
+- Status ID not a child of the "statuses" collection
 {% endhighlight %}
 
 **Better:** GET http://twitter.com/tweets/id.format
 
 {% highlight ruby %}
- - Show via combo of GET HTTP Verb and tweets Resource
+- Show via combo of GET HTTP Verb and tweets Resource
 
- - Internet Media type returned could be JSON, XML, SOAP, etc.
+- Internet Media type returned could be JSON, XML, SOAP, etc.
 {% endhighlight %}
 
 ####Example #2: Statuses/Update
@@ -44,18 +44,18 @@ POST http://api.twitter.com/1/statuses/update.format
 **Problems:**
 
 {% highlight ruby %}
- - Operation ("update") included in the URL
- - Uses the authenticated user implicitly
+- Operation ("update") included in the URL
+- Uses the authenticated user implicitly
 {% endhighlight %}
 
 **Better:** PUT http://twitter.com/tweets/id.format
 
 {% highlight ruby %}
- - User authentication via OAuth or Basic Authentication
+- User authentication via OAuth or Basic Authentication
 
- - Update via combo of PUT HTTP Verb and tweets Resource
+- Update via combo of PUT HTTP Verb and tweets Resource
 
- - Internet Media type returned could be JSON, XML, SOAP, etc.
+- Internet Media type returned could be JSON, XML, SOAP, etc.
 {% endhighlight %}
 
 ####Example #3: Statuses/Destroy
@@ -65,17 +65,17 @@ POST http://api.twitter.com/1/statuses/destroy/id.format
 **Problems:**
 
 {% highlight ruby %}
- - Operation ("destroy") included in URL like it's 1997.
- - Odd, illogical hierarchy again
- - Allows both "POST" and "DELETE" as verbs
+- Operation ("destroy") included in URL like it's 1997.
+- Odd, illogical hierarchy again
+- Allows both "POST" and "DELETE" as verbs
 {% endhighlight %}
 
 **Better:** DELETE http://twitter.com/tweets/id.format
 
 {% highlight ruby %}
- - Delete via combo of DELETE HTTP Verb and tweets Resource
+- Delete via combo of DELETE HTTP Verb and tweets Resource
 
- - Internet Media type returned could be JSON, XML, SOAP, etc.
+- Internet Media type returned could be JSON, XML, SOAP, etc.
 {% endhighlight %}
 
 ###Summary

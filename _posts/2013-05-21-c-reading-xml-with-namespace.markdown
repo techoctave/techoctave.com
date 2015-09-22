@@ -13,32 +13,32 @@ You either have to piece together what feels like desparate code in order to acc
 Say you have this XML response:
 
 {% highlight xml %}
-    <?xml version="1.0" encoding="utf-8"?>
-    <UserResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-      <User xmlns="http://halo.com/schemas/custom/users/GetUser_V1">
-    	  <Result>"Successful"</Result>
-          <Name>John-117</Name>
-          <Age>Unknown</Age>
-          <Rank>Master Chief Petty Officer</Rank>
-      </User>
-      <UUID xmlns="http://halo.com/schemas/custom/users/GetUser_V1">
-    	  {61D25ABC-CD96-4838-9406-C867B6D07449}
-      </UUID>
-    </UserResponse>
+<?xml version="1.0" encoding="utf-8"?>
+<UserResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <User xmlns="http://halo.com/schemas/custom/users/GetUser_V1">
+	  <Result>"Successful"</Result>
+      <Name>John-117</Name>
+      <Age>Unknown</Age>
+      <Rank>Master Chief Petty Officer</Rank>
+  </User>
+  <UUID xmlns="http://halo.com/schemas/custom/users/GetUser_V1">
+	  {61D25ABC-CD96-4838-9406-C867B6D07449}
+  </UUID>
+</UserResponse>
 {% endhighlight %}
 
 Using C#, parsing this data should be an easy task - right? You should be able to do something like this?
 
 {% highlight js %}
-    HaloService haloService = new HaloService();
-    string response = haloService.ExecuteCall("{61D25ABC-CD96-4838-9406-C867B6D07449}");
-    
-    XmlDocument results = new XmlDocument();
-    results.LoadXml(response);
-    
-    if (results.SelectSingleNode("//UserResponse/User/Result").InnerText == "Successful") {
-        string Name = results.SelectSingleNode("//UserResponse/User/Name").InnerText;
-    }
+HaloService haloService = new HaloService();
+string response = haloService.ExecuteCall("{61D25ABC-CD96-4838-9406-C867B6D07449}");
+
+XmlDocument results = new XmlDocument();
+results.LoadXml(response);
+
+if (results.SelectSingleNode("//UserResponse/User/Result").InnerText == "Successful") {
+    string Name = results.SelectSingleNode("//UserResponse/User/Name").InnerText;
+}
 {% endhighlight %}
 
 But does that work in .NET C#? No.
@@ -46,7 +46,7 @@ But does that work in .NET C#? No.
 Why? It doesn't work because the XML response has a namespace separating the key data elements. Here the XML namespace is:
 
 {% highlight xml %}
-    http://halo.com/schemas/custom/users/GetUser_V1
+http://halo.com/schemas/custom/users/GetUser_V1
 {% endhighlight %}
 
 ###So what are your options:
@@ -60,27 +60,27 @@ The final option is to strip the Namespaces using Regex. I prefer this route and
 When using XPath in .NET (via SelectNodes or SelectSingleNode) on XML with namespaces you need to:
 
 {% highlight bash %}
- 1. Provide your own XmlNamespaceManager
- 
- 2. Explicitly prefix ALL elements in your XPath expression which are in the namespace
+1. Provide your own XmlNamespaceManager
+
+2. Explicitly prefix ALL elements in your XPath expression which are in the namespace
 {% endhighlight %}
 
 You do so in a similar fashion as below:
 
 {% highlight js %}
-    . . .
-        
-    XmlDocument results = new XmlDocument();
-    results.LoadXml(response);
+. . .
     
-    XmlNamespaceManager ns = new XmlNamespaceManager(results.NameTable);
-    ns.AddNamespace("ns",      
-            "http://halo.com/schemas/custom/users/GetUser_V1");
-    
-    string Result = results.SelectSingleNode(
-    "//UserResponse/ns:User/ns:Result", ns).InnerText;
+XmlDocument results = new XmlDocument();
+results.LoadXml(response);
 
-    . . .
+XmlNamespaceManager ns = new XmlNamespaceManager(results.NameTable);
+ns.AddNamespace("ns",      
+        "http://halo.com/schemas/custom/users/GetUser_V1");
+
+string Result = results.SelectSingleNode(
+"//UserResponse/ns:User/ns:Result", ns).InnerText;
+
+. . .
 {% endhighlight %}
 
 This gets you the data, but it's clumsy and has several disadvantages. First, if you don't control the web service (which many people don't), the namespace could change on you at anytime.
@@ -98,13 +98,13 @@ Regex is like violence - if it doesn’t solve your problems, you are not using 
 This isn't one of those scenarios. Here, Regex was not only necessary, it was downright welcomed:
 
 {% highlight js %}
-    string filter = @"xmlns(:\w+)?=""([^""]+)""|xsi(:\w+)?=""([^""]+)""";
-    response = Regex.Replace(response, filter, "");
-    
-    XmlDocument results = new XmlDocument();
-    results.LoadXml(response);
+string filter = @"xmlns(:\w+)?=""([^""]+)""|xsi(:\w+)?=""([^""]+)""";
+response = Regex.Replace(response, filter, "");
 
-    string Name = results.SelectSingleNode("//UserResponse/User/Name").InnerText;
+XmlDocument results = new XmlDocument();
+results.LoadXml(response);
+
+string Name = results.SelectSingleNode("//UserResponse/User/Name").InnerText;
 {% endhighlight %}
 
 Here, we remove any XML Namespace (xmlns) declaration before loading the XML. Once you do that, you can read the XML using the XPath expression you expected to use in the first place.

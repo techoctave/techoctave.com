@@ -27,7 +27,7 @@
 	
     <div class="feat">
       <h5 class="page-date">
-        <time datetime="2012-07-26T12:33:05Z" itemprop="datePublished">
+        <time datetime="2012-07-26T08:33:05-04:00" itemprop="datePublished">
           26 July 2012
         </time>
       </h5>
@@ -58,12 +58,15 @@
 
 <p>The bullet graph consists of five primary components:</p>
 
-<div class="highlight"><pre><code class="js"> <span class="o">-</span> <span class="nx">Text</span> <span class="nx">label</span>
- <span class="o">-</span> <span class="nx">A</span> <span class="nx">quantitative</span> <span class="nx">scale</span> <span class="nx">along</span> <span class="nx">a</span> <span class="nx">single</span> <span class="nx">linear</span> <span class="nx">axis</span>
- <span class="o">-</span> <span class="nx">The</span> <span class="nx">featured</span> <span class="nx">measure</span>
- <span class="o">-</span> <span class="nx">One</span> <span class="nx">or</span> <span class="nx">two</span> <span class="nx">comparative</span> <span class="nx">measures</span> <span class="p">(</span><span class="nx">optional</span><span class="p">)</span>
- <span class="o">-</span> <span class="nx">From</span> <span class="nx">two</span> <span class="nx">to</span> <span class="nx">five</span> <span class="nx">ranges</span> <span class="nx">along</span> <span class="nx">the</span> <span class="nx">quantitative</span> <span class="nx">scale</span> <span class="nx">to</span> <span class="nx">declare</span> <span class="nx">the</span> <span class="nx">featured</span> <span class="nx">measure</span><span class="err">&#39;</span><span class="nx">s</span> <span class="nx">qualitative</span> <span class="nx">state</span> <span class="p">(</span><span class="nx">optional</span><span class="p">)</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="o">-</span> <span class="nx">Text</span> <span class="nx">label</span>
+
+<span class="o">-</span> <span class="nx">A</span> <span class="nx">quantitative</span> <span class="nx">scale</span> <span class="nx">along</span> <span class="nx">a</span> <span class="nx">single</span> <span class="nx">linear</span> <span class="nx">axis</span>
+
+<span class="o">-</span> <span class="nx">The</span> <span class="nx">featured</span> <span class="nx">measure</span>
+
+<span class="o">-</span> <span class="nx">One</span> <span class="nx">or</span> <span class="nx">two</span> <span class="nx">comparative</span> <span class="nx">measures</span> <span class="p">(</span><span class="nx">optional</span><span class="p">)</span>
+
+<span class="o">-</span> <span class="nx">From</span> <span class="nx">two</span> <span class="nx">to</span> <span class="nx">five</span> <span class="nx">ranges</span> <span class="nx">along</span> <span class="nx">the</span> <span class="nx">quantitative</span> <span class="nx">scale</span> <span class="nx">to</span> <span class="nx">declare</span> <span class="nx">the</span> <span class="nx">featured</span> <span class="nx">measure</span><span class="err">&#39;</span><span class="nx">s</span> <span class="nx">qualitative</span> <span class="nx">state</span> <span class="p">(</span><span class="nx">optional</span><span class="p">)</span></code></pre></div>
 
 
 <p><img src="http://upload.wikimedia.org/wikipedia/en/thumb/e/e1/Bullet_graph_labeled.png/500px-Bullet_graph_labeled.png" alt="520" alt="JavaScript Bullet Graph" /></p>
@@ -92,20 +95,18 @@
 
 <h4>HTML</h4>
 
-<div class="highlight"><pre><code class="js">    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&quot;revenue&quot;</span><span class="o">&gt;&lt;</span><span class="err">/div&gt;</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&quot;revenue&quot;</span><span class="o">&gt;&lt;</span><span class="err">/div&gt;</span></code></pre></div>
 
 
 <h4>JavaScript</h4>
 
-<div class="highlight"><pre><code class="js">    <span class="kd">var</span> <span class="nx">revenue</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BulletChart</span><span class="p">(</span><span class="s2">&quot;revenue&quot;</span><span class="p">,</span> <span class="p">{</span>
-        <span class="nx">title</span><span class="o">:</span> <span class="s2">&quot;Revenue&quot;</span><span class="p">,</span>
-        <span class="nx">subtitle</span><span class="o">:</span> <span class="s2">&quot;US$, in thousands&quot;</span><span class="p">,</span>
-        <span class="nx">ranges</span><span class="o">:</span> <span class="p">[</span><span class="mi">150</span><span class="p">,</span> <span class="mi">225</span><span class="p">,</span> <span class="mi">300</span><span class="p">],</span>
-        <span class="nx">measures</span><span class="o">:</span> <span class="p">[</span><span class="mi">275</span><span class="p">],</span>
-        <span class="nx">markers</span><span class="o">:</span> <span class="p">[</span><span class="mi">265</span><span class="p">]</span>
-    <span class="p">});</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">revenue</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BulletChart</span><span class="p">(</span><span class="s2">&quot;revenue&quot;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">title</span><span class="o">:</span> <span class="s2">&quot;Revenue&quot;</span><span class="p">,</span>
+    <span class="nx">subtitle</span><span class="o">:</span> <span class="s2">&quot;US$, in thousands&quot;</span><span class="p">,</span>
+    <span class="nx">ranges</span><span class="o">:</span> <span class="p">[</span><span class="mi">150</span><span class="p">,</span> <span class="mi">225</span><span class="p">,</span> <span class="mi">300</span><span class="p">],</span>
+    <span class="nx">measures</span><span class="o">:</span> <span class="p">[</span><span class="mi">275</span><span class="p">],</span>
+    <span class="nx">markers</span><span class="o">:</span> <span class="p">[</span><span class="mi">265</span><span class="p">]</span>
+<span class="p">});</span></code></pre></div>
 
 
 <p>The above instance of the BulletChart class creates the sample Bullet Chart detailing the success of Hustle &amp; Code, LLC.</p>
@@ -116,29 +117,26 @@
 
 <p>Creating a vertical Bullet Chart is just as simple. Simply set the <em>vertical</em> property to true:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="kd">var</span> <span class="nx">revenue</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BulletChart</span><span class="p">(</span><span class="s2">&quot;revenue&quot;</span><span class="p">,</span> <span class="p">{</span>
-        <span class="nx">title</span><span class="o">:</span> <span class="s2">&quot;Revenue&quot;</span><span class="p">,</span>
-        <span class="nx">subtitle</span><span class="o">:</span> <span class="s2">&quot;US$, in thousands&quot;</span><span class="p">,</span>
-        <span class="nx">ranges</span><span class="o">:</span> <span class="p">[</span><span class="mi">150</span><span class="p">,</span> <span class="mi">225</span><span class="p">,</span> <span class="mi">300</span><span class="p">],</span>
-        <span class="nx">measures</span><span class="o">:</span> <span class="p">[</span><span class="mi">275</span><span class="p">],</span>
-        <span class="nx">markers</span><span class="o">:</span> <span class="p">[</span><span class="mi">265</span><span class="p">],</span>
-        <span class="nx">vertical</span><span class="o">:</span> <span class="kc">true</span>
-    <span class="p">});</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">revenue</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BulletChart</span><span class="p">(</span><span class="s2">&quot;revenue&quot;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">title</span><span class="o">:</span> <span class="s2">&quot;Revenue&quot;</span><span class="p">,</span>
+    <span class="nx">subtitle</span><span class="o">:</span> <span class="s2">&quot;US$, in thousands&quot;</span><span class="p">,</span>
+    <span class="nx">ranges</span><span class="o">:</span> <span class="p">[</span><span class="mi">150</span><span class="p">,</span> <span class="mi">225</span><span class="p">,</span> <span class="mi">300</span><span class="p">],</span>
+    <span class="nx">measures</span><span class="o">:</span> <span class="p">[</span><span class="mi">275</span><span class="p">],</span>
+    <span class="nx">markers</span><span class="o">:</span> <span class="p">[</span><span class="mi">265</span><span class="p">],</span>
+    <span class="nx">vertical</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">});</span></code></pre></div>
 
 
 <p>As the measure increases or decreases, simply pick your favorite <a href="http://techoctave.com/c7/posts/60-simple-long-polling-example-with-javascript-and-jquery">JavaScript Long Polling</a> technique and make a call to your data source to update the measure:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="nx">revenue</span><span class="p">.</span><span class="nx">setMeasures</span><span class="p">([</span><span class="mi">200</span><span class="p">]);</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">revenue</span><span class="p">.</span><span class="nx">setMeasures</span><span class="p">([</span><span class="mi">200</span><span class="p">]);</span></code></pre></div>
 
 
 <p>Need to update the ranges or even the comparative marker? You can do that too:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="nx">revenue</span><span class="p">.</span><span class="nx">setRanges</span><span class="p">([</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">300</span><span class="p">]);</span>
-    
-    <span class="nx">revenue</span><span class="p">.</span><span class="nx">setMarkers</span><span class="p">([</span><span class="mi">125</span><span class="p">]);</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">revenue</span><span class="p">.</span><span class="nx">setRanges</span><span class="p">([</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">300</span><span class="p">]);</span>
+
+<span class="nx">revenue</span><span class="p">.</span><span class="nx">setMarkers</span><span class="p">([</span><span class="mi">125</span><span class="p">]);</span></code></pre></div>
 
 
 <p>That simple.</p>

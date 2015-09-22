@@ -2,7 +2,7 @@
 layout: marketing
 title:  "Blogcast is a better way to blog."
 date:   2000-01-01 00:00:00
-permalink: /
+permalink: /blogcast/
 ---
 
 <h1 style="font-size: 270%;">Blogcast is a better way to blog.</h1>

@@ -25,13 +25,13 @@ As you already know, a gift delivered is always preceded by a journey that invol
 Marketing for Geeks is built on four principles:
 
 {% highlight ruby %}
- 1. Don't overwhelm with meaningless theory 
- 
- 2. Write content that people can use right now
- 
- 3. Make learning fun
- 
- 4. Be thought provoking yet encourage action
+1. Don't overwhelm with meaningless theory 
+
+2. Write content that people can use right now
+
+3. Make learning fun
+
+4. Be thought provoking yet encourage action
 {% endhighlight %}
 
 This is the strength at the base of the pillar that is Marketing for Geeks. From this foundation flows knowledge, inspiration and tactics that you can start using right now. That's the beauty of the book.

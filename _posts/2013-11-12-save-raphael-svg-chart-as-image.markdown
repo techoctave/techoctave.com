@@ -21,21 +21,21 @@ Saving SVG to PNG image turns out to be a [very][2] [popular][3] [question][4]. 
 First, you'll have to have an HTML5 element to hang your SVG on:
 
 {% highlight html %}
-    <div id="sales"></div>
+<div id="sales"></div>
 {% endhighlight %}
 
 and a HTML5 button to trigger the download event:
 
 {% highlight html %}
-    <button id="createImage">Create Image *.png</button>
+<button id="createImage">Create Image *.png</button>
 {% endhighlight %}
 
 Next, you'll have to have an SVG graphic to load into the HTML5 element. Here we'll use our [JavaScript Gauges][7]:
 
 {% highlight js %}
-    window.onload = function() {
-    	var sales = new Gauge("sales");
-    };
+window.onload = function() {
+	var sales = new Gauge("sales");
+};
 {% endhighlight %}
 
 At this point, you will have an SVG object loaded into your HTML5  node. Then follow this algorithm to setup the SVG image download process.
@@ -43,39 +43,39 @@ At this point, you will have an SVG object loaded into your HTML5  node. Then fo
 Save SVG To Image Algorithm:
 
 {% highlight js %}
- 1. Get the svg instance
- 
- 2. Create the canvas element
- 
- 3. Load the canvas element with our svg instance
- 
- 4. Save svg to png
- 
- 5. Clear the canvas
+1. Get the svg instance
+
+2. Create the canvas element
+
+3. Load the canvas element with our svg instance
+
+4. Save svg to png
+
+5. Clear the canvas
 {% endhighlight %}
 
 Here's the SVG To Image Algorithm in Code:
 
 {% highlight js %}
-    //Create PNG Image
-    document.getElementById("createImage").onclick = function() {
-    	//Get the svg
-    	var svg = document.getElementById("sales").innerHTML;
-    		
-    	//Create the canvas element
-    	var canvas = document.createElement('canvas');
-    	canvas.id = "canvas";
-    	document.body.appendChild(canvas);
-    		
-    	//Load the canvas element with our svg
-    	canvg(document.getElementById('canvas'), svg);
-    		
-    	//Save the svg to png
-    	Canvas2Image.saveAsPNG(canvas);
-    		
-    	//Clear the canvas
-    	canvas.width = canvas.width;
-    };
+//Create PNG Image
+document.getElementById("createImage").onclick = function() {
+	//Get the svg
+	var svg = document.getElementById("sales").innerHTML;
+		
+	//Create the canvas element
+	var canvas = document.createElement('canvas');
+	canvas.id = "canvas";
+	document.body.appendChild(canvas);
+		
+	//Load the canvas element with our svg
+	canvg(document.getElementById('canvas'), svg);
+		
+	//Save the svg to png
+	Canvas2Image.saveAsPNG(canvas);
+		
+	//Clear the canvas
+	canvas.width = canvas.width;
+};
 {% endhighlight %}
 
 Step 3 uses the [Canvg][8] library. Canvg is a SVG parser and renderer. It takes a URL to a SVG file or the text of an SVG file, parses it in JavaScript, and renders the result on a Canvas element.
@@ -109,36 +109,36 @@ Something like...
 Save SVG To Image Algorithm:
 
 {% highlight js %}
- 1. Get the svg instance
- 
- 2. Create the canvas element
- 
- 3. Load the canvas element with our svg instance
- 
- 4. Ajax the canvas.toDataURL() results to your server
- 
- 5. Rewrite the response headers and send back to the browser
+1. Get the svg instance
+
+2. Create the canvas element
+
+3. Load the canvas element with our svg instance
+
+4. Ajax the canvas.toDataURL() results to your server
+
+5. Rewrite the response headers and send back to the browser
 {% endhighlight %}
 
 Using Ruby and Rails would look something similar to:
 
 {% highlight js %}
-    # svg_controller.rb
-    class SvgController < ApplicationController
-      require "base64"
-      
-      def show
-        @svg = Svg.where(id: params[:id]).first
-        respond_to do |format|
-          format.png {
-            headers['Content-type'] = 'image/png'
-            headers["Content-Disposition"] = "attachment; filename=\"chart.png\""
-            @result = Base64.decode64(@svg.content.gsub('data:image/png;base64,', ''))
-            render :text => @result
-          }
-        end
-      end
+# svg_controller.rb
+class SvgController < ApplicationController
+  require "base64"
+  
+  def show
+    @svg = Svg.where(id: params[:id]).first
+    respond_to do |format|
+      format.png {
+        headers['Content-type'] = 'image/png'
+        headers["Content-Disposition"] = "attachment; filename=\"chart.png\""
+        @result = Base64.decode64(@svg.content.gsub('data:image/png;base64,', ''))
+        render :text => @result
+      }
     end
+  end
+end
 {% endhighlight %}
 
 That will get you the customization you need.Step 5 is an implementation detail. Use Ruby, J2EE, .NET, Python, use whatever you need to get the job done and you will have your victory.

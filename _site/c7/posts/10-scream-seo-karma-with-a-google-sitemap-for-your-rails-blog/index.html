@@ -27,7 +27,7 @@
 	
     <div class="feat">
       <h5 class="page-date">
-        <time datetime="2010-08-26T09:55:00Z" itemprop="datePublished">
+        <time datetime="2010-08-26T05:55:00-04:00" itemprop="datePublished">
           26 August 2010
         </time>
       </h5>
@@ -51,48 +51,44 @@ I know some of you are anxious to jump into the code, so let's get to it:</p>
 
 <p>Create the following Rails route:</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="n">map</span><span class="o">.</span><span class="n">sitemap</span> <span class="s1">&#39;sitemap.xml&#39;</span><span class="p">,</span> <span class="ss">:controller</span> <span class="o">=&gt;</span> <span class="s1">&#39;sitemap&#39;</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">map</span><span class="o">.</span><span class="n">sitemap</span> <span class="s1">&#39;sitemap.xml&#39;</span><span class="p">,</span> <span class="ss">:controller</span> <span class="o">=&gt;</span> <span class="s1">&#39;sitemap&#39;</span></code></pre></div>
 
 
 <p>UPDATE: Above route was written for Rails 2.3.8. Here is the updated route for Rails 3.0. Remaining code is Rails 3.0 complaint:</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="n">match</span> <span class="s1">&#39;sitemap&#39;</span><span class="p">,</span> <span class="ss">:to</span> <span class="o">=&gt;</span> <span class="s1">&#39;sitemap#index&#39;</span><span class="p">,</span> <span class="ss">:via</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="ss">:get</span><span class="o">]</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">match</span> <span class="s1">&#39;sitemap&#39;</span><span class="p">,</span> <span class="ss">:to</span> <span class="o">=&gt;</span> <span class="s1">&#39;sitemap#index&#39;</span><span class="p">,</span> <span class="ss">:via</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="ss">:get</span><span class="o">]</span></code></pre></div>
 
 
 <h4>app/controllers/sitemap_controller.rb</h4>
 
 <p>Create the following Rails controller to serve the Google sitemap requests:</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="k">class</span> <span class="nc">SitemapController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>
-      <span class="k">def</span> <span class="nf">index</span>
-        <span class="vi">@posts</span> <span class="o">=</span> <span class="no">Post</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="ss">:select</span> <span class="o">=&gt;</span> <span class="s2">&quot;title, id, updated_at&quot;</span><span class="p">,</span> <span class="ss">:order</span> <span class="o">=&gt;</span> <span class="s2">&quot;updated_at DESC&quot;</span><span class="p">,</span> <span class="ss">:limit</span> <span class="o">=&gt;</span> <span class="mi">50000</span><span class="p">)</span> 
-        
-        <span class="n">respond_to</span> <span class="k">do</span> <span class="o">|</span><span class="nb">format</span><span class="o">|</span>
-          <span class="nb">format</span><span class="o">.</span><span class="n">xml</span> <span class="p">{</span> <span class="n">render</span> <span class="ss">:layout</span> <span class="o">=&gt;</span> <span class="kp">false</span> <span class="p">}</span>
-        <span class="k">end</span>
-      <span class="k">end</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">SitemapController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>
+  <span class="k">def</span> <span class="nf">index</span>
+    <span class="vi">@posts</span> <span class="o">=</span> <span class="no">Post</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="ss">:select</span> <span class="o">=&gt;</span> <span class="s2">&quot;title, id, updated_at&quot;</span><span class="p">,</span> <span class="ss">:order</span> <span class="o">=&gt;</span> <span class="s2">&quot;updated_at DESC&quot;</span><span class="p">,</span> <span class="ss">:limit</span> <span class="o">=&gt;</span> <span class="mi">50000</span><span class="p">)</span> 
+    
+    <span class="n">respond_to</span> <span class="k">do</span> <span class="o">|</span><span class="nb">format</span><span class="o">|</span>
+      <span class="nb">format</span><span class="o">.</span><span class="n">xml</span> <span class="p">{</span> <span class="n">render</span> <span class="ss">:layout</span> <span class="o">=&gt;</span> <span class="kp">false</span> <span class="p">}</span>
     <span class="k">end</span>
-</code></pre></div>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></div>
 
 
 <h4>app/views/sitemap/index.xml.builder</h4>
 
 <p>The *.xml.builder file does the work of formatting the list of Posts into a Google sitemap compliant file:</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="n">xml</span><span class="o">.</span><span class="n">instruct!</span> <span class="ss">:xml</span><span class="p">,</span> <span class="ss">:version</span> <span class="o">=&gt;</span> <span class="s2">&quot;1.0&quot;</span>
-    <span class="n">xml</span><span class="o">.</span><span class="n">urlset</span> <span class="s2">&quot;xmlns&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;http://www.sitemaps.org/schemas/sitemap/0.9&quot;</span> <span class="k">do</span>
-      <span class="k">for</span> <span class="n">post</span> <span class="k">in</span> <span class="vi">@posts</span> <span class="k">do</span>
-        <span class="n">xml</span><span class="o">.</span><span class="n">url</span> <span class="k">do</span>
-          <span class="n">xml</span><span class="o">.</span><span class="n">loc</span> <span class="n">post_url</span><span class="p">(</span><span class="n">post</span><span class="p">)</span>
-          <span class="n">xml</span><span class="o">.</span><span class="n">lastmod</span> <span class="n">post</span><span class="o">.</span><span class="n">updated_at</span><span class="o">.</span><span class="n">to_date</span>
-          <span class="n">xml</span><span class="o">.</span><span class="n">changefreq</span> <span class="s2">&quot;monthly&quot;</span>
-          <span class="n">xml</span><span class="o">.</span><span class="n">priority</span> <span class="s2">&quot;0.5&quot;</span>
-        <span class="k">end</span>
-      <span class="k">end</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">xml</span><span class="o">.</span><span class="n">instruct!</span> <span class="ss">:xml</span><span class="p">,</span> <span class="ss">:version</span> <span class="o">=&gt;</span> <span class="s2">&quot;1.0&quot;</span>
+<span class="n">xml</span><span class="o">.</span><span class="n">urlset</span> <span class="s2">&quot;xmlns&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;http://www.sitemaps.org/schemas/sitemap/0.9&quot;</span> <span class="k">do</span>
+  <span class="k">for</span> <span class="n">post</span> <span class="k">in</span> <span class="vi">@posts</span> <span class="k">do</span>
+    <span class="n">xml</span><span class="o">.</span><span class="n">url</span> <span class="k">do</span>
+      <span class="n">xml</span><span class="o">.</span><span class="n">loc</span> <span class="n">post_url</span><span class="p">(</span><span class="n">post</span><span class="p">)</span>
+      <span class="n">xml</span><span class="o">.</span><span class="n">lastmod</span> <span class="n">post</span><span class="o">.</span><span class="n">updated_at</span><span class="o">.</span><span class="n">to_date</span>
+      <span class="n">xml</span><span class="o">.</span><span class="n">changefreq</span> <span class="s2">&quot;monthly&quot;</span>
+      <span class="n">xml</span><span class="o">.</span><span class="n">priority</span> <span class="s2">&quot;0.5&quot;</span>
     <span class="k">end</span>
-</code></pre></div>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></div>
 
 
 <p>Beware, there is a 50,000 URL limit for each sitemap you submit to Google through its indexing service.</p>
@@ -101,8 +97,7 @@ I know some of you are anxious to jump into the code, so let's get to it:</p>
 
 <p>You can also automate your sitemap.xml submissions to Google using this handy Cronjob on Ubuntu or any flavor of linux:</p>
 
-<div class="highlight"><pre><code class="bash">    0 20 * * * /usr/bin/curl http://www.google.com/webmasters/tools/ping?sitemap<span class="o">=</span>http://yourdomain.com/sitemap.xml &gt; /dev/null
-</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="m">0</span> <span class="m">20</span> * * * /usr/bin/curl http://www.google.com/webmasters/tools/ping?sitemap<span class="o">=</span>http://yourdomain.com/sitemap.xml &gt; /dev/null</code></pre></div>
 
 
 <p>Do pay attention to the <em>/user/bin/curl</em> directive. You must give the <em>absolute</em> path to your instance of curl. Also, I don't want to handle any responses from Google, so I send any responses to <em>/dev/null</em>. Think of <em>/dev/null</em> as a black hole where data goes in and is never stored or seen again!</p>

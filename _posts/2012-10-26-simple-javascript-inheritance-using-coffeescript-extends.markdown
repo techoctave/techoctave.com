@@ -29,9 +29,9 @@ Take the power panel for example:
 In particular, let's focus on two components of the power panel:
 
 {% highlight js %}
- 1. Glow Starter Light
- 
- 2. Fuel Pimp Fill Button
+1. Glow Starter Light
+
+2. Fuel Pimp Fill Button
 {% endhighlight %}
 
 In classical object oriented fashion, you'd reason both the Light and the Button share a base each uses to embed itself within the power panel. From there both the Light and Button would go on to have distinct properties and methods.
@@ -39,23 +39,23 @@ In classical object oriented fashion, you'd reason both the Light and the Button
 In JavaScript, this base class would be modeled like this:
 
 {% highlight js %}
-    var Base = (function() {
-    	function Base(id) {
-    		console.log("base: " + id);
-    		this.id = id;
-    	}
-    	
-    	Base.prototype.drawTerminal = function() {
-    		console.log("drawTerminal");
-    	};
-    	
-    	Base.prototype.getId = function() {
-    		console.log("Id: " + this.id);
-    		return this.id;
-    	};
-    	
-    	return Base;
-    })();
+var Base = (function() {
+	function Base(id) {
+		console.log("base: " + id);
+		this.id = id;
+	}
+	
+	Base.prototype.drawTerminal = function() {
+		console.log("drawTerminal");
+	};
+	
+	Base.prototype.getId = function() {
+		console.log("Id: " + this.id);
+		return this.id;
+	};
+	
+	return Base;
+})();
 {% endhighlight %}
 
 There are a couple of really cool things at work here. Let's take some time to look at each.
@@ -67,7 +67,7 @@ Second, you'll notice the class has a bonafide constructor you can use to setup 
 You could easily create a new instance of the base class:
 
 {% highlight js %}
-    var base = new Base("123456");
+var base = new Base("123456");
 {% endhighlight %}
 
 But, that wouldn't be too useful. And that's fine because it's not meant to be too useful. The base class is just that, a base class (with base functionality) from which most other classes will inherit from. Here, the base's primary function is to simply drawTerminal because everyone will need a Terminal in order to connect to the Power Panel.
@@ -81,29 +81,29 @@ Things really get interesting when you want to create a Light that inherits from
 One of the most interesting ways to achieve classical inheritance in JavaScript is to do the following:
 
 {% highlight js %}
-    var Light = (function(_super) {
-    
-    	function Light(id, color) {
-    		_super.call(this, id);
-    		
-    		this.color = color;
-    		console.log("Start Light: " + color);
-    		
-    		_super.prototype.drawTerminal();
-    	}
-    	
-    	Light.prototype.setColor = function(color) {
-    		this.color = color;
-    		console.log("Change Light: " + color);
-    	}
-    	
-    	Light.prototype.getColor = function() {
-    		console.log("Color: " + this.color);
-    		return this.color;
-    	}
-    	
-    	return Light;
-    })(Base);
+var Light = (function(_super) {
+
+	function Light(id, color) {
+		_super.call(this, id);
+		
+		this.color = color;
+		console.log("Start Light: " + color);
+		
+		_super.prototype.drawTerminal();
+	}
+	
+	Light.prototype.setColor = function(color) {
+		this.color = color;
+		console.log("Change Light: " + color);
+	}
+	
+	Light.prototype.getColor = function() {
+		console.log("Color: " + this.color);
+		return this.color;
+	}
+	
+	return Light;
+})(Base);
 {% endhighlight %}
 
 The first thing you'll notice is we passed the parent class into the self-executing closure. This then becomes the *super* object reference in the anonymous function. The parent constructor and methods are access through the *super* object.
@@ -111,7 +111,7 @@ The first thing you'll notice is we passed the parent class into the self-execut
 In particular, to call the parent's constructor, simply execute:       
 
 {% highlight js %}
-    _super.call(this, id);
+_super.call(this, id);
 {% endhighlight %}
 
 [Function.call][3] calls a function with a given *this* value and the arguments provided individually. You can use *call* to chain constructors for an object. Here, *this* refers to the current object, the calling object. Next, you can supply as many arguments as your parent's constructor demands.
@@ -119,15 +119,15 @@ In particular, to call the parent's constructor, simply execute:
 Access to the parent's methods are done through the prototype chain:
 
 {% highlight js %}
-    _super.prototype.drawTerminal();
+_super.prototype.drawTerminal();
 {% endhighlight %}
 
 This is pretty powerful stuff! You have things you'd never dream of in JavaScript:
 
 {% highlight js %}
- 1. Parent Constructor Reuse
- 
- 2. Parent Method Inheritance
+1. Parent Constructor Reuse
+
+2. Parent Method Inheritance
 {% endhighlight %}
 
 All the things that make your code more maintainable.
@@ -137,18 +137,18 @@ All the things that make your code more maintainable.
 If you ever need to, this technique also opens the door for Multiple Inheritance in JavaScript. Consider the following:
 
 {% highlight js %}
-    var Light = (function(_super1, _super2) {
-    	function Light(id, color) {
-    		_super1.call(this, id);
-    		_super2.call(this, id, color);
-    		
-    		. . .
-    	}
+var Light = (function(_super1, _super2) {
+	function Light(id, color) {
+		_super1.call(this, id);
+		_super2.call(this, id, color);
+		
+		. . .
+	}
 
-        . . .
-    	
-    	return Light;
-    })(Base, AnotherClass);
+    . . .
+	
+	return Light;
+})(Base, AnotherClass);
 {% endhighlight %}
 
 JavaScript child classes can inherit from as many parent classes as needed. It goes without saying to be judicious when inheriting from multiple classes. But, if you ever need to, JavaScript is more than flexible enough to accommodate that need.
@@ -172,53 +172,53 @@ Not a complete loss. You could still write wrappers over the parent methods. Aft
 That's where [CoffeeScript's Extends][4] method comes into play:
 
 {% highlight js %}
-    var __hasProp = {}.hasOwnProperty;
-    var __extends = function(child, parent) {
-    	for (var key in parent) {
-    		if (__hasProp.call(parent, key)) 
-    			child[key] = parent[key];
-    	}
-    	
-    	function ctor() { 
-    		this.constructor = child; 
-    	}
-    	
-    	ctor.prototype = parent.prototype;
-    	
-    	child.prototype = new ctor();
-    	child.__super__ = parent.prototype; 
-    	
-    	return child; 
-    };
+var __hasProp = {}.hasOwnProperty;
+var __extends = function(child, parent) {
+	for (var key in parent) {
+		if (__hasProp.call(parent, key)) 
+			child[key] = parent[key];
+	}
+	
+	function ctor() { 
+		this.constructor = child; 
+	}
+	
+	ctor.prototype = parent.prototype;
+	
+	child.prototype = new ctor();
+	child.__super__ = parent.prototype; 
+	
+	return child; 
+};
 {% endhighlight %}
 
 CoffeeScript Extends method does a deep copy of parent methods unto the child prototype chain. Even better, using CoffeeScript Extends method is easy. Simply pass the child class as the first argument and the parent class as the second argument:
 
 {% highlight js %}
-    var Light = (function(_super) {
-    	__extends(Light, _super);
-    	
-    	function Light(id, color) {
-    		_super.call(this, id);
-    		
-    		this.color = color;
-    		console.log("Start Light: " + color);
-    		//_super.prototype.drawTerminal();
-    		this.drawTerminal();
-    	}
-    	
-    	Light.prototype.setColor = function(color) {
-    		this.color = color;
-    		console.log("Change Light: " + color);
-    	}
-    	
-    	Light.prototype.getColor = function() {
-    		console.log("Color: " + this.color);
-    		return this.color;
-    	}
-    	
-    	return Light;
-    })(Base);
+var Light = (function(_super) {
+	__extends(Light, _super);
+	
+	function Light(id, color) {
+		_super.call(this, id);
+		
+		this.color = color;
+		console.log("Start Light: " + color);
+		//_super.prototype.drawTerminal();
+		this.drawTerminal();
+	}
+	
+	Light.prototype.setColor = function(color) {
+		this.color = color;
+		console.log("Change Light: " + color);
+	}
+	
+	Light.prototype.getColor = function() {
+		console.log("Color: " + this.color);
+		return this.color;
+	}
+	
+	return Light;
+})(Base);
 {% endhighlight %}
 
 The result is parent methods are accessible in the child class without having to rewrite those same methods:

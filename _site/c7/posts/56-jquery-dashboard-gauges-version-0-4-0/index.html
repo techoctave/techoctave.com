@@ -27,7 +27,7 @@
 	
     <div class="feat">
       <h5 class="page-date">
-        <time datetime="2011-08-08T11:05:39Z" itemprop="datePublished">
+        <time datetime="2011-08-08T07:05:39-04:00" itemprop="datePublished">
           08 August 2011
         </time>
       </h5>
@@ -40,36 +40,34 @@
     <div itemprop="articleBody">
       <p>TechOctave's <a href="http://techoctave.com/gauges/">jQuery Dashboard Gauges</a> have reached version 0.4.0. We're happy with the results and hope you'll enjoy some of the refactoring and enhancements:</p>
 
-<div class="highlight"><pre><code class="ruby"> <span class="mi">1</span><span class="o">.</span> <span class="no">Enhanced</span> <span class="no">Speedometer</span> <span class="no">API</span>
- 
- <span class="mi">2</span><span class="o">.</span> <span class="no">Choose</span> <span class="no">MPH</span> <span class="ow">or</span> <span class="no">KPH</span> <span class="n">as</span> <span class="n">your</span> <span class="n">main</span> <span class="n">speed</span> <span class="n">metric</span>
- 
- <span class="mi">3</span><span class="o">.</span> <span class="no">Beautiful</span> <span class="no">Odometer</span> <span class="o">-</span> <span class="no">Photo</span> <span class="no">Realistic</span> <span class="p">(</span><span class="no">Optional</span><span class="p">)</span>
- 
- <span class="mi">4</span><span class="o">.</span> <span class="no">Tachometer</span> <span class="p">(</span><span class="no">RPM</span><span class="p">)</span> <span class="no">Gauge</span> <span class="o">-</span> <span class="no">Purse</span> <span class="no">JavaScript</span><span class="o">/</span><span class="n">jQuery</span>
- 
- <span class="mi">5</span><span class="o">.</span> <span class="no">Smarter</span> <span class="n">defaults</span> <span class="k">when</span> <span class="n">calling</span> <span class="nb">methods</span> <span class="p">(</span><span class="no">In</span> <span class="n">particular</span><span class="p">,</span> <span class="n">the</span> <span class="no">Constructor</span><span class="p">,</span> <span class="no">Accelerate</span> <span class="ow">and</span> <span class="no">Odometer</span> <span class="nb">methods</span><span class="p">)</span>
- 
- <span class="mi">6</span><span class="o">.</span> <span class="no">More</span> <span class="no">Example</span> <span class="no">Code</span> <span class="o">-</span> <span class="no">More</span> <span class="no">Quick</span> <span class="no">Startups</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="mi">1</span><span class="o">.</span> <span class="no">Enhanced</span> <span class="no">Speedometer</span> <span class="no">API</span>
+
+<span class="mi">2</span><span class="o">.</span> <span class="no">Choose</span> <span class="no">MPH</span> <span class="ow">or</span> <span class="no">KPH</span> <span class="n">as</span> <span class="n">your</span> <span class="n">main</span> <span class="n">speed</span> <span class="n">metric</span>
+
+<span class="mi">3</span><span class="o">.</span> <span class="no">Beautiful</span> <span class="no">Odometer</span> <span class="o">-</span> <span class="no">Photo</span> <span class="no">Realistic</span> <span class="p">(</span><span class="no">Optional</span><span class="p">)</span>
+
+<span class="mi">4</span><span class="o">.</span> <span class="no">Tachometer</span> <span class="p">(</span><span class="no">RPM</span><span class="p">)</span> <span class="no">Gauge</span> <span class="o">-</span> <span class="no">Purse</span> <span class="no">JavaScript</span><span class="o">/</span><span class="n">jQuery</span>
+
+<span class="mi">5</span><span class="o">.</span> <span class="no">Smarter</span> <span class="n">defaults</span> <span class="k">when</span> <span class="n">calling</span> <span class="nb">methods</span> <span class="p">(</span><span class="no">In</span> <span class="n">particular</span><span class="p">,</span> <span class="n">the</span> <span class="no">Constructor</span><span class="p">,</span> <span class="no">Accelerate</span> <span class="ow">and</span> <span class="no">Odometer</span> <span class="nb">methods</span><span class="p">)</span>
+
+<span class="mi">6</span><span class="o">.</span> <span class="no">More</span> <span class="no">Example</span> <span class="no">Code</span> <span class="o">-</span> <span class="no">More</span> <span class="no">Quick</span> <span class="no">Startups</span></code></pre></div>
 
 
 <h4>More Robust Dashboard.html Example</h4>
 
 <p>Beefed up! Fully functional jQuery Dashboard Gauge example showing how to use our:</p>
 
-<div class="highlight"><pre><code class="ruby"> <span class="o">-</span> <span class="no">RPM</span> <span class="no">Gauge</span>
- 
- <span class="o">-</span> <span class="no">KPH</span> <span class="no">Speedometer</span> <span class="n">with</span> <span class="n">an</span> <span class="no">Odometer</span>
- 
- <span class="o">-</span> <span class="no">KPH</span> <span class="no">Speedometer</span> <span class="n">without</span> <span class="n">an</span> <span class="no">Odometer</span>
- 
- <span class="o">-</span> <span class="no">MPH</span> <span class="no">Speedometer</span> <span class="n">with</span> <span class="n">an</span> <span class="no">Odometer</span>
- 
- <span class="o">-</span> <span class="no">Fuel</span> <span class="no">Gauge</span>
- 
- <span class="o">-</span> <span class="no">Temperature</span> <span class="no">Gauge</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">-</span> <span class="no">RPM</span> <span class="no">Gauge</span>
+
+<span class="o">-</span> <span class="no">KPH</span> <span class="no">Speedometer</span> <span class="n">with</span> <span class="n">an</span> <span class="no">Odometer</span>
+
+<span class="o">-</span> <span class="no">KPH</span> <span class="no">Speedometer</span> <span class="n">without</span> <span class="n">an</span> <span class="no">Odometer</span>
+
+<span class="o">-</span> <span class="no">MPH</span> <span class="no">Speedometer</span> <span class="n">with</span> <span class="n">an</span> <span class="no">Odometer</span>
+
+<span class="o">-</span> <span class="no">Fuel</span> <span class="no">Gauge</span>
+
+<span class="o">-</span> <span class="no">Temperature</span> <span class="no">Gauge</span></code></pre></div>
 
 
 <h4>Pure JavaScript Dashboard Gauges (HTML5 Ready!)</h4>

@@ -25,10 +25,10 @@ Low-level languages can be converted to machine code without using a compiler or
 Machine code is the only language a microprocessor can process directly without a previous transformation.
 
 {% highlight js %}
-    8B542408 83FA0077 06B80000 0000C383
-    FA027706 B8010000 00C353BB 01000000
-    B9010000 008D0419 83FA0376 078BD98B
-    C84AEBF1 5BC3
+8B542408 83FA0077 06B80000 0000C383
+FA027706 B8010000 00C353BB 01000000
+B9010000 008D0419 83FA0376 078BD98B
+C84AEBF1 5BC3
 {% endhighlight %}
 
 Above is a function in 32-bit x86 machine code to calculate the nth Fibonacci number.
@@ -42,36 +42,36 @@ Please tell me you're not doing this for a living?
 An [assembly language][2] is a low-level programming language for a computer, microcontroller, or other programmable device, in which each statement corresponds to a single machine code instruction:
 
 {% highlight js %}
-    fib:
-        mov edx, [esp+8]
-        cmp edx, 0
-        ja @f
-        mov eax, 0
-        ret
-        
-        @@:
-        cmp edx, 2
-        ja @f
-        mov eax, 1
-        ret
-        
-        @@:
-        push ebx
-        mov ebx, 1
-        mov ecx, 1
-        
-        @@:
-            lea eax, [ebx+ecx]
-            cmp edx, 3
-            jbe @f
-            mov ebx, ecx
-            mov ecx, eax
-            dec edx
-        jmp @b
-        
-        @@:
-        pop ebx
-        ret
+fib:
+    mov edx, [esp+8]
+    cmp edx, 0
+    ja @f
+    mov eax, 0
+    ret
+    
+    @@:
+    cmp edx, 2
+    ja @f
+    mov eax, 1
+    ret
+    
+    @@:
+    push ebx
+    mov ebx, 1
+    mov ecx, 1
+    
+    @@:
+        lea eax, [ebx+ecx]
+        cmp edx, 3
+        jbe @f
+        mov ebx, ecx
+        mov ecx, eax
+        dec edx
+    jmp @b
+    
+    @@:
+    pop ebx
+    ret
 {% endhighlight %}
 
 The same Fibonacci number calculator as above, but in x86 assembly language using [MASM][3] syntax.
@@ -99,41 +99,41 @@ In computer science, a high-level programming language is a programming language
 That abstraction forms the basis of what developers come to expect in a modern programming language:
 
 {% highlight js %}
- 1. Advanced Control Structures
- 
- 2. Abstract Data Types
- 
- 3. Object Oriented Programming Constructs
- 
- 4. Functional Programming Constructs
+1. Advanced Control Structures
+
+2. Abstract Data Types
+
+3. Object Oriented Programming Constructs
+
+4. Functional Programming Constructs
 {% endhighlight %}
 
 JavaScript has all these fundamental constructs of a high-level programming language. That's why it's so versatile. That's why it's so ubiquitous:
 
 {% highlight js %}
-    var Light = (function(_super) {
-    
-        function Light(id, color) {
-            _super.call(this, id);
-    
-            this.color = color;
-            console.log("Start Light: " + color);
-    
-            _super.prototype.drawTerminal();
-        }
-    
-        Light.prototype.setColor = function(color) {
-            this.color = color;
-            console.log("Change Light: " + color);
-        }
-    
-        Light.prototype.getColor = function() {
-            console.log("Color: " + this.color);
-            return this.color;
-        }
-    
-        return Light;
-    })(Base);
+var Light = (function(_super) {
+
+    function Light(id, color) {
+        _super.call(this, id);
+
+        this.color = color;
+        console.log("Start Light: " + color);
+
+        _super.prototype.drawTerminal();
+    }
+
+    Light.prototype.setColor = function(color) {
+        this.color = color;
+        console.log("Change Light: " + color);
+    }
+
+    Light.prototype.getColor = function() {
+        console.log("Color: " + this.color);
+        return this.color;
+    }
+
+    return Light;
+})(Base);
 {% endhighlight %}
 
 People will continue to parrot [JavaScript is the assembly language for the web][4]. Ignorance is a choice. But, that doesn't change the facts that JavaScript contains every high-level abstraction developers need to be productive.

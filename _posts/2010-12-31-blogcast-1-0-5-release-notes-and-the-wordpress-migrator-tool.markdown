@@ -19,10 +19,13 @@ Should they be condemned to a blogging platform that no longer caters to their n
 Blogcast 1.0.5 features four enhancements:
 
 {% highlight ruby %}
- - Created a WordPress migrator
- - Removed all db/migrate migrations
- - Added seed data to db/seeds.rb
- - Cleaned up generic error pages
+- Created a WordPress migrator
+
+- Removed all db/migrate migrations
+
+- Added seed data to db/seeds.rb
+
+- Cleaned up generic error pages
 {% endhighlight %}
 
 ###Blogcast WordPress migrator
@@ -38,7 +41,7 @@ Yet, a migration tool aligned with my vision to make writing accessible and fun.
 Go to your Blogcast installation and run *rake --tasks* to see your available options. One of those options will be rebirth:wordpress:
 
 {% highlight ruby %}
-    rake rebirth:wordpress[scroll]
+rake rebirth:wordpress[scroll]
 {% endhighlight %}
 
 This is Blogcast's WordPress migrator tool. The scroll parameter is the location and name of your WordPress export file.
@@ -46,29 +49,29 @@ This is Blogcast's WordPress migrator tool. The scroll parameter is the location
 Use the migrator tool like so:
 
 {% highlight ruby %}
-    rake rebirth:wordpress[/path/to/wordpress.xml]
+rake rebirth:wordpress[/path/to/wordpress.xml]
 {% endhighlight %}
 
 A successful run will look similar to this:
 
 {% highlight ruby %}
-    --->Here are my wordly posessions my Liege: /path/to/wordpress.xml
-    --->The gates of wordpress open and the faithful enter.
-    --->Enter my apprentice.
-    --->wordpress casts' forth your posessions.
-    --->Hand me your scroll.
-    
-    ------>>Posts, the wind blows strong in your favor apprentice.
-    ------>>I have paid the Ferryman on your behalf.
-    ------>>Posts saved: 80
-    ------>>Comments saved: 61
-    
-    ------>>Drafts, find your redemption through prayer and reflection.
-    ------>>Go now. On the other side you have only yourself to face.
-    ------>>Drafts saved: 3
-    
-    --->God created Rails to train the faithful.
-    --->Rise Acolyte. Rise and bath in deliverance.
+--->Here are my wordly posessions my Liege: /path/to/wordpress.xml
+--->The gates of wordpress open and the faithful enter.
+--->Enter my apprentice.
+--->wordpress casts' forth your posessions.
+--->Hand me your scroll.
+
+------>>Posts, the wind blows strong in your favor apprentice.
+------>>I have paid the Ferryman on your behalf.
+------>>Posts saved: 80
+------>>Comments saved: 61
+
+------>>Drafts, find your redemption through prayer and reflection.
+------>>Go now. On the other side you have only yourself to face.
+------>>Drafts saved: 3
+
+--->God created Rails to train the faithful.
+--->Rise Acolyte. Rise and bath in deliverance.
 {% endhighlight %}
 
 ####Notes
@@ -112,26 +115,26 @@ Most of you already know schema.rb is the canonical definition of your Rails app
 For Pete's sake run *rake db:schema:load* so you're not pulling your hair out. If you need to make specific changes for yourself or a client, then implement and execute your additional migrations. But, you should not run migrations to load the database from scratch.
 
 {% highlight ruby %}
-    rake db:schema:load
+rake db:schema:load
 {% endhighlight %}
 
 A successful run will look like this:
 
 {% highlight ruby %}
-    -- create_table("comments", {:force=>true})
-       -> 0.0098s
-    -- create_table("drafts", {:force=>true})
-       -> 0.0041s
-    -- create_table("posts", {:force=>true})
-       -> 0.0092s
-    -- create_table("spams", {:force=>true})
-       -> 0.0038s
-    -- create_table("users", {:force=>true})
-       -> 0.0040s
-    -- initialize_schema_migrations_table()
-       -> 0.0055s
-    -- assume_migrated_upto_version(20100704180607, "db/migrate")
-       -> 0.0077s
+-- create_table("comments", {:force=>true})
+   -> 0.0098s
+-- create_table("drafts", {:force=>true})
+   -> 0.0041s
+-- create_table("posts", {:force=>true})
+   -> 0.0092s
+-- create_table("spams", {:force=>true})
+   -> 0.0038s
+-- create_table("users", {:force=>true})
+   -> 0.0040s
+-- initialize_schema_migrations_table()
+   -> 0.0055s
+-- assume_migrated_upto_version(20100704180607, "db/migrate")
+   -> 0.0077s
 {% endhighlight %}
 
 ###Admin user seed instance now available
@@ -141,32 +144,32 @@ By default, the admin user is available in the development database that comes w
 This should add some value to your deployment and setup tasks. The user model instance in db/seeds.rb now looks like this:
 
 {% highlight ruby %}
-    user = User.new
-    
-    user.name = "admin"
-    user.initials = "a.d.min"
-    user.email = "admin@localhost.host"
-    user.login = "admin"
-    user.password = "admin"
-    user.password_confirmation = "admin"
-    user.persistence_token = "10ca7461d933..."
-    
-    user.save
+user = User.new
+
+user.name = "admin"
+user.initials = "a.d.min"
+user.email = "admin@localhost.host"
+user.login = "admin"
+user.password = "admin"
+user.password_confirmation = "admin"
+user.persistence_token = "10ca7461d933..."
+
+user.save
 {% endhighlight %}
 
 Use the following Rails rake task to load the default admin user seed:
 
 {% highlight ruby %}
-    rake db:seed
+rake db:seed
 {% endhighlight %}
 
 A successful run will look like:
 
 {% highlight ruby %}
-    --->God created Rails to train the faithful.
-    ------>Blogcast admin user created. Username: admin, Password: admin
-    --->From this seed may you forever bear fruit.
-{% endhighlight %}    
+--->God created Rails to train the faithful.
+------>Blogcast admin user created. Username: admin, Password: admin
+--->From this seed may you forever bear fruit.
+{% endhighlight %}
 
 ###Cleaned up generic error pages
 

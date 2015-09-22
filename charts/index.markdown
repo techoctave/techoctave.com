@@ -2,7 +2,7 @@
 layout: marketing
 title:  "Beautiful JavaScript Charts for the sophisticated developer."
 date:   2000-01-01 00:00:00
-permalink: /
+permalink: /charts/
 ---
 
 #Beautiful JavaScript Charts for the sophisticated developer.

@@ -23,21 +23,21 @@ This guy didn't know the first thing about film making. So what! He started film
 Terry didn't know the first thing about opening an art gallery. Let's do it anyway! Terry, admittedly, had mental health issues, but there is a lot we can learn from him as Starters:
 
 {% highlight ruby %}
- 1. Just do it!
- 
- 2. Get involved with the community.
- 
- 3. Learn something meaningful.
- 
- 4. Give back.
- 
- 5. Better marketing can beat a better product.
- 
- 6. Do not undervalue your work.
- 
- 7. Make things for people - Not nameless, faceless companies.
- 
- 8. Sell like you mean it!
+1. Just do it!
+
+2. Get involved with the community.
+
+3. Learn something meaningful.
+
+4. Give back.
+
+5. Better marketing can beat a better product.
+
+6. Do not undervalue your work.
+
+7. Make things for people - Not nameless, faceless companies.
+
+8. Sell like you mean it!
 {% endhighlight %}
 
 Terry Guetta. Mr. Brainwash. MBW. My hats off to you because I believe you are truly a phenomena. Street Artists made a mockery of the Commercialization of Art. Which means you made a mockery of the mockery of the Commercialization of Art. Brilliant!

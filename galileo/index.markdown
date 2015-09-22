@@ -2,7 +2,7 @@
 layout: marketing
 title:  "Galileo is a Powerful Twitter Management Tool for Google Chrome."
 date:   2000-01-01 00:00:00
-permalink: /
+permalink: /galileo/
 ---
 
 <h1 class="galileo"><a href="https://chrome.google.com/webstore/detail/mcagkgdbdbbgfielgggafkpjhdbiafha">Galileo ★ Rocks!</a></h1>

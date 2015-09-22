@@ -20,9 +20,9 @@ Once you sign up for Google Voice, you are able to make free voice calls within 
 Here's a fee comparison for the US Virgin Islands.
 
 {% highlight bash %}
-    Google Voice: $0.040 (US Virgin Islands)
-    
-           Skype: $0.058 (US Virgin Islands) 
+Google Voice: $0.040 (US Virgin Islands)
+
+       Skype: $0.058 (US Virgin Islands) 
 {% endhighlight %}
 
 Google Voice appears to be offering many eye catching features that make phone service creative, convenient and affordable. This being the case, many believe Skype will face tough competition in the US market from Google Voice. 

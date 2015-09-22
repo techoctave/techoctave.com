@@ -16,21 +16,21 @@ The other day, we spent an absurd amount of time trying to find the best way to 
 Here's how we serialized a binary file to a string based format in C#:
 
 {% highlight js %}
-    string filePath = @"C:\OBEY\Word.doc";
+string filePath = @"C:\OBEY\Word.doc";
 
-    byte[] file = File.ReadAllBytes(filePath);
-    
-    string serializeDocument = Convert.ToBase64String(file);
+byte[] file = File.ReadAllBytes(filePath);
+
+string serializeDocument = Convert.ToBase64String(file);
 {% endhighlight %}
 
 High level, the steps are:
 
 {% highlight js %}
- 1. Get the document's file path
- 
- 2. Load the file into a byte array
- 
- 3. Convert the byte array to a Base64 string
+1. Get the document's file path
+
+2. Load the file into a byte array
+
+3. Convert the byte array to a Base64 string
 {% endhighlight %}
 
 It's crazy, during research, everyone wanted to talk about serializing [POCOs][2]* to send across the wire. EVERYONE. But, that's only one application of serialization. How about the most simple use case, serializing a simple document.
@@ -44,7 +44,7 @@ Well, now you know how.
 Deserialization - that is converting a Base64String to a binary document - is just as simple. Here's how:
 
 {% highlight js %}
-    byte[] document = Convert.FromBase64String(string);
+byte[] document = Convert.FromBase64String(string);
 {% endhighlight %}
 
 Where the variable *string* is a serialized Base64String string. From there you can make tender love to the document. Or whatever else you were planning to do.

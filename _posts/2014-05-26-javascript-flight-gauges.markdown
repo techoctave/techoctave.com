@@ -31,17 +31,17 @@ We talk a lot about our six [core][2] [principles][3] of JavaScript development.
 We built our JavaScript Flight Gauges on those Six Core Principles:
 
 {% highlight ruby %}
- 1. Beautifully Illustrated
- 
- 2. Cross Browser Compatible
- 
- 3. Lightweight Footprint
- 
- 4. Vector Based for Crisp Zoom and Print
- 
- 5. Highly Configurable
- 
- 6. Framework Agnostic
+1. Beautifully Illustrated
+
+2. Cross Browser Compatible
+
+3. Lightweight Footprint
+
+4. Vector Based for Crisp Zoom and Print
+
+5. Highly Configurable
+
+6. Framework Agnostic
 {% endhighlight %}
 
 We believe in those principles because great software doesn't happen by accident. Great software is forged in principle and blood and sweat. 
@@ -59,9 +59,9 @@ A simple question, right? But, you'd be amazed at the responses. Yet, at the end
 That's why we're able to ship simple software that scales in complexity:
 
 {% highlight js %}
-    var horizon = new Horizon("horizon");
-    . . .
-    <div id="horizon"></div>
+var horizon = new Horizon("horizon");
+. . .
+<div id="horizon"></div>
 {% endhighlight %}
 
 That's why we're able to develop APIs that make you feel great. Because just like [great developers take time to develop][4], great software is not that much very different.

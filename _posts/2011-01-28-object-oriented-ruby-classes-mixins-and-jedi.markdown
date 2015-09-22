@@ -19,12 +19,12 @@ An object is an instance of a class. Each instance having its own unique attribu
 ####dojo.rb
 
 {% highlight ruby %}
-    require 'Jedi'
+require 'Jedi'
 
-    anakin = Jedi.new("Anakin")
-    anakin.duel
-    anakin.lightsaber("Ruby")
-    anakin.juyo
+anakin = Jedi.new("Anakin")
+anakin.duel
+anakin.lightsaber("Ruby")
+anakin.juyo
 {% endhighlight %}
 
 Here, the *anakin* object is an instance of the Jedi class. Apparently, Anakin is having trouble with some galactic fraktards and fires up his Ruby lightsaber using the *lightsaber* method. Then Anakin proceeds to bring the hurt using a lightsaber combat form called [Juyo][2].
@@ -42,21 +42,21 @@ In Ruby, an class (object) encapsulates a group of attributes (state) and method
 Here's how a Jedi class might look:
 
 {% highlight ruby %}
-    require 'Padawan'
-    require 'Forms'
+require 'Padawan'
+require 'Forms'
 
-    class Jedi < Padawan
-      include Forms
+class Jedi < Padawan
+  include Forms
   
-      def initialize(name = 'Unknown')
-        @name = name
-        puts "Jedi.initialize"
-      end
+  def initialize(name = 'Unknown')
+    @name = name
+    puts "Jedi.initialize"
+  end
 
-      def duel
-        puts "Only a Sith deals in absolutes."
-      end
-    end
+  def duel
+    puts "Only a Sith deals in absolutes."
+  end
+end
 {% endhighlight %}
 
 ####Padawan.rb
@@ -64,19 +64,19 @@ Here's how a Jedi class might look:
 And the Padawan class might look like this:
 
 {% highlight ruby %}
-    require 'Force'
-    require 'Lightsaber'
+require 'Force'
+require 'Lightsaber'
 
-    class Padawan
-      attr_accessor :name
+class Padawan
+  attr_accessor :name
   
-      include Force
-      include Lightsaber
+  include Force
+  include Lightsaber
   
-      def inspect
-        puts "Force-Sensitive: " + @name
-      end
-    end
+  def inspect
+    puts "Force-Sensitive: " + @name
+  end
+end
 {% endhighlight %}
 
 Padawan would be derived from maybe a *Sentient* class. But for simplicity I'm including in the Padawan class attributes you might have seen in a class like *Sentient*. For example, the *@name* attribute.
@@ -86,24 +86,24 @@ Padawan would be derived from maybe a *Sentient* class. But for simplicity I'm i
 The initialized method is Ruby's constructor method for class implementations. It's called whenever a new instance of a class is created. For example, here a new instance of the Jedi class is called. The result is the *anakin* object:
 
 {% highlight ruby %}
-    #dojo.rb
-    anakin = Jedi.new("Anakin")
+#dojo.rb
+anakin = Jedi.new("Anakin")
 {% endhighlight %}
 
 This example illustrates a beautiful feature of Ruby - *Flexible Initialization*. This means you have the option to pass a parameter or not:
 
 {% highlight ruby %}
-    #Jedi.rb
-    def initialize(name = 'Unknown')
-        @name = name
-        . . .
-    end
+#Jedi.rb
+def initialize(name = 'Unknown')
+@name = name
+. . .
+end
 {% endhighlight %}
 
 You can choose not to pass a parameter. In that case, creating an instance of the Jedi object might look like this:
 
 {% highlight ruby %}
-    sith = Jedi.new
+sith = Jedi.new
 {% endhighlight %}
 
 And the default value of the *@name* attribute would be *Unknown*.
@@ -126,24 +126,24 @@ To accomplish this in some languages is a pain. You would have to define a *gett
 Ruby has a more elegant solution - the attr_accessor shortcut:
 
 {% highlight ruby %}
-    class Padawan
-      attr_accessor :name
-      . . .
-    end
+class Padawan
+  attr_accessor :name
+  . . .
+end
 {% endhighlight %}
 
 This gets you the following Ruby class methods for FREE:
 
 {% highlight ruby %}
-    #attr_reader
-    def name
-      @name
-    end
+#attr_reader
+def name
+  @name
+end
 
-    #attr_writer
-    def name(value)
-      @name = value
-    end
+#attr_writer
+def name(value)
+  @name = value
+end
 {% endhighlight %}
 
 Awesome! This is at once elegant and beautiful. You can add as much attribute accessors as you like: attr_accessor :name, :weight, :etc.
@@ -151,8 +151,8 @@ Awesome! This is at once elegant and beautiful. You can add as much attribute ac
 You're not going to always want a *getter* and *setter*. Sometimes you might only need one. You can do that in Ruby:
 
 {% highlight ruby %}
-    attr_reader :midi_chlorian
-    attr_writer :heart_rate
+attr_reader :midi_chlorian
+attr_writer :heart_rate
 {% endhighlight %}
 
 You get the picture!
@@ -162,10 +162,10 @@ You get the picture!
 Methods are how we interact with our Ruby classes. Methods allow us to encapsulate activities specific to the particular class:
 
 {% highlight ruby %}
-    #Jedi.rb
-    def duel
-      puts "Only a Sith deals in absolutes."
-    end
+#Jedi.rb
+def duel
+  puts "Only a Sith deals in absolutes."
+end
 {% endhighlight %}
 
 Methods sometimes perform work on a Ruby classes' attributes. Sometimes a method just performs work specific to the class. In our Jedi class, we have a *duel* method. This method is used to convey some Jedi axiom just before battle begins.
@@ -173,11 +173,11 @@ Methods sometimes perform work on a Ruby classes' attributes. Sometimes a method
 Like an initialize constructor, a method can take parameters. A Ruby method can even have a default parameter. So our *duel* method could have looked like:
 
 {% highlight ruby %}
-    #Jedi.rb
-    def duel(opponent = 'Sith')
-      puts "You disappoint me " + opponent + "."
-      puts "Only a Sith deals in absolutes."
-    end
+#Jedi.rb
+def duel(opponent = 'Sith')
+  puts "You disappoint me " + opponent + "."
+  puts "Only a Sith deals in absolutes."
+end
 {% endhighlight %}
 
 Coming from static languages, Ruby's minimalistic approach to object oriented programming is at once refreshing and inspiring.
@@ -193,17 +193,17 @@ We know that a Jedi evolved from a Padawan. Therefore, a Jedi should posses the 
 In Ruby, such relationships can be expressed using inheritance. Here, the Padawan class is called the parent class:
 
 {% highlight ruby %}
-    class Jedi < Padawan
-    . . .
-    end
+class Jedi < Padawan
+. . .
+end
 {% endhighlight %}
 
 In this way we can reuse the Padawan class for other force-sensitives that we wouldn't consider Jedi. For example, we could have a Sith class:
 
 {% highlight ruby %}
-    class Sith < Padawan
-    . . .
-    end
+class Sith < Padawan
+. . .
+end
 {% endhighlight %}
 
 Darth Vader was once a Padawan until he turned to the Dark Side and became a Sith Lord. As such, you would expect him to have the knowledge and training of a Padawan with the learning of a Dark Knight.
@@ -213,11 +213,11 @@ Darth Vader was once a Padawan until he turned to the Dark Side and became a Sit
 There will be cases where certain methods of the parent class will need to be implemented differently in the inheriting class. For example:
 
 {% highlight ruby %}
-    class Sith < Padawan
-      def inspect
-        puts "Peace is a lie. There is only passion. - " + @name
-      end
-    end
+class Sith < Padawan
+  def inspect
+    puts "Peace is a lie. There is only passion. - " + @name
+  end
+end
 {% endhighlight %}
 
 Here, the *inspect* method from the *Sith* class will be used instead of the *inspect* method from the *Padawan* class. Object oriented languages (like Ruby) that facilitate this type of behavior are said to be polymorphic. Therefore, the above is an example of Polymorphism.
@@ -237,13 +237,13 @@ Mixins are Ruby modules. Modules are a collection of methods. You cannot create 
 After requiring a Ruby module, you would then include that module in your Ruby class. This is called a Mixin:
 
 {% highlight ruby %}
-    require 'Lightsaber'
-    
-    class Padawan
-      . . .
-      include Lightsaber
-      . . .
-    end
+require 'Lightsaber'
+
+class Padawan
+  . . .
+  include Lightsaber
+  . . .
+end
 {% endhighlight %}
 
 ####Lightsaber.rb
@@ -251,23 +251,23 @@ After requiring a Ruby module, you would then include that module in your Ruby c
 Here is the Mixin Lightsaber module:
 
 {% highlight ruby %}
-    module Lightsaber
-      def lightsaber(crystal = "Jade")
-        puts "Lightsaber.initialized: " + crystal
-      end
-    end
+module Lightsaber
+  def lightsaber(crystal = "Jade")
+    puts "Lightsaber.initialized: " + crystal
+  end
+end
 {% endhighlight %}
 
 So when I instantiate an instance of the Jedi class, I get access to the Lightsaber module - pure Mixin love:
 
 {% highlight ruby %}
-    #dojo.rb
-    require 'Jedi'
+#dojo.rb
+require 'Jedi'
 
-    anakin = Jedi.new("Anakin")
-    . . .
-    anakin.lightsaber("Ruby")
-    . . .
+anakin = Jedi.new("Anakin")
+. . .
+anakin.lightsaber("Ruby")
+. . .
 {% endhighlight %}
 
 Modules are for sharing behavior (methods), while classes are for modeling relationships between objects. Ruby classes can Mixin a module and receive all its methods for free.

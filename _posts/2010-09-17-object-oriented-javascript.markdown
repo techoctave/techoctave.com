@@ -22,22 +22,22 @@ We are going to use the [Prototype Design Pattern][2]. Take for example a Speedo
 Class definition and Constructor:
 
 {% highlight js %}
-    Speedometer = function (gaugeID) {
-        //State  
-        var mph;
+Speedometer = function (gaugeID) {
+    //State  
+    var mph;
 
-        //Constructor
-        this.SetGaugeID(gaugeID); //inherited from Gauge
-    
-        this.CreateGauge(); //inherited from Gauge
-        this.SetMPH(0);
-    }
+    //Constructor
+    this.SetGaugeID(gaugeID); //inherited from Gauge
+
+    this.CreateGauge(); //inherited from Gauge
+    this.SetMPH(0);
+}
 {% endhighlight %}
 
 Inherit base functionality from Gauge class:
 
 {% highlight js %}
-    Speedometer.prototype = new Gauge();
+Speedometer.prototype = new Gauge();
 {% endhighlight %}
 
 This type of inheritance is called Prototypal Inheritance. Under the hood, it's different from classical class based inheritance. But, should be very familiar.
@@ -45,18 +45,18 @@ This type of inheritance is called Prototypal Inheritance. Under the hood, it's 
 Properties (Accessors):
 
 {% highlight js %}
-    Speedometer.prototype.SetMPH = function(mph) {
-        this.mph = mph;
-        this.RotateNeedle(...); //inherited from Gauge
-    }
+Speedometer.prototype.SetMPH = function(mph) {
+    this.mph = mph;
+    this.RotateNeedle(...); //inherited from Gauge
+}
 {% endhighlight %}
 
 Methods (Do the work for the Speedometer Class):
 
 {% highlight js %}
-    Speedometer.prototype.Accelerate = function() {
-        //Do some work here...
-    }
+Speedometer.prototype.Accelerate = function() {
+    //Do some work here...
+}
 {% endhighlight %}
 
 The accelerate method is only within the scope of the Speedometer class. So only instances of a Speedometer object or children of the Speedometer class have access to the method.
@@ -66,14 +66,14 @@ The accelerate method is only within the scope of the Speedometer class. So only
 Well, we so deliciously put together our Speedometer class. Now, it's [time to have some fun][3] and use an instance of the Speedometer object. Let's take this Teslar Roadster for a spin:
 
 {% highlight js %}
-    //Create a new instance of a Speedometer object
-    var speedGauge = new Speedometer("speedometer");
-    
-    //Warm up the engine
-    speedGauge.SetMPH(5);
-    
-    //Time to put the pedal to the metal
-    speedGauge.Accelerate();
+//Create a new instance of a Speedometer object
+var speedGauge = new Speedometer("speedometer");
+
+//Warm up the engine
+speedGauge.SetMPH(5);
+
+//Time to put the pedal to the metal
+speedGauge.Accelerate();
 {% endhighlight %}
 
 Hey, the good news is if you're here, that means you're looking for help and that makes you awesome! It also means you already have the necessary prerequisites to develop cleaner, more reusable, Object Oriented JavaScript.

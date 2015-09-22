@@ -2,7 +2,7 @@
 layout: marketing
 title:  "Beautiful flight gauges for the sophisticated developer."
 date:   2000-01-01 00:00:00
-permalink: /
+permalink: /simulation/
 ---
 
 #Beautiful flight gauges for the sophisticated developer.

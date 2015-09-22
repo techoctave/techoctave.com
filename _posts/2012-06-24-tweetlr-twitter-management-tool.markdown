@@ -43,11 +43,11 @@ Contrast the beautiful rolling hills of Machu Picchu with the everyday utility o
 Behind that allegory is the fundamental DNA for what grew to become our beloved Twitter management tool. We built Tweetlr on three core principles. We believed Tweetlr should be:
 
 {% highlight ruby %}
- 1. Beautiful and Inspired
- 
- 2. Fast and Responsive
- 
- 3. Pleasantly Useful
+1. Beautiful and Inspired
+
+2. Fast and Responsive
+
+3. Pleasantly Useful
 {% endhighlight %}
 
 To that end we created a Twitter management tool that enhances your social media work on Twitter, but does it in style.

@@ -20,10 +20,10 @@ To be honest, I wish this extension wasn't necessary. I wish Google Analytics tr
 I set goals for Entourage.js before a single line of code was written. Entourage.js needed to embody the following:
 
 {% highlight js %}
- 1. Automatic Tracking
- 2. Framework Agnostic
- 3. Unobtrusive JavaScript
- 4. Small Footprint
+1. Automatic Tracking
+2. Framework Agnostic
+3. Unobtrusive JavaScript
+4. Small Footprint
 {% endhighlight %}
 
 ####Automatic
@@ -54,7 +54,7 @@ I respect that. I don't believe they should have to download another framework i
 This is Google's recommended way to track downloads:
 
 {% highlight js %}
-    <a href="http://www.example.com/files/map.pdf" onClick="javascript: _gaq.push(['_trackPageview', '/downloads/map']);"> 
+<a href="http://www.example.com/files/map.pdf" onClick="javascript: _gaq.push(['_trackPageview', '/downloads/map']);"> 
 {% endhighlight %}
 
 I believe in standards based development. I believe we honor our profession when we encourage each other towards best practices.
@@ -85,29 +85,29 @@ Compiled and gzipped, Entourage.js is less than 1kb. It's fast, dependable and -
 Installation is clean and simple. Download [Entourage.js][2]. Place the following script declaration in you head tag:
 
 {% highlight js %}
-    <script src="javascripts/entourage.js"></script>
+<script src="javascripts/entourage.js"></script>
 {% endhighlight %}
 
 Just above your Google Analytics Queue array declaration:
 
 {% highlight js %}
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
-      _gaq.push(['_trackPageview']);
-    </script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
+  _gaq.push(['_trackPageview']);
+</script>
 {% endhighlight %}
 
 Then place your asynchronous call to load Google Analytics to somewhere just before your body tag:
 
 {% highlight js %}
-    <script type="text/javascript">
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
+<script type="text/javascript">
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
 {% endhighlight %}
 
 Follow a similar hierarchy and you are set.
@@ -123,15 +123,15 @@ All 579 bytes of the code base are broken up into three top level modules: The E
 [Closures][3] are often considered an advanced feature in JavaScript. A closure is a special kind of object that combines two things: a function, and the environment in which that function was created.
 
 {% highlight js %}
-    (function() {
-    
-    //Event Handler
-    
-    //Entourage
-    
-    //Get true FileName from link pathname
-    
-    })();
+(function() {
+
+  //Event Handler
+
+  //Entourage
+
+  //Get true FileName from link pathname
+
+})();
 {% endhighlight %}
 
 Note the repeating open-and-close parenthesis. These tell the JavaScript interpreter to execute the anonymous function and it's internal business logic immediately.
@@ -148,15 +148,15 @@ Entourage.js is completely independent and self-contained. This means you can pl
 The event handler caches a list of document links. Then it assigns the Entourage callback to each link's *onclick* event. Many would create custom events to monitor this behavior, but I find the native onclick event more than adequate for the job.
 
 {% highlight js %}
-    //Event Handler
-    onload = function() {
-         //Setup an onclick event handler for each link
-         var links = document.links;
-         for(var i = 0; i < links.length; i++) {
-         //Call Entourage whenever the link is clicked
-             links[i].onclick = Entourage;
-         }
-     };
+//Event Handler
+onload = function() {
+     //Setup an onclick event handler for each link
+     var links = document.links;
+     for(var i = 0; i < links.length; i++) {
+     //Call Entourage whenever the link is clicked
+         links[i].onclick = Entourage;
+     }
+ };
 {% endhighlight %}
 
 Also, it's important to note the *onload* event. Executing after the *onload* event has fired ensures the DOM is loaded by the time Entourage is ready to go to work.
@@ -164,12 +164,12 @@ Also, it's important to note the *onload* event. Executing after the *onload* ev
 Another interesting note here is the ever vigilant *for* loop. I could have used a for in loop like this:
 
 {% highlight js %}
-    //Potential Alternative to the traditional for loop
-    for(link in links) {
-       if(links.hasOwnProperty(link)) {
-          links[i].onclick = Entourage;      
-       }
-    }
+//Potential Alternative to the traditional for loop
+for(link in links) {
+   if(links.hasOwnProperty(link)) {
+      links[i].onclick = Entourage;      
+   }
+}
 {% endhighlight %}
 
 The problem here is each link object is [not ordered as you would expect][4]. Also, since hasOwnProperty is a method, it could be overwritten or replaced with an unexpected value. This could cause bugs that are hard to track.
@@ -182,25 +182,25 @@ Overall, I found the simple for loop fast, adequate and less prone to logic erro
 Some interesting parts here too. JavaScript implements perl-style regular expressions. The *fileTypes* variable is a regular expression literal that lists the acceptable file types.
 
 {% highlight js %}
-    //Entourage
-    Entourage = function() {
-        var fileTypes = /\.doc$|\.eps$|\.jpg$|\.png$|\.svg$|\.xls$|\.ppt$|\.pdf$|\.xls$|\.zip$|\.txt$|\.vsd$|\.vxd$|\.js$|\.css$|\.rar$|\.exe$|\.dmg$|\.wma$|\.mov$|\.avi$|\.wmv$|\.mp3$/i;
+//Entourage
+Entourage = function() {
+    var fileTypes = /\.doc$|\.eps$|\.jpg$|\.png$|\.svg$|\.xls$|\.ppt$|\.pdf$|\.xls$|\.zip$|\.txt$|\.vsd$|\.vxd$|\.js$|\.css$|\.rar$|\.exe$|\.dmg$|\.wma$|\.mov$|\.avi$|\.wmv$|\.mp3$/i;
 
-        //The link object is now available in "this"
-        var pathname = this.pathname; 
-        var fileName;
-        var autograph;
-        	
-        //File type match found
-        if(pathname.match(fileTypes)) {
-        	//Get the file name
-        	fileName = GetFileName(pathname);
-        		
-        	//Add file to the Google Analytics Queue
-        	autograph = '/download/' + fileName;
-        	_gaq.push(['_trackPageview', autograph]);
-        }
-    };
+    //The link object is now available in "this"
+    var pathname = this.pathname; 
+    var fileName;
+    var autograph;
+    	
+    //File type match found
+    if(pathname.match(fileTypes)) {
+    	//Get the file name
+    	fileName = GetFileName(pathname);
+    		
+    	//Add file to the Google Analytics Queue
+    	autograph = '/download/' + fileName;
+    	_gaq.push(['_trackPageview', autograph]);
+    }
+};
 {% endhighlight %}
 
 Some of the more popular file downloads to track are: *.pdf and *.zip
@@ -218,19 +218,19 @@ Another option is to use _trackEvent to track the file download. In my mind, _tr
 Still with me? Good! *GetFileName* is probably thee most important method in Entourage.js!
 
 {% highlight js %}
-    //Get true FileName from link pathname
-    GetFileName = function(pathname) {
-        //Remove the anchor at the end
-        pathname = pathname.substring(0, (pathname.indexOf("#") == -1) ? pathname.length : pathname.indexOf("#"));
-        	
-        //Removes the query after the file pathname
-        pathname = pathname.substring(0, (pathname.indexOf("?") == -1) ? pathname.length : pathname.indexOf("?"));
-        	
-        //Removes everything before the last slash in the path
-        pathname = pathname.substring(pathname.lastIndexOf("/") + 1, pathname.length);
+//Get true FileName from link pathname
+GetFileName = function(pathname) {
+    //Remove the anchor at the end
+    pathname = pathname.substring(0, (pathname.indexOf("#") == -1) ? pathname.length : pathname.indexOf("#"));
     	
-    	return pathname;
-    };
+    //Removes the query after the file pathname
+    pathname = pathname.substring(0, (pathname.indexOf("?") == -1) ? pathname.length : pathname.indexOf("?"));
+    	
+    //Removes everything before the last slash in the path
+    pathname = pathname.substring(pathname.lastIndexOf("/") + 1, pathname.length);
+	
+	return pathname;
+};
 {% endhighlight %}
 
 It is incredibly difficult to extract a download's *fileName* from a link's *pathname* property.
@@ -273,55 +273,55 @@ Bottom line is if you need to track downloads with Google Analytics, then don't 
 See an overview of the code at 10,000 FT:
 
 {% highlight js %}
-    (function() {
-    var entourage = new (function() {
-    	this.VERSION = "1.1.0";
-    	
-    	//Get true FileName from link pathname
-    	var getFileName = function(pathname) {
-    		//No updates...
-    
-    		return pathname;
-    	};
-    
-    	var autograph = function() {
-    		var whitelist, pathname, match, fileName, associate;
-    		
-    		whitelist = /\.pdf$|\.zip$|\.od*|\.doc*|\.xls*|\.ppt*|\.exe$|\.dmg$|\.mov$|\.avi$|\.mp3$/i;
+(function() {
+var entourage = new (function() {
+	this.VERSION = "1.1.0";
+	
+	//Get true FileName from link pathname
+	var getFileName = function(pathname) {
+		//No updates...
 
-            //The link object is now available in "this"
-    		pathname = this.pathname;
-    		
-    		//Compare the fileType to the whitelist
-    		match = pathname.match(whitelist);
-    		
-    		if (typeof match !== "undefined" && match !== null) 
-            {
-    			//Get the file name
-    			fileName = getFileName(pathname);
-    
-    			//Add file to the Google Analytics Queue
-    			associate = '/download/' + fileName;
-    			_gaq.push(['_trackPageview', associate]);
-    		}
-        };
-    
-    	this.initialize = function() {
-    		var links = document.links;
-    		
-    	    for (var i=0, l=links.length; i<l; i++) {
-    			//Call Entourage whenever the link is clicked
-    	        links[i].onclick = autograph;
-    	    }
-        };
-    })(); //Entourage.js
-    
-    //Add entourage to the global namespace
-    window.entourage = entourage;
-    
-    //Execute onload - ensuring links are present in the DOM
-    window.onload = entourage.initialize;
-    })();
+		return pathname;
+	};
+
+	var autograph = function() {
+		var whitelist, pathname, match, fileName, associate;
+		
+		whitelist = /\.pdf$|\.zip$|\.od*|\.doc*|\.xls*|\.ppt*|\.exe$|\.dmg$|\.mov$|\.avi$|\.mp3$/i;
+
+        //The link object is now available in "this"
+		pathname = this.pathname;
+		
+		//Compare the fileType to the whitelist
+		match = pathname.match(whitelist);
+		
+		if (typeof match !== "undefined" && match !== null) 
+        {
+			//Get the file name
+			fileName = getFileName(pathname);
+
+			//Add file to the Google Analytics Queue
+			associate = '/download/' + fileName;
+			_gaq.push(['_trackPageview', associate]);
+		}
+    };
+
+	this.initialize = function() {
+		var links = document.links;
+		
+	    for (var i=0, l=links.length; i<l; i++) {
+			//Call Entourage whenever the link is clicked
+	        links[i].onclick = autograph;
+	    }
+    };
+})(); //Entourage.js
+
+//Add entourage to the global namespace
+window.entourage = entourage;
+
+//Execute onload - ensuring links are present in the DOM
+window.onload = entourage.initialize;
+})();
 {% endhighlight %}
 
 ####Usability and User Experience

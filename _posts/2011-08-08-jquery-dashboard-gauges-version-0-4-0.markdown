@@ -9,17 +9,17 @@ permalink: /c7/posts/56-jquery-dashboard-gauges-version-0-4-0
 TechOctave's [jQuery Dashboard Gauges][1] have reached version 0.4.0. We're happy with the results and hope you'll enjoy some of the refactoring and enhancements:
 
 {% highlight ruby %}
- 1. Enhanced Speedometer API
- 
- 2. Choose MPH or KPH as your main speed metric
- 
- 3. Beautiful Odometer - Photo Realistic (Optional)
- 
- 4. Tachometer (RPM) Gauge - Purse JavaScript/jQuery
- 
- 5. Smarter defaults when calling methods (In particular, the Constructor, Accelerate and Odometer methods)
- 
- 6. More Example Code - More Quick Startups
+1. Enhanced Speedometer API
+
+2. Choose MPH or KPH as your main speed metric
+
+3. Beautiful Odometer - Photo Realistic (Optional)
+
+4. Tachometer (RPM) Gauge - Purse JavaScript/jQuery
+
+5. Smarter defaults when calling methods (In particular, the Constructor, Accelerate and Odometer methods)
+
+6. More Example Code - More Quick Startups
 {% endhighlight %}
 
 ####More Robust Dashboard.html Example
@@ -27,17 +27,17 @@ TechOctave's [jQuery Dashboard Gauges][1] have reached version 0.4.0. We're happ
 Beefed up! Fully functional jQuery Dashboard Gauge example showing how to use our:
 
 {% highlight ruby %}
- - RPM Gauge
- 
- - KPH Speedometer with an Odometer
- 
- - KPH Speedometer without an Odometer
- 
- - MPH Speedometer with an Odometer
- 
- - Fuel Gauge
- 
- - Temperature Gauge
+- RPM Gauge
+
+- KPH Speedometer with an Odometer
+
+- KPH Speedometer without an Odometer
+
+- MPH Speedometer with an Odometer
+
+- Fuel Gauge
+
+- Temperature Gauge
 {% endhighlight %}
 
 ####Pure JavaScript Dashboard Gauges (HTML5 Ready!)

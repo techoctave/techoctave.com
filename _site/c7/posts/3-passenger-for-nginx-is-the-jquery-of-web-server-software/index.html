@@ -27,7 +27,7 @@
 	
     <div class="feat">
       <h5 class="page-date">
-        <time datetime="2010-06-18T05:30:34Z" itemprop="datePublished">
+        <time datetime="2010-06-18T01:30:34-04:00" itemprop="datePublished">
           18 June 2010
         </time>
       </h5>
@@ -62,20 +62,18 @@
 
 <p>Take this common Web server task written in Nginx:</p>
 
-<div class="highlight"><pre><code class="bash">    <span class="c">## Redirect from www to non-www</span>
-    <span class="k">if</span> <span class="o">(</span><span class="nv">$host</span> <span class="o">=</span> <span class="s1">&#39;www.domain.com&#39;</span><span class="o">)</span> <span class="o">{</span>
-         rewrite  ^/<span class="o">(</span>.*<span class="o">)</span><span class="nv">$ </span> http://domain.com/<span class="nv">$1</span>  permanent<span class="p">;</span>
-    <span class="o">}</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">## Redirect from www to non-www</span>
+<span class="k">if</span> <span class="o">(</span><span class="nv">$host</span> <span class="o">=</span> <span class="s1">&#39;www.domain.com&#39;</span><span class="o">)</span> <span class="o">{</span>
+     rewrite  ^/<span class="o">(</span>.*<span class="o">)</span><span class="nv">$ </span> http://domain.com/<span class="nv">$1</span>  permanent<span class="p">;</span>
+<span class="o">}</span></code></pre></div>
 
 
 <p>Compare this same task in Apache:</p>
 
-<div class="highlight"><pre><code class="bash">    &lt;VirtualHost *:80&gt;
-        ServerName www.domain.com
-        Redirect permanent / http://domain.com/
-    &lt;/VirtualHost&gt;
-</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">&lt;VirtualHost *:80&gt;
+    ServerName www.domain.com
+    Redirect permanent / http://domain.com/
+&lt;/VirtualHost&gt;</code></pre></div>
 
 
 <p>Nginx is intuitive and expressive and as a developer I choose to write this task in Nginx. It just feels less heavy and I appreciate not having to deal with the XML hell in the long run. Thanks Nginx!</p>

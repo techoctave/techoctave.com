@@ -15,7 +15,7 @@ In my last post on [Ferris Club][1] I used a typical YouTube video. But, I bet y
 The default YouTube code is ugly and dangerous to puppies. Strip away all the baggage until you have this:
 
 {% highlight html %}
-    <object type="application/x-shockwave-flash" width="520" height="350" data="http://www.youtube.com/v/owGykVbfgUE&amp;hl=en_US&amp;fs=1?rel=0"></object>
+<object type="application/x-shockwave-flash" width="520" height="350" data="http://www.youtube.com/v/owGykVbfgUE&amp;hl=en_US&amp;fs=1?rel=0"></object>
 {% endhighlight %}
 
 Modify the width and height to your taste, then replace the data url with your YouTube video of choice. Rinse. Repeat and enjoy! See, XHTML 1.0 Strict can be social and sexy.

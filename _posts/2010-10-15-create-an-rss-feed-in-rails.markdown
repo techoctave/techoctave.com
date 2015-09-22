@@ -15,11 +15,11 @@ Here's a walk through for integrating RSS with your Rails blog.
 ####app/controllers/posts_controller.rb
 
 {% highlight ruby %}
-    @posts = Post.all(:select => "title, author, id, content, posted_at", :order => "posted_at DESC", :limit => 20) 
-        
-    respond_to do |format|
-       format.rss { render :layout => false }
-    end
+@posts = Post.all(:select => "title, author, id, content, posted_at", :order => "posted_at DESC", :limit => 20) 
+    
+respond_to do |format|
+   format.rss { render :layout => false }
+end
 {% endhighlight %}
 
 In Rails, this call sends all RSS calls to *index.rss.builder* by default. Let's take a look at what that View does.
@@ -29,24 +29,24 @@ In Rails, this call sends all RSS calls to *index.rss.builder* by default. Let's
 This is where all the Railsy magic happens. In another language, in another web application framework, this could've easily been ugly. But with Rails, we're talking *rainbows and ponies* baby!
 
 {% highlight ruby %}
-    xml.instruct! :xml, :version => "1.0" 
-    xml.rss :version => "2.0" do
-      xml.channel do
-        xml.title "Your Blog Title"
-        xml.description "A blog about software and chocolate"
-        xml.link posts_url
-        
-        for post in @posts
-          xml.item do
-            xml.title post.title
-            xml.description post.content
-            xml.pubDate post.posted_at.to_s(:rfc822)
-            xml.link post_url(post)
-            xml.guid post_url(post)
-          end
-        end
+xml.instruct! :xml, :version => "1.0" 
+xml.rss :version => "2.0" do
+  xml.channel do
+    xml.title "Your Blog Title"
+    xml.description "A blog about software and chocolate"
+    xml.link posts_url
+    
+    for post in @posts
+      xml.item do
+        xml.title post.title
+        xml.description post.content
+        xml.pubDate post.posted_at.to_s(:rfc822)
+        xml.link post_url(post)
+        xml.guid post_url(post)
       end
     end
+  end
+end
 {% endhighlight %}
 
 You just implemented the RSS specification in Ruby on Rails. Congrats! Let's keep moving, we're almost done.

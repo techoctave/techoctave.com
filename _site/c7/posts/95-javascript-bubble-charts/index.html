@@ -27,8 +27,8 @@
 	
     <div class="feat">
       <h5 class="page-date">
-        <time datetime="2012-11-26T03:13:17Z" itemprop="datePublished">
-          26 November 2012
+        <time datetime="2012-11-25T22:13:17-05:00" itemprop="datePublished">
+          25 November 2012
         </time>
       </h5>
     </div>
@@ -54,7 +54,7 @@
 
 <h4>Enhancements</h4>
 
-<div class="highlight"><pre><code class="ruby"><span class="o">-</span> <span class="no">Created</span> <span class="no">BubbleChart</span> <span class="n">component</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">-</span> <span class="no">Created</span> <span class="no">BubbleChart</span> <span class="n">component</span>
 
 <span class="o">-</span> <span class="no">Created</span> <span class="mi">100</span><span class="o">%</span> <span class="n">native</span> <span class="n">svg</span> <span class="no">Tooltips</span> <span class="n">on</span> <span class="n">hover</span>
 
@@ -64,20 +64,18 @@
 
 <span class="o">-</span> <span class="no">Implemented</span> <span class="n">data</span> <span class="n">point</span> <span class="n">descriptions</span>
 
-<span class="o">-</span> <span class="no">Implemented</span> <span class="no">LineChart</span> <span class="n">data</span> <span class="n">point</span> <span class="n">dots</span>
-</code></pre></div>
+<span class="o">-</span> <span class="no">Implemented</span> <span class="no">LineChart</span> <span class="n">data</span> <span class="n">point</span> <span class="n">dots</span></code></pre></div>
 
 
 <h4>API Improvements</h4>
 
-<div class="highlight"><pre><code class="ruby"> <span class="o">-</span> <span class="no">Raphael</span><span class="o">.</span><span class="n">js</span><span class="p">:</span> <span class="no">Upgraded</span> <span class="n">to</span> <span class="n">version</span> <span class="mi">2</span><span class="o">.</span><span class="mi">1</span><span class="o">.</span><span class="mi">0</span>
- 
- <span class="o">-</span> <span class="no">Improved</span> <span class="n">chart</span> <span class="n">axis</span> <span class="n">rendering</span> <span class="ow">and</span> <span class="n">mapping</span> <span class="n">algorithm</span>
- 
- <span class="o">-</span> <span class="no">Refactored</span> <span class="n">setData</span> <span class="nb">method</span> <span class="n">to</span> <span class="n">increase</span> <span class="n">reuse</span> <span class="o">&amp;</span> <span class="n">code</span> <span class="n">quality</span>
- 
- <span class="o">-</span> <span class="no">Added</span> <span class="n">opacity</span> <span class="n">properties</span> <span class="n">to</span> <span class="n">data</span> <span class="n">points</span> <span class="ow">and</span> <span class="n">chart</span> <span class="n">objects</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">-</span> <span class="no">Raphael</span><span class="o">.</span><span class="n">js</span><span class="p">:</span> <span class="no">Upgraded</span> <span class="n">to</span> <span class="n">version</span> <span class="mi">2</span><span class="o">.</span><span class="mi">1</span><span class="o">.</span><span class="mi">0</span>
+
+<span class="o">-</span> <span class="no">Improved</span> <span class="n">chart</span> <span class="n">axis</span> <span class="n">rendering</span> <span class="ow">and</span> <span class="n">mapping</span> <span class="n">algorithm</span>
+
+<span class="o">-</span> <span class="no">Refactored</span> <span class="n">setData</span> <span class="nb">method</span> <span class="n">to</span> <span class="n">increase</span> <span class="n">reuse</span> <span class="o">&amp;</span> <span class="n">code</span> <span class="n">quality</span>
+
+<span class="o">-</span> <span class="no">Added</span> <span class="n">opacity</span> <span class="n">properties</span> <span class="n">to</span> <span class="n">data</span> <span class="n">points</span> <span class="ow">and</span> <span class="n">chart</span> <span class="n">objects</span></code></pre></div>
 
 
 <h3>Bubble Charts</h3>
@@ -88,25 +86,23 @@
 
 <p>Here, we have a Bubble Chart displaying a "Correlation between Estimated Sales, Annual Income and Vehicle Price of some luxury brands." Using our Bubble Chart would look something like this:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="kd">var</span> <span class="nx">vehicles</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BubbleChart</span><span class="p">(</span><span class="s2">&quot;vehicles&quot;</span><span class="p">,</span> <span class="p">{</span>
-        <span class="nx">data</span><span class="o">:</span> <span class="p">[...],</span>
-        <span class="nx">legendTitle</span><span class="o">:</span> <span class="s2">&quot;Luxury Brands&quot;</span><span class="p">,</span>
-        <span class="nx">XAxisLabel</span><span class="o">:</span> <span class="s2">&quot;Estimated Sales ($ Millions)&quot;</span><span class="p">,</span>
-        <span class="nx">YAxisLabel</span><span class="o">:</span> <span class="s2">&quot;Annual Income ($ Millions)&quot;</span><span class="p">,</span>
-        <span class="nx">minValueX</span><span class="o">:</span> <span class="o">-</span><span class="mi">20</span><span class="p">,</span>
-        <span class="nx">maxValueX</span><span class="o">:</span> <span class="mi">70</span><span class="p">,</span>
-        <span class="nx">minValueY</span><span class="o">:</span> <span class="o">-</span><span class="mi">50</span><span class="p">,</span>
-        <span class="nx">maxValueY</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
-        <span class="nx">majorTicksX</span><span class="o">:</span> <span class="mi">9</span><span class="p">,</span>
-        <span class="nx">majorTicksY</span><span class="o">:</span> <span class="mi">5</span>
-    <span class="p">});</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">vehicles</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BubbleChart</span><span class="p">(</span><span class="s2">&quot;vehicles&quot;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">data</span><span class="o">:</span> <span class="p">[...],</span>
+    <span class="nx">legendTitle</span><span class="o">:</span> <span class="s2">&quot;Luxury Brands&quot;</span><span class="p">,</span>
+    <span class="nx">XAxisLabel</span><span class="o">:</span> <span class="s2">&quot;Estimated Sales ($ Millions)&quot;</span><span class="p">,</span>
+    <span class="nx">YAxisLabel</span><span class="o">:</span> <span class="s2">&quot;Annual Income ($ Millions)&quot;</span><span class="p">,</span>
+    <span class="nx">minValueX</span><span class="o">:</span> <span class="o">-</span><span class="mi">20</span><span class="p">,</span>
+    <span class="nx">maxValueX</span><span class="o">:</span> <span class="mi">70</span><span class="p">,</span>
+    <span class="nx">minValueY</span><span class="o">:</span> <span class="o">-</span><span class="mi">50</span><span class="p">,</span>
+    <span class="nx">maxValueY</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+    <span class="nx">majorTicksX</span><span class="o">:</span> <span class="mi">9</span><span class="p">,</span>
+    <span class="nx">majorTicksY</span><span class="o">:</span> <span class="mi">5</span>
+<span class="p">});</span></code></pre></div>
 
 
 <p>We need a DOM element to bind the BubbleChart instance to. That element is created with a simple div tag:</p>
 
-<div class="highlight"><pre><code class="html">    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;vehicles&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>      
-</code></pre></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;vehicles&quot;</span><span class="nt">&gt;&lt;/div&gt;</span></code></pre></div>
 
 
 <p>There are seven (7) brands: Acura, Alfa Romeo, AM General, Aston Martin, Audi, BMW and Bugatti.</p>

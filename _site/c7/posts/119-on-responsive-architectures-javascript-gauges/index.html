@@ -27,7 +27,7 @@
 	
     <div class="feat">
       <h5 class="page-date">
-        <time datetime="2013-07-17T12:00:18Z" itemprop="datePublished">
+        <time datetime="2013-07-17T08:00:18-04:00" itemprop="datePublished">
           17 July 2013
         </time>
       </h5>
@@ -62,13 +62,12 @@
 
 <p>Once the UI hits a breakpoint, simply update our Gauge with the width and height that looks best for that breakpoint:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="kd">var</span> <span class="nx">knots</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Gauge</span><span class="p">(</span><span class="s2">&quot;knots&quot;</span><span class="p">);</span>
-    <span class="p">.</span> <span class="p">.</span> <span class="p">.</span>
-    <span class="nx">knots</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s2">&quot;width&quot;</span><span class="p">,</span> <span class="nx">width</span><span class="p">);</span>
-    <span class="nx">knots</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s2">&quot;height&quot;</span><span class="p">,</span> <span class="nx">height</span><span class="p">);</span>
-    <span class="p">.</span> <span class="p">.</span> <span class="p">.</span>    
-    <span class="nx">knots</span><span class="p">.</span><span class="nx">refresh</span><span class="p">();</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">knots</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Gauge</span><span class="p">(</span><span class="s2">&quot;knots&quot;</span><span class="p">);</span>
+<span class="p">.</span> <span class="p">.</span> <span class="p">.</span>
+<span class="nx">knots</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s2">&quot;width&quot;</span><span class="p">,</span> <span class="nx">width</span><span class="p">);</span>
+<span class="nx">knots</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s2">&quot;height&quot;</span><span class="p">,</span> <span class="nx">height</span><span class="p">);</span>
+<span class="p">.</span> <span class="p">.</span> <span class="p">.</span>    
+<span class="nx">knots</span><span class="p">.</span><span class="nx">refresh</span><span class="p">();</span></code></pre></div>
 
 
 <p>Using a Responsive Architecture will set your application up for success - You don't need autoresize to make that happen. We'll keep autoresize in for backwards compatibility, for a few releases at least, but we'll no longer promote it as a feature.</p>

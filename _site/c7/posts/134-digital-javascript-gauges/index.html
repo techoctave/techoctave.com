@@ -27,7 +27,7 @@
 	
     <div class="feat">
       <h5 class="page-date">
-        <time datetime="2014-05-31T07:35:42Z" itemprop="datePublished">
+        <time datetime="2014-05-31T03:35:42-04:00" itemprop="datePublished">
           31 May 2014
         </time>
       </h5>
@@ -48,10 +48,9 @@
 
 <p>We also implemented a smarter way to format values using a flexible mask:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="kd">var</span> <span class="nx">sales</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Gauge</span><span class="p">(</span><span class="s2">&quot;sales&quot;</span><span class="p">,</span> <span class="p">{</span>
-        <span class="nx">mask</span><span class="o">:</span> <span class="s2">&quot;$#,##0.#0&quot;</span>
-    <span class="p">});</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">sales</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Gauge</span><span class="p">(</span><span class="s2">&quot;sales&quot;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">mask</span><span class="o">:</span> <span class="s2">&quot;$#,##0.#0&quot;</span>
+<span class="p">});</span></code></pre></div>
 
 
 <p>Thanks for your support everyone!</p>
@@ -66,16 +65,14 @@
 
 <p>[Enhancements]</p>
 
-<div class="highlight"><pre><code class="js"> <span class="o">-</span> <span class="nx">New</span> <span class="nx">digital</span> <span class="nx">example</span>
- <span class="o">-</span> <span class="nx">List</span> <span class="nx">item</span>
- <span class="o">-</span> <span class="nx">New</span> <span class="nx">number</span> <span class="nx">formatting</span> <span class="nx">mask</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="o">-</span> <span class="nx">New</span> <span class="nx">digital</span> <span class="nx">example</span>
+<span class="o">-</span> <span class="nx">List</span> <span class="nx">item</span>
+<span class="o">-</span> <span class="nx">New</span> <span class="nx">number</span> <span class="nx">formatting</span> <span class="nx">mask</span></code></pre></div>
 
 
 <p>[Defects]</p>
 
-<div class="highlight"><pre><code class="js"><span class="o">-</span> <span class="nx">formatValue</span> <span class="nx">negative</span> <span class="nx">bug</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="o">-</span> <span class="nx">formatValue</span> <span class="nx">negative</span> <span class="nx">bug</span></code></pre></div>
 
 
 

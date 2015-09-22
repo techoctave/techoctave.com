@@ -27,11 +27,15 @@ Its linear and no-frills design provides a rich display of data in a small space
 The bullet graph consists of five primary components:
 
 {% highlight js %}
- - Text label
- - A quantitative scale along a single linear axis
- - The featured measure
- - One or two comparative measures (optional)
- - From two to five ranges along the quantitative scale to declare the featured measure's qualitative state (optional)
+- Text label
+
+- A quantitative scale along a single linear axis
+
+- The featured measure
+
+- One or two comparative measures (optional)
+
+- From two to five ranges along the quantitative scale to declare the featured measure's qualitative state (optional)
 {% endhighlight %}
 
 <img src="http://upload.wikimedia.org/wikipedia/en/thumb/e/e1/Bullet_graph_labeled.png/500px-Bullet_graph_labeled.png" alt="520" alt="JavaScript Bullet Graph" />
@@ -67,13 +71,13 @@ Creating a horizontal Bullet Chart library is as simple as this:
 ####JavaScript
 
 {% highlight js %}
-    var revenue = new BulletChart("revenue", {
-    	title: "Revenue",
-    	subtitle: "US$, in thousands",
-    	ranges: [150, 225, 300],
-    	measures: [275],
-    	markers: [265]
-    });
+var revenue = new BulletChart("revenue", {
+	title: "Revenue",
+	subtitle: "US$, in thousands",
+	ranges: [150, 225, 300],
+	measures: [275],
+	markers: [265]
+});
 {% endhighlight %}
 
 The above instance of the BulletChart class creates the sample Bullet Chart detailing the success of Hustle & Code, LLC.
@@ -85,28 +89,28 @@ Simplicity the ultimate arbiter, our BulletChart library is flushed with smart d
 Creating a vertical Bullet Chart is just as simple. Simply set the *vertical* property to true:
 
 {% highlight js %}
-    var revenue = new BulletChart("revenue", {
-        title: "Revenue",
-        subtitle: "US$, in thousands",
-        ranges: [150, 225, 300],
-        measures: [275],
-        markers: [265],
-        vertical: true
-    });
+var revenue = new BulletChart("revenue", {
+    title: "Revenue",
+    subtitle: "US$, in thousands",
+    ranges: [150, 225, 300],
+    measures: [275],
+    markers: [265],
+    vertical: true
+});
 {% endhighlight %}
 
 As the measure increases or decreases, simply pick your favorite [JavaScript Long Polling][7] technique and make a call to your data source to update the measure:
 
 {% highlight js %}
-    revenue.setMeasures([200]);
+revenue.setMeasures([200]);
 {% endhighlight %}
 
 Need to update the ranges or even the comparative marker? You can do that too:
 
 {% highlight js %}
-    revenue.setRanges([100, 200, 300]);
-    
-    revenue.setMarkers([125]);
+revenue.setRanges([100, 200, 300]);
+
+revenue.setMarkers([125]);
 {% endhighlight %}
 
 That simple.

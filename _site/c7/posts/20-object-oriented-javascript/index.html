@@ -27,7 +27,7 @@
 	
     <div class="feat">
       <h5 class="page-date">
-        <time datetime="2010-09-17T07:31:13Z" itemprop="datePublished">
+        <time datetime="2010-09-17T03:31:13-04:00" itemprop="datePublished">
           17 September 2010
         </time>
       </h5>
@@ -52,42 +52,38 @@
 
 <p>Class definition and Constructor:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="nx">Speedometer</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">gaugeID</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">//State  </span>
-        <span class="kd">var</span> <span class="nx">mph</span><span class="p">;</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">Speedometer</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">gaugeID</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//State  </span>
+    <span class="kd">var</span> <span class="nx">mph</span><span class="p">;</span>
 
-        <span class="c1">//Constructor</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">SetGaugeID</span><span class="p">(</span><span class="nx">gaugeID</span><span class="p">);</span> <span class="c1">//inherited from Gauge</span>
-    
-        <span class="k">this</span><span class="p">.</span><span class="nx">CreateGauge</span><span class="p">();</span> <span class="c1">//inherited from Gauge</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">SetMPH</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-    <span class="p">}</span>
-</code></pre></div>
+    <span class="c1">//Constructor</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">SetGaugeID</span><span class="p">(</span><span class="nx">gaugeID</span><span class="p">);</span> <span class="c1">//inherited from Gauge</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">CreateGauge</span><span class="p">();</span> <span class="c1">//inherited from Gauge</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">SetMPH</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span></code></pre></div>
 
 
 <p>Inherit base functionality from Gauge class:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="nx">Speedometer</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Gauge</span><span class="p">();</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">Speedometer</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Gauge</span><span class="p">();</span></code></pre></div>
 
 
 <p>This type of inheritance is called Prototypal Inheritance. Under the hood, it's different from classical class based inheritance. But, should be very familiar.</p>
 
 <p>Properties (Accessors):</p>
 
-<div class="highlight"><pre><code class="js">    <span class="nx">Speedometer</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">SetMPH</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">mph</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">mph</span> <span class="o">=</span> <span class="nx">mph</span><span class="p">;</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">RotateNeedle</span><span class="p">(...);</span> <span class="c1">//inherited from Gauge</span>
-    <span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">Speedometer</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">SetMPH</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">mph</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">mph</span> <span class="o">=</span> <span class="nx">mph</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">RotateNeedle</span><span class="p">(...);</span> <span class="c1">//inherited from Gauge</span>
+<span class="p">}</span></code></pre></div>
 
 
 <p>Methods (Do the work for the Speedometer Class):</p>
 
-<div class="highlight"><pre><code class="js">    <span class="nx">Speedometer</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">Accelerate</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="c1">//Do some work here...</span>
-    <span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">Speedometer</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">Accelerate</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">//Do some work here...</span>
+<span class="p">}</span></code></pre></div>
 
 
 <p>The accelerate method is only within the scope of the Speedometer class. So only instances of a Speedometer object or children of the Speedometer class have access to the method.</p>
@@ -96,15 +92,14 @@
 
 <p>Well, we so deliciously put together our Speedometer class. Now, it's <a href="http://techoctave.com/c7/posts/1-hello-world">time to have some fun</a> and use an instance of the Speedometer object. Let's take this Teslar Roadster for a spin:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="c1">//Create a new instance of a Speedometer object</span>
-    <span class="kd">var</span> <span class="nx">speedGauge</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Speedometer</span><span class="p">(</span><span class="s2">&quot;speedometer&quot;</span><span class="p">);</span>
-    
-    <span class="c1">//Warm up the engine</span>
-    <span class="nx">speedGauge</span><span class="p">.</span><span class="nx">SetMPH</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
-    
-    <span class="c1">//Time to put the pedal to the metal</span>
-    <span class="nx">speedGauge</span><span class="p">.</span><span class="nx">Accelerate</span><span class="p">();</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">//Create a new instance of a Speedometer object</span>
+<span class="kd">var</span> <span class="nx">speedGauge</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Speedometer</span><span class="p">(</span><span class="s2">&quot;speedometer&quot;</span><span class="p">);</span>
+
+<span class="c1">//Warm up the engine</span>
+<span class="nx">speedGauge</span><span class="p">.</span><span class="nx">SetMPH</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+
+<span class="c1">//Time to put the pedal to the metal</span>
+<span class="nx">speedGauge</span><span class="p">.</span><span class="nx">Accelerate</span><span class="p">();</span></code></pre></div>
 
 
 <p>Hey, the good news is if you're here, that means you're looking for help and that makes you awesome! It also means you already have the necessary prerequisites to develop cleaner, more reusable, Object Oriented JavaScript.</p>

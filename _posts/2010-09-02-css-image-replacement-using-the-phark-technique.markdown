@@ -19,20 +19,20 @@ But more importantly, the Phark technique  will help readers with seeing difficu
 Here's the HTML:
 
 {% highlight html %}
-    <h2>
-      Sunflower
-    </h2>
+<h2>
+  Sunflower
+</h2>
 {% endhighlight %}
 
 Here's the CSS:
 
 {% highlight css %}
-    h2 {
-     text-indent: -10000px;
-     background: url("sunflower.png") no-repeat;
-     width: 150px;
-     height: 100px;
-    }
+h2 {
+  text-indent: -10000px;
+  background: url("sunflower.png") no-repeat;
+  width: 150px;
+  height: 100px;
+}
 {% endhighlight %}
 
 The great thing here is you're not *hiding* any text like other techniques call for. Therefore, you don't run the risk of potentially getting penalized for *hidden* text by Google.

@@ -8,7 +8,7 @@ baseurl: ""
 
 markdown: rdiscount
 permalink: /c7/:year/:month/:title.html
-pygments: true
+highlighter: pygments
 
 # Google Analytics
 ga_domain: techoctave.com

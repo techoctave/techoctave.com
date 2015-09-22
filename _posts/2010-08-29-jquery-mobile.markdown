@@ -34,13 +34,13 @@ For now, I think I'll still advise clients to set their sights on building nativ
 Yet, I still think jQuery Mobile framework must be nurtured as its promise is far too compelling. Think about it:
 
 {% highlight html %}
- - Your next app could be consumed without direct approval by the mobile provider
- 
- - Write once, Run everywhere
- 
- - No $100/yr or fees per sale structures
- 
- - Software-as-a-Service business model for Mobile devices
+- Your next app could be consumed without direct approval by the mobile provider
+
+- Write once, Run everywhere
+
+- No $100/yr or fees per sale structures
+
+- Software-as-a-Service business model for Mobile devices
 {% endhighlight %}
 
 I predict native apps will continue to dominate the market for the time being. However, the business case for jQuery Mobile is truly compelling. With a release date of late 2010, you can bet I'm definitely looking forward to its beta release.

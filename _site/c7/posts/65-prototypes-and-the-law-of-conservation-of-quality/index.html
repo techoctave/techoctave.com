@@ -27,8 +27,8 @@
 	
     <div class="feat">
       <h5 class="page-date">
-        <time datetime="2011-12-30T01:06:17Z" itemprop="datePublished">
-          30 December 2011
+        <time datetime="2011-12-29T20:06:17-05:00" itemprop="datePublished">
+          29 December 2011
         </time>
       </h5>
     </div>
@@ -66,10 +66,9 @@
 
 <p>A good prototype allows you to have a conversation about complexity. Hypotheticals are removed and you can quickly get down to brass tacks. I follow a series of methodical questions when I prototype:</p>
 
-<div class="highlight"><pre><code class="bash"> 1. What environment will this product be used? 
- 2. Who is going to use this product?
- 3. What is the motivation to use this product?
-</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">1. What environment will this product be used? 
+2. Who is going to use this product?
+3. What is the motivation to use this product?</code></pre></div>
 
 
 <h4>What environment will this product be used?</h4>
@@ -110,36 +109,34 @@
 
 <p>Interface One (Uses Intelligent Defaults):</p>
 
-<div class="highlight"><pre><code class="js">    <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;2010&quot;</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">350</span><span class="p">,</span> <span class="mi">1200</span><span class="p">],</span>
-                <span class="p">[</span><span class="s2">&quot;2011&quot;</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> <span class="mi">2400</span><span class="p">,</span> <span class="mi">540</span><span class="p">]];</span>
-    
-    <span class="kd">var</span> <span class="nx">sales</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BarChart</span><span class="p">(</span><span class="s2">&quot;sales&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="nx">data</span><span class="p">});</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;2010&quot;</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">350</span><span class="p">,</span> <span class="mi">1200</span><span class="p">],</span>
+            <span class="p">[</span><span class="s2">&quot;2011&quot;</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> <span class="mi">2400</span><span class="p">,</span> <span class="mi">540</span><span class="p">]];</span>
+
+<span class="kd">var</span> <span class="nx">sales</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BarChart</span><span class="p">(</span><span class="s2">&quot;sales&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="nx">data</span><span class="p">});</span></code></pre></div>
 
 
 <p>An instance of the BarChart object <em>sales</em> is instantiated and beautifully drawn on your screen.</p>
 
 <p>Interface Two:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;2010&quot;</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">350</span><span class="p">,</span> <span class="mi">1200</span><span class="p">],</span>
-                <span class="p">[</span><span class="s2">&quot;2011&quot;</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> <span class="mi">2400</span><span class="p">,</span> <span class="mi">540</span><span class="p">]];</span>
-    
-    <span class="kd">var</span> <span class="nx">sales</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BarChart</span><span class="p">();</span>
-    
-    <span class="nx">sales</span><span class="p">.</span><span class="nx">SetProperty</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;sales&quot;</span><span class="p">);</span>
-    <span class="nx">sales</span><span class="p">.</span><span class="nx">SetProperty</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
-    
-    <span class="nx">sales</span><span class="p">.</span><span class="nx">SetProperty</span><span class="p">(</span><span class="s2">&quot;colors&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;#FF2400&quot;</span><span class="p">,</span> <span class="s2">&quot;#E25822&quot;</span><span class="p">,</span> <span class="s2">&quot;#F2F2F2&quot;</span><span class="p">,</span> <span class="s2">&quot;#B22222&quot;</span><span class="p">]);</span>
-    
-    <span class="nx">sales</span><span class="p">.</span><span class="nx">SetProperty</span><span class="p">(</span><span class="s2">&quot;fill&quot;</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
-    <span class="nx">sales</span><span class="p">.</span><span class="nx">SetProperty</span><span class="p">(</span><span class="s2">&quot;width&quot;</span><span class="p">,</span> <span class="mi">200</span><span class="p">);</span>
-    <span class="nx">sales</span><span class="p">.</span><span class="nx">SetProperty</span><span class="p">(</span><span class="s2">&quot;height&quot;</span><span class="p">,</span> <span class="mi">200</span><span class="p">);</span>
-    <span class="nx">sales</span><span class="p">.</span><span class="nx">SetProperty</span><span class="p">(</span><span class="s2">&quot;scaling&quot;</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">);</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;2010&quot;</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">350</span><span class="p">,</span> <span class="mi">1200</span><span class="p">],</span>
+            <span class="p">[</span><span class="s2">&quot;2011&quot;</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> <span class="mi">2400</span><span class="p">,</span> <span class="mi">540</span><span class="p">]];</span>
 
-    <span class="p">...</span>
-    
-    <span class="nx">sales</span><span class="p">.</span><span class="nx">drawGraph</span><span class="p">();</span>
-</code></pre></div>
+<span class="kd">var</span> <span class="nx">sales</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BarChart</span><span class="p">();</span>
+
+<span class="nx">sales</span><span class="p">.</span><span class="nx">SetProperty</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;sales&quot;</span><span class="p">);</span>
+<span class="nx">sales</span><span class="p">.</span><span class="nx">SetProperty</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+
+<span class="nx">sales</span><span class="p">.</span><span class="nx">SetProperty</span><span class="p">(</span><span class="s2">&quot;colors&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;#FF2400&quot;</span><span class="p">,</span> <span class="s2">&quot;#E25822&quot;</span><span class="p">,</span> <span class="s2">&quot;#F2F2F2&quot;</span><span class="p">,</span> <span class="s2">&quot;#B22222&quot;</span><span class="p">]);</span>
+
+<span class="nx">sales</span><span class="p">.</span><span class="nx">SetProperty</span><span class="p">(</span><span class="s2">&quot;fill&quot;</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+<span class="nx">sales</span><span class="p">.</span><span class="nx">SetProperty</span><span class="p">(</span><span class="s2">&quot;width&quot;</span><span class="p">,</span> <span class="mi">200</span><span class="p">);</span>
+<span class="nx">sales</span><span class="p">.</span><span class="nx">SetProperty</span><span class="p">(</span><span class="s2">&quot;height&quot;</span><span class="p">,</span> <span class="mi">200</span><span class="p">);</span>
+<span class="nx">sales</span><span class="p">.</span><span class="nx">SetProperty</span><span class="p">(</span><span class="s2">&quot;scaling&quot;</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">);</span>
+
+<span class="p">...</span>
+
+<span class="nx">sales</span><span class="p">.</span><span class="nx">drawGraph</span><span class="p">();</span></code></pre></div>
 
 
 <p>There were a few more properties to set before a "valid" BarChart could be rendered. But, let's cut to the chase. Your project is behind schedule and the boss is getting antsy for results. Which philosophy do you wish guided the development of your components?</p>
@@ -152,25 +149,22 @@
 
 <p>The first example could go from:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="kd">var</span> <span class="nx">sales</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BarChart</span><span class="p">(</span><span class="s2">&quot;sales&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="nx">data</span><span class="p">});</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">sales</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BarChart</span><span class="p">(</span><span class="s2">&quot;sales&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="nx">data</span><span class="p">});</span></code></pre></div>
 
 
 <p>To:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="kd">var</span> <span class="nx">sales</span> <span class="o">=</span> <span class="nx">BarChart</span><span class="p">(</span><span class="s2">&quot;sales&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="nx">data</span><span class="p">});</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">sales</span> <span class="o">=</span> <span class="nx">BarChart</span><span class="p">(</span><span class="s2">&quot;sales&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="nx">data</span><span class="p">});</span></code></pre></div>
 
 
 <p>With well executed constructor code:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="kd">function</span> <span class="nx">BarChart</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
-       <span class="k">if</span><span class="p">(</span><span class="nb">window</span> <span class="o">===</span> <span class="k">this</span><span class="p">)</span> <span class="p">{</span>
-          <span class="k">return</span> <span class="k">new</span> <span class="nx">BarChart</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
-       <span class="p">}</span>
-       <span class="p">...</span>
-    <span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">BarChart</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
+   <span class="k">if</span><span class="p">(</span><span class="nb">window</span> <span class="o">===</span> <span class="k">this</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="k">new</span> <span class="nx">BarChart</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+   <span class="p">}</span>
+   <span class="p">...</span>
+<span class="p">}</span></code></pre></div>
 
 
 <p>What this means is the end user gets the benefits of a fully instantiated object without ever having to worry about forgetting the <em>new</em> keyword.</p>

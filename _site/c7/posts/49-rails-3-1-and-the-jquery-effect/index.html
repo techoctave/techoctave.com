@@ -27,8 +27,8 @@
 	
     <div class="feat">
       <h5 class="page-date">
-        <time datetime="2011-03-11T02:30:13Z" itemprop="datePublished">
-          11 March 2011
+        <time datetime="2011-03-10T21:30:13-05:00" itemprop="datePublished">
+          10 March 2011
         </time>
       </h5>
     </div>
@@ -50,9 +50,8 @@
 
 <p>There I stood as a Rails developer - proud as ever - because above all this move showed that the Rails Core Team leads. I call this <em>The jQuery Effect</em> and it's about getting out of the way of progress:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="c">&lt;!--</span><span class="nx">The</span> <span class="nx">jQuery</span> <span class="nx">Effect</span><span class="o">--&gt;</span>
-    <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span><span class="nx">jQuery</span><span class="p">.</span><span class="nx">noConflict</span><span class="p">();</span><span class="o">&lt;</span><span class="err">/script&gt;</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c">&lt;!--</span><span class="nx">The</span> <span class="nx">jQuery</span> <span class="nx">Effect</span><span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span><span class="nx">jQuery</span><span class="p">.</span><span class="nx">noConflict</span><span class="p">();</span><span class="o">&lt;</span><span class="err">/script&gt;</span></code></pre></div>
 
 
 <p>jQuery has built a vibrant community of developers. And dare I say it was this single line of code that turned the tides in the JavaScript Framework Wars.</p>
@@ -69,15 +68,14 @@
 
 <p>What John Resig and the jQuery Core Team realized was that people used the $ for efficiency not identity. So let other frameworks use the $ and give jQuery developers the best of both worlds:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span><span class="nx">jQuery</span><span class="p">.</span><span class="nx">noConflict</span><span class="p">();</span><span class="o">&lt;</span><span class="err">/script&gt;</span>
-    <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span>
-      <span class="nx">jQuery</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">$</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#button&quot;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-           <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Hello World!&#39;</span><span class="p">);</span>
-        <span class="p">});</span>
-      <span class="p">});</span> <span class="c1">//document.ready</span>
-    <span class="o">&lt;</span><span class="err">/script&gt;</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span><span class="nx">jQuery</span><span class="p">.</span><span class="nx">noConflict</span><span class="p">();</span><span class="o">&lt;</span><span class="err">/script&gt;</span>
+<span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span>
+  <span class="nx">jQuery</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">$</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#button&quot;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+       <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Hello World!&#39;</span><span class="p">);</span>
+    <span class="p">});</span>
+  <span class="p">});</span> <span class="c1">//document.ready</span>
+<span class="o">&lt;</span><span class="err">/script&gt;</span></code></pre></div>
 
 
 <p>As a result jQuery developers didn't have to choose efficiency over flexibility. While the other frameworks pandered, "One Framework to Rule Them ALL." jQuery played it's hand and moved aside.</p>

@@ -27,7 +27,7 @@
 	
     <div class="feat">
       <h5 class="page-date">
-        <time datetime="2010-09-06T06:04:06Z" itemprop="datePublished">
+        <time datetime="2010-09-06T02:04:06-04:00" itemprop="datePublished">
           06 September 2010
         </time>
       </h5>
@@ -54,18 +54,17 @@
 
 <p>That's why we based our <a href="http://techoctave.com/gauges">Dashboard Gauge Suite</a> on Six Core Principles. We felt they should be:</p>
 
-<div class="highlight"><pre><code class="bash"> 1. Beautifully Illustrated
- 
- 2. Cross-Browser Compatible
- 
- 3. Lightweight footprint
- 
- 4. Vector Based <span class="k">for </span>Crisp Zoom and Print
- 
- 5. Highly Configurable
- 
- 6. Framework Agnostic
-</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">1. Beautifully Illustrated
+
+2. Cross-Browser Compatible
+
+3. Lightweight footprint
+
+4. Vector Based <span class="k">for</span> Crisp Zoom and Print
+
+5. Highly Configurable
+
+6. Framework Agnostic</code></pre></div>
 
 
 <p>In today's JavaScript environment, I believe framework agnosticism is central to developer happiness. Sometimes you simply don't have the time to fiddle with yet-another-javascript-framework. Sometimes you just need the software to work. Our gauges just work!</p>
@@ -84,24 +83,23 @@
 
 <p>Load Raphael.js and our Gauge.js package. Wait for the DOM to load and then create an instance of our Gauge class:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;javascripts/raphael.js&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
-    
-    <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;javascripts/gauge.js&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;javascripts/raphael.js&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
 
-    <span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
-    <span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-      <span class="kd">var</span> <span class="nx">sales</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Gauge</span><span class="p">(</span><span class="s2">&quot;sales&quot;</span><span class="p">,</span> <span class="p">{</span>
-          <span class="nx">label</span><span class="o">:</span> <span class="s2">&quot;Sales&quot;</span><span class="p">,</span>
-          <span class="nx">minValue</span><span class="o">:</span> <span class="mi">30</span><span class="p">,</span>
-          <span class="nx">maxValue</span><span class="o">:</span> <span class="mi">90</span><span class="p">,</span>
-          <span class="nx">majorTicks</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
-          <span class="nx">minorTicks</span><span class="o">:</span> <span class="mi">4</span>
-      <span class="p">});</span>
+<span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;javascripts/gauge.js&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
 
-      <span class="nx">sales</span><span class="p">.</span><span class="nx">setValue</span><span class="p">(</span><span class="mi">60</span><span class="p">);</span>
-    <span class="p">};</span>
-    <span class="o">&lt;</span><span class="err">/script&gt;</span>
-</code></pre></div>
+<span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">sales</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Gauge</span><span class="p">(</span><span class="s2">&quot;sales&quot;</span><span class="p">,</span> <span class="p">{</span>
+      <span class="nx">label</span><span class="o">:</span> <span class="s2">&quot;Sales&quot;</span><span class="p">,</span>
+      <span class="nx">minValue</span><span class="o">:</span> <span class="mi">30</span><span class="p">,</span>
+      <span class="nx">maxValue</span><span class="o">:</span> <span class="mi">90</span><span class="p">,</span>
+      <span class="nx">majorTicks</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+      <span class="nx">minorTicks</span><span class="o">:</span> <span class="mi">4</span>
+  <span class="p">});</span>
+
+  <span class="nx">sales</span><span class="p">.</span><span class="nx">setValue</span><span class="p">(</span><span class="mi">60</span><span class="p">);</span>
+<span class="p">};</span>
+<span class="o">&lt;</span><span class="err">/script&gt;</span></code></pre></div>
 
 
 <p>Note, label, minValue, maxValue, majorTicks and minorTicks are only five of 40+ configurable gauge properties.</p>
@@ -110,8 +108,7 @@
 
 <p>Minimum requirement for a gauge instance is a unique DOM identifier to attach the gauge instance:</p>
 
-<div class="highlight"><pre><code class="html">    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;sales&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;sales&quot;</span><span class="nt">&gt;&lt;/div&gt;</span></code></pre></div>
 
 
 <p>Here, we use a div tag, but could have easily used a li tag or any other DOM element.</p>

@@ -9,9 +9,9 @@ permalink: c7/posts/1-hello-world
 Canonical. Simple. Beautiful.
 
 {% highlight ruby %}
-    def show
-      render :text => 'Hello World!'
-    end
+def show
+  render :text => 'Hello World!'
+end
 {% endhighlight %}
 
 As transparent as any developer could hope for. Her simplicity, wrapped in a measure of modesty, always threatens to deceive the most skilled of us. Yet, we know better! We people of thought incarnate; We developers.

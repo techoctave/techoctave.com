@@ -27,8 +27,8 @@
 	
     <div class="feat">
       <h5 class="page-date">
-        <time datetime="2010-09-30T01:28:29Z" itemprop="datePublished">
-          30 September 2010
+        <time datetime="2010-09-29T21:28:29-04:00" itemprop="datePublished">
+          29 September 2010
         </time>
       </h5>
     </div>
@@ -46,41 +46,39 @@
 
 <p>Here's an example of using the Rails <em>request.env</em> object:</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="vi">@contact</span> <span class="o">=</span> <span class="no">Contact</span><span class="o">.</span><span class="n">new</span>
-    <span class="vi">@contact</span><span class="o">.</span><span class="n">referrer</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">env</span><span class="o">[</span><span class="s2">&quot;HTTP_REFERER&quot;</span><span class="o">]</span>
-    <span class="vi">@contact</span><span class="o">.</span><span class="n">user_agent</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">env</span><span class="o">[</span><span class="s2">&quot;HTTP_USER_AGENT&quot;</span><span class="o">]</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="vi">@contact</span> <span class="o">=</span> <span class="no">Contact</span><span class="o">.</span><span class="n">new</span>
+<span class="vi">@contact</span><span class="o">.</span><span class="n">referrer</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">env</span><span class="o">[</span><span class="s2">&quot;HTTP_REFERER&quot;</span><span class="o">]</span>
+<span class="vi">@contact</span><span class="o">.</span><span class="n">user_agent</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">env</span><span class="o">[</span><span class="s2">&quot;HTTP_USER_AGENT&quot;</span><span class="o">]</span></code></pre></div>
 
 
 <h3>Rails Request.env List</h3>
 
 <p>Request.env is a Rails object that contains information on your visitor's environment (e.g. browser, referrer) and information on your server's environment. The <em>request.env</em> object is a key/value pair Ruby array. Here is the list of the environment variables you have access to:</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="c1">#Rails Request.env Variables</span>
-    <span class="no">SERVER_NAME</span>
-    <span class="no">PATH_INFO</span>
-    <span class="no">REMOTE_HOST</span>
-    <span class="no">HTTP_ACCEPT_ENCODING</span>
-    <span class="no">HTTP_USER_AGENT</span>
-    <span class="no">SERVER_PROTOCOL</span>
-    <span class="no">HTTP_CACHE_CONTROL</span>
-    <span class="no">HTTP_ACCEPT_LANGUAGE</span>
-    <span class="no">HTTP_HOST</span>
-    <span class="no">REMOTE_ADDR</span>
-    <span class="no">SERVER_SOFTWARE</span>
-    <span class="no">HTTP_KEEP_ALIVE</span>
-    <span class="no">HTTP_REFERER</span>
-    <span class="no">HTTP_COOKIE</span>
-    <span class="no">HTTP_ACCEPT_CHARSET</span>
-    <span class="no">REQUEST_URI</span>
-    <span class="no">SERVER_PORT</span>
-    <span class="no">GATEWAY_INTERFACE</span>
-    <span class="no">QUERY_STRING</span>
-    <span class="no">REMOTE_USER</span>
-    <span class="no">HTTP_ACCEPT</span>
-    <span class="no">REQUEST_METHOD</span>
-    <span class="no">HTTP_CONNECTION</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1">#Rails Request.env Variables</span>
+<span class="no">SERVER_NAME</span>
+<span class="no">PATH_INFO</span>
+<span class="no">REMOTE_HOST</span>
+<span class="no">HTTP_ACCEPT_ENCODING</span>
+<span class="no">HTTP_USER_AGENT</span>
+<span class="no">SERVER_PROTOCOL</span>
+<span class="no">HTTP_CACHE_CONTROL</span>
+<span class="no">HTTP_ACCEPT_LANGUAGE</span>
+<span class="no">HTTP_HOST</span>
+<span class="no">REMOTE_ADDR</span>
+<span class="no">SERVER_SOFTWARE</span>
+<span class="no">HTTP_KEEP_ALIVE</span>
+<span class="no">HTTP_REFERER</span>
+<span class="no">HTTP_COOKIE</span>
+<span class="no">HTTP_ACCEPT_CHARSET</span>
+<span class="no">REQUEST_URI</span>
+<span class="no">SERVER_PORT</span>
+<span class="no">GATEWAY_INTERFACE</span>
+<span class="no">QUERY_STRING</span>
+<span class="no">REMOTE_USER</span>
+<span class="no">HTTP_ACCEPT</span>
+<span class="no">REQUEST_METHOD</span>
+<span class="no">HTTP_CONNECTION</span></code></pre></div>
 
 
 <p>Good Luck Beloved! Have Fun!</p>

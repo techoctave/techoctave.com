@@ -21,45 +21,45 @@ As always, there will be bugs to fix and features to add. But, what's great is w
 Well, without further ado, please do enjoy Blogast 1.1.0. You can download from the Official [Blogcast website][4] or from the Official [Blogcast Github Repo][5]:
 
 {% highlight bash %}
-    git clone https://github.com/techoctave/blogcast.git
-    cd blogcast
-    bundle install
+git clone https://github.com/techoctave/blogcast.git
+cd blogcast
+bundle install
 {% endhighlight %}
 
 Then jump right in:
 
 {% highlight bash %}
-    rails server
-    http://localhost:3000/admin
-    login with l/p: admin
+rails server
+http://localhost:3000/admin
+login with l/p: admin
 {% endhighlight %}
 
 ###Blogcast Revamped and  Reworked
 
 {% highlight ruby %}
- 1. Restructured JavaScript assets. Main => blogcast.js. All 3rd party librarie in /librarie folder.
- 
- 2. Fixed default Comment text not highlighting bug. Using HTML5 Placeholders now.
- 
- 3. Added AutoSave functionality to New Post and Draft. Shoutout to the Backbone.js Team.
- 
- 4. Added Shortcut Key Save. Mac OS X => Command + s. Windows => Ctrl + s.
- 
- 5. Added ability for admins to Edit Comments. Simply click the edit icon.
- 
- 6. Upgraded to Rails 3.1.0
- 
- 7. Updated jQuery 1.4.3 to 1.6.4
- 
- 8. Updated Entourage 1.0.0 to 1.1.0
- 
- 9. Updates Rails.js 1.0.0 to 1.0.12
- 
- 10. Added Backbone.js support
- 
- 11. Added Underscore.js support
- 
- 12. CSS3 Cleanups
+1. Restructured JavaScript assets. Main => blogcast.js. All 3rd party librarie in /librarie folder.
+
+2. Fixed default Comment text not highlighting bug. Using HTML5 Placeholders now.
+
+3. Added AutoSave functionality to New Post and Draft. Shoutout to the Backbone.js Team.
+
+4. Added Shortcut Key Save. Mac OS X => Command + s. Windows => Ctrl + s.
+
+5. Added ability for admins to Edit Comments. Simply click the edit icon.
+
+6. Upgraded to Rails 3.1.0
+
+7. Updated jQuery 1.4.3 to 1.6.4
+
+8. Updated Entourage 1.0.0 to 1.1.0
+
+9. Updates Rails.js 1.0.0 to 1.0.12
+
+10. Added Backbone.js support
+
+11. Added Underscore.js support
+
+12. CSS3 Cleanups
 {% endhighlight %}
 
 Take care folks! Have a Merry Christmas and a Happy New Year! Be excellent to each other.

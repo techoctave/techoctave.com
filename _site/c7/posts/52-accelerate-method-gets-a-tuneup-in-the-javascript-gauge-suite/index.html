@@ -27,7 +27,7 @@
 	
     <div class="feat">
       <h5 class="page-date">
-        <time datetime="2011-05-26T11:21:11Z" itemprop="datePublished">
+        <time datetime="2011-05-26T07:21:11-04:00" itemprop="datePublished">
           26 May 2011
         </time>
       </h5>
@@ -58,21 +58,20 @@
 
 <p>Originally, I only envisioned this method to be used for demo purposes. The scope was to have the gauge needle move from rest to the last value of the speedometer gauge:</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="sr">//</span><span class="n">var</span> <span class="n">speedGauge</span> <span class="o">=</span> <span class="kp">new</span> <span class="no">Speedometer</span><span class="p">(</span><span class="s2">&quot;speedometer&quot;</span><span class="p">);</span>
-    <span class="sr">//s</span><span class="n">peedGauge</span><span class="o">.</span><span class="n">Accelerate</span><span class="p">();</span>
-    <span class="no">Speedometer</span><span class="o">.</span><span class="n">prototype</span><span class="o">.</span><span class="n">Accelerate</span> <span class="o">=</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="n">jQuery</span><span class="p">(</span><span class="n">this</span><span class="p">)</span><span class="o">.</span><span class="n">everyTime</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">if</span><span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">300</span><span class="p">)</span> <span class="p">{</span>
-                <span class="n">var</span> <span class="n">v</span> <span class="o">=</span> <span class="n">i</span><span class="o">*</span><span class="mi">80</span><span class="p">;</span>
-                <span class="n">this</span><span class="o">.</span><span class="n">SetMPH</span><span class="p">(</span><span class="n">easeInCirc</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="mi">2000</span><span class="p">));</span>
-            <span class="p">}</span>
-        <span class="p">},</span> <span class="mi">0</span><span class="p">);</span>
-        
-        <span class="n">easeInCirc</span> <span class="o">=</span> <span class="n">function</span> <span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="o">-</span><span class="n">c</span> <span class="o">*</span> <span class="p">(</span><span class="no">Math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">t</span><span class="o">/=</span><span class="n">d</span><span class="p">)</span><span class="o">*</span><span class="n">t</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
-        <span class="p">};</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="sr">//</span><span class="n">var</span> <span class="n">speedGauge</span> <span class="o">=</span> <span class="kp">new</span> <span class="no">Speedometer</span><span class="p">(</span><span class="s2">&quot;speedometer&quot;</span><span class="p">);</span>
+<span class="sr">//s</span><span class="n">peedGauge</span><span class="o">.</span><span class="n">Accelerate</span><span class="p">();</span>
+<span class="no">Speedometer</span><span class="o">.</span><span class="n">prototype</span><span class="o">.</span><span class="n">Accelerate</span> <span class="o">=</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">jQuery</span><span class="p">(</span><span class="n">this</span><span class="p">)</span><span class="o">.</span><span class="n">everyTime</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">300</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">var</span> <span class="n">v</span> <span class="o">=</span> <span class="n">i</span><span class="o">*</span><span class="mi">80</span><span class="p">;</span>
+            <span class="n">this</span><span class="o">.</span><span class="n">SetMPH</span><span class="p">(</span><span class="n">easeInCirc</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="mi">2000</span><span class="p">));</span>
+        <span class="p">}</span>
+    <span class="p">},</span> <span class="mi">0</span><span class="p">);</span>
+    
+    <span class="n">easeInCirc</span> <span class="o">=</span> <span class="n">function</span> <span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="o">-</span><span class="n">c</span> <span class="o">*</span> <span class="p">(</span><span class="no">Math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">t</span><span class="o">/=</span><span class="n">d</span><span class="p">)</span><span class="o">*</span><span class="n">t</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
     <span class="p">};</span>
-</code></pre></div>
+<span class="p">};</span></code></pre></div>
 
 
 <p>The magic was to have these values increase in a smooth manner just as you would in your vehicle. You'll recognize the <em>easeInCirc</em> function from my previous post on <a href="http://techoctave.com/c7/posts/51-javascript-function-to-ease-a-needle-around-a-circle">how to ease a needle around a circle in JavaScript</a>.</p>
@@ -89,44 +88,43 @@
 
 <p>For now, I'm happy with the results of the refactored version. First, it's closer to customer expectation. Second, it's flexible as you can use it for both MPH and KPH. Finally, performance has increased immensely:</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="sr">//</span><span class="n">var</span> <span class="n">speedGauge</span> <span class="o">=</span> <span class="kp">new</span> <span class="no">Speedometer</span><span class="p">(</span><span class="s2">&quot;speedometer&quot;</span><span class="p">);</span>
-    <span class="sr">//s</span><span class="n">peedGauge</span><span class="o">.</span><span class="n">Accelerate</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span> <span class="s2">&quot;mph&quot;</span><span class="p">);</span>
-    <span class="no">Speedometer</span><span class="o">.</span><span class="n">prototype</span><span class="o">.</span><span class="n">Accelerate</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">speed</span><span class="p">,</span> <span class="n">unit</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">unit</span> <span class="o">===</span> <span class="s2">&quot;mph&quot;</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">this</span><span class="o">.</span><span class="n">mph</span> <span class="o">=</span> <span class="n">speed</span><span class="p">;</span>
-        <span class="p">}</span>
-        
-        <span class="k">if</span> <span class="p">(</span><span class="n">unit</span> <span class="o">===</span> <span class="s2">&quot;kph&quot;</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">this</span><span class="o">.</span><span class="n">kph</span> <span class="o">=</span> <span class="n">speed</span><span class="p">;</span>
-        <span class="p">}</span>
-        
-        <span class="n">var</span> <span class="n">label</span> <span class="o">=</span> <span class="no">Math</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">10</span><span class="p">;</span>
-        <span class="n">label</span> <span class="o">=</span> <span class="n">label</span><span class="o">.</span><span class="n">toString</span><span class="p">();</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="sr">//</span><span class="n">var</span> <span class="n">speedGauge</span> <span class="o">=</span> <span class="kp">new</span> <span class="no">Speedometer</span><span class="p">(</span><span class="s2">&quot;speedometer&quot;</span><span class="p">);</span>
+<span class="sr">//s</span><span class="n">peedGauge</span><span class="o">.</span><span class="n">Accelerate</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span> <span class="s2">&quot;mph&quot;</span><span class="p">);</span>
+<span class="no">Speedometer</span><span class="o">.</span><span class="n">prototype</span><span class="o">.</span><span class="n">Accelerate</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">speed</span><span class="p">,</span> <span class="n">unit</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">unit</span> <span class="o">===</span> <span class="s2">&quot;mph&quot;</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">this</span><span class="o">.</span><span class="n">mph</span> <span class="o">=</span> <span class="n">speed</span><span class="p">;</span>
+    <span class="p">}</span>
     
-        <span class="n">jQuery</span><span class="p">(</span><span class="n">this</span><span class="p">)</span><span class="o">.</span><span class="n">everyTime</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">var</span> <span class="n">c</span> <span class="o">=</span> <span class="n">t</span> <span class="o">*</span> <span class="mi">80</span><span class="p">;</span>
-            
-            <span class="sr">//</span><span class="no">Stop</span> <span class="n">at</span> <span class="n">the</span> <span class="no">MPH</span><span class="o">/</span><span class="no">KPH</span> <span class="n">specified</span>
-            <span class="k">if</span><span class="p">(</span><span class="n">easeInCirc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">speed</span><span class="p">)</span> <span class="p">{</span>
-                <span class="k">if</span> <span class="p">(</span><span class="n">unit</span> <span class="o">===</span> <span class="s2">&quot;mph&quot;</span><span class="p">)</span> <span class="p">{</span>
-                    <span class="n">this</span><span class="o">.</span><span class="n">SetMPH</span><span class="p">(</span><span class="n">easeInCirc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="mi">2000</span><span class="p">));</span>
-                <span class="p">}</span>
-                
-                <span class="k">if</span> <span class="p">(</span><span class="n">unit</span> <span class="o">===</span> <span class="s2">&quot;kph&quot;</span><span class="p">)</span> <span class="p">{</span>
-                    <span class="n">this</span><span class="o">.</span><span class="n">SetKPH</span><span class="p">(</span><span class="n">easeInCirc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="mi">2000</span><span class="p">));</span>
-                <span class="p">}</span>
-            <span class="p">}</span> 
-            <span class="k">else</span> <span class="p">{</span>
-                <span class="n">jQuery</span><span class="p">(</span><span class="n">this</span><span class="p">)</span><span class="o">.</span><span class="n">stopTime</span><span class="p">(</span><span class="n">label</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">unit</span> <span class="o">===</span> <span class="s2">&quot;kph&quot;</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">this</span><span class="o">.</span><span class="n">kph</span> <span class="o">=</span> <span class="n">speed</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="n">var</span> <span class="n">label</span> <span class="o">=</span> <span class="no">Math</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">10</span><span class="p">;</span>
+  <span class="n">label</span> <span class="o">=</span> <span class="n">label</span><span class="o">.</span><span class="n">toString</span><span class="p">();</span>
+
+    <span class="n">jQuery</span><span class="p">(</span><span class="n">this</span><span class="p">)</span><span class="o">.</span><span class="n">everyTime</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">var</span> <span class="n">c</span> <span class="o">=</span> <span class="n">t</span> <span class="o">*</span> <span class="mi">80</span><span class="p">;</span>
+        
+        <span class="sr">//</span><span class="no">Stop</span> <span class="n">at</span> <span class="n">the</span> <span class="no">MPH</span><span class="o">/</span><span class="no">KPH</span> <span class="n">specified</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">easeInCirc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">speed</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">unit</span> <span class="o">===</span> <span class="s2">&quot;mph&quot;</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">this</span><span class="o">.</span><span class="n">SetMPH</span><span class="p">(</span><span class="n">easeInCirc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="mi">2000</span><span class="p">));</span>
             <span class="p">}</span>
+            
+            <span class="k">if</span> <span class="p">(</span><span class="n">unit</span> <span class="o">===</span> <span class="s2">&quot;kph&quot;</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">this</span><span class="o">.</span><span class="n">SetKPH</span><span class="p">(</span><span class="n">easeInCirc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="mi">2000</span><span class="p">));</span>
+            <span class="p">}</span>
+        <span class="p">}</span> 
+    <span class="k">else</span> <span class="p">{</span>
+            <span class="n">jQuery</span><span class="p">(</span><span class="n">this</span><span class="p">)</span><span class="o">.</span><span class="n">stopTime</span><span class="p">(</span><span class="n">label</span><span class="p">);</span>
+        <span class="p">}</span>
+
+    <span class="p">},</span> <span class="mi">0</span><span class="p">);</span>
     
-        <span class="p">},</span> <span class="mi">0</span><span class="p">);</span>
-        
-        <span class="n">easeInCirc</span> <span class="o">=</span> <span class="n">function</span> <span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="o">-</span><span class="n">c</span> <span class="o">*</span> <span class="p">(</span><span class="no">Math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">t</span><span class="o">/=</span><span class="n">d</span><span class="p">)</span><span class="o">*</span><span class="n">t</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
-        <span class="p">};</span>
+    <span class="n">easeInCirc</span> <span class="o">=</span> <span class="n">function</span> <span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="o">-</span><span class="n">c</span> <span class="o">*</span> <span class="p">(</span><span class="no">Math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">t</span><span class="o">/=</span><span class="n">d</span><span class="p">)</span><span class="o">*</span><span class="n">t</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
     <span class="p">};</span>
-</code></pre></div>
+<span class="p">};</span></code></pre></div>
 
 
 <p>Now you have the ability to set either the MPH or the KPH and still get the easing effect that made you fall in love with the accelerate method.</p>

@@ -29,36 +29,36 @@ The image must have an *overlay* class attribute. Then we'll write code to reuse
 Here is the jQuery and JavaScript code to add the image overlay:
 
 {% highlight js %}
-    $(window).load(function() {
-     $("img.overlay").each(function(){
-      //Wrap the image with an overlay
-      $(this).wrap("<div class='description_overlay'></div>");
-    		
-      //Cache description overlay object
-      var o = $(this).parent(".description_overlay");
-    		
-      //Append the description to the overlay
-      o.append("<div class='description'><div class='description_content'></div></div>");
-    		
-      //Align the description with the image
-      o.find(".description").css("opacity", 0);
-      o.find(".description").css("width", $(this).width());
-      o.find(".description").css("display", "block");
-      o.find(".description").css("text-align", "center");
-    
-      //Set the description from the img alt attribute
-      o.find(".description_content").html($(this).attr("alt"));
-    		
-      //Apply the hover effects
-      o.mouseover(function(){
-        o.find(".description").stop().fadeTo(500, 0.7);
-      });
-    
-      o.mouseout(function(){
-        o.find(".description").stop().fadeTo(500, 0);
-      });
-     });
+$(window).load(function() {
+  $("img.overlay").each(function(){
+    //Wrap the image with an overlay
+    $(this).wrap("<div class='description_overlay'></div>");
+	
+    //Cache description overlay object
+    var o = $(this).parent(".description_overlay");
+	
+    //Append the description to the overlay
+    o.append("<div class='description'><div class='description_content'></div></div>");
+	
+    //Align the description with the image
+    o.find(".description").css("opacity", 0);
+    o.find(".description").css("width", $(this).width());
+    o.find(".description").css("display", "block");
+    o.find(".description").css("text-align", "center");
+
+    //Set the description from the img alt attribute
+    o.find(".description_content").html($(this).attr("alt"));
+	
+    //Apply the hover effects
+    o.mouseover(function(){
+      o.find(".description").stop().fadeTo(500, 0.7);
     });
+
+    o.mouseout(function(){
+      o.find(".description").stop().fadeTo(500, 0);
+    });
+  });
+});
 {% endhighlight %}
 
 For each image with the class overlay, we start to apply our techniques. First, we wrap that image with description_overlay div and append placeholders for the description content.
@@ -66,31 +66,31 @@ For each image with the class overlay, we start to apply our techniques. First, 
 Some CSS needs to be messaged a little:
 
 {% highlight css %}
-    .description_overlay {  
-        position: relative;
-    	margin-left: 21em;
-    	margin-top: 5em;
-    }  
-    
-    .description {  
-        position: absolute; 
-        bottom: 5px;
-        left: 0px;  
-        display: none; 
-    
-        background-color: black;  
-        font-family: "arial";  
-        font-size: 1em;  
-        color: white; 
-    }  
-    
-    .description_content {  
-        padding: 20px;  
-    }
-    
-    .description, img {
-    	cursor: pointer;
-    }
+.description_overlay {  
+    position: relative;
+	margin-left: 21em;
+	margin-top: 5em;
+}  
+
+.description {  
+    position: absolute; 
+    bottom: 5px;
+    left: 0px;  
+    display: none; 
+
+    background-color: black;  
+    font-family: "arial";  
+    font-size: 1em;  
+    color: white; 
+}  
+
+.description_content {  
+    padding: 20px;  
+}
+
+.description, img {
+	cursor: pointer;
+}
 {% endhighlight %}
 
 See, not as much CSS as you would think...

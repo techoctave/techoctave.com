@@ -27,7 +27,7 @@
 	
     <div class="feat">
       <h5 class="page-date">
-        <time datetime="2010-11-11T11:03:09Z" itemprop="datePublished">
+        <time datetime="2010-11-11T06:03:09-05:00" itemprop="datePublished">
           11 November 2010
         </time>
       </h5>
@@ -50,19 +50,18 @@
 
 <p>Previously in Rails 2.3.8 and below you could handle routing errors elegantly using rescue_from ActionController::RoutingError:</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="k">class</span> <span class="nc">ApplicationController</span> <span class="o">&lt;</span> <span class="no">ActionController</span><span class="o">::</span><span class="no">Base</span>
-      <span class="n">rescue_from</span> <span class="no">ActionController</span><span class="o">::</span><span class="no">RoutingError</span><span class="p">,</span> <span class="ss">:with</span> <span class="o">=&gt;</span> <span class="ss">:render_404</span>
-    
-      <span class="kp">private</span>
-      <span class="k">def</span> <span class="nf">render_404</span><span class="p">(</span><span class="n">exception</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">exception</span>
-            <span class="n">logger</span><span class="o">.</span><span class="n">info</span> <span class="s2">&quot;Rendering 404: </span><span class="si">#{</span><span class="n">exception</span><span class="o">.</span><span class="n">message</span><span class="si">}</span><span class="s2">&quot;</span>
-        <span class="k">end</span>
-          
-        <span class="n">render</span> <span class="ss">:file</span> <span class="o">=&gt;</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="no">Rails</span><span class="o">.</span><span class="n">root</span><span class="si">}</span><span class="s2">/public/404.html&quot;</span><span class="p">,</span> <span class="ss">:status</span> <span class="o">=&gt;</span> <span class="mi">404</span><span class="p">,</span> <span class="ss">:layout</span> <span class="o">=&gt;</span> <span class="kp">false</span>
-      <span class="k">end</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">ApplicationController</span> <span class="o">&lt;</span> <span class="no">ActionController</span><span class="o">::</span><span class="no">Base</span>
+  <span class="n">rescue_from</span> <span class="no">ActionController</span><span class="o">::</span><span class="no">RoutingError</span><span class="p">,</span> <span class="ss">:with</span> <span class="o">=&gt;</span> <span class="ss">:render_404</span>
+
+  <span class="kp">private</span>
+  <span class="k">def</span> <span class="nf">render_404</span><span class="p">(</span><span class="n">exception</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">exception</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span> <span class="s2">&quot;Rendering 404: </span><span class="si">#{</span><span class="n">exception</span><span class="o">.</span><span class="n">message</span><span class="si">}</span><span class="s2">&quot;</span>
     <span class="k">end</span>
-</code></pre></div>
+      
+    <span class="n">render</span> <span class="ss">:file</span> <span class="o">=&gt;</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="no">Rails</span><span class="o">.</span><span class="n">root</span><span class="si">}</span><span class="s2">/public/404.html&quot;</span><span class="p">,</span> <span class="ss">:status</span> <span class="o">=&gt;</span> <span class="mi">404</span><span class="p">,</span> <span class="ss">:layout</span> <span class="o">=&gt;</span> <span class="kp">false</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></div>
 
 
 <p>However, things are a little different in Rails 3. The reality is, as of Rails 3.0.1, ApplicationController can't catch ActionController::RoutingError and thus, we cannot take advantage of rescue_from like we used to.</p>
@@ -81,11 +80,10 @@
 
 <p>This code should go to the end of your routes.rb file. That way it will be given the least priority and therefore, act as a wildcard catchall for all those rogue url resources.</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="no">Yourapp</span><span class="o">::</span><span class="no">Application</span><span class="o">.</span><span class="n">routes</span><span class="o">.</span><span class="n">draw</span> <span class="k">do</span>
-      <span class="c1">#Last route in routes.rb</span>
-      <span class="n">match</span> <span class="s1">&#39;*a&#39;</span><span class="p">,</span> <span class="ss">:to</span> <span class="o">=&gt;</span> <span class="s1">&#39;errors#routing&#39;</span>
-    <span class="k">end</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Yourapp</span><span class="o">::</span><span class="no">Application</span><span class="o">.</span><span class="n">routes</span><span class="o">.</span><span class="n">draw</span> <span class="k">do</span>
+  <span class="c1">#Last route in routes.rb</span>
+  <span class="n">match</span> <span class="s1">&#39;*a&#39;</span><span class="p">,</span> <span class="ss">:to</span> <span class="o">=&gt;</span> <span class="s1">&#39;errors#routing&#39;</span>
+<span class="k">end</span></code></pre></div>
 
 
 <p>NOTE: The "a" is actually a parameter in the Rails 3 Route Globbing technique. For example, if your url was <em>/this-url-does-not-exist</em>, then params[:a] equals "<em>/this-url-does-not-exist</em>". So be as creative as you'd like handling that rogue route.</p>
@@ -94,22 +92,20 @@
 
 <p>Here, I handle my routing errors. I leverage previous 404 handling code from my original ApplicationController mentioned above. So, my errors_controller.rb looks like this:</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="k">class</span> <span class="nc">ErrorsController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>
-      <span class="k">def</span> <span class="nf">routing</span>
-        <span class="n">render_404</span>
-      <span class="k">end</span>
-    <span class="k">end</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">ErrorsController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>
+  <span class="k">def</span> <span class="nf">routing</span>
+    <span class="n">render_404</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></div>
 
 
 <p>However, feel free to modify to fit your individual needs. Everyone's situation will be slightly different. For example, if you're not going to reuse your 404 error handling logic, then here's the full ErrorsController without inheritance:</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="k">class</span> <span class="nc">ErrorsController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>
-      <span class="k">def</span> <span class="nf">routing</span>
-       <span class="n">render</span> <span class="ss">:file</span> <span class="o">=&gt;</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="no">Rails</span><span class="o">.</span><span class="n">root</span><span class="si">}</span><span class="s2">/public/404.html&quot;</span><span class="p">,</span> <span class="ss">:status</span> <span class="o">=&gt;</span> <span class="mi">404</span><span class="p">,</span> <span class="ss">:layout</span> <span class="o">=&gt;</span> <span class="kp">false</span>
-      <span class="k">end</span>
-    <span class="k">end</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">ErrorsController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>
+  <span class="k">def</span> <span class="nf">routing</span>
+   <span class="n">render</span> <span class="ss">:file</span> <span class="o">=&gt;</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="no">Rails</span><span class="o">.</span><span class="n">root</span><span class="si">}</span><span class="s2">/public/404.html&quot;</span><span class="p">,</span> <span class="ss">:status</span> <span class="o">=&gt;</span> <span class="mi">404</span><span class="p">,</span> <span class="ss">:layout</span> <span class="o">=&gt;</span> <span class="kp">false</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></div>
 
 
 <p>I'm big on keeping things simple. I believe solutions should be simple without being simplistic. Like I said earlier, I look forward to an Official solution from the Rails Core Team. Until then, this gets the job done!</p>

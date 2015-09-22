@@ -36,9 +36,9 @@ Left: Scatter Chart, Right: Column Chart
 A good prototype allows you to have a conversation about complexity. Hypotheticals are removed and you can quickly get down to brass tacks. I follow a series of methodical questions when I prototype:
 
 {% highlight bash %}
- 1. What environment will this product be used? 
- 2. Who is going to use this product?
- 3. What is the motivation to use this product?
+1. What environment will this product be used? 
+2. Who is going to use this product?
+3. What is the motivation to use this product?
 {% endhighlight %}
 
 ####What environment will this product be used?
@@ -80,10 +80,10 @@ For example, which do you believe is cleaner code?
 Interface One (Uses Intelligent Defaults):
 
 {% highlight js %}
-    var data = [["2010", 150, 99, 350, 1200],
-                ["2011", 25, 120, 2400, 540]];
-    
-    var sales = new BarChart("sales", {"data": data});
+var data = [["2010", 150, 99, 350, 1200],
+            ["2011", 25, 120, 2400, 540]];
+
+var sales = new BarChart("sales", {"data": data});
 {% endhighlight %}
 
 An instance of the BarChart object *sales* is instantiated and beautifully drawn on your screen.
@@ -91,24 +91,24 @@ An instance of the BarChart object *sales* is instantiated and beautifully drawn
 Interface Two:
 
 {% highlight js %}
-    var data = [["2010", 150, 99, 350, 1200],
-                ["2011", 25, 120, 2400, 540]];
-    
-    var sales = new BarChart();
-    
-    sales.SetProperty("id", "sales");
-    sales.SetProperty("data", data);
-    
-    sales.SetProperty("colors", ["#FF2400", "#E25822", "#F2F2F2", "#B22222"]);
-    
-    sales.SetProperty("fill", true);
-    sales.SetProperty("width", 200);
-    sales.SetProperty("height", 200);
-    sales.SetProperty("scaling", 0.5);
+var data = [["2010", 150, 99, 350, 1200],
+            ["2011", 25, 120, 2400, 540]];
 
-    ...
-    
-    sales.drawGraph();
+var sales = new BarChart();
+
+sales.SetProperty("id", "sales");
+sales.SetProperty("data", data);
+
+sales.SetProperty("colors", ["#FF2400", "#E25822", "#F2F2F2", "#B22222"]);
+
+sales.SetProperty("fill", true);
+sales.SetProperty("width", 200);
+sales.SetProperty("height", 200);
+sales.SetProperty("scaling", 0.5);
+
+...
+
+sales.drawGraph();
 {% endhighlight %}
 
 There were a few more properties to set before a "valid" BarChart could be rendered. But, let's cut to the chase. Your project is behind schedule and the boss is getting antsy for results. Which philosophy do you wish guided the development of your components?
@@ -122,24 +122,24 @@ In the example above, why use the new keyword at all?
 The first example could go from:
 
 {% highlight js %}
-    var sales = new BarChart("sales", {"data": data});
+var sales = new BarChart("sales", {"data": data});
 {% endhighlight %}
 
 To:
 
 {% highlight js %}
-    var sales = BarChart("sales", {"data": data});
+var sales = BarChart("sales", {"data": data});
 {% endhighlight %}
 
 With well executed constructor code:
 
 {% highlight js %}
-    function BarChart(id, options) {
-       if(window === this) {
-          return new BarChart(id, options);
-       }
-       ...
-    }
+function BarChart(id, options) {
+   if(window === this) {
+      return new BarChart(id, options);
+   }
+   ...
+}
 {% endhighlight %}
 
 What this means is the end user gets the benefits of a fully instantiated object without ever having to worry about forgetting the *new* keyword.

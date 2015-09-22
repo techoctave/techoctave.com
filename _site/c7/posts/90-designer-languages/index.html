@@ -27,8 +27,8 @@
 	
     <div class="feat">
       <h5 class="page-date">
-        <time datetime="2012-10-02T02:22:25Z" itemprop="datePublished">
-          02 October 2012
+        <time datetime="2012-10-01T22:22:25-04:00" itemprop="datePublished">
+          01 October 2012
         </time>
       </h5>
     </div>
@@ -74,28 +74,27 @@
 
 <p>In a short two years, CoffeeScript managed to influence legions of developers. Simplicity and clean output was the key:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="kr">class</span> <span class="nx">Animal</span>
-      <span class="nx">constructor</span><span class="o">:</span> <span class="p">(</span><span class="err">@</span><span class="nx">name</span><span class="p">)</span> <span class="o">-&gt;</span>
-    
-      <span class="nx">move</span><span class="o">:</span> <span class="p">(</span><span class="nx">meters</span><span class="p">)</span> <span class="o">-&gt;</span>
-        <span class="nx">alert</span> <span class="err">@</span><span class="nx">name</span> <span class="o">+</span> <span class="s2">&quot; moved #{meters}m.&quot;</span>
-    
-    <span class="kr">class</span> <span class="nx">Snake</span> <span class="kr">extends</span> <span class="nx">Animal</span>
-      <span class="nx">move</span><span class="o">:</span> <span class="o">-&gt;</span>
-        <span class="nx">alert</span> <span class="s2">&quot;Slithering...&quot;</span>
-        <span class="kr">super</span> <span class="mi">5</span>
-    
-    <span class="kr">class</span> <span class="nx">Horse</span> <span class="kr">extends</span> <span class="nx">Animal</span>
-      <span class="nx">move</span><span class="o">:</span> <span class="o">-&gt;</span>
-        <span class="nx">alert</span> <span class="s2">&quot;Galloping...&quot;</span>
-        <span class="kr">super</span> <span class="mi">45</span>
-    
-    <span class="nx">sam</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Snake</span> <span class="s2">&quot;Sammy the Python&quot;</span>
-    <span class="nx">tom</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Horse</span> <span class="s2">&quot;Tommy the Palomino&quot;</span>
-    
-    <span class="nx">sam</span><span class="p">.</span><span class="nx">move</span><span class="p">()</span>
-    <span class="nx">tom</span><span class="p">.</span><span class="nx">move</span><span class="p">()</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kr">class</span> <span class="nx">Animal</span>
+  <span class="nx">constructor</span><span class="o">:</span> <span class="p">(</span><span class="err">@</span><span class="nx">name</span><span class="p">)</span> <span class="o">-&gt;</span>
+
+  <span class="nx">move</span><span class="o">:</span> <span class="p">(</span><span class="nx">meters</span><span class="p">)</span> <span class="o">-&gt;</span>
+    <span class="nx">alert</span> <span class="err">@</span><span class="nx">name</span> <span class="o">+</span> <span class="s2">&quot; moved #{meters}m.&quot;</span>
+
+<span class="kr">class</span> <span class="nx">Snake</span> <span class="kr">extends</span> <span class="nx">Animal</span>
+  <span class="nx">move</span><span class="o">:</span> <span class="o">-&gt;</span>
+    <span class="nx">alert</span> <span class="s2">&quot;Slithering...&quot;</span>
+    <span class="kr">super</span> <span class="mi">5</span>
+
+<span class="kr">class</span> <span class="nx">Horse</span> <span class="kr">extends</span> <span class="nx">Animal</span>
+  <span class="nx">move</span><span class="o">:</span> <span class="o">-&gt;</span>
+    <span class="nx">alert</span> <span class="s2">&quot;Galloping...&quot;</span>
+    <span class="kr">super</span> <span class="mi">45</span>
+
+<span class="nx">sam</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Snake</span> <span class="s2">&quot;Sammy the Python&quot;</span>
+<span class="nx">tom</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Horse</span> <span class="s2">&quot;Tommy the Palomino&quot;</span>
+
+<span class="nx">sam</span><span class="p">.</span><span class="nx">move</span><span class="p">()</span>
+<span class="nx">tom</span><span class="p">.</span><span class="nx">move</span><span class="p">()</span></code></pre></div>
 
 
 <p>Eventually, CoffeeScript made its way to Brendan Eich - The Creator of JavaScript - and it's influence on the future of the language began.</p>
@@ -130,35 +129,34 @@
 
 <p>Based on TypeScript's syntax, it's not too hard to see why:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="kr">class</span> <span class="nx">Animal</span> <span class="p">{</span>
-        <span class="nx">constructor</span><span class="p">(</span><span class="kr">public</span> <span class="nx">name</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
-        <span class="nx">move</span><span class="p">(</span><span class="nx">meters</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">alert</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s2">&quot; moved &quot;</span> <span class="o">+</span> <span class="nx">meters</span> <span class="o">+</span> <span class="s2">&quot;m.&quot;</span><span class="p">);</span>
-        <span class="p">}</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kr">class</span> <span class="nx">Animal</span> <span class="p">{</span>
+    <span class="nx">constructor</span><span class="p">(</span><span class="kr">public</span> <span class="nx">name</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+    <span class="nx">move</span><span class="p">(</span><span class="nx">meters</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s2">&quot; moved &quot;</span> <span class="o">+</span> <span class="nx">meters</span> <span class="o">+</span> <span class="s2">&quot;m.&quot;</span><span class="p">);</span>
     <span class="p">}</span>
-    
-    <span class="kr">class</span> <span class="nx">Snake</span> <span class="kr">extends</span> <span class="nx">Animal</span> <span class="p">{</span>
-        <span class="nx">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span> <span class="kr">super</span><span class="p">(</span><span class="nx">name</span><span class="p">);</span> <span class="p">}</span>
-        <span class="nx">move</span><span class="p">()</span> <span class="p">{</span>
-            <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Slithering...&quot;</span><span class="p">);</span>
-            <span class="kr">super</span><span class="p">.</span><span class="nx">move</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
-        <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kr">class</span> <span class="nx">Snake</span> <span class="kr">extends</span> <span class="nx">Animal</span> <span class="p">{</span>
+    <span class="nx">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span> <span class="kr">super</span><span class="p">(</span><span class="nx">name</span><span class="p">);</span> <span class="p">}</span>
+    <span class="nx">move</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Slithering...&quot;</span><span class="p">);</span>
+        <span class="kr">super</span><span class="p">.</span><span class="nx">move</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
     <span class="p">}</span>
-    
-    <span class="kr">class</span> <span class="nx">Horse</span> <span class="kr">extends</span> <span class="nx">Animal</span> <span class="p">{</span>
-        <span class="nx">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span> <span class="kr">super</span><span class="p">(</span><span class="nx">name</span><span class="p">);</span> <span class="p">}</span>
-        <span class="nx">move</span><span class="p">()</span> <span class="p">{</span>
-            <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Galloping...&quot;</span><span class="p">);</span>
-            <span class="kr">super</span><span class="p">.</span><span class="nx">move</span><span class="p">(</span><span class="mi">45</span><span class="p">);</span>
-        <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kr">class</span> <span class="nx">Horse</span> <span class="kr">extends</span> <span class="nx">Animal</span> <span class="p">{</span>
+    <span class="nx">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span> <span class="kr">super</span><span class="p">(</span><span class="nx">name</span><span class="p">);</span> <span class="p">}</span>
+    <span class="nx">move</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Galloping...&quot;</span><span class="p">);</span>
+        <span class="kr">super</span><span class="p">.</span><span class="nx">move</span><span class="p">(</span><span class="mi">45</span><span class="p">);</span>
     <span class="p">}</span>
-    
-    <span class="kd">var</span> <span class="nx">sam</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Snake</span><span class="p">(</span><span class="s2">&quot;Sammy the Python&quot;</span><span class="p">)</span>
-    <span class="kd">var</span> <span class="nx">tom</span><span class="o">:</span> <span class="nx">Animal</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Horse</span><span class="p">(</span><span class="s2">&quot;Tommy the Palomino&quot;</span><span class="p">)</span>
-    
-    <span class="nx">sam</span><span class="p">.</span><span class="nx">move</span><span class="p">()</span>
-    <span class="nx">tom</span><span class="p">.</span><span class="nx">move</span><span class="p">(</span><span class="mi">34</span><span class="p">)</span>
-</code></pre></div>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">sam</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Snake</span><span class="p">(</span><span class="s2">&quot;Sammy the Python&quot;</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">tom</span><span class="o">:</span> <span class="nx">Animal</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Horse</span><span class="p">(</span><span class="s2">&quot;Tommy the Palomino&quot;</span><span class="p">)</span>
+
+<span class="nx">sam</span><span class="p">.</span><span class="nx">move</span><span class="p">()</span>
+<span class="nx">tom</span><span class="p">.</span><span class="nx">move</span><span class="p">(</span><span class="mi">34</span><span class="p">)</span></code></pre></div>
 
 
 <p>TypeScript, however, didn't seem to be an improvement on either concept. In fact, TypeScript's implementation seemed very Groovy-ish. It seemed history was again repeating itself.</p>

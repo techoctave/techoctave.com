@@ -27,8 +27,8 @@
 	
     <div class="feat">
       <h5 class="page-date">
-        <time datetime="2012-07-31T01:59:54Z" itemprop="datePublished">
-          31 July 2012
+        <time datetime="2012-07-30T21:59:54-04:00" itemprop="datePublished">
+          30 July 2012
         </time>
       </h5>
     </div>
@@ -48,8 +48,7 @@
 
 <p>Accessibility and SEO come into play particularly with image rich applications. Think Instagram for example. With these types of applications, it is important to specify the alt attribute on each and every image:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="o">&lt;</span><span class="nx">img</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;overlay&quot;</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;ferrari.jpg&quot;</span> <span class="nx">alt</span><span class="o">=</span><span class="s2">&quot;The Ferrari California is a grand touring sports car. The car revives the &#39;California&#39; name used for the late-1950s Ferrari 250 GT.&quot;</span><span class="o">/&gt;</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="o">&lt;</span><span class="nx">img</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;overlay&quot;</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;ferrari.jpg&quot;</span> <span class="nx">alt</span><span class="o">=</span><span class="s2">&quot;The Ferrari California is a grand touring sports car. The car revives the &#39;California&#39; name used for the late-1950s Ferrari 250 GT.&quot;</span><span class="o">/&gt;</span></code></pre></div>
 
 
 <p>This ensures the application is readable to a whole host of folks who otherwise wouldn't be privy to the information. Wouldn't it be cool if we could reuse that alt attribute to enhance our application? That's exactly what we are going to do in this lesson — JavaScript style.</p>
@@ -60,69 +59,67 @@
 
 <p>Here is the jQuery and JavaScript code to add the image overlay:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="nx">$</span><span class="p">(</span><span class="nb">window</span><span class="p">).</span><span class="nx">load</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-     <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;img.overlay&quot;</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
-      <span class="c1">//Wrap the image with an overlay</span>
-      <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">wrap</span><span class="p">(</span><span class="s2">&quot;&lt;div class=&#39;description_overlay&#39;&gt;&lt;/div&gt;&quot;</span><span class="p">);</span>
-            
-      <span class="c1">//Cache description overlay object</span>
-      <span class="kd">var</span> <span class="nx">o</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">parent</span><span class="p">(</span><span class="s2">&quot;.description_overlay&quot;</span><span class="p">);</span>
-            
-      <span class="c1">//Append the description to the overlay</span>
-      <span class="nx">o</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s2">&quot;&lt;div class=&#39;description&#39;&gt;&lt;div class=&#39;description_content&#39;&gt;&lt;/div&gt;&lt;/div&gt;&quot;</span><span class="p">);</span>
-            
-      <span class="c1">//Align the description with the image</span>
-      <span class="nx">o</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;.description&quot;</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s2">&quot;opacity&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-      <span class="nx">o</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;.description&quot;</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s2">&quot;width&quot;</span><span class="p">,</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">width</span><span class="p">());</span>
-      <span class="nx">o</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;.description&quot;</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s2">&quot;display&quot;</span><span class="p">,</span> <span class="s2">&quot;block&quot;</span><span class="p">);</span>
-      <span class="nx">o</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;.description&quot;</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s2">&quot;text-align&quot;</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">);</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="nb">window</span><span class="p">).</span><span class="nx">load</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;img.overlay&quot;</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="c1">//Wrap the image with an overlay</span>
+    <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">wrap</span><span class="p">(</span><span class="s2">&quot;&lt;div class=&#39;description_overlay&#39;&gt;&lt;/div&gt;&quot;</span><span class="p">);</span>
     
-      <span class="c1">//Set the description from the img alt attribute</span>
-      <span class="nx">o</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;.description_content&quot;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;alt&quot;</span><span class="p">));</span>
-            
-      <span class="c1">//Apply the hover effects</span>
-      <span class="nx">o</span><span class="p">.</span><span class="nx">mouseover</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
-        <span class="nx">o</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;.description&quot;</span><span class="p">).</span><span class="nx">stop</span><span class="p">().</span><span class="nx">fadeTo</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">);</span>
-      <span class="p">});</span>
+    <span class="c1">//Cache description overlay object</span>
+    <span class="kd">var</span> <span class="nx">o</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">parent</span><span class="p">(</span><span class="s2">&quot;.description_overlay&quot;</span><span class="p">);</span>
     
-      <span class="nx">o</span><span class="p">.</span><span class="nx">mouseout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
-        <span class="nx">o</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;.description&quot;</span><span class="p">).</span><span class="nx">stop</span><span class="p">().</span><span class="nx">fadeTo</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-      <span class="p">});</span>
-     <span class="p">});</span>
+    <span class="c1">//Append the description to the overlay</span>
+    <span class="nx">o</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s2">&quot;&lt;div class=&#39;description&#39;&gt;&lt;div class=&#39;description_content&#39;&gt;&lt;/div&gt;&lt;/div&gt;&quot;</span><span class="p">);</span>
+    
+    <span class="c1">//Align the description with the image</span>
+    <span class="nx">o</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;.description&quot;</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s2">&quot;opacity&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="nx">o</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;.description&quot;</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s2">&quot;width&quot;</span><span class="p">,</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">width</span><span class="p">());</span>
+    <span class="nx">o</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;.description&quot;</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s2">&quot;display&quot;</span><span class="p">,</span> <span class="s2">&quot;block&quot;</span><span class="p">);</span>
+    <span class="nx">o</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;.description&quot;</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s2">&quot;text-align&quot;</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">);</span>
+
+    <span class="c1">//Set the description from the img alt attribute</span>
+    <span class="nx">o</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;.description_content&quot;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;alt&quot;</span><span class="p">));</span>
+    
+    <span class="c1">//Apply the hover effects</span>
+    <span class="nx">o</span><span class="p">.</span><span class="nx">mouseover</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+      <span class="nx">o</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;.description&quot;</span><span class="p">).</span><span class="nx">stop</span><span class="p">().</span><span class="nx">fadeTo</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">);</span>
     <span class="p">});</span>
-</code></pre></div>
+
+    <span class="nx">o</span><span class="p">.</span><span class="nx">mouseout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+      <span class="nx">o</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;.description&quot;</span><span class="p">).</span><span class="nx">stop</span><span class="p">().</span><span class="nx">fadeTo</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="p">});</span>
+  <span class="p">});</span>
+<span class="p">});</span></code></pre></div>
 
 
 <p>For each image with the class overlay, we start to apply our techniques. First, we wrap that image with description_overlay div and append placeholders for the description content.</p>
 
 <p>Some CSS needs to be messaged a little:</p>
 
-<div class="highlight"><pre><code class="css">    <span class="nc">.description_overlay</span> <span class="p">{</span>  
-        <span class="k">position</span><span class="o">:</span> <span class="k">relative</span><span class="p">;</span>
-        <span class="k">margin-left</span><span class="o">:</span> <span class="m">21em</span><span class="p">;</span>
-        <span class="k">margin-top</span><span class="o">:</span> <span class="m">5em</span><span class="p">;</span>
-    <span class="p">}</span>  
-    
-    <span class="nc">.description</span> <span class="p">{</span>  
-        <span class="k">position</span><span class="o">:</span> <span class="k">absolute</span><span class="p">;</span> 
-        <span class="k">bottom</span><span class="o">:</span> <span class="m">5px</span><span class="p">;</span>
-        <span class="k">left</span><span class="o">:</span> <span class="m">0px</span><span class="p">;</span>  
-        <span class="k">display</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span> 
-    
-        <span class="k">background-color</span><span class="o">:</span> <span class="nb">black</span><span class="p">;</span>  
-        <span class="k">font-family</span><span class="o">:</span> <span class="s2">&quot;arial&quot;</span><span class="p">;</span>  
-        <span class="k">font-size</span><span class="o">:</span> <span class="m">1em</span><span class="p">;</span>  
-        <span class="k">color</span><span class="o">:</span> <span class="nb">white</span><span class="p">;</span> 
-    <span class="p">}</span>  
-    
-    <span class="nc">.description_content</span> <span class="p">{</span>  
-        <span class="k">padding</span><span class="o">:</span> <span class="m">20px</span><span class="p">;</span>  
-    <span class="p">}</span>
-    
-    <span class="nc">.description</span><span class="o">,</span> <span class="nt">img</span> <span class="p">{</span>
-        <span class="k">cursor</span><span class="o">:</span> <span class="k">pointer</span><span class="p">;</span>
-    <span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.description_overlay</span> <span class="p">{</span>  
+    <span class="k">position</span><span class="o">:</span> <span class="k">relative</span><span class="p">;</span>
+    <span class="k">margin-left</span><span class="o">:</span> <span class="m">21em</span><span class="p">;</span>
+    <span class="k">margin-top</span><span class="o">:</span> <span class="m">5em</span><span class="p">;</span>
+<span class="p">}</span>  
+
+<span class="nc">.description</span> <span class="p">{</span>  
+    <span class="k">position</span><span class="o">:</span> <span class="k">absolute</span><span class="p">;</span> 
+    <span class="k">bottom</span><span class="o">:</span> <span class="m">5px</span><span class="p">;</span>
+    <span class="k">left</span><span class="o">:</span> <span class="m">0px</span><span class="p">;</span>  
+    <span class="k">display</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span> 
+
+    <span class="k">background-color</span><span class="o">:</span> <span class="nb">black</span><span class="p">;</span>  
+    <span class="k">font-family</span><span class="o">:</span> <span class="s2">&quot;arial&quot;</span><span class="p">;</span>  
+    <span class="k">font-size</span><span class="o">:</span> <span class="m">1em</span><span class="p">;</span>  
+    <span class="k">color</span><span class="o">:</span> <span class="nb">white</span><span class="p">;</span> 
+<span class="p">}</span>  
+
+<span class="nc">.description_content</span> <span class="p">{</span>  
+    <span class="k">padding</span><span class="o">:</span> <span class="m">20px</span><span class="p">;</span>  
+<span class="p">}</span>
+
+<span class="nc">.description</span><span class="o">,</span> <span class="nt">img</span> <span class="p">{</span>
+    <span class="k">cursor</span><span class="o">:</span> <span class="k">pointer</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
 
 
 <p>See, not as much CSS as you would think...</p>

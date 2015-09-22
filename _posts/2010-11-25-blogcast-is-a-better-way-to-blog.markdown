@@ -34,9 +34,9 @@ And that's why I'm releasing Blogcast. I'm releasing Blogcast because I want sha
 Blogcast's sweet spot is what I call *Fluid Stream of Thought*. I've practiced Fluid Stream of Thought for the past 10 years. It's based on two simple principles:
 
 {% highlight ruby %}
- 1. Write your first draft like it is your last.
- 
- 2. Speak to your audience, not at your audience.
+1. Write your first draft like it is your last.
+
+2. Speak to your audience, not at your audience.
 {% endhighlight %}
 
 Blogcast stimulates *Fluid Stream of Thought* through live preview of your writing and a tight reward-feedback loop. What this boils down to is a writing experience that you will enjoy! And of course, if you enjoy the writing experience, you will write more.
@@ -46,17 +46,17 @@ Furthermore, if you write in a space that is not cluttered you will certainly ga
 Blogcast is built on six principles:
 
 {% highlight ruby %}
- 1. Live preview makes for better writing.
- 
- 2. A post's title makes a fine [SEO URL][5].
- 
- 3. Wysiwym Markdown makes writing semantic & accessible.
- 
- 4. Comment management can be painless.
- 
- 5. A guest should be able to preview his comment.
- 
- 6. No [crappy-admin-screen][6] syndrome - ever.
+1. Live preview makes for better writing.
+
+2. A post's title makes a fine [SEO URL][5].
+
+3. Wysiwym Markdown makes writing semantic & accessible.
+
+4. Comment management can be painless.
+
+5. A guest should be able to preview his comment.
+
+6. No [crappy-admin-screen][6] syndrome - ever.
 {% endhighlight %}
 
 ###Blogcast is Open Source & Built on Rails
@@ -72,15 +72,15 @@ I believe [solutions should be simple, not simplistic][8]. So, top-down, I wrote
 First, go to Blogcast's root directory and install the dependences:
 
 {% highlight bash %}
-    #install dependencies
-    bundle install
+#install dependencies
+bundle install
 {% endhighlight %}
 
 Now just start your Rails development server:
   
 {% highlight bash %}  
-    #start rails server
-    rails s
+#start rails server
+rails s
 {% endhighlight %}
 
 Fire up your favorite browser and point it to *http://localhost:3000*. This is the public view of your new Blogcast blog. Have a look around and when you're ready, login to *http://localhost:3000/admin*; Username => *admin*, Password => *admin*.
@@ -96,11 +96,11 @@ Blogcast has a few configuration items you should know about: Users, Akismet, Go
 Click on the Users link in the upper right-hand corner of Blogcast. Then click on the Add User button:
 
 {% highlight bash %}
-    #Name
-    Used as Post author and Draft author
+#Name
+Used as Post author and Draft author
 
-    #Initials
-    Used as Comment author
+#Initials
+Used as Comment author
 {% endhighlight %}
 
 At that point, either remove the admin user or update its password to something of your own choosing.
@@ -108,10 +108,10 @@ At that point, either remove the admin user or update its password to something 
 ####config/application.rb
 
 {% highlight ruby %}
-    #Akismet
-    config.rakismet.key  = '0000X000000X'
-    config.rakismet.url  = 'http://domain.com/blog'
-    config.rakismet.host = 'rest.akismet.com'
+#Akismet
+config.rakismet.key  = '0000X000000X'
+config.rakismet.url  = 'http://domain.com/blog'
+config.rakismet.host = 'rest.akismet.com'
 {% endhighlight %}
 
 You will need to [register for Akismet][10] and get your own API key. Also, change *config.rakismet.url* to your blog location - can be localhost in development.
@@ -119,8 +119,8 @@ You will need to [register for Akismet][10] and get your own API key. Also, chan
 ####app/views/layouts/_sidebar.html.erb
 
 {% highlight html %}
-    <!--Google Search-->
-    <input name="sitesearch" value="http://domain.com/blog" type="hidden"/>
+<!--Google Search-->
+<input name="sitesearch" value="http://domain.com/blog" type="hidden"/>
 {% endhighlight %}
 
 Replace *http://domain.com/blog* with your blog location.
@@ -128,8 +128,8 @@ Replace *http://domain.com/blog* with your blog location.
 ####app/views/layouts/application.html.erb
 
 {% highlight js %}
-    /*Google Analytics*/
-    _gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
+/*Google Analytics*/
+_gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
 {% endhighlight %}
 
 Replace *UA-XXXXXXXX-X* with your Google Analytics account.
@@ -137,8 +137,8 @@ Replace *UA-XXXXXXXX-X* with your Google Analytics account.
 ####app/views/posts/index.rss.builder
 
 {% highlight ruby %}
-    xml.title "Blogcast"
-    xml.description "Blogcast is a better way to blog."
+xml.title "Blogcast"
+xml.description "Blogcast is a better way to blog."
 {% endhighlight %}
 
 Replace the title and description with your blog's title and description.

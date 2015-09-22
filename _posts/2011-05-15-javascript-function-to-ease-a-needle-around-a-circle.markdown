@@ -15,12 +15,12 @@ The first thing that should come to mind is acceleration and what you are really
 You may need to modify the code to fit your specific needs, but here is the JavaScript code to implement Circular Easing:
 
 {% highlight js %}
-    // Circular Easing: sqrt(1-t^2)
-    // t: current time, b: beginning value
-    // c: change in position, d: duration
-    easeInCirc = function (t, b, c, d) {
-    	return -c * (Math.sqrt(1 - (t/=d)*t) - 1) + b;
-    }
+// Circular Easing: sqrt(1-t^2)
+// t: current time, b: beginning value
+// c: change in position, d: duration
+easeInCirc = function (t, b, c, d) {
+	return -c * (Math.sqrt(1 - (t/=d)*t) - 1) + b;
+}
 {% endhighlight %}
 
 Here, the output is in radians. So, for my [jquery dashboard speedometer gauge][3], that means I need a way to map each radian to a degree on my gauge, which will in turn map to a miles-per-hour (mph) on the texture itself.
@@ -28,10 +28,10 @@ Here, the output is in radians. So, for my [jquery dashboard speedometer gauge][
 Here is my mapping the needle texture to each easing point:
 
 {% highlight js %}
-    Speedometer.prototype.mph2deg = function() {
-    	return ((this.mph - 50) * 2.62) + 
-               (((this.mph - 50) * 1.8999) * 0.022900763);
-    }
+Speedometer.prototype.mph2deg = function() {
+	return ((this.mph - 50) * 2.62) + 
+   (((this.mph - 50) * 1.8999) * 0.022900763);
+}
 {% endhighlight %}
 
 The result is a degree value that directly corresponds to the needle's position on my [speedometer gauge][4]. This creates the degree that I need to pass to Raphael's rotation methods.
@@ -41,9 +41,9 @@ The exact Euclidean translation is a bit involved here and very much specific to
 Each needle instance I create inherits the rotate function from the Raphael prototype. So the actual image processing is handled by the Raphael core like so:
 
 {% highlight js %}
-    Gauge.prototype.RotateNeedle = function(deg) {
-    	this.needle.rotate(deg, this.cX, this.cY);
-    }
+Gauge.prototype.RotateNeedle = function(deg) {
+	this.needle.rotate(deg, this.cX, this.cY);
+}
 {% endhighlight %}
 
 TechOctave's [JavaScript Gauge Suite][5] really is a unique partnership between business and open source.

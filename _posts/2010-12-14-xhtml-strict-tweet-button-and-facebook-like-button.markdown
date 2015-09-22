@@ -23,18 +23,18 @@ Inspired by the Digg Button, here's the XHTML Strict version of Twitter's Tweet 
 Here, I use JavaScript to write the anchor hook for the Tweet Button to wrap itself around:
 
 {% highlight js %}
-    <script type="text/javascript">
-    //<![CDATA[
-    (function() {
-    	document.write('<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="YourTwitter">Tweet</a>');
-    	var s = document.createElement('SCRIPT'), s1 = document.getElementsByTagName('SCRIPT')[0];
-    	s.type = 'text/javascript';
-    	s.async = true;
-    	s.src = 'http://platform.twitter.com/widgets.js';
-    	s1.parentNode.insertBefore(s, s1);
-    })();
-    //]]>
-    </script>
+<script type="text/javascript">
+//<![CDATA[
+(function() {
+	document.write('<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="YourTwitter">Tweet</a>');
+	var s = document.createElement('SCRIPT'), s1 = document.getElementsByTagName('SCRIPT')[0];
+	s.type = 'text/javascript';
+	s.async = true;
+	s.src = 'http://platform.twitter.com/widgets.js';
+	s1.parentNode.insertBefore(s, s1);
+})();
+//]]>
+</script>
 {% endhighlight %}
 
 Notice the Twitter JavaScript widget is written asynchronously. This way my page load isn't slowed by Twitter's widget since it is now non-blocking. Asynchronous means my blog content will load before any of the Twitter Tweet Button objects.
@@ -76,18 +76,18 @@ NOTE: Change the data-via attribute from "YourTwitter" to your actual twitter ac
 The same benefits achieved in the Tweet Button are achieved here with the Facebook Like Button:
 
 {% highlight js %}
-    <script type="text/javascript">
-    //<![CDATA[
-    (function() {
-    	document.write('<fb:like width="250"></fb:like>');
-    	var s = document.createElement('SCRIPT'), s1 = document.getElementsByTagName('SCRIPT')[0];
-    	s.type = 'text/javascript';
-    	s.async = true;
-    	s.src = 'http://connect.facebook.net/en_US/all.js#xfbml=1';
-    	s1.parentNode.insertBefore(s, s1);
-    })();
-    //]]>
-    </script>
+<script type="text/javascript">
+//<![CDATA[
+(function() {
+	document.write('<fb:like width="250"></fb:like>');
+	var s = document.createElement('SCRIPT'), s1 = document.getElementsByTagName('SCRIPT')[0];
+	s.type = 'text/javascript';
+	s.async = true;
+	s.src = 'http://connect.facebook.net/en_US/all.js#xfbml=1';
+	s1.parentNode.insertBefore(s, s1);
+})();
+//]]>
+</script>
 {% endhighlight %}
 
 In particular, I avoid placing the FBML tag directly in my XHTML code. It goes without saying that FBML is thoroughly not standards-compliant code. In addition, I see no reason to chase non-standard HTML headers just because Facebook thinks it's cool to have its own custom markup.

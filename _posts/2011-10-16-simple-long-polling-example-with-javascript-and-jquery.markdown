@@ -32,12 +32,12 @@ Have you ever been in the middle of replying to an email, when (suddenly) you're
 Now, if you needed to poll your web service, your first instinct might be to do something like this with JavaScript and jQuery:
 
 {% highlight js %}
-    setInterval(function(){
-        $.ajax({ url: "server", success: function(data){
-            //Update your dashboard gauge
-            salesGauge.setValue(data.value);
-        }, dataType: "json"});
-    }, 30000);
+setInterval(function(){
+    $.ajax({ url: "server", success: function(data){
+        //Update your dashboard gauge
+        salesGauge.setValue(data.value);
+    }, dataType: "json"});
+}, 30000);
 {% endhighlight %}
 
 Here, we have the poll ready to execute every thirty (30) seconds. This code is pretty good. It's clean and asynchronous. You're feeling confident. Things will work (and they will), but with a catch. What if it takes longer than thirty (30) seconds for the server to return your call?
@@ -49,17 +49,17 @@ That's the gamble with using *setInterval*. Lag, an unresponsive server or a who
 If you find yourself in a situation where you're going to bust your interval time, then a recursive *setTimeout* pattern is recommend:
 
 {% highlight js %}
-    (function poll(){
-       setTimeout(function(){
-          $.ajax({ url: "server", success: function(data){
-            //Update your dashboard gauge
-            salesGauge.setValue(data.value);
+(function poll(){
+   setTimeout(function(){
+      $.ajax({ url: "server", success: function(data){
+        //Update your dashboard gauge
+        salesGauge.setValue(data.value);
 
-            //Setup the next poll recursively
-            poll();
-          }, dataType: "json"});
-      }, 30000);
-    })();
+        //Setup the next poll recursively
+        poll();
+      }, dataType: "json"});
+  }, 30000);
+})();
 {% endhighlight %}
 
 Using the Closure technique, *poll* becomes a self executing JavaScript function that runs the first time automatically. Sets up the thirty (30) second interval. Makes the asynchronous Ajax call to your server. Then, finally, sets up the next poll recursively.
@@ -81,13 +81,13 @@ If you're trying to do long polling with JavaScript only - STOP. It's not possib
 If you still want to do some type of client-side polling, then better to use setTimeout to set the interval in some fashion. Maybe something like:
 
 {% highlight js %}
-    (function poll() {
-       setTimeout(function() {
-           $.ajax({ url: "server", success: function(data) {
-                sales.setValue(data.value);
-           }, dataType: "json", complete: poll });
-        }, 30000);
-    })();
+(function poll() {
+   setTimeout(function() {
+       $.ajax({ url: "server", success: function(data) {
+            sales.setValue(data.value);
+       }, dataType: "json", complete: poll });
+    }, 30000);
+})();
 {% endhighlight %}
 
 If you can pull off keeping your connection open, then your application could see faster server response times and feel more responsive. That's a good thing - Good luck!
@@ -104,16 +104,16 @@ Lately, I've been recommending [Socket.IO][3] for just such the occasion. Think 
 No two browser vendors will implement the WebSockets protocol exactly alike. Socket.IO tries to normalize those differences. Here's how you might use Socket.IO with our [Dashboard Gauge Suite][4]:
 
 {% highlight js %}
-    <script src="/socket.io/socket.io.js"></script>
-    <script>
-      var socket = io.connect("http://localhost");
-      socket.on('sales', function (data) {
-        //Update your dashboard gauge
-        salesGauge.setValue(data.value);
-    
-        socket.emit('profit', { my: 'data' });
-      });
-    </script>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io.connect("http://localhost");
+  socket.on('sales', function (data) {
+    //Update your dashboard gauge
+    salesGauge.setValue(data.value);
+
+    socket.emit('profit', { my: 'data' });
+  });
+</script>
 {% endhighlight %}
 
 In order to provide realtime connectivity on every browser, Socket.IO selects the most capable transport at runtime, without it affecting the API. If WebSockets are available, it will use WebSockets.

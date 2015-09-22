@@ -19,17 +19,17 @@ We believe software should be beautiful and inspired. Data is no different. Beau
 We built our JavaScript Charts Suite on Six Core Principles:
 
 {% highlight js %}
- 1. Beautifully Illustrated
- 
- 2. Cross Browser Compatible
- 
- 3. Lightweight Footprint
- 
- 4. Vector Based for Crisp Zoom and Print
- 
- 5. Highly Configurable
- 
- 6. Framework Agnostic
+1. Beautifully Illustrated
+
+2. Cross Browser Compatible
+
+3. Lightweight Footprint
+
+4. Vector Based for Crisp Zoom and Print
+
+5. Highly Configurable
+
+6. Framework Agnostic
 {% endhighlight %}
 
 We know you have tight deadlines and constraints. We know you value quality and craftsmanship. We know you'd rather not sacrifice one for the other. That's why we built our JavaScript Charts Suite to deliver just what you need and nothing more.
@@ -39,9 +39,9 @@ We know you have tight deadlines and constraints. We know you value quality and 
 We believe in [developing with intelligent defaults][3]. For you, this means you can get each of our JavaScript Charts running quickly and easily:
 
 {% highlight js %}
-    var sales = new PieChart("sales");
-    . . .
-    <div id="sales"></div>
+var sales = new PieChart("sales");
+. . .
+<div id="sales"></div>
 {% endhighlight %}
 
 That's it! This is the minimum requirement to render one of our JavaScript Charts. Time to up the ante.
@@ -49,17 +49,17 @@ That's it! This is the minimum requirement to render one of our JavaScript Chart
 You'll want to populate each JavaScript Chart with your own data and maybe add legend titles and legend labels:
 
 {% highlight js %}
-    var purchases = [55, 20, 13];
-    
-    var sales = new PieChart("sales", {
-        data: purchases,
-        legendTitle: "Sales",
-        legendLabels: ["United State", "Canada", "Brazil"]
-    });
-    
-    . . .
-    
-    <div id="sales"></div>
+var purchases = [55, 20, 13];
+
+var sales = new PieChart("sales", {
+    data: purchases,
+    legendTitle: "Sales",
+    legendLabels: ["United State", "Canada", "Brazil"]
+});
+
+. . .
+
+<div id="sales"></div>
 {% endhighlight %}
 
 There are a ton more properties you could configure. In fact, each JavaScript Chart comes with over 30+ configurable properties.
@@ -67,12 +67,12 @@ There are a ton more properties you could configure. In fact, each JavaScript Ch
 Our JavaScript Charts are elegantly responsive and update dynamically with ease. So use your [JavaScript Polling][4] method of choice and update your chart instance like so:
 
 {% highlight js %}
-    (function poll(){
-        $.ajax({ url: "server", success: function(data){
-            sales.setData(data); //Update pie chart
+(function poll(){
+    $.ajax({ url: "server", success: function(data){
+        sales.setData(data); //Update pie chart
 
-        }, dataType: "json", complete: poll, timeout: 30000 });
-    })();
+    }, dataType: "json", complete: poll, timeout: 30000 });
+})();
 {% endhighlight %}
 
 To poll the server, this example used jQuery. But, we believe in framework agnosticism and believe you should have the freedom to choose whichever JavaScript framework you please. So go ahead! 

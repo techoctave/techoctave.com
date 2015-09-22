@@ -30,26 +30,26 @@ GWT borrows from the Java Native Interface (JNI) concept to implement JavaScript
 A JSNI comment block looks like this:
 
 {% highlight js %}
- `/*-{ and ends with the exact token }-*/`
+`/*-{ and ends with the exact token }-*/`
 {% endhighlight %}
 
 JSNI methods are called just like any normal Java method. They can be static or instance methods. Here, we create an instance method of the Gauge class:
 
 {% highlight js %}
-    public static native void someEvent() /*-{
-    	var cash = $entry(@...myClass::getCashSum());
-    
-    	var settlements = new $wnd.Gauge("sales", { 
-    		label: "Sales", 
-    		minValue: 0, 
-    		maxValue: 100, 
-    		majorTicks: 11, 
-    		minorTicks: 4 
-    	});
-    
-    	settlements.setValue(cash);
-    
-    }-*/;
+public static native void someEvent() /*-{
+	var cash = $entry(@...myClass::getCashSum());
+
+	var settlements = new $wnd.Gauge("sales", { 
+		label: "Sales", 
+		minValue: 0, 
+		maxValue: 100, 
+		majorTicks: 11, 
+		minorTicks: 4 
+	});
+
+	settlements.setValue(cash);
+
+}-*/;
 {% endhighlight %}
 
 This is perfectly valid Java code because the compiler sees only private static native void someEvent();. GWT parses the contents of the comment block and outputs the JavaScript verbatim.

@@ -27,20 +27,20 @@ Here is the result of the refactoring...
 Originally, I only envisioned this method to be used for demo purposes. The scope was to have the gauge needle move from rest to the last value of the speedometer gauge: 
 
 {% highlight ruby %}
-    //var speedGauge = new Speedometer("speedometer");
-    //speedGauge.Accelerate();
-    Speedometer.prototype.Accelerate = function() {
-    	jQuery(this).everyTime(10, function(i) {
-    		if(i < 300) {
-    			var v = i*80;
-    			this.SetMPH(easeInCirc(i, 0, v, 2000));
-    		}
-    	}, 0);
-    	
-    	easeInCirc = function (t, b, c, d) {
-    		return -c * (Math.sqrt(1 - (t/=d)*t) - 1) + b;
-    	};
-    };
+//var speedGauge = new Speedometer("speedometer");
+//speedGauge.Accelerate();
+Speedometer.prototype.Accelerate = function() {
+	jQuery(this).everyTime(10, function(i) {
+		if(i < 300) {
+			var v = i*80;
+			this.SetMPH(easeInCirc(i, 0, v, 2000));
+		}
+	}, 0);
+	
+	easeInCirc = function (t, b, c, d) {
+		return -c * (Math.sqrt(1 - (t/=d)*t) - 1) + b;
+	};
+};
 {% endhighlight %}
 
 The magic was to have these values increase in a smooth manner just as you would in your vehicle. You'll recognize the *easeInCirc* function from my previous post on [how to ease a needle around a circle in JavaScript][2].
@@ -58,43 +58,43 @@ Well, I believe I have a solution that's going to solve all your problems.
 For now, I'm happy with the results of the refactored version. First, it's closer to customer expectation. Second, it's flexible as you can use it for both MPH and KPH. Finally, performance has increased immensely:
 
 {% highlight ruby %}
-    //var speedGauge = new Speedometer("speedometer");
-    //speedGauge.Accelerate(70, "mph");
-    Speedometer.prototype.Accelerate = function(speed, unit) {
-    	if (unit === "mph") {
-    		this.mph = speed;
-    	}
-    	
-    	if (unit === "kph") {
-    		this.kph = speed;
-    	}
-    	
-    	var label = Math.random() * 10;
-        label = label.toString();
-    
-    	jQuery(this).everyTime(10, label, function(t) {
-    		var c = t * 80;
-    		
-    		//Stop at the MPH/KPH specified
-    		if(easeInCirc(t, 0, c, 2000) < speed) {
-    			if (unit === "mph") {
-    				this.SetMPH(easeInCirc(t, 0, c, 2000));
-    			}
-    			
-    			if (unit === "kph") {
-    				this.SetKPH(easeInCirc(t, 0, c, 2000));
-    			}
-    		} 
-            else {
-    			jQuery(this).stopTime(label);
-    		}
-    
-    	}, 0);
-    	
-    	easeInCirc = function (t, b, c, d) {
-    		return -c * (Math.sqrt(1 - (t/=d)*t) - 1) + b;
-    	};
-    };
+//var speedGauge = new Speedometer("speedometer");
+//speedGauge.Accelerate(70, "mph");
+Speedometer.prototype.Accelerate = function(speed, unit) {
+	if (unit === "mph") {
+		this.mph = speed;
+	}
+	
+	if (unit === "kph") {
+		this.kph = speed;
+	}
+	
+	var label = Math.random() * 10;
+  label = label.toString();
+
+	jQuery(this).everyTime(10, label, function(t) {
+		var c = t * 80;
+		
+		//Stop at the MPH/KPH specified
+		if(easeInCirc(t, 0, c, 2000) < speed) {
+			if (unit === "mph") {
+				this.SetMPH(easeInCirc(t, 0, c, 2000));
+			}
+			
+			if (unit === "kph") {
+				this.SetKPH(easeInCirc(t, 0, c, 2000));
+			}
+		} 
+    else {
+			jQuery(this).stopTime(label);
+		}
+
+	}, 0);
+	
+	easeInCirc = function (t, b, c, d) {
+		return -c * (Math.sqrt(1 - (t/=d)*t) - 1) + b;
+	};
+};
 {% endhighlight %}
 
 

@@ -27,8 +27,8 @@
 	
     <div class="feat">
       <h5 class="page-date">
-        <time datetime="2010-12-31T04:34:40Z" itemprop="datePublished">
-          31 December 2010
+        <time datetime="2010-12-30T23:34:40-05:00" itemprop="datePublished">
+          30 December 2010
         </time>
       </h5>
     </div>
@@ -50,11 +50,13 @@
 
 <p>Blogcast 1.0.5 features four enhancements:</p>
 
-<div class="highlight"><pre><code class="ruby"> <span class="o">-</span> <span class="no">Created</span> <span class="n">a</span> <span class="no">WordPress</span> <span class="n">migrator</span>
- <span class="o">-</span> <span class="no">Removed</span> <span class="n">all</span> <span class="n">db</span><span class="o">/</span><span class="n">migrate</span> <span class="n">migrations</span>
- <span class="o">-</span> <span class="no">Added</span> <span class="n">seed</span> <span class="n">data</span> <span class="n">to</span> <span class="n">db</span><span class="o">/</span><span class="n">seeds</span><span class="o">.</span><span class="n">rb</span>
- <span class="o">-</span> <span class="no">Cleaned</span> <span class="n">up</span> <span class="n">generic</span> <span class="n">error</span> <span class="n">pages</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">-</span> <span class="no">Created</span> <span class="n">a</span> <span class="no">WordPress</span> <span class="n">migrator</span>
+
+<span class="o">-</span> <span class="no">Removed</span> <span class="n">all</span> <span class="n">db</span><span class="o">/</span><span class="n">migrate</span> <span class="n">migrations</span>
+
+<span class="o">-</span> <span class="no">Added</span> <span class="n">seed</span> <span class="n">data</span> <span class="n">to</span> <span class="n">db</span><span class="o">/</span><span class="n">seeds</span><span class="o">.</span><span class="n">rb</span>
+
+<span class="o">-</span> <span class="no">Cleaned</span> <span class="n">up</span> <span class="n">generic</span> <span class="n">error</span> <span class="n">pages</span></code></pre></div>
 
 
 <h3>Blogcast WordPress migrator</h3>
@@ -69,38 +71,35 @@
 
 <p>Go to your Blogcast installation and run <em>rake --tasks</em> to see your available options. One of those options will be rebirth:wordpress:</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="n">rake</span> <span class="ss">rebirth</span><span class="p">:</span><span class="n">wordpress</span><span class="o">[</span><span class="n">scroll</span><span class="o">]</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">rake</span> <span class="ss">rebirth</span><span class="p">:</span><span class="n">wordpress</span><span class="o">[</span><span class="n">scroll</span><span class="o">]</span></code></pre></div>
 
 
 <p>This is Blogcast's WordPress migrator tool. The scroll parameter is the location and name of your WordPress export file.</p>
 
 <p>Use the migrator tool like so:</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="n">rake</span> <span class="ss">rebirth</span><span class="p">:</span><span class="n">wordpress</span><span class="o">[</span><span class="sr">/path/</span><span class="n">to</span><span class="o">/</span><span class="n">wordpress</span><span class="o">.</span><span class="n">xml</span><span class="o">]</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">rake</span> <span class="ss">rebirth</span><span class="p">:</span><span class="n">wordpress</span><span class="o">[</span><span class="sr">/path/</span><span class="n">to</span><span class="o">/</span><span class="n">wordpress</span><span class="o">.</span><span class="n">xml</span><span class="o">]</span></code></pre></div>
 
 
 <p>A successful run will look similar to this:</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="o">---&gt;</span><span class="no">Here</span> <span class="n">are</span> <span class="n">my</span> <span class="n">wordly</span> <span class="n">posessions</span> <span class="n">my</span> <span class="ss">Liege</span><span class="p">:</span> <span class="sr">/path/</span><span class="n">to</span><span class="o">/</span><span class="n">wordpress</span><span class="o">.</span><span class="n">xml</span>
-    <span class="o">---&gt;</span><span class="no">The</span> <span class="n">gates</span> <span class="n">of</span> <span class="n">wordpress</span> <span class="nb">open</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">faithful</span> <span class="n">enter</span><span class="o">.</span>
-    <span class="o">---&gt;</span><span class="no">Enter</span> <span class="n">my</span> <span class="n">apprentice</span><span class="o">.</span>
-    <span class="o">---&gt;</span><span class="n">wordpress</span> <span class="n">casts</span><span class="err">&#39;</span> <span class="n">forth</span> <span class="n">your</span> <span class="n">posessions</span><span class="o">.</span>
-    <span class="o">---&gt;</span><span class="no">Hand</span> <span class="n">me</span> <span class="n">your</span> <span class="n">scroll</span><span class="o">.</span>
-    
-    <span class="o">------&gt;&gt;</span><span class="no">Posts</span><span class="p">,</span> <span class="n">the</span> <span class="n">wind</span> <span class="n">blows</span> <span class="n">strong</span> <span class="k">in</span> <span class="n">your</span> <span class="n">favor</span> <span class="n">apprentice</span><span class="o">.</span>
-    <span class="o">------&gt;&gt;</span><span class="n">I</span> <span class="n">have</span> <span class="n">paid</span> <span class="n">the</span> <span class="no">Ferryman</span> <span class="n">on</span> <span class="n">your</span> <span class="n">behalf</span><span class="o">.</span>
-    <span class="o">------&gt;&gt;</span><span class="no">Posts</span> <span class="ss">saved</span><span class="p">:</span> <span class="mi">80</span>
-    <span class="o">------&gt;&gt;</span><span class="no">Comments</span> <span class="ss">saved</span><span class="p">:</span> <span class="mi">61</span>
-    
-    <span class="o">------&gt;&gt;</span><span class="no">Drafts</span><span class="p">,</span> <span class="n">find</span> <span class="n">your</span> <span class="n">redemption</span> <span class="n">through</span> <span class="n">prayer</span> <span class="ow">and</span> <span class="n">reflection</span><span class="o">.</span>
-    <span class="o">------&gt;&gt;</span><span class="no">Go</span> <span class="n">now</span><span class="o">.</span> <span class="no">On</span> <span class="n">the</span> <span class="n">other</span> <span class="n">side</span> <span class="n">you</span> <span class="n">have</span> <span class="n">only</span> <span class="n">yourself</span> <span class="n">to</span> <span class="n">face</span><span class="o">.</span>
-    <span class="o">------&gt;&gt;</span><span class="no">Drafts</span> <span class="ss">saved</span><span class="p">:</span> <span class="mi">3</span>
-    
-    <span class="o">---&gt;</span><span class="no">God</span> <span class="n">created</span> <span class="no">Rails</span> <span class="n">to</span> <span class="n">train</span> <span class="n">the</span> <span class="n">faithful</span><span class="o">.</span>
-    <span class="o">---&gt;</span><span class="no">Rise</span> <span class="no">Acolyte</span><span class="o">.</span> <span class="no">Rise</span> <span class="ow">and</span> <span class="n">bath</span> <span class="k">in</span> <span class="n">deliverance</span><span class="o">.</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">---&gt;</span><span class="no">Here</span> <span class="n">are</span> <span class="n">my</span> <span class="n">wordly</span> <span class="n">posessions</span> <span class="n">my</span> <span class="ss">Liege</span><span class="p">:</span> <span class="sr">/path/</span><span class="n">to</span><span class="o">/</span><span class="n">wordpress</span><span class="o">.</span><span class="n">xml</span>
+<span class="o">---&gt;</span><span class="no">The</span> <span class="n">gates</span> <span class="n">of</span> <span class="n">wordpress</span> <span class="nb">open</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">faithful</span> <span class="n">enter</span><span class="o">.</span>
+<span class="o">---&gt;</span><span class="no">Enter</span> <span class="n">my</span> <span class="n">apprentice</span><span class="o">.</span>
+<span class="o">---&gt;</span><span class="n">wordpress</span> <span class="n">casts</span><span class="err">&#39;</span> <span class="n">forth</span> <span class="n">your</span> <span class="n">posessions</span><span class="o">.</span>
+<span class="o">---&gt;</span><span class="no">Hand</span> <span class="n">me</span> <span class="n">your</span> <span class="n">scroll</span><span class="o">.</span>
+
+<span class="o">------&gt;&gt;</span><span class="no">Posts</span><span class="p">,</span> <span class="n">the</span> <span class="n">wind</span> <span class="n">blows</span> <span class="n">strong</span> <span class="k">in</span> <span class="n">your</span> <span class="n">favor</span> <span class="n">apprentice</span><span class="o">.</span>
+<span class="o">------&gt;&gt;</span><span class="n">I</span> <span class="n">have</span> <span class="n">paid</span> <span class="n">the</span> <span class="no">Ferryman</span> <span class="n">on</span> <span class="n">your</span> <span class="n">behalf</span><span class="o">.</span>
+<span class="o">------&gt;&gt;</span><span class="no">Posts</span> <span class="ss">saved</span><span class="p">:</span> <span class="mi">80</span>
+<span class="o">------&gt;&gt;</span><span class="no">Comments</span> <span class="ss">saved</span><span class="p">:</span> <span class="mi">61</span>
+
+<span class="o">------&gt;&gt;</span><span class="no">Drafts</span><span class="p">,</span> <span class="n">find</span> <span class="n">your</span> <span class="n">redemption</span> <span class="n">through</span> <span class="n">prayer</span> <span class="ow">and</span> <span class="n">reflection</span><span class="o">.</span>
+<span class="o">------&gt;&gt;</span><span class="no">Go</span> <span class="n">now</span><span class="o">.</span> <span class="no">On</span> <span class="n">the</span> <span class="n">other</span> <span class="n">side</span> <span class="n">you</span> <span class="n">have</span> <span class="n">only</span> <span class="n">yourself</span> <span class="n">to</span> <span class="n">face</span><span class="o">.</span>
+<span class="o">------&gt;&gt;</span><span class="no">Drafts</span> <span class="ss">saved</span><span class="p">:</span> <span class="mi">3</span>
+
+<span class="o">---&gt;</span><span class="no">God</span> <span class="n">created</span> <span class="no">Rails</span> <span class="n">to</span> <span class="n">train</span> <span class="n">the</span> <span class="n">faithful</span><span class="o">.</span>
+<span class="o">---&gt;</span><span class="no">Rise</span> <span class="no">Acolyte</span><span class="o">.</span> <span class="no">Rise</span> <span class="ow">and</span> <span class="n">bath</span> <span class="k">in</span> <span class="n">deliverance</span><span class="o">.</span></code></pre></div>
 
 
 <h4>Notes</h4>
@@ -141,27 +140,25 @@ likelihood for issues).</p></blockquote>
 
 <p>For Pete's sake run <em>rake db:schema:load</em> so you're not pulling your hair out. If you need to make specific changes for yourself or a client, then implement and execute your additional migrations. But, you should not run migrations to load the database from scratch.</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="n">rake</span> <span class="ss">db</span><span class="p">:</span><span class="ss">schema</span><span class="p">:</span><span class="nb">load</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">rake</span> <span class="ss">db</span><span class="p">:</span><span class="ss">schema</span><span class="p">:</span><span class="nb">load</span></code></pre></div>
 
 
 <p>A successful run will look like this:</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="o">--</span> <span class="n">create_table</span><span class="p">(</span><span class="s2">&quot;comments&quot;</span><span class="p">,</span> <span class="p">{</span><span class="ss">:force</span><span class="o">=&gt;</span><span class="kp">true</span><span class="p">})</span>
-       <span class="o">-&gt;</span> <span class="mi">0</span><span class="o">.</span><span class="mo">00</span><span class="mi">98</span><span class="n">s</span>
-    <span class="o">--</span> <span class="n">create_table</span><span class="p">(</span><span class="s2">&quot;drafts&quot;</span><span class="p">,</span> <span class="p">{</span><span class="ss">:force</span><span class="o">=&gt;</span><span class="kp">true</span><span class="p">})</span>
-       <span class="o">-&gt;</span> <span class="mi">0</span><span class="o">.</span><span class="mo">0041</span><span class="n">s</span>
-    <span class="o">--</span> <span class="n">create_table</span><span class="p">(</span><span class="s2">&quot;posts&quot;</span><span class="p">,</span> <span class="p">{</span><span class="ss">:force</span><span class="o">=&gt;</span><span class="kp">true</span><span class="p">})</span>
-       <span class="o">-&gt;</span> <span class="mi">0</span><span class="o">.</span><span class="mo">00</span><span class="mi">92</span><span class="n">s</span>
-    <span class="o">--</span> <span class="n">create_table</span><span class="p">(</span><span class="s2">&quot;spams&quot;</span><span class="p">,</span> <span class="p">{</span><span class="ss">:force</span><span class="o">=&gt;</span><span class="kp">true</span><span class="p">})</span>
-       <span class="o">-&gt;</span> <span class="mi">0</span><span class="o">.</span><span class="mo">003</span><span class="mi">8</span><span class="n">s</span>
-    <span class="o">--</span> <span class="n">create_table</span><span class="p">(</span><span class="s2">&quot;users&quot;</span><span class="p">,</span> <span class="p">{</span><span class="ss">:force</span><span class="o">=&gt;</span><span class="kp">true</span><span class="p">})</span>
-       <span class="o">-&gt;</span> <span class="mi">0</span><span class="o">.</span><span class="mo">0040</span><span class="n">s</span>
-    <span class="o">--</span> <span class="n">initialize_schema_migrations_table</span><span class="p">()</span>
-       <span class="o">-&gt;</span> <span class="mi">0</span><span class="o">.</span><span class="mo">0055</span><span class="n">s</span>
-    <span class="o">--</span> <span class="n">assume_migrated_upto_version</span><span class="p">(</span><span class="mi">20100704180607</span><span class="p">,</span> <span class="s2">&quot;db/migrate&quot;</span><span class="p">)</span>
-       <span class="o">-&gt;</span> <span class="mi">0</span><span class="o">.</span><span class="mo">0077</span><span class="n">s</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">--</span> <span class="n">create_table</span><span class="p">(</span><span class="s2">&quot;comments&quot;</span><span class="p">,</span> <span class="p">{</span><span class="ss">:force</span><span class="o">=&gt;</span><span class="kp">true</span><span class="p">})</span>
+   <span class="o">-&gt;</span> <span class="mi">0</span><span class="o">.</span><span class="mo">00</span><span class="mi">98</span><span class="n">s</span>
+<span class="o">--</span> <span class="n">create_table</span><span class="p">(</span><span class="s2">&quot;drafts&quot;</span><span class="p">,</span> <span class="p">{</span><span class="ss">:force</span><span class="o">=&gt;</span><span class="kp">true</span><span class="p">})</span>
+   <span class="o">-&gt;</span> <span class="mi">0</span><span class="o">.</span><span class="mo">0041</span><span class="n">s</span>
+<span class="o">--</span> <span class="n">create_table</span><span class="p">(</span><span class="s2">&quot;posts&quot;</span><span class="p">,</span> <span class="p">{</span><span class="ss">:force</span><span class="o">=&gt;</span><span class="kp">true</span><span class="p">})</span>
+   <span class="o">-&gt;</span> <span class="mi">0</span><span class="o">.</span><span class="mo">00</span><span class="mi">92</span><span class="n">s</span>
+<span class="o">--</span> <span class="n">create_table</span><span class="p">(</span><span class="s2">&quot;spams&quot;</span><span class="p">,</span> <span class="p">{</span><span class="ss">:force</span><span class="o">=&gt;</span><span class="kp">true</span><span class="p">})</span>
+   <span class="o">-&gt;</span> <span class="mi">0</span><span class="o">.</span><span class="mo">003</span><span class="mi">8</span><span class="n">s</span>
+<span class="o">--</span> <span class="n">create_table</span><span class="p">(</span><span class="s2">&quot;users&quot;</span><span class="p">,</span> <span class="p">{</span><span class="ss">:force</span><span class="o">=&gt;</span><span class="kp">true</span><span class="p">})</span>
+   <span class="o">-&gt;</span> <span class="mi">0</span><span class="o">.</span><span class="mo">0040</span><span class="n">s</span>
+<span class="o">--</span> <span class="n">initialize_schema_migrations_table</span><span class="p">()</span>
+   <span class="o">-&gt;</span> <span class="mi">0</span><span class="o">.</span><span class="mo">0055</span><span class="n">s</span>
+<span class="o">--</span> <span class="n">assume_migrated_upto_version</span><span class="p">(</span><span class="mi">20100704180607</span><span class="p">,</span> <span class="s2">&quot;db/migrate&quot;</span><span class="p">)</span>
+   <span class="o">-&gt;</span> <span class="mi">0</span><span class="o">.</span><span class="mo">0077</span><span class="n">s</span></code></pre></div>
 
 
 <h3>Admin user seed instance now available</h3>
@@ -170,32 +167,29 @@ likelihood for issues).</p></blockquote>
 
 <p>This should add some value to your deployment and setup tasks. The user model instance in db/seeds.rb now looks like this:</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="n">user</span> <span class="o">=</span> <span class="no">User</span><span class="o">.</span><span class="n">new</span>
-    
-    <span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;admin&quot;</span>
-    <span class="n">user</span><span class="o">.</span><span class="n">initials</span> <span class="o">=</span> <span class="s2">&quot;a.d.min&quot;</span>
-    <span class="n">user</span><span class="o">.</span><span class="n">email</span> <span class="o">=</span> <span class="s2">&quot;admin@localhost.host&quot;</span>
-    <span class="n">user</span><span class="o">.</span><span class="n">login</span> <span class="o">=</span> <span class="s2">&quot;admin&quot;</span>
-    <span class="n">user</span><span class="o">.</span><span class="n">password</span> <span class="o">=</span> <span class="s2">&quot;admin&quot;</span>
-    <span class="n">user</span><span class="o">.</span><span class="n">password_confirmation</span> <span class="o">=</span> <span class="s2">&quot;admin&quot;</span>
-    <span class="n">user</span><span class="o">.</span><span class="n">persistence_token</span> <span class="o">=</span> <span class="s2">&quot;10ca7461d933...&quot;</span>
-    
-    <span class="n">user</span><span class="o">.</span><span class="n">save</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">user</span> <span class="o">=</span> <span class="no">User</span><span class="o">.</span><span class="n">new</span>
+
+<span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;admin&quot;</span>
+<span class="n">user</span><span class="o">.</span><span class="n">initials</span> <span class="o">=</span> <span class="s2">&quot;a.d.min&quot;</span>
+<span class="n">user</span><span class="o">.</span><span class="n">email</span> <span class="o">=</span> <span class="s2">&quot;admin@localhost.host&quot;</span>
+<span class="n">user</span><span class="o">.</span><span class="n">login</span> <span class="o">=</span> <span class="s2">&quot;admin&quot;</span>
+<span class="n">user</span><span class="o">.</span><span class="n">password</span> <span class="o">=</span> <span class="s2">&quot;admin&quot;</span>
+<span class="n">user</span><span class="o">.</span><span class="n">password_confirmation</span> <span class="o">=</span> <span class="s2">&quot;admin&quot;</span>
+<span class="n">user</span><span class="o">.</span><span class="n">persistence_token</span> <span class="o">=</span> <span class="s2">&quot;10ca7461d933...&quot;</span>
+
+<span class="n">user</span><span class="o">.</span><span class="n">save</span></code></pre></div>
 
 
 <p>Use the following Rails rake task to load the default admin user seed:</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="n">rake</span> <span class="ss">db</span><span class="p">:</span><span class="n">seed</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">rake</span> <span class="ss">db</span><span class="p">:</span><span class="n">seed</span></code></pre></div>
 
 
 <p>A successful run will look like:</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="o">---&gt;</span><span class="no">God</span> <span class="n">created</span> <span class="no">Rails</span> <span class="n">to</span> <span class="n">train</span> <span class="n">the</span> <span class="n">faithful</span><span class="o">.</span>
-    <span class="o">------&gt;</span><span class="no">Blogcast</span> <span class="n">admin</span> <span class="n">user</span> <span class="n">created</span><span class="o">.</span> <span class="ss">Username</span><span class="p">:</span> <span class="n">admin</span><span class="p">,</span> <span class="ss">Password</span><span class="p">:</span> <span class="n">admin</span>
-    <span class="o">---&gt;</span><span class="no">From</span> <span class="n">this</span> <span class="n">seed</span> <span class="n">may</span> <span class="n">you</span> <span class="n">forever</span> <span class="n">bear</span> <span class="n">fruit</span><span class="o">.</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">---&gt;</span><span class="no">God</span> <span class="n">created</span> <span class="no">Rails</span> <span class="n">to</span> <span class="n">train</span> <span class="n">the</span> <span class="n">faithful</span><span class="o">.</span>
+<span class="o">------&gt;</span><span class="no">Blogcast</span> <span class="n">admin</span> <span class="n">user</span> <span class="n">created</span><span class="o">.</span> <span class="ss">Username</span><span class="p">:</span> <span class="n">admin</span><span class="p">,</span> <span class="ss">Password</span><span class="p">:</span> <span class="n">admin</span>
+<span class="o">---&gt;</span><span class="no">From</span> <span class="n">this</span> <span class="n">seed</span> <span class="n">may</span> <span class="n">you</span> <span class="n">forever</span> <span class="n">bear</span> <span class="n">fruit</span><span class="o">.</span></code></pre></div>
 
 
 <h3>Cleaned up generic error pages</h3>

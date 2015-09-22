@@ -44,27 +44,27 @@ Jeremy Ashkenas, quietly committed [CoffeeScript][3] to the JavaScript world in 
 In a short two years, CoffeeScript managed to influence legions of developers. Simplicity and clean output was the key:
 
 {% highlight js %}
-    class Animal
-      constructor: (@name) ->
-    
-      move: (meters) ->
-        alert @name + " moved #{meters}m."
-    
-    class Snake extends Animal
-      move: ->
-        alert "Slithering..."
-        super 5
-    
-    class Horse extends Animal
-      move: ->
-        alert "Galloping..."
-        super 45
-    
-    sam = new Snake "Sammy the Python"
-    tom = new Horse "Tommy the Palomino"
-    
-    sam.move()
-    tom.move()
+class Animal
+  constructor: (@name) ->
+
+  move: (meters) ->
+    alert @name + " moved #{meters}m."
+
+class Snake extends Animal
+  move: ->
+    alert "Slithering..."
+    super 5
+
+class Horse extends Animal
+  move: ->
+    alert "Galloping..."
+    super 45
+
+sam = new Snake "Sammy the Python"
+tom = new Horse "Tommy the Palomino"
+
+sam.move()
+tom.move()
 {% endhighlight %}
 
 Eventually, CoffeeScript made its way to Brendan Eich - The Creator of JavaScript - and it's influence on the future of the language began.
@@ -100,34 +100,34 @@ Microsoft introduced a superset of JavaScript called [TypeScript][7] in late 201
 Based on TypeScript's syntax, it's not too hard to see why:
 
 {% highlight js %}
-    class Animal {
-        constructor(public name) { }
-        move(meters) {
-            alert(this.name + " moved " + meters + "m.");
-        }
+class Animal {
+    constructor(public name) { }
+    move(meters) {
+        alert(this.name + " moved " + meters + "m.");
     }
-    
-    class Snake extends Animal {
-        constructor(name) { super(name); }
-        move() {
-            alert("Slithering...");
-            super.move(5);
-        }
+}
+
+class Snake extends Animal {
+    constructor(name) { super(name); }
+    move() {
+        alert("Slithering...");
+        super.move(5);
     }
-    
-    class Horse extends Animal {
-        constructor(name) { super(name); }
-        move() {
-            alert("Galloping...");
-            super.move(45);
-        }
+}
+
+class Horse extends Animal {
+    constructor(name) { super(name); }
+    move() {
+        alert("Galloping...");
+        super.move(45);
     }
-    
-    var sam = new Snake("Sammy the Python")
-    var tom: Animal = new Horse("Tommy the Palomino")
-    
-    sam.move()
-    tom.move(34)
+}
+
+var sam = new Snake("Sammy the Python")
+var tom: Animal = new Horse("Tommy the Palomino")
+
+sam.move()
+tom.move(34)
 {% endhighlight %}
 
 TypeScript, however, didn't seem to be an improvement on either concept. In fact, TypeScript's implementation seemed very Groovy-ish. It seemed history was again repeating itself. 

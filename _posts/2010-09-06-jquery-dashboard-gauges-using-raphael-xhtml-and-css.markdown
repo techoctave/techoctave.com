@@ -22,17 +22,17 @@ The [framework wars][3] have long passed and we all know who won. Much good came
 That's why we based our [Dashboard Gauge Suite][5] on Six Core Principles. We felt they should be:
 
 {% highlight bash %}
- 1. Beautifully Illustrated
- 
- 2. Cross-Browser Compatible
- 
- 3. Lightweight footprint
- 
- 4. Vector Based for Crisp Zoom and Print
- 
- 5. Highly Configurable
- 
- 6. Framework Agnostic
+1. Beautifully Illustrated
+
+2. Cross-Browser Compatible
+
+3. Lightweight footprint
+
+4. Vector Based for Crisp Zoom and Print
+
+5. Highly Configurable
+
+6. Framework Agnostic
 {% endhighlight %}
 
 In today's JavaScript environment, I believe framework agnosticism is central to developer happiness. Sometimes you simply don't have the time to fiddle with yet-another-javascript-framework. Sometimes you just need the software to work. Our gauges just work!
@@ -51,23 +51,23 @@ From the very beginning, we aimed for highly configurable gauges with a very int
 Load Raphael.js and our Gauge.js package. Wait for the DOM to load and then create an instance of our Gauge class:
 
 {% highlight js %}
-    <script src="javascripts/raphael.js"></script>
-    
-    <script src="javascripts/gauge.js"></script>
+<script src="javascripts/raphael.js"></script>
 
-    <script>
-    window.onload = function() {
-      var sales = new Gauge("sales", {
-          label: "Sales",
-          minValue: 30,
-          maxValue: 90,
-          majorTicks: 5,
-          minorTicks: 4
-      });
+<script src="javascripts/gauge.js"></script>
 
-      sales.setValue(60);
-    };
-    </script>
+<script>
+window.onload = function() {
+  var sales = new Gauge("sales", {
+      label: "Sales",
+      minValue: 30,
+      maxValue: 90,
+      majorTicks: 5,
+      minorTicks: 4
+  });
+
+  sales.setValue(60);
+};
+</script>
 {% endhighlight %}
 
 Note, label, minValue, maxValue, majorTicks and minorTicks are only five of 40+ configurable gauge properties.
@@ -76,7 +76,7 @@ Note, label, minValue, maxValue, majorTicks and minorTicks are only five of 40+ 
 Minimum requirement for a gauge instance is a unique DOM identifier to attach the gauge instance:
 
 {% highlight html %}
-    <div id="sales"></div>
+<div id="sales"></div>
 {% endhighlight %}
 
 Here, we use a div tag, but could have easily used a li tag or any other DOM element.

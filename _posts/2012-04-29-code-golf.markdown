@@ -21,10 +21,10 @@ Let's look at a few code snippets from an example Code Golf: [Reinvent the For l
 The for loop is a fundamental iteration construct in many programming languages:
 
 {% highlight js %}
-    for(int i = 0; i < 100; i++) 
-    {
-       JustDoIt();
-    }
+for(int i = 0; i < 100; i++) 
+{
+   JustDoIt();
+}
 {% endhighlight %}
 
 This Code Golf's author challenges developers to:
@@ -40,17 +40,17 @@ I'm a big fan of JavaScript. In fact, I believe [The Future is JavaScript][3]. S
 Entry #1:
 
 {% highlight js %}
-    function f(m,c) {
-       m ? c()&f(--m,c) : 0
-    }
+function f(m,c) {
+   m ? c()&f(--m,c) : 0
+}
 {% endhighlight %}
 
 Entry #2:
 
 {% highlight js %}
-    function f(m,c) {
-       m&&c()&f(--m,c)
-    }
+function f(m,c) {
+   m&&c()&f(--m,c)
+}
 {% endhighlight %}
 
 This version was inspired by Entry #1.
@@ -58,10 +58,10 @@ This version was inspired by Entry #1.
 Entry #3:
 
 {% highlight js %}
-    (function i(s,r){
-        r += s + ' ';
-        s++ < 1e3 ? i(s,r) : console.log(r)
-    })(0,'')
+(function i(s,r){
+    r += s + ' ';
+    s++ < 1e3 ? i(s,r) : console.log(r)
+})(0,'')
 {% endhighlight %}
 
 Code Golf is pretty interesting. Hopefully, it gives you a good opportunity to sit back, relax and learn from our peers.

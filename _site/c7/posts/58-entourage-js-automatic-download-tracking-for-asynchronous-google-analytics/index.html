@@ -27,7 +27,7 @@
 	
     <div class="feat">
       <h5 class="page-date">
-        <time datetime="2011-09-05T05:09:33Z" itemprop="datePublished">
+        <time datetime="2011-09-05T01:09:33-04:00" itemprop="datePublished">
           05 September 2011
         </time>
       </h5>
@@ -50,11 +50,10 @@
 
 <p>I set goals for Entourage.js before a single line of code was written. Entourage.js needed to embody the following:</p>
 
-<div class="highlight"><pre><code class="js"> <span class="mi">1</span><span class="p">.</span> <span class="nx">Automatic</span> <span class="nx">Tracking</span>
- <span class="mi">2</span><span class="p">.</span> <span class="nx">Framework</span> <span class="nx">Agnostic</span>
- <span class="mi">3</span><span class="p">.</span> <span class="nx">Unobtrusive</span> <span class="nx">JavaScript</span>
- <span class="mi">4</span><span class="p">.</span> <span class="nx">Small</span> <span class="nx">Footprint</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="mi">1</span><span class="p">.</span> <span class="nx">Automatic</span> <span class="nx">Tracking</span>
+<span class="mi">2</span><span class="p">.</span> <span class="nx">Framework</span> <span class="nx">Agnostic</span>
+<span class="mi">3</span><span class="p">.</span> <span class="nx">Unobtrusive</span> <span class="nx">JavaScript</span>
+<span class="mi">4</span><span class="p">.</span> <span class="nx">Small</span> <span class="nx">Footprint</span></code></pre></div>
 
 
 <h4>Automatic</h4>
@@ -63,14 +62,12 @@
 
 <p>Entourage.js automatically tracks the name and extension of each file downloaded with the following convention:</p>
 
-<div class="highlight"><pre><code class="js"><span class="err">/download/fileName.extension</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="err">/download/fileName.extension</span></code></pre></div>
 
 
 <p>For example, in Google Analytics Top Content, the downloads Entourage.js would look like:</p>
 
-<div class="highlight"><pre><code class="js"><span class="err">/download/entourage.zip       1,504</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="err">/download/entourage.zip       1,504</span></code></pre></div>
 
 
 <h4>Framework Agnostic</h4>
@@ -85,8 +82,7 @@
 
 <p>This is Google's recommended way to track downloads:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="o">&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="o">=</span><span class="s2">&quot;http://www.example.com/files/map.pdf&quot;</span> <span class="nx">onClick</span><span class="o">=</span><span class="s2">&quot;javascript: _gaq.push([&#39;_trackPageview&#39;, &#39;/downloads/map&#39;]);&quot;</span><span class="o">&gt;</span> 
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="o">&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="o">=</span><span class="s2">&quot;http://www.example.com/files/map.pdf&quot;</span> <span class="nx">onClick</span><span class="o">=</span><span class="s2">&quot;javascript: _gaq.push([&#39;_trackPageview&#39;, &#39;/downloads/map&#39;]);&quot;</span><span class="o">&gt;</span></code></pre></div>
 
 
 <p>I believe in standards based development. I believe we honor our profession when we encourage each other towards best practices.</p>
@@ -101,12 +97,11 @@
 
 <p>Here's were we are at today:</p>
 
-<div class="highlight"><pre><code class="js"><span class="o">**</span><span class="nx">Original</span> <span class="nx">Size</span><span class="o">:**</span>   <span class="mf">1.54</span><span class="nx">KB</span> <span class="p">(</span><span class="mi">772</span> <span class="nx">bytes</span> <span class="nx">gzipped</span><span class="p">)</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="o">**</span><span class="nx">Original</span> <span class="nx">Size</span><span class="o">:**</span>   <span class="mf">1.54</span><span class="nx">KB</span> <span class="p">(</span><span class="mi">772</span> <span class="nx">bytes</span> <span class="nx">gzipped</span><span class="p">)</span>
 
 <span class="o">**</span><span class="nx">Compiled</span> <span class="nx">Size</span><span class="o">:**</span>    <span class="mi">579</span> <span class="nx">bytes</span> <span class="p">(</span><span class="mi">339</span> <span class="nx">bytes</span> <span class="nx">gzipped</span><span class="p">)</span>
 
-<span class="nx">Saved</span> <span class="o">**</span><span class="mf">63.21</span><span class="o">%**</span> <span class="nx">off</span> <span class="nx">the</span> <span class="nx">original</span> <span class="nx">size</span> <span class="p">(</span><span class="o">**</span><span class="mf">56.09</span><span class="o">%**</span> <span class="nx">off</span> <span class="nx">the</span> <span class="nx">gzipped</span> <span class="nx">size</span><span class="p">)</span>
-</code></pre></div>
+<span class="nx">Saved</span> <span class="o">**</span><span class="mf">63.21</span><span class="o">%**</span> <span class="nx">off</span> <span class="nx">the</span> <span class="nx">original</span> <span class="nx">size</span> <span class="p">(</span><span class="o">**</span><span class="mf">56.09</span><span class="o">%**</span> <span class="nx">off</span> <span class="nx">the</span> <span class="nx">gzipped</span> <span class="nx">size</span><span class="p">)</span></code></pre></div>
 
 
 <p>Compiled and gzipped, Entourage.js is less than 1kb. It's fast, dependable and - for now - I'm happy with the results.</p>
@@ -115,30 +110,27 @@
 
 <p>Installation is clean and simple. Download <a href="http://techoctave.com/entourage/">Entourage.js</a>. Place the following script declaration in you head tag:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;javascripts/entourage.js&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;javascripts/entourage.js&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span></code></pre></div>
 
 
 <p>Just above your Google Analytics Queue array declaration:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span>
-      <span class="kd">var</span> <span class="nx">_gaq</span> <span class="o">=</span> <span class="nx">_gaq</span> <span class="o">||</span> <span class="p">[];</span>
-      <span class="nx">_gaq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;_setAccount&#39;</span><span class="p">,</span> <span class="s1">&#39;UA-XXXXXXXX-X&#39;</span><span class="p">]);</span>
-      <span class="nx">_gaq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;_trackPageview&#39;</span><span class="p">]);</span>
-    <span class="o">&lt;</span><span class="err">/script&gt;</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span>
+  <span class="kd">var</span> <span class="nx">_gaq</span> <span class="o">=</span> <span class="nx">_gaq</span> <span class="o">||</span> <span class="p">[];</span>
+  <span class="nx">_gaq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;_setAccount&#39;</span><span class="p">,</span> <span class="s1">&#39;UA-XXXXXXXX-X&#39;</span><span class="p">]);</span>
+  <span class="nx">_gaq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;_trackPageview&#39;</span><span class="p">]);</span>
+<span class="o">&lt;</span><span class="err">/script&gt;</span></code></pre></div>
 
 
 <p>Then place your asynchronous call to load Google Analytics to somewhere just before your body tag:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span>
-      <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">ga</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">);</span> <span class="nx">ga</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="s1">&#39;text/javascript&#39;</span><span class="p">;</span> <span class="nx">ga</span><span class="p">.</span><span class="nx">async</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-        <span class="nx">ga</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;https:&#39;</span> <span class="o">==</span> <span class="nb">document</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">protocol</span> <span class="o">?</span> <span class="s1">&#39;https://ssl&#39;</span> <span class="o">:</span> <span class="s1">&#39;http://www&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;.google-analytics.com/ga.js&#39;</span><span class="p">;</span>
-        <span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span> <span class="nx">s</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">.</span><span class="nx">insertBefore</span><span class="p">(</span><span class="nx">ga</span><span class="p">,</span> <span class="nx">s</span><span class="p">);</span>
-      <span class="p">})();</span>
-    <span class="o">&lt;</span><span class="err">/script&gt;</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span>
+  <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">ga</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">);</span> <span class="nx">ga</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="s1">&#39;text/javascript&#39;</span><span class="p">;</span> <span class="nx">ga</span><span class="p">.</span><span class="nx">async</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="nx">ga</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;https:&#39;</span> <span class="o">==</span> <span class="nb">document</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">protocol</span> <span class="o">?</span> <span class="s1">&#39;https://ssl&#39;</span> <span class="o">:</span> <span class="s1">&#39;http://www&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;.google-analytics.com/ga.js&#39;</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span> <span class="nx">s</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">.</span><span class="nx">insertBefore</span><span class="p">(</span><span class="nx">ga</span><span class="p">,</span> <span class="nx">s</span><span class="p">);</span>
+  <span class="p">})();</span>
+<span class="o">&lt;</span><span class="err">/script&gt;</span></code></pre></div>
 
 
 <p>Follow a similar hierarchy and you are set.</p>
@@ -153,16 +145,15 @@
 
 <p><a href="https://developer.mozilla.org/en/JavaScript/Guide/Closures">Closures</a> are often considered an advanced feature in JavaScript. A closure is a special kind of object that combines two things: a function, and the environment in which that function was created.</p>
 
-<div class="highlight"><pre><code class="js">    <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    
-    <span class="c1">//Event Handler</span>
-    
-    <span class="c1">//Entourage</span>
-    
-    <span class="c1">//Get true FileName from link pathname</span>
-    
-    <span class="p">})();</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+  <span class="c1">//Event Handler</span>
+
+  <span class="c1">//Entourage</span>
+
+  <span class="c1">//Get true FileName from link pathname</span>
+
+<span class="p">})();</span></code></pre></div>
 
 
 <p>Note the repeating open-and-close parenthesis. These tell the JavaScript interpreter to execute the anonymous function and it's internal business logic immediately.</p>
@@ -177,29 +168,27 @@
 
 <p>The event handler caches a list of document links. Then it assigns the Entourage callback to each link's <em>onclick</em> event. Many would create custom events to monitor this behavior, but I find the native onclick event more than adequate for the job.</p>
 
-<div class="highlight"><pre><code class="js">    <span class="c1">//Event Handler</span>
-    <span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-         <span class="c1">//Setup an onclick event handler for each link</span>
-         <span class="kd">var</span> <span class="nx">links</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">links</span><span class="p">;</span>
-         <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">links</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-         <span class="c1">//Call Entourage whenever the link is clicked</span>
-             <span class="nx">links</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">onclick</span> <span class="o">=</span> <span class="nx">Entourage</span><span class="p">;</span>
-         <span class="p">}</span>
-     <span class="p">};</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">//Event Handler</span>
+<span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+     <span class="c1">//Setup an onclick event handler for each link</span>
+     <span class="kd">var</span> <span class="nx">links</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">links</span><span class="p">;</span>
+     <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">links</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+     <span class="c1">//Call Entourage whenever the link is clicked</span>
+         <span class="nx">links</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">onclick</span> <span class="o">=</span> <span class="nx">Entourage</span><span class="p">;</span>
+     <span class="p">}</span>
+ <span class="p">};</span></code></pre></div>
 
 
 <p>Also, it's important to note the <em>onload</em> event. Executing after the <em>onload</em> event has fired ensures the DOM is loaded by the time Entourage is ready to go to work.</p>
 
 <p>Another interesting note here is the ever vigilant <em>for</em> loop. I could have used a for in loop like this:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="c1">//Potential Alternative to the traditional for loop</span>
-    <span class="k">for</span><span class="p">(</span><span class="nx">link</span> <span class="k">in</span> <span class="nx">links</span><span class="p">)</span> <span class="p">{</span>
-       <span class="k">if</span><span class="p">(</span><span class="nx">links</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">(</span><span class="nx">link</span><span class="p">))</span> <span class="p">{</span>
-          <span class="nx">links</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">onclick</span> <span class="o">=</span> <span class="nx">Entourage</span><span class="p">;</span>      
-       <span class="p">}</span>
-    <span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">//Potential Alternative to the traditional for loop</span>
+<span class="k">for</span><span class="p">(</span><span class="nx">link</span> <span class="k">in</span> <span class="nx">links</span><span class="p">)</span> <span class="p">{</span>
+   <span class="k">if</span><span class="p">(</span><span class="nx">links</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">(</span><span class="nx">link</span><span class="p">))</span> <span class="p">{</span>
+      <span class="nx">links</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">onclick</span> <span class="o">=</span> <span class="nx">Entourage</span><span class="p">;</span>      
+   <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
 
 
 <p>The problem here is each link object is <a href="http://stackoverflow.com/questions/242841/javascript-foreach-vs-for">not ordered as you would expect</a>. Also, since hasOwnProperty is a method, it could be overwritten or replaced with an unexpected value. This could cause bugs that are hard to track.</p>
@@ -210,26 +199,25 @@
 
 <p>Some interesting parts here too. JavaScript implements perl-style regular expressions. The <em>fileTypes</em> variable is a regular expression literal that lists the acceptable file types.</p>
 
-<div class="highlight"><pre><code class="js">    <span class="c1">//Entourage</span>
-    <span class="nx">Entourage</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">fileTypes</span> <span class="o">=</span> <span class="sr">/\.doc$|\.eps$|\.jpg$|\.png$|\.svg$|\.xls$|\.ppt$|\.pdf$|\.xls$|\.zip$|\.txt$|\.vsd$|\.vxd$|\.js$|\.css$|\.rar$|\.exe$|\.dmg$|\.wma$|\.mov$|\.avi$|\.wmv$|\.mp3$/i</span><span class="p">;</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">//Entourage</span>
+<span class="nx">Entourage</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">fileTypes</span> <span class="o">=</span> <span class="sr">/\.doc$|\.eps$|\.jpg$|\.png$|\.svg$|\.xls$|\.ppt$|\.pdf$|\.xls$|\.zip$|\.txt$|\.vsd$|\.vxd$|\.js$|\.css$|\.rar$|\.exe$|\.dmg$|\.wma$|\.mov$|\.avi$|\.wmv$|\.mp3$/i</span><span class="p">;</span>
 
-        <span class="c1">//The link object is now available in &quot;this&quot;</span>
-        <span class="kd">var</span> <span class="nx">pathname</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">pathname</span><span class="p">;</span> 
-        <span class="kd">var</span> <span class="nx">fileName</span><span class="p">;</span>
-        <span class="kd">var</span> <span class="nx">autograph</span><span class="p">;</span>
+    <span class="c1">//The link object is now available in &quot;this&quot;</span>
+    <span class="kd">var</span> <span class="nx">pathname</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">pathname</span><span class="p">;</span> 
+    <span class="kd">var</span> <span class="nx">fileName</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">autograph</span><span class="p">;</span>
+        
+    <span class="c1">//File type match found</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">pathname</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="nx">fileTypes</span><span class="p">))</span> <span class="p">{</span>
+        <span class="c1">//Get the file name</span>
+        <span class="nx">fileName</span> <span class="o">=</span> <span class="nx">GetFileName</span><span class="p">(</span><span class="nx">pathname</span><span class="p">);</span>
             
-        <span class="c1">//File type match found</span>
-        <span class="k">if</span><span class="p">(</span><span class="nx">pathname</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="nx">fileTypes</span><span class="p">))</span> <span class="p">{</span>
-            <span class="c1">//Get the file name</span>
-            <span class="nx">fileName</span> <span class="o">=</span> <span class="nx">GetFileName</span><span class="p">(</span><span class="nx">pathname</span><span class="p">);</span>
-                
-            <span class="c1">//Add file to the Google Analytics Queue</span>
-            <span class="nx">autograph</span> <span class="o">=</span> <span class="s1">&#39;/download/&#39;</span> <span class="o">+</span> <span class="nx">fileName</span><span class="p">;</span>
-            <span class="nx">_gaq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;_trackPageview&#39;</span><span class="p">,</span> <span class="nx">autograph</span><span class="p">]);</span>
-        <span class="p">}</span>
-    <span class="p">};</span>
-</code></pre></div>
+        <span class="c1">//Add file to the Google Analytics Queue</span>
+        <span class="nx">autograph</span> <span class="o">=</span> <span class="s1">&#39;/download/&#39;</span> <span class="o">+</span> <span class="nx">fileName</span><span class="p">;</span>
+        <span class="nx">_gaq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;_trackPageview&#39;</span><span class="p">,</span> <span class="nx">autograph</span><span class="p">]);</span>
+    <span class="p">}</span>
+<span class="p">};</span></code></pre></div>
 
 
 <p>Some of the more popular file downloads to track are: <em>.pdf and </em>.zip</p>
@@ -246,20 +234,19 @@
 
 <p>Still with me? Good! <em>GetFileName</em> is probably thee most important method in Entourage.js!</p>
 
-<div class="highlight"><pre><code class="js">    <span class="c1">//Get true FileName from link pathname</span>
-    <span class="nx">GetFileName</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">pathname</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">//Remove the anchor at the end</span>
-        <span class="nx">pathname</span> <span class="o">=</span> <span class="nx">pathname</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="nx">pathname</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">?</span> <span class="nx">pathname</span><span class="p">.</span><span class="nx">length</span> <span class="o">:</span> <span class="nx">pathname</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">));</span>
-            
-        <span class="c1">//Removes the query after the file pathname</span>
-        <span class="nx">pathname</span> <span class="o">=</span> <span class="nx">pathname</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="nx">pathname</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&quot;?&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">?</span> <span class="nx">pathname</span><span class="p">.</span><span class="nx">length</span> <span class="o">:</span> <span class="nx">pathname</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&quot;?&quot;</span><span class="p">));</span>
-            
-        <span class="c1">//Removes everything before the last slash in the path</span>
-        <span class="nx">pathname</span> <span class="o">=</span> <span class="nx">pathname</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="nx">pathname</span><span class="p">.</span><span class="nx">lastIndexOf</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">pathname</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">//Get true FileName from link pathname</span>
+<span class="nx">GetFileName</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">pathname</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//Remove the anchor at the end</span>
+    <span class="nx">pathname</span> <span class="o">=</span> <span class="nx">pathname</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="nx">pathname</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">?</span> <span class="nx">pathname</span><span class="p">.</span><span class="nx">length</span> <span class="o">:</span> <span class="nx">pathname</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">));</span>
         
-        <span class="k">return</span> <span class="nx">pathname</span><span class="p">;</span>
-    <span class="p">};</span>
-</code></pre></div>
+    <span class="c1">//Removes the query after the file pathname</span>
+    <span class="nx">pathname</span> <span class="o">=</span> <span class="nx">pathname</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="nx">pathname</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&quot;?&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">?</span> <span class="nx">pathname</span><span class="p">.</span><span class="nx">length</span> <span class="o">:</span> <span class="nx">pathname</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&quot;?&quot;</span><span class="p">));</span>
+        
+    <span class="c1">//Removes everything before the last slash in the path</span>
+    <span class="nx">pathname</span> <span class="o">=</span> <span class="nx">pathname</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="nx">pathname</span><span class="p">.</span><span class="nx">lastIndexOf</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">pathname</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+    
+    <span class="k">return</span> <span class="nx">pathname</span><span class="p">;</span>
+<span class="p">};</span></code></pre></div>
 
 
 <p>It is incredibly difficult to extract a download's <em>fileName</em> from a link's <em>pathname</em> property.</p>
@@ -300,56 +287,55 @@
 
 <p>See an overview of the code at 10,000 FT:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="nx">entourage</span> <span class="o">=</span> <span class="k">new</span> <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">VERSION</span> <span class="o">=</span> <span class="s2">&quot;1.1.0&quot;</span><span class="p">;</span>
-        
-        <span class="c1">//Get true FileName from link pathname</span>
-        <span class="kd">var</span> <span class="nx">getFileName</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">pathname</span><span class="p">)</span> <span class="p">{</span>
-            <span class="c1">//No updates...</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">var</span> <span class="nx">entourage</span> <span class="o">=</span> <span class="k">new</span> <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">VERSION</span> <span class="o">=</span> <span class="s2">&quot;1.1.0&quot;</span><span class="p">;</span>
     
-            <span class="k">return</span> <span class="nx">pathname</span><span class="p">;</span>
-        <span class="p">};</span>
-    
-        <span class="kd">var</span> <span class="nx">autograph</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-            <span class="kd">var</span> <span class="nx">whitelist</span><span class="p">,</span> <span class="nx">pathname</span><span class="p">,</span> <span class="nx">match</span><span class="p">,</span> <span class="nx">fileName</span><span class="p">,</span> <span class="nx">associate</span><span class="p">;</span>
-            
-            <span class="nx">whitelist</span> <span class="o">=</span> <span class="sr">/\.pdf$|\.zip$|\.od*|\.doc*|\.xls*|\.ppt*|\.exe$|\.dmg$|\.mov$|\.avi$|\.mp3$/i</span><span class="p">;</span>
+    <span class="c1">//Get true FileName from link pathname</span>
+    <span class="kd">var</span> <span class="nx">getFileName</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">pathname</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//No updates...</span>
 
-            <span class="c1">//The link object is now available in &quot;this&quot;</span>
-            <span class="nx">pathname</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">pathname</span><span class="p">;</span>
-            
-            <span class="c1">//Compare the fileType to the whitelist</span>
-            <span class="nx">match</span> <span class="o">=</span> <span class="nx">pathname</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="nx">whitelist</span><span class="p">);</span>
-            
-            <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">match</span> <span class="o">!==</span> <span class="s2">&quot;undefined&quot;</span> <span class="o">&amp;&amp;</span> <span class="nx">match</span> <span class="o">!==</span> <span class="kc">null</span><span class="p">)</span> 
-            <span class="p">{</span>
-                <span class="c1">//Get the file name</span>
-                <span class="nx">fileName</span> <span class="o">=</span> <span class="nx">getFileName</span><span class="p">(</span><span class="nx">pathname</span><span class="p">);</span>
-    
-                <span class="c1">//Add file to the Google Analytics Queue</span>
-                <span class="nx">associate</span> <span class="o">=</span> <span class="s1">&#39;/download/&#39;</span> <span class="o">+</span> <span class="nx">fileName</span><span class="p">;</span>
-                <span class="nx">_gaq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;_trackPageview&#39;</span><span class="p">,</span> <span class="nx">associate</span><span class="p">]);</span>
-            <span class="p">}</span>
-        <span class="p">};</span>
-    
-        <span class="k">this</span><span class="p">.</span><span class="nx">initialize</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-            <span class="kd">var</span> <span class="nx">links</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">links</span><span class="p">;</span>
-            
-            <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nx">l</span><span class="o">=</span><span class="nx">links</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">l</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-                <span class="c1">//Call Entourage whenever the link is clicked</span>
-                <span class="nx">links</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">onclick</span> <span class="o">=</span> <span class="nx">autograph</span><span class="p">;</span>
-            <span class="p">}</span>
-        <span class="p">};</span>
-    <span class="p">})();</span> <span class="c1">//Entourage.js</span>
-    
-    <span class="c1">//Add entourage to the global namespace</span>
-    <span class="nb">window</span><span class="p">.</span><span class="nx">entourage</span> <span class="o">=</span> <span class="nx">entourage</span><span class="p">;</span>
-    
-    <span class="c1">//Execute onload - ensuring links are present in the DOM</span>
-    <span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="nx">entourage</span><span class="p">.</span><span class="nx">initialize</span><span class="p">;</span>
-    <span class="p">})();</span>
-</code></pre></div>
+        <span class="k">return</span> <span class="nx">pathname</span><span class="p">;</span>
+    <span class="p">};</span>
+
+    <span class="kd">var</span> <span class="nx">autograph</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">whitelist</span><span class="p">,</span> <span class="nx">pathname</span><span class="p">,</span> <span class="nx">match</span><span class="p">,</span> <span class="nx">fileName</span><span class="p">,</span> <span class="nx">associate</span><span class="p">;</span>
+        
+        <span class="nx">whitelist</span> <span class="o">=</span> <span class="sr">/\.pdf$|\.zip$|\.od*|\.doc*|\.xls*|\.ppt*|\.exe$|\.dmg$|\.mov$|\.avi$|\.mp3$/i</span><span class="p">;</span>
+
+        <span class="c1">//The link object is now available in &quot;this&quot;</span>
+        <span class="nx">pathname</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">pathname</span><span class="p">;</span>
+        
+        <span class="c1">//Compare the fileType to the whitelist</span>
+        <span class="nx">match</span> <span class="o">=</span> <span class="nx">pathname</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="nx">whitelist</span><span class="p">);</span>
+        
+        <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">match</span> <span class="o">!==</span> <span class="s2">&quot;undefined&quot;</span> <span class="o">&amp;&amp;</span> <span class="nx">match</span> <span class="o">!==</span> <span class="kc">null</span><span class="p">)</span> 
+        <span class="p">{</span>
+            <span class="c1">//Get the file name</span>
+            <span class="nx">fileName</span> <span class="o">=</span> <span class="nx">getFileName</span><span class="p">(</span><span class="nx">pathname</span><span class="p">);</span>
+
+            <span class="c1">//Add file to the Google Analytics Queue</span>
+            <span class="nx">associate</span> <span class="o">=</span> <span class="s1">&#39;/download/&#39;</span> <span class="o">+</span> <span class="nx">fileName</span><span class="p">;</span>
+            <span class="nx">_gaq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;_trackPageview&#39;</span><span class="p">,</span> <span class="nx">associate</span><span class="p">]);</span>
+        <span class="p">}</span>
+    <span class="p">};</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">initialize</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">links</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">links</span><span class="p">;</span>
+        
+        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nx">l</span><span class="o">=</span><span class="nx">links</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">l</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">//Call Entourage whenever the link is clicked</span>
+            <span class="nx">links</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">onclick</span> <span class="o">=</span> <span class="nx">autograph</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">};</span>
+<span class="p">})();</span> <span class="c1">//Entourage.js</span>
+
+<span class="c1">//Add entourage to the global namespace</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">entourage</span> <span class="o">=</span> <span class="nx">entourage</span><span class="p">;</span>
+
+<span class="c1">//Execute onload - ensuring links are present in the DOM</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="nx">entourage</span><span class="p">.</span><span class="nx">initialize</span><span class="p">;</span>
+<span class="p">})();</span></code></pre></div>
 
 
 <h4>Usability and User Experience</h4>
@@ -362,12 +348,11 @@
 
 <p>I setup an experiment to test this idea. One implemented Entourage.js as a <em>trackEvent and the other as a </em>trackPreview. To get access to download count for a file, I found this:</p>
 
-<div class="highlight"><pre><code class="js"><span class="o">**</span><span class="nx">_trackPageview</span><span class="o">**</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="o">**</span><span class="nx">_trackPageview</span><span class="o">**</span>
 <span class="mi">2</span> <span class="nx">clicks</span>
 
 <span class="o">**</span><span class="nx">_trackEvent</span><span class="o">**</span>
-<span class="mi">4</span> <span class="nx">clicks</span>
-</code></pre></div>
+<span class="mi">4</span> <span class="nx">clicks</span></code></pre></div>
 
 
 <p>Two extra clicks for <em>trackEvent. That really is a big deal! But, even if I find it negligible, what wasn't negligible was how I felt using Top Content via </em>trackPageview versus Event Tracking via _trackEvent.</p>

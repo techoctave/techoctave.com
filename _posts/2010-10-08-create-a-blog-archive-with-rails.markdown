@@ -19,10 +19,10 @@ Learning to group a collection of your posts by month can be confusing at first.
 ####app/controllers/archives_controller.rb
 
 {% highlight ruby %}
-    def index
-        @posts = Post.all(:select => "title, id, posted_at", :order => "posted_at DESC")
-        @post_months = @posts.group_by { |t| t.posted_at.beginning_of_month }
-    end
+def index
+    @posts = Post.all(:select => "title, id, posted_at", :order => "posted_at DESC")
+    @post_months = @posts.group_by { |t| t.posted_at.beginning_of_month }
+end
 {% endhighlight %}
 
 The code gets your collection of posts. Then it gets each post's corresponding post date. 
@@ -34,18 +34,18 @@ Another feature of this code is I'm grouping by month. Now, this may sound more 
 ####app/views/archives/index.html.erb
 
 {% highlight ruby %}
-    <div class="archives">
-    	<h2>Blog Archive</h2>
-    	
-    	<% @post_months.sort.reverse.each do |month, posts| %>
-    	<h3><%=h month.strftime("%B %Y") %></h3>
-    	<ul>
-    		<% for post in posts %>
-    		<li><%=h link_to post.title, post_path(post) %></li>
-    		<% end %>
-    	</ul>
-    	<% end %>
-    </div>
+<div class="archives">
+	<h2>Blog Archive</h2>
+	
+	<% @post_months.sort.reverse.each do |month, posts| %>
+	<h3><%=h month.strftime("%B %Y") %></h3>
+	<ul>
+		<% for post in posts %>
+		<li><%=h link_to post.title, post_path(post) %></li>
+		<% end %>
+	</ul>
+	<% end %>
+</div>
 {% endhighlight %}
 
 This will display a month, then list each blog post for that month. When complete, it will list the next month, etc. Initially, your posts will display from oldest to newest. If that's what you want, then you're done. 

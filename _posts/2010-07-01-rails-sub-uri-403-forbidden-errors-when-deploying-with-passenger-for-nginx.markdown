@@ -16,7 +16,7 @@ Not too long after, the client's developer calls me freaking out! He'd been work
 After hearing 403 Forbidden, immediately I knew he had a symlink issue. The problem is a very subtle misunderstanding in the way the Passenger for Nginx documentation reads. To create a sub URI, you want to create a symlink of your Rails app's public directory to your domain's public_html directory:
 
 {% highlight bash %}
-    ln -s /webapps/mycook/public /websites/phusion/rails
+ln -s /webapps/mycook/public /websites/phusion/rails
 {% endhighlight %}
 
 The problem is many developers mistakenly create a *rails* folder in the public_html directory. So when the above code is executed, a symlink named public will be created in that directory. This will create nasty 403 Forbidden errors because no index.html file exists in the folder and directory listing is disabled by Nginx.

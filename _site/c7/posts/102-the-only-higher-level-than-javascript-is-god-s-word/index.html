@@ -27,8 +27,8 @@
 	
     <div class="feat">
       <h5 class="page-date">
-        <time datetime="2013-02-23T03:51:54Z" itemprop="datePublished">
-          23 February 2013
+        <time datetime="2013-02-22T22:51:54-05:00" itemprop="datePublished">
+          22 February 2013
         </time>
       </h5>
     </div>
@@ -56,11 +56,10 @@
 
 <p>Machine code is the only language a microprocessor can process directly without a previous transformation.</p>
 
-<div class="highlight"><pre><code class="js">    <span class="mi">8</span><span class="nx">B542408</span> <span class="mi">83</span><span class="nx">FA0077</span> <span class="mi">06</span><span class="nx">B80000</span> <span class="mi">0000</span><span class="nx">C383</span>
-    <span class="nx">FA027706</span> <span class="nx">B8010000</span> <span class="mi">00</span><span class="nx">C353BB</span> <span class="mi">01000000</span>
-    <span class="nx">B9010000</span> <span class="mi">008</span><span class="nx">D0419</span> <span class="mi">83</span><span class="nx">FA0376</span> <span class="mi">078</span><span class="nx">BD98B</span>
-    <span class="nx">C84AEBF1</span> <span class="mi">5</span><span class="nx">BC3</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="mi">8</span><span class="nx">B542408</span> <span class="mi">83</span><span class="nx">FA0077</span> <span class="mi">06</span><span class="nx">B80000</span> <span class="mi">0000</span><span class="nx">C383</span>
+<span class="nx">FA027706</span> <span class="nx">B8010000</span> <span class="mi">00</span><span class="nx">C353BB</span> <span class="mi">01000000</span>
+<span class="nx">B9010000</span> <span class="mi">008</span><span class="nx">D0419</span> <span class="mi">83</span><span class="nx">FA0376</span> <span class="mi">078</span><span class="nx">BD98B</span>
+<span class="nx">C84AEBF1</span> <span class="mi">5</span><span class="nx">BC3</span></code></pre></div>
 
 
 <p>Above is a function in 32-bit x86 machine code to calculate the nth Fibonacci number.</p>
@@ -73,37 +72,36 @@
 
 <p>An <a href="http://flint.cs.yale.edu/cs422/doc/art-of-asm/pdf/CH08.PDF">assembly language</a> is a low-level programming language for a computer, microcontroller, or other programmable device, in which each statement corresponds to a single machine code instruction:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="nx">fib</span><span class="o">:</span>
-        <span class="nx">mov</span> <span class="nx">edx</span><span class="p">,</span> <span class="p">[</span><span class="nx">esp</span><span class="o">+</span><span class="mi">8</span><span class="p">]</span>
-        <span class="nx">cmp</span> <span class="nx">edx</span><span class="p">,</span> <span class="mi">0</span>
-        <span class="nx">ja</span> <span class="err">@</span><span class="nx">f</span>
-        <span class="nx">mov</span> <span class="nx">eax</span><span class="p">,</span> <span class="mi">0</span>
-        <span class="nx">ret</span>
-        
-        <span class="err">@@</span><span class="o">:</span>
-        <span class="nx">cmp</span> <span class="nx">edx</span><span class="p">,</span> <span class="mi">2</span>
-        <span class="nx">ja</span> <span class="err">@</span><span class="nx">f</span>
-        <span class="nx">mov</span> <span class="nx">eax</span><span class="p">,</span> <span class="mi">1</span>
-        <span class="nx">ret</span>
-        
-        <span class="err">@@</span><span class="o">:</span>
-        <span class="nx">push</span> <span class="nx">ebx</span>
-        <span class="nx">mov</span> <span class="nx">ebx</span><span class="p">,</span> <span class="mi">1</span>
-        <span class="nx">mov</span> <span class="nx">ecx</span><span class="p">,</span> <span class="mi">1</span>
-        
-        <span class="err">@@</span><span class="o">:</span>
-            <span class="nx">lea</span> <span class="nx">eax</span><span class="p">,</span> <span class="p">[</span><span class="nx">ebx</span><span class="o">+</span><span class="nx">ecx</span><span class="p">]</span>
-            <span class="nx">cmp</span> <span class="nx">edx</span><span class="p">,</span> <span class="mi">3</span>
-            <span class="nx">jbe</span> <span class="err">@</span><span class="nx">f</span>
-            <span class="nx">mov</span> <span class="nx">ebx</span><span class="p">,</span> <span class="nx">ecx</span>
-            <span class="nx">mov</span> <span class="nx">ecx</span><span class="p">,</span> <span class="nx">eax</span>
-            <span class="nx">dec</span> <span class="nx">edx</span>
-        <span class="nx">jmp</span> <span class="err">@</span><span class="nx">b</span>
-        
-        <span class="err">@@</span><span class="o">:</span>
-        <span class="nx">pop</span> <span class="nx">ebx</span>
-        <span class="nx">ret</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">fib</span><span class="o">:</span>
+    <span class="nx">mov</span> <span class="nx">edx</span><span class="p">,</span> <span class="p">[</span><span class="nx">esp</span><span class="o">+</span><span class="mi">8</span><span class="p">]</span>
+    <span class="nx">cmp</span> <span class="nx">edx</span><span class="p">,</span> <span class="mi">0</span>
+    <span class="nx">ja</span> <span class="err">@</span><span class="nx">f</span>
+    <span class="nx">mov</span> <span class="nx">eax</span><span class="p">,</span> <span class="mi">0</span>
+    <span class="nx">ret</span>
+    
+    <span class="err">@@</span><span class="o">:</span>
+    <span class="nx">cmp</span> <span class="nx">edx</span><span class="p">,</span> <span class="mi">2</span>
+    <span class="nx">ja</span> <span class="err">@</span><span class="nx">f</span>
+    <span class="nx">mov</span> <span class="nx">eax</span><span class="p">,</span> <span class="mi">1</span>
+    <span class="nx">ret</span>
+    
+    <span class="err">@@</span><span class="o">:</span>
+    <span class="nx">push</span> <span class="nx">ebx</span>
+    <span class="nx">mov</span> <span class="nx">ebx</span><span class="p">,</span> <span class="mi">1</span>
+    <span class="nx">mov</span> <span class="nx">ecx</span><span class="p">,</span> <span class="mi">1</span>
+    
+    <span class="err">@@</span><span class="o">:</span>
+        <span class="nx">lea</span> <span class="nx">eax</span><span class="p">,</span> <span class="p">[</span><span class="nx">ebx</span><span class="o">+</span><span class="nx">ecx</span><span class="p">]</span>
+        <span class="nx">cmp</span> <span class="nx">edx</span><span class="p">,</span> <span class="mi">3</span>
+        <span class="nx">jbe</span> <span class="err">@</span><span class="nx">f</span>
+        <span class="nx">mov</span> <span class="nx">ebx</span><span class="p">,</span> <span class="nx">ecx</span>
+        <span class="nx">mov</span> <span class="nx">ecx</span><span class="p">,</span> <span class="nx">eax</span>
+        <span class="nx">dec</span> <span class="nx">edx</span>
+    <span class="nx">jmp</span> <span class="err">@</span><span class="nx">b</span>
+    
+    <span class="err">@@</span><span class="o">:</span>
+    <span class="nx">pop</span> <span class="nx">ebx</span>
+    <span class="nx">ret</span></code></pre></div>
 
 
 <p>The same Fibonacci number calculator as above, but in x86 assembly language using <a href="http://msdn.microsoft.com/en-us/library/afzk3475(v=vs.80).aspx">MASM</a> syntax.</p>
@@ -130,42 +128,40 @@
 
 <p>That abstraction forms the basis of what developers come to expect in a modern programming language:</p>
 
-<div class="highlight"><pre><code class="js"> <span class="mi">1</span><span class="p">.</span> <span class="nx">Advanced</span> <span class="nx">Control</span> <span class="nx">Structures</span>
- 
- <span class="mi">2</span><span class="p">.</span> <span class="nx">Abstract</span> <span class="nx">Data</span> <span class="nx">Types</span>
- 
- <span class="mi">3</span><span class="p">.</span> <span class="nb">Object</span> <span class="nx">Oriented</span> <span class="nx">Programming</span> <span class="nx">Constructs</span>
- 
- <span class="mi">4</span><span class="p">.</span> <span class="nx">Functional</span> <span class="nx">Programming</span> <span class="nx">Constructs</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="mi">1</span><span class="p">.</span> <span class="nx">Advanced</span> <span class="nx">Control</span> <span class="nx">Structures</span>
+
+<span class="mi">2</span><span class="p">.</span> <span class="nx">Abstract</span> <span class="nx">Data</span> <span class="nx">Types</span>
+
+<span class="mi">3</span><span class="p">.</span> <span class="nb">Object</span> <span class="nx">Oriented</span> <span class="nx">Programming</span> <span class="nx">Constructs</span>
+
+<span class="mi">4</span><span class="p">.</span> <span class="nx">Functional</span> <span class="nx">Programming</span> <span class="nx">Constructs</span></code></pre></div>
 
 
 <p>JavaScript has all these fundamental constructs of a high-level programming language. That's why it's so versatile. That's why it's so ubiquitous:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="kd">var</span> <span class="nx">Light</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">_super</span><span class="p">)</span> <span class="p">{</span>
-    
-        <span class="kd">function</span> <span class="nx">Light</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">color</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">_super</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">id</span><span class="p">);</span>
-    
-            <span class="k">this</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="nx">color</span><span class="p">;</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Start Light: &quot;</span> <span class="o">+</span> <span class="nx">color</span><span class="p">);</span>
-    
-            <span class="nx">_super</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">drawTerminal</span><span class="p">();</span>
-        <span class="p">}</span>
-    
-        <span class="nx">Light</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">setColor</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">color</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">this</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="nx">color</span><span class="p">;</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Change Light: &quot;</span> <span class="o">+</span> <span class="nx">color</span><span class="p">);</span>
-        <span class="p">}</span>
-    
-        <span class="nx">Light</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">getColor</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Color: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">);</span>
-            <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">;</span>
-        <span class="p">}</span>
-    
-        <span class="k">return</span> <span class="nx">Light</span><span class="p">;</span>
-    <span class="p">})(</span><span class="nx">Base</span><span class="p">);</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">Light</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">_super</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="kd">function</span> <span class="nx">Light</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">color</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">_super</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">id</span><span class="p">);</span>
+
+        <span class="k">this</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="nx">color</span><span class="p">;</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Start Light: &quot;</span> <span class="o">+</span> <span class="nx">color</span><span class="p">);</span>
+
+        <span class="nx">_super</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">drawTerminal</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="nx">Light</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">setColor</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">color</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="nx">color</span><span class="p">;</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Change Light: &quot;</span> <span class="o">+</span> <span class="nx">color</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nx">Light</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">getColor</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Color: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">);</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nx">Light</span><span class="p">;</span>
+<span class="p">})(</span><span class="nx">Base</span><span class="p">);</span></code></pre></div>
 
 
 <p>People will continue to parrot <a href="http://www.hanselman.com/blog/JavaScriptIsAssemblyLanguageForTheWebPart2MadnessOrJustInsanity.aspx">JavaScript is the assembly language for the web</a>. Ignorance is a choice. But, that doesn't change the facts that JavaScript contains every high-level abstraction developers need to be productive.</p>

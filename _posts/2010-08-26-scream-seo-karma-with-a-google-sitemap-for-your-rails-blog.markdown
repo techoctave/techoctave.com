@@ -20,13 +20,13 @@ I know some of you are anxious to jump into the code, so let's get to it:
 Create the following Rails route:
 
 {% highlight ruby %}
-    map.sitemap 'sitemap.xml', :controller => 'sitemap'
+map.sitemap 'sitemap.xml', :controller => 'sitemap'
 {% endhighlight %}
 
 UPDATE: Above route was written for Rails 2.3.8. Here is the updated route for Rails 3.0. Remaining code is Rails 3.0 complaint:
 
 {% highlight ruby %}
-    match 'sitemap', :to => 'sitemap#index', :via => [:get]
+match 'sitemap', :to => 'sitemap#index', :via => [:get]
 {% endhighlight %}
 
 ####app/controllers/sitemap_controller.rb
@@ -34,15 +34,15 @@ UPDATE: Above route was written for Rails 2.3.8. Here is the updated route for R
 Create the following Rails controller to serve the Google sitemap requests:
 
 {% highlight ruby %}
-    class SitemapController < ApplicationController
-      def index
-        @posts = Post.all(:select => "title, id, updated_at", :order => "updated_at DESC", :limit => 50000) 
-        
-        respond_to do |format|
-          format.xml { render :layout => false }
-        end
-      end
+class SitemapController < ApplicationController
+  def index
+    @posts = Post.all(:select => "title, id, updated_at", :order => "updated_at DESC", :limit => 50000) 
+    
+    respond_to do |format|
+      format.xml { render :layout => false }
     end
+  end
+end
 {% endhighlight %}
 
 ####app/views/sitemap/index.xml.builder
@@ -50,17 +50,17 @@ Create the following Rails controller to serve the Google sitemap requests:
 The *.xml.builder file does the work of formatting the list of Posts into a Google sitemap compliant file: 
 
 {% highlight ruby %}
-    xml.instruct! :xml, :version => "1.0"
-    xml.urlset "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9" do
-      for post in @posts do
-        xml.url do
-          xml.loc post_url(post)
-          xml.lastmod post.updated_at.to_date
-          xml.changefreq "monthly"
-          xml.priority "0.5"
-        end
-      end
+xml.instruct! :xml, :version => "1.0"
+xml.urlset "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9" do
+  for post in @posts do
+    xml.url do
+      xml.loc post_url(post)
+      xml.lastmod post.updated_at.to_date
+      xml.changefreq "monthly"
+      xml.priority "0.5"
     end
+  end
+end
 {% endhighlight %}
 
 Beware, there is a 50,000 URL limit for each sitemap you submit to Google through its indexing service.
@@ -69,7 +69,7 @@ Beware, there is a 50,000 URL limit for each sitemap you submit to Google throug
 You can also automate your sitemap.xml submissions to Google using this handy Cronjob on Ubuntu or any flavor of linux:
 
 {% highlight bash %}
-    0 20 * * * /usr/bin/curl http://www.google.com/webmasters/tools/ping?sitemap=http://yourdomain.com/sitemap.xml > /dev/null
+0 20 * * * /usr/bin/curl http://www.google.com/webmasters/tools/ping?sitemap=http://yourdomain.com/sitemap.xml > /dev/null
 {% endhighlight %}
 
 Do pay attention to the */user/bin/curl* directive. You must give the *absolute* path to your instance of curl. Also, I don't want to handle any responses from Google, so I send any responses to */dev/null*. Think of */dev/null* as a black hole where data goes in and is never stored or seen again!

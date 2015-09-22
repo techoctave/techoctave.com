@@ -27,7 +27,7 @@
 	
     <div class="feat">
       <h5 class="page-date">
-        <time datetime="2012-02-27T10:04:41Z" itemprop="datePublished">
+        <time datetime="2012-02-27T05:04:41-05:00" itemprop="datePublished">
           27 February 2012
         </time>
       </h5>
@@ -56,17 +56,15 @@
 
 <p><strong>Problems:</strong></p>
 
-<div class="highlight"><pre><code class="ruby"> <span class="o">-</span> <span class="no">Operation</span> <span class="p">(</span><span class="s2">&quot;Show&quot;</span><span class="p">)</span> <span class="n">included</span> <span class="k">in</span> <span class="n">the</span> <span class="no">URL</span>
- <span class="o">-</span> <span class="no">Status</span> <span class="no">ID</span> <span class="ow">not</span> <span class="n">a</span> <span class="n">child</span> <span class="n">of</span> <span class="n">the</span> <span class="s2">&quot;statuses&quot;</span> <span class="n">collection</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">-</span> <span class="no">Operation</span> <span class="p">(</span><span class="s2">&quot;Show&quot;</span><span class="p">)</span> <span class="n">included</span> <span class="k">in</span> <span class="n">the</span> <span class="no">URL</span>
+<span class="o">-</span> <span class="no">Status</span> <span class="no">ID</span> <span class="ow">not</span> <span class="n">a</span> <span class="n">child</span> <span class="n">of</span> <span class="n">the</span> <span class="s2">&quot;statuses&quot;</span> <span class="n">collection</span></code></pre></div>
 
 
 <p><strong>Better:</strong> GET http://twitter.com/tweets/id.format</p>
 
-<div class="highlight"><pre><code class="ruby"> <span class="o">-</span> <span class="no">Show</span> <span class="n">via</span> <span class="n">combo</span> <span class="n">of</span> <span class="no">GET</span> <span class="no">HTTP</span> <span class="no">Verb</span> <span class="ow">and</span> <span class="n">tweets</span> <span class="no">Resource</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">-</span> <span class="no">Show</span> <span class="n">via</span> <span class="n">combo</span> <span class="n">of</span> <span class="no">GET</span> <span class="no">HTTP</span> <span class="no">Verb</span> <span class="ow">and</span> <span class="n">tweets</span> <span class="no">Resource</span>
 
- <span class="o">-</span> <span class="no">Internet</span> <span class="no">Media</span> <span class="n">type</span> <span class="n">returned</span> <span class="n">could</span> <span class="n">be</span> <span class="no">JSON</span><span class="p">,</span> <span class="no">XML</span><span class="p">,</span> <span class="no">SOAP</span><span class="p">,</span> <span class="n">etc</span><span class="o">.</span>
-</code></pre></div>
+<span class="o">-</span> <span class="no">Internet</span> <span class="no">Media</span> <span class="n">type</span> <span class="n">returned</span> <span class="n">could</span> <span class="n">be</span> <span class="no">JSON</span><span class="p">,</span> <span class="no">XML</span><span class="p">,</span> <span class="no">SOAP</span><span class="p">,</span> <span class="n">etc</span><span class="o">.</span></code></pre></div>
 
 
 <h4>Example #2: Statuses/Update</h4>
@@ -75,19 +73,17 @@
 
 <p><strong>Problems:</strong></p>
 
-<div class="highlight"><pre><code class="ruby"> <span class="o">-</span> <span class="no">Operation</span> <span class="p">(</span><span class="s2">&quot;update&quot;</span><span class="p">)</span> <span class="n">included</span> <span class="k">in</span> <span class="n">the</span> <span class="no">URL</span>
- <span class="o">-</span> <span class="no">Uses</span> <span class="n">the</span> <span class="n">authenticated</span> <span class="n">user</span> <span class="n">implicitly</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">-</span> <span class="no">Operation</span> <span class="p">(</span><span class="s2">&quot;update&quot;</span><span class="p">)</span> <span class="n">included</span> <span class="k">in</span> <span class="n">the</span> <span class="no">URL</span>
+<span class="o">-</span> <span class="no">Uses</span> <span class="n">the</span> <span class="n">authenticated</span> <span class="n">user</span> <span class="n">implicitly</span></code></pre></div>
 
 
 <p><strong>Better:</strong> PUT http://twitter.com/tweets/id.format</p>
 
-<div class="highlight"><pre><code class="ruby"> <span class="o">-</span> <span class="no">User</span> <span class="n">authentication</span> <span class="n">via</span> <span class="no">OAuth</span> <span class="ow">or</span> <span class="no">Basic</span> <span class="no">Authentication</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">-</span> <span class="no">User</span> <span class="n">authentication</span> <span class="n">via</span> <span class="no">OAuth</span> <span class="ow">or</span> <span class="no">Basic</span> <span class="no">Authentication</span>
 
- <span class="o">-</span> <span class="no">Update</span> <span class="n">via</span> <span class="n">combo</span> <span class="n">of</span> <span class="no">PUT</span> <span class="no">HTTP</span> <span class="no">Verb</span> <span class="ow">and</span> <span class="n">tweets</span> <span class="no">Resource</span>
+<span class="o">-</span> <span class="no">Update</span> <span class="n">via</span> <span class="n">combo</span> <span class="n">of</span> <span class="no">PUT</span> <span class="no">HTTP</span> <span class="no">Verb</span> <span class="ow">and</span> <span class="n">tweets</span> <span class="no">Resource</span>
 
- <span class="o">-</span> <span class="no">Internet</span> <span class="no">Media</span> <span class="n">type</span> <span class="n">returned</span> <span class="n">could</span> <span class="n">be</span> <span class="no">JSON</span><span class="p">,</span> <span class="no">XML</span><span class="p">,</span> <span class="no">SOAP</span><span class="p">,</span> <span class="n">etc</span><span class="o">.</span>
-</code></pre></div>
+<span class="o">-</span> <span class="no">Internet</span> <span class="no">Media</span> <span class="n">type</span> <span class="n">returned</span> <span class="n">could</span> <span class="n">be</span> <span class="no">JSON</span><span class="p">,</span> <span class="no">XML</span><span class="p">,</span> <span class="no">SOAP</span><span class="p">,</span> <span class="n">etc</span><span class="o">.</span></code></pre></div>
 
 
 <h4>Example #3: Statuses/Destroy</h4>
@@ -96,18 +92,16 @@
 
 <p><strong>Problems:</strong></p>
 
-<div class="highlight"><pre><code class="ruby"> <span class="o">-</span> <span class="no">Operation</span> <span class="p">(</span><span class="s2">&quot;destroy&quot;</span><span class="p">)</span> <span class="n">included</span> <span class="k">in</span> <span class="no">URL</span> <span class="n">like</span> <span class="n">it</span><span class="err">&#39;</span><span class="n">s</span> <span class="mi">1997</span><span class="o">.</span>
- <span class="o">-</span> <span class="no">Odd</span><span class="p">,</span> <span class="n">illogical</span> <span class="n">hierarchy</span> <span class="n">again</span>
- <span class="o">-</span> <span class="no">Allows</span> <span class="n">both</span> <span class="s2">&quot;POST&quot;</span> <span class="ow">and</span> <span class="s2">&quot;DELETE&quot;</span> <span class="n">as</span> <span class="n">verbs</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">-</span> <span class="no">Operation</span> <span class="p">(</span><span class="s2">&quot;destroy&quot;</span><span class="p">)</span> <span class="n">included</span> <span class="k">in</span> <span class="no">URL</span> <span class="n">like</span> <span class="n">it</span><span class="err">&#39;</span><span class="n">s</span> <span class="mi">1997</span><span class="o">.</span>
+<span class="o">-</span> <span class="no">Odd</span><span class="p">,</span> <span class="n">illogical</span> <span class="n">hierarchy</span> <span class="n">again</span>
+<span class="o">-</span> <span class="no">Allows</span> <span class="n">both</span> <span class="s2">&quot;POST&quot;</span> <span class="ow">and</span> <span class="s2">&quot;DELETE&quot;</span> <span class="n">as</span> <span class="n">verbs</span></code></pre></div>
 
 
 <p><strong>Better:</strong> DELETE http://twitter.com/tweets/id.format</p>
 
-<div class="highlight"><pre><code class="ruby"> <span class="o">-</span> <span class="no">Delete</span> <span class="n">via</span> <span class="n">combo</span> <span class="n">of</span> <span class="no">DELETE</span> <span class="no">HTTP</span> <span class="no">Verb</span> <span class="ow">and</span> <span class="n">tweets</span> <span class="no">Resource</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">-</span> <span class="no">Delete</span> <span class="n">via</span> <span class="n">combo</span> <span class="n">of</span> <span class="no">DELETE</span> <span class="no">HTTP</span> <span class="no">Verb</span> <span class="ow">and</span> <span class="n">tweets</span> <span class="no">Resource</span>
 
- <span class="o">-</span> <span class="no">Internet</span> <span class="no">Media</span> <span class="n">type</span> <span class="n">returned</span> <span class="n">could</span> <span class="n">be</span> <span class="no">JSON</span><span class="p">,</span> <span class="no">XML</span><span class="p">,</span> <span class="no">SOAP</span><span class="p">,</span> <span class="n">etc</span><span class="o">.</span>
-</code></pre></div>
+<span class="o">-</span> <span class="no">Internet</span> <span class="no">Media</span> <span class="n">type</span> <span class="n">returned</span> <span class="n">could</span> <span class="n">be</span> <span class="no">JSON</span><span class="p">,</span> <span class="no">XML</span><span class="p">,</span> <span class="no">SOAP</span><span class="p">,</span> <span class="n">etc</span><span class="o">.</span></code></pre></div>
 
 
 <h3>Summary</h3>
@@ -120,26 +114,22 @@
 
 <p>GET http://twitter.com/tweets/</p>
 
-<div class="highlight"><pre><code class="ruby"><span class="o">-</span> <span class="no">GET</span> <span class="n">to</span> <span class="n">fetch</span> <span class="n">a</span> <span class="n">list</span> <span class="n">tweets</span> <span class="k">for</span> <span class="n">the</span> <span class="n">authenticated</span> <span class="n">user</span><span class="o">.</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">-</span> <span class="no">GET</span> <span class="n">to</span> <span class="n">fetch</span> <span class="n">a</span> <span class="n">list</span> <span class="n">tweets</span> <span class="k">for</span> <span class="n">the</span> <span class="n">authenticated</span> <span class="n">user</span><span class="o">.</span></code></pre></div>
 
 
 <p>POST http://twitter.com/tweets/</p>
 
-<div class="highlight"><pre><code class="ruby"><span class="o">-</span> <span class="no">POST</span> <span class="n">to</span> <span class="n">create</span> <span class="n">a</span> <span class="kp">new</span> <span class="n">tweet</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">-</span> <span class="no">POST</span> <span class="n">to</span> <span class="n">create</span> <span class="n">a</span> <span class="kp">new</span> <span class="n">tweet</span></code></pre></div>
 
 
 <p>PUT http://twitter.com/tweets/12345</p>
 
-<div class="highlight"><pre><code class="ruby"><span class="o">-</span> <span class="no">PUT</span> <span class="n">to</span> <span class="n">update</span> <span class="n">tweet</span> <span class="mi">12345</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">-</span> <span class="no">PUT</span> <span class="n">to</span> <span class="n">update</span> <span class="n">tweet</span> <span class="mi">12345</span></code></pre></div>
 
 
 <p>DELETE http://twitter.com/tweets/12345</p>
 
-<div class="highlight"><pre><code class="ruby"><span class="o">-</span> <span class="no">DELETE</span> <span class="n">to</span> <span class="n">delete</span> <span class="n">tweet</span> <span class="mi">12345</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">-</span> <span class="no">DELETE</span> <span class="n">to</span> <span class="n">delete</span> <span class="n">tweet</span> <span class="mi">12345</span></code></pre></div>
 
 
 

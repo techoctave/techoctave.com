@@ -2,7 +2,7 @@
 layout: marketing
 title:  "Marketing for Geeks: The Secrets of Making that First Sale."
 date:   2000-01-01 00:00:00
-permalink: /
+permalink: /marketing-for-geeks/
 ---
 
 #Marketing for Geeks

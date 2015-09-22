@@ -27,7 +27,7 @@
 	
     <div class="feat">
       <h5 class="page-date">
-        <time datetime="2012-10-26T04:03:03Z" itemprop="datePublished">
+        <time datetime="2012-10-26T00:03:03-04:00" itemprop="datePublished">
           26 October 2012
         </time>
       </h5>
@@ -60,34 +60,32 @@
 
 <p>In particular, let's focus on two components of the power panel:</p>
 
-<div class="highlight"><pre><code class="js"> <span class="mi">1</span><span class="p">.</span> <span class="nx">Glow</span> <span class="nx">Starter</span> <span class="nx">Light</span>
- 
- <span class="mi">2</span><span class="p">.</span> <span class="nx">Fuel</span> <span class="nx">Pimp</span> <span class="nx">Fill</span> <span class="nx">Button</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="mi">1</span><span class="p">.</span> <span class="nx">Glow</span> <span class="nx">Starter</span> <span class="nx">Light</span>
+
+<span class="mi">2</span><span class="p">.</span> <span class="nx">Fuel</span> <span class="nx">Pimp</span> <span class="nx">Fill</span> <span class="nx">Button</span></code></pre></div>
 
 
 <p>In classical object oriented fashion, you'd reason both the Light and the Button share a base each uses to embed itself within the power panel. From there both the Light and Button would go on to have distinct properties and methods.</p>
 
 <p>In JavaScript, this base class would be modeled like this:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="kd">var</span> <span class="nx">Base</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kd">function</span> <span class="nx">Base</span><span class="p">(</span><span class="nx">id</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;base: &quot;</span> <span class="o">+</span> <span class="nx">id</span><span class="p">);</span>
-            <span class="k">this</span><span class="p">.</span><span class="nx">id</span> <span class="o">=</span> <span class="nx">id</span><span class="p">;</span>
-        <span class="p">}</span>
-        
-        <span class="nx">Base</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">drawTerminal</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;drawTerminal&quot;</span><span class="p">);</span>
-        <span class="p">};</span>
-        
-        <span class="nx">Base</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">getId</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Id: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
-            <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
-        <span class="p">};</span>
-        
-        <span class="k">return</span> <span class="nx">Base</span><span class="p">;</span>
-    <span class="p">})();</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">Base</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">function</span> <span class="nx">Base</span><span class="p">(</span><span class="nx">id</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;base: &quot;</span> <span class="o">+</span> <span class="nx">id</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">id</span> <span class="o">=</span> <span class="nx">id</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="nx">Base</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">drawTerminal</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;drawTerminal&quot;</span><span class="p">);</span>
+    <span class="p">};</span>
+    
+    <span class="nx">Base</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">getId</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Id: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+    <span class="p">};</span>
+    
+    <span class="k">return</span> <span class="nx">Base</span><span class="p">;</span>
+<span class="p">})();</span></code></pre></div>
 
 
 <p>There are a couple of really cool things at work here. Let's take some time to look at each.</p>
@@ -98,8 +96,7 @@
 
 <p>You could easily create a new instance of the base class:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="kd">var</span> <span class="nx">base</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Base</span><span class="p">(</span><span class="s2">&quot;123456&quot;</span><span class="p">);</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">base</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Base</span><span class="p">(</span><span class="s2">&quot;123456&quot;</span><span class="p">);</span></code></pre></div>
 
 
 <p>But, that wouldn't be too useful. And that's fine because it's not meant to be too useful. The base class is just that, a base class (with base functionality) from which most other classes will inherit from. Here, the base's primary function is to simply drawTerminal because everyone will need a Terminal in order to connect to the Power Panel.</p>
@@ -112,54 +109,50 @@
 
 <p>One of the most interesting ways to achieve classical inheritance in JavaScript is to do the following:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="kd">var</span> <span class="nx">Light</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">_super</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">Light</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">_super</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="kd">function</span> <span class="nx">Light</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">color</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">_super</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">id</span><span class="p">);</span>
+        
+        <span class="k">this</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="nx">color</span><span class="p">;</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Start Light: &quot;</span> <span class="o">+</span> <span class="nx">color</span><span class="p">);</span>
+        
+        <span class="nx">_super</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">drawTerminal</span><span class="p">();</span>
+    <span class="p">}</span>
     
-        <span class="kd">function</span> <span class="nx">Light</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">color</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">_super</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">id</span><span class="p">);</span>
-            
-            <span class="k">this</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="nx">color</span><span class="p">;</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Start Light: &quot;</span> <span class="o">+</span> <span class="nx">color</span><span class="p">);</span>
-            
-            <span class="nx">_super</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">drawTerminal</span><span class="p">();</span>
-        <span class="p">}</span>
-        
-        <span class="nx">Light</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">setColor</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">color</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">this</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="nx">color</span><span class="p">;</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Change Light: &quot;</span> <span class="o">+</span> <span class="nx">color</span><span class="p">);</span>
-        <span class="p">}</span>
-        
-        <span class="nx">Light</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">getColor</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Color: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">);</span>
-            <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">;</span>
-        <span class="p">}</span>
-        
-        <span class="k">return</span> <span class="nx">Light</span><span class="p">;</span>
-    <span class="p">})(</span><span class="nx">Base</span><span class="p">);</span>
-</code></pre></div>
+    <span class="nx">Light</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">setColor</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">color</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="nx">color</span><span class="p">;</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Change Light: &quot;</span> <span class="o">+</span> <span class="nx">color</span><span class="p">);</span>
+    <span class="p">}</span>
+    
+    <span class="nx">Light</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">getColor</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Color: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">);</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="k">return</span> <span class="nx">Light</span><span class="p">;</span>
+<span class="p">})(</span><span class="nx">Base</span><span class="p">);</span></code></pre></div>
 
 
 <p>The first thing you'll notice is we passed the parent class into the self-executing closure. This then becomes the <em>super</em> object reference in the anonymous function. The parent constructor and methods are access through the <em>super</em> object.</p>
 
 <p>In particular, to call the parent's constructor, simply execute:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="nx">_super</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">id</span><span class="p">);</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">_super</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">id</span><span class="p">);</span></code></pre></div>
 
 
 <p><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/call">Function.call</a> calls a function with a given <em>this</em> value and the arguments provided individually. You can use <em>call</em> to chain constructors for an object. Here, <em>this</em> refers to the current object, the calling object. Next, you can supply as many arguments as your parent's constructor demands.</p>
 
 <p>Access to the parent's methods are done through the prototype chain:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="nx">_super</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">drawTerminal</span><span class="p">();</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">_super</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">drawTerminal</span><span class="p">();</span></code></pre></div>
 
 
 <p>This is pretty powerful stuff! You have things you'd never dream of in JavaScript:</p>
 
-<div class="highlight"><pre><code class="js"> <span class="mi">1</span><span class="p">.</span> <span class="nx">Parent</span> <span class="nx">Constructor</span> <span class="nx">Reuse</span>
- 
- <span class="mi">2</span><span class="p">.</span> <span class="nx">Parent</span> <span class="nx">Method</span> <span class="nx">Inheritance</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="mi">1</span><span class="p">.</span> <span class="nx">Parent</span> <span class="nx">Constructor</span> <span class="nx">Reuse</span>
+
+<span class="mi">2</span><span class="p">.</span> <span class="nx">Parent</span> <span class="nx">Method</span> <span class="nx">Inheritance</span></code></pre></div>
 
 
 <p>All the things that make your code more maintainable.</p>
@@ -168,19 +161,18 @@
 
 <p>If you ever need to, this technique also opens the door for Multiple Inheritance in JavaScript. Consider the following:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="kd">var</span> <span class="nx">Light</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">_super1</span><span class="p">,</span> <span class="nx">_super2</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kd">function</span> <span class="nx">Light</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">color</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">_super1</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">id</span><span class="p">);</span>
-            <span class="nx">_super2</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">id</span><span class="p">,</span> <span class="nx">color</span><span class="p">);</span>
-            
-            <span class="p">.</span> <span class="p">.</span> <span class="p">.</span>
-        <span class="p">}</span>
-
-        <span class="p">.</span> <span class="p">.</span> <span class="p">.</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">Light</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">_super1</span><span class="p">,</span> <span class="nx">_super2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">function</span> <span class="nx">Light</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">color</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">_super1</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">id</span><span class="p">);</span>
+        <span class="nx">_super2</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">id</span><span class="p">,</span> <span class="nx">color</span><span class="p">);</span>
         
-        <span class="k">return</span> <span class="nx">Light</span><span class="p">;</span>
-    <span class="p">})(</span><span class="nx">Base</span><span class="p">,</span> <span class="nx">AnotherClass</span><span class="p">);</span>
-</code></pre></div>
+        <span class="p">.</span> <span class="p">.</span> <span class="p">.</span>
+    <span class="p">}</span>
+
+    <span class="p">.</span> <span class="p">.</span> <span class="p">.</span>
+    
+    <span class="k">return</span> <span class="nx">Light</span><span class="p">;</span>
+<span class="p">})(</span><span class="nx">Base</span><span class="p">,</span> <span class="nx">AnotherClass</span><span class="p">);</span></code></pre></div>
 
 
 <p>JavaScript child classes can inherit from as many parent classes as needed. It goes without saying to be judicious when inheriting from multiple classes. But, if you ever need to, JavaScript is more than flexible enough to accommodate that need.</p>
@@ -203,54 +195,52 @@
 
 <p>That's where <a href="http://coffeescript.org/">CoffeeScript's Extends</a> method comes into play:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="kd">var</span> <span class="nx">__hasProp</span> <span class="o">=</span> <span class="p">{}.</span><span class="nx">hasOwnProperty</span><span class="p">;</span>
-    <span class="kd">var</span> <span class="nx">__extends</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">child</span><span class="p">,</span> <span class="nx">parent</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">key</span> <span class="k">in</span> <span class="nx">parent</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="nx">__hasProp</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">parent</span><span class="p">,</span> <span class="nx">key</span><span class="p">))</span> 
-                <span class="nx">child</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">=</span> <span class="nx">parent</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span>
-        <span class="p">}</span>
-        
-        <span class="kd">function</span> <span class="nx">ctor</span><span class="p">()</span> <span class="p">{</span> 
-            <span class="k">this</span><span class="p">.</span><span class="nx">constructor</span> <span class="o">=</span> <span class="nx">child</span><span class="p">;</span> 
-        <span class="p">}</span>
-        
-        <span class="nx">ctor</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="nx">parent</span><span class="p">.</span><span class="nx">prototype</span><span class="p">;</span>
-        
-        <span class="nx">child</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ctor</span><span class="p">();</span>
-        <span class="nx">child</span><span class="p">.</span><span class="nx">__super__</span> <span class="o">=</span> <span class="nx">parent</span><span class="p">.</span><span class="nx">prototype</span><span class="p">;</span> 
-        
-        <span class="k">return</span> <span class="nx">child</span><span class="p">;</span> 
-    <span class="p">};</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">__hasProp</span> <span class="o">=</span> <span class="p">{}.</span><span class="nx">hasOwnProperty</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">__extends</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">child</span><span class="p">,</span> <span class="nx">parent</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">key</span> <span class="k">in</span> <span class="nx">parent</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">__hasProp</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">parent</span><span class="p">,</span> <span class="nx">key</span><span class="p">))</span> 
+            <span class="nx">child</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">=</span> <span class="nx">parent</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span>
+    <span class="p">}</span>
+    
+    <span class="kd">function</span> <span class="nx">ctor</span><span class="p">()</span> <span class="p">{</span> 
+        <span class="k">this</span><span class="p">.</span><span class="nx">constructor</span> <span class="o">=</span> <span class="nx">child</span><span class="p">;</span> 
+    <span class="p">}</span>
+    
+    <span class="nx">ctor</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="nx">parent</span><span class="p">.</span><span class="nx">prototype</span><span class="p">;</span>
+    
+    <span class="nx">child</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ctor</span><span class="p">();</span>
+    <span class="nx">child</span><span class="p">.</span><span class="nx">__super__</span> <span class="o">=</span> <span class="nx">parent</span><span class="p">.</span><span class="nx">prototype</span><span class="p">;</span> 
+    
+    <span class="k">return</span> <span class="nx">child</span><span class="p">;</span> 
+<span class="p">};</span></code></pre></div>
 
 
 <p>CoffeeScript Extends method does a deep copy of parent methods unto the child prototype chain. Even better, using CoffeeScript Extends method is easy. Simply pass the child class as the first argument and the parent class as the second argument:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="kd">var</span> <span class="nx">Light</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">_super</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">__extends</span><span class="p">(</span><span class="nx">Light</span><span class="p">,</span> <span class="nx">_super</span><span class="p">);</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">Light</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">_super</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">__extends</span><span class="p">(</span><span class="nx">Light</span><span class="p">,</span> <span class="nx">_super</span><span class="p">);</span>
+    
+    <span class="kd">function</span> <span class="nx">Light</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">color</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">_super</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">id</span><span class="p">);</span>
         
-        <span class="kd">function</span> <span class="nx">Light</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">color</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">_super</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">id</span><span class="p">);</span>
-            
-            <span class="k">this</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="nx">color</span><span class="p">;</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Start Light: &quot;</span> <span class="o">+</span> <span class="nx">color</span><span class="p">);</span>
-            <span class="c1">//_super.prototype.drawTerminal();</span>
-            <span class="k">this</span><span class="p">.</span><span class="nx">drawTerminal</span><span class="p">();</span>
-        <span class="p">}</span>
-        
-        <span class="nx">Light</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">setColor</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">color</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">this</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="nx">color</span><span class="p">;</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Change Light: &quot;</span> <span class="o">+</span> <span class="nx">color</span><span class="p">);</span>
-        <span class="p">}</span>
-        
-        <span class="nx">Light</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">getColor</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Color: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">);</span>
-            <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">;</span>
-        <span class="p">}</span>
-        
-        <span class="k">return</span> <span class="nx">Light</span><span class="p">;</span>
-    <span class="p">})(</span><span class="nx">Base</span><span class="p">);</span>
-</code></pre></div>
+        <span class="k">this</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="nx">color</span><span class="p">;</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Start Light: &quot;</span> <span class="o">+</span> <span class="nx">color</span><span class="p">);</span>
+        <span class="c1">//_super.prototype.drawTerminal();</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">drawTerminal</span><span class="p">();</span>
+    <span class="p">}</span>
+    
+    <span class="nx">Light</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">setColor</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">color</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="nx">color</span><span class="p">;</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Change Light: &quot;</span> <span class="o">+</span> <span class="nx">color</span><span class="p">);</span>
+    <span class="p">}</span>
+    
+    <span class="nx">Light</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">getColor</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Color: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">);</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="k">return</span> <span class="nx">Light</span><span class="p">;</span>
+<span class="p">})(</span><span class="nx">Base</span><span class="p">);</span></code></pre></div>
 
 
 <p>The result is parent methods are accessible in the child class without having to rewrite those same methods:</p>
@@ -259,9 +249,8 @@
 
 <p>This time when we count we get the four expected methods: drawTerminal, getId, setColor and getColor. Which is great because an instance of the child class can access the parent method with ease:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="kd">var</span> <span class="nx">light</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Light</span><span class="p">(</span><span class="s2">&quot;LABC123&quot;</span><span class="p">,</span> <span class="s2">&quot;Red&quot;</span><span class="p">);</span>
-    <span class="nx">light</span><span class="p">.</span><span class="nx">getId</span><span class="p">();</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">light</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Light</span><span class="p">(</span><span class="s2">&quot;LABC123&quot;</span><span class="p">,</span> <span class="s2">&quot;Red&quot;</span><span class="p">);</span>
+    <span class="nx">light</span><span class="p">.</span><span class="nx">getId</span><span class="p">();</span></code></pre></div>
 
 
 <p>This cuts down on the potential for much code duplication. Also, it's simply pleasant to use. You still call the parent constructor using the _super.call route. But, this time you can access the parent methods within the current scope. Lastly, instances of the Light class magically have access to those parent methods as well.</p>

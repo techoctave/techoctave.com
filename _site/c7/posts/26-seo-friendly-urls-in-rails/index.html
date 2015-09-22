@@ -27,8 +27,8 @@
 	
     <div class="feat">
       <h5 class="page-date">
-        <time datetime="2010-10-02T01:29:53Z" itemprop="datePublished">
-          02 October 2010
+        <time datetime="2010-10-01T21:29:53-04:00" itemprop="datePublished">
+          01 October 2010
         </time>
       </h5>
     </div>
@@ -50,52 +50,46 @@
 
 <p>This is an example of how to setup RESTful routes in Rails. I'll elaborate on Rails and RESTful architecture another time.</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="n">map</span><span class="o">.</span><span class="n">resources</span> <span class="ss">:posts</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">map</span><span class="o">.</span><span class="n">resources</span> <span class="ss">:posts</span></code></pre></div>
 
 
 <p>UPDATE: The above route was written for Rails 2.3.8. Here is the updated Route for Rails 3.0:</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="n">resources</span> <span class="ss">:posts</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">resources</span> <span class="ss">:posts</span></code></pre></div>
 
 
 <h4>app/models/post.rb</h4>
 
 <p>In your Post domain model, override the to_param method. Here, you can specify the unique id format for each instance of a Post object:</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="k">def</span> <span class="nf">to_param</span>
-      <span class="s2">&quot;</span><span class="si">#{</span><span class="nb">id</span><span class="si">}</span><span class="s2">-</span><span class="si">#{</span><span class="n">title</span><span class="o">.</span><span class="n">downcase</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/[^a-zA-Z0-9]+/</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/-{2,}/</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/^-|-$/</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
-    <span class="k">end</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">to_param</span>
+  <span class="s2">&quot;</span><span class="si">#{</span><span class="nb">id</span><span class="si">}</span><span class="s2">-</span><span class="si">#{</span><span class="n">title</span><span class="o">.</span><span class="n">downcase</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/[^a-zA-Z0-9]+/</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/-{2,}/</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/^-|-$/</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="k">end</span></code></pre></div>
 
 
 <p>Here, to_param is composed of three regular expressions that are worth discussing in details:</p>
 
-<div class="highlight"><pre><code class="ruby"> <span class="mi">1</span><span class="o">.</span> <span class="no">Removes</span> <span class="n">all</span> <span class="n">non</span> <span class="n">alphanumeric</span> <span class="n">characters</span> <span class="n">from</span> <span class="n">the</span> <span class="n">string</span><span class="o">.</span>
- 
- <span class="mi">2</span><span class="o">.</span> <span class="no">No</span> <span class="n">more</span> <span class="n">than</span> <span class="n">one</span> <span class="n">of</span> <span class="n">the</span> <span class="n">separator</span> <span class="k">in</span> <span class="n">a</span> <span class="n">row</span><span class="o">.</span>
- 
- <span class="mi">3</span><span class="o">.</span> <span class="no">Remove</span> <span class="n">leading</span><span class="o">/</span><span class="n">trailing</span> <span class="n">separator</span><span class="o">.</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="mi">1</span><span class="o">.</span> <span class="no">Removes</span> <span class="n">all</span> <span class="n">non</span> <span class="n">alphanumeric</span> <span class="n">characters</span> <span class="n">from</span> <span class="n">the</span> <span class="n">string</span><span class="o">.</span>
+
+<span class="mi">2</span><span class="o">.</span> <span class="no">No</span> <span class="n">more</span> <span class="n">than</span> <span class="n">one</span> <span class="n">of</span> <span class="n">the</span> <span class="n">separator</span> <span class="k">in</span> <span class="n">a</span> <span class="n">row</span><span class="o">.</span>
+
+<span class="mi">3</span><span class="o">.</span> <span class="no">Remove</span> <span class="n">leading</span><span class="o">/</span><span class="n">trailing</span> <span class="n">separator</span><span class="o">.</span></code></pre></div>
 
 
 <h4>app/views/posts/index.html.erb</h4>
 
 <p>Creating a hyperlink from the Post model will create a reference of <em>/posts/26-seo-friendly-urls-in-rails</em> Voila! A nice Google slug for your friendly neighborhood Google Bot spider:</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="o">&lt;%=</span> <span class="n">link_to</span> <span class="vi">@post</span><span class="o">.</span><span class="n">title</span><span class="p">,</span> <span class="vi">@post</span> <span class="o">%&gt;</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;%=</span> <span class="n">link_to</span> <span class="vi">@post</span><span class="o">.</span><span class="n">title</span><span class="p">,</span> <span class="vi">@post</span> <span class="o">%&gt;</span></code></pre></div>
 
 
 <h4>app/controllers/posts_controller.rb</h4>
 
 <p>When you go to show the specific post, the actual :id is <em>26-seo-friendly-urls-in-rails</em>.</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="k">def</span> <span class="nf">show</span>
-      <span class="vi">@post</span> <span class="o">=</span> <span class="no">Post</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">params</span><span class="o">[</span><span class="ss">:id</span><span class="o">]</span><span class="p">)</span>
-    <span class="k">end</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">show</span>
+  <span class="vi">@post</span> <span class="o">=</span> <span class="no">Post</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">params</span><span class="o">[</span><span class="ss">:id</span><span class="o">]</span><span class="p">)</span>
+<span class="k">end</span></code></pre></div>
 
 
 <p>As you already know, your :id needs to be an integer value. But, don't worry, Rails is smart enough to call Ruby's to_i to convert your :id to an integer.</p>

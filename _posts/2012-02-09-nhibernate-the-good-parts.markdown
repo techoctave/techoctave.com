@@ -22,8 +22,8 @@ Particularly with static languages, I adhere to two core object oriented design 
 Elements of Reusable Object-Oriented Software][4] by The Gang of Four - Erich Gamma, Richard Helm, Ralph Johnson and John Vlissides:
 
 {% highlight bash %}
- 1. Program to an interface, not an implementation.
- 2. Favor object composition over class inheritance.
+1. Program to an interface, not an implementation.
+2. Favor object composition over class inheritance.
 {% endhighlight %}
 
 These design principles form the basis for maintainable NTier'd applications both on the J2EE and .NET Runtimes.
@@ -36,14 +36,14 @@ Let's take a look at a domain model that implements these core object oriented d
 The interface exposes the public properties and methods of a persistent class in your domain:
 
 {% highlight js %}
-    public interface IPost
-    {
-        int Id { get; set; }
-        string Title { get; set; }
-        string Content { get; set; }
-        IAuthor Author { get; set; }
-        IList<Comment> Comments { get; set; }
-    }
+public interface IPost
+{
+    int Id { get; set; }
+    string Title { get; set; }
+    string Content { get; set; }
+    IAuthor Author { get; set; }
+    IList<Comment> Comments { get; set; }
+}
 {% endhighlight %}
 
 ####The Post Implementation (Post.cs)
@@ -51,50 +51,50 @@ The interface exposes the public properties and methods of a persistent class in
 The Post class implements the IPost interface. Here, we assume the *Author* class and the *Comment* class are defined elsewhere:
 
 {% highlight js %}
-    public class Post : IPost
+public class Post : IPost
+{
+    private int id;
+    private string title;
+    private string content;
+    private IAuthor author;
+    private IList<Comment> comments;
+
+    public Post()
     {
-        private int id;
-        private string title;
-        private string content;
-        private IAuthor author;
-        private IList<Comment> comments;
-
-        public Post()
-        {
-           author = new Author();
-           comments = new List<Comment>();
-        }
-    
-        public virtual int Id 
-        { 
-           get { return id; } 
-           set { id = value; } 
-        }
-
-        public virtual string Title
-        { 
-           get { return title; } 
-           set { title = value; } 
-        }
-
-        public virtual string Content
-        { 
-           get { return content; } 
-           set { content = value; } 
-        }
-
-        public virtual IAuthor Author
-        { 
-           get { return author; } 
-           set { author = value; } 
-        }
-
-        public virtual IList<Comment> Comments
-        { 
-           get { return comments; } 
-           set { comments = value; } 
-        }
+       author = new Author();
+       comments = new List<Comment>();
     }
+
+    public virtual int Id 
+    { 
+       get { return id; } 
+       set { id = value; } 
+    }
+
+    public virtual string Title
+    { 
+       get { return title; } 
+       set { title = value; } 
+    }
+
+    public virtual string Content
+    { 
+       get { return content; } 
+       set { content = value; } 
+    }
+
+    public virtual IAuthor Author
+    { 
+       get { return author; } 
+       set { author = value; } 
+    }
+
+    public virtual IList<Comment> Comments
+    { 
+       get { return comments; } 
+       set { comments = value; } 
+    }
+}
 {% endhighlight %}
 
 Each Post has an *Author* and a list of *Comments*. In the Post constructor, I create instances of each domain object.
@@ -124,29 +124,29 @@ Here's how we would map our Post class:
 Here, we'll assume the Author class is mapped in Author.hbm.xml and the Comment class is mapped in Comment.hbm.xml:
 
 {% highlight js %}
-    <?xml version="1.0" encoding="utf-8" ?>
-    <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
-                       assembly="Blogcast.Domain"
-                       namespace="Blogcast.Domain"
-                       default-lazy="true">
-    
-      <class name="Post" table="Posts">
-        <id name="Id" unsaved-value="0">
-          <generator class="native"/>
-        </id>
-    
-        <property name="Title"/>
-    
-        <property name="Content"/>
-    
-        <many-to-one name="Author" class="Author" cascade="all-delete-orphan"/>
-    
-        <bag name="Comments" cascade="all-delete-orphan">
-          <key column="PostId"/>
-          <one-to-many class="Comment"/>
-        </bag>
-      </class>
-    </hibernate-mapping>
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Blogcast.Domain"
+                   namespace="Blogcast.Domain"
+                   default-lazy="true">
+
+  <class name="Post" table="Posts">
+    <id name="Id" unsaved-value="0">
+      <generator class="native"/>
+    </id>
+
+    <property name="Title"/>
+
+    <property name="Content"/>
+
+    <many-to-one name="Author" class="Author" cascade="all-delete-orphan"/>
+
+    <bag name="Comments" cascade="all-delete-orphan">
+      <key column="PostId"/>
+      <one-to-many class="Comment"/>
+    </bag>
+  </class>
+</hibernate-mapping>
 {% endhighlight %}
 
 Top to bottom, here are some major key points to take away from this NHibernate class map:

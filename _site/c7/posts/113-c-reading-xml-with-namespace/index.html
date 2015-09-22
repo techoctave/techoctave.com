@@ -27,7 +27,7 @@
 	
     <div class="feat">
       <h5 class="page-date">
-        <time datetime="2013-05-21T11:09:54Z" itemprop="datePublished">
+        <time datetime="2013-05-21T07:09:54-04:00" itemprop="datePublished">
           21 May 2013
         </time>
       </h5>
@@ -44,41 +44,38 @@
 
 <p>Say you have this XML response:</p>
 
-<div class="highlight"><pre><code class="xml">    <span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
-    <span class="nt">&lt;UserResponse</span> <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span> <span class="na">xmlns:xsd=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;User</span> <span class="na">xmlns=</span><span class="s">&quot;http://halo.com/schemas/custom/users/GetUser_V1&quot;</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;Result&gt;</span>&quot;Successful&quot;<span class="nt">&lt;/Result&gt;</span>
-          <span class="nt">&lt;Name&gt;</span>John-117<span class="nt">&lt;/Name&gt;</span>
-          <span class="nt">&lt;Age&gt;</span>Unknown<span class="nt">&lt;/Age&gt;</span>
-          <span class="nt">&lt;Rank&gt;</span>Master Chief Petty Officer<span class="nt">&lt;/Rank&gt;</span>
-      <span class="nt">&lt;/User&gt;</span>
-      <span class="nt">&lt;UUID</span> <span class="na">xmlns=</span><span class="s">&quot;http://halo.com/schemas/custom/users/GetUser_V1&quot;</span><span class="nt">&gt;</span>
-          {61D25ABC-CD96-4838-9406-C867B6D07449}
-      <span class="nt">&lt;/UUID&gt;</span>
-    <span class="nt">&lt;/UserResponse&gt;</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="nt">&lt;UserResponse</span> <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span> <span class="na">xmlns:xsd=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;User</span> <span class="na">xmlns=</span><span class="s">&quot;http://halo.com/schemas/custom/users/GetUser_V1&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;Result&gt;</span>&quot;Successful&quot;<span class="nt">&lt;/Result&gt;</span>
+      <span class="nt">&lt;Name&gt;</span>John-117<span class="nt">&lt;/Name&gt;</span>
+      <span class="nt">&lt;Age&gt;</span>Unknown<span class="nt">&lt;/Age&gt;</span>
+      <span class="nt">&lt;Rank&gt;</span>Master Chief Petty Officer<span class="nt">&lt;/Rank&gt;</span>
+  <span class="nt">&lt;/User&gt;</span>
+  <span class="nt">&lt;UUID</span> <span class="na">xmlns=</span><span class="s">&quot;http://halo.com/schemas/custom/users/GetUser_V1&quot;</span><span class="nt">&gt;</span>
+      {61D25ABC-CD96-4838-9406-C867B6D07449}
+  <span class="nt">&lt;/UUID&gt;</span>
+<span class="nt">&lt;/UserResponse&gt;</span></code></pre></div>
 
 
 <p>Using C#, parsing this data should be an easy task - right? You should be able to do something like this?</p>
 
-<div class="highlight"><pre><code class="js">    <span class="nx">HaloService</span> <span class="nx">haloService</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">HaloService</span><span class="p">();</span>
-    <span class="nx">string</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">haloService</span><span class="p">.</span><span class="nx">ExecuteCall</span><span class="p">(</span><span class="s2">&quot;{61D25ABC-CD96-4838-9406-C867B6D07449}&quot;</span><span class="p">);</span>
-    
-    <span class="nx">XmlDocument</span> <span class="nx">results</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XmlDocument</span><span class="p">();</span>
-    <span class="nx">results</span><span class="p">.</span><span class="nx">LoadXml</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
-    
-    <span class="k">if</span> <span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">SelectSingleNode</span><span class="p">(</span><span class="s2">&quot;//UserResponse/User/Result&quot;</span><span class="p">).</span><span class="nx">InnerText</span> <span class="o">==</span> <span class="s2">&quot;Successful&quot;</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">string</span> <span class="nx">Name</span> <span class="o">=</span> <span class="nx">results</span><span class="p">.</span><span class="nx">SelectSingleNode</span><span class="p">(</span><span class="s2">&quot;//UserResponse/User/Name&quot;</span><span class="p">).</span><span class="nx">InnerText</span><span class="p">;</span>
-    <span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">HaloService</span> <span class="nx">haloService</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">HaloService</span><span class="p">();</span>
+<span class="nx">string</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">haloService</span><span class="p">.</span><span class="nx">ExecuteCall</span><span class="p">(</span><span class="s2">&quot;{61D25ABC-CD96-4838-9406-C867B6D07449}&quot;</span><span class="p">);</span>
+
+<span class="nx">XmlDocument</span> <span class="nx">results</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XmlDocument</span><span class="p">();</span>
+<span class="nx">results</span><span class="p">.</span><span class="nx">LoadXml</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">SelectSingleNode</span><span class="p">(</span><span class="s2">&quot;//UserResponse/User/Result&quot;</span><span class="p">).</span><span class="nx">InnerText</span> <span class="o">==</span> <span class="s2">&quot;Successful&quot;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">string</span> <span class="nx">Name</span> <span class="o">=</span> <span class="nx">results</span><span class="p">.</span><span class="nx">SelectSingleNode</span><span class="p">(</span><span class="s2">&quot;//UserResponse/User/Name&quot;</span><span class="p">).</span><span class="nx">InnerText</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
 
 
 <p>But does that work in .NET C#? No.</p>
 
 <p>Why? It doesn't work because the XML response has a namespace separating the key data elements. Here the XML namespace is:</p>
 
-<div class="highlight"><pre><code class="xml">    http://halo.com/schemas/custom/users/GetUser_V1
-</code></pre></div>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml">http://halo.com/schemas/custom/users/GetUser_V1</code></pre></div>
 
 
 <h3>So what are your options:</h3>
@@ -91,28 +88,26 @@
 
 <p>When using XPath in .NET (via SelectNodes or SelectSingleNode) on XML with namespaces you need to:</p>
 
-<div class="highlight"><pre><code class="bash"> 1. Provide your own XmlNamespaceManager
- 
- 2. Explicitly prefix ALL elements in your XPath expression which are in the namespace
-</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">1. Provide your own XmlNamespaceManager
+
+2. Explicitly prefix ALL elements in your XPath expression which are in the namespace</code></pre></div>
 
 
 <p>You do so in a similar fashion as below:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="p">.</span> <span class="p">.</span> <span class="p">.</span>
-        
-    <span class="nx">XmlDocument</span> <span class="nx">results</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XmlDocument</span><span class="p">();</span>
-    <span class="nx">results</span><span class="p">.</span><span class="nx">LoadXml</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">.</span> <span class="p">.</span> <span class="p">.</span>
     
-    <span class="nx">XmlNamespaceManager</span> <span class="nx">ns</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XmlNamespaceManager</span><span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">NameTable</span><span class="p">);</span>
-    <span class="nx">ns</span><span class="p">.</span><span class="nx">AddNamespace</span><span class="p">(</span><span class="s2">&quot;ns&quot;</span><span class="p">,</span>      
-            <span class="s2">&quot;http://halo.com/schemas/custom/users/GetUser_V1&quot;</span><span class="p">);</span>
-    
-    <span class="nx">string</span> <span class="nx">Result</span> <span class="o">=</span> <span class="nx">results</span><span class="p">.</span><span class="nx">SelectSingleNode</span><span class="p">(</span>
-    <span class="s2">&quot;//UserResponse/ns:User/ns:Result&quot;</span><span class="p">,</span> <span class="nx">ns</span><span class="p">).</span><span class="nx">InnerText</span><span class="p">;</span>
+<span class="nx">XmlDocument</span> <span class="nx">results</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XmlDocument</span><span class="p">();</span>
+<span class="nx">results</span><span class="p">.</span><span class="nx">LoadXml</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
 
-    <span class="p">.</span> <span class="p">.</span> <span class="p">.</span>
-</code></pre></div>
+<span class="nx">XmlNamespaceManager</span> <span class="nx">ns</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XmlNamespaceManager</span><span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">NameTable</span><span class="p">);</span>
+<span class="nx">ns</span><span class="p">.</span><span class="nx">AddNamespace</span><span class="p">(</span><span class="s2">&quot;ns&quot;</span><span class="p">,</span>      
+        <span class="s2">&quot;http://halo.com/schemas/custom/users/GetUser_V1&quot;</span><span class="p">);</span>
+
+<span class="nx">string</span> <span class="nx">Result</span> <span class="o">=</span> <span class="nx">results</span><span class="p">.</span><span class="nx">SelectSingleNode</span><span class="p">(</span>
+<span class="s2">&quot;//UserResponse/ns:User/ns:Result&quot;</span><span class="p">,</span> <span class="nx">ns</span><span class="p">).</span><span class="nx">InnerText</span><span class="p">;</span>
+
+<span class="p">.</span> <span class="p">.</span> <span class="p">.</span></code></pre></div>
 
 
 <p>This gets you the data, but it's clumsy and has several disadvantages. First, if you don't control the web service (which many people don't), the namespace could change on you at anytime.</p>
@@ -127,14 +122,13 @@
 
 <p>This isn't one of those scenarios. Here, Regex was not only necessary, it was downright welcomed:</p>
 
-<div class="highlight"><pre><code class="js">    <span class="nx">string</span> <span class="nx">filter</span> <span class="o">=</span> <span class="err">@</span><span class="s2">&quot;xmlns(:\w+)?=&quot;&quot;([^&quot;&quot;]+)&quot;&quot;|xsi(:\w+)?=&quot;&quot;([^&quot;&quot;]+)&quot;&quot;&quot;</span><span class="p">;</span>
-    <span class="nx">response</span> <span class="o">=</span> <span class="nx">Regex</span><span class="p">.</span><span class="nx">Replace</span><span class="p">(</span><span class="nx">response</span><span class="p">,</span> <span class="nx">filter</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span>
-    
-    <span class="nx">XmlDocument</span> <span class="nx">results</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XmlDocument</span><span class="p">();</span>
-    <span class="nx">results</span><span class="p">.</span><span class="nx">LoadXml</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">string</span> <span class="nx">filter</span> <span class="o">=</span> <span class="err">@</span><span class="s2">&quot;xmlns(:\w+)?=&quot;&quot;([^&quot;&quot;]+)&quot;&quot;|xsi(:\w+)?=&quot;&quot;([^&quot;&quot;]+)&quot;&quot;&quot;</span><span class="p">;</span>
+<span class="nx">response</span> <span class="o">=</span> <span class="nx">Regex</span><span class="p">.</span><span class="nx">Replace</span><span class="p">(</span><span class="nx">response</span><span class="p">,</span> <span class="nx">filter</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span>
 
-    <span class="nx">string</span> <span class="nx">Name</span> <span class="o">=</span> <span class="nx">results</span><span class="p">.</span><span class="nx">SelectSingleNode</span><span class="p">(</span><span class="s2">&quot;//UserResponse/User/Name&quot;</span><span class="p">).</span><span class="nx">InnerText</span><span class="p">;</span>
-</code></pre></div>
+<span class="nx">XmlDocument</span> <span class="nx">results</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XmlDocument</span><span class="p">();</span>
+<span class="nx">results</span><span class="p">.</span><span class="nx">LoadXml</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+
+<span class="nx">string</span> <span class="nx">Name</span> <span class="o">=</span> <span class="nx">results</span><span class="p">.</span><span class="nx">SelectSingleNode</span><span class="p">(</span><span class="s2">&quot;//UserResponse/User/Name&quot;</span><span class="p">).</span><span class="nx">InnerText</span><span class="p">;</span></code></pre></div>
 
 
 <p>Here, we remove any XML Namespace (xmlns) declaration before loading the XML. Once you do that, you can read the XML using the XPath expression you expected to use in the first place.</p>

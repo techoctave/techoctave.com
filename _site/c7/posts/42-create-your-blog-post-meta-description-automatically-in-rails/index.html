@@ -27,8 +27,8 @@
 	
     <div class="feat">
       <h5 class="page-date">
-        <time datetime="2010-12-27T02:30:15Z" itemprop="datePublished">
-          27 December 2010
+        <time datetime="2010-12-26T21:30:15-05:00" itemprop="datePublished">
+          26 December 2010
         </time>
       </h5>
     </div>
@@ -50,12 +50,11 @@
 
 <p>I put the code in a helper to make integration in the Post view a little cleaner. I'm happy with the results. The code is a bit involved, so I break down the details in the algorithm below.</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="k">module</span> <span class="nn">PostsHelper</span>
-      <span class="k">def</span> <span class="nf">description</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
-        <span class="n">sanitize</span><span class="p">(</span><span class="n">content</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/&lt;code[^&lt;]*&lt;\/code&gt;/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">),</span> <span class="ss">:tags</span> <span class="o">=&gt;</span> <span class="sx">%w()</span><span class="p">,</span> <span class="ss">:attributes</span> <span class="o">=&gt;</span> <span class="sx">%w()</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/[\r\n?]/</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/\&quot;/</span><span class="p">,</span> <span class="s2">&quot;&#39;&quot;</span><span class="p">)</span><span class="o">[</span><span class="mi">0</span><span class="o">.</span><span class="n">.</span><span class="mi">250</span><span class="o">].</span><span class="n">strip</span>
-      <span class="k">end</span>
-    <span class="k">end</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">module</span> <span class="nn">PostsHelper</span>
+  <span class="k">def</span> <span class="nf">description</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+    <span class="n">sanitize</span><span class="p">(</span><span class="n">content</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/&lt;code[^&lt;]*&lt;\/code&gt;/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">),</span> <span class="ss">:tags</span> <span class="o">=&gt;</span> <span class="sx">%w()</span><span class="p">,</span> <span class="ss">:attributes</span> <span class="o">=&gt;</span> <span class="sx">%w()</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/[\r\n?]/</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/\&quot;/</span><span class="p">,</span> <span class="s2">&quot;&#39;&quot;</span><span class="p">)</span><span class="o">[</span><span class="mi">0</span><span class="o">.</span><span class="n">.</span><span class="mi">250</span><span class="o">].</span><span class="n">strip</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></div>
 
 
 <p>I use the sanitize core method to clean up any HTML blocks hanging around. I also use a little regular expression to make sure none of our beautiful code samples clog up our SEO pipeline.</p>
@@ -64,28 +63,26 @@
 
 <p>Here, I deliver a nice neat little present for Google. Hello Google!</p>
 
-<div class="highlight"><pre><code class="ruby">    <span class="o">&lt;</span><span class="sx">% content_for </span><span class="ss">:description</span> <span class="k">do</span> <span class="sx">%&gt;</span>
-<span class="sx">       &lt;%= description(@post.content) %&gt;</span>
-    <span class="o">&lt;</span><span class="sx">% end </span><span class="o">%&gt;</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;</span><span class="sx">% content_for </span><span class="ss">:description</span> <span class="k">do</span> <span class="sx">%&gt;</span>
+<span class="sx">   &lt;%= description(@post.content) %&gt;</span>
+<span class="o">&lt;</span><span class="sx">% end </span><span class="o">%&gt;</span></code></pre></div>
 
 
 <h4>Here's the algorithm:</h4>
 
-<div class="highlight"><pre><code class="ruby"> <span class="mi">1</span><span class="o">.</span> <span class="no">Remove</span> <span class="n">any</span> <span class="n">code</span> <span class="n">blocks</span> <span class="n">from</span> <span class="n">the</span> <span class="n">content</span>
- 
- <span class="mi">2</span><span class="o">.</span> <span class="no">Sanitize</span> <span class="n">content</span> <span class="n">of</span> <span class="n">any</span> <span class="no">HTML</span> <span class="n">code</span>
- 
- <span class="mi">3</span><span class="o">.</span> <span class="no">Remove</span> <span class="n">any</span> <span class="n">newline</span> <span class="n">characters</span>
- 
- <span class="mi">4</span><span class="o">.</span> <span class="no">Truncate</span> <span class="n">multiple</span> <span class="n">sequences</span> <span class="n">of</span> <span class="n">spaces</span> <span class="n">to</span> <span class="n">a</span> <span class="n">single</span> <span class="n">space</span>
- 
- <span class="mi">5</span><span class="o">.</span> <span class="no">Replace</span> <span class="n">double</span><span class="o">-</span><span class="n">quotes</span> <span class="n">with</span> <span class="n">single</span> <span class="n">quotes</span>
- 
- <span class="mi">6</span><span class="o">.</span> <span class="no">Grab</span> <span class="n">the</span> <span class="n">first</span> <span class="mi">250</span> <span class="n">characters</span>
- 
- <span class="mi">7</span><span class="o">.</span> <span class="no">Trim</span> <span class="n">out</span> <span class="n">any</span> <span class="n">extra</span> <span class="n">spaces</span> <span class="n">hanging</span> <span class="n">around</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="mi">1</span><span class="o">.</span> <span class="no">Remove</span> <span class="n">any</span> <span class="n">code</span> <span class="n">blocks</span> <span class="n">from</span> <span class="n">the</span> <span class="n">content</span>
+
+<span class="mi">2</span><span class="o">.</span> <span class="no">Sanitize</span> <span class="n">content</span> <span class="n">of</span> <span class="n">any</span> <span class="no">HTML</span> <span class="n">code</span>
+
+<span class="mi">3</span><span class="o">.</span> <span class="no">Remove</span> <span class="n">any</span> <span class="n">newline</span> <span class="n">characters</span>
+
+<span class="mi">4</span><span class="o">.</span> <span class="no">Truncate</span> <span class="n">multiple</span> <span class="n">sequences</span> <span class="n">of</span> <span class="n">spaces</span> <span class="n">to</span> <span class="n">a</span> <span class="n">single</span> <span class="n">space</span>
+
+<span class="mi">5</span><span class="o">.</span> <span class="no">Replace</span> <span class="n">double</span><span class="o">-</span><span class="n">quotes</span> <span class="n">with</span> <span class="n">single</span> <span class="n">quotes</span>
+
+<span class="mi">6</span><span class="o">.</span> <span class="no">Grab</span> <span class="n">the</span> <span class="n">first</span> <span class="mi">250</span> <span class="n">characters</span>
+
+<span class="mi">7</span><span class="o">.</span> <span class="no">Trim</span> <span class="n">out</span> <span class="n">any</span> <span class="n">extra</span> <span class="n">spaces</span> <span class="n">hanging</span> <span class="n">around</span></code></pre></div>
 
 
 <p>Why grab 250 characters? Well, there's been reports that Google uses anywhere from 150-180 characters of the meta description for your link's description snippet. Either way, Google doesn't penalize for having extra characters.</p>

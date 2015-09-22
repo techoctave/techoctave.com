@@ -15,17 +15,17 @@ We agree.
 So we set out to build a Radar Chart built on the [Six Core Principles][2] we established so long ago:
 
 {% highlight js %}
- 1. Beautifully Illustrated
- 
- 2. Cross-Browser Compatible
- 
- 3. Lightweight footprint
- 
- 4. Vector Based for Crisp Zoom and Print
- 
- 5. Highly Configurable
- 
- 6. Framework Agnostic
+1. Beautifully Illustrated
+
+2. Cross-Browser Compatible
+
+3. Lightweight footprint
+
+4. Vector Based for Crisp Zoom and Print
+
+5. Highly Configurable
+
+6. Framework Agnostic
 {% endhighlight %}
 
 I believed then as I believe now that these principles are central to developer happiness. They inform what we do each and every day.
@@ -59,15 +59,15 @@ For our example, we'll analyze the change in advertising spending for National E
 Here, NES advertising channels were:
 
 {% highlight js %}
- 1. Internet
- 
- 2. Television
- 
- 3. Radio
- 
- 4. Newspaper
- 
- 5. Magazine
+1. Internet
+
+2. Television
+
+3. Radio
+
+4. Newspaper
+
+5. Magazine
 {% endhighlight %}
 
 These advertising channels will make perfect Radar Categories for our example. For you, your categories will be different, but the idea is to identify areas your organization needs to analyze.
@@ -77,29 +77,29 @@ These advertising channels will make perfect Radar Categories for our example. F
 Here, for Year 1, NES spending was as follows:
 
 {% highlight js %}
- 1. Internet ($100,000)
- 
- 2. Television ($200,000)
- 
- 3. Radio ($175,000)
- 
- 4. Newspaper ($100,000)
- 
- 5. Magazine ($100,000)
+1. Internet ($100,000)
+
+2. Television ($200,000)
+
+3. Radio ($175,000)
+
+4. Newspaper ($100,000)
+
+5. Magazine ($100,000)
 {% endhighlight %}
 
 For Year 2, NES spending habits made a pinnacle shift:
 
 {% highlight js %}
- 1. Internet ($200,000)
- 
- 2. Television ($125,000)
- 
- 3. Radio ($105,000)
- 
- 4. Newspaper ($100,000)
- 
- 5. Magazine ($100,000)
+1. Internet ($200,000)
+
+2. Television ($125,000)
+
+3. Radio ($105,000)
+
+4. Newspaper ($100,000)
+
+5. Magazine ($100,000)
 {% endhighlight %}
 
 ####Plot Your Radar Chart
@@ -107,25 +107,25 @@ For Year 2, NES spending habits made a pinnacle shift:
 Here we'll use our RadarChart component from our JavaScript Charts Suite. First, we'll create an HTML element to bind our chart too:
 
 {% highlight html %}
-    <div id="advertising"></div>
+<div id="advertising"></div>
 {% endhighlight %}
 
 Next, we'll create an instance of our RadarChart class:
 
 {% highlight js %}
-    var advertising = new RadarChart("advertising", {
-    	data: [[100000, 200000, 175000, 100000, 100000], 
-               [200000, 125000, 105000, 100000, 100000]],
-        
-    	maxValue: 250000,
-    		
-    	categories: ["Internet", "Television", "Radio", 
-                     "Newspaper", "Magazine"],
+var advertising = new RadarChart("advertising", {
+	data: [[100000, 200000, 175000, 100000, 100000], 
+           [200000, 125000, 105000, 100000, 100000]],
     
-    	legend: true,
-    	legendTitle: "Advertising",
-    	legendLabels: ["Year 1", "Year 2"],
-    });
+	maxValue: 250000,
+		
+	categories: ["Internet", "Television", "Radio", 
+                 "Newspaper", "Magazine"],
+
+	legend: true,
+	legendTitle: "Advertising",
+	legendLabels: ["Year 1", "Year 2"],
+});
 {% endhighlight %}
 
 Our data property can handle multiple sets of data. Here, the first set is the advertising spend gathered for Year 1. Finally, the last set is the advertising spend gathered for Year 2.

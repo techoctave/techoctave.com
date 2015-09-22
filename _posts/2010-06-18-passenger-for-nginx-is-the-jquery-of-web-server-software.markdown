@@ -31,20 +31,20 @@ When I say Nginx is the jQuery of Web servers, I mean Nginx is simple without be
 Take this common Web server task written in Nginx:
 
 {% highlight bash %}
-    ## Redirect from www to non-www
-    if ($host = 'www.domain.com') {
-    	 rewrite  ^/(.*)$  http://domain.com/$1  permanent;
-    }
+## Redirect from www to non-www
+if ($host = 'www.domain.com') {
+	 rewrite  ^/(.*)$  http://domain.com/$1  permanent;
+}
 {% endhighlight %}
 
 
 Compare this same task in Apache:
 
 {% highlight bash %}
-    <VirtualHost *:80>
-        ServerName www.domain.com
-        Redirect permanent / http://domain.com/
-    </VirtualHost>
+<VirtualHost *:80>
+    ServerName www.domain.com
+    Redirect permanent / http://domain.com/
+</VirtualHost>
 {% endhighlight %}
 
 Nginx is intuitive and expressive and as a developer I choose to write this task in Nginx. It just feels less heavy and I appreciate not having to deal with the XML hell in the long run. Thanks Nginx!

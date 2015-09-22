@@ -17,9 +17,9 @@ We've introduced a new example demonstrating how to create a digital gauge
 We also implemented a smarter way to format values using a flexible mask:
 
 {% highlight js %}
-    var sales = new Gauge("sales", {
-    	mask: "$#,##0.#0"
-    });
+var sales = new Gauge("sales", {
+	mask: "$#,##0.#0"
+});
 {% endhighlight %}
 
 Thanks for your support everyone!
@@ -34,9 +34,9 @@ Are you working on any projects in the flight simulation field? Know a friend in
 [Enhancements]
 
 {% highlight js %}
- - New digital example
- - List item
- - New number formatting mask
+- New digital example
+- List item
+- New number formatting mask
 {% endhighlight %}
 
 [Defects]
