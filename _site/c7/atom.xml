@@ -6,7 +6,7 @@
   <link href="http://techoctave.com" />
   <link href="http://techoctave.com/atom.xml" rel="self" />
   
-  <updated>2015-09-22T17:24:56-04:00</updated>
+  <updated>2015-09-22T18:41:05-04:00</updated>
   
   <rights>Copyright 2015, TechOctave, LLC</rights>
   
@@ -112,11 +112,11 @@ Have you seen those parking spot detectors used in some mall parking garages? Th
 
 &lt;p&gt;What started as 0 lines of code and a dream is now 2,316 lines of code and a reality:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://techoctave.com/simulation/images/artificial-horizon-attitude-indicator.png&quot; alt=&quot;JavaScript Artificial Horizon Gauge&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://techoctave.com/images/artificial-horizon-attitude-indicator.png&quot; alt=&quot;JavaScript Artificial Horizon Gauge&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;Today, we officially unveil, not just our JavaScript Horizon Gauge, but our entire suite of &lt;a href=&quot;http://techoctave.com/simulation&quot;&gt;JavaScript Flight Gauges&lt;/a&gt;:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://techoctave.com/simulation/images/flight_gauges_six.png&quot; alt=&quot;JavaScript Flight Gauges&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://techoctave.com/images/flight_gauges_six.png&quot; alt=&quot;JavaScript Flight Gauges&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;After 12 months of R&amp;amp;D, over 4 months of bugs fixes and enhancements and 20,000 lines of code later, we&#39;re pretty damn proud of the results.&lt;/p&gt;
 
@@ -172,7 +172,7 @@ Have you seen those parking spot detectors used in some mall parking garages? Th
     <entry>
       <title>Airline Transport Pilot License (ATPL) Essentials Study Guide</title>
       <link href="http://techoctave.com/c7/posts/131-airline-transport-pilot-license-atpl-essentials-study-guide" />
-      <summary type="html">&lt;p&gt;&lt;a href=&quot;http://techoctave.com/simulation&quot;&gt;&lt;img src=&quot;http://techoctave.com/simulation/images/flight_gauges_six.png&quot; alt=&quot;JavaScript Flight Gauges&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+      <summary type="html">&lt;p&gt;&lt;a href=&quot;http://techoctave.com/simulation&quot;&gt;&lt;img src=&quot;http://techoctave.com/images/flight_gauges_six.png&quot; alt=&quot;JavaScript Flight Gauges&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;The &lt;a href=&quot;http://en.wikipedia.org/wiki/Wright_brothers&quot;&gt;Wright Brothers&lt;/a&gt; were the first in flight. I write this post not very far from those historic grounds where they changed man&#39;s relationship with the sky and stars forever.&lt;/p&gt;
 
@@ -1427,7 +1427,7 @@ May the conflicts you face lead to your growth and opportunities to positively t
 
 &lt;p&gt;We built 2.0 from the ground up to be cross-browser/cross-device compatible, 100% vector based and beautiful:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://techoctave.com/gauges/images/gauges.png&quot; width=&quot;100%&quot; alt=&quot;javascript gauge&quot;/&gt;
+&lt;p&gt;&lt;img src=&quot;http://techoctave.com/images/gauges.png&quot; width=&quot;100%&quot; alt=&quot;javascript gauge&quot;/&gt;
 &lt;em&gt;Version 2.0 of TechOctave JavaScript Gauges, Circa Late 2010&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;We built the &lt;a href=&quot;http://techoctave.com/gauges/&quot;&gt;JavaScript Gauge library&lt;/a&gt; we wanted to use and it is more than simply &quot;opinionated&quot; - Our Gauges are principled:&lt;/p&gt;
@@ -1447,13 +1447,13 @@ May the conflicts you face lead to your growth and opportunities to positively t
 
 &lt;p&gt;We then revisited the photorealistic qualities of our Gauges 1.0 and recaptured all it had to offer. This time with the configurability and power that only version 2.0 of our Gauges API could deliver:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://techoctave.com/gauges/images/stunning_photorealistic_gauges.png&quot; width=&quot;100%&quot; alt=&quot;javascript raphael gauge&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://techoctave.com/images/stunning_photorealistic_gauges.png&quot; width=&quot;100%&quot; alt=&quot;javascript raphael gauge&quot;/&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://techoctave.com/gauges/images/powerful_javascript_gauges_library.png&quot; width=&quot;100%&quot; alt=&quot;javascript raphael svg gauge&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://techoctave.com/images/powerful_javascript_gauges_library.png&quot; width=&quot;100%&quot; alt=&quot;javascript raphael svg gauge&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;After a consulting gig, we realized our brand of development and philosphy was needed in the full breadth of Data Visualization solutions. &lt;a href=&quot;http://techoctave.com/charts/&quot;&gt;JavaScript Charts&lt;/a&gt; were a natural progression:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://techoctave.com/charts/images/highly_customizable_charts.png&quot; width=&quot;100%&quot; alt=&quot;javascript charts svg raphael jquery&quot;/&gt;
+&lt;p&gt;&lt;img src=&quot;http://techoctave.com/images/highly_customizable_charts.png&quot; width=&quot;100%&quot; alt=&quot;javascript charts svg raphael jquery&quot;/&gt;
 &lt;em&gt;Version 1.2 of TechOctave JavaScript Charts, Circa Late 2011&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Thousands of customers later, Hundreds of bug fixes, I can wholeheartedly say Gauges 2.0 makes me proud of the work we&#39;ve done. The spirit of innovation is alive and well in the heartland. I&#39;m proud to be apart of that and you be should too.&lt;/p&gt;
@@ -2318,7 +2318,7 @@ Galileo facing the Roman Inquisition, Cristiano Banti 1857&lt;/p&gt;
     <entry>
       <title>JavaScript Bubble Charts</title>
       <link href="http://techoctave.com/c7/posts/95-javascript-bubble-charts" />
-      <summary type="html">&lt;p&gt;&lt;img src=&quot;http://techoctave.com/charts/images/highly_customizable_charts.png&quot; alt=&quot;TechOctave JavaScript Charts Suite: Bar Chart, Bubble Chart, Line Chart and Scatter Chart.&quot; width=100% /&gt;&lt;/p&gt;
+      <summary type="html">&lt;p&gt;&lt;img src=&quot;http://techoctave.com/images/highly_customizable_charts.png&quot; alt=&quot;TechOctave JavaScript Charts Suite: Bar Chart, Bubble Chart, Line Chart and Scatter Chart.&quot; width=100% /&gt;&lt;/p&gt;
 
 &lt;p&gt;Today marks a milestone for our &lt;a href=&quot;http://techoctave.com/charts/&quot;&gt;JavaScript Charts&lt;/a&gt;.&lt;/p&gt;
 
@@ -2362,7 +2362,7 @@ Galileo facing the Roman Inquisition, Cristiano Banti 1857&lt;/p&gt;
 
 &lt;p&gt;Bubble charts are used to visualize a data set with 2 to 4 dimensions. The first two dimensions are visualized as coordinates, the 3rd as color and the 4th as size:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://techoctave.com/charts/images/bubblechart.png&quot; alt=&quot;Bubble Chart - TechOctave JavaScript Charts.&quot; width=100%/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://techoctave.com/images/bubblechart.png&quot; alt=&quot;Bubble Chart - TechOctave JavaScript Charts.&quot; width=100%/&gt;&lt;/p&gt;
 
 &lt;p&gt;Here, we have a Bubble Chart displaying a &quot;Correlation between Estimated Sales, Annual Income and Vehicle Price of some luxury brands.&quot; Using our Bubble Chart would look something like this:&lt;/p&gt;
 
@@ -3419,7 +3419,7 @@ It’s still JavaScript, but it&#39;s clean and beautiful. Just like that Ferrar
     <entry>
       <title>JavaScript Bullet Charts</title>
       <link href="http://techoctave.com/c7/posts/82-javascript-bullet-charts" />
-      <summary type="html">&lt;p&gt;&lt;img src=&quot;http://techoctave.com/charts/images/bulletchart.png&quot; width=&quot;520&quot; alt=&quot;JavaScript Bullet Chart&quot; /&gt;&lt;/p&gt;
+      <summary type="html">&lt;p&gt;&lt;img src=&quot;http://techoctave.com/images/bulletchart.png&quot; width=&quot;520&quot; alt=&quot;JavaScript Bullet Chart&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Recently, one of our &lt;a href=&quot;http://techoctave.com/charts&quot;&gt;JavaScript Charts&lt;/a&gt; customers asked if we&#39;d consider adding Bullet Graphs to our collection of JavaScript data visualization components.&lt;/p&gt;
 
@@ -8537,7 +8537,7 @@ toaster oven. I breed prizewinning clams. I have won bullfights in San Juan, cli
     <entry>
       <title>jQuery Dashboard Gauges using Raphael, XHTML and CSS</title>
       <link href="http://techoctave.com/c7/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css" />
-      <summary type="html">&lt;p&gt;&lt;a href=&quot;http://techoctave.com/gauges&quot;&gt;&lt;img src=&quot;http://techoctave.com/gauges/images/gauges.png&quot; alt=&quot;Beautiful dashboard gauges for the sophisticated developer.&quot;/&gt;&lt;/a&gt;&lt;/p&gt;
+      <summary type="html">&lt;p&gt;&lt;a href=&quot;http://techoctave.com/gauges&quot;&gt;&lt;img src=&quot;http://techoctave.com/images/gauges.png&quot; alt=&quot;Beautiful dashboard gauges for the sophisticated developer.&quot;/&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Recently, we released our &lt;a href=&quot;http://techoctave.com/gauges&quot;&gt;Dashboard Gauge Suite&lt;/a&gt;. They&#39;re perfect for engineering a business intelligence dashboard that gives Senior Management an intuitve pulse on the enterprise.&lt;/p&gt;
 

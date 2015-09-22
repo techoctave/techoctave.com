@@ -6,7 +6,7 @@ date: 2012-07-26 12:33:05
 permalink: /c7/posts/82-javascript-bullet-charts
 ---
 
-<img src="http://techoctave.com/charts/images/bulletchart.png" width="520" alt="JavaScript Bullet Chart" />
+<img src="http://techoctave.com/images/bulletchart.png" width="520" alt="JavaScript Bullet Chart" />
 
 Recently, one of our [JavaScript Charts][1] customers asked if we'd consider adding Bullet Graphs to our collection of JavaScript data visualization components.
 

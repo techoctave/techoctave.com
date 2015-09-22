@@ -86,7 +86,7 @@ I learned that part of the Start is your 1.0. That's just part of the evolution 
 
 We built 2.0 from the ground up to be cross-browser/cross-device compatible, 100% vector based and beautiful:
 
-<img src="http://techoctave.com/gauges/images/gauges.png" width="100%" alt="javascript gauge"/>
+<img src="http://techoctave.com/images/gauges.png" width="100%" alt="javascript gauge"/>
 *Version 2.0 of TechOctave JavaScript Gauges, Circa Late 2010*
 
 We built the [JavaScript Gauge library][5] we wanted to use and it is more than simply "opinionated" - Our Gauges are principled:
@@ -107,13 +107,13 @@ We built the [JavaScript Gauge library][5] we wanted to use and it is more than 
 
 We then revisited the photorealistic qualities of our Gauges 1.0 and recaptured all it had to offer. This time with the configurability and power that only version 2.0 of our Gauges API could deliver:
 
-<img src="http://techoctave.com/gauges/images/stunning_photorealistic_gauges.png" width="100%" alt="javascript raphael gauge"/>
+<img src="http://techoctave.com/images/stunning_photorealistic_gauges.png" width="100%" alt="javascript raphael gauge"/>
 
-<img src="http://techoctave.com/gauges/images/powerful_javascript_gauges_library.png" width="100%" alt="javascript raphael svg gauge"/>
+<img src="http://techoctave.com/images/powerful_javascript_gauges_library.png" width="100%" alt="javascript raphael svg gauge"/>
 
 After a consulting gig, we realized our brand of development and philosphy was needed in the full breadth of Data Visualization solutions. [JavaScript Charts][6] were a natural progression:
 
-<img src="http://techoctave.com/charts/images/highly_customizable_charts.png" width="100%" alt="javascript charts svg raphael jquery"/>
+<img src="http://techoctave.com/images/highly_customizable_charts.png" width="100%" alt="javascript charts svg raphael jquery"/>
 *Version 1.2 of TechOctave JavaScript Charts, Circa Late 2011*
 
 Thousands of customers later, Hundreds of bug fixes, I can wholeheartedly say Gauges 2.0 makes me proud of the work we've done. The spirit of innovation is alive and well in the heartland. I'm proud to be apart of that and you be should too.

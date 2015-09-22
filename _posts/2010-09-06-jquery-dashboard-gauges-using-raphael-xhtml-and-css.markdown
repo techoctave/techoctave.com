@@ -6,7 +6,7 @@ date: 2010-09-06 06:04:06
 permalink: /c7/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css
 ---
 
-<a href="http://techoctave.com/gauges"><img src="http://techoctave.com/gauges/images/gauges.png" alt="Beautiful dashboard gauges for the sophisticated developer."/></a>
+<a href="http://techoctave.com/gauges"><img src="http://techoctave.com/images/gauges.png" alt="Beautiful dashboard gauges for the sophisticated developer."/></a>
 
 Recently, we released our [Dashboard Gauge Suite][1]. They're perfect for engineering a business intelligence dashboard that gives Senior Management an intuitve pulse on the enterprise. 
 

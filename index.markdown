@@ -77,7 +77,7 @@ permalink: /
 
 #We believe in giving back
 
-####On our company blog we share best practice development techniques with best-in-class software developers
+####On our company <a href="/c7/">blog</a> we share best practice development techniques with best-in-class software developers
 
 [![push](/images/push.jpg)](/c7/posts/60-simple-long-polling-example-with-javascript-and-jquery)
 

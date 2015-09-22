@@ -6,7 +6,7 @@ date: 2012-11-26 03:13:17
 permalink: /c7/posts/95-javascript-bubble-charts
 ---
 
-<img src="http://techoctave.com/charts/images/highly_customizable_charts.png" alt="TechOctave JavaScript Charts Suite: Bar Chart, Bubble Chart, Line Chart and Scatter Chart." width=100% />
+<img src="http://techoctave.com/images/highly_customizable_charts.png" alt="TechOctave JavaScript Charts Suite: Bar Chart, Bubble Chart, Line Chart and Scatter Chart." width=100% />
 
 Today marks a milestone for our [JavaScript Charts][1].
 
@@ -52,7 +52,7 @@ To that end, we build products that inspire you to your better end and offer sup
 
 Bubble charts are used to visualize a data set with 2 to 4 dimensions. The first two dimensions are visualized as coordinates, the 3rd as color and the 4th as size:
 
-<img src="http://techoctave.com/charts/images/bubblechart.png" alt="Bubble Chart - TechOctave JavaScript Charts." width=100%/>
+<img src="http://techoctave.com/images/bubblechart.png" alt="Bubble Chart - TechOctave JavaScript Charts." width=100%/>
 
 Here, we have a Bubble Chart displaying a "Correlation between Estimated Sales, Annual Income and Vehicle Price of some luxury brands." Using our Bubble Chart would look something like this:
 
