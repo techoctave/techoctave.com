@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+      <title>Code & The Pit of Hell</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta http-equiv="content-language" content="en-gb" />
+      <meta name="description" content="Fluid, responsive blog theme for Jekyll.">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" type="text/css" href="/css/main.css" />
+      <link rel="stylesheet" type="text/css" href="/css/syntax.css" />
+      <link href="atom.xml" type="application/atom+xml" rel="alternate" title="Site ATOM Feed">
+  </head>
+
+  <body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
+    <main>
+      <section id="single-wrap">
+  <article class="single-content" itemscope itemtype="http://schema.org/BlogPosting">
+	
+    <div class="feat">
+      <h5 class="page-date">
+        <time datetime="2013-07-31T12:43:19Z" itemprop="datePublished">
+          31 July 2013
+        </time>
+      </h5>
+    </div>
+
+    <h1 class="page-title" itemprop="name headline">Code & The Pit of Hell</h1>
+    
+    <h5 class="page-author">Handwritten by TVD</h5>
+
+    <div itemprop="articleBody">
+      <p><img src="http://techoctave.com/c7/static/psd.rb.png" alt="Ruby Photoshop Parser"/></p>
+
+<p>The fine folks over at LayerVault have released <a href="http://cosmos.layervault.com/psdrb.html">PSD.rb</a>, allowing Ruby developers to easily work with Photoshop documents.</p>
+
+<p>If you use and love Ruby like we do, then you love this idea like we do. What once was a black box is now open for innovation. What's more is the surrounding context; Mans ever compulsion to control his environment, no matter the cost.</p>
+
+<p>All great narratives have their version of the pit of hell. If you've ever read <a href="http://en.wikipedia.org/wiki/Inferno_(Dante)">Dante's Inferno</a> or did the same thing over and over expecting a different result, then you too have danced with the devil.</p>
+
+<p>Development is no different.</p>
+
+<p>Except our pit of hell is masked in ones and zeros and entices with songs of victory very brave few can resist. The Dark Lord Cthulhu himself constantly double dog dares us to <a href="http://techoctave.com/c7/posts/50-silly-rabbit-parsing-html-is-for-kids">parse HTML</a>. Once a week we try to <a href="https://github.com/jashkenas/coffee-script/wiki/List-of-languages-that-compile-to-JS">reinvent JavaScript</a>.</p>
+
+<p>Madness.</p>
+
+<p>Photoshop's PSD format is not our favorite file format either. For many, to parse PSD is their last dance with sanity. It's not easy.</p>
+
+<p>Many simply go mad.</p>
+
+<p>And in their fall is a glimpse into honesty and bravery few seldom experience. I wanted to share that experience with you. Here's a code snippet from the <a href="https://code.google.com/p/xee/source/browse/XeePhotoshopLoader.m#102">last guy who tried to parse PSD</a> in the Xee project:</p>
+
+<p><em>===================================================</em></p>
+
+<p><em>uint32_t chunklen=[fh readUInt32BE];</em></p>
+
+<p><em>off_t nextchunk=[fh offsetInFile]+((chunklen+3)&amp;~3);</em></p>
+
+<p><em>At this point, I'd like to take a moment to speak to you about the Adobe PSD format. PSD is not a good format. PSD is not even a bad format. Calling it such would be an insult to other bad formats, such as PCX or JPEG. No, PSD is an abysmal format.</em></p>
+
+<p><em>Having worked on this code for several weeks now, my hate for PSD has grown to a raging fire that burns with the fierce passion of a million suns.</em></p>
+
+<p><em>If there are two different ways of doing something, PSD will do both, in different places. It will then make up three more ways no sane human would think of, and do those too. PSD makes inconsistency an art form.</em></p>
+
+<p><em>Why, for instance, did it suddenly decide that </em>these<em> particular chunks should be aligned to four bytes, and that this alignement should </em>not<em> be included in the size? Other chunks in other places are either unaligned, or aligned with the alignment included in the size. Here, though, it is not included.</em></p>
+
+<p><em>Either one of these three behaviours would be fine. A sane format would pick one. PSD, of course, uses all three, and more.</em></p>
+
+<p><em>Trying to get data out of a PSD file is like trying to find something in the attic of your eccentric old uncle who died in a freak freshwater shark attack on his 58th birthday. That last detail may not be important for the purposes of the simile, but at this point I am spending a lot of time imagining amusing fates for the people responsible for this Rube Goldberg of a file format.</em></p>
+
+<p><em>Earlier, I tried to get a hold of the latest specs for the PSD file format. To do this, I had to apply to them for permission to apply to them to have them consider sending me this sacred tome.</em></p>
+
+<p><em>This would have involved faxing them a copy of some document or other, probably signed in blood. I can only imagine that they make this process so difficult because they are intensely ashamed of having created this abomination.</em></p>
+
+<p><em>I was naturally not gullible enough to go through with this procedure, but if I had done so, I would have printed out every single page of the spec, and set them all on fire. Were it within my power, I would gather every single copy of those specs, and launch them on a spaceship directly into the sun.</em></p>
+
+<p><em>PSD is not my favourite file format.</em></p>
+
+<p><em>if(sign!='8BIM') break; // sanity check</em></p>
+
+<p><em>===================================================</em></p>
+
+<p>But there is a happy ending to this story...</p>
+
+<p>The truth is for all our shortcomings as developers, every line of code we commit contributes to the greater good. With every project and every passion we lay the foundation for a brighter tomorrow.</p>
+
+<p>Without the <a href="http://techoctave.com/c7/posts/57-hustle-and-code">hustle and code</a> of the Xee developers, who knows where we might be with PSD.rb or PSD.js or PSD.*</p>
+
+<p>We contribute to the greater good...Remember that.</p>
+
+<p>When you're down-and-out...Remember that. When it's time for you to push back on that project deadline...Remember that. When the code is too hard, the frustration too great...Remember that.</p>
+
+<p>Remember that after all the hustle, just beyond the field of "finished" is a brighter tomorrow for all of us.</p>
+
+<p>Code for the moments that take your breath away.</p>
+
+    </div>
+    
+    <div id="share" class="feat">
+      
+      <p>discuss on twitter</p>
+      
+      <a href="http://twitter.com/share" class="popup">
+        <span class="icon-twitter"></span>
+      </a>
+      
+      <div class="line"></div>
+      
+      <br/>
+      
+      <p>every day thousands of developers use our charts & gauges to get the job done right</p>
+      
+      <img src="/images/blog-header.png" usemap="#map" />
+      
+      <map name="map">
+        <area shape="rect" coords="4, 4, 247, 276" href="/charts/" alt="JavaScript Charts" target="_blank"/>
+        <area shape="rect" coords="317, 3, 582, 277" href="/gauges/" alt="JavaScript Gauges" target="_blank"/>
+        <area shape="rect" coords="652, 4, 906, 277" href="/simulation/" alt="JavaScript Flight Gauges" target="_blank"/>  
+      </map>
+    </div>
+    
+  </article>
+</section>
+
+
+
+    </main>
+
+    <footer>
+        <p style="font-size: 80%;">TechOctave, The Lion, "Beautiful & Inspired" are Registered Trademarks of TechOctave, LLC.</p>
+        <p style="font-size: 65%;">HANDCRAFTED WITH <abbr style="color: #FF2400; font-variant: none" title="love">❤</abbr> IN COLUMBUS OHIO</p>
+    </footer>
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/imageMapResizer.js"></script>
+    <script src="/js/moment.js"></script>
+    <script>
+    jQuery(document).ready(function($) {
+      	$("map").imageMapResize();
+        
+        var date = moment().format('DD MMMM YYYY');
+        $(".date").html(date);
+    });
+    </script>
+    
+    
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-17961498-4', 'techoctave.com');
+        ga('send', 'pageview');
+      </script>
+    
+
+  </body>
+</html>

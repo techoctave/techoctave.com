@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+      <title>Blogcast 1.1.0 is Here!</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta http-equiv="content-language" content="en-gb" />
+      <meta name="description" content="Fluid, responsive blog theme for Jekyll.">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" type="text/css" href="/css/main.css" />
+      <link rel="stylesheet" type="text/css" href="/css/syntax.css" />
+      <link href="atom.xml" type="application/atom+xml" rel="alternate" title="Site ATOM Feed">
+  </head>
+
+  <body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
+    <main>
+      <section id="single-wrap">
+  <article class="single-content" itemscope itemtype="http://schema.org/BlogPosting">
+	
+    <div class="feat">
+      <h5 class="page-date">
+        <time datetime="2011-12-25T05:06:54Z" itemprop="datePublished">
+          25 December 2011
+        </time>
+      </h5>
+    </div>
+
+    <h1 class="page-title" itemprop="name headline">Blogcast 1.1.0 is Here!</h1>
+    
+    <h5 class="page-author">Handwritten by TVD</h5>
+
+    <div itemprop="articleBody">
+      <p><img src="/c7/static/moscow.jpg" alt="moscow" /></p>
+
+<p>A year ago, we set out to change the way creatives built community. That day, a better way to blog was born - <a href="http://techoctave.com/c7/posts/38-blogcast-is-a-better-way-to-blog">Blogcast</a> was born!</p>
+
+<p>Merry Christmas and Happy New Year!</p>
+
+<p>In that time I've met so many wonderful designers, developers and UX professionals. Thousands of downloads later, we're happy to say Blogcast provided the exact value we so hoped it would.</p>
+
+<p>We believe in giving back. Blogcast has always been our way of saying, "Thank you!" Thank you to the community for all you do collectively. The world, indeed our very professions, wouldn't be possible without the many and thankless contributions of countless designers and developers worldwide.</p>
+
+<p>As always, there will be bugs to fix and features to add. But, what's great is we'll do it together. On my shortlist is <a href="http://techoctave.com/c7/posts/34-authentication-vs-authorization">User Authorization Roles</a>. Ryan Bate's excellent <a href="https://github.com/ryanb">CanCan</a> library comes to mind. Any takers?</p>
+
+<p>Well, without further ado, please do enjoy Blogast 1.1.0. You can download from the Official <a href="http://techoctave.com/blogcast/">Blogcast website</a> or from the Official <a href="https://github.com/techoctave/blogcast">Blogcast Github Repo</a>:</p>
+
+<div class="highlight"><pre><code class="bash">    git clone https://github.com/techoctave/blogcast.git
+    <span class="nb">cd </span>blogcast
+    bundle install
+</code></pre></div>
+
+
+<p>Then jump right in:</p>
+
+<div class="highlight"><pre><code class="bash">    rails server
+    http://localhost:3000/admin
+    login with l/p: admin
+</code></pre></div>
+
+
+<h3>Blogcast Revamped and  Reworked</h3>
+
+<div class="highlight"><pre><code class="ruby"> <span class="mi">1</span><span class="o">.</span> <span class="no">Restructured</span> <span class="no">JavaScript</span> <span class="n">assets</span><span class="o">.</span> <span class="no">Main</span> <span class="o">=&gt;</span> <span class="n">blogcast</span><span class="o">.</span><span class="n">js</span><span class="o">.</span> <span class="no">All</span> <span class="mi">3</span><span class="n">rd</span> <span class="n">party</span> <span class="n">librarie</span> <span class="k">in</span> <span class="sr">/librarie folder.</span>
+<span class="sr"> </span>
+<span class="sr"> 2. Fixed default Comment text not highlighting bug. Using HTML5 Placeholders now.</span>
+<span class="sr"> </span>
+<span class="sr"> 3. Added AutoSave functionality to New Post and Draft. Shoutout to the Backbone.js Team.</span>
+<span class="sr"> </span>
+<span class="sr"> 4. Added Shortcut Key Save. Mac OS X =&gt; Command + s. Windows =&gt; Ctrl + s.</span>
+<span class="sr"> </span>
+<span class="sr"> 5. Added ability for admins to Edit Comments. Simply click the edit icon.</span>
+<span class="sr"> </span>
+<span class="sr"> 6. Upgraded to Rails 3.1.0</span>
+<span class="sr"> </span>
+<span class="sr"> 7. Updated jQuery 1.4.3 to 1.6.4</span>
+<span class="sr"> </span>
+<span class="sr"> 8. Updated Entourage 1.0.0 to 1.1.0</span>
+<span class="sr"> </span>
+<span class="sr"> 9. Updates Rails.js 1.0.0 to 1.0.12</span>
+<span class="sr"> </span>
+<span class="sr"> 10. Added Backbone.js support</span>
+<span class="sr"> </span>
+<span class="sr"> 11. Added Underscore.js support</span>
+<span class="sr"> </span>
+<span class="sr"> 12. CSS3 Cleanups</span>
+</code></pre></div>
+
+
+<p>Take care folks! Have a Merry Christmas and a Happy New Year! Be excellent to each other.</p>
+
+    </div>
+    
+    <div id="share" class="feat">
+      
+      <p>discuss on twitter</p>
+      
+      <a href="http://twitter.com/share" class="popup">
+        <span class="icon-twitter"></span>
+      </a>
+      
+      <div class="line"></div>
+      
+      <br/>
+      
+      <p>every day thousands of developers use our charts & gauges to get the job done right</p>
+      
+      <img src="/images/blog-header.png" usemap="#map" />
+      
+      <map name="map">
+        <area shape="rect" coords="4, 4, 247, 276" href="/charts/" alt="JavaScript Charts" target="_blank"/>
+        <area shape="rect" coords="317, 3, 582, 277" href="/gauges/" alt="JavaScript Gauges" target="_blank"/>
+        <area shape="rect" coords="652, 4, 906, 277" href="/simulation/" alt="JavaScript Flight Gauges" target="_blank"/>  
+      </map>
+    </div>
+    
+  </article>
+</section>
+
+
+
+    </main>
+
+    <footer>
+        <p style="font-size: 80%;">TechOctave, The Lion, "Beautiful & Inspired" are Registered Trademarks of TechOctave, LLC.</p>
+        <p style="font-size: 65%;">HANDCRAFTED WITH <abbr style="color: #FF2400; font-variant: none" title="love">❤</abbr> IN COLUMBUS OHIO</p>
+    </footer>
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/imageMapResizer.js"></script>
+    <script src="/js/moment.js"></script>
+    <script>
+    jQuery(document).ready(function($) {
+      	$("map").imageMapResize();
+        
+        var date = moment().format('DD MMMM YYYY');
+        $(".date").html(date);
+    });
+    </script>
+    
+    
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-17961498-4', 'techoctave.com');
+        ga('send', 'pageview');
+      </script>
+    
+
+  </body>
+</html>

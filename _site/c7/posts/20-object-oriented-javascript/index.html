@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+      <title>Object Oriented JavaScript</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta http-equiv="content-language" content="en-gb" />
+      <meta name="description" content="Fluid, responsive blog theme for Jekyll.">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" type="text/css" href="/css/main.css" />
+      <link rel="stylesheet" type="text/css" href="/css/syntax.css" />
+      <link href="atom.xml" type="application/atom+xml" rel="alternate" title="Site ATOM Feed">
+  </head>
+
+  <body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
+    <main>
+      <section id="single-wrap">
+  <article class="single-content" itemscope itemtype="http://schema.org/BlogPosting">
+	
+    <div class="feat">
+      <h5 class="page-date">
+        <time datetime="2010-09-17T07:31:13Z" itemprop="datePublished">
+          17 September 2010
+        </time>
+      </h5>
+    </div>
+
+    <h1 class="page-title" itemprop="name headline">Object Oriented JavaScript</h1>
+    
+    <h5 class="page-author">Handwritten by TVD</h5>
+
+    <div itemprop="articleBody">
+      <p>In search of guidance many developers ask on StackOverflow, <em>How do I write Object Oriented JavaScript?</em> Each desperately seeking guidance on how to structure their code to take advantage of a more modular, reusable and maintainable code base.</p>
+
+<h3>Plain Old JavaScript Objects (POJOs)</h3>
+
+<p>One of my consulting areas is advising clients on the use of JavaScript and JavaScript Frameworks like jQuery. Recently, I released a set of <a href="http://techoctave.com/c7/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css">JavaScript Dashboard Gauges</a> for use in charting and business intelligence applications.</p>
+
+<p>Today, I'm going to talk about Object Oriented JavaScript and help you think about ways to move away from the procedural mess many good developers find themselves in. We'll focus on building a Plain Old JavaScript Object (POJO) and examine the inherent Object Oriented principles.</p>
+
+<h3>Speedometer Class</h3>
+
+<p>We are going to use the <a href="http://en.wikipedia.org/wiki/Prototype_pattern">Prototype Design Pattern</a>. Take for example a Speedometer. A Speedometer is derived from a Gauge. So, we say the speedometer inherits functionality from the Gauge. The following code would be in a single JavaScript file:</p>
+
+<p>Class definition and Constructor:</p>
+
+<div class="highlight"><pre><code class="js">    <span class="nx">Speedometer</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">gaugeID</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//State  </span>
+        <span class="kd">var</span> <span class="nx">mph</span><span class="p">;</span>
+
+        <span class="c1">//Constructor</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">SetGaugeID</span><span class="p">(</span><span class="nx">gaugeID</span><span class="p">);</span> <span class="c1">//inherited from Gauge</span>
+    
+        <span class="k">this</span><span class="p">.</span><span class="nx">CreateGauge</span><span class="p">();</span> <span class="c1">//inherited from Gauge</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">SetMPH</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+
+<p>Inherit base functionality from Gauge class:</p>
+
+<div class="highlight"><pre><code class="js">    <span class="nx">Speedometer</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Gauge</span><span class="p">();</span>
+</code></pre></div>
+
+
+<p>This type of inheritance is called Prototypal Inheritance. Under the hood, it's different from classical class based inheritance. But, should be very familiar.</p>
+
+<p>Properties (Accessors):</p>
+
+<div class="highlight"><pre><code class="js">    <span class="nx">Speedometer</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">SetMPH</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">mph</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">mph</span> <span class="o">=</span> <span class="nx">mph</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">RotateNeedle</span><span class="p">(...);</span> <span class="c1">//inherited from Gauge</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+
+<p>Methods (Do the work for the Speedometer Class):</p>
+
+<div class="highlight"><pre><code class="js">    <span class="nx">Speedometer</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">Accelerate</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">//Do some work here...</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+
+<p>The accelerate method is only within the scope of the Speedometer class. So only instances of a Speedometer object or children of the Speedometer class have access to the method.</p>
+
+<h3>Using the Speedomter Class</h3>
+
+<p>Well, we so deliciously put together our Speedometer class. Now, it's <a href="http://techoctave.com/c7/posts/1-hello-world">time to have some fun</a> and use an instance of the Speedometer object. Let's take this Teslar Roadster for a spin:</p>
+
+<div class="highlight"><pre><code class="js">    <span class="c1">//Create a new instance of a Speedometer object</span>
+    <span class="kd">var</span> <span class="nx">speedGauge</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Speedometer</span><span class="p">(</span><span class="s2">&quot;speedometer&quot;</span><span class="p">);</span>
+    
+    <span class="c1">//Warm up the engine</span>
+    <span class="nx">speedGauge</span><span class="p">.</span><span class="nx">SetMPH</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+    
+    <span class="c1">//Time to put the pedal to the metal</span>
+    <span class="nx">speedGauge</span><span class="p">.</span><span class="nx">Accelerate</span><span class="p">();</span>
+</code></pre></div>
+
+
+<p>Hey, the good news is if you're here, that means you're looking for help and that makes you awesome! It also means you already have the necessary prerequisites to develop cleaner, more reusable, Object Oriented JavaScript.</p>
+
+<p>My gut tells me you're not here to write the next <a href="http://jquery.com/">jQuery JavaScript Framework</a>. But, you do want to be a better developer and write better code. I can help you with that!</p>
+
+    </div>
+    
+    <div id="share" class="feat">
+      
+      <p>discuss on twitter</p>
+      
+      <a href="http://twitter.com/share" class="popup">
+        <span class="icon-twitter"></span>
+      </a>
+      
+      <div class="line"></div>
+      
+      <br/>
+      
+      <p>every day thousands of developers use our charts & gauges to get the job done right</p>
+      
+      <img src="/images/blog-header.png" usemap="#map" />
+      
+      <map name="map">
+        <area shape="rect" coords="4, 4, 247, 276" href="/charts/" alt="JavaScript Charts" target="_blank"/>
+        <area shape="rect" coords="317, 3, 582, 277" href="/gauges/" alt="JavaScript Gauges" target="_blank"/>
+        <area shape="rect" coords="652, 4, 906, 277" href="/simulation/" alt="JavaScript Flight Gauges" target="_blank"/>  
+      </map>
+    </div>
+    
+  </article>
+</section>
+
+
+
+    </main>
+
+    <footer>
+        <p style="font-size: 80%;">TechOctave, The Lion, "Beautiful & Inspired" are Registered Trademarks of TechOctave, LLC.</p>
+        <p style="font-size: 65%;">HANDCRAFTED WITH <abbr style="color: #FF2400; font-variant: none" title="love">❤</abbr> IN COLUMBUS OHIO</p>
+    </footer>
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/imageMapResizer.js"></script>
+    <script src="/js/moment.js"></script>
+    <script>
+    jQuery(document).ready(function($) {
+      	$("map").imageMapResize();
+        
+        var date = moment().format('DD MMMM YYYY');
+        $(".date").html(date);
+    });
+    </script>
+    
+    
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-17961498-4', 'techoctave.com');
+        ga('send', 'pageview');
+      </script>
+    
+
+  </body>
+</html>

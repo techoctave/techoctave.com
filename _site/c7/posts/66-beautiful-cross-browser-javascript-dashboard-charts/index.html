@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+      <title>Beautiful cross browser JavaScript dashboard charts</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta http-equiv="content-language" content="en-gb" />
+      <meta name="description" content="Fluid, responsive blog theme for Jekyll.">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" type="text/css" href="/css/main.css" />
+      <link rel="stylesheet" type="text/css" href="/css/syntax.css" />
+      <link href="atom.xml" type="application/atom+xml" rel="alternate" title="Site ATOM Feed">
+  </head>
+
+  <body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
+    <main>
+      <section id="single-wrap">
+  <article class="single-content" itemscope itemtype="http://schema.org/BlogPosting">
+	
+    <div class="feat">
+      <h5 class="page-date">
+        <time datetime="2012-01-01T03:44:04Z" itemprop="datePublished">
+          01 January 2012
+        </time>
+      </h5>
+    </div>
+
+    <h1 class="page-title" itemprop="name headline">Beautiful cross browser JavaScript dashboard charts</h1>
+    
+    <h5 class="page-author">Handwritten by TVD</h5>
+
+    <div itemprop="articleBody">
+      <p><a href="http://techoctave.com/charts"><img src="/c7/static/charts.png" width="100%" alt="Beautiful dashboard charts for the sophisticated developer."/></a></p>
+
+<p>Recently, we released our <a href="http://techoctave.com/charts">JavaScript Charts</a> Suite. They're perfect for creating a business intelligence dashboard that gives Senior Management an intuitive pulse on the enterprise.</p>
+
+<p>Our JavaScript Charts Suite includes a <a href="http://techoctave.com/charts">highly configurable API</a>. Choose from over 30+ customizable properties to design the exact chart you need. Build your own executive level dashboard. Beautifully illustrate your data.</p>
+
+<p>We believe software should be beautiful and inspired. Data is no different. Beautiful data is easier to understand and faster to comprehend. Your users will thank you:</p>
+
+<h3>Six Core Principles</h3>
+
+<p>We built our JavaScript Charts Suite on Six Core Principles:</p>
+
+<div class="highlight"><pre><code class="js"> <span class="mi">1</span><span class="p">.</span> <span class="nx">Beautifully</span> <span class="nx">Illustrated</span>
+ 
+ <span class="mi">2</span><span class="p">.</span> <span class="nx">Cross</span> <span class="nx">Browser</span> <span class="nx">Compatible</span>
+ 
+ <span class="mi">3</span><span class="p">.</span> <span class="nx">Lightweight</span> <span class="nx">Footprint</span>
+ 
+ <span class="mi">4</span><span class="p">.</span> <span class="nx">Vector</span> <span class="nx">Based</span> <span class="k">for</span> <span class="nx">Crisp</span> <span class="nx">Zoom</span> <span class="nx">and</span> <span class="nx">Print</span>
+ 
+ <span class="mi">5</span><span class="p">.</span> <span class="nx">Highly</span> <span class="nx">Configurable</span>
+ 
+ <span class="mi">6</span><span class="p">.</span> <span class="nx">Framework</span> <span class="nx">Agnostic</span>
+</code></pre></div>
+
+
+<p>We know you have tight deadlines and constraints. We know you value quality and craftsmanship. We know you'd rather not sacrifice one for the other. That's why we built our JavaScript Charts Suite to deliver just what you need and nothing more.</p>
+
+<h3>Show. Me. The. Codes. Please!?!</h3>
+
+<p>We believe in <a href="http://techoctave.com/c7/posts/65-prototypes-and-the-law-of-conservation-of-quality">developing with intelligent defaults</a>. For you, this means you can get each of our JavaScript Charts running quickly and easily:</p>
+
+<div class="highlight"><pre><code class="js">    <span class="kd">var</span> <span class="nx">sales</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PieChart</span><span class="p">(</span><span class="s2">&quot;sales&quot;</span><span class="p">);</span>
+    <span class="p">.</span> <span class="p">.</span> <span class="p">.</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&quot;sales&quot;</span><span class="o">&gt;&lt;</span><span class="err">/div&gt;</span>
+</code></pre></div>
+
+
+<p>That's it! This is the minimum requirement to render one of our JavaScript Charts. Time to up the ante.</p>
+
+<p>You'll want to populate each JavaScript Chart with your own data and maybe add legend titles and legend labels:</p>
+
+<div class="highlight"><pre><code class="js">    <span class="kd">var</span> <span class="nx">purchases</span> <span class="o">=</span> <span class="p">[</span><span class="mi">55</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">13</span><span class="p">];</span>
+    
+    <span class="kd">var</span> <span class="nx">sales</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PieChart</span><span class="p">(</span><span class="s2">&quot;sales&quot;</span><span class="p">,</span> <span class="p">{</span>
+        <span class="nx">data</span><span class="o">:</span> <span class="nx">purchases</span><span class="p">,</span>
+        <span class="nx">legendTitle</span><span class="o">:</span> <span class="s2">&quot;Sales&quot;</span><span class="p">,</span>
+        <span class="nx">legendLabels</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;United State&quot;</span><span class="p">,</span> <span class="s2">&quot;Canada&quot;</span><span class="p">,</span> <span class="s2">&quot;Brazil&quot;</span><span class="p">]</span>
+    <span class="p">});</span>
+    
+    <span class="p">.</span> <span class="p">.</span> <span class="p">.</span>
+    
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&quot;sales&quot;</span><span class="o">&gt;&lt;</span><span class="err">/div&gt;</span>
+</code></pre></div>
+
+
+<p>There are a ton more properties you could configure. In fact, each JavaScript Chart comes with over 30+ configurable properties.</p>
+
+<p>Our JavaScript Charts are elegantly responsive and update dynamically with ease. So use your <a href="http://techoctave.com/c7/posts/60-simple-long-polling-example-with-javascript-and-jquery">JavaScript Polling</a> method of choice and update your chart instance like so:</p>
+
+<div class="highlight"><pre><code class="js">    <span class="p">(</span><span class="kd">function</span> <span class="nx">poll</span><span class="p">(){</span>
+        <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span> <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;server&quot;</span><span class="p">,</span> <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+            <span class="nx">sales</span><span class="p">.</span><span class="nx">setData</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span> <span class="c1">//Update pie chart</span>
+
+        <span class="p">},</span> <span class="nx">dataType</span><span class="o">:</span> <span class="s2">&quot;json&quot;</span><span class="p">,</span> <span class="nx">complete</span><span class="o">:</span> <span class="nx">poll</span><span class="p">,</span> <span class="nx">timeout</span><span class="o">:</span> <span class="mi">30000</span> <span class="p">});</span>
+    <span class="p">})();</span>
+</code></pre></div>
+
+
+<p>To poll the server, this example used jQuery. But, we believe in framework agnosticism and believe you should have the freedom to choose whichever JavaScript framework you please. So go ahead!</p>
+
+<p>Our JavaScript Charts are framework agnostic. jQuery, Prototype, Mootools, ExtJS...Forget about it...We've got you covered. We believe data is most free when it's beautiful and dynamic - that's it! The rest of the decisions are in your hands - where they should be!</p>
+
+<p>There are just too many goodies to mention in a single post. So seriously, pick your team up a copy of our <a href="http://techoctave.com/charts/">JavaScript Charts</a>. You're next project deserves our JavaScript Charts. You know what? You deserve our JavaScript Charts!</p>
+
+<h3>We're Developer Too</h3>
+
+<p>We're developers too. We've been there. We know requirements shift and enhancements are right around the corner. We want you to be positioned for success.</p>
+
+<p>Our JavaScript Charts work in every browser that supports Standard Vector Graphics (SVG) - it just works! We're pixel perfect.</p>
+
+<p>Using jQuery Mobile, we're your best fit. Working on an iPad app, your customers will be impressed with the quality of each chart. With crisp zoom and a crisp, clean print, your customers will be impressed.</p>
+
+<p>Best part is we're framework agnostic. That means you can use your favorite JavaScript framework: jQuery, Prototype, MooTools, ExtJS, Dojo - we're compatible with them all.</p>
+
+<p>With over 30+ configurable properties, each JavaScript Chart is highly configurable. Create the perfect chart you were thinking about. Tweak and adjust all your heart desires.</p>
+
+<p>Each purchase comes with a year of support. Have a quick question. Talk to the Lead Developer directly. No middle men. No outsourced customer service. We're here for you!</p>
+
+<p>Looking for a JavaScript Charts Suite that Rocks? Checkout our <a href="http://techoctave.com/charts">JavaScript Charts</a> Suite today.</p>
+
+    </div>
+    
+    <div id="share" class="feat">
+      
+      <p>discuss on twitter</p>
+      
+      <a href="http://twitter.com/share" class="popup">
+        <span class="icon-twitter"></span>
+      </a>
+      
+      <div class="line"></div>
+      
+      <br/>
+      
+      <p>every day thousands of developers use our charts & gauges to get the job done right</p>
+      
+      <img src="/images/blog-header.png" usemap="#map" />
+      
+      <map name="map">
+        <area shape="rect" coords="4, 4, 247, 276" href="/charts/" alt="JavaScript Charts" target="_blank"/>
+        <area shape="rect" coords="317, 3, 582, 277" href="/gauges/" alt="JavaScript Gauges" target="_blank"/>
+        <area shape="rect" coords="652, 4, 906, 277" href="/simulation/" alt="JavaScript Flight Gauges" target="_blank"/>  
+      </map>
+    </div>
+    
+  </article>
+</section>
+
+
+
+    </main>
+
+    <footer>
+        <p style="font-size: 80%;">TechOctave, The Lion, "Beautiful & Inspired" are Registered Trademarks of TechOctave, LLC.</p>
+        <p style="font-size: 65%;">HANDCRAFTED WITH <abbr style="color: #FF2400; font-variant: none" title="love">❤</abbr> IN COLUMBUS OHIO</p>
+    </footer>
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/imageMapResizer.js"></script>
+    <script src="/js/moment.js"></script>
+    <script>
+    jQuery(document).ready(function($) {
+      	$("map").imageMapResize();
+        
+        var date = moment().format('DD MMMM YYYY');
+        $(".date").html(date);
+    });
+    </script>
+    
+    
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-17961498-4', 'techoctave.com');
+        ga('send', 'pageview');
+      </script>
+    
+
+  </body>
+</html>

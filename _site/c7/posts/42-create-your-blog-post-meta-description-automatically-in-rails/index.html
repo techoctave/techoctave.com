@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+      <title>Create your blog post meta description automatically in Rails</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta http-equiv="content-language" content="en-gb" />
+      <meta name="description" content="Fluid, responsive blog theme for Jekyll.">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" type="text/css" href="/css/main.css" />
+      <link rel="stylesheet" type="text/css" href="/css/syntax.css" />
+      <link href="atom.xml" type="application/atom+xml" rel="alternate" title="Site ATOM Feed">
+  </head>
+
+  <body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
+    <main>
+      <section id="single-wrap">
+  <article class="single-content" itemscope itemtype="http://schema.org/BlogPosting">
+	
+    <div class="feat">
+      <h5 class="page-date">
+        <time datetime="2010-12-27T02:30:15Z" itemprop="datePublished">
+          27 December 2010
+        </time>
+      </h5>
+    </div>
+
+    <h1 class="page-title" itemprop="name headline">Create your blog post meta description automatically in Rails</h1>
+    
+    <h5 class="page-author">Handwritten by TVD</h5>
+
+    <div itemprop="articleBody">
+      <p>Google uses your blog's meta description to create a synopsis of your link's content. This description shows up when someone Googles key terms. The better the description, the more likely someone will spot your link and click it.</p>
+
+<p>What better way to populate your blog's meta description than with your blog's content! I've created an algorithm to extract the first 250 characters of your blog's content for dynamic insertion into your blog's meta description.</p>
+
+<p>For me, having my meta description created automatically is one less thing I have to worry about. That way I can focus on writing. That's why I created it and that's why I use it in <a href="http://techoctave.com/blogcast">Blogcast</a>.</p>
+
+<h3>Time for Some Rails Goodness</h3>
+
+<h4>helpers/posts_helper.rb</h4>
+
+<p>I put the code in a helper to make integration in the Post view a little cleaner. I'm happy with the results. The code is a bit involved, so I break down the details in the algorithm below.</p>
+
+<div class="highlight"><pre><code class="ruby">    <span class="k">module</span> <span class="nn">PostsHelper</span>
+      <span class="k">def</span> <span class="nf">description</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+        <span class="n">sanitize</span><span class="p">(</span><span class="n">content</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/&lt;code[^&lt;]*&lt;\/code&gt;/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">),</span> <span class="ss">:tags</span> <span class="o">=&gt;</span> <span class="sx">%w()</span><span class="p">,</span> <span class="ss">:attributes</span> <span class="o">=&gt;</span> <span class="sx">%w()</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/[\r\n?]/</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/\&quot;/</span><span class="p">,</span> <span class="s2">&quot;&#39;&quot;</span><span class="p">)</span><span class="o">[</span><span class="mi">0</span><span class="o">.</span><span class="n">.</span><span class="mi">250</span><span class="o">].</span><span class="n">strip</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+</code></pre></div>
+
+
+<p>I use the sanitize core method to clean up any HTML blocks hanging around. I also use a little regular expression to make sure none of our beautiful code samples clog up our SEO pipeline.</p>
+
+<h4>views/posts/show.html.erb</h4>
+
+<p>Here, I deliver a nice neat little present for Google. Hello Google!</p>
+
+<div class="highlight"><pre><code class="ruby">    <span class="o">&lt;</span><span class="sx">% content_for </span><span class="ss">:description</span> <span class="k">do</span> <span class="sx">%&gt;</span>
+<span class="sx">       &lt;%= description(@post.content) %&gt;</span>
+    <span class="o">&lt;</span><span class="sx">% end </span><span class="o">%&gt;</span>
+</code></pre></div>
+
+
+<h4>Here's the algorithm:</h4>
+
+<div class="highlight"><pre><code class="ruby"> <span class="mi">1</span><span class="o">.</span> <span class="no">Remove</span> <span class="n">any</span> <span class="n">code</span> <span class="n">blocks</span> <span class="n">from</span> <span class="n">the</span> <span class="n">content</span>
+ 
+ <span class="mi">2</span><span class="o">.</span> <span class="no">Sanitize</span> <span class="n">content</span> <span class="n">of</span> <span class="n">any</span> <span class="no">HTML</span> <span class="n">code</span>
+ 
+ <span class="mi">3</span><span class="o">.</span> <span class="no">Remove</span> <span class="n">any</span> <span class="n">newline</span> <span class="n">characters</span>
+ 
+ <span class="mi">4</span><span class="o">.</span> <span class="no">Truncate</span> <span class="n">multiple</span> <span class="n">sequences</span> <span class="n">of</span> <span class="n">spaces</span> <span class="n">to</span> <span class="n">a</span> <span class="n">single</span> <span class="n">space</span>
+ 
+ <span class="mi">5</span><span class="o">.</span> <span class="no">Replace</span> <span class="n">double</span><span class="o">-</span><span class="n">quotes</span> <span class="n">with</span> <span class="n">single</span> <span class="n">quotes</span>
+ 
+ <span class="mi">6</span><span class="o">.</span> <span class="no">Grab</span> <span class="n">the</span> <span class="n">first</span> <span class="mi">250</span> <span class="n">characters</span>
+ 
+ <span class="mi">7</span><span class="o">.</span> <span class="no">Trim</span> <span class="n">out</span> <span class="n">any</span> <span class="n">extra</span> <span class="n">spaces</span> <span class="n">hanging</span> <span class="n">around</span>
+</code></pre></div>
+
+
+<p>Why grab 250 characters? Well, there's been reports that Google uses anywhere from 150-180 characters of the meta description for your link's description snippet. Either way, Google doesn't penalize for having extra characters.</p>
+
+<p>That said, Google hasn't confirmed exactly how much characters they use. So, I think 250 is good because you can ensure more description of the link, even if just a little bit.</p>
+
+<p>Of course, if you don't provide a meta description, Google will discern one from the content of your page. Which is best? Well, it really depends. You should make a judgment call based on your situation.</p>
+
+<p>Until next time Beloved, take care!</p>
+
+    </div>
+    
+    <div id="share" class="feat">
+      
+      <p>discuss on twitter</p>
+      
+      <a href="http://twitter.com/share" class="popup">
+        <span class="icon-twitter"></span>
+      </a>
+      
+      <div class="line"></div>
+      
+      <br/>
+      
+      <p>every day thousands of developers use our charts & gauges to get the job done right</p>
+      
+      <img src="/images/blog-header.png" usemap="#map" />
+      
+      <map name="map">
+        <area shape="rect" coords="4, 4, 247, 276" href="/charts/" alt="JavaScript Charts" target="_blank"/>
+        <area shape="rect" coords="317, 3, 582, 277" href="/gauges/" alt="JavaScript Gauges" target="_blank"/>
+        <area shape="rect" coords="652, 4, 906, 277" href="/simulation/" alt="JavaScript Flight Gauges" target="_blank"/>  
+      </map>
+    </div>
+    
+  </article>
+</section>
+
+
+
+    </main>
+
+    <footer>
+        <p style="font-size: 80%;">TechOctave, The Lion, "Beautiful & Inspired" are Registered Trademarks of TechOctave, LLC.</p>
+        <p style="font-size: 65%;">HANDCRAFTED WITH <abbr style="color: #FF2400; font-variant: none" title="love">❤</abbr> IN COLUMBUS OHIO</p>
+    </footer>
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/imageMapResizer.js"></script>
+    <script src="/js/moment.js"></script>
+    <script>
+    jQuery(document).ready(function($) {
+      	$("map").imageMapResize();
+        
+        var date = moment().format('DD MMMM YYYY');
+        $(".date").html(date);
+    });
+    </script>
+    
+    
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-17961498-4', 'techoctave.com');
+        ga('send', 'pageview');
+      </script>
+    
+
+  </body>
+</html>

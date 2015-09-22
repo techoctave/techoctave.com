@@ -1,0 +1,75 @@
+---
+layout: post
+author: TVD
+title: "Code Golf"
+date: 2012-04-29 04:03:52
+permalink: /c7/posts/74-code-golf
+---
+
+![golf](/c7/static/golf.jpg)
+
+The only thing better than Chamomile Tea is Chamomile Tea and [Code Golf][1]. Code Golf is a Stack Exchange community for programming puzzle enthusiasts and code golfers.
+
+Coder sporting his lucky golf outfit. Not a real viking.
+
+If you've ever met me in-person, you know I love talking development in general and code in particular. What's interesting about Code Golf is the ability to learn from a global assortment of your peers in a condensed and rather fun period of time.
+
+Let's look at a few code snippets from an example Code Golf: [Reinvent the For loop][2].
+
+###Reinventing the For Loop
+
+The for loop is a fundamental iteration construct in many programming languages:
+
+{% highlight js %}
+    for(int i = 0; i < 100; i++) 
+    {
+       JustDoIt();
+    }
+{% endhighlight %}
+
+This Code Golf's author challenges developers to:
+
+*Execute a basic for loop without using any repetition structures (for, foreach, while, do, etc).*
+
+The responses are nothing short of astounding really. There were submission for C, Haskell, x86 Assembly, Python, C#, Java, Ruby, Closure, Scala, LISP, Perl, Groovy, Basic and JavaScript.
+
+I'm a big fan of JavaScript. In fact, I believe [The Future is JavaScript][3]. So let's look at some of the more interesting JavaScript submission in Reinventing the For Loop.
+
+####JavaScript Submissions
+
+Entry #1:
+
+{% highlight js %}
+    function f(m,c) {
+       m ? c()&f(--m,c) : 0
+    }
+{% endhighlight %}
+
+Entry #2:
+
+{% highlight js %}
+    function f(m,c) {
+       m&&c()&f(--m,c)
+    }
+{% endhighlight %}
+
+This version was inspired by Entry #1.
+
+Entry #3:
+
+{% highlight js %}
+    (function i(s,r){
+        r += s + ' ';
+        s++ < 1e3 ? i(s,r) : console.log(r)
+    })(0,'')
+{% endhighlight %}
+
+Code Golf is pretty interesting. Hopefully, it gives you a good opportunity to sit back, relax and learn from our peers.
+
+Happy Coding and Enjoy!
+
+
+
+  [1]: http://codegolf.stackexchange.com/
+  [2]: http://codegolf.stackexchange.com/questions/1034/reinvent-the-for-loop
+  [3]: http://techoctave.com/c7/posts/67-the-future-is-javascript

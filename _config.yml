@@ -1,0 +1,15 @@
+name: "TECHOCTAVE"
+description: "We believe software should be beautiful & inspired."
+
+author: "TechOctave, LLC"
+
+url: "http://techoctave.com"
+baseurl: ""
+
+markdown: rdiscount
+permalink: /c7/:year/:month/:title.html
+pygments: true
+
+# Google Analytics
+ga_domain: techoctave.com
+ga_tracking_id: UA-17961498-4

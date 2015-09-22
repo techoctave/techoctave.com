@@ -1,0 +1,92 @@
+---
+layout: posts
+title:  "Every day thousands of developers use our charts & gauges to get the job done right."
+date:   2010-07-01 00:00:00
+permalink: /
+---
+
+<section id="single-wrap">
+  <article class="single-content" itemscope itemtype="http://schema.org/BlogPosting">
+	
+    <!--<div class="feat">
+      <h5 class="page-date">
+        <time class="date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+
+        </time>
+      </h5>
+    </div>-->
+
+    <h1 class="page-title" itemprop="name headline">{{ page.title }}</h1>
+    
+    <img src="/images/blog-header.png" usemap="#map" style="margin-top: -20px;" />
+    
+    <map name="map">
+      <area shape="rect" coords="4, 4, 247, 276" href="/charts/" alt="JavaScript Charts" target="_blank"/>
+      <area shape="rect" coords="317, 3, 582, 277" href="/gauges/" alt="JavaScript Gauges" target="_blank"/>
+      <area shape="rect" coords="652, 4, 906, 277" href="/simulation/" alt="JavaScript Flight Gauges" target="_blank"/>  
+    </map>
+    
+    <br/><br/>
+    
+    <div class="line"></div>
+    
+    <br/>
+    
+    <div class="hits">
+      <h1 class="page-title" itemprop="name headline" style="font-weight: normal; font-family: Times New Roman; font-style: italic; font-size: 230%;">New here? Start with the hits:</h1>
+    
+      <h1 class="page-title" itemprop="name headline"><a href="/c7/posts/57-hustle-and-code">Hustle and Code</a></h1>
+
+      <h1 class="page-title" itemprop="name headline"><a href="/c7/posts/49-rails-3-1-and-the-jquery-effect">Rails 3.1 and The jQuery Effect</a></h1>
+    
+      <h1 class="page-title" itemprop="name headline"><a href="/c7/posts/50-silly-rabbit-parsing-html-is-for-kids">Silly Rabbit, Parsing HTML is for Kids</a></h1>
+    
+      <h1 class="page-title" itemprop="name headline"><a href="/c7/posts/60-simple-long-polling-example-with-javascript-and-jquery">Simple Long Polling Example with JavaScript and jQuery</a></h1>
+    
+      <h1 class="page-title" itemprop="name headline"><a href="/c7/posts/75-how-much-would-you-pay-for-the-universe">How much would you pay for the Universe?</a></h1>
+    
+      <h1 class="page-title" itemprop="name headline"><a href="/c7/posts/78-foundation-is-everything">Foundation is Everything </a></h1>
+    
+      <h1 class="page-title" itemprop="name headline"><a href="/c7/posts/79-never-save-anything-for-the-swim-back">Never save anything for the swim back</a></h1>
+    
+      <h1 class="page-title" itemprop="name headline"><a href="/c7/posts/90-designer-languages">Designer Languages</a></h1>
+    
+      <h1 class="page-title" itemprop="name headline"><a href="/c7/posts/97-why-c-never-left">Why C++ Never Left</a></h1>
+    
+      <h1 class="page-title" itemprop="name headline"><a href="/c7/posts/102-the-only-higher-level-than-javascript-is-god-s-word">The Only Higher Level Than JavaScript Is God's Word. </a></h1>
+      
+      <h1 class="page-title" itemprop="name headline"><a href="/c7/archives">. . .</a></h1>
+    </div>
+    
+    <br/>
+    
+    <ul class="posts">
+        {% for post in site.posts limit: 9 %}
+        <br/>
+        
+        <div class="line"></div>
+        
+        <br/>
+        
+         <div class="feat">
+           <h5 class="page-date">
+             <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+               {{ post.date | date_to_long_string }}
+             </time>
+           </h5>
+         </div>
+
+         <h1 class="page-title" itemprop="name headline"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+         
+         <h5 class="page-author">Handwritten by {{ post.author }}</h5>
+
+         <div itemprop="articleBody">
+           {{ post.content }}
+         </div>
+         
+        {% endfor %}
+      </ul>
+  </article>
+</section>
+
+

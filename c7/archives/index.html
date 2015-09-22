@@ -1,0 +1,49 @@
+---
+layout: posts
+title:  "All of our articles on design, development & the business of software from A to Z."
+date:   2010-07-01 00:00:00
+permalink: /
+---
+
+<section id="single-wrap">
+  <article class="single-content" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <h1 class="page-title" itemprop="name headline">{{ page.title }}</h1>
+    
+    {%for post in site.posts %}
+      {% unless post.next %}
+        <h3 class="archives-date">{{ post.date | date: '%Y' }}</h3>
+        <ul class="archives">
+        {% else %}
+        {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+        {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+        {% if year != nyear %}
+        </ul>
+        <h3>{{ post.date | date: '%Y' }}</h3>
+        <ul class="archives">
+        {% endif %}
+      {% endunless %}
+      
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+    
+    <br><br>
+    
+    
+    <h1 class="page-title" itemprop="name headline">Every day thousands of developers use our charts & gauges to get the job done right.</h1>
+    
+    <img src="/images/blog-header.png" usemap="#map" style="margin-top: -20px;" />
+    
+    <map name="map">
+      <area shape="rect" coords="4, 4, 247, 276" href="/charts/" alt="JavaScript Charts" target="_blank"/>
+      <area shape="rect" coords="317, 3, 582, 277" href="/gauges/" alt="JavaScript Gauges" target="_blank"/>
+      <area shape="rect" coords="652, 4, 906, 277" href="/simulation/" alt="JavaScript Flight Gauges" target="_blank"/>  
+    </map>
+      
+      
+  </article>
+</section>
+
+

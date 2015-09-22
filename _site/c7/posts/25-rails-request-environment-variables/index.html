@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+      <title>Rails Request Environment Variables</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta http-equiv="content-language" content="en-gb" />
+      <meta name="description" content="Fluid, responsive blog theme for Jekyll.">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" type="text/css" href="/css/main.css" />
+      <link rel="stylesheet" type="text/css" href="/css/syntax.css" />
+      <link href="atom.xml" type="application/atom+xml" rel="alternate" title="Site ATOM Feed">
+  </head>
+
+  <body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
+    <main>
+      <section id="single-wrap">
+  <article class="single-content" itemscope itemtype="http://schema.org/BlogPosting">
+	
+    <div class="feat">
+      <h5 class="page-date">
+        <time datetime="2010-09-30T01:28:29Z" itemprop="datePublished">
+          30 September 2010
+        </time>
+      </h5>
+    </div>
+
+    <h1 class="page-title" itemprop="name headline">Rails Request Environment Variables</h1>
+    
+    <h5 class="page-author">Handwritten by TVD</h5>
+
+    <div itemprop="articleBody">
+      <p>You are an internet savvy Starter. So, I hope you're <a href="http://www.google.com/analytics/">paying attention to your users somehow</a>! Well, there's gonna come a time when you'll need to do some analytic gathering yourself. Rails environment variables can come in handy then.</p>
+
+<p>I've <a href="http://techoctave.com/c7/posts/10-scream-seo-karma-with-a-google-sitemap-for-your-rails-blog">written</a> <a href="http://techoctave.com/c7/posts/16-how-to-host-a-rails-app-with-phusion-passenger-for-nginx">quite</a> a few <a href="http://techoctave.com/c7/posts/21-learn-how-to-use-jquery-in-your-ruby-on-rails-app">Ruby</a> on <a href="http://techoctave.com/c7/posts/23-rails-date-formats">Rails</a> tutorials so far. I hope this Rails tutorial also helps you reach your destination.</p>
+
+<h3>Using Rails Request.env</h3>
+
+<p>Here's an example of using the Rails <em>request.env</em> object:</p>
+
+<div class="highlight"><pre><code class="ruby">    <span class="vi">@contact</span> <span class="o">=</span> <span class="no">Contact</span><span class="o">.</span><span class="n">new</span>
+    <span class="vi">@contact</span><span class="o">.</span><span class="n">referrer</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">env</span><span class="o">[</span><span class="s2">&quot;HTTP_REFERER&quot;</span><span class="o">]</span>
+    <span class="vi">@contact</span><span class="o">.</span><span class="n">user_agent</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">env</span><span class="o">[</span><span class="s2">&quot;HTTP_USER_AGENT&quot;</span><span class="o">]</span>
+</code></pre></div>
+
+
+<h3>Rails Request.env List</h3>
+
+<p>Request.env is a Rails object that contains information on your visitor's environment (e.g. browser, referrer) and information on your server's environment. The <em>request.env</em> object is a key/value pair Ruby array. Here is the list of the environment variables you have access to:</p>
+
+<div class="highlight"><pre><code class="ruby">    <span class="c1">#Rails Request.env Variables</span>
+    <span class="no">SERVER_NAME</span>
+    <span class="no">PATH_INFO</span>
+    <span class="no">REMOTE_HOST</span>
+    <span class="no">HTTP_ACCEPT_ENCODING</span>
+    <span class="no">HTTP_USER_AGENT</span>
+    <span class="no">SERVER_PROTOCOL</span>
+    <span class="no">HTTP_CACHE_CONTROL</span>
+    <span class="no">HTTP_ACCEPT_LANGUAGE</span>
+    <span class="no">HTTP_HOST</span>
+    <span class="no">REMOTE_ADDR</span>
+    <span class="no">SERVER_SOFTWARE</span>
+    <span class="no">HTTP_KEEP_ALIVE</span>
+    <span class="no">HTTP_REFERER</span>
+    <span class="no">HTTP_COOKIE</span>
+    <span class="no">HTTP_ACCEPT_CHARSET</span>
+    <span class="no">REQUEST_URI</span>
+    <span class="no">SERVER_PORT</span>
+    <span class="no">GATEWAY_INTERFACE</span>
+    <span class="no">QUERY_STRING</span>
+    <span class="no">REMOTE_USER</span>
+    <span class="no">HTTP_ACCEPT</span>
+    <span class="no">REQUEST_METHOD</span>
+    <span class="no">HTTP_CONNECTION</span>
+</code></pre></div>
+
+
+<p>Good Luck Beloved! Have Fun!</p>
+
+    </div>
+    
+    <div id="share" class="feat">
+      
+      <p>discuss on twitter</p>
+      
+      <a href="http://twitter.com/share" class="popup">
+        <span class="icon-twitter"></span>
+      </a>
+      
+      <div class="line"></div>
+      
+      <br/>
+      
+      <p>every day thousands of developers use our charts & gauges to get the job done right</p>
+      
+      <img src="/images/blog-header.png" usemap="#map" />
+      
+      <map name="map">
+        <area shape="rect" coords="4, 4, 247, 276" href="/charts/" alt="JavaScript Charts" target="_blank"/>
+        <area shape="rect" coords="317, 3, 582, 277" href="/gauges/" alt="JavaScript Gauges" target="_blank"/>
+        <area shape="rect" coords="652, 4, 906, 277" href="/simulation/" alt="JavaScript Flight Gauges" target="_blank"/>  
+      </map>
+    </div>
+    
+  </article>
+</section>
+
+
+
+    </main>
+
+    <footer>
+        <p style="font-size: 80%;">TechOctave, The Lion, "Beautiful & Inspired" are Registered Trademarks of TechOctave, LLC.</p>
+        <p style="font-size: 65%;">HANDCRAFTED WITH <abbr style="color: #FF2400; font-variant: none" title="love">❤</abbr> IN COLUMBUS OHIO</p>
+    </footer>
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/imageMapResizer.js"></script>
+    <script src="/js/moment.js"></script>
+    <script>
+    jQuery(document).ready(function($) {
+      	$("map").imageMapResize();
+        
+        var date = moment().format('DD MMMM YYYY');
+        $(".date").html(date);
+    });
+    </script>
+    
+    
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-17961498-4', 'techoctave.com');
+        ga('send', 'pageview');
+      </script>
+    
+
+  </body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+      <title>Prototypes and The Law of Conservation of Quality</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta http-equiv="content-language" content="en-gb" />
+      <meta name="description" content="Fluid, responsive blog theme for Jekyll.">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" type="text/css" href="/css/main.css" />
+      <link rel="stylesheet" type="text/css" href="/css/syntax.css" />
+      <link href="atom.xml" type="application/atom+xml" rel="alternate" title="Site ATOM Feed">
+  </head>
+
+  <body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
+    <main>
+      <section id="single-wrap">
+  <article class="single-content" itemscope itemtype="http://schema.org/BlogPosting">
+	
+    <div class="feat">
+      <h5 class="page-date">
+        <time datetime="2011-12-30T01:06:17Z" itemprop="datePublished">
+          30 December 2011
+        </time>
+      </h5>
+    </div>
+
+    <h1 class="page-title" itemprop="name headline">Prototypes and The Law of Conservation of Quality</h1>
+    
+    <h5 class="page-author">Handwritten by TVD</h5>
+
+    <div itemprop="articleBody">
+      <p><img src="http://techoctave.com/c7/static/column-chart-concept.png" alt="TechOctave Column Chart Concept"/></p>
+
+<p>Prototyping is hard, but good for business. It's a necessary phase between idea and product. It's the double rainbow between you and your customer. No Unicorns.</p>
+
+<p>We apply prototyping to all of our products. Here are some lessons learned from our latest product - <a href="http://techoctave.com/charts">JavaScript Charts</a> Suite. We hope you enjoy!</p>
+
+<h3>Great products evolve from great prototypes...</h3>
+
+<p>Good prototyping isn't easy either. It takes sacrifice and diligence to introspect and seek the right questions before coming to a "solution". Think about it...What could you have been doing instead of prototyping? Working on client work? Jumping straight into production code?</p>
+
+<p>My point is prototyping takes time away from other activities. But, I posit this, "Great products evolve from great prototypes." Without dedication to the prototyping process, a continuous loop of feedback, what are we left with? Luck? I prefer iterations over luck.</p>
+
+<p>Don't get me wrong, I respect Lady Luck. I just believe she favors those who <a href="http://techoctave.com/c7/posts/63-libertango">Tango</a> with purposeful intent. With our Dashboard Chart Suite, prototyping is both meaningful and purposeful.</p>
+
+<h3>Prototypes are Functional Concepts</h3>
+
+<p>The scope of a prototype is really up to you. Each can vary based on what you're trying to accomplish. Prototypes are functional concepts.</p>
+
+<p>Prototypes should help you: 1) Get a feel for the problem domain; 2) Get something solid enough where you can begin soliciting feedback.</p>
+
+<p>Our Dashboard Chart Suite has several prototypes we feel represent core functionality. For example, here are two:</p>
+
+<p><img src="http://techoctave.com/c7/static/scatter-chart-concept.png" alt="TechOctave Scatter Chart Concept"/></p>
+
+<p>Left: Scatter Chart, Right: Column Chart</p>
+
+<p>A good prototype allows you to have a conversation about complexity. Hypotheticals are removed and you can quickly get down to brass tacks. I follow a series of methodical questions when I prototype:</p>
+
+<div class="highlight"><pre><code class="bash"> 1. What environment will this product be used? 
+ 2. Who is going to use this product?
+ 3. What is the motivation to use this product?
+</code></pre></div>
+
+
+<h4>What environment will this product be used?</h4>
+
+<p>Here, I'm trying to figure out the operating constraints of the product: Will it be used in a web application? Or will it be used in a Desktop application? Or is it a server utility?</p>
+
+<p>These are the basis for my digital product questions. But, I'm an Engineer by training so hardware products aren't out of scope. For hardware products, you might ask: How will the user interact with the device? What communication protocol(s) need to be available? Is the context a laboratory? Is the context someone's home? Or, is the context someone's business?</p>
+
+<p>Some questions are useful for both software and hardware: Is this a stand alone component? Is this product a single piece to a much larger puzzle? Is this piece mission critical? What will this product mean to the success of the larger initiative?</p>
+
+<p>It's important to know which environment your product will be used. Knowing this will help you value your product. It will also help your customers value their time.</p>
+
+<h4>Who is going to use this product?</h4>
+
+<p>Here, it's important to reflect on who the end user is. Call it, "Getting inside their head". Call it "User Profiles". Call it, "End User Analysis". Whatever you call it, make sure you spend time empathizing with the end user. Make sure you spend time thinking about (their) level of experience - not yours.</p>
+
+<p>Most of my customers are developers. I'm a developer too. So I can make a pretty good call as to what makes sense and what doesn't. But, your situation may be different.</p>
+
+<p>Maybe your customers are designers. What if you're not a designer? All that means is you'll have to spend a little more time upfront understanding how they work and why.</p>
+
+<p>Fundamentally, the answer to this question helps you understand how much complexity you have liberty to expose and how much you simply need to keep hidden.</p>
+
+<h4>What is the motivation to use this product?</h4>
+
+<p>This is where you get down to brass tacks and truly evaluate the value of what your prototype can become. Why is the customer here? Why don't they just build the product themselves? Are they trying to save time? Are they trying to save money? Are they trying to save both?</p>
+
+<p>Maybe your customers value beauty. I believe in beauty. I believe software should be beautiful and inspired. This is a core value. People value functional things, but they love beautiful things. As you evaluate motivation try to remember that.</p>
+
+<h3>Intelligent Defaults</h3>
+
+<p>I not only value beauty, I also value aforethought and conviction. That's why I believe in Intelligent Defaults.</p>
+
+<p>I believe each product should be able to run with as minimum configuration as possible. This concept is a hallmark of our <a href="http://techoctave.com/gauges">Dashboard Gauge Suite</a> and our customers love it. Intelligent defaults increase confidence and decrease learning curve.</p>
+
+<p>I say learn to love intelligent defaults. Apply them without haste. It's good for the end user and it's good for you too. Intelligent Defaults are good for you because they communicate clean interfaces from which to work from.</p>
+
+<p>For example, which do you believe is cleaner code?</p>
+
+<p>Interface One (Uses Intelligent Defaults):</p>
+
+<div class="highlight"><pre><code class="js">    <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;2010&quot;</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">350</span><span class="p">,</span> <span class="mi">1200</span><span class="p">],</span>
+                <span class="p">[</span><span class="s2">&quot;2011&quot;</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> <span class="mi">2400</span><span class="p">,</span> <span class="mi">540</span><span class="p">]];</span>
+    
+    <span class="kd">var</span> <span class="nx">sales</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BarChart</span><span class="p">(</span><span class="s2">&quot;sales&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="nx">data</span><span class="p">});</span>
+</code></pre></div>
+
+
+<p>An instance of the BarChart object <em>sales</em> is instantiated and beautifully drawn on your screen.</p>
+
+<p>Interface Two:</p>
+
+<div class="highlight"><pre><code class="js">    <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;2010&quot;</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">350</span><span class="p">,</span> <span class="mi">1200</span><span class="p">],</span>
+                <span class="p">[</span><span class="s2">&quot;2011&quot;</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> <span class="mi">2400</span><span class="p">,</span> <span class="mi">540</span><span class="p">]];</span>
+    
+    <span class="kd">var</span> <span class="nx">sales</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BarChart</span><span class="p">();</span>
+    
+    <span class="nx">sales</span><span class="p">.</span><span class="nx">SetProperty</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;sales&quot;</span><span class="p">);</span>
+    <span class="nx">sales</span><span class="p">.</span><span class="nx">SetProperty</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+    
+    <span class="nx">sales</span><span class="p">.</span><span class="nx">SetProperty</span><span class="p">(</span><span class="s2">&quot;colors&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;#FF2400&quot;</span><span class="p">,</span> <span class="s2">&quot;#E25822&quot;</span><span class="p">,</span> <span class="s2">&quot;#F2F2F2&quot;</span><span class="p">,</span> <span class="s2">&quot;#B22222&quot;</span><span class="p">]);</span>
+    
+    <span class="nx">sales</span><span class="p">.</span><span class="nx">SetProperty</span><span class="p">(</span><span class="s2">&quot;fill&quot;</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+    <span class="nx">sales</span><span class="p">.</span><span class="nx">SetProperty</span><span class="p">(</span><span class="s2">&quot;width&quot;</span><span class="p">,</span> <span class="mi">200</span><span class="p">);</span>
+    <span class="nx">sales</span><span class="p">.</span><span class="nx">SetProperty</span><span class="p">(</span><span class="s2">&quot;height&quot;</span><span class="p">,</span> <span class="mi">200</span><span class="p">);</span>
+    <span class="nx">sales</span><span class="p">.</span><span class="nx">SetProperty</span><span class="p">(</span><span class="s2">&quot;scaling&quot;</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">);</span>
+
+    <span class="p">...</span>
+    
+    <span class="nx">sales</span><span class="p">.</span><span class="nx">drawGraph</span><span class="p">();</span>
+</code></pre></div>
+
+
+<p>There were a few more properties to set before a "valid" BarChart could be rendered. But, let's cut to the chase. Your project is behind schedule and the boss is getting antsy for results. Which philosophy do you wish guided the development of your components?</p>
+
+<h4>Intelligent Defaults are core to your DNA</h4>
+
+<p>Intelligent Defaults can and should go further than user experience. Indeed, I believe Intelligent Defaults should be at the DNA of our products.</p>
+
+<p>In the example above, why use the new keyword at all?</p>
+
+<p>The first example could go from:</p>
+
+<div class="highlight"><pre><code class="js">    <span class="kd">var</span> <span class="nx">sales</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BarChart</span><span class="p">(</span><span class="s2">&quot;sales&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="nx">data</span><span class="p">});</span>
+</code></pre></div>
+
+
+<p>To:</p>
+
+<div class="highlight"><pre><code class="js">    <span class="kd">var</span> <span class="nx">sales</span> <span class="o">=</span> <span class="nx">BarChart</span><span class="p">(</span><span class="s2">&quot;sales&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="nx">data</span><span class="p">});</span>
+</code></pre></div>
+
+
+<p>With well executed constructor code:</p>
+
+<div class="highlight"><pre><code class="js">    <span class="kd">function</span> <span class="nx">BarChart</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
+       <span class="k">if</span><span class="p">(</span><span class="nb">window</span> <span class="o">===</span> <span class="k">this</span><span class="p">)</span> <span class="p">{</span>
+          <span class="k">return</span> <span class="k">new</span> <span class="nx">BarChart</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+       <span class="p">}</span>
+       <span class="p">...</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+
+<p>What this means is the end user gets the benefits of a fully instantiated object without ever having to worry about forgetting the <em>new</em> keyword.</p>
+
+<p>With this attention to detail, the new keyword would never slip through the cracks. That means the end user doesn't have to worry about potentially overriding data. That means less logic errors will occur. Less testing time will be needed. Indeed, less development time will be needed. That's why I always say, "Quality has a price and it's not a question of if you'll pay, but when."</p>
+
+<h3>The Law of Conservation of Quality</h3>
+
+<p>The Law of Conservation of Energy is a fundamental law of physics. It states, "The total amount of energy in an isolated system remains constant over time. Therefore, the total energy is said to be conserved over time."</p>
+
+<p>For an isolated system, this law means that energy can change its location within the system, and that it can change form within the system, but that energy can be neither created nor destroyed.</p>
+
+<p>I believe there is a corollary in software development. I call it <em>The Law of Conservation of Quality</em>. It states, "The total amount of quality in an isolated software project remains constant over time."</p>
+
+<p>From a pragmatic standpoint, this means to increase quality, we need to add quality. This could come in the form of quality components, quality processes and most importantly, quality people.</p>
+
+<p>Quality doesn't come out of thin air, it's either bought upfront or bought later. Eventually, someone pays the price and the many benefit.</p>
+
+<p>Those people go by many names. Some call them Pioneers. Some call them Leaders. I call them Customers.</p>
+
+<p>Looking for an easy to use JavaScript Charts library with a powerful API? Checkout our <a href="http://techoctave.com/charts">JavaScript Charts</a> Suite. We believe in quality because we're developers too.</p>
+
+    </div>
+    
+    <div id="share" class="feat">
+      
+      <p>discuss on twitter</p>
+      
+      <a href="http://twitter.com/share" class="popup">
+        <span class="icon-twitter"></span>
+      </a>
+      
+      <div class="line"></div>
+      
+      <br/>
+      
+      <p>every day thousands of developers use our charts & gauges to get the job done right</p>
+      
+      <img src="/images/blog-header.png" usemap="#map" />
+      
+      <map name="map">
+        <area shape="rect" coords="4, 4, 247, 276" href="/charts/" alt="JavaScript Charts" target="_blank"/>
+        <area shape="rect" coords="317, 3, 582, 277" href="/gauges/" alt="JavaScript Gauges" target="_blank"/>
+        <area shape="rect" coords="652, 4, 906, 277" href="/simulation/" alt="JavaScript Flight Gauges" target="_blank"/>  
+      </map>
+    </div>
+    
+  </article>
+</section>
+
+
+
+    </main>
+
+    <footer>
+        <p style="font-size: 80%;">TechOctave, The Lion, "Beautiful & Inspired" are Registered Trademarks of TechOctave, LLC.</p>
+        <p style="font-size: 65%;">HANDCRAFTED WITH <abbr style="color: #FF2400; font-variant: none" title="love">❤</abbr> IN COLUMBUS OHIO</p>
+    </footer>
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/imageMapResizer.js"></script>
+    <script src="/js/moment.js"></script>
+    <script>
+    jQuery(document).ready(function($) {
+      	$("map").imageMapResize();
+        
+        var date = moment().format('DD MMMM YYYY');
+        $(".date").html(date);
+    });
+    </script>
+    
+    
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-17961498-4', 'techoctave.com');
+        ga('send', 'pageview');
+      </script>
+    
+
+  </body>
+</html>

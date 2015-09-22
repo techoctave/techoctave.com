@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+      <title>C# Reading XML With Namespace</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta http-equiv="content-language" content="en-gb" />
+      <meta name="description" content="Fluid, responsive blog theme for Jekyll.">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" type="text/css" href="/css/main.css" />
+      <link rel="stylesheet" type="text/css" href="/css/syntax.css" />
+      <link href="atom.xml" type="application/atom+xml" rel="alternate" title="Site ATOM Feed">
+  </head>
+
+  <body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
+    <main>
+      <section id="single-wrap">
+  <article class="single-content" itemscope itemtype="http://schema.org/BlogPosting">
+	
+    <div class="feat">
+      <h5 class="page-date">
+        <time datetime="2013-05-21T11:09:54Z" itemprop="datePublished">
+          21 May 2013
+        </time>
+      </h5>
+    </div>
+
+    <h1 class="page-title" itemprop="name headline">C# Reading XML With Namespace</h1>
+    
+    <h5 class="page-author">Handwritten by TVD</h5>
+
+    <div itemprop="articleBody">
+      <p>I've said it before and I'll say it again: .NET is a ghetto. It's my experience that once your application becomes non-trivial, there is no tried-and-true way of accomplishing a given task.</p>
+
+<p>You either have to piece together what feels like desparate code in order to accomplish the most common of use cases. Case in point is using XPath to read data in XML.</p>
+
+<p>Say you have this XML response:</p>
+
+<div class="highlight"><pre><code class="xml">    <span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+    <span class="nt">&lt;UserResponse</span> <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span> <span class="na">xmlns:xsd=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;User</span> <span class="na">xmlns=</span><span class="s">&quot;http://halo.com/schemas/custom/users/GetUser_V1&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;Result&gt;</span>&quot;Successful&quot;<span class="nt">&lt;/Result&gt;</span>
+          <span class="nt">&lt;Name&gt;</span>John-117<span class="nt">&lt;/Name&gt;</span>
+          <span class="nt">&lt;Age&gt;</span>Unknown<span class="nt">&lt;/Age&gt;</span>
+          <span class="nt">&lt;Rank&gt;</span>Master Chief Petty Officer<span class="nt">&lt;/Rank&gt;</span>
+      <span class="nt">&lt;/User&gt;</span>
+      <span class="nt">&lt;UUID</span> <span class="na">xmlns=</span><span class="s">&quot;http://halo.com/schemas/custom/users/GetUser_V1&quot;</span><span class="nt">&gt;</span>
+          {61D25ABC-CD96-4838-9406-C867B6D07449}
+      <span class="nt">&lt;/UUID&gt;</span>
+    <span class="nt">&lt;/UserResponse&gt;</span>
+</code></pre></div>
+
+
+<p>Using C#, parsing this data should be an easy task - right? You should be able to do something like this?</p>
+
+<div class="highlight"><pre><code class="js">    <span class="nx">HaloService</span> <span class="nx">haloService</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">HaloService</span><span class="p">();</span>
+    <span class="nx">string</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">haloService</span><span class="p">.</span><span class="nx">ExecuteCall</span><span class="p">(</span><span class="s2">&quot;{61D25ABC-CD96-4838-9406-C867B6D07449}&quot;</span><span class="p">);</span>
+    
+    <span class="nx">XmlDocument</span> <span class="nx">results</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XmlDocument</span><span class="p">();</span>
+    <span class="nx">results</span><span class="p">.</span><span class="nx">LoadXml</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+    
+    <span class="k">if</span> <span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">SelectSingleNode</span><span class="p">(</span><span class="s2">&quot;//UserResponse/User/Result&quot;</span><span class="p">).</span><span class="nx">InnerText</span> <span class="o">==</span> <span class="s2">&quot;Successful&quot;</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">string</span> <span class="nx">Name</span> <span class="o">=</span> <span class="nx">results</span><span class="p">.</span><span class="nx">SelectSingleNode</span><span class="p">(</span><span class="s2">&quot;//UserResponse/User/Name&quot;</span><span class="p">).</span><span class="nx">InnerText</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+
+<p>But does that work in .NET C#? No.</p>
+
+<p>Why? It doesn't work because the XML response has a namespace separating the key data elements. Here the XML namespace is:</p>
+
+<div class="highlight"><pre><code class="xml">    http://halo.com/schemas/custom/users/GetUser_V1
+</code></pre></div>
+
+
+<h3>So what are your options:</h3>
+
+<p>You really only have two options when confronted with this challenge. The first is to use XMLNamespaceManager. I don't care for that route as you'll see below.</p>
+
+<p>The final option is to strip the Namespaces using Regex. I prefer this route and you'll see why.</p>
+
+<h4>Use XmlNamespaceManager</h4>
+
+<p>When using XPath in .NET (via SelectNodes or SelectSingleNode) on XML with namespaces you need to:</p>
+
+<div class="highlight"><pre><code class="bash"> 1. Provide your own XmlNamespaceManager
+ 
+ 2. Explicitly prefix ALL elements in your XPath expression which are in the namespace
+</code></pre></div>
+
+
+<p>You do so in a similar fashion as below:</p>
+
+<div class="highlight"><pre><code class="js">    <span class="p">.</span> <span class="p">.</span> <span class="p">.</span>
+        
+    <span class="nx">XmlDocument</span> <span class="nx">results</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XmlDocument</span><span class="p">();</span>
+    <span class="nx">results</span><span class="p">.</span><span class="nx">LoadXml</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+    
+    <span class="nx">XmlNamespaceManager</span> <span class="nx">ns</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XmlNamespaceManager</span><span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">NameTable</span><span class="p">);</span>
+    <span class="nx">ns</span><span class="p">.</span><span class="nx">AddNamespace</span><span class="p">(</span><span class="s2">&quot;ns&quot;</span><span class="p">,</span>      
+            <span class="s2">&quot;http://halo.com/schemas/custom/users/GetUser_V1&quot;</span><span class="p">);</span>
+    
+    <span class="nx">string</span> <span class="nx">Result</span> <span class="o">=</span> <span class="nx">results</span><span class="p">.</span><span class="nx">SelectSingleNode</span><span class="p">(</span>
+    <span class="s2">&quot;//UserResponse/ns:User/ns:Result&quot;</span><span class="p">,</span> <span class="nx">ns</span><span class="p">).</span><span class="nx">InnerText</span><span class="p">;</span>
+
+    <span class="p">.</span> <span class="p">.</span> <span class="p">.</span>
+</code></pre></div>
+
+
+<p>This gets you the data, but it's clumsy and has several disadvantages. First, if you don't control the web service (which many people don't), the namespace could change on you at anytime.</p>
+
+<p>When that happens your hardcoded namespace WILL break and you will have production downtime. Second, you can't reuse XPath that was previously valid. Finally, the namespaced XPath expression is less readable and therefore, less maintainable.</p>
+
+<p>The XPath implementation in SelectNodes and SelectSingleNode should really be more flexible. Using familiar methods should not shock developers or lead to unmaintainable code. It simply shouldn't.</p>
+
+<h4>Strip The Namespaces Using Regex</h4>
+
+<p>Regex is like violence - if it doesn’t solve your problems, you are not using enough of it. Generally, I don't condone the use of  <a href="http://techoctave.com/c7/posts/50-silly-rabbit-parsing-html-is-for-kids">unnecessary Regex</a>.</p>
+
+<p>This isn't one of those scenarios. Here, Regex was not only necessary, it was downright welcomed:</p>
+
+<div class="highlight"><pre><code class="js">    <span class="nx">string</span> <span class="nx">filter</span> <span class="o">=</span> <span class="err">@</span><span class="s2">&quot;xmlns(:\w+)?=&quot;&quot;([^&quot;&quot;]+)&quot;&quot;|xsi(:\w+)?=&quot;&quot;([^&quot;&quot;]+)&quot;&quot;&quot;</span><span class="p">;</span>
+    <span class="nx">response</span> <span class="o">=</span> <span class="nx">Regex</span><span class="p">.</span><span class="nx">Replace</span><span class="p">(</span><span class="nx">response</span><span class="p">,</span> <span class="nx">filter</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span>
+    
+    <span class="nx">XmlDocument</span> <span class="nx">results</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XmlDocument</span><span class="p">();</span>
+    <span class="nx">results</span><span class="p">.</span><span class="nx">LoadXml</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+
+    <span class="nx">string</span> <span class="nx">Name</span> <span class="o">=</span> <span class="nx">results</span><span class="p">.</span><span class="nx">SelectSingleNode</span><span class="p">(</span><span class="s2">&quot;//UserResponse/User/Name&quot;</span><span class="p">).</span><span class="nx">InnerText</span><span class="p">;</span>
+</code></pre></div>
+
+
+<p>Here, we remove any XML Namespace (xmlns) declaration before loading the XML. Once you do that, you can read the XML using the XPath expression you expected to use in the first place.</p>
+
+<p>The pros are quick and apparent. First, your application won't break if the owner of the web service needs to change their namespace (this could easily happen). Second, you can reuse previously developed XPath expressions without issue. Finally, the code is simply more readable - one to one - with the original XPath expression.</p>
+
+<p>Really hope this helps save someone some much needed development time. Wish I had this article, it definitely would have saved me time.</p>
+
+<p>Code Long &amp; Prosper!</p>
+
+    </div>
+    
+    <div id="share" class="feat">
+      
+      <p>discuss on twitter</p>
+      
+      <a href="http://twitter.com/share" class="popup">
+        <span class="icon-twitter"></span>
+      </a>
+      
+      <div class="line"></div>
+      
+      <br/>
+      
+      <p>every day thousands of developers use our charts & gauges to get the job done right</p>
+      
+      <img src="/images/blog-header.png" usemap="#map" />
+      
+      <map name="map">
+        <area shape="rect" coords="4, 4, 247, 276" href="/charts/" alt="JavaScript Charts" target="_blank"/>
+        <area shape="rect" coords="317, 3, 582, 277" href="/gauges/" alt="JavaScript Gauges" target="_blank"/>
+        <area shape="rect" coords="652, 4, 906, 277" href="/simulation/" alt="JavaScript Flight Gauges" target="_blank"/>  
+      </map>
+    </div>
+    
+  </article>
+</section>
+
+
+
+    </main>
+
+    <footer>
+        <p style="font-size: 80%;">TechOctave, The Lion, "Beautiful & Inspired" are Registered Trademarks of TechOctave, LLC.</p>
+        <p style="font-size: 65%;">HANDCRAFTED WITH <abbr style="color: #FF2400; font-variant: none" title="love">❤</abbr> IN COLUMBUS OHIO</p>
+    </footer>
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/imageMapResizer.js"></script>
+    <script src="/js/moment.js"></script>
+    <script>
+    jQuery(document).ready(function($) {
+      	$("map").imageMapResize();
+        
+        var date = moment().format('DD MMMM YYYY');
+        $(".date").html(date);
+    });
+    </script>
+    
+    
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-17961498-4', 'techoctave.com');
+        ga('send', 'pageview');
+      </script>
+    
+
+  </body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+      <title>Simple Long Polling Example with JavaScript and jQuery</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta http-equiv="content-language" content="en-gb" />
+      <meta name="description" content="Fluid, responsive blog theme for Jekyll.">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" type="text/css" href="/css/main.css" />
+      <link rel="stylesheet" type="text/css" href="/css/syntax.css" />
+      <link href="atom.xml" type="application/atom+xml" rel="alternate" title="Site ATOM Feed">
+  </head>
+
+  <body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
+    <main>
+      <section id="single-wrap">
+  <article class="single-content" itemscope itemtype="http://schema.org/BlogPosting">
+	
+    <div class="feat">
+      <h5 class="page-date">
+        <time datetime="2011-10-16T02:20:07Z" itemprop="datePublished">
+          16 October 2011
+        </time>
+      </h5>
+    </div>
+
+    <h1 class="page-title" itemprop="name headline">Simple Long Polling Example with JavaScript and jQuery</h1>
+    
+    <h5 class="page-author">Handwritten by TVD</h5>
+
+    <div itemprop="articleBody">
+      <p><img alt="Advanced JavaScript Long Polling Techniques (Server Push Techniques)" src="http://techoctave.com/c7/static/push.jpg"/></p>
+
+<p>There are many reasons you might need to poll a web server. Recently, one of our <a href="http://techoctave.com/gauges">Dashboard Gauge Suite</a> customers needed to poll sales data from his company's data warehouse and update his executive dashboard with the fresh data.</p>
+
+<p>But you could be doing something different too. Maybe you're pulling your company's QC data so you can give your leadership team a visual of how each group is managing defect counts.</p>
+
+<p>These two scenarios each have three things in common. First, a passion to display data in a beautiful and familiar way. Second, a desire to update each gauge without refreshing the page. Finally, each needs a smart and efficient way to poll their respective servers.</p>
+
+<p>Here, we're going to accomplish each commonality with an emphasis on polling options and techniques:</p>
+
+<h3>A History of Polling</h3>
+
+<p>Realtime web applications have been with us for quite some time now. To the end user, these applications feel responsive and fluid. Gmail is (arguably) one of the most major applications to popularize this technique. JavaScript is at the heart here.</p>
+
+<p>Have you ever been in the middle of replying to an email, when (suddenly) you're notified the person has sent you another followup? That's the perfect example of polling - sometimes referred to as server-push or comet technology.</p>
+
+<h3>A Tale of Two Polling Techniques</h3>
+
+<h4>Traditional Polling</h4>
+
+<p><em>The setInterval Technique</em></p>
+
+<p>Now, if you needed to poll your web service, your first instinct might be to do something like this with JavaScript and jQuery:</p>
+
+<div class="highlight"><pre><code class="js">    <span class="nx">setInterval</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+        <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span> <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;server&quot;</span><span class="p">,</span> <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+            <span class="c1">//Update your dashboard gauge</span>
+            <span class="nx">salesGauge</span><span class="p">.</span><span class="nx">setValue</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+        <span class="p">},</span> <span class="nx">dataType</span><span class="o">:</span> <span class="s2">&quot;json&quot;</span><span class="p">});</span>
+    <span class="p">},</span> <span class="mi">30000</span><span class="p">);</span>
+</code></pre></div>
+
+
+<p>Here, we have the poll ready to execute every thirty (30) seconds. This code is pretty good. It's clean and asynchronous. You're feeling confident. Things will work (and they will), but with a catch. What if it takes longer than thirty (30) seconds for the server to return your call?</p>
+
+<p>That's the gamble with using <em>setInterval</em>. Lag, an unresponsive server or a whole host of network issues could prevent the call from returning in its allotted time. At this point, you could end up with a bunch of queued Ajax requests that won't necessarily return in the same order.</p>
+
+<p><em>The setTimeout Technique</em></p>
+
+<p>If you find yourself in a situation where you're going to bust your interval time, then a recursive <em>setTimeout</em> pattern is recommend:</p>
+
+<div class="highlight"><pre><code class="js">    <span class="p">(</span><span class="kd">function</span> <span class="nx">poll</span><span class="p">(){</span>
+       <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+          <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span> <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;server&quot;</span><span class="p">,</span> <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+            <span class="c1">//Update your dashboard gauge</span>
+            <span class="nx">salesGauge</span><span class="p">.</span><span class="nx">setValue</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+
+            <span class="c1">//Setup the next poll recursively</span>
+            <span class="nx">poll</span><span class="p">();</span>
+          <span class="p">},</span> <span class="nx">dataType</span><span class="o">:</span> <span class="s2">&quot;json&quot;</span><span class="p">});</span>
+      <span class="p">},</span> <span class="mi">30000</span><span class="p">);</span>
+    <span class="p">})();</span>
+</code></pre></div>
+
+
+<p>Using the Closure technique, <em>poll</em> becomes a self executing JavaScript function that runs the first time automatically. Sets up the thirty (30) second interval. Makes the asynchronous Ajax call to your server. Then, finally, sets up the next poll recursively.</p>
+
+<p>As you can see, jQuery's Ajax call can take as long as it wants to. So, this pattern doesn't guarantee execution on a fixed interval per se. But, it does guarantee that the previous interval has completed before the next interval is called.</p>
+
+<p>Both techniques suffer from the same flaw - a new connection to the server must be opened each time the <em>$.ajax</em> method is called. To make that connection, your realtime app must gear up and battle through hoards of competing network traffic to make it to your server.</p>
+
+<p>What if you could just keep the connection open?</p>
+
+<h4>Long Polling - An Efficient Server-Push Technique</h4>
+
+<p><strong>EDIT:</strong> Applications built with Long Polling in mind attempt to offer realtime server interaction, using a persistent or <a href="http://en.wikipedia.org/wiki/Comet_%28programming%29">long-lasting HTTP connection</a> between the server and the client.</p>
+
+<p>Sadly, with our current technology, long polling cannot be accomplished with client-side JavaScript alone. What you really need is a framework that combines HTML5 WebSockets with some server-side component.</p>
+
+<p>If you're trying to do long polling with JavaScript only - STOP. It's not possible without a server-side piece like SignalR for .NET or Socket.IO for Node.JS applications.</p>
+
+<p>If you still want to do some type of client-side polling, then better to use setTimeout to set the interval in some fashion. Maybe something like:</p>
+
+<div class="highlight"><pre><code class="js">    <span class="p">(</span><span class="kd">function</span> <span class="nx">poll</span><span class="p">()</span> <span class="p">{</span>
+       <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+           <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span> <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;server&quot;</span><span class="p">,</span> <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">sales</span><span class="p">.</span><span class="nx">setValue</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+           <span class="p">},</span> <span class="nx">dataType</span><span class="o">:</span> <span class="s2">&quot;json&quot;</span><span class="p">,</span> <span class="nx">complete</span><span class="o">:</span> <span class="nx">poll</span> <span class="p">});</span>
+        <span class="p">},</span> <span class="mi">30000</span><span class="p">);</span>
+    <span class="p">})();</span>
+</code></pre></div>
+
+
+<p>If you can pull off keeping your connection open, then your application could see faster server response times and feel more responsive. That's a good thing - Good luck!</p>
+
+<p>Thanks to @Lars for pointing this out in the comments. Thanks man!</p>
+
+<h3>What's next? HTML5 WebSockets.</h3>
+
+<p>These types of Ajax Push techniques set the foundation for HTML5 WebSockets. With HTML5 WebSockets, we'll be able to see true Server Push styles of application development. This will make for truly responsive web applications.</p>
+
+<p>Lately, I've been recommending <a href="http://socket.io/">Socket.IO</a> for just such the occasion. Think of Socket.IO as the jQuery of HTML5 WebSockets.</p>
+
+<p>No two browser vendors will implement the WebSockets protocol exactly alike. Socket.IO tries to normalize those differences. Here's how you might use Socket.IO with our <a href="http://techoctave.com/gauges">Dashboard Gauge Suite</a>:</p>
+
+<div class="highlight"><pre><code class="js">    <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;/socket.io/socket.io.js&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
+    <span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+      <span class="kd">var</span> <span class="nx">socket</span> <span class="o">=</span> <span class="nx">io</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s2">&quot;http://localhost&quot;</span><span class="p">);</span>
+      <span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;sales&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//Update your dashboard gauge</span>
+        <span class="nx">salesGauge</span><span class="p">.</span><span class="nx">setValue</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+    
+        <span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;profit&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">my</span><span class="o">:</span> <span class="s1">&#39;data&#39;</span> <span class="p">});</span>
+      <span class="p">});</span>
+    <span class="o">&lt;</span><span class="err">/script&gt;</span>
+</code></pre></div>
+
+
+<p>In order to provide realtime connectivity on every browser, Socket.IO selects the most capable transport at runtime, without it affecting the API. If WebSockets are available, it will use WebSockets.</p>
+
+<p>If WebSockets aren't available, Socket.IO will select the next best transport including: Adobe Flash Socket or Ajax Polling. So having a solid understanding of JavaScript Long Polling examples is crucial.</p>
+
+<p>We're still some time off before WebSockets will be universally and consistently supported. Until then, the jQuery Long Polling technique is a best-in-class solution for realtime server communications.</p>
+
+<h3>Eat, Pray and Code</h3>
+
+<p>Long polling addresses the weakness of traditional polling by keeping the connection to your server open. Keeping the connection to the server open eliminates the travel time from client to server and thus, significantly reduces the issues surrounding network latency.</p>
+
+<p>If you're looking for a beautiful suite of dashboard gauges for your next business intelligence project, I encourage you to check out our <a href="http://techoctave.com/gauges">Dashboard Gauge Suite</a>. And if you need an accompanying Polling solution, please do give the jQuery Long Polling solution a try.</p>
+
+<p>We also sell a beautiful set of JavaScript Charts in our <a href="http://techoctave.com/charts">JavaScript Charts</a> Suite. It's easy to get started, with a powerful API when you need it.</p>
+
+    </div>
+    
+    <div id="share" class="feat">
+      
+      <p>discuss on twitter</p>
+      
+      <a href="http://twitter.com/share" class="popup">
+        <span class="icon-twitter"></span>
+      </a>
+      
+      <div class="line"></div>
+      
+      <br/>
+      
+      <p>every day thousands of developers use our charts & gauges to get the job done right</p>
+      
+      <img src="/images/blog-header.png" usemap="#map" />
+      
+      <map name="map">
+        <area shape="rect" coords="4, 4, 247, 276" href="/charts/" alt="JavaScript Charts" target="_blank"/>
+        <area shape="rect" coords="317, 3, 582, 277" href="/gauges/" alt="JavaScript Gauges" target="_blank"/>
+        <area shape="rect" coords="652, 4, 906, 277" href="/simulation/" alt="JavaScript Flight Gauges" target="_blank"/>  
+      </map>
+    </div>
+    
+  </article>
+</section>
+
+
+
+    </main>
+
+    <footer>
+        <p style="font-size: 80%;">TechOctave, The Lion, "Beautiful & Inspired" are Registered Trademarks of TechOctave, LLC.</p>
+        <p style="font-size: 65%;">HANDCRAFTED WITH <abbr style="color: #FF2400; font-variant: none" title="love">❤</abbr> IN COLUMBUS OHIO</p>
+    </footer>
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/imageMapResizer.js"></script>
+    <script src="/js/moment.js"></script>
+    <script>
+    jQuery(document).ready(function($) {
+      	$("map").imageMapResize();
+        
+        var date = moment().format('DD MMMM YYYY');
+        $(".date").html(date);
+    });
+    </script>
+    
+    
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-17961498-4', 'techoctave.com');
+        ga('send', 'pageview');
+      </script>
+    
+
+  </body>
+</html>
