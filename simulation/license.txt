@@ -1,0 +1,35 @@
+TERMS OF USE
+
+These terms and conditions may be altered and amended within reason from time to time to reflect the evolving nature of the software.
+
+By using the software, you agree that you have read, understood, and will comply with these terms and conditions.
+
+TechOctave components are developed and sold by TechOctave, LLC.
+
+
+LIMITATION OF LIABILITY
+
+This software is provided by TechOctave, LLC on an "as is" basis. In no event shall the copyright holder be liable for any direct or indirect damages, including but not limited to any loss of data or computer failure, arising out of the use or inability to use the software.
+
+To put it simply, we do our best to make TechOctave Dashboard Charts Suite a great application to use, but cannot guarantee that it will always be entirely without its quirks, as is the case with any software.
+
+
+LICENSE
+
+You may not redistribute or modify the software without written permission from TechOctave, LLC. TechOctave, LLC retains all rights over the software, and no third-party or agency is entitled to sell, modify or repackage the software without prior consent and written permission from the copyright holder. 
+
+A license must be purchased. The license you purchase for the software is non-transferable and non-exclusive; We ask you to respect the terms of the license.
+
+
+GOVERNING LAW AND FORUM
+
+All claims regarding this Agreement are governed by and construed in accordance with the Laws of the State of Ohio (US), applicable to contracts wholly made and performed in such jurisdiction, except for any choice or conflict of Law principles, which must be litigated in the United States, State of Ohio, Franklin County, City of Columbus.
+
+
+PRIVACY POLICY
+
+We take your privacy seriously and, when you provide us with any personal information, we endeavor to keep it safe. We will not share your personal information with third-parties and will take all reasonable precautions to protect it.
+
+When we receive positive feedback from our users, we like to share it with others, and may use comments we've received by email, Twitter or other communication medium for the promotion of the software. We'll never show your email address, will never use your comments out of context, and will respect your privacy if you ask us not to disclose your name in association with the feedback.
+
+If you have any questions about our privacy policy or terms of use, please contact us.
