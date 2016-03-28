@@ -241,6 +241,10 @@ With our charts you can clearly present where you are and start seeing where you
 
 ![scatterchart](/images/scatterchart.png)
 
+Our Scatter charts are fully customizable. Including the ability to consume as many datasets as you need, the ability to apply custom formats to axis values, the ability to connect datapoint dots with lines and even turn off datapoints dots all together.
+
+![scatterchart-linechart](/images/scatterchart-linechart.png)
+
 
 <strong>Bullet Charts:</strong> Bullet charts feature a primary measure (e.g. revenue) and give you the ability to compare that measure to a target measure. Using color bands, you can relate the primary measure to qualitative ranges of performance (e.g. poor, satisfactory, and good). Our chart can display horizontally and vertically:
 
