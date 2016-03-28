@@ -37,7 +37,7 @@ permalink: /
 
 ####Beautifully illustrate your data. Start reaching your goals.
 
-[![gauges](/images/gauges.png)](http://javascriptgauge.com/)
+[![gauges](/images/gauges.png)](/gauges/)
 
 <br/>
 
