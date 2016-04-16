@@ -1,0 +1,27 @@
+GALILEO PRIVACY POLICY
+
+GENERAL INFORMATION
+Galileo is software built by TechOctave, LLC to help build a Targeted & Relevant Twitter Following. Any questions about this Privacy Policy should be addressed to support@techoctave.com.
+
+INFORMATION GATHERING AND USAGE
+Galileo does not gather or store your information in any form.
+
+COOKIES
+Galileo does not use cookies.
+
+DATA STORAGE
+Galileo stores your Consumer Key and Consumer Secret locally only to the extent that it serves to provide ease of access to your Twitter account. This information is never stored on our servers or transmitted anywhere. The only communication is between your encrypted browser and Twitter's OAuth authentication process. This data is expunged from your local browser on signing out.
+
+DISCLOSURE
+Galileo does not collect personally identifiable information under any circumstance, so there is no data to disclose.
+
+EU AND SWISS SAFE HARBOR
+Galileo adheres to the US-EU and US-Swiss Safe Harbor Privacy Principles of Notice, Choice, Onward Transfer, Security, Data Integrity, Access and Enforcement.
+
+For European Union and Swiss residents, any questions or concerns regarding the use or disclosure of your information should be directed to TechOctave by sending an email to support@techoctave.com. We will investigate and attempt to resolve complaints and disputes regarding use and disclosure of your information in accordance with this Privacy Policy. For complaints that cannot be resolved, and consistent with the Safe Harbor Enforcement Principle, we have committed to cooperate with data protection authorities located within Switzerland or the European Union (or their authorized representatives).
+
+CHANGES
+Galileo may periodically update this policy. We will notify you about significant changes in the way we treat personal information by placing a prominent notice on our site.
+
+QUESTIONS
+Any questions about this Privacy Policy should be addressed to support@techoctave.com.

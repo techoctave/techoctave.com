@@ -46,6 +46,8 @@ Galileo elevates your Twitter experience! Here's how:
 
 <strong>Get exceptional and convenient support.</strong> Galileo supports multiple Twitter accounts. It's built for Mac, Windows & Linux users. And, with your purchase of Galileo you get free software updates - Forever! For ever ever? For ever ever? Yes!
 
+Have a feature suggestion? Need help? Or just want to show some love? You can reach us at [support@techoctave.com](mailto: support@techoctave.com).
+
 <h3 class="buy"><a href="https://chrome.google.com/webstore/detail/mcagkgdbdbbgfielgggafkpjhdbiafha">Install Now</a></h3>
 
 
