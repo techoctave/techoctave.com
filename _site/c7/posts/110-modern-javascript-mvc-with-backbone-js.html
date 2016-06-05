@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+      <title>Modern JavaScript MVC With Backbone.js</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta http-equiv="content-language" content="en-gb" />
+      
+      <meta name="description" content="&lt;img src=”https://techoctave.com/c7/static/gangnam-style-feature.jpg” width=520 alt=”Modern JavaScript MVC With Backbone.js”/&gt; Modern JavaScript and HTML5 applications depend on a consistent RESTful JSON API. However, consistency is not always an option when you don’t control the server API. Still, even in those situations, Backbone.js can be a useful tool in taming your JavaScript. Today walk through a simple example of how to connect the dots between Backbone’s Model, Collection and View. The Backbone Basics A basic single page application...">
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10">
+      <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" type="text/css" href="/css/main.css" />
+      <link rel="stylesheet" type="text/css" href="/css/syntax.css" />
+      <link href="atom.xml" type="application/atom+xml" rel="alternate" title="Site ATOM Feed">
+  </head>
+
+  <body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
+    <main>
+      <section id="single-wrap">
+  <article class="single-content" itemscope itemtype="//schema.org/BlogPosting">
+	
+    <div class="feat">
+      <h5 class="page-date">
+        <time datetime="2013-04-21T04:40:42-04:00" itemprop="datePublished">
+          21 April 2013
+        </time>
+      </h5>
+    </div>
+
+    <h1 class="page-title" itemprop="name headline">Modern JavaScript MVC With Backbone.js</h1>
+    
+    <h5 class="page-author">Handwritten by TVD</h5>
+
+    <div itemprop="articleBody">
+      <p>&lt;img src=”https://techoctave.com/c7/static/gangnam-style-feature.jpg” width=520 alt=”Modern JavaScript MVC With Backbone.js”/&gt;</p>
+
+<p>Modern JavaScript and HTML5 applications depend on a consistent RESTful JSON API. However, consistency is not always an option when you don’t control the server API.</p>
+
+<p>Still, even in those situations, Backbone.js can be a useful tool in taming your JavaScript. Today walk through a simple example of how to connect the dots between Backbone’s Model, Collection and View.</p>
+
+<h3 id="the-backbone-basics">The Backbone Basics</h3>
+
+<p>A basic single page application boils down to three distinct parts: Model, Collection and View.</p>
+
+<h4 id="the-model">The Model</h4>
+
+<p>The Model defines your class properties and methods. Here we define a class called Knot:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">Knot</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Model</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+	<span class="na">initialize</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+		<span class="nx">_</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="k">new</span> <span class="nx">Gauge</span><span class="p">(</span><span class="s2">"knots"</span><span class="p">,</span> <span class="p">{</span>
+			<span class="na">hasGlass</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+			<span class="na">glassColor</span><span class="p">:</span> <span class="s2">"#aa0000"</span>
+		<span class="p">}));</span>
+	<span class="p">}</span>
+<span class="p">});</span></code></pre></figure>
+
+<p>Whenever a new instance of the Knot class is created, we also inherit an instance of our <a href="http://techoctave.com/gauges/">JavaScript Gauges</a> using Underscore’s extend method.</p>
+
+<h4 id="the-collection">The Collection</h4>
+
+<p>The Collection defines a list of class instances. Here we define a Collection called Knots:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">Knots</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Collection</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+	    <span class="na">model</span><span class="p">:</span> <span class="nx">Knot</span><span class="p">,</span>
+	
+		<span class="na">url</span><span class="p">:</span> <span class="s2">"http://query.yahooapis.com/v1/public/yql?q=select * from google.igoogle.stock where stock='lmt'&amp;format=json&amp;env=store://datatables.org/alltableswithkeys&amp;callback="</span><span class="p">,</span>
+	
+		<span class="na">parse</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+			<span class="k">return</span> <span class="nx">response</span><span class="p">.</span><span class="nx">query</span><span class="p">.</span><span class="nx">results</span><span class="p">.</span><span class="nx">xml_api_reply</span><span class="p">.</span><span class="nx">finance</span><span class="p">;</span>
+		<span class="p">}</span>
+<span class="p">});</span>
+
+<span class="nb">window</span><span class="p">.</span><span class="nx">knots</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Knots</span><span class="p">();</span>  </code></pre></figure>
+
+<p>First, you define which model the Collection will create a list of. Here, we also specify the collection’s data source using the URL property.</p>
+
+<p>Here, the data source is deeply nested. You can use the parse method to intercept the data source and get the data in a more manageable state before creating your model instance.</p>
+
+<p>Finally, we immediately execute the collection to get it ready for use in our single page application (SPA).</p>
+
+<h4 id="the-view">The View</h4>
+
+<p>The View updates the User Interface (UI) with the data fetched from the collection:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">KnotsView</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+	<span class="na">el</span><span class="p">:</span> <span class="nx">$</span><span class="p">(</span><span class="s2">"#knots"</span><span class="p">),</span>
+
+	<span class="na">initialize</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+		<span class="nb">window</span><span class="p">.</span><span class="nx">knots</span><span class="p">.</span><span class="nx">reset</span><span class="p">();</span>
+
+		<span class="nb">window</span><span class="p">.</span><span class="nx">knots</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="s2">"add"</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">render</span><span class="p">);</span>
+
+		<span class="nb">window</span><span class="p">.</span><span class="nx">knots</span><span class="p">.</span><span class="nx">fetch</span><span class="p">();</span>
+	<span class="p">},</span>
+
+	<span class="na">render</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+		<span class="nb">window</span><span class="p">.</span><span class="nx">knots</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">knot</span><span class="p">)</span> <span class="p">{</span>
+			<span class="kd">var</span> <span class="nx">value</span> <span class="o">=</span> <span class="nx">knot</span><span class="p">.</span><span class="nx">attributes</span><span class="p">.</span><span class="nx">high</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
+				
+			<span class="nx">knot</span><span class="p">.</span><span class="nx">setValue</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
+		<span class="p">});</span>
+	<span class="p">}</span>
+<span class="p">});</span>
+
+<span class="nb">window</span><span class="p">.</span><span class="nx">knotsView</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">KnotsView</span><span class="p">();</span></code></pre></figure>
+
+<p>First, we reset the knots collection. Next, we bind our View’s render method to our Collection’s add event. What this means is each time a Knot object is added to the Knots collections, we will call the Views render method to update the web application.</p>
+
+<p>Then we make the actual call to the Collection’s fetch method to retrieve the data from the data source. Here, we basically make a call to Google’s stock webservice to retrieve some data on a company called Lockheed Martin.</p>
+
+<p>Finally, in our View’s render method we update each Knot Gauge with the corresponding value passed back from the server call.</p>
+
+<h4 id="putting-it-all-together">Putting It All Together</h4>
+
+<p>Here’s the final backbone example end-to-end:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">Knot</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Model</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+		<span class="na">initialize</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+			<span class="nx">_</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="k">new</span> <span class="nx">Gauge</span><span class="p">(</span><span class="s2">"knots"</span><span class="p">,</span> <span class="p">{</span>
+				<span class="na">hasGlass</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+				<span class="na">glassColor</span><span class="p">:</span> <span class="s2">"#aa0000"</span>
+			<span class="p">}));</span>
+		<span class="p">}</span>
+	<span class="p">});</span>
+
+	<span class="kd">var</span> <span class="nx">Knots</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Collection</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+	    <span class="na">model</span><span class="p">:</span> <span class="nx">Knot</span><span class="p">,</span>
+	
+		<span class="na">url</span><span class="p">:</span> <span class="s2">"http://query.yahooapis.com/v1/public/yql?q=select * from google.igoogle.stock where stock='lmt'&amp;format=json&amp;env=store://datatables.org/alltableswithkeys&amp;callback="</span><span class="p">,</span>
+	
+		<span class="na">parse</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+			<span class="k">return</span> <span class="nx">response</span><span class="p">.</span><span class="nx">query</span><span class="p">.</span><span class="nx">results</span><span class="p">.</span><span class="nx">xml_api_reply</span><span class="p">.</span><span class="nx">finance</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">});</span>
+
+	<span class="nb">window</span><span class="p">.</span><span class="nx">knots</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Knots</span><span class="p">();</span>
+
+	<span class="kd">var</span> <span class="nx">KnotsView</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+		<span class="na">el</span><span class="p">:</span> <span class="nx">$</span><span class="p">(</span><span class="s2">"#knots"</span><span class="p">),</span>
+
+		<span class="na">initialize</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+			<span class="nb">window</span><span class="p">.</span><span class="nx">knots</span><span class="p">.</span><span class="nx">reset</span><span class="p">();</span>
+
+			<span class="nb">window</span><span class="p">.</span><span class="nx">knots</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="s2">"add"</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">render</span><span class="p">);</span>
+
+			<span class="nb">window</span><span class="p">.</span><span class="nx">knots</span><span class="p">.</span><span class="nx">fetch</span><span class="p">();</span>
+		<span class="p">},</span>
+
+		<span class="na">render</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+			<span class="nb">window</span><span class="p">.</span><span class="nx">knots</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">knot</span><span class="p">)</span> <span class="p">{</span>
+				<span class="kd">var</span> <span class="nx">value</span> <span class="o">=</span> <span class="nx">knot</span><span class="p">.</span><span class="nx">attributes</span><span class="p">.</span><span class="nx">high</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
+				
+				<span class="nx">knot</span><span class="p">.</span><span class="nx">setValue</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
+			<span class="p">});</span>
+		<span class="p">}</span>
+	<span class="p">});</span>
+
+	<span class="nb">window</span><span class="p">.</span><span class="nx">knotsView</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">KnotsView</span><span class="p">();</span>
+<span class="p">};</span>  </code></pre></figure>
+
+<p>Backbone is a really good framework for organizing your JavaScript code. It’s lightweight and gives you everything you need. It’s prescriptive without being heavy-handed. I like it. Enjoy!</p>
+
+
+    </div>
+    
+    <div id="share" class="feat">      
+      <p>discuss on twitter</p>
+      
+      <a href="//twitter.com/share" class="popup">
+        <span class="icon-twitter"></span>
+      </a>
+      
+      <div class="line"></div>
+      
+      <br/>
+      
+      <p>every day thousands of developers use our charts & gauges to get the job done right</p>
+      
+      <img src="/images/blog-header.png" usemap="#map" />
+      
+      <map name="map">
+        <area shape="rect" coords="4, 4, 247, 276" href="/charts/" alt="JavaScript Charts" target="_blank"/>
+        <area shape="rect" coords="317, 3, 582, 277" href="/gauges/" alt="JavaScript Gauges" target="_blank"/>
+        <area shape="rect" coords="652, 4, 906, 277" href="/simulation/" alt="JavaScript Flight Gauges" target="_blank"/>  
+      </map>
+      
+      <br><br><br>
+      <p><a href="/c7/" style="text-decoration: none;">← return to all articles</a></p>
+    </div>
+    
+  </article>
+</section>
+
+
+
+    </main>
+
+    <footer>
+        <p style="font-size: 80%;">TechOctave, The Lion, "Beautiful & Inspired" are Registered Trademarks of TechOctave, LLC.</p>
+        <p style="font-size: 65%;">HANDCRAFTED WITH <abbr style="color: #FF2400; font-variant: none" title="love">❤</abbr> IN COLUMBUS OHIO</p>
+    </footer>
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/imageMapResizer.js"></script>
+    <script src="/js/moment.js"></script>
+    <script>
+    jQuery(document).ready(function($) {
+      	$("map").imageMapResize();
+        
+        var date = moment().format('DD MMMM YYYY');
+        $(".date").html(date);
+    });
+    </script>
+    
+    
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-17961498-1', 'techoctave.com');
+        ga('send', 'pageview');
+      </script>
+    
+
+  </body>
+</html>

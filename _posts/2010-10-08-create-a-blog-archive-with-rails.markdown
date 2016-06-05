@@ -12,7 +12,7 @@ Previously, I wrote about [SEO Friendly URLs in Rails][1]. Having a well-formed 
 
 Creating a [Google Sitemap for your Rails blog][3] is another good SEO step to consider. Showing Google where to find your posts is wise Rails-fu and will set the stage for your blog's archive.
 
-###Rails ActiveRecord Group_By
+### Rails ActiveRecord Group_By
 
 Learning to group a collection of your posts by month can be confusing at first. Using Rails' ActiveRecord *group_by* method is the key to success here. Let's get started:
 

@@ -12,7 +12,7 @@ Sometimes I wonder where we would be without [Stack Overflow][1]. I also wonder 
 
 No [Stack Overflow][2]. No software forums. No Internet.
 
-###Microsoft Developer Network
+### Microsoft Developer Network
 
 Back in the day, some guys made a small business at University over the control of information. You'd seem 'em around campus, strolling around the engineering buildings...
 
@@ -34,7 +34,7 @@ And when your time comes, it is as if the answers wait for you. At the rate of t
 
 That's the fundamental difference between Stack Overflow and what came before it. With Stack Overflow, you felt like "you" had asked the question yourself. In all that came before it, it felt like "they" had no idea even what to ask.
 
-###And then there was Stack Overflow
+### And then there was Stack Overflow
 
 Before Stack Overflow, documentation wasn't born of real world scenarios and pain points. So there was never an answer to the question "you" had. Just some brisk points on what "some guy" thought was a cool exposition. Or some vague reference to some static documentarian to check "over there".
 

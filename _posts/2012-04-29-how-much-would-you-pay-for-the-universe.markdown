@@ -12,13 +12,13 @@ The most powerful agency on the Dreams of our Nation is currently underfunded to
 <iframe width="100%" height="500" src="http://www.youtube.com/embed/Fl07UfRkPas" frameborder="0" allowfullscreen></iframe>
 
 {% highlight ruby %}
-#Penny4NASA
+# Penny4NASA
 {% endhighlight %}
 
 
 Here's what happened. In the 1960s we were at war with the Soviet Union - Cold War. And a little bit of hot war over in Southeast Asia (Vietnam).
 
-####We feared them because they put up Sputnik.
+#### We feared them because they put up Sputnik.
 
 So, we feared them [Soviet Union] because they put up Sputnik. Which, by the way, people forget was an emptied out casing of an intercontinental ballistic missile. Sputnik itself means "Fellow Traveler". So, it sounds all peaceful, but it was a ballistic missile head without explosives.
 
@@ -26,7 +26,7 @@ So, that was a signal and we freaked in America. So NASA got founded on the fear
 
 Then we go the moon. Space enthusiasts say, "Oh, we're on the Moon by '69! We'll be on Mars in another 10 years." They completely did not understand why we got to the Moon in the first place -  we were at war. Once we saw that Russia was not ready to land on the Moon, we stopped going to the Moon. That should not surprise anybody looking back on it.
 
-####That entire era galvanized the nation.
+#### That entire era galvanized the nation.
 
 Meanwhile, however, that entire era galvanized the nation. Forget the war driver, it galvanized us all to dream about tomorrow. To think about the homes of tomorrow. The cities of tomorrow. The food of tomorrow. Everything was future world - future land.
 
@@ -34,7 +34,7 @@ The World's Fair - all of this - was focused on enabling people to make tomorrow
 
 And even if you're not a scientist or technologist, you will value that activity. That, in the 21st Century, are the foundation of tomorrow's economies and without it, we might as well just slide back to the caves because that's where we're heading right now - broke.
 
-####I will not accept a statement that says we cannot afford it.
+#### I will not accept a statement that says we cannot afford it.
 
 I'm tired of saying this, but I'll have to say it again, "The NASA budget is four-tenths of one penny on a tax dollar." If I held up the tax dollar and I cut - horizontally into it - four tenths of one percent of it's width, it doesn't even get you into the ink. So I WILL NOT ACCEPT A STATEMENT THAT SAYS, "We can't afford it."
 

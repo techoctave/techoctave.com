@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+      <title>JavaScript Testing with Jasmine</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta http-equiv="content-language" content="en-gb" />
+      
+      <meta name="description" content="Jasmine is a testing framework for JavaScript. It’s framework agnostic and does not require a DOM. We use Jasmine to run both our JavaScript Gauges and JavaScript Charts test suites: The Jasmine documentation is really good. So I won’t go into every single detail. But, I believe it’s important to share exactly how we use Jasmine for our JavaScript testing and why. Here’s an inside look at our gauge library’s test suite: Getting started with...">
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10">
+      <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" type="text/css" href="/css/main.css" />
+      <link rel="stylesheet" type="text/css" href="/css/syntax.css" />
+      <link href="atom.xml" type="application/atom+xml" rel="alternate" title="Site ATOM Feed">
+  </head>
+
+  <body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
+    <main>
+      <section id="single-wrap">
+  <article class="single-content" itemscope itemtype="//schema.org/BlogPosting">
+	
+    <div class="feat">
+      <h5 class="page-date">
+        <time datetime="2012-05-26T21:21:01-04:00" itemprop="datePublished">
+          26 May 2012
+        </time>
+      </h5>
+    </div>
+
+    <h1 class="page-title" itemprop="name headline">JavaScript Testing with Jasmine</h1>
+    
+    <h5 class="page-author">Handwritten by TVD</h5>
+
+    <div itemprop="articleBody">
+      <p><img src="https://techoctave.com/c7/static/jasmine.png" /></p>
+
+<p>Jasmine is a testing framework for JavaScript. It’s framework agnostic and does not require a DOM. We use Jasmine to run both our <a href="http://techoctave.com/gauges">JavaScript Gauges</a> and JavaScript Charts test suites:</p>
+
+<p>The <a href="http://pivotal.github.com/jasmine/">Jasmine documentation</a> is really good. So I won’t go into every single detail. But, I believe it’s important to share exactly how we use Jasmine for our JavaScript testing and why.</p>
+
+<p>Here’s an inside look at our gauge library’s test suite:</p>
+
+<h3 id="getting-started-with-jasmine">Getting started with Jasmine</h3>
+
+<p>First, download the latest <a href="https://github.com/pivotal/jasmine/downloads">Jasmine</a> build from Github. Then rename the folders to tests. Then add a new spec to the spec folder.</p>
+
+<p>Now, your tests folder will look something like this:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">- tests
+  - lib
+    + jasmine-1.2.0
+  - spec
+    GaugeSpec.js
+  SpecRunner.html
+  + src</code></pre></figure>
+
+<p>SpecRunner.html will run all the spec suites you ask it to:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="c">&lt;!--</span> <span class="nx">include</span> <span class="nx">source</span> <span class="nx">files</span> <span class="nx">here</span><span class="p">...</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text/javascript"</span> <span class="nx">src</span><span class="o">=</span><span class="s2">"../javascripts/raphael.js"</span><span class="o">&gt;&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text/javascript"</span> <span class="nx">src</span><span class="o">=</span><span class="s2">"../javascripts/gauge.js"</span><span class="o">&gt;&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span>
+<span class="c">&lt;!--</span> <span class="nx">include</span> <span class="nx">spec</span> <span class="nx">files</span> <span class="nx">here</span><span class="p">...</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text/javascript"</span> <span class="nx">src</span><span class="o">=</span><span class="s2">"spec/GaugeSpec.js"</span><span class="o">&gt;&lt;</span><span class="sr">/script&gt;</span></code></pre></figure>
+
+<p>SpecRunner is also handy for setting up DOM test harnesses:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="s2">"tests"</span> <span class="nx">style</span><span class="o">=</span><span class="s2">"display: none;"</span><span class="o">&gt;&lt;</span><span class="sr">/div&gt;</span></code></pre></figure>
+
+<h3 id="suites-and-specs">Suites and Specs</h3>
+
+<p>Jasmine is composed of suites and specs.</p>
+
+<h4 id="specs">Specs</h4>
+<p>A spec is just a JavaScript function that takes two parameters:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Gauge Properties</span>
+<span class="c1">// ----------------</span>
+<span class="nx">it</span><span class="p">(</span><span class="s2">"should be able to set a width"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+	<span class="nx">expect</span><span class="p">(</span><span class="nx">gauge</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">"width"</span><span class="p">)).</span><span class="nx">toEqual</span><span class="p">(</span><span class="mi">195</span><span class="p">);</span>
+<span class="p">});</span></code></pre></figure>
+
+<p>The first parameter is the spec description. The second parameter is an anonymous JavaScript function that implements the spec. Here, we expect a new gauge instance to have a default width of 195.</p>
+
+<h4 id="suites">Suites</h4>
+
+<p>A suite is composed of a list of specs:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">describe</span><span class="p">(</span><span class="s2">"Gauge"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Gauge Properties</span>
+	<span class="c1">// ----------------</span>
+	<span class="nx">it</span><span class="p">(</span><span class="s2">"should be able to set a width"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+		<span class="nx">expect</span><span class="p">(</span><span class="nx">gauge</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">"width"</span><span class="p">)).</span><span class="nx">toEqual</span><span class="p">(</span><span class="mi">195</span><span class="p">);</span>
+	<span class="p">});</span>
+
+    <span class="p">.</span> <span class="p">.</span> <span class="p">.</span>
+
+	<span class="c1">// Gauge Methods</span>
+	<span class="c1">// -------------</span>
+    <span class="nx">it</span><span class="p">(</span><span class="s2">"should be able to set a setValue"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+      <span class="nx">gauge</span><span class="p">.</span><span class="nx">setValue</span><span class="p">(</span><span class="mi">25</span><span class="p">);</span>
+      <span class="nx">expect</span><span class="p">(</span><span class="nx">gauge</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">"value"</span><span class="p">)).</span><span class="nx">toEqual</span><span class="p">(</span><span class="mi">25</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">});</span></code></pre></figure>
+
+<p>Once you get this core concept, you’re up and running. Things can get really interesting after that. But, the crux of the matter is you’re testing and that’s great.</p>
+
+<h3 id="you-cant-test-all-the-things-all-the-time">You can’t test all the things all the time</h3>
+
+<p>A great man once said, “Errors using inadequate data are much less than those using no data at all.” That man was <a href="http://en.wikipedia.org/wiki/Charles_Babbage">Charles Babbage</a>, a pioneer of computer engineering and science.</p>
+
+<p>I wholeheartedly agree. Our gauge library didn’t always have tests. Somewhere around version 2.0.* we chose Jasmine as our JavaScript testing framework and I am SO GLAD we did.</p>
+
+<p>Initially, we had around 55 tests. At first, you think Jasmine will be just another step in the development process. And not just another step, but another unneeded step - a waste of time. Try not to think about it like that. Instead, think about Jasmine as a friend. Someone who always has your back covered, even when you don’t expect it. Which is the whole point of this conversation.</p>
+
+<p>Listen, you can’t test all the things all the time. Our gauge library currently has 72 exposed properties and that’s not even including class methods. Do you think any developer can code new features and still validate existing features at the same time? Hell no! Well, maybe <a href="http://meta.stackoverflow.com/questions/9134/jon-skeet-facts">Jon Skeet</a> can. But you, my friend, are no Jon Skeet.</p>
+
+<h3 id="jasmine-is-beautiful">Jasmine is beautiful</h3>
+
+<p>In each of the scenarios above, you see me using a gauge object.
+Every spec must have access to an instance of the Gauge class to run.</p>
+
+<p>To accomplish this, we could’ve done something like this:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">describe</span><span class="p">(</span><span class="s2">"Gauge"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Gauge Properties</span>
+	<span class="c1">// ----------------</span>
+	<span class="nx">it</span><span class="p">(</span><span class="s2">"should be able to set a width"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">gauge</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Gauge</span><span class="p">(</span><span class="s2">"tests"</span><span class="p">);</span>
+        <span class="nx">expect</span><span class="p">(</span><span class="nx">gauge</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">"width"</span><span class="p">)).</span><span class="nx">toEqual</span><span class="p">(</span><span class="mi">195</span><span class="p">);</span>
+	<span class="p">});</span>
+
+    <span class="p">.</span> <span class="p">.</span> <span class="p">.</span>
+
+    <span class="nx">it</span><span class="p">(</span><span class="s2">"should be able to . . ."</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">gauge</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Gauge</span><span class="p">(</span><span class="s2">"tests"</span><span class="p">);</span>
+        <span class="p">.</span> <span class="p">.</span> <span class="p">.</span>
+	<span class="p">});</span>     
+<span class="p">});</span></code></pre></figure>
+
+<p>After awhile, creating instance-after-instance becomes tedious at-best. There are better ways.</p>
+
+<h4 id="setup-and-teardown">Setup and Teardown</h4>
+
+<p>Jasmine provides methods to help you Don’t Repeat Yourself (DRY):</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">describe</span><span class="p">(</span><span class="s2">"Gauge"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">gauge</span><span class="p">;</span>
+
+    <span class="nx">beforeEach</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">gauge</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Gauge</span><span class="p">(</span><span class="s2">"tests"</span><span class="p">);</span>
+    <span class="p">});</span>
+
+    <span class="nx">afterEach</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">delete</span> <span class="nx">gauge</span><span class="p">;</span>
+    <span class="p">});</span>
+ 
+    <span class="c1">// Gauge Properties</span>
+	<span class="c1">// ----------------</span>
+	<span class="nx">it</span><span class="p">(</span><span class="s2">"should be able to set a width"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">expect</span><span class="p">(</span><span class="nx">gauge</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">"width"</span><span class="p">)).</span><span class="nx">toEqual</span><span class="p">(</span><span class="mi">195</span><span class="p">);</span>
+	<span class="p">});</span> 
+
+    <span class="p">.</span> <span class="p">.</span> <span class="p">.</span>
+<span class="p">});</span></code></pre></figure>
+
+<p>Before each spec is called, I create an instance of the Gauge class and attach it to a DOM test harness called tests:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="s2">"tests"</span> <span class="nx">style</span><span class="o">=</span><span class="s2">"display: none;"</span><span class="o">&gt;&lt;</span><span class="sr">/div&gt;</span></code></pre></figure>
+
+<p>This DOM element is located in SpecRunner.html. After each spec has finished executing, I delete the gauge instance. This technique works remarkably well for many scenarios.</p>
+
+<h4 id="using-jasmine-matchers">Using Jasmine Matchers</h4>
+
+<p>Jasmine BDD has several built-in matchers. A full list of <a href="https://github.com/pivotal/jasmine/wiki/Matchers">Jasmine matchers</a> are available on the Jasmin Wiki. Here are a few of the matchers we use and how to implement them:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">describe</span><span class="p">(</span><span class="s2">"Gauge"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Gauge Properties</span>
+	<span class="c1">// ----------------</span>
+	<span class="nx">it</span><span class="p">(</span><span class="s2">"should be able to set a width"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">expect</span><span class="p">(</span><span class="nx">gauge</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">"width"</span><span class="p">)).</span><span class="nx">toEqual</span><span class="p">(</span><span class="mi">195</span><span class="p">);</span>
+	<span class="p">});</span>
+
+    <span class="nx">it</span><span class="p">(</span><span class="s2">"should be able to set a autoresize"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">expect</span><span class="p">(</span><span class="nx">gauge</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">"autoresize"</span><span class="p">)).</span><span class="nx">toBeUndefined</span><span class="p">();</span>
+    <span class="p">});</span>
+
+    <span class="p">.</span> <span class="p">.</span> <span class="p">.</span>
+
+    <span class="c1">// Gauge Parts</span>
+    <span class="c1">// -----------</span>
+    <span class="nx">it</span><span class="p">(</span><span class="s2">"should be able to get a base"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">expect</span><span class="p">(</span><span class="nx">gauge</span><span class="p">.</span><span class="nx">base</span><span class="p">.</span><span class="nx">id</span><span class="p">).</span><span class="nx">toBeGreaterThan</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="p">});</span>
+
+    <span class="p">.</span> <span class="p">.</span> <span class="p">.</span>
+
+	<span class="c1">// Gauge Methods</span>
+	<span class="c1">// -------------</span>
+    <span class="nx">it</span><span class="p">(</span><span class="s2">"should be able to format thousands"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">expect</span><span class="p">(</span><span class="nx">gauge</span><span class="p">.</span><span class="nx">arc</span><span class="p">(...)).</span><span class="nx">toContain</span><span class="p">(</span><span class="s2">"..."</span><span class="p">);</span>
+    <span class="p">});</span>
+
+    <span class="nx">it</span><span class="p">(</span><span class="s2">"should be able to format thousands"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">expect</span><span class="p">(</span><span class="nx">gauge</span><span class="p">.</span><span class="nx">formatValue</span><span class="p">(</span><span class="mi">1500</span><span class="p">)).</span><span class="nx">toEqual</span><span class="p">(</span><span class="s2">"1.5k"</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">});</span></code></pre></figure>
+
+<p>The matcher <em>toEqual</em> compares objects or primitives x and y and passes if they are equivalent.</p>
+
+<p>The matcher <em>toBeUndefined</em> passes if x is undefined.</p>
+
+<p>The matcher <em>toBeGreaterThan</em> passes if x is greater than y.</p>
+
+<p>The matcher <em>toContain</em> passes if array or string x contains y.</p>
+
+<p>You can even extend Jasmine to write your own custom matchers.</p>
+
+<h3 id="closing-thoughts-on-using-jasmine-bdd">Closing thoughts on using Jasmine BDD</h3>
+
+<p>With Jasmine, we’re able to focus our limited time and energy to refactor and craft killer features. Jasmine gives us the confidence to know we’re not breaking existing functionality.</p>
+
+<p>We started with 55 tests. Now, we’re up to 111 test specs and counting. I couldn’t be happier with the results. Since version 2.0, Jasmine has meant an increase in quality that is now part of our gauge library’s DNA and that means everything to me.</p>
+
+<p>Think. Do.</p>
+
+
+    </div>
+    
+    <div id="share" class="feat">      
+      <p>discuss on twitter</p>
+      
+      <a href="//twitter.com/share" class="popup">
+        <span class="icon-twitter"></span>
+      </a>
+      
+      <div class="line"></div>
+      
+      <br/>
+      
+      <p>every day thousands of developers use our charts & gauges to get the job done right</p>
+      
+      <img src="/images/blog-header.png" usemap="#map" />
+      
+      <map name="map">
+        <area shape="rect" coords="4, 4, 247, 276" href="/charts/" alt="JavaScript Charts" target="_blank"/>
+        <area shape="rect" coords="317, 3, 582, 277" href="/gauges/" alt="JavaScript Gauges" target="_blank"/>
+        <area shape="rect" coords="652, 4, 906, 277" href="/simulation/" alt="JavaScript Flight Gauges" target="_blank"/>  
+      </map>
+      
+      <br><br><br>
+      <p><a href="/c7/" style="text-decoration: none;">← return to all articles</a></p>
+    </div>
+    
+  </article>
+</section>
+
+
+
+    </main>
+
+    <footer>
+        <p style="font-size: 80%;">TechOctave, The Lion, "Beautiful & Inspired" are Registered Trademarks of TechOctave, LLC.</p>
+        <p style="font-size: 65%;">HANDCRAFTED WITH <abbr style="color: #FF2400; font-variant: none" title="love">❤</abbr> IN COLUMBUS OHIO</p>
+    </footer>
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/imageMapResizer.js"></script>
+    <script src="/js/moment.js"></script>
+    <script>
+    jQuery(document).ready(function($) {
+      	$("map").imageMapResize();
+        
+        var date = moment().format('DD MMMM YYYY');
+        $(".date").html(date);
+    });
+    </script>
+    
+    
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-17961498-1', 'techoctave.com');
+        ga('send', 'pageview');
+      </script>
+    
+
+  </body>
+</html>

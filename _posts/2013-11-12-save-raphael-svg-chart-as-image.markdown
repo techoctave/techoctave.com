@@ -16,7 +16,7 @@ In that environment, a lot of great minds ask the same great questions. One of t
 Saving SVG to PNG image turns out to be a [very][2] [popular][3] [question][4]. Though, not surprisingly, because the browser is involved, it is not an [easy][5] on to [answer][6].
 
 
-###Save Raphael SVG To Image Client Side
+### Save Raphael SVG To Image Client Side
 
 First, you'll have to have an HTML5 element to hang your SVG on:
 
@@ -82,25 +82,25 @@ Step 3 uses the [Canvg][8] library. Canvg is a SVG parser and renderer. It takes
 
 Step 4 uses the [Canvas2Image][9] library. This is a small library that lets you easily save a HTML5 canvas element as an imagefile.
 
-####Pros
+#### Pros
 
 The pros are you get a 100% client-side solution to saving Raphael SVG to PNG image. Which means less server load and more front-end awesome.
 
 That's the good news...
 
-####Cons
+#### Cons
 
 The bad news is the image is downloaded without a file extension. Also, the limitations with browser mime type control, you cannot give the image a custom file name.
 
 If you're paying attention, you know those are pretty BIG cons.
 
 
-###Save Raphael SVG To Image Server Side
+### Save Raphael SVG To Image Server Side
 
 When you want to set a customized filename for the generated PNG file, you have to send the data:uri string from the canvas.toDataURL() element onto server side using Ajax. Then rewrite the response headers and send back the browser. Here's a good article summarizing the [server-side][10] technique using CoffeeScript and Ruy.
 
 
-###Conclusion
+### Conclusion
 
 Using client-side only is not an option yet because the browser technology just isn't there. What you'll want to do is combine both client-side and server-side techniques to get the maximum customization.
 

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+      <title>The Only Higher Level Than JavaScript Is God's Word.</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta http-equiv="content-language" content="en-gb" />
+      
+      <meta name="description" content="I’m so sick and tired of people describing JavaScript as “low-level”. If you’re not “MOV AL, 61h” all damn day, you’re not doing low-level programming; so give it a rest. Low-Level Programming Languages For those who studied under Sams or some other Dummy, it’s time to lay out some fundamentals. In computer science, a low-level programming language is a programming language that provides little or no abstraction from a computer’s instruction set architecture. At this...">
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10">
+      <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" type="text/css" href="/css/main.css" />
+      <link rel="stylesheet" type="text/css" href="/css/syntax.css" />
+      <link href="atom.xml" type="application/atom+xml" rel="alternate" title="Site ATOM Feed">
+  </head>
+
+  <body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
+    <main>
+      <section id="single-wrap">
+  <article class="single-content" itemscope itemtype="//schema.org/BlogPosting">
+	
+    <div class="feat">
+      <h5 class="page-date">
+        <time datetime="2013-02-22T22:51:54-05:00" itemprop="datePublished">
+          22 February 2013
+        </time>
+      </h5>
+    </div>
+
+    <h1 class="page-title" itemprop="name headline">The Only Higher Level Than JavaScript Is God's Word.</h1>
+    
+    <h5 class="page-author">Handwritten by TVD</h5>
+
+    <div itemprop="articleBody">
+      <p><img src="https://techoctave.com/c7/static/javascript-is-not-low-level.jpg" width="100%" /></p>
+
+<p>I’m so sick and tired of people describing JavaScript as “low-level”. If you’re not “MOV AL, 61h” all damn day, you’re not doing low-level programming; so give it a rest.</p>
+
+<h3 id="low-level-programming-languages">Low-Level Programming Languages</h3>
+
+<p>For those who studied under <a href="https://techoctave.com/posts/57-hustle-and-code">Sams or some other Dummy</a>, it’s time to lay out some fundamentals.</p>
+
+<p>In computer science, a low-level programming language is a programming language that provides little or no abstraction from a computer’s instruction set architecture.</p>
+
+<p>At this point, we’re either talking machine code or assembly language.</p>
+
+<p>Low-level languages can be converted to machine code without using a compiler or interpreter, and the resulting code runs directly on the processor.</p>
+
+<h4 id="machine-code">Machine Code</h4>
+
+<p>Machine code is the only language a microprocessor can process directly without a previous transformation.</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="mi">8</span><span class="nx">B542408</span> <span class="mi">83</span><span class="nx">FA0077</span> <span class="mi">06</span><span class="nx">B80000</span> <span class="mi">0000</span><span class="nx">C383</span>
+<span class="nx">FA027706</span> <span class="nx">B8010000</span> <span class="mi">00</span><span class="nx">C353BB</span> <span class="mi">01000000</span>
+<span class="nx">B9010000</span> <span class="mi">008</span><span class="nx">D0419</span> <span class="mi">83</span><span class="nx">FA0376</span> <span class="mi">078</span><span class="nx">BD98B</span>
+<span class="nx">C84AEBF1</span> <span class="mi">5</span><span class="nx">BC3</span></code></pre></figure>
+
+<p>Above is a function in 32-bit x86 machine code to calculate the nth Fibonacci number.</p>
+
+<p>Writing machine code was nutballs because it required memorizing or looking up numerical codes for every instruction that is used. Who the hell ever had the time for that?</p>
+
+<p>Please tell me you’re not doing this for a living?</p>
+
+<h4 id="assembly-language">Assembly Language</h4>
+
+<p>An <a href="http://flint.cs.yale.edu/cs422/doc/art-of-asm/pdf/CH08.PDF">assembly language</a> is a low-level programming language for a computer, microcontroller, or other programmable device, in which each statement corresponds to a single machine code instruction:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">fib</span><span class="err">:</span>
+    <span class="nx">mov</span> <span class="nx">edx</span><span class="p">,</span> <span class="p">[</span><span class="nx">esp</span><span class="o">+</span><span class="mi">8</span><span class="p">]</span>
+    <span class="nx">cmp</span> <span class="nx">edx</span><span class="p">,</span> <span class="mi">0</span>
+    <span class="nx">ja</span> <span class="err">@</span><span class="nx">f</span>
+    <span class="nx">mov</span> <span class="nx">eax</span><span class="p">,</span> <span class="mi">0</span>
+    <span class="nx">ret</span>
+    
+    <span class="err">@@:</span>
+    <span class="nx">cmp</span> <span class="nx">edx</span><span class="p">,</span> <span class="mi">2</span>
+    <span class="nx">ja</span> <span class="err">@</span><span class="nx">f</span>
+    <span class="nx">mov</span> <span class="nx">eax</span><span class="p">,</span> <span class="mi">1</span>
+    <span class="nx">ret</span>
+    
+    <span class="err">@@:</span>
+    <span class="nx">push</span> <span class="nx">ebx</span>
+    <span class="nx">mov</span> <span class="nx">ebx</span><span class="p">,</span> <span class="mi">1</span>
+    <span class="nx">mov</span> <span class="nx">ecx</span><span class="p">,</span> <span class="mi">1</span>
+    
+    <span class="err">@@:</span>
+        <span class="nx">lea</span> <span class="nx">eax</span><span class="p">,</span> <span class="p">[</span><span class="nx">ebx</span><span class="o">+</span><span class="nx">ecx</span><span class="p">]</span>
+        <span class="nx">cmp</span> <span class="nx">edx</span><span class="p">,</span> <span class="mi">3</span>
+        <span class="nx">jbe</span> <span class="err">@</span><span class="nx">f</span>
+        <span class="nx">mov</span> <span class="nx">ebx</span><span class="p">,</span> <span class="nx">ecx</span>
+        <span class="nx">mov</span> <span class="nx">ecx</span><span class="p">,</span> <span class="nx">eax</span>
+        <span class="nx">dec</span> <span class="nx">edx</span>
+    <span class="nx">jmp</span> <span class="err">@</span><span class="nx">b</span>
+    
+    <span class="err">@@:</span>
+    <span class="nx">pop</span> <span class="nx">ebx</span>
+    <span class="nx">ret</span></code></pre></figure>
+
+<p>The same Fibonacci number calculator as above, but in x86 assembly language using <a href="http://msdn.microsoft.com/en-us/library/afzk3475(v=vs.80).aspx">MASM</a> syntax.</p>
+
+<p>Each microcontroller had it’s own distinct assembly language instruction set. But, this was a step up because you no longer had to memorize or lookup every single instruction opcode.</p>
+
+<p>A developer could more easily remember commands like move (mov) or compare (cmp) over 8B542408 or FA027706.</p>
+
+<p>Statements like <em>mov ax,0</em> and <em>add ax,bx</em> are meaningless to the microprocessor. As arcane as these statements appear, they were still human readable forms of computer instructions.</p>
+
+<p>But, at the end-of-the-day, the computer only responds to commands like B80000 and 03C3. An assembly language and its corresponding assembler is a program that converts strings like mov ax,0 to architecture specific machine code like “B80000”.</p>
+
+<p>Surely, you’re not doing this for a living either?</p>
+
+<h3 id="high-level-programming-langauges">High-Level Programming Langauges</h3>
+
+<p>The latest trend is folks regurgitating phrases like “JavaScript is the lowest level programming, the assembly language of the web.” I can’t even begin to tell you how incredibly wrong that statement is.</p>
+
+<p>It’s just stinking wrong. Absolutely, unequivocally wrong:</p>
+
+<p><img src="https://techoctave.com/c7/static/say-low-level-one-more-goddamn-time.jpg" width="520" /></p>
+
+<p>In computer science, a high-level programming language is a programming language with strong abstraction from the details of the computer and it’s machine code.</p>
+
+<p>That abstraction forms the basis of what developers come to expect in a modern programming language:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="mi">1</span><span class="p">.</span> <span class="nx">Advanced</span> <span class="nx">Control</span> <span class="nx">Structures</span>
+
+<span class="mi">2</span><span class="p">.</span> <span class="nx">Abstract</span> <span class="nx">Data</span> <span class="nx">Types</span>
+
+<span class="mi">3</span><span class="p">.</span> <span class="nb">Object</span> <span class="nx">Oriented</span> <span class="nx">Programming</span> <span class="nx">Constructs</span>
+
+<span class="mi">4</span><span class="p">.</span> <span class="nx">Functional</span> <span class="nx">Programming</span> <span class="nx">Constructs</span></code></pre></figure>
+
+<p>JavaScript has all these fundamental constructs of a high-level programming language. That’s why it’s so versatile. That’s why it’s so ubiquitous:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">Light</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">_super</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="kd">function</span> <span class="nx">Light</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">color</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">_super</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">id</span><span class="p">);</span>
+
+        <span class="k">this</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="nx">color</span><span class="p">;</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Start Light: "</span> <span class="o">+</span> <span class="nx">color</span><span class="p">);</span>
+
+        <span class="nx">_super</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">drawTerminal</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="nx">Light</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">setColor</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">color</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="nx">color</span><span class="p">;</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Change Light: "</span> <span class="o">+</span> <span class="nx">color</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nx">Light</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">getColor</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Color: "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">);</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nx">Light</span><span class="p">;</span>
+<span class="p">})(</span><span class="nx">Base</span><span class="p">);</span></code></pre></figure>
+
+<p>People will continue to parrot <a href="http://www.hanselman.com/blog/JavaScriptIsAssemblyLanguageForTheWebPart2MadnessOrJustInsanity.aspx">JavaScript is the assembly language for the web</a>. Ignorance is a choice. But, that doesn’t change the facts that JavaScript contains every high-level abstraction developers need to be productive.</p>
+
+<p>The only higher level than JavaScript is <a href="https://twitter.com/andraganescu/status/305006413959290882">God’s word</a>.</p>
+
+<h4 id="how-did-this-low-level-nonsense-get-this-far">How did this low-level nonsense get this far?</h4>
+
+<p>One of my developer tweeps <a href="https://twitter.com/HexstreamSoft/status/305050017180291073">@HexstreamSoft</a> summarized the madness best:</p>
+
+<p><em>I guess the “argument” for Javascript being “low-level” is: “Any programming language used as a compilation target is low-level.”</em></p>
+
+<p>His observation is absolutely correct. This is exactly the logic folks are using to determine whether JavaScript is a low-level programming language or a high-level programming language.</p>
+
+<p>The problem here is this new definition for “low-level” programming language is simply wrong. It never was and never will be the definition of “low-level”.</p>
+
+<p>Even if it was, when would the madness stop? If I wrote a new language which transpiles to CoffeeScript, would we then say CoffeeScript is a “low-level” programming language?</p>
+
+<p>Surely not.</p>
+
+<p>JavaScript isn’t even close to the lowest level. Every <a href="https://techoctave.com/posts/97-why-c-never-left">JavaScript interpreter is written in C/C++</a>. When JavaScript code runs through the interpreter, opcode is generated for the specific computer chipset because that’s the only code a machine can understand.</p>
+
+<p>Folks like to opine the terms high-level and low-level are inherently relative. That for every generation of programming language, the previous is a lower-level.</p>
+
+<p>If you haven’t heard it before, let me be the first to tell you that is complete and utter bullshit. A programming language either has high-level constructs or it doesn’t. This isn’t about feelings or transpiling or anything else.</p>
+
+<p>A programming language is “low-level” if it lacks high-level abstract constructs: Functions, Classes, Inheritance, Polymorphism, etc.</p>
+
+<p>It’s that simple.</p>
+
+<p>Since JavaScript has these “high-level” abstract constructs, it is a high-level programming language.</p>
+
+<h4 id="blame-the-wave-of-designer-languages">Blame The Wave of Designer Languages</h4>
+
+<p>I blame the current wave of <a href="https://techoctave.com/posts/90-designer-languages">Designer Languages</a> for our temporary bout with insanity.</p>
+
+<p>JavaScript, like many other successful programming languages is seeing it’s share of designer languages. Some more successful than others.</p>
+
+<p>Yet, just because another language runs on top of JavaScript, doesn’t make JavaScript “low-level”. That just makes JavaScript awesome!</p>
+
+<p>In fact, none of these designer languages even add any new <a href="http://blog.izs.me/post/10213512387/javascript-is-not-web-assembly">abstract constructs</a>. Most, invariably, only add syntactic sugar to what was already an elegant language.</p>
+
+<p>Designer languages are the expensive shoes you wear to impress your date or the Versace dress your girl wore to the prom. They are pomp and circumstance.</p>
+
+<p>That doesn’t make JavaScript “low-level”, that just makes designer languages trendy.</p>
+
+<p>Take a deep dive into any designer language. CoffeeScript, TypeScript, Dart, GWT, Sweet, LLJS, Opal, it really doesn’t matter.</p>
+
+<p>What you’ll find is this…</p>
+
+<p>Each has the same high-level abstract constructs that JavaScript has minus the ease of debugging, support and ultimately, maintainability.</p>
+
+<p>I’m not saying these languages aren’t innovative because they are. I’m not saying these languages don’t add value to the JavaScript ecosystem because they do.</p>
+
+<p>What I am saying is don’t confuse science with fashion.</p>
+
+
+    </div>
+    
+    <div id="share" class="feat">      
+      <p>discuss on twitter</p>
+      
+      <a href="//twitter.com/share" class="popup">
+        <span class="icon-twitter"></span>
+      </a>
+      
+      <div class="line"></div>
+      
+      <br/>
+      
+      <p>every day thousands of developers use our charts & gauges to get the job done right</p>
+      
+      <img src="/images/blog-header.png" usemap="#map" />
+      
+      <map name="map">
+        <area shape="rect" coords="4, 4, 247, 276" href="/charts/" alt="JavaScript Charts" target="_blank"/>
+        <area shape="rect" coords="317, 3, 582, 277" href="/gauges/" alt="JavaScript Gauges" target="_blank"/>
+        <area shape="rect" coords="652, 4, 906, 277" href="/simulation/" alt="JavaScript Flight Gauges" target="_blank"/>  
+      </map>
+      
+      <br><br><br>
+      <p><a href="/c7/" style="text-decoration: none;">← return to all articles</a></p>
+    </div>
+    
+  </article>
+</section>
+
+
+
+    </main>
+
+    <footer>
+        <p style="font-size: 80%;">TechOctave, The Lion, "Beautiful & Inspired" are Registered Trademarks of TechOctave, LLC.</p>
+        <p style="font-size: 65%;">HANDCRAFTED WITH <abbr style="color: #FF2400; font-variant: none" title="love">❤</abbr> IN COLUMBUS OHIO</p>
+    </footer>
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/imageMapResizer.js"></script>
+    <script src="/js/moment.js"></script>
+    <script>
+    jQuery(document).ready(function($) {
+      	$("map").imageMapResize();
+        
+        var date = moment().format('DD MMMM YYYY');
+        $(".date").html(date);
+    });
+    </script>
+    
+    
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-17961498-1', 'techoctave.com');
+        ga('send', 'pageview');
+      </script>
+    
+
+  </body>
+</html>

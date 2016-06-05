@@ -19,8 +19,8 @@ Also, this release fixes a major bug limiting the number of Columns and Bars on 
 
 <img src="https://techoctave.com/c7/static/charts-shifting-bug-screenshot.png" alt="Charts shifting bug screenshot."/>
 
-###Release Notes: 1.2.4
-####TechOctave Charts Suite
+### Release Notes: 1.2.4
+#### TechOctave Charts Suite
 
 ========================================
 

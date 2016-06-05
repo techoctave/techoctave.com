@@ -13,7 +13,7 @@ Prototyping is hard, but good for business. It's a necessary phase between idea 
 We apply prototyping to all of our products. Here are some lessons learned from our latest product - [JavaScript Charts][1] Suite. We hope you enjoy!
 
 
-###Great products evolve from great prototypes...
+### Great products evolve from great prototypes...
 
 Good prototyping isn't easy either. It takes sacrifice and diligence to introspect and seek the right questions before coming to a "solution". Think about it...What could you have been doing instead of prototyping? Working on client work? Jumping straight into production code?
 
@@ -21,7 +21,7 @@ My point is prototyping takes time away from other activities. But, I posit this
 
 Don't get me wrong, I respect Lady Luck. I just believe she favors those who [Tango][2] with purposeful intent. With our Dashboard Chart Suite, prototyping is both meaningful and purposeful.
 
-###Prototypes are Functional Concepts
+### Prototypes are Functional Concepts
 
 The scope of a prototype is really up to you. Each can vary based on what you're trying to accomplish. Prototypes are functional concepts.
 
@@ -41,7 +41,7 @@ A good prototype allows you to have a conversation about complexity. Hypothetica
 3. What is the motivation to use this product?
 {% endhighlight %}
 
-####What environment will this product be used?
+#### What environment will this product be used?
 
 Here, I'm trying to figure out the operating constraints of the product: Will it be used in a web application? Or will it be used in a Desktop application? Or is it a server utility?
 
@@ -51,7 +51,7 @@ Some questions are useful for both software and hardware: Is this a stand alone 
 
 It's important to know which environment your product will be used. Knowing this will help you value your product. It will also help your customers value their time.
 
-####Who is going to use this product?
+#### Who is going to use this product?
 
 Here, it's important to reflect on who the end user is. Call it, "Getting inside their head". Call it "User Profiles". Call it, "End User Analysis". Whatever you call it, make sure you spend time empathizing with the end user. Make sure you spend time thinking about (their) level of experience - not yours.
 
@@ -61,13 +61,13 @@ Maybe your customers are designers. What if you're not a designer? All that mean
 
 Fundamentally, the answer to this question helps you understand how much complexity you have liberty to expose and how much you simply need to keep hidden.
 
-####What is the motivation to use this product?
+#### What is the motivation to use this product?
 
 This is where you get down to brass tacks and truly evaluate the value of what your prototype can become. Why is the customer here? Why don't they just build the product themselves? Are they trying to save time? Are they trying to save money? Are they trying to save both?
 
 Maybe your customers value beauty. I believe in beauty. I believe software should be beautiful and inspired. This is a core value. People value functional things, but they love beautiful things. As you evaluate motivation try to remember that.
 
-###Intelligent Defaults
+### Intelligent Defaults
 
 I not only value beauty, I also value aforethought and conviction. That's why I believe in Intelligent Defaults.
 
@@ -99,7 +99,7 @@ var sales = new BarChart();
 sales.SetProperty("id", "sales");
 sales.SetProperty("data", data);
 
-sales.SetProperty("colors", ["#FF2400", "#E25822", "#F2F2F2", "#B22222"]);
+sales.SetProperty("colors", ["#FF2400", "# E25822", "#F2F2F2", "# B22222"]);
 
 sales.SetProperty("fill", true);
 sales.SetProperty("width", 200);
@@ -113,7 +113,7 @@ sales.drawGraph();
 
 There were a few more properties to set before a "valid" BarChart could be rendered. But, let's cut to the chase. Your project is behind schedule and the boss is getting antsy for results. Which philosophy do you wish guided the development of your components?
 
-####Intelligent Defaults are core to your DNA
+#### Intelligent Defaults are core to your DNA
 
 Intelligent Defaults can and should go further than user experience. Indeed, I believe Intelligent Defaults should be at the DNA of our products.
 
@@ -146,7 +146,7 @@ What this means is the end user gets the benefits of a fully instantiated object
 
 With this attention to detail, the new keyword would never slip through the cracks. That means the end user doesn't have to worry about potentially overriding data. That means less logic errors will occur. Less testing time will be needed. Indeed, less development time will be needed. That's why I always say, "Quality has a price and it's not a question of if you'll pay, but when."
 
-###The Law of Conservation of Quality
+### The Law of Conservation of Quality
 
 The Law of Conservation of Energy is a fundamental law of physics. It states, "The total amount of energy in an isolated system remains constant over time. Therefore, the total energy is said to be conserved over time."
 

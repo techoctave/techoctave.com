@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+      <title>Simple JavaScript Inheritance Using CoffeeScript Extends</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta http-equiv="content-language" content="en-gb" />
+      
+      <meta name="description" content="I tend to favor object composition over class inheritance. This is especially true when I’m modeling a business process because business is about distinct people coming together to produce a particular result. Organizations have hierarchy. Yet, that “coming together” is typically more functional than hierarchical. One can say teams are “composed” of distinct functional specialties (Designer, Developer, UX, etc.) and so a modern composite approach to object oriented programming lends more naturally to the way...">
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10">
+      <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" type="text/css" href="/css/main.css" />
+      <link rel="stylesheet" type="text/css" href="/css/syntax.css" />
+      <link href="atom.xml" type="application/atom+xml" rel="alternate" title="Site ATOM Feed">
+  </head>
+
+  <body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
+    <main>
+      <section id="single-wrap">
+  <article class="single-content" itemscope itemtype="//schema.org/BlogPosting">
+	
+    <div class="feat">
+      <h5 class="page-date">
+        <time datetime="2012-10-26T00:03:03-04:00" itemprop="datePublished">
+          26 October 2012
+        </time>
+      </h5>
+    </div>
+
+    <h1 class="page-title" itemprop="name headline">Simple JavaScript Inheritance Using CoffeeScript Extends</h1>
+    
+    <h5 class="page-author">Handwritten by TVD</h5>
+
+    <div itemprop="articleBody">
+      <p><img src="https://techoctave.com/c7/static/most-attractive-photo-on-internet.jpg" alt="The Most Attractive Photo On The Internet" /></p>
+
+<p>I tend to <a href="https://techoctave.com/posts/68-nhibernate-the-good-parts">favor object composition</a> over class inheritance. This is especially true when I’m modeling a business process because business is about distinct people coming together to produce a particular result.</p>
+
+<p>Organizations have hierarchy. Yet, that “coming together” is typically more functional than hierarchical. One can say teams are “composed” of distinct functional specialties (Designer, Developer, UX, etc.) and so a modern composite approach to object oriented programming lends more naturally to the way work actually gets done.</p>
+
+<h3 id="isnt-this-article-about-javascript-inheritance">Isn’t This Article About JavaScript Inheritance?</h3>
+
+<p>Yes.</p>
+
+<p>But, I wanted you to understand class inheritance is only one approach to object oriented programming. Better yet, I want you to see examples of how others use both the object composition and class inheritance techniques.</p>
+
+<p>For example, I find class inheritance particular useful when <a href="http://techoctave.com/gauges/">modeling a distinct real world object</a>. On the flip side, I find object composition works great when modeling Line of Business applications and other games.</p>
+
+<h3 id="modeling-buttons-bases-and-shiny-things">Modeling Buttons, Bases and Shiny Things</h3>
+
+<p>Take the power panel for example:</p>
+
+<p><img src="https://techoctave.com/c7/static/power-panel-2.jpg" alt="JavaScript Power Panel" /></p>
+
+<p>In particular, let’s focus on two components of the power panel:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="mi">1</span><span class="p">.</span> <span class="nx">Glow</span> <span class="nx">Starter</span> <span class="nx">Light</span>
+
+<span class="mi">2</span><span class="p">.</span> <span class="nx">Fuel</span> <span class="nx">Pimp</span> <span class="nx">Fill</span> <span class="nx">Button</span></code></pre></figure>
+
+<p>In classical object oriented fashion, you’d reason both the Light and the Button share a base each uses to embed itself within the power panel. From there both the Light and Button would go on to have distinct properties and methods.</p>
+
+<p>In JavaScript, this base class would be modeled like this:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">Base</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+	<span class="kd">function</span> <span class="nx">Base</span><span class="p">(</span><span class="nx">id</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"base: "</span> <span class="o">+</span> <span class="nx">id</span><span class="p">);</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">id</span> <span class="o">=</span> <span class="nx">id</span><span class="p">;</span>
+	<span class="p">}</span>
+	
+	<span class="nx">Base</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">drawTerminal</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"drawTerminal"</span><span class="p">);</span>
+	<span class="p">};</span>
+	
+	<span class="nx">Base</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">getId</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Id: "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
+		<span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+	<span class="p">};</span>
+	
+	<span class="k">return</span> <span class="nx">Base</span><span class="p">;</span>
+<span class="p">})();</span></code></pre></figure>
+
+<p>There are a couple of really cool things at work here. Let’s take some time to look at each.</p>
+
+<p>First, you’ll notice the class is defined using an anonymous self executing closure which returns its class signature after it is defined. The closure encapsulates the details of the class. But, it also turns the class signature into a kind of namespace, thereby preventing class properties and methods from polluting the Global Namespace.</p>
+
+<p>Second, you’ll notice the class has a bonafide constructor you can use to setup the class instance. All methods of the class extend the prototype chain of the class: Class.prototype.* Lastly, we return the class definition - it will be your class’ interface to the world.</p>
+
+<p>You could easily create a new instance of the base class:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">base</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Base</span><span class="p">(</span><span class="s2">"123456"</span><span class="p">);</span></code></pre></figure>
+
+<p>But, that wouldn’t be too useful. And that’s fine because it’s not meant to be too useful. The base class is just that, a base class (with base functionality) from which most other classes will inherit from. Here, the base’s primary function is to simply drawTerminal because everyone will need a Terminal in order to connect to the Power Panel.</p>
+
+<h3 id="javascript-inheritance-and-all-the-things">JavaScript Inheritance And ALL THE THINGS</h3>
+
+<h4 id="getting-started-with-javascript-inheritance">Getting Started with JavaScript Inheritance</h4>
+
+<p>Things really get interesting when you want to create a Light that inherits from the base class. But, what’s the best way to accomplish classical inheritance in a prototypical world?</p>
+
+<p>One of the most interesting ways to achieve classical inheritance in JavaScript is to do the following:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">Light</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">_super</span><span class="p">)</span> <span class="p">{</span>
+
+	<span class="kd">function</span> <span class="nx">Light</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">color</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">_super</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">id</span><span class="p">);</span>
+		
+		<span class="k">this</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="nx">color</span><span class="p">;</span>
+		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Start Light: "</span> <span class="o">+</span> <span class="nx">color</span><span class="p">);</span>
+		
+		<span class="nx">_super</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">drawTerminal</span><span class="p">();</span>
+	<span class="p">}</span>
+	
+	<span class="nx">Light</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">setColor</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">color</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="nx">color</span><span class="p">;</span>
+		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Change Light: "</span> <span class="o">+</span> <span class="nx">color</span><span class="p">);</span>
+	<span class="p">}</span>
+	
+	<span class="nx">Light</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">getColor</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Color: "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">);</span>
+		<span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">;</span>
+	<span class="p">}</span>
+	
+	<span class="k">return</span> <span class="nx">Light</span><span class="p">;</span>
+<span class="p">})(</span><span class="nx">Base</span><span class="p">);</span></code></pre></figure>
+
+<p>The first thing you’ll notice is we passed the parent class into the self-executing closure. This then becomes the <em>super</em> object reference in the anonymous function. The parent constructor and methods are access through the <em>super</em> object.</p>
+
+<p>In particular, to call the parent’s constructor, simply execute:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">_super</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">id</span><span class="p">);</span></code></pre></figure>
+
+<p><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/call">Function.call</a> calls a function with a given <em>this</em> value and the arguments provided individually. You can use <em>call</em> to chain constructors for an object. Here, <em>this</em> refers to the current object, the calling object. Next, you can supply as many arguments as your parent’s constructor demands.</p>
+
+<p>Access to the parent’s methods are done through the prototype chain:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">_super</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">drawTerminal</span><span class="p">();</span></code></pre></figure>
+
+<p>This is pretty powerful stuff! You have things you’d never dream of in JavaScript:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="mi">1</span><span class="p">.</span> <span class="nx">Parent</span> <span class="nx">Constructor</span> <span class="nx">Reuse</span>
+
+<span class="mi">2</span><span class="p">.</span> <span class="nx">Parent</span> <span class="nx">Method</span> <span class="nx">Inheritance</span></code></pre></figure>
+
+<p>All the things that make your code more maintainable.</p>
+
+<h4 id="javascript-multiple-inheritance">JavaScript Multiple Inheritance</h4>
+
+<p>If you ever need to, this technique also opens the door for Multiple Inheritance in JavaScript. Consider the following:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">Light</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">_super1</span><span class="p">,</span> <span class="nx">_super2</span><span class="p">)</span> <span class="p">{</span>
+	<span class="kd">function</span> <span class="nx">Light</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">color</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">_super1</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">id</span><span class="p">);</span>
+		<span class="nx">_super2</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">id</span><span class="p">,</span> <span class="nx">color</span><span class="p">);</span>
+		
+		<span class="p">.</span> <span class="p">.</span> <span class="p">.</span>
+	<span class="p">}</span>
+
+    <span class="p">.</span> <span class="p">.</span> <span class="p">.</span>
+	
+	<span class="k">return</span> <span class="nx">Light</span><span class="p">;</span>
+<span class="p">})(</span><span class="nx">Base</span><span class="p">,</span> <span class="nx">AnotherClass</span><span class="p">);</span></code></pre></figure>
+
+<p>JavaScript child classes can inherit from as many parent classes as needed. It goes without saying to be judicious when inheriting from multiple classes. But, if you ever need to, JavaScript is more than flexible enough to accommodate that need.</p>
+
+<h4 id="coffeescript-in-too-deep">CoffeeScript: In Too Deep</h4>
+
+<p>Still with me? Excellent!</p>
+
+<p>Up until this point, your freshly minted Light Class can call it’s parent constructor and call methods on its parent class. But, you haven’t actually inherited anything.</p>
+
+<p>That is to say, the methods of the Base Class are not present on the prototype chain for the Light Class.</p>
+
+<p>If inheritence worked, the Light Class would have four methods on the prototype chain. Two from the parent: drawTerminal and getId. The remaining (from itself): setColor and getColor.</p>
+
+<p>Yet, only the Light Class methods exist:</p>
+
+<p><img src="https://techoctave.com/c7/static/light-class-before-extend.png" alt="JavaScript Light Class Before CoffeeScript Extends" /></p>
+
+<p>Not a complete loss. You could still write wrappers over the parent methods. After all, you still have access to _super. But, for large code bases, this can become unmaintainable. Better if child instances just magically had access to parent methods.</p>
+
+<p>That’s where <a href="http://coffeescript.org/">CoffeeScript’s Extends</a> method comes into play:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">__hasProp</span> <span class="o">=</span> <span class="p">{}.</span><span class="nx">hasOwnProperty</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">__extends</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">child</span><span class="p">,</span> <span class="nx">parent</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">key</span> <span class="k">in</span> <span class="nx">parent</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">if</span> <span class="p">(</span><span class="nx">__hasProp</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">parent</span><span class="p">,</span> <span class="nx">key</span><span class="p">))</span> 
+			<span class="nx">child</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">=</span> <span class="nx">parent</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span>
+	<span class="p">}</span>
+	
+	<span class="kd">function</span> <span class="nx">ctor</span><span class="p">()</span> <span class="p">{</span> 
+		<span class="k">this</span><span class="p">.</span><span class="nx">constructor</span> <span class="o">=</span> <span class="nx">child</span><span class="p">;</span> 
+	<span class="p">}</span>
+	
+	<span class="nx">ctor</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="nx">parent</span><span class="p">.</span><span class="nx">prototype</span><span class="p">;</span>
+	
+	<span class="nx">child</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ctor</span><span class="p">();</span>
+	<span class="nx">child</span><span class="p">.</span><span class="nx">__super__</span> <span class="o">=</span> <span class="nx">parent</span><span class="p">.</span><span class="nx">prototype</span><span class="p">;</span> 
+	
+	<span class="k">return</span> <span class="nx">child</span><span class="p">;</span> 
+<span class="p">};</span></code></pre></figure>
+
+<p>CoffeeScript Extends method does a deep copy of parent methods unto the child prototype chain. Even better, using CoffeeScript Extends method is easy. Simply pass the child class as the first argument and the parent class as the second argument:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">Light</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">_super</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">__extends</span><span class="p">(</span><span class="nx">Light</span><span class="p">,</span> <span class="nx">_super</span><span class="p">);</span>
+	
+	<span class="kd">function</span> <span class="nx">Light</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">color</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">_super</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">id</span><span class="p">);</span>
+		
+		<span class="k">this</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="nx">color</span><span class="p">;</span>
+		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Start Light: "</span> <span class="o">+</span> <span class="nx">color</span><span class="p">);</span>
+		<span class="c1">//_super.prototype.drawTerminal();</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">drawTerminal</span><span class="p">();</span>
+	<span class="p">}</span>
+	
+	<span class="nx">Light</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">setColor</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">color</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="nx">color</span><span class="p">;</span>
+		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Change Light: "</span> <span class="o">+</span> <span class="nx">color</span><span class="p">);</span>
+	<span class="p">}</span>
+	
+	<span class="nx">Light</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">getColor</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Color: "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">);</span>
+		<span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">;</span>
+	<span class="p">}</span>
+	
+	<span class="k">return</span> <span class="nx">Light</span><span class="p">;</span>
+<span class="p">})(</span><span class="nx">Base</span><span class="p">);</span></code></pre></figure>
+
+<p>The result is parent methods are accessible in the child class without having to rewrite those same methods:</p>
+
+<p><img src="https://techoctave.com/c7/static/light-class-after-extend.png" alt="JavaScript Light Class After CoffeeScript Extends" /></p>
+
+<p>This time when we count we get the four expected methods: drawTerminal, getId, setColor and getColor. Which is great because an instance of the child class can access the parent method with ease:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js">    <span class="kd">var</span> <span class="nx">light</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Light</span><span class="p">(</span><span class="s2">"LABC123"</span><span class="p">,</span> <span class="s2">"Red"</span><span class="p">);</span>
+    <span class="nx">light</span><span class="p">.</span><span class="nx">getId</span><span class="p">();</span></code></pre></figure>
+
+<p>This cuts down on the potential for much code duplication. Also, it’s simply pleasant to use. You still call the parent constructor using the _super.call route. But, this time you can access the parent methods within the current scope. Lastly, instances of the Light class magically have access to those parent methods as well.</p>
+
+<h3 id="javascript-inheritance-final-thoughts">JavaScript Inheritance: Final Thoughts</h3>
+
+<p>JavaScript is a <a href="https://techoctave.com/posts/90-designer-languages">beautiful and inspiring</a> language. It’s a first class language with all the expressiveness of a functional language and the organization of an object oriented language. It is that dual nature that makes her so intriguing and yet, undeniable.</p>
+
+<p>The time has come to recognize and celebrate both. Back in days long past, I too longed for organized class structures in JavaScript. Lo’ and Behold, they were always there to begin with and now you have them too.</p>
+
+<p>Inheritance has always been a tricky subject in JavaScript. Simply put, the language doesn’t provide a keyword for inheritance. Yet, JavaScript is expressive enough to provide a plethora of mechanisms to achieve inheritance. This is the <a href="https://techoctave.com/posts/92-words-are-wind">fertile ground of innovation</a> I so vigorously profess.</p>
+
+<p>Yet, many a language and community is ripe for innovation. Each standing at its pinnacle, poised for the future. So what makes JavaScript so enduring, yet so delectable? Us…</p>
+
+
+    </div>
+    
+    <div id="share" class="feat">      
+      <p>discuss on twitter</p>
+      
+      <a href="//twitter.com/share" class="popup">
+        <span class="icon-twitter"></span>
+      </a>
+      
+      <div class="line"></div>
+      
+      <br/>
+      
+      <p>every day thousands of developers use our charts & gauges to get the job done right</p>
+      
+      <img src="/images/blog-header.png" usemap="#map" />
+      
+      <map name="map">
+        <area shape="rect" coords="4, 4, 247, 276" href="/charts/" alt="JavaScript Charts" target="_blank"/>
+        <area shape="rect" coords="317, 3, 582, 277" href="/gauges/" alt="JavaScript Gauges" target="_blank"/>
+        <area shape="rect" coords="652, 4, 906, 277" href="/simulation/" alt="JavaScript Flight Gauges" target="_blank"/>  
+      </map>
+      
+      <br><br><br>
+      <p><a href="/c7/" style="text-decoration: none;">← return to all articles</a></p>
+    </div>
+    
+  </article>
+</section>
+
+
+
+    </main>
+
+    <footer>
+        <p style="font-size: 80%;">TechOctave, The Lion, "Beautiful & Inspired" are Registered Trademarks of TechOctave, LLC.</p>
+        <p style="font-size: 65%;">HANDCRAFTED WITH <abbr style="color: #FF2400; font-variant: none" title="love">❤</abbr> IN COLUMBUS OHIO</p>
+    </footer>
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/imageMapResizer.js"></script>
+    <script src="/js/moment.js"></script>
+    <script>
+    jQuery(document).ready(function($) {
+      	$("map").imageMapResize();
+        
+        var date = moment().format('DD MMMM YYYY');
+        $(".date").html(date);
+    });
+    </script>
+    
+    
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-17961498-1', 'techoctave.com');
+        ga('send', 'pageview');
+      </script>
+    
+
+  </body>
+</html>

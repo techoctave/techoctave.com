@@ -10,7 +10,7 @@ I remember when I first realized some Universities were no longer teaching Compu
 
 You see, I spent my University years watching men do things with C/C++ that would blow your mind today. Granted, these men were utter freaks of nature, and I mean that in a good way.
 
-###Hercules
+### Hercules
 One of them was a very good friend. I never got to tell him, but sometimes I felt as though he was a best friend. A proverbial programming demi-god since his toddler years, my very best aspirations were to be half as good a developer as he is.
 
 Let's call him Hercules:
@@ -30,7 +30,7 @@ For kicks we'd code trivia programs on paper. Or hop on over to the [Internation
 You see, what I learned most from Hercules was less about being a coding BAMF and more about being an effective mentor, teacher and guide. And there isn't a semi-colon in the world I wouldn't write to learn those lessons.
 
 
-###Cerberus
+### Cerberus
 
 Then there were the Twins. I affectionately called them [Cerberus][2]:
 
@@ -56,7 +56,7 @@ My time with the Twins, bonded by our shared love for C++, taught me so many thi
 
 They taught me how to find out which code libraries were best and how to realize when it was time for new blood. But, most importantly, my time with Cerberus taught me to ship. And shipping continues to have value beyond measure. Indeed, priceless.
 
-###Bit by the Data Visualization bug
+### Bit by the Data Visualization bug
 
 I worked on my first [dashboard gauge][3] application with Cerberus:
 

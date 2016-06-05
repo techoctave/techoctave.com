@@ -12,7 +12,7 @@ We all know accessibility and SEO are important facets of web application develo
 
 While writing this article, I got to see live and in-person how magnificent the Ferrari California truly is. Inspired and pumped, I implemented one of its dashboard gauges. You can find the Ferrari California dashboard gauge in our [JavaScript Gauge Suite][1].
 
-###SEO and Accessibility Matter
+### SEO and Accessibility Matter
 
 Accessibility and SEO come into play particularly with image rich applications. Think Instagram for example. With these types of applications, it is important to specify the alt attribute on each and every image: 
 
@@ -22,7 +22,7 @@ Accessibility and SEO come into play particularly with image rich applications. 
 
 This ensures the application is readable to a whole host of folks who otherwise wouldn't be privy to the information. Wouldn't it be cool if we could reuse that alt attribute to enhance our application? That's exactly what we are going to do in this lesson — JavaScript style.
 
-###Adding Image Overlays (Automatically)
+### Adding Image Overlays (Automatically)
 
 The image must have an *overlay* class attribute. Then we'll write code to reuse each image's alt tag to create a description overlay on hover.
 

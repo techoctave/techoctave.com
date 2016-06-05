@@ -10,7 +10,7 @@ If you use Gmail, you probably by now have seen Google's promotional push for it
 
 If you are an unsatisfied Skype user, you are probably  getting really excited because finally there's an alternative and you feel like you have a choice. Just maybe, Google Voice will offer you the hassle free VoIP service you've always wanted.
 
-###How does it work?
+### How does it work?
 To make outgoing calls through Gmail, you can click on the call button in the corner of Gmail and then type in the number you wish to dial. Incoming calls will pop-up as a chat window in Gmail. You can also immediately divert calls to your voice mailbox through a single tap on the phone screen.
 
 With Google Voice, you can have a separate Google phone number and then connect your other phones to it so that when you receive a call, the other phones that you've enabled will simultaneously ring. 

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+      <title>How to host a Rails app with Phusion Passenger for Nginx</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta http-equiv="content-language" content="en-gb" />
+      
+      <meta name="description" content="I believe Phusion Passenger for Nginx will do for Rails Deployment what jQuery did for JavaScript Development. So it should come as no surprise that this will be an opinionated Rails deployment tutorial. Simply put, I couldn’t phantom deploying Rails without Passenger for Nginx. Today I’m going to run you through getting your Rails app running on Ubuntu, Ruby Enterprise Edition (REE), Rails, Nginx and Phusion Passenger for Nginx. Lastly, I’ll quickly show you how...">
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10">
+      <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" type="text/css" href="/css/main.css" />
+      <link rel="stylesheet" type="text/css" href="/css/syntax.css" />
+      <link href="atom.xml" type="application/atom+xml" rel="alternate" title="Site ATOM Feed">
+  </head>
+
+  <body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
+    <main>
+      <section id="single-wrap">
+  <article class="single-content" itemscope itemtype="//schema.org/BlogPosting">
+	
+    <div class="feat">
+      <h5 class="page-date">
+        <time datetime="2010-09-03T03:24:22-04:00" itemprop="datePublished">
+          03 September 2010
+        </time>
+      </h5>
+    </div>
+
+    <h1 class="page-title" itemprop="name headline">How to host a Rails app with Phusion Passenger for Nginx</h1>
+    
+    <h5 class="page-author">Handwritten by TVD</h5>
+
+    <div itemprop="articleBody">
+      <p><img src="/c7/static/ruby-enterprise-edition.png" alt="ruby-enterprise-edition" /></p>
+
+<p>I believe <a href="https://techoctave.com/posts/3-passenger-for-nginx-is-the-jquery-of-web-server-software">Phusion Passenger for Nginx will do for Rails Deployment what jQuery did for JavaScript Development</a>. So it should come as no surprise that this will be an opinionated Rails deployment tutorial. Simply put, I couldn’t phantom deploying Rails without Passenger for Nginx.</p>
+
+<p>Today I’m going to run you through getting your Rails app running on Ubuntu, Ruby Enterprise Edition (REE), Rails, Nginx and Phusion Passenger for Nginx. Lastly, I’ll quickly show you how to successfully <a href="https://techoctave.com/posts/4-rails-sub-uri-403-forbidden-errors-when-deploying-with-passenger-for-nginx">deploy your Rails app to a sub URI without any 403 Forbidden errors</a>.</p>
+
+<p>Here are my notes from one of my client’s latest Rails deployment.</p>
+
+<h3 id="ruby-enterprise-edition-ree">Ruby Enterprise Edition (REE):</h3>
+
+<p>We’re going to start by installing Ruby Enterprise Edition (REE). Download the latest .deb REE package, then install it:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">wget http://rubyforge.org/frs/download.php/71100/ruby-enterprise_1.8.7-2010.02_i386_ubuntu10.04.deb
+
+sudo dpkg -i ruby-enterprise_1.8.7-2010.02_i386_ubuntu10.04.deb
+
+ruby -v</code></pre></figure>
+
+<p>You should see something similar to <em>ruby 1.8.7 (2010-04-19 patchlevel 253) … Ruby Enterprise Edition 2010.02</em>. Now, update your RubyGem package manager and all of your installed gems:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo gem update --system
+sudo gem update</code></pre></figure>
+
+<h3 id="ruby-on-rails">Ruby on Rails</h3>
+
+<p>At this point you should make sure you’ve installed the Ruby on Rails gem. Don’t worry, you’ve probably already done that. Here’s the command to install Rails (just in case):</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo gem install rails
+rails -v</code></pre></figure>
+
+<h3 id="install-configure-and-manage-nginx">Install, Configure and Manage Nginx</h3>
+
+<h4 id="install-nginx">Install Nginx</h4>
+
+<p>First, let’s install the Open SSL library. You’re going to need this later for SSL support and management:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo aptitude install libssl-dev</code></pre></figure>
+
+<p>Next, we are going to install the Passenger for Nginx module. This module will install both Nginx and Passenger:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo passenger-install-nginx-module</code></pre></figure>
+
+<p>Follow the default options. Soon, you’ll be prompted with two options to either select 1 or to select 2.</p>
+
+<p>Choose option 2 if you need to install additional Nginx modules. One module that comes to mind is the <em>Nginx SSL module</em>.</p>
+
+<p>For this tutorial, select option 1. Let the install finish. Congrats, you’ve just installed a blazing fast Webserver (Nginx) and Rails application server (Passenger)!</p>
+
+<p>You will also need to create a user and group for nginx. Issue the following command to do so:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">adduser --system --no-create-home --disabled-login --disabled-password --group nginx</code></pre></figure>
+
+<p>Finally, let’s create an init.d script and have it boot at startup. The init.d will allow us to control Nginx:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo nano /etc/init.d/nginx</code></pre></figure>
+
+<p>Copy and paste the following Nginx init script into the new file:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">  <span class="c">#! /bin/sh</span>
+
+  <span class="c">### BEGIN INIT INFO</span>
+  <span class="c"># Provides:          nginx</span>
+  <span class="c"># Required-Start:    $all</span>
+  <span class="c"># Required-Stop:     $all</span>
+  <span class="c"># Default-Start:     2 3 4 5</span>
+  <span class="c"># Default-Stop:      0 1 6</span>
+  <span class="c"># Short-Description: starts the nginx web server</span>
+  <span class="c"># Description:       starts nginx using start-stop-daemon</span>
+  <span class="c">### END INIT INFO</span>
+
+  <span class="nv">PATH</span><span class="o">=</span>/opt/nginx/sbin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+  <span class="nv">DAEMON</span><span class="o">=</span>/opt/nginx/sbin/nginx
+  <span class="nv">NAME</span><span class="o">=</span>nginx
+  <span class="nv">DESC</span><span class="o">=</span>nginx
+
+  <span class="nb">test</span> -x <span class="nv">$DAEMON</span> <span class="o">||</span> <span class="nb">exit </span>0
+
+  <span class="c"># Include nginx defaults if available</span>
+  <span class="k">if</span> <span class="o">[</span> -f /etc/default/nginx <span class="o">]</span> ; <span class="k">then</span>
+      . /etc/default/nginx
+  <span class="k">fi
+
+  </span><span class="nb">set</span> -e
+
+  . /lib/lsb/init-functions
+
+  <span class="k">case</span> <span class="s2">"</span><span class="nv">$1</span><span class="s2">"</span> <span class="k">in
+    </span>start<span class="p">)</span>
+      <span class="nb">echo</span> -n <span class="s2">"Starting </span><span class="nv">$DESC</span><span class="s2">: "</span>
+      start-stop-daemon --start --quiet --pidfile /opt/nginx/logs/<span class="nv">$NAME</span>.pid <span class="se">\</span>
+          --exec <span class="nv">$DAEMON</span> -- <span class="nv">$DAEMON_OPTS</span> <span class="o">||</span> <span class="nb">true
+      echo</span> <span class="s2">"</span><span class="nv">$NAME</span><span class="s2">."</span>
+      <span class="p">;;</span>
+    stop<span class="p">)</span>
+      <span class="nb">echo</span> -n <span class="s2">"Stopping </span><span class="nv">$DESC</span><span class="s2">: "</span>
+      start-stop-daemon --stop --quiet --pidfile /opt/nginx/logs/<span class="nv">$NAME</span>.pid <span class="se">\</span>
+          --exec <span class="nv">$DAEMON</span> <span class="o">||</span> <span class="nb">true
+      echo</span> <span class="s2">"</span><span class="nv">$NAME</span><span class="s2">."</span>
+      <span class="p">;;</span>
+    restart|force-reload<span class="p">)</span>
+      <span class="nb">echo</span> -n <span class="s2">"Restarting </span><span class="nv">$DESC</span><span class="s2">: "</span>
+      start-stop-daemon --stop --quiet --pidfile <span class="se">\</span>
+          /opt/nginx/logs/<span class="nv">$NAME</span>.pid --exec <span class="nv">$DAEMON</span> <span class="o">||</span> <span class="nb">true
+      </span>sleep 1
+      start-stop-daemon --start --quiet --pidfile <span class="se">\</span>
+          /opt/nginx/logs/<span class="nv">$NAME</span>.pid --exec <span class="nv">$DAEMON</span> -- <span class="nv">$DAEMON_OPTS</span> <span class="o">||</span> <span class="nb">true
+      echo</span> <span class="s2">"</span><span class="nv">$NAME</span><span class="s2">."</span>
+      <span class="p">;;</span>
+    reload<span class="p">)</span>
+        <span class="nb">echo</span> -n <span class="s2">"Reloading </span><span class="nv">$DESC</span><span class="s2"> configuration: "</span>
+        start-stop-daemon --stop --signal HUP --quiet --pidfile /opt/nginx/logs/<span class="nv">$NAME</span>.pid <span class="se">\</span>
+            --exec <span class="nv">$DAEMON</span> <span class="o">||</span> <span class="nb">true
+        echo</span> <span class="s2">"</span><span class="nv">$NAME</span><span class="s2">."</span>
+        <span class="p">;;</span>
+    status<span class="p">)</span>
+        status_of_proc -p /opt/nginx/logs/<span class="nv">$NAME</span>.pid <span class="s2">"</span><span class="nv">$DAEMON</span><span class="s2">"</span> nginx <span class="o">&amp;&amp;</span> <span class="nb">exit </span>0 <span class="o">||</span> <span class="nb">exit</span> <span class="nv">$?</span>
+        <span class="p">;;</span>
+    <span class="k">*</span><span class="p">)</span>
+      <span class="nv">N</span><span class="o">=</span>/etc/init.d/<span class="nv">$NAME</span>
+      <span class="nb">echo</span> <span class="s2">"Usage: </span><span class="nv">$N</span><span class="s2"> {start|stop|restart|reload|force-reload|status}"</span> &gt;&amp;2
+      <span class="nb">exit </span>1
+      <span class="p">;;</span>
+  <span class="k">esac</span>
+
+  <span class="nb">exit </span>0</code></pre></figure>
+
+<p>To save the file using nano, press ctrl+o, then enter. Then exit by pressing ctrl+x.</p>
+
+<p>Change permission on the script to make it an executable:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo chmod +x /etc/init.d/nginx</code></pre></figure>
+
+<p>Have the new executable run at startup:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo /usr/sbin/update-rc.d -f nginx defaults</code></pre></figure>
+
+<p>Now, you have the power to start, stop and restart Nginx. Start your shiny new Nginx Webserver with this command:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo /etc/init.d/nginx start</code></pre></figure>
+
+<p>Navigate to your server’s IP address using Firefox or your favorite browser. You should see “Welcome to Nginx!” This means Nginx is up-and-running. Now we can focus on configuring Nginx for your Rails web application.</p>
+
+<h4 id="configure-nginx">Configure Nginx</h4>
+
+<p>Edit your Nginx configuration:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo nano /opt/nginx/conf/nginx.conf</code></pre></figure>
+
+<p>Make sure Nginx knows the location of your passenger and ruby installation:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">. . .
+http <span class="o">{</span>
+    passenger_root /usr/local/lib/ruby/gems/1.8/gems/passenger-2.2.15;
+    passenger_ruby /usr/local/bin/ruby;
+. . .
+    server <span class="o">{</span>
+    . . .
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>For fun, let’s modify our Server section to deploy our Rails app to a Sub URI:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    server <span class="o">{</span>
+        listen 80;
+        server_name domain.com;
+        charset utf-8;
+        root /www/domain.com/public_html;
+        passenger_enabled on;
+        passenger_base_uri /blog;
+        rails_spawn_method smart;
+        rails_env production;
+    <span class="o">}</span></code></pre></figure>
+
+<p>To do this, we have to make a symlink from our Rails app’s public directory to the document root of our static website:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ln -s /www/domain.com/railsapp/public /www/domain.com/public_html/blog</code></pre></figure>
+
+<p>This command will create a symlink called <em>blog</em> in the document root <em>/www/domain.com/public_html/</em>.</p>
+
+<p>Remember, if you want to make the sub uri work, do not create a folder called <em>blog</em> in the document root. This will get you a nice <a href="https://techoctave.com/posts/4-rails-sub-uri-403-forbidden-errors-when-deploying-with-passenger-for-nginx">Rails sub uri 403 Forbidden error</a> from your passenger Nginx setup.</p>
+
+<p>For a typical Xen VPS setup, you should also think about adding the following tweaks to your Nginx conf:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">user                      nginx nginx;
+worker_processes          4;
+worker_connections        1024;
+passenger_max_pool_size   6;</code></pre></figure>
+
+<p>Read more about the the <em><a href="http://modrails.com/documentation/Users%20guide%20Nginx.html#PassengerMaxPoolSize">passenger_max_pool_size</a></em> directive. The maximum value depends on your server’s cpu processor and other factors. Do experiment!</p>
+
+<p>When you’re finished, save the file and restart Nginx:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo /etc/init.d/nginx restart</code></pre></figure>
+
+<h4 id="manage-nginx">Manage Nginx</h4>
+
+<p>In the future you can restart the entire Nginx server or only restart your application with the following command:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">touch /www/domain.com/blog/tmp/restart.txt</code></pre></figure>
+
+<p>The next time you load your Rails app it will restart.</p>
+
+<p>Passenger also has some pretty cool built-in monitoring applications. You can access them using these commands:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo passenger-status
+sudo passenger-memory-stats</code></pre></figure>
+
+<p>I suggest installing another utility to see what’s using memory on your entire server. It’s called htop:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo apt-get install htop
+sudo htop</code></pre></figure>
+
+<p>Well, you’re done really! I hope this helps.</p>
+
+<p>For the uninitiated, deploying to Ubuntu (or any Linux distro) can be daunting. But, once you get over having nothing but a black screen to work with, you’ll realize how unshackled and productive you feel. Good luck Beloved!</p>
+
+
+    </div>
+    
+    <div id="share" class="feat">      
+      <p>discuss on twitter</p>
+      
+      <a href="//twitter.com/share" class="popup">
+        <span class="icon-twitter"></span>
+      </a>
+      
+      <div class="line"></div>
+      
+      <br/>
+      
+      <p>every day thousands of developers use our charts & gauges to get the job done right</p>
+      
+      <img src="/images/blog-header.png" usemap="#map" />
+      
+      <map name="map">
+        <area shape="rect" coords="4, 4, 247, 276" href="/charts/" alt="JavaScript Charts" target="_blank"/>
+        <area shape="rect" coords="317, 3, 582, 277" href="/gauges/" alt="JavaScript Gauges" target="_blank"/>
+        <area shape="rect" coords="652, 4, 906, 277" href="/simulation/" alt="JavaScript Flight Gauges" target="_blank"/>  
+      </map>
+      
+      <br><br><br>
+      <p><a href="/c7/" style="text-decoration: none;">← return to all articles</a></p>
+    </div>
+    
+  </article>
+</section>
+
+
+
+    </main>
+
+    <footer>
+        <p style="font-size: 80%;">TechOctave, The Lion, "Beautiful & Inspired" are Registered Trademarks of TechOctave, LLC.</p>
+        <p style="font-size: 65%;">HANDCRAFTED WITH <abbr style="color: #FF2400; font-variant: none" title="love">❤</abbr> IN COLUMBUS OHIO</p>
+    </footer>
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/imageMapResizer.js"></script>
+    <script src="/js/moment.js"></script>
+    <script>
+    jQuery(document).ready(function($) {
+      	$("map").imageMapResize();
+        
+        var date = moment().format('DD MMMM YYYY');
+        $(".date").html(date);
+    });
+    </script>
+    
+    
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-17961498-1', 'techoctave.com');
+        ga('send', 'pageview');
+      </script>
+    
+
+  </body>
+</html>

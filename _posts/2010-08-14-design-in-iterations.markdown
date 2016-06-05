@@ -12,15 +12,15 @@ Since searching has become such an iconic part of our lives, why not embrace the
 
 Here's a quick glimpse into my experience designing the search box for [Seventh Octave][1]. 
 
-###Initial Concept
+### Initial Concept
 This was the original concept. I really thought that it was a good starting point. But, I decided it could use a little rework. 
 
 ![Seventh Octave Search Concept Initial][2]
-###Rework Concept 
+### Rework Concept 
 Here's my second concept. You can see that I altered a few things. I made the link text more succinct to give it a cleaner look. I also, decided to emphasize the search box area; so I removed the search box button on the right, expanded the search box area and added some depth to it by creating a drop shadow on the top and left corner. 
 
 ![Seventh Octave Search Concept Rework][3]
-###Final Concept
+### Final Concept
 For a final touch, I added the magnifying glass to symbolize the purpose for the box (to search of course.) ... And Whoalah! My search box is now complete.
 ![Seventh Octave Search Concept Final][4]
 

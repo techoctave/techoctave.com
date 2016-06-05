@@ -10,7 +10,7 @@ Recently, I advised a client on what I consider the [top three Google services][
 
 Think about it, you've spent hours toiling away at your next awesome blog post. Why not help Google find that content it might not have found otherwise? Typically you have to manually build the sitemap. Then you have to manually submit the sitemap to Google. Who has time for all of that?
 
-###Rails Google Sitemap Code
+### Rails Google Sitemap Code
 
 Dynamically create a sitemap for your blog the Rails way.
 I know some of you are anxious to jump into the code, so let's get to it:
@@ -65,7 +65,7 @@ end
 
 Beware, there is a 50,000 URL limit for each sitemap you submit to Google through its indexing service.
 
-###Submit Sitemap to Google Automatically
+### Submit Sitemap to Google Automatically
 You can also automate your sitemap.xml submissions to Google using this handy Cronjob on Ubuntu or any flavor of linux:
 
 {% highlight bash %}

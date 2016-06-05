@@ -8,7 +8,7 @@ permalink: /c7/posts/52-accelerate-method-gets-a-tuneup-in-the-javascript-gauge-
 
 You know, I often get asked, "What's everyone's fascination with gauges?" I never know what to say really because I'm crazy over gauges myself. For me, I just believe they are a concise and familiar way to share data with people who care!
 
-###Gauges are familiar
+### Gauges are familiar
 
 I think familiarity really is the key here. Think about it for a second...We use gauges every single day. You have gauges in your car. You have a gauge on your wrist. You may even have a gauge on your stove.
 
@@ -16,13 +16,13 @@ Intimate, everyday experiences and you all experience them with a gauge. Driving
 
 Since I released [TechOctave's JavaScript Gauge Suite][1], the feedback has been amazing. The consensus is "It Rocks!" Performance is production ready. The interfaces are beautiful - one customer called it Data Candy. Data can be sexy and I'm going to prove it!
 
-###Refactoring the accelerate method
+### Refactoring the accelerate method
 
 One feature request in particular has been getting much support among the customer base: *The ability to control which MPH/KPH the Accelerate method stops at.*
 
 Here is the result of the refactoring...
 
-####Original accelerate method
+#### Original accelerate method
 
 Originally, I only envisioned this method to be used for demo purposes. The scope was to have the gauge needle move from rest to the last value of the speedometer gauge: 
 
@@ -53,7 +53,7 @@ As you can see, the previous implementation was also limited to the MPH markings
 
 Well, I believe I have a solution that's going to solve all your problems.
 
-####Refactored accelerate method
+#### Refactored accelerate method
 
 For now, I'm happy with the results of the refactored version. First, it's closer to customer expectation. Second, it's flexible as you can use it for both MPH and KPH. Finally, performance has increased immensely:
 

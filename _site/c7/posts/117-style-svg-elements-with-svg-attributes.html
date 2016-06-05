@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+      <title>Style SVG Elements With SVG Attributes</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta http-equiv="content-language" content="en-gb" />
+      
+      <meta name="description" content="Best practice is to style SVG elements using SVG attributes. This approach strengthens the separation between application View and application Components. It also adheres to the W3C SVG Spec, thereby providing the necessary stability required for cross-browser compatibility. Our Gauges Look-and-Feel and Dynamic Updates Some of you will have requirements or features where you may need to change your application’s look-and-feel on the fly. Best to leverage our JavaScript Gauges API and Raphael.js to handle...">
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10">
+      <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" type="text/css" href="/css/main.css" />
+      <link rel="stylesheet" type="text/css" href="/css/syntax.css" />
+      <link href="atom.xml" type="application/atom+xml" rel="alternate" title="Site ATOM Feed">
+  </head>
+
+  <body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
+    <main>
+      <section id="single-wrap">
+  <article class="single-content" itemscope itemtype="//schema.org/BlogPosting">
+	
+    <div class="feat">
+      <h5 class="page-date">
+        <time datetime="2013-07-01T07:58:38-04:00" itemprop="datePublished">
+          01 July 2013
+        </time>
+      </h5>
+    </div>
+
+    <h1 class="page-title" itemprop="name headline">Style SVG Elements With SVG Attributes</h1>
+    
+    <h5 class="page-author">Handwritten by TVD</h5>
+
+    <div itemprop="articleBody">
+      <p><img src="https://techoctave.com/c7/static/designer-langauges-steampunk.jpg" alt="Should we style SVG elements with CSS?" /></p>
+
+<p>Best practice is to style SVG elements using SVG attributes. This approach strengthens the separation between application View and application Components. It also adheres to the <a href="http://www.w3.org/TR/SVG/">W3C SVG Spec</a>, thereby providing the necessary stability required for cross-browser compatibility.</p>
+
+<h3 id="our-gauges-look-and-feel-and-dynamic-updates">Our Gauges Look-and-Feel and Dynamic Updates</h3>
+
+<p>Some of you will have requirements or features where you may need to change your application’s look-and-feel on the fly. Best to leverage our <a href="http://techoctave.com/gauges/">JavaScript Gauges</a> API and <a href="http://raphaeljs.com/">Raphael.js</a> to handle cross browser, cross platform concerns.</p>
+
+<p>If the entire application look-and-feel changes - Light to Dark for example. Use the set “method” to update a style property and “refresh” the gauge instance. E.g.</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">knots</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Gauge</span><span class="p">(</span><span class="s2">"knots"</span><span class="p">);</span>
+<span class="p">.</span> <span class="p">.</span> <span class="p">.</span>    
+<span class="nx">knots</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s2">"baseColor"</span><span class="p">,</span> <span class="s2">"#000000"</span><span class="p">);</span>
+<span class="p">.</span> <span class="p">.</span> <span class="p">.</span>
+<span class="nx">knots</span><span class="p">.</span><span class="nx">refresh</span><span class="p">();</span></code></pre></figure>
+
+<p>That will allow you to theme the application and still maintain browser and device flexibility because we strictly use SVG attributes to style SVG elements.</p>
+
+<h3 id="modern-web-application-development">Modern Web Application Development</h3>
+<p>Modern web application development necessitates separation of concerns. Here, best practice is to use HTML5 to reinforce the meaning and structure of your application. CSS3 is very useful in defining our look-and-feel or presentation for human users. Together, this use of HTML and CSS forms the basis of semantic web application development.</p>
+
+<h3 id="best-practice">Best Practice</h3>
+<p>Styling SVG elements basically works the same way as in regular HTML elements. SVG, in fact, shares some common properties with HTML as well. However, there are other properties that are intended specifically for SVG elements which have their own specification apart from CSS.</p>
+
+<p>For example, in a regular HTML element, we can add a background color either with the “background-color” or the “background” CSS property. However, with an SVG element, it is a little bit different.</p>
+
+<p>With an SVG element, the background color is specified with the “fill” property instead. Also, an SVG element’s border is specified with “stroke” property, not with the “border” property like we do in regular CSS. You can see the complete list of <a href="http://www.w3.org/TR/SVG/propidx.html">SVG element attributes</a> on the W3C spec.</p>
+
+<p>What this means for us as Developers is we need to apply CSS properties to style HTML elements and SVG attributes to style SVG elements. This is the cornerstone of the semantic web.</p>
+
+<p>Following this best practice provides the necessary stability we need to succeed at cross-browser compatibility. Indeed, this strict adherence to semantic development is what allows us to build applications that run on Windows/Mac OSX Browsers, then turn around and run that very same application on an iPhone, iPad and Android.</p>
+
+
+    </div>
+    
+    <div id="share" class="feat">      
+      <p>discuss on twitter</p>
+      
+      <a href="//twitter.com/share" class="popup">
+        <span class="icon-twitter"></span>
+      </a>
+      
+      <div class="line"></div>
+      
+      <br/>
+      
+      <p>every day thousands of developers use our charts & gauges to get the job done right</p>
+      
+      <img src="/images/blog-header.png" usemap="#map" />
+      
+      <map name="map">
+        <area shape="rect" coords="4, 4, 247, 276" href="/charts/" alt="JavaScript Charts" target="_blank"/>
+        <area shape="rect" coords="317, 3, 582, 277" href="/gauges/" alt="JavaScript Gauges" target="_blank"/>
+        <area shape="rect" coords="652, 4, 906, 277" href="/simulation/" alt="JavaScript Flight Gauges" target="_blank"/>  
+      </map>
+      
+      <br><br><br>
+      <p><a href="/c7/" style="text-decoration: none;">← return to all articles</a></p>
+    </div>
+    
+  </article>
+</section>
+
+
+
+    </main>
+
+    <footer>
+        <p style="font-size: 80%;">TechOctave, The Lion, "Beautiful & Inspired" are Registered Trademarks of TechOctave, LLC.</p>
+        <p style="font-size: 65%;">HANDCRAFTED WITH <abbr style="color: #FF2400; font-variant: none" title="love">❤</abbr> IN COLUMBUS OHIO</p>
+    </footer>
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/imageMapResizer.js"></script>
+    <script src="/js/moment.js"></script>
+    <script>
+    jQuery(document).ready(function($) {
+      	$("map").imageMapResize();
+        
+        var date = moment().format('DD MMMM YYYY');
+        $(".date").html(date);
+    });
+    </script>
+    
+    
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-17961498-1', 'techoctave.com');
+        ga('send', 'pageview');
+      </script>
+    
+
+  </body>
+</html>

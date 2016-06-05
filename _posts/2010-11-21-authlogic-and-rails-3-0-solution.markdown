@@ -16,10 +16,10 @@ As an open source developer for [Blogcast][4], this fork left me with nagging qu
 
 My gut tells me the answers to the above look something like: Maybe. No. Yes. Well, we all make mistakes. The best in us tries to learn from those mistakes. Time to move on!
 
-###The Problem
+### The Problem
 Some of you might be facing an issue with Authlogic 2.1.6 and Rails 3.0.3.
 
-####Gemfile
+#### Gemfile
 
 {% highlight ruby %}
 source 'http://rubygems.org'
@@ -61,7 +61,7 @@ How could this happen? Routing in Rails 3.0 is different. As a result, Authlogic
 
 My solution addresses each concern the Rails 3.0 way. As a result, I'll show you how to keep the Official Authlogic and the bonus is it will actually work in production.
 
-###The Unofficial Branch
+### The Unofficial Branch
 First, I want to address the route many are purporting in the Rails Community. Many people are recommending we use the unofficial fork of Authlogic:
 
 {% highlight ruby %}
@@ -78,7 +78,7 @@ Essentially, they are suggesting you abandon the Authlogic core. I think such a 
 3. I have a more simple solution for you.
 {% endhighlight %}
 
-###Think Simple not Simplistic
+### Think Simple not Simplistic
 
 In discussing the problem, I mentioned two points of failure for Authlogic. My solution is to address the two points of failure so you can move on to better things like shipping your application.
 
@@ -106,7 +106,7 @@ Finally, Authlogic couldn't find which REST method to bind for authentication. S
 
 That's it! You're good to go!
 
-####Stock Options and Technical Debt
+#### Stock Options and Technical Debt
 There is a second option that I don't recommend as I feel it adds technical debt to your code base. That option overwrites the to_key method in the UserSession model. You also must overwrite the persisted? method as well.
 
 Do this and you don't have to update your *new.html.erb* View:

@@ -8,7 +8,7 @@ permalink: /c7/posts/54-start-with-being-a-real-person
 
 You have one of the greatest assets your company can leverage right now! You are a living, thinking breathing person with individual tastes and a unique perspective. There will never be another you and that has value. Lend yourself to your business - it will pay dividends.
 
-###Be a Real Person
+### Be a Real Person
 
 REWORK said it best, "Marketing is not a department." What that means is your business is not a fancy website. Your business is not expensive advertising. Your business isn't even your product. Your business is you!
 
@@ -18,13 +18,13 @@ You have to come from out of the covers and leave the safety of anonymity to tru
 
 I'm not saying you can be the *life of the party* and sell crappy products. No. What I am saying is you can't sell great products and be a crappy business owner - that my friend simply won't do.
 
-###Start Small and Stay Small
+### Start Small and Stay Small
 
 Start small and stay small. Email a customer right now - just to say Hi and thank him for his business. Sometimes I just pick a customer and send them a salutation letting them know how much I value their business and to inquire about their interest (non-business or business related).
 
 It doesn't have to be a big deal. But, it can be a big deal to the bottom line. Advertisement and promotions are transient at best. So be a real person and invite people to you. When in doubt place a premium on relationships.
 
-###Even the Big Boys Are Starting to Get the Picture
+### Even the Big Boys Are Starting to Get the Picture
 
 Make no mistake, one of your biggest assets is being a real person. Even the big boys are starting to get the picture. Case in point - [The MINI vs Porsche Challenge][1]:
 
@@ -44,7 +44,7 @@ THE PITCH
 
 Using its President, MINI really tries to get you to identify and bond with a real human being. They know what we know intrinsically - people buy from people they like. Not fancy advertisements and not fancy marketing. I think he does a great job - I like him!
 
-###Marketing Still Matters
+### Marketing Still Matters
 
 Marketing still matters. You can't forget that. You can't ever forget that. No one can buy a product that they don't know exists - it's humanly impossible. 
 
@@ -69,7 +69,7 @@ THE RUMBLE ON THE RACETRACK
 
 Checkout the Facebook page where the MINI Team talks shop about the entire campaign.
 
-###Get in The Ring
+### Get in The Ring
 
 If you're starting out, embrace that fact. It is the fabric - indeed it is the DNA - of your company. It doesn't have to be a big pageant about who's the most interesting. But it has to be about you and it has to be real. This is the source of your strength as a Starter.
 

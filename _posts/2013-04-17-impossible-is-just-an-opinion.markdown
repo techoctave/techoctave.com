@@ -16,7 +16,7 @@ Ten years ago, The Alchemist changed my life. It was more than a book to me at t
 
 I would learn that lesson well.
 
-###The Art Of The Start
+### The Art Of The Start
 
 To be frank, I didn't set out to sell product at all. I was planning to just write and contribute to open source projects. I kinda just fell into the Business Intelligence market.
 
@@ -36,7 +36,7 @@ A month later, we had a prototype for what would come to be our first product li
 
 What happened to the girl? Well, let's just say she's not his girl anymore. My old friend learned a very valuable lesson that day: *Never bet against a lion...Best case is you lose your money.*
 
-###The First Thing We Sold
+### The First Thing We Sold
 
 Building a prototype is one thing. Making the leap to selling product is a whole different story. Initially, we gave 1.0 away for free. The money is good, but it's never been just about that for me.
 
@@ -82,7 +82,7 @@ I learned something too.
 
 I learned that part of the Start is your 1.0. That's just part of the evolution because you have to start somewhere. And somewhere is better than nowhere.
 
-###Where We Are Today
+### Where We Are Today
 
 We built 2.0 from the ground up to be cross-browser/cross-device compatible, 100% vector based and beautiful:
 
@@ -122,7 +122,7 @@ But innovation doesn't rest and time waits for no man. Out beyond notions of rig
 
 Our customers are on that field. Waiting for us. I don't intend to keep them waiting for long.
 
-###Looking Ahead To The Future
+### Looking Ahead To The Future
 
 We are on the cusp of launching our line of [JavaScript Flight Gauges][7]. Our flight simulation packages will be our third major product line of JavaScript Gauges:
 

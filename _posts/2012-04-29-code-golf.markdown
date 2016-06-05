@@ -16,7 +16,7 @@ If you've ever met me in-person, you know I love talking development in general 
 
 Let's look at a few code snippets from an example Code Golf: [Reinvent the For loop][2].
 
-###Reinventing the For Loop
+### Reinventing the For Loop
 
 The for loop is a fundamental iteration construct in many programming languages:
 
@@ -35,7 +35,7 @@ The responses are nothing short of astounding really. There were submission for 
 
 I'm a big fan of JavaScript. In fact, I believe [The Future is JavaScript][3]. So let's look at some of the more interesting JavaScript submission in Reinventing the For Loop.
 
-####JavaScript Submissions
+#### JavaScript Submissions
 
 Entry #1:
 

@@ -24,7 +24,7 @@ Today, we officially unveil, not just our JavaScript Horizon Gauge, but our enti
 
 After 12 months of R&D, over 4 months of bugs fixes and enhancements and 20,000 lines of code later, we're pretty damn proud of the results.
 
-###The Difference is Principle
+### The Difference is Principle
 
 We talk a lot about our six [core][2] [principles][3] of JavaScript development.
 

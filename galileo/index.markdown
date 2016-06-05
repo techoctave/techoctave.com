@@ -7,7 +7,7 @@ permalink: /galileo/
 
 <h1 class="galileo"><a href="https://chrome.google.com/webstore/detail/mcagkgdbdbbgfielgggafkpjhdbiafha">Galileo ★ Rocks!</a></h1>
 
-####Targeted & Relevant Twitter Followers
+#### Targeted & Relevant Twitter Followers
 ####<strong class="one">Single</strong> Click Twitter Management
 
 
@@ -18,14 +18,14 @@ permalink: /galileo/
 <img class="galileo-demo" src="/images/galileo.gif"/>
 
 
-##Build an audience like a Rockstar ★!
+## Build an audience like a Rockstar ★!
 
 <strong>Galileo helps you build your very own audience.</strong> You can search for endless Twitter users that share your interest, follow them all with one click and immediately start building your perfect Twitter audience.
 
 
 <br/>
 
-##Jam with your audience too!
+## Jam with your audience too!
 
 <strong>Start having an electrifying Twitter experience.</strong> No more wasted time following those you have nothing in common with. Enjoy more meaningful connections.
 
@@ -42,7 +42,7 @@ Galileo elevates your Twitter experience! Here's how:
 
 <br/>
 
-##Rocking Support Forever!
+## Rocking Support Forever!
 
 <strong>Get exceptional and convenient support.</strong> Galileo supports multiple Twitter accounts. It's built for Mac, Windows & Linux users. And, with your purchase of Galileo you get free software updates - Forever! For ever ever? For ever ever? Yes!
 
@@ -54,6 +54,6 @@ Have a feature suggestion? Need help? Or just want to show some love? You can re
 
 <footer>
     <p style="font-size: 80%;">TechOctave, The Lion, "Beautiful & Inspired" are Registered Trademarks of TechOctave, LLC.</p>
-    <p style="font-size: 65%;">HANDCRAFTED WITH <abbr style="color: #FF2400; font-variant: none" title="love">❤</abbr> IN COLUMBUS OHIO</p>
+    <p style="font-size: 65%;">HANDCRAFTED WITH <abbr style="color: # FF2400; font-variant: none" title="love">❤</abbr> IN COLUMBUS OHIO</p>
 </footer>
 

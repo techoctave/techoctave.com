@@ -24,7 +24,7 @@ A chance to look to the stars. A chance to dream of tomorrow. A chance to look t
 
 A chance...
 
-###How much would you pay for the Universe?
+### How much would you pay for the Universe?
 
 Neil Armstrong, Edwin Aldrin...
 
@@ -33,7 +33,7 @@ These men would have given us their lives that we too could have a chance. As Fa
 But, make no mistake, the people who supported their flight beyond...The people who helped them reach the stars were prepared - should Fate have decided otherwise.
 
 
-###In Event of Moon Disaster
+### In Event of Moon Disaster
 
 Here's a transcript from July 18, 1969 in the event that there was a moon disaster:
 
@@ -71,7 +71,7 @@ The original letter:
 
 <img src="http://media.npr.org/assets/img/2011/03/16/letter_custom.jpg?t=1312436577&s=3" alt="In Event of Moon Disaster" width="100%"/>
 
-###Mankind's most noble goal
+### Mankind's most noble goal
 
 Indeed, "the search for truth and understanding" has always been mankind's most noble goal. That was and always will be the most endearing legacy of space flight. 
 

@@ -5,9 +5,9 @@ date:   2000-01-01 00:00:00
 permalink: /marketing-for-geeks/
 ---
 
-#Marketing for Geeks
+# Marketing for Geeks
 
-####The Secrets of Making that First Sale.
+#### The Secrets of Making that First Sale.
 
 <img src="https://techoctave.com/c7/static/marketing-for-geeks-front-and-back-cover.png" alt="Marketing for Geeks - Pragmatic Marketing for Information Age Starters"/>
 
@@ -17,7 +17,7 @@ permalink: /marketing-for-geeks/
 
 <br>
 
-##Over 1,000 Starters sell their products using what they've learned in Marketing for Geeks.
+## Over 1,000 Starters sell their products using what they've learned in Marketing for Geeks.
 
 ![marketing-for-geeks](/images/marketing-for-geeks.png)
 
@@ -39,13 +39,13 @@ Marketing for Geeks has been really helpful for me and I believe this is mainly 
 
 <br/>
 
-##So, what's next exactly?
+## So, what's next exactly?
 
 <strong>Purchase your copy of Marketing for Geeks.</strong> Within a few seconds, you'll receive a receipt for your purchase and a secure link to download the book. Marketing for Geeks comes with tons of examples of how to kickstart your sales process.
 
 <br/>
 
-##Written for starters by a starter.
+## Written for starters by a starter.
 
 Nothing good happens until someone makes a sale. Marketing for Geeks is the culmination of our experience running TechOctave, LLC. That means you're going to get advice that works - it's that simple.
 
@@ -57,6 +57,6 @@ Have a few questions about the book or just need to chat - [contact us directly]
 
 <footer>
     <p style="font-size: 80%;">TechOctave, The Lion, "Beautiful & Inspired" are Registered Trademarks of TechOctave, LLC.</p>
-    <p style="font-size: 65%;">HANDCRAFTED WITH <abbr style="color: #FF2400; font-variant: none" title="love">❤</abbr> IN COLUMBUS OHIO</p>
+    <p style="font-size: 65%;">HANDCRAFTED WITH <abbr style="color: # FF2400; font-variant: none" title="love">❤</abbr> IN COLUMBUS OHIO</p>
 </footer>
 

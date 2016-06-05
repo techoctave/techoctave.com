@@ -22,7 +22,7 @@ While one may think that conflict always leads to a win/lose situation where som
 <img src="https://techoctave.com/c7/static/you-lose-i-win.jpg" alt="I Win. You Lose." width="100%"/>
 
 
-###Conflict Management Strategies 
+### Conflict Management Strategies 
 
 I recently came across the Thomas-Kilmann Conflict Mode Instrument which serves as an interesting model for handling conflict. 
 
@@ -45,7 +45,7 @@ Your response to conflicts will depend on two things -- your concern for yoursel
 **Competition (Aggressive)** --Competition is a win-lose approach; One's goals are seen as most important and must be achieved without cooperating with the other party. This strategy is often used in an emergency when a quick decision is necessary and people are aware and support the approach. However, if overused, people around you become less empowered and may withhold valuable feedback. 
 
 
-###Different Strategies for Different Conflicts.
+### Different Strategies for Different Conflicts.
 In the business world, we often face conflicts -- whether it be with business partners, customers or employees. It is important to understand that how we respond to conflict can either enhance or limit our success. 
 
 We tend to default to one of the conflict strategies depending on our personality. But it's important to realize that different conflicts require different approaches. 

@@ -14,7 +14,7 @@ Our JavaScript Charts Suite includes a [highly configurable API][2]. Choose from
 
 We believe software should be beautiful and inspired. Data is no different. Beautiful data is easier to understand and faster to comprehend. Your users will thank you:
 
-###Six Core Principles
+### Six Core Principles
 
 We built our JavaScript Charts Suite on Six Core Principles:
 
@@ -34,7 +34,7 @@ We built our JavaScript Charts Suite on Six Core Principles:
 
 We know you have tight deadlines and constraints. We know you value quality and craftsmanship. We know you'd rather not sacrifice one for the other. That's why we built our JavaScript Charts Suite to deliver just what you need and nothing more.
 
-###Show. Me. The. Codes. Please!?!
+### Show. Me. The. Codes. Please!?!
 
 We believe in [developing with intelligent defaults][3]. For you, this means you can get each of our JavaScript Charts running quickly and easily:
 
@@ -81,7 +81,7 @@ Our JavaScript Charts are framework agnostic. jQuery, Prototype, Mootools, ExtJS
 
 There are just too many goodies to mention in a single post. So seriously, pick your team up a copy of our [JavaScript Charts][5]. You're next project deserves our JavaScript Charts. You know what? You deserve our JavaScript Charts!
 
-###We're Developer Too
+### We're Developer Too
 
 We're developers too. We've been there. We know requirements shift and enhancements are right around the corner. We want you to be positioned for success.
 

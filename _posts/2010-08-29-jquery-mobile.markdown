@@ -8,7 +8,7 @@ permalink: /c7/posts/13-jquery-mobile
 
 ![jquery-mobile](/c7/static/jquery-mobile.png)
 
-###And in this corner...
+### And in this corner...
 
 jQuery Mobile is an ambitious project which aims to provide developers with a JavaScript framework for some [seriously cross-platform & cross-device][1] development. Developers will have access to a jQuery core as well as a user interface suite of components via jQuery UI.
 
@@ -19,7 +19,7 @@ It looks like this framework will be able to handle everything from the Apple iP
 > built on the rock-solid jQuery and
 > jQuery UI foundation. -jquerymobile.com
 
-###A Step in the Right Direction
+### A Step in the Right Direction
 
 Fundamentally, I think this is a step in the right direction. Thanks to the Apple iPhone, mobile development is definitely more enticing these days. But, for years it was marred by inconsistency and dis-unification.
 
@@ -29,7 +29,7 @@ Why develop for a platform that is the *hottest item this Summer* to find out it
 
 For now, I think I'll still advise clients to set their sights on building native apps for the Apple line of mobile devices: iPhone, iPod Touch and iPad. The staying power (consistency), sex appeal and distribution network make the Apple platform ideal for developers.
 
-###Write less. Do more. 
+### Write less. Do more. 
 
 Yet, I still think jQuery Mobile framework must be nurtured as its promise is far too compelling. Think about it:
 

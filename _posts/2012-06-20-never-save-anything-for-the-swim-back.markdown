@@ -12,7 +12,7 @@ Many years ago, a movie debuted that pushed the boundaries of both scientific an
 
 ###Never save anything for the swim back
 
-####Adolescence
+#### Adolescence
 
 <img src="https://techoctave.com/c7/static/gattaca-vincent-anton-first-swim.jpg" width="520" alt="Gattaca: Vincent and Anton's First Swim"/>
 
@@ -22,7 +22,7 @@ Many years ago, a movie debuted that pushed the boundaries of both scientific an
 
 **Vincent:** Of course it was always me. Anton was, by far, the strongest swimmer. He had no excuse to fail.
 
-####Early Adulthood
+#### Early Adulthood
 
 <img src="https://techoctave.com/c7/static/gattaca-vincent-anton-second-swim.jpg" width="520" alt="Gattaca: Vincent and Anton's Second Swim"/>
 
@@ -39,7 +39,7 @@ Until, finally, the impossible happened.
 **Vincent:** (Rushes to save Anton) It was the one moment in our lives that my brother was not as strong as he believed and I was not as weak. It was the moment that made everything else possible.
 
 
-####Adulthood
+#### Adulthood
 
 **Anton:** Vincent. Vincent (Almost out of breath)...Where's the shore? We're too far out.
 
@@ -66,7 +66,7 @@ This is how I did it Anton...
 I never saved anything for the swim back.
 
 
-###This is your moment...
+### This is your moment...
 
 Never save anything for the swim back.
 
@@ -90,7 +90,7 @@ Giving yourself to the process isn't easy. Part of it is losing yourself for tha
 Never save anything for the swim back...
 
 
-###Ship it anyway...
+### Ship it anyway...
 
 It doesn't have to be perfect. The truth is, you'll never be finished. No masterpiece awaits you. Only many unfinished Mona Lisas and Leaning Towers. Ship it anyway. 
 

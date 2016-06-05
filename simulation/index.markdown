@@ -5,7 +5,7 @@ date:   2000-01-01 00:00:00
 permalink: /simulation/
 ---
 
-#Beautiful flight gauges for the sophisticated developer.
+# Beautiful flight gauges for the sophisticated developer.
 
 ####Next Generation Aerospace Simulation & Training Gauges.
 
@@ -148,7 +148,7 @@ permalink: /simulation/
 	</div><!--purchase-->
 </div><!--products-->
 
-##Great products begin with great components.
+## Great products begin with great components.
 
 <strong>Every day respected firms rely on us.</strong> From the world's most vital government agencies to seasoned military contractors to Fortune 500 companies:
 
@@ -169,7 +169,7 @@ TechOctave helps us demonstrate with style how we can deliver best-in-class avia
 
 <br/>
 
-##JavaScript Flight Gauges
+## JavaScript Flight Gauges
 
 <strong>Easy to get started. Powerful API.</strong> Changing times require agile solutions. We believe our JavaScript flight gauges do something no one else can...We put your success in your hands - as it should be.
 
@@ -192,7 +192,7 @@ Our JavaScript Flight Gauges are beautiful and smart:
 
 <br/>
 
-##Meet Your Flight Crew
+## Meet Your Flight Crew
 
 <strong>Beautiful. Configurable. Amazing.</strong> Meet your flight crew that will take your solutions to the next level. Our JavaScript Flight Gauges are beautiful, smart and put you in control of creating your success:
 
@@ -289,7 +289,7 @@ Our JavaScript Flight Gauges are beautiful and smart:
 <br/>
 
 
-##Cross browser goodness baked in.
+## Cross browser goodness baked in.
 
 <strong>Cross browser and cross platform.</strong> We believe in standards-based development and we believe you can get there without Flash or any other proprietary platform.
 
@@ -302,7 +302,7 @@ We've tested on both Windows and Mac OS X in every major browser. Including: IE7
 <br/>
 
 
-##Highly configurable flight gauges.
+## Highly configurable flight gauges.
 
 <strong>Fully exposed API.</strong> Every background, every line, every needle, every frame, everything is at your fingertips to control:
 
@@ -321,7 +321,7 @@ No matter the requirement or client demand, we keep our flight gauges flexible s
 <br/>
 
 
-##Beautiful and Usable Documentation
+## Beautiful and Usable Documentation
 
 <strong>Software that's easy to use.</strong> Software shouldn't be painful to handle. In fact, the information you need to get going should be well organized and easily understood:
 
@@ -332,7 +332,7 @@ We produce quality documentation of how our software works, insuring you spend m
 <br/>
 
 
-##So what's under the hood?
+## So what's under the hood?
 
 <strong>Everything a sophisticated developer needs.</strong> Beautiful object oriented code. You already know JavaScript, so implementation is a breeze. You will find JavaScript, jQuery & Raphael best practices with easily extensible flight gauge classes and smart default options. Check out this Altimeter flight gauge:
 
@@ -368,7 +368,7 @@ For real-time server-push solutions, our flight gauges work great with HTML5 Web
 
 <br/>
 
-##So, what's next exactly?
+## So, what's next exactly?
 
 <strong>Purchase a library package.</strong> Within a few seconds, you'll receive a receipt for your purchase and a secure link to download the package. Each package comes with tons of examples to get you up and running in no time.
 
@@ -376,7 +376,7 @@ Or contact us to schedule a demo. We'll walk you through the example projects an
 
 <br/>
 
-##Support for developers by developers.
+## Support for developers by developers.
 
 <strong>We built our gauges to help you meet your goals.</strong> This is why we offer one year of guaranteed support with your purchase to make sure that happens.
 
@@ -391,6 +391,6 @@ Have a few questions or just need to chat - contact [sales@techoctave.com](mailt
 
 <footer>
     <p style="font-size: 80%;">TechOctave, The Lion, "Beautiful & Inspired" are Registered Trademarks of TechOctave, LLC.</p>
-    <p style="font-size: 65%;">HANDCRAFTED WITH <abbr style="color: #FF2400; font-variant: none" title="love">❤</abbr> IN COLUMBUS OHIO</p>
+    <p style="font-size: 65%;">HANDCRAFTED WITH <abbr style="color: # FF2400; font-variant: none" title="love">❤</abbr> IN COLUMBUS OHIO</p>
 </footer>
 

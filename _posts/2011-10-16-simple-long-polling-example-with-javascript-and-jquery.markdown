@@ -16,16 +16,16 @@ These two scenarios each have three things in common. First, a passion to displa
 
 Here, we're going to accomplish each commonality with an emphasis on polling options and techniques:
 
-###A History of Polling
+### A History of Polling
 
 Realtime web applications have been with us for quite some time now. To the end user, these applications feel responsive and fluid. Gmail is (arguably) one of the most major applications to popularize this technique. JavaScript is at the heart here.
 
 Have you ever been in the middle of replying to an email, when (suddenly) you're notified the person has sent you another followup? That's the perfect example of polling - sometimes referred to as server-push or comet technology.
 
 
-###A Tale of Two Polling Techniques 
+### A Tale of Two Polling Techniques 
 
-####Traditional Polling
+#### Traditional Polling
 
 *The setInterval Technique*
 
@@ -70,7 +70,7 @@ Both techniques suffer from the same flaw - a new connection to the server must 
 
 What if you could just keep the connection open?
 
-####Long Polling - An Efficient Server-Push Technique
+#### Long Polling - An Efficient Server-Push Technique
 
 **EDIT:** Applications built with Long Polling in mind attempt to offer realtime server interaction, using a persistent or [long-lasting HTTP connection][2] between the server and the client.
 
@@ -95,7 +95,7 @@ If you can pull off keeping your connection open, then your application could se
 Thanks to @Lars for pointing this out in the comments. Thanks man!
 
 
-###What's next? HTML5 WebSockets.
+### What's next? HTML5 WebSockets.
 
 These types of Ajax Push techniques set the foundation for HTML5 WebSockets. With HTML5 WebSockets, we'll be able to see true Server Push styles of application development. This will make for truly responsive web applications.
 
@@ -122,7 +122,7 @@ If WebSockets aren't available, Socket.IO will select the next best transport in
 
 We're still some time off before WebSockets will be universally and consistently supported. Until then, the jQuery Long Polling technique is a best-in-class solution for realtime server communications.
 
-###Eat, Pray and Code
+### Eat, Pray and Code
 
 Long polling addresses the weakness of traditional polling by keeping the connection to your server open. Keeping the connection to the server open eliminates the travel time from client to server and thus, significantly reduces the issues surrounding network latency.
 

@@ -12,13 +12,13 @@ Consuming a RESTful Web Service is non trivial at best. Building our Twitter CRM
 
 Building a RESTful Web Service for others to consume is a whole other story. It's not easy. While I don't believe we need to be [saved from REST][2], I do believe clarity on the principles of REST is both prudent and necessary. Especially, when it comes to [best practices in the forth coming ASP.NET Web API][3].
 
-###Working through some examples
+### Working through some examples
 
 At its core, [REST][5] is a combination of HTTP Verbs (GET, POST, PUT, DELETE), Resources (e.g. http://twitter.com/tweets/) and the Internet Media Type returned (e.g. JSON, XML, SOAP). 
 
 Let's work through some modified examples from David's presentation. Please see the presentation for original examples:
 
-####Example #1: Statuses/Show
+#### Example #1: Statuses/Show
 
 GET http://api.twitter.com/1/statuses/show/id.format
 
@@ -37,7 +37,7 @@ GET http://api.twitter.com/1/statuses/show/id.format
 - Internet Media type returned could be JSON, XML, SOAP, etc.
 {% endhighlight %}
 
-####Example #2: Statuses/Update
+#### Example #2: Statuses/Update
 
 POST http://api.twitter.com/1/statuses/update.format
 
@@ -58,7 +58,7 @@ POST http://api.twitter.com/1/statuses/update.format
 - Internet Media type returned could be JSON, XML, SOAP, etc.
 {% endhighlight %}
 
-####Example #3: Statuses/Destroy
+#### Example #3: Statuses/Destroy
 
 POST http://api.twitter.com/1/statuses/destroy/id.format
 
@@ -78,7 +78,7 @@ POST http://api.twitter.com/1/statuses/destroy/id.format
 - Internet Media type returned could be JSON, XML, SOAP, etc.
 {% endhighlight %}
 
-###Summary
+### Summary
 
 At University, during heated debates, a good friend always reminded me not to throw the baby out with the bath water. I think that advice is prudent here.
 

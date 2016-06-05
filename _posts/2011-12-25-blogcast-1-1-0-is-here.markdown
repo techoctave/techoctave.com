@@ -34,7 +34,7 @@ http://localhost:3000/admin
 login with l/p: admin
 {% endhighlight %}
 
-###Blogcast Revamped and  Reworked
+### Blogcast Revamped and  Reworked
 
 {% highlight ruby %}
 1. Restructured JavaScript assets. Main => blogcast.js. All 3rd party librarie in /librarie folder.

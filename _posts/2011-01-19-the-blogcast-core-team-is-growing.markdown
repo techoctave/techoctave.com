@@ -10,7 +10,7 @@ I'd like to welcome [Curtis K. Gwapo][1] to the Blogcast Core Team. Entrepreneur
 
 From his experience working on his own blogging platform, Curtis' domain knowledge and hands-on experience is exactly what I look for in core team members.
 
-###Managers of One
+### Managers of One
 
 Within hours of the [Blogcast][2] debut, Curtis deployed the very first instance of Blogcast in the wild - [Supreme DFM][3]. Yet, that was only the beginning.
 
@@ -22,7 +22,7 @@ No doubt, Curtis is a Manager of One:
 
 He could have just stopped there but didn't. Instead, he went to work and released his design work on the Ashley dedicated blog. That's giving back 100% - no question about it!
 
-###Blogcast is the REWORK of blogging
+### Blogcast is the REWORK of blogging
 
 I've read both Getting Real and REWORK by Jason Fried and David Heinemeier Hansson of 37signals. So it was a great thing to know Curtis read REWORK himself. 
 
@@ -37,7 +37,7 @@ This type of experience combined with a belief in Simplicity means Blogcast has 
 
 So let me summarize what we have here so far. Taste. Talent. Ambition. Passion. All the ingredients we need to turn a great open source project from awesome to epic.
 
-###The Nexus of Less
+### The Nexus of Less
 
 To all the wonderful people who have reached out to me so far, I want to say thank you!
 

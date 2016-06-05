@@ -12,7 +12,7 @@ Most academics approach object oriented discussions with Tonka toys and furry ki
 
 <iframe width="100%" height="500" src="http://www.youtube.com/embed/_xP3fI7yn5s" frameborder="0" allowfullscreen></iframe>
 
-###Objects
+### Objects
 
 An object is an instance of a class. Each instance having its own unique attributes and state.
 
@@ -33,11 +33,11 @@ Using the Jedi class is deceivingly simple. That simplicity is possible because 
 
 In this article, I'll take you behind the scenes and show you the techniques you need to write clean, maintainable and awesome Ruby code.
 
-###Ruby Classes
+### Ruby Classes
 
 In Ruby, an class (object) encapsulates a group of attributes (state) and methods (operations). A developer manipulates an object's state (instance variables) only through class accessors and methods.
 
-####Jedi.rb
+#### Jedi.rb
 
 Here's how a Jedi class might look:
 
@@ -59,7 +59,7 @@ class Jedi < Padawan
 end
 {% endhighlight %}
 
-####Padawan.rb
+#### Padawan.rb
 
 And the Padawan class might look like this:
 
@@ -81,7 +81,7 @@ end
 
 Padawan would be derived from maybe a *Sentient* class. But for simplicity I'm including in the Padawan class attributes you might have seen in a class like *Sentient*. For example, the *@name* attribute.
 
-####Constructor (Initialization)
+#### Constructor (Initialization)
 
 The initialized method is Ruby's constructor method for class implementations. It's called whenever a new instance of a class is created. For example, here a new instance of the Jedi class is called. The result is the *anakin* object:
 
@@ -93,7 +93,7 @@ anakin = Jedi.new("Anakin")
 This example illustrates a beautiful feature of Ruby - *Flexible Initialization*. This means you have the option to pass a parameter or not:
 
 {% highlight ruby %}
-#Jedi.rb
+# Jedi.rb
 def initialize(name = 'Unknown')
 @name = name
 . . .
@@ -108,8 +108,8 @@ sith = Jedi.new
 
 And the default value of the *@name* attribute would be *Unknown*.
 
-####Inspect
-You've noticed by now that when we try to look at an object directly, we are shown something cryptic like *<#Jedi:0x101237498 @name="Anakin">*. This is just a default behavior, and we are free to change it.
+#### Inspect
+You've noticed by now that when we try to look at an object directly, we are shown something cryptic like *<# Jedi:0x101237498 @name="Anakin">*. This is just a default behavior, and we are free to change it.
 
 All we need to do is add a method named *inspect*. You should return a string that describes the object in some meaningful way - including the states of some or all of its instance attributes.
 
@@ -117,7 +117,7 @@ Here, we return the value of the *@name* attribute on the Padawan class. In this
 
 Run *irb* from Terminal. Then *load 'dojo.rb'*. And type *Anakin*. Type *Exit* to leave irb.
 
-####Accessors
+#### Accessors
 
 A class may have many attributes. It really all depends on the domain you're trying to model. Accessing those attributes directly is not a good practice. Instead, you should create accessors to read and write to those attributes.
 
@@ -157,12 +157,12 @@ attr_writer :heart_rate
 
 You get the picture!
 
-####Methods
+#### Methods
 
 Methods are how we interact with our Ruby classes. Methods allow us to encapsulate activities specific to the particular class:
 
 {% highlight ruby %}
-#Jedi.rb
+# Jedi.rb
 def duel
   puts "Only a Sith deals in absolutes."
 end
@@ -173,7 +173,7 @@ Methods sometimes perform work on a Ruby classes' attributes. Sometimes a method
 Like an initialize constructor, a method can take parameters. A Ruby method can even have a default parameter. So our *duel* method could have looked like:
 
 {% highlight ruby %}
-#Jedi.rb
+# Jedi.rb
 def duel(opponent = 'Sith')
   puts "You disappoint me " + opponent + "."
   puts "Only a Sith deals in absolutes."
@@ -184,7 +184,7 @@ Coming from static languages, Ruby's minimalistic approach to object oriented pr
 
 Still with me? Great! Let's move on to more advanced topics.
 
-###Inheritance
+### Inheritance
 
 Eventually, you'll reach a situation where different Ruby classes have the same attribute and perform the same basic actions.
 
@@ -208,7 +208,7 @@ end
 
 Darth Vader was once a Padawan until he turned to the Dark Side and became a Sith Lord. As such, you would expect him to have the knowledge and training of a Padawan with the learning of a Dark Knight.
 
-####Polymorphism
+#### Polymorphism
 
 There will be cases where certain methods of the parent class will need to be implemented differently in the inheriting class. For example:
 
@@ -224,13 +224,13 @@ Here, the *inspect* method from the *Sith* class will be used instead of the *in
 
 Rather than exhaustively define every characteristic of every new class, we only need to redefine the differences between the parent class and the child class.
 
-####Does Ruby support multiple inheritance?
+#### Does Ruby support multiple inheritance?
 
 No. Ruby was designed with single inheritance. This was on purpose. Single inheritance encourages you to develop a deeper understanding of your domain model.
 
 That said, there are times when a domain model could benefit from sharing methods that do not require a full blown class. That's where Ruby Mixins come in.
 
-###Mixins
+### Mixins
 
 Mixins are Ruby modules. Modules are a collection of methods. You cannot create an instance of a module. Therefore, modules do not maintain state.
 
@@ -246,7 +246,7 @@ class Padawan
 end
 {% endhighlight %}
 
-####Lightsaber.rb
+#### Lightsaber.rb
 
 Here is the Mixin Lightsaber module:
 
@@ -272,7 +272,7 @@ anakin.lightsaber("Ruby")
 
 Modules are for sharing behavior (methods), while classes are for modeling relationships between objects. Ruby classes can Mixin a module and receive all its methods for free.
 
-####Active Record - Base Class or Mixin?
+#### Active Record - Base Class or Mixin?
 
 We might think Active Record should have been included rather than extended by a subclass. You can use your own parent class at that point right?
 
@@ -292,7 +292,7 @@ It makes sense when you're dealing with legacy code that already has a base clas
 
 You will spend a lot of time wiring up your domain models, but you'll get a mature and flexible data layer - just the type of sprucing up any legacy app could use.
 
-###Try it out for yourself
+### Try it out for yourself
 
 Use either *ruby dojo.rb* to run the example or better yet - run *irb*, then *load 'dojo.rb'* to interact with the Jedi Ruby objects live.
 

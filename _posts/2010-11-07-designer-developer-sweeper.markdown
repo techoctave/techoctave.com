@@ -10,17 +10,17 @@ permalink: /c7/posts/35-designer-developer-sweeper
 
 I'm a Developer. Well, to be fair, I'm probably a little closer to a Sweeper than I am to a Developer. But, I'd definitely not consider myself a full Sweeper. It's complicated, let me explain.
 
-###Designers, Developers and Sweepers
+### Designers, Developers and Sweepers
 
-####Designers
+#### Designers
 
 In software development, a good Designer uses his instinct and experience to create functional and memorable user interfaces. A great designer can translate those user interfaces into semantic XHTML and CSS.
 
-####Developers
+#### Developers
 
 A good Developer can take that XHTML/CSS user interface and bring it to life using tools like jQuery, Ruby on Rails and a data repository like MySQL or MongoDB. A great developer can also [translate the designer's user interface into semantic XHTML and CSS][1].
 
-####Sweepers
+#### Sweepers
 
 Now, a Sweeper is by default great, not just good! He can design a beautiful and memorable user interface. He can translate that interface into semantic XHTML and CSS. Then he can turn right around and bring that interface to life using jQuery, Ruby on Rails (or another framework) and MySQL.
 
@@ -28,13 +28,13 @@ The Sweeper's natural gift of design coupled with a natural talent for developme
 
 The young Sweeper might not see much value in teaming up with a Designer, Developer and other execution roles. The potential for non-collaboration can decrease the Sweeper's chance of realizing his full potential.
 
-###Examples from the Development Community
+### Examples from the Development Community
 
-####Jason Fried
+#### Jason Fried
 
 Jason Fried is, without a doubt, the quintessential Designer. He can design user interfaces. Yet, he is constantly frustrated that he cannot make his designs work on his own.
 
-####David Heinemeier Hansson
+#### David Heinemeier Hansson
 
 The corollary is David Heinemeier Hansson - the creator of Ruby on Rails and the eternal Developer. David loves code and code loves him. But, can he design memorable user interfaces? I don't think he'd even want too because he knows the power of focus and delegation of responsibilities!
 
@@ -42,7 +42,7 @@ The corollary is David Heinemeier Hansson - the creator of Ruby on Rails and the
 
 Matthew Inman is a hardcore Sweeper. Matthew is the one man show behind The Oatmeal. The man designs, creates semantic XHTML/CSS and codes! Classic Sweeper!
 
-###What should you take from this?
+### What should you take from this?
 
 No type is better than the other! If you take nothing else, take that home. Each of our talents lay on a continuum of: *Designer, Sweeper, Developer*.
 

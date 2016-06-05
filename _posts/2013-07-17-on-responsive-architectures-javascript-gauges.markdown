@@ -10,7 +10,7 @@ permalink: /c7/posts/119-on-responsive-architectures-javascript-gauges
 
 Use Responsive Web Design breakpoints and each Gauge's refresh method to build the right [JavaScript Gauge][1] for the right resolution.
 
-###We're Deprecating The AutoResize Feature
+### We're Deprecating The AutoResize Feature
 
 Autoresize was written with the best of intentions. It was early 2010. Barely anyone had heard of the term [Responsive Web Design][2] (RWD) and we were trying to help an early customer with a "very dynamic website" - as it was described. So we wrote autoresize with the goal to calculate our Gauge's DOM container and resize accordingly.
 
@@ -20,7 +20,7 @@ Our Gauge (any component really) can only approximate the best dimensions since 
 
 Worst case is we, inadvertently, deny our developers the needed control of the end user experience. Either result is no longer acceptable for us.
 
-###The Recommendation
+### The Recommendation
 
 Fast forward 3 years later and we've made [leaps][3] and [bounds][4] towards our understanding of RWD. Using the discipline of Responsive Architecture and techniques like Flexible Grids, Flexible Images and CSS3 Media Queries, we can write an application once and it will run in every environment we target. 
 

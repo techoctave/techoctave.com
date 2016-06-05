@@ -10,7 +10,7 @@ permalink: /c7/posts/102-the-only-higher-level-than-javascript-is-god-s-word
 
 I'm so sick and tired of people describing JavaScript as "low-level". If you're not "MOV AL, 61h" all damn day, you're not doing low-level programming; so give it a rest.
 
-###Low-Level Programming Languages
+### Low-Level Programming Languages
 
 For those who studied under [Sams or some other Dummy][1], it's time to lay out some fundamentals.
 
@@ -20,7 +20,7 @@ At this point, we're either talking machine code or assembly language.
 
 Low-level languages can be converted to machine code without using a compiler or interpreter, and the resulting code runs directly on the processor.
 
-####Machine Code
+#### Machine Code
 
 Machine code is the only language a microprocessor can process directly without a previous transformation.
 
@@ -37,7 +37,7 @@ Writing machine code was nutballs because it required memorizing or looking up n
 
 Please tell me you're not doing this for a living?
 
-####Assembly Language
+#### Assembly Language
 
 An [assembly language][2] is a low-level programming language for a computer, microcontroller, or other programmable device, in which each statement corresponds to a single machine code instruction:
 
@@ -86,7 +86,7 @@ But, at the end-of-the-day, the computer only responds to commands like B80000 a
 
 Surely, you're not doing this for a living either?
 
-###High-Level Programming Langauges
+### High-Level Programming Langauges
 
 The latest trend is folks regurgitating phrases like "JavaScript is the lowest level programming, the assembly language of the web." I can't even begin to tell you how incredibly wrong that statement is.
 
@@ -140,7 +140,7 @@ People will continue to parrot [JavaScript is the assembly language for the web]
 
 The only higher level than JavaScript is [God's word][5].
 
-####How did this low-level nonsense get this far?
+#### How did this low-level nonsense get this far?
 
 One of my developer tweeps [@HexstreamSoft][6] summarized the madness best:
 
@@ -166,7 +166,7 @@ It's that simple.
 
 Since JavaScript has these "high-level" abstract constructs, it is a high-level programming language.
 
-####Blame The Wave of Designer Languages
+#### Blame The Wave of Designer Languages
 
 I blame the current wave of [Designer Languages][8] for our temporary bout with insanity.
 

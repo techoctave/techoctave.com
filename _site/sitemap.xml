@@ -937,27 +937,27 @@
   
   <url>
     <loc>https://techoctave.com/404.html</loc>
-    <lastmod>2016-06-04T22:47:30-04:00</lastmod>
+    <lastmod>2016-06-04T23:26:15-04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   
   
-  
-  
-  
-  <url>
-    <loc>https://techoctave.com/c7/</loc>
-    <lastmod>2016-06-04T22:47:30-04:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
   
   
   
   <url>
     <loc>https://techoctave.com/c7/archives/</loc>
-    <lastmod>2016-06-04T22:47:30-04:00</lastmod>
+    <lastmod>2016-06-04T23:26:15-04:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://techoctave.com/c7/</loc>
+    <lastmod>2016-06-04T23:26:15-04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -966,34 +966,7 @@
   
   <url>
     <loc>https://techoctave.com/galileo/</loc>
-    <lastmod>2016-06-04T22:47:30-04:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  
-  
-  <url>
-    <loc>https://techoctave.com/charts/</loc>
-    <lastmod>2016-06-04T22:47:30-04:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  
-  
-  <url>
-    <loc>https://techoctave.com/blogcast/</loc>
-    <lastmod>2016-06-04T22:47:30-04:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  
-  
-  <url>
-    <loc>https://techoctave.com/galileo/faq/</loc>
-    <lastmod>2016-06-04T22:47:30-04:00</lastmod>
+    <lastmod>2016-06-04T23:26:15-04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -1002,7 +975,7 @@
   
   <url>
     <loc>https://techoctave.com/entourage/</loc>
-    <lastmod>2016-06-04T22:47:30-04:00</lastmod>
+    <lastmod>2016-06-04T23:26:15-04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -1010,8 +983,8 @@
   
   
   <url>
-    <loc>https://techoctave.com/gauges/</loc>
-    <lastmod>2016-06-04T22:47:30-04:00</lastmod>
+    <loc>https://techoctave.com/galileo/faq/</loc>
+    <lastmod>2016-06-04T23:26:15-04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -1019,17 +992,8 @@
   
   
   <url>
-    <loc>https://techoctave.com/google-charts-alternative/</loc>
-    <lastmod>2016-06-04T22:47:30-04:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  
-  
-  <url>
-    <loc>https://techoctave.com/google-charts-offline/</loc>
-    <lastmod>2016-06-04T22:47:30-04:00</lastmod>
+    <loc>https://techoctave.com/charts/</loc>
+    <lastmod>2016-06-04T23:26:15-04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -1038,7 +1002,25 @@
   
   <url>
     <loc>https://techoctave.com/</loc>
-    <lastmod>2016-06-04T22:47:30-04:00</lastmod>
+    <lastmod>2016-06-04T23:26:15-04:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://techoctave.com/google-charts-alternative/</loc>
+    <lastmod>2016-06-04T23:26:15-04:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://techoctave.com/google-charts-offline/</loc>
+    <lastmod>2016-06-04T23:26:15-04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -1047,7 +1029,7 @@
   
   <url>
     <loc>https://techoctave.com/learn-coffee-script-like-a-boss/</loc>
-    <lastmod>2016-06-04T22:47:30-04:00</lastmod>
+    <lastmod>2016-06-04T23:26:15-04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -1056,7 +1038,7 @@
   
   <url>
     <loc>https://techoctave.com/marketing-for-geeks/</loc>
-    <lastmod>2016-06-04T22:47:30-04:00</lastmod>
+    <lastmod>2016-06-04T23:26:15-04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -1065,7 +1047,25 @@
   
   <url>
     <loc>https://techoctave.com/simulation/</loc>
-    <lastmod>2016-06-04T22:47:30-04:00</lastmod>
+    <lastmod>2016-06-04T23:26:15-04:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://techoctave.com/blogcast/</loc>
+    <lastmod>2016-06-04T23:26:15-04:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://techoctave.com/gauges/</loc>
+    <lastmod>2016-06-04T23:26:15-04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>

@@ -16,7 +16,7 @@ Inspired by the success of [Fluent NHibernate][1] and what [Martin Fowler calls 
 
 With such change abound, I thought it a great opportunity to layout the fundamentals of XML Mappings. In the process, we'll also delve into a few core development laws I use regardless of platform.
 
-###Elements of Object Oriented Software
+### Elements of Object Oriented Software
 
 Particularly with static languages, I adhere to two core object oriented design principles. These principles were first applied in [Design Patterns:
 Elements of Reusable Object-Oriented Software][4] by The Gang of Four - Erich Gamma, Richard Helm, Ralph Johnson and John Vlissides:
@@ -31,7 +31,7 @@ These design principles form the basis for maintainable NTier'd applications bot
 Let's take a look at a domain model that implements these core object oriented design principles. Let's model a blog Post:
 
 
-####The Post Interface (IPost.cs)
+#### The Post Interface (IPost.cs)
 
 The interface exposes the public properties and methods of a persistent class in your domain:
 
@@ -46,7 +46,7 @@ public interface IPost
 }
 {% endhighlight %}
 
-####The Post Implementation (Post.cs)
+#### The Post Implementation (Post.cs)
 
 The Post class implements the IPost interface. Here, we assume the *Author* class and the *Comment* class are defined elsewhere:
 
@@ -151,17 +151,17 @@ Here, we'll assume the Author class is mapped in Author.hbm.xml and the Comment 
 
 Top to bottom, here are some major key points to take away from this NHibernate class map:
 
-####Lazy Loading
+#### Lazy Loading
 
 There are time when you don't need to fetch the entire object graph. Setting *default-lazy="true"* ensures NHibernate will only request the entity data you requested at a given time. 
 
 Also, if you use lazy loading (which I highly recommend you do), you need to add the virtual keyword to each of your classes' public properties and methods.
 
-####Orphaned Data
+#### Orphaned Data
 
 We can all agree orphaned data isn't a good thing. Set the *cascade* property to "all-delete-orphan" to delete data that would otherwise have been orphaned forever. This issue generally comes to light when handling custom types or lists of custom types.
 
-####Class Properties
+#### Class Properties
 
 System Types - (int, string, bool) are defined using the *property* tag.
 
@@ -170,7 +170,7 @@ Custom Types - (Author) are defined using the *many-to-one* tag.
 Lists of Custom Types - (List of Comments) are defined using the *bag* tag with a *one-to-many* relationship to the Custom Type (Comment). Here, each instance of a Comment has an associated unique Post instance. Therefore, PostId needs to be a public property on the Comment class. Then NHibernate an properly associate each Comment to the correct Post.
 
 
-###Take away
+### Take away
 
 Today we covered a modern approach to object oriented programming. We also covered how to flush out a domain model and how to map its custom types in NHibernate.
 

@@ -8,7 +8,7 @@ permalink: c7/posts/4-rails-sub-uri-403-forbidden-errors-when-deploying-with-pas
 
 Update: Check out my tutorial on [How to host a Rails app with Phusion Passenger for Nginx][1].
 
-###Beware of Symlink and 403 Forbidden Errors
+### Beware of Symlink and 403 Forbidden Errors
 In my last post, I sold a client on using [Passenger for Nginx][2] and predicted Nginx will do for Web server deployment what jQuery did for JavaScript development.
 
 Not too long after, the client's developer calls me freaking out! He'd been working for 72 hours (non-stop) trying to get the client's blog deployed to a sub URI of the client's domain and couldn't. Everything he did gave him a nasty 403 Forbidden error. I really felt for the guy. I remember those days!

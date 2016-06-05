@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+      <title>JavaScript Function to Ease a Needle Around a Circle</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta http-equiv="content-language" content="en-gb" />
+      
+      <meta name="description" content="Raphael makes rotating a needle around a speedometer or fuel gauge intuitive. But, what if you wanted a smooth easing of the needle from the gauge’s starting vector to its ending vector. The first thing that should come to mind is acceleration and what you are really searching for is Circular Easing. You may need to modify the code to fit your specific needs, but here is the JavaScript code to implement Circular Easing: //...">
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10">
+      <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" type="text/css" href="/css/main.css" />
+      <link rel="stylesheet" type="text/css" href="/css/syntax.css" />
+      <link href="atom.xml" type="application/atom+xml" rel="alternate" title="Site ATOM Feed">
+  </head>
+
+  <body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
+    <main>
+      <section id="single-wrap">
+  <article class="single-content" itemscope itemtype="//schema.org/BlogPosting">
+	
+    <div class="feat">
+      <h5 class="page-date">
+        <time datetime="2011-05-15T06:25:30-04:00" itemprop="datePublished">
+          15 May 2011
+        </time>
+      </h5>
+    </div>
+
+    <h1 class="page-title" itemprop="name headline">JavaScript Function to Ease a Needle Around a Circle</h1>
+    
+    <h5 class="page-author">Handwritten by TVD</h5>
+
+    <div itemprop="articleBody">
+      <p><img src="/c7/static/Circle_center_a_b_radius_r.svg" alt="Ease a Needle around a Circle with this JavaScript Function" width="100%" /></p>
+
+<p><a href="http://raphaeljs.com/">Raphael</a> makes <a href="http://techoctave.com/gauges">rotating a needle around a speedometer or fuel gauge</a> intuitive. But, what if you wanted a smooth easing of the needle from the gauge’s starting vector to its ending vector.</p>
+
+<p>The first thing that should come to mind is acceleration and what you are really searching for is Circular Easing.</p>
+
+<p>You may need to modify the code to fit your specific needs, but here is the JavaScript code to implement Circular Easing:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Circular Easing: sqrt(1-t^2)</span>
+<span class="c1">// t: current time, b: beginning value</span>
+<span class="c1">// c: change in position, d: duration</span>
+<span class="nx">easeInCirc</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">t</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span><span class="p">,</span> <span class="nx">d</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="o">-</span><span class="nx">c</span> <span class="o">*</span> <span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="nx">t</span><span class="o">/=</span><span class="nx">d</span><span class="p">)</span><span class="o">*</span><span class="nx">t</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Here, the output is in radians. So, for my <a href="https://techoctave.com/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css">jquery dashboard speedometer gauge</a>, that means I need a way to map each radian to a degree on my gauge, which will in turn map to a miles-per-hour (mph) on the texture itself.</p>
+
+<p>Here is my mapping the needle texture to each easing point:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">Speedometer</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">mph2deg</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="p">((</span><span class="k">this</span><span class="p">.</span><span class="nx">mph</span> <span class="o">-</span> <span class="mi">50</span><span class="p">)</span> <span class="o">*</span> <span class="mf">2.62</span><span class="p">)</span> <span class="o">+</span> 
+   <span class="p">(((</span><span class="k">this</span><span class="p">.</span><span class="nx">mph</span> <span class="o">-</span> <span class="mi">50</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1.8999</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.022900763</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>The result is a degree value that directly corresponds to the needle’s position on my <a href="https://techoctave.com/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css">speedometer gauge</a>. This creates the degree that I need to pass to Raphael’s rotation methods.</p>
+
+<p>The exact Euclidean translation is a bit involved here and very much specific to the gauge texture you’re working with. Yet the results are a familiar part of our everyday lives - informational intelligence.</p>
+
+<p>Each needle instance I create inherits the rotate function from the Raphael prototype. So the actual image processing is handled by the Raphael core like so:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">Gauge</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">RotateNeedle</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">deg</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">this</span><span class="p">.</span><span class="nx">needle</span><span class="p">.</span><span class="nx">rotate</span><span class="p">(</span><span class="nx">deg</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">cX</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">cY</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>TechOctave’s <a href="http://techoctave.com/gauges">JavaScript Gauge Suite</a> really is a unique partnership between business and open source.</p>
+
+<p>If Gauges interest you or you are a Business Intelligence junkie, feel free to check the project out - it’s open source! A portion of each sale goes toward maintaining the project and extending it for the benefit of the development community. Happy Coding and Take Care!</p>
+
+
+    </div>
+    
+    <div id="share" class="feat">      
+      <p>discuss on twitter</p>
+      
+      <a href="//twitter.com/share" class="popup">
+        <span class="icon-twitter"></span>
+      </a>
+      
+      <div class="line"></div>
+      
+      <br/>
+      
+      <p>every day thousands of developers use our charts & gauges to get the job done right</p>
+      
+      <img src="/images/blog-header.png" usemap="#map" />
+      
+      <map name="map">
+        <area shape="rect" coords="4, 4, 247, 276" href="/charts/" alt="JavaScript Charts" target="_blank"/>
+        <area shape="rect" coords="317, 3, 582, 277" href="/gauges/" alt="JavaScript Gauges" target="_blank"/>
+        <area shape="rect" coords="652, 4, 906, 277" href="/simulation/" alt="JavaScript Flight Gauges" target="_blank"/>  
+      </map>
+      
+      <br><br><br>
+      <p><a href="/c7/" style="text-decoration: none;">← return to all articles</a></p>
+    </div>
+    
+  </article>
+</section>
+
+
+
+    </main>
+
+    <footer>
+        <p style="font-size: 80%;">TechOctave, The Lion, "Beautiful & Inspired" are Registered Trademarks of TechOctave, LLC.</p>
+        <p style="font-size: 65%;">HANDCRAFTED WITH <abbr style="color: #FF2400; font-variant: none" title="love">❤</abbr> IN COLUMBUS OHIO</p>
+    </footer>
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/imageMapResizer.js"></script>
+    <script src="/js/moment.js"></script>
+    <script>
+    jQuery(document).ready(function($) {
+      	$("map").imageMapResize();
+        
+        var date = moment().format('DD MMMM YYYY');
+        $(".date").html(date);
+    });
+    </script>
+    
+    
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-17961498-1', 'techoctave.com');
+        ga('send', 'pageview');
+      </script>
+    
+
+  </body>
+</html>

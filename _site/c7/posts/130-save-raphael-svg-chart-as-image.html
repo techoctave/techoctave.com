@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+      <title>Save Raphael SVG Chart As Image</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta http-equiv="content-language" content="en-gb" />
+      
+      <meta name="description" content="We work with the best developers in the craft. They push the envelope. They make the right decisions. Do the right work and ship. In that environment, a lot of great minds ask the same great questions. One of those questions often sounds like this, “How do we save our SVG chart to a PNG image?” Saving SVG to PNG image turns out to be a very popular question. Though, not surprisingly, because the browser...">
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10">
+      <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" type="text/css" href="/css/main.css" />
+      <link rel="stylesheet" type="text/css" href="/css/syntax.css" />
+      <link href="atom.xml" type="application/atom+xml" rel="alternate" title="Site ATOM Feed">
+  </head>
+
+  <body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
+    <main>
+      <section id="single-wrap">
+  <article class="single-content" itemscope itemtype="//schema.org/BlogPosting">
+	
+    <div class="feat">
+      <h5 class="page-date">
+        <time datetime="2013-11-12T07:33:24-05:00" itemprop="datePublished">
+          12 November 2013
+        </time>
+      </h5>
+    </div>
+
+    <h1 class="page-title" itemprop="name headline">Save Raphael SVG Chart As Image</h1>
+    
+    <h5 class="page-author">Handwritten by TVD</h5>
+
+    <div itemprop="articleBody">
+      <p><img src="https://techoctave.com/c7/static/svg-to-png.png" alt="Save Raphael SVG As Image" /></p>
+
+<p>We work with the best developers in the craft. They push the envelope. They make the right decisions. Do the right work and <a href="https://techoctave.com/posts/79-never-save-anything-for-the-swim-back">ship</a>.</p>
+
+<p>In that environment, a lot of great minds ask the same great questions. One of those questions often sounds like this, “How do we save our SVG chart to a PNG image?”</p>
+
+<p>Saving SVG to PNG image turns out to be a <a href="http://stackoverflow.com/questions/14631408/save-svg-html5-to-png-or-image">very</a> <a href="http://stackoverflow.com/questions/4086703/convert-raphael-svg-to-image-png-etc-client-side">popular</a> <a href="http://stackoverflow.com/questions/15981394/save-svgin-div-to-png-or-convert-to-png-raphael-js">question</a>. Though, not surprisingly, because the browser is involved, it is not an <a href="http://stackoverflow.com/questions/17454971/export-svg-to-png-with-image-inside-svg">easy</a> on to <a href="http://stackoverflow.com/questions/3975499/convert-svg-to-image-jpeg-png-etc-in-the-browser">answer</a>.</p>
+
+<h3 id="save-raphael-svg-to-image-client-side">Save Raphael SVG To Image Client Side</h3>
+
+<p>First, you’ll have to have an HTML5 element to hang your SVG on:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"sales"</span><span class="nt">&gt;&lt;/div&gt;</span></code></pre></figure>
+
+<p>and a HTML5 button to trigger the download event:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"createImage"</span><span class="nt">&gt;</span>Create Image *.png<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+
+<p>Next, you’ll have to have an SVG graphic to load into the HTML5 element. Here we’ll use our <a href="http://techoctave.com/gauges">JavaScript Gauges</a>:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">sales</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Gauge</span><span class="p">(</span><span class="s2">"sales"</span><span class="p">);</span>
+<span class="p">};</span></code></pre></figure>
+
+<p>At this point, you will have an SVG object loaded into your HTML5  node. Then follow this algorithm to setup the SVG image download process.</p>
+
+<p>Save SVG To Image Algorithm:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="mi">1</span><span class="p">.</span> <span class="nx">Get</span> <span class="nx">the</span> <span class="nx">svg</span> <span class="nx">instance</span>
+
+<span class="mi">2</span><span class="p">.</span> <span class="nx">Create</span> <span class="nx">the</span> <span class="nx">canvas</span> <span class="nx">element</span>
+
+<span class="mi">3</span><span class="p">.</span> <span class="nx">Load</span> <span class="nx">the</span> <span class="nx">canvas</span> <span class="nx">element</span> <span class="kd">with</span> <span class="nx">our</span> <span class="nx">svg</span> <span class="nx">instance</span>
+
+<span class="mi">4</span><span class="p">.</span> <span class="nx">Save</span> <span class="nx">svg</span> <span class="nx">to</span> <span class="nx">png</span>
+
+<span class="mi">5</span><span class="p">.</span> <span class="nx">Clear</span> <span class="nx">the</span> <span class="nx">canvas</span></code></pre></figure>
+
+<p>Here’s the SVG To Image Algorithm in Code:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">//Create PNG Image</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"createImage"</span><span class="p">).</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+	<span class="c1">//Get the svg</span>
+	<span class="kd">var</span> <span class="nx">svg</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"sales"</span><span class="p">).</span><span class="nx">innerHTML</span><span class="p">;</span>
+		
+	<span class="c1">//Create the canvas element</span>
+	<span class="kd">var</span> <span class="nx">canvas</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'canvas'</span><span class="p">);</span>
+	<span class="nx">canvas</span><span class="p">.</span><span class="nx">id</span> <span class="o">=</span> <span class="s2">"canvas"</span><span class="p">;</span>
+	<span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">canvas</span><span class="p">);</span>
+		
+	<span class="c1">//Load the canvas element with our svg</span>
+	<span class="nx">canvg</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'canvas'</span><span class="p">),</span> <span class="nx">svg</span><span class="p">);</span>
+		
+	<span class="c1">//Save the svg to png</span>
+	<span class="nx">Canvas2Image</span><span class="p">.</span><span class="nx">saveAsPNG</span><span class="p">(</span><span class="nx">canvas</span><span class="p">);</span>
+		
+	<span class="c1">//Clear the canvas</span>
+	<span class="nx">canvas</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">width</span><span class="p">;</span>
+<span class="p">};</span></code></pre></figure>
+
+<p>Step 3 uses the <a href="https://code.google.com/p/canvg/">Canvg</a> library. Canvg is a SVG parser and renderer. It takes a URL to a SVG file or the text of an SVG file, parses it in JavaScript, and renders the result on a Canvas element.</p>
+
+<p>Step 4 uses the <a href="http://www.nihilogic.dk/labs/canvas2image/">Canvas2Image</a> library. This is a small library that lets you easily save a HTML5 canvas element as an imagefile.</p>
+
+<h4 id="pros">Pros</h4>
+
+<p>The pros are you get a 100% client-side solution to saving Raphael SVG to PNG image. Which means less server load and more front-end awesome.</p>
+
+<p>That’s the good news…</p>
+
+<h4 id="cons">Cons</h4>
+
+<p>The bad news is the image is downloaded without a file extension. Also, the limitations with browser mime type control, you cannot give the image a custom file name.</p>
+
+<p>If you’re paying attention, you know those are pretty BIG cons.</p>
+
+<h3 id="save-raphael-svg-to-image-server-side">Save Raphael SVG To Image Server Side</h3>
+
+<p>When you want to set a customized filename for the generated PNG file, you have to send the data:uri string from the canvas.toDataURL() element onto server side using Ajax. Then rewrite the response headers and send back the browser. Here’s a good article summarizing the <a href="http://www.intridea.com/blog/2013/1/9/downloadable-svg-in-png-format">server-side</a> technique using CoffeeScript and Ruy.</p>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>Using client-side only is not an option yet because the browser technology just isn’t there. What you’ll want to do is combine both client-side and server-side techniques to get the maximum customization.</p>
+
+<p>Something like…</p>
+
+<p>Save SVG To Image Algorithm:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="mi">1</span><span class="p">.</span> <span class="nx">Get</span> <span class="nx">the</span> <span class="nx">svg</span> <span class="nx">instance</span>
+
+<span class="mi">2</span><span class="p">.</span> <span class="nx">Create</span> <span class="nx">the</span> <span class="nx">canvas</span> <span class="nx">element</span>
+
+<span class="mi">3</span><span class="p">.</span> <span class="nx">Load</span> <span class="nx">the</span> <span class="nx">canvas</span> <span class="nx">element</span> <span class="kd">with</span> <span class="nx">our</span> <span class="nx">svg</span> <span class="nx">instance</span>
+
+<span class="mi">4</span><span class="p">.</span> <span class="nx">Ajax</span> <span class="nx">the</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">toDataURL</span><span class="p">()</span> <span class="nx">results</span> <span class="nx">to</span> <span class="nx">your</span> <span class="nx">server</span>
+
+<span class="mi">5</span><span class="p">.</span> <span class="nx">Rewrite</span> <span class="nx">the</span> <span class="nx">response</span> <span class="nx">headers</span> <span class="nx">and</span> <span class="nx">send</span> <span class="nx">back</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">browser</span></code></pre></figure>
+
+<p>Using Ruby and Rails would look something similar to:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="err">#</span> <span class="nx">svg_controller</span><span class="p">.</span><span class="nx">rb</span>
+<span class="kr">class</span> <span class="nx">SvgController</span> <span class="o">&lt;</span> <span class="nx">ApplicationController</span>
+  <span class="nx">require</span> <span class="s2">"base64"</span>
+  
+  <span class="nx">def</span> <span class="nx">show</span>
+    <span class="err">@</span><span class="nx">svg</span> <span class="o">=</span> <span class="nx">Svg</span><span class="p">.</span><span class="nx">where</span><span class="p">(</span><span class="nx">id</span><span class="err">:</span> <span class="nx">params</span><span class="p">[</span><span class="err">:</span><span class="nx">id</span><span class="p">]).</span><span class="nx">first</span>
+    <span class="nx">respond_to</span> <span class="k">do</span> <span class="o">|</span><span class="nx">format</span><span class="o">|</span>
+      <span class="nx">format</span><span class="p">.</span><span class="nx">png</span> <span class="p">{</span>
+        <span class="nx">headers</span><span class="p">[</span><span class="s1">'Content-type'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'image/png'</span>
+        <span class="nx">headers</span><span class="p">[</span><span class="s2">"Content-Disposition"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"attachment; filename=\"chart.png\""</span>
+        <span class="err">@</span><span class="nx">result</span> <span class="o">=</span> <span class="nx">Base64</span><span class="p">.</span><span class="nx">decode64</span><span class="p">(</span><span class="err">@</span><span class="nx">svg</span><span class="p">.</span><span class="nx">content</span><span class="p">.</span><span class="nx">gsub</span><span class="p">(</span><span class="s1">'data:image/png;base64,'</span><span class="p">,</span> <span class="s1">''</span><span class="p">))</span>
+        <span class="nl">render</span> <span class="p">:</span><span class="nx">text</span> <span class="o">=&gt;</span> <span class="err">@</span><span class="nx">result</span>
+      <span class="p">}</span>
+    <span class="nx">end</span>
+  <span class="nx">end</span>
+<span class="nx">end</span></code></pre></figure>
+
+<p>That will get you the customization you need.Step 5 is an implementation detail. Use Ruby, J2EE, .NET, Python, use whatever you need to get the job done and you will have your victory.</p>
+
+<p>Happy Coding and Godspeed!</p>
+
+
+    </div>
+    
+    <div id="share" class="feat">      
+      <p>discuss on twitter</p>
+      
+      <a href="//twitter.com/share" class="popup">
+        <span class="icon-twitter"></span>
+      </a>
+      
+      <div class="line"></div>
+      
+      <br/>
+      
+      <p>every day thousands of developers use our charts & gauges to get the job done right</p>
+      
+      <img src="/images/blog-header.png" usemap="#map" />
+      
+      <map name="map">
+        <area shape="rect" coords="4, 4, 247, 276" href="/charts/" alt="JavaScript Charts" target="_blank"/>
+        <area shape="rect" coords="317, 3, 582, 277" href="/gauges/" alt="JavaScript Gauges" target="_blank"/>
+        <area shape="rect" coords="652, 4, 906, 277" href="/simulation/" alt="JavaScript Flight Gauges" target="_blank"/>  
+      </map>
+      
+      <br><br><br>
+      <p><a href="/c7/" style="text-decoration: none;">← return to all articles</a></p>
+    </div>
+    
+  </article>
+</section>
+
+
+
+    </main>
+
+    <footer>
+        <p style="font-size: 80%;">TechOctave, The Lion, "Beautiful & Inspired" are Registered Trademarks of TechOctave, LLC.</p>
+        <p style="font-size: 65%;">HANDCRAFTED WITH <abbr style="color: #FF2400; font-variant: none" title="love">❤</abbr> IN COLUMBUS OHIO</p>
+    </footer>
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/imageMapResizer.js"></script>
+    <script src="/js/moment.js"></script>
+    <script>
+    jQuery(document).ready(function($) {
+      	$("map").imageMapResize();
+        
+        var date = moment().format('DD MMMM YYYY');
+        $(".date").html(date);
+    });
+    </script>
+    
+    
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-17961498-1', 'techoctave.com');
+        ga('send', 'pageview');
+      </script>
+    
+
+  </body>
+</html>

@@ -49,13 +49,13 @@ Why? It doesn't work because the XML response has a namespace separating the key
 http://halo.com/schemas/custom/users/GetUser_V1
 {% endhighlight %}
 
-###So what are your options:
+### So what are your options:
 
 You really only have two options when confronted with this challenge. The first is to use XMLNamespaceManager. I don't care for that route as you'll see below.
 
 The final option is to strip the Namespaces using Regex. I prefer this route and you'll see why.
 
-####Use XmlNamespaceManager
+#### Use XmlNamespaceManager
 
 When using XPath in .NET (via SelectNodes or SelectSingleNode) on XML with namespaces you need to:
 
@@ -91,7 +91,7 @@ The XPath implementation in SelectNodes and SelectSingleNode should really be mo
 
     
 
-####Strip The Namespaces Using Regex
+#### Strip The Namespaces Using Regex
 
 Regex is like violence - if it doesn’t solve your problems, you are not using enough of it. Generally, I don't condone the use of  [unnecessary Regex][1]. 
 

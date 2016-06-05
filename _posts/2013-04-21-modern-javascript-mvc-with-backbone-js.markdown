@@ -12,11 +12,11 @@ Modern JavaScript and HTML5 applications depend on a consistent RESTful JSON API
 
 Still, even in those situations, Backbone.js can be a useful tool in taming your JavaScript. Today walk through a simple example of how to connect the dots between Backbone's Model, Collection and View.
 
-###The Backbone Basics
+### The Backbone Basics
 
 A basic single page application boils down to three distinct parts: Model, Collection and View.
 
-####The Model
+#### The Model
 
 The Model defines your class properties and methods. Here we define a class called Knot:
 
@@ -34,7 +34,7 @@ var Knot = Backbone.Model.extend({
 Whenever a new instance of the Knot class is created, we also inherit an instance of our [JavaScript Gauges][1] using Underscore's extend method.
 
 
-####The Collection
+#### The Collection
 
 The Collection defines a list of class instances. Here we define a Collection called Knots:
 
@@ -58,7 +58,7 @@ Here, the data source is deeply nested. You can use the parse method to intercep
 
 Finally, we immediately execute the collection to get it ready for use in our single page application (SPA).
 
-####The View
+#### The View
 
 The View updates the User Interface (UI) with the data fetched from the collection:
 
@@ -92,7 +92,7 @@ Then we make the actual call to the Collection's fetch method to retrieve the da
 
 Finally, in our View's render method we update each Knot Gauge with the corresponding value passed back from the server call.
 
-####Putting It All Together
+#### Putting It All Together
 
 Here's the final backbone example end-to-end:
 

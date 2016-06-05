@@ -19,7 +19,7 @@ Reddit's move to hire a CEO from the software development ranks was a bold state
 
 I can just imagine every fresh-pressed MBA within earshot must've vied for the title. But Reddit applied what the late [Steve Jobs][4] knew so well - innovation is the playground of engineers.
 
-###Congratulations and go get 'em!
+### Congratulations and go get 'em!
 
 Congratulations [Yishan][5] on starting your new job as CEO. Know that you've been practicing - for many years - all the prerequisites needed to run a great software company.
 

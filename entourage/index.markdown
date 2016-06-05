@@ -7,7 +7,7 @@ permalink: /entourage/
 
 <h4 style="font-family: Arial; font-size: 120%;">track it.</h4>
 
-<h1 style="font-family: Arial; font-size: 500%; letter-spacing: -2px; font-weight: 500; line-height: 1em;">ent<span style="color: #CC0000;">★</span>urage.js</h1>
+<h1 style="font-family: Arial; font-size: 500%; letter-spacing: -2px; font-weight: 500; line-height: 1em;">ent<span style="color: # CC0000;">★</span>urage.js</h1>
 
 <h4 style="font-family: Arial; font-size: 120%;">Automatic Download Tracking for Asynchronous Google Analytics</h4>
 
@@ -29,6 +29,6 @@ permalink: /entourage/
 
 <footer>
     <p style="font-size: 80%;">TechOctave, The Lion, "Beautiful & Inspired" are Registered Trademarks of TechOctave, LLC.</p>
-    <p style="font-size: 65%;">HANDCRAFTED WITH <abbr style="color: #FF2400; font-variant: none" title="love">❤</abbr> IN COLUMBUS OHIO</p>
+    <p style="font-size: 65%;">HANDCRAFTED WITH <abbr style="color: # FF2400; font-variant: none" title="love">❤</abbr> IN COLUMBUS OHIO</p>
 </footer>
 

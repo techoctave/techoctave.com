@@ -11,7 +11,7 @@ He's at that point where he is wondering how to incorporate the right Google ser
 
 Now you're probably thinking,"Why not get as much Google services as possible?" Well, the truth is, if you are just starting and you want to organically grow, you more than likely do not need them all. I quickly advised him not to go bananas signing up for every Google service.
 
-###My Recommendations
+### My Recommendations
 As you begin to incorporate techniques to enhance your sites usability and visibility, there are really three main things that you'll definitely want to consider:
 
 ![The Three Most Important Google Services][1]
@@ -34,7 +34,7 @@ However, this method may not be the optimal route to take as you may find that a
 
 Instead of submitting your site to Google, you may want to employ another technique. One way to improve your site ranking is to focus more on linking from relevant sources back to your site. For example, write interesting and relevant articles on reputable sites that link back to you. Maybe even create an engaging [YouTube video][2]. Or better yet, contribute some awesome Open Source product. Do remember to link back to yourself.
 
-###Why is this method useful?
+### Why is this method useful?
 The more people you have linking to your site from reputable sources, the more you demonstrate to Google that your content is valuable and useful. Hence, Google will believe that your site is worthy of not just being indexed, but highly ranked.
 
 So, think again about submitting your site to Google. Google can certainly find you through other means that will prove valuable to your site's visibility.

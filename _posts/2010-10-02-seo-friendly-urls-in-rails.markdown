@@ -10,7 +10,7 @@ Yesterday, a client asked about the potential for SEO friendly URLs for his web 
 
 I always laugh when I hear these things. You see, with the simplicity and power of Rails, SEO friendly URLs are not only possible, they are expected!
 
-###Sweet Google Slugs
+### Sweet Google Slugs
 Here's a quick run down of the process. Take for example a blog post called *SEO Friendly URLs in Rails*.
 
 ####config/routes.rb

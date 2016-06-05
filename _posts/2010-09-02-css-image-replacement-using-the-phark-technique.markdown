@@ -12,7 +12,7 @@ Of course context is King, but for most of your image replacement needs, Phark w
 
 Previously, I showed you how to [automatically submit your blog's Sitemap to Google][1]. Having a sitemap might help Google find content it might not have found otherwise. The Phark image replacement technique also helps Google find content it might not have found.
 
-###Phark Image Replacement Technique
+### Phark Image Replacement Technique
 
 But more importantly, the Phark technique  will help readers with seeing difficulties better enjoy your content because the screenreader will read expressive text instead of hitting a boring image tag.
 

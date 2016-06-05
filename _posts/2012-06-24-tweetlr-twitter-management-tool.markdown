@@ -14,7 +14,7 @@ I'm also not going to tell you it was designed from ancient Inca plans, blessed 
 
 What I am going to tell you is Tweetlr was developed by highly trained, ex-CIA, Buddhist Ninjas under deep cover in Columbus, OH. And [At dawn...we ride][2].
 
-###The Twitter Management Tool We Trust
+### The Twitter Management Tool We Trust
 
 A really good developer once told me, "The only thing guaranteed in life is good beer and bad software." I bought him a Heineken and told him, "Good luck with that." A few months later, I founded TechOctave.
 
@@ -30,7 +30,7 @@ We've weaved together beauty with compliance and a first-class experience that w
 
 We trust Tweetlr everyday to help us do just that. And we're betting that you will too.
 
-###Opinionated Software is Usable Software
+### Opinionated Software is Usable Software
 
 I joke about Buddhists and Ninjas and High-Priestesses - You do know I was joking right? But, believe it or not, Tweetlr was inspired by the beauty and rolling enclaves of the real [Machu Picchu][4]:
 
@@ -52,7 +52,7 @@ Behind that allegory is the fundamental DNA for what grew to become our beloved 
 
 To that end we created a Twitter management tool that enhances your social media work on Twitter, but does it in style.
 
-###Tweetlr Isn't for Everyone
+### Tweetlr Isn't for Everyone
 
 It takes much thoughtfulness and restraint to decide what goes into software and what does not. To be frank, Tweetlr is defined by what it doesn't do just as much as by what it does.
 

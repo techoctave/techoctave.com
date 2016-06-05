@@ -12,7 +12,7 @@ I tend to [favor object composition][1] over class inheritance. This is especial
 
 Organizations have hierarchy. Yet, that "coming together" is typically more functional than hierarchical. One can say teams are "composed" of distinct functional specialties (Designer, Developer, UX, etc.) and so a modern composite approach to object oriented programming lends more naturally to the way work actually gets done.
 
-###Isn't This Article About JavaScript Inheritance?
+### Isn't This Article About JavaScript Inheritance?
 
 Yes.
 
@@ -20,7 +20,7 @@ But, I wanted you to understand class inheritance is only one approach to object
 
 For example, I find class inheritance particular useful when [modeling a distinct real world object][2]. On the flip side, I find object composition works great when modeling Line of Business applications and other games.
 
-###Modeling Buttons, Bases and Shiny Things
+### Modeling Buttons, Bases and Shiny Things
 
 Take the power panel for example:
 
@@ -72,9 +72,9 @@ var base = new Base("123456");
 
 But, that wouldn't be too useful. And that's fine because it's not meant to be too useful. The base class is just that, a base class (with base functionality) from which most other classes will inherit from. Here, the base's primary function is to simply drawTerminal because everyone will need a Terminal in order to connect to the Power Panel.
 
-###JavaScript Inheritance And ALL THE THINGS
+### JavaScript Inheritance And ALL THE THINGS
 
-####Getting Started with JavaScript Inheritance
+#### Getting Started with JavaScript Inheritance
 
 Things really get interesting when you want to create a Light that inherits from the base class. But, what's the best way to accomplish classical inheritance in a prototypical world?
 
@@ -132,7 +132,7 @@ This is pretty powerful stuff! You have things you'd never dream of in JavaScrip
 
 All the things that make your code more maintainable.
 
-####JavaScript Multiple Inheritance
+#### JavaScript Multiple Inheritance
 
 If you ever need to, this technique also opens the door for Multiple Inheritance in JavaScript. Consider the following:
 
@@ -153,7 +153,7 @@ var Light = (function(_super1, _super2) {
 
 JavaScript child classes can inherit from as many parent classes as needed. It goes without saying to be judicious when inheriting from multiple classes. But, if you ever need to, JavaScript is more than flexible enough to accommodate that need.
 
-####CoffeeScript: In Too Deep
+#### CoffeeScript: In Too Deep
 
 Still with me? Excellent!
 
@@ -234,7 +234,7 @@ This time when we count we get the four expected methods: drawTerminal, getId, s
 
 This cuts down on the potential for much code duplication. Also, it's simply pleasant to use. You still call the parent constructor using the _super.call route. But, this time you can access the parent methods within the current scope. Lastly, instances of the Light class magically have access to those parent methods as well.
 
-###JavaScript Inheritance: Final Thoughts
+### JavaScript Inheritance: Final Thoughts
 
 JavaScript is a [beautiful and inspiring][5] language. It's a first class language with all the expressiveness of a functional language and the organization of an object oriented language. It is that dual nature that makes her so intriguing and yet, undeniable.
 

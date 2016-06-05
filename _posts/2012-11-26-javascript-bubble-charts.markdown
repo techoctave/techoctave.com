@@ -18,9 +18,9 @@ Look. For us it's simple. We believe our JavaScript charts do something no one e
 
 To that end, we build products that inspire you to your better end and offer support that helps you get there. Every enhancement. Every release. Every time.
 
-###Release Notes
+### Release Notes
 
-####Enhancements
+#### Enhancements
 
 {% highlight ruby %}
 - Created BubbleChart component
@@ -36,7 +36,7 @@ To that end, we build products that inspire you to your better end and offer sup
 - Implemented LineChart data point dots
 {% endhighlight %}
 
-####API Improvements
+#### API Improvements
 
 {% highlight ruby %}
 - Raphael.js: Upgraded to version 2.1.0
@@ -48,7 +48,7 @@ To that end, we build products that inspire you to your better end and offer sup
 - Added opacity properties to data points and chart objects
 {% endhighlight %}
 
-###Bubble Charts
+### Bubble Charts
 
 Bubble charts are used to visualize a data set with 2 to 4 dimensions. The first two dimensions are visualized as coordinates, the 3rd as color and the 4th as size:
 
@@ -87,7 +87,7 @@ Next, each vehicle is grouped by brand using the third dimension - Color. The Ac
 
 The fourth and last dimension is represented by the Cost of each vehicle. As the cost of the vehicle increases, so too does the size of its circle. The size of the circle gives the user a quick comparison of how much more or less costly a vehicle is to another vehicle in the sample.
 
-###Looking Ahead
+### Looking Ahead
 
 Put together all of these dimensions and you get a succinct way to tell a compelling story about your business. Done well and your executives and leaders can make decisions that were seemingly impossible before.
 

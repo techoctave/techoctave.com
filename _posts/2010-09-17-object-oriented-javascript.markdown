@@ -9,13 +9,13 @@ permalink: /c7/posts/20-object-oriented-javascript
 In search of guidance many developers ask on StackOverflow, *How do I write Object Oriented JavaScript?* Each desperately seeking guidance on how to structure their code to take advantage of a more modular, reusable and maintainable code base.
 
 
-###Plain Old JavaScript Objects (POJOs)
+### Plain Old JavaScript Objects (POJOs)
 
 One of my consulting areas is advising clients on the use of JavaScript and JavaScript Frameworks like jQuery. Recently, I released a set of [JavaScript Dashboard Gauges][1] for use in charting and business intelligence applications.
 
 Today, I'm going to talk about Object Oriented JavaScript and help you think about ways to move away from the procedural mess many good developers find themselves in. We'll focus on building a Plain Old JavaScript Object (POJO) and examine the inherent Object Oriented principles.
 
-###Speedometer Class
+### Speedometer Class
 
 We are going to use the [Prototype Design Pattern][2]. Take for example a Speedometer. A Speedometer is derived from a Gauge. So, we say the speedometer inherits functionality from the Gauge. The following code would be in a single JavaScript file:
 
@@ -61,7 +61,7 @@ Speedometer.prototype.Accelerate = function() {
 
 The accelerate method is only within the scope of the Speedometer class. So only instances of a Speedometer object or children of the Speedometer class have access to the method.
 
-###Using the Speedomter Class
+### Using the Speedomter Class
 
 Well, we so deliciously put together our Speedometer class. Now, it's [time to have some fun][3] and use an instance of the Speedometer object. Let's take this Teslar Roadster for a spin:
 

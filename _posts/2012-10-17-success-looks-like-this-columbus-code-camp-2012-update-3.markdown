@@ -10,7 +10,7 @@ permalink: /c7/posts/91-success-looks-like-this-columbus-code-camp-2012-update-3
 
 It's said the only true measure of success is results. I've spent my life believing that. That no matter the circumstance or deed, intent and results are all that matter.
 
-###Defining Success
+### Defining Success
 [Columbus Code Camp 2012][1] was by all measurements a success. We could mark that success with statistics. 200 Attendees. 25 Speakers. 5 Tracks. Everything doubled.
 
 But when it comes down to it, our success was more than figures, more than speculation buried between statistics. Our success was measured by the amount of value we delivered to the Columbus development community that day - that is the true success.
@@ -23,7 +23,7 @@ Truly, what better measure of success than what attendees had to say about the e
 
 Marked with great food - Thanks <a href="http://www.elarepazolatingrill.com/">El Arepazo</a> - and great company, Columbus Code Camp 2012 was one helluva event. Personally, I can't wait until next year...
 
-###Looking Ahead
+### Looking Ahead
 
 Columbus Code Camp 2013 will again make inroads in bringing Central Ohio's development community under a single roof. For 2013, we're looking to expand again.
 

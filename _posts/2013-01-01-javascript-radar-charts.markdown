@@ -30,7 +30,7 @@ So we set out to build a Radar Chart built on the [Six Core Principles][2] we es
 
 I believed then as I believe now that these principles are central to developer happiness. They inform what we do each and every day.
 
-###What are Radar Charts?
+### What are Radar Charts?
 
 Radar charts plot the values of each category along a separate axis starting from the center of the chart and ending at the outer ring. In a Radar chart, a point close to the center indicates a low value and a point near the perimeter indicates a high value.
 
@@ -40,13 +40,13 @@ Take a look at the radar chart above. This is a typical radar chart - sometimes 
 
 If it's done well, it clearly defines full performance in each category. A well executed radar chart is a good way to answer the question, "How are we doing?"
 
-###When should you use a Radar Chart?
+### When should you use a Radar Chart?
 
 Use it to identify gaps among both current organizational KPI and ideal organizational KPI. You can use it to compare a variety of organizational data - Individuals, Teams and even whole Organizations. 
 
 That's why you'll often see radar charts used in the scope of Human Resources and Portfolio Management application development projects.
 
-###How to use our Radar Chart?
+### How to use our Radar Chart?
 
 So let's see how we go about drawing our Radar Chart. The first thing to do is identify the categories or performances you want to compare. Then you'll want to gather the quantitative data for each category. Finally, plot the radar chart using your favorite [JavaScript Charts][3] library.
 
@@ -72,7 +72,7 @@ Here, NES advertising channels were:
 
 These advertising channels will make perfect Radar Categories for our example. For you, your categories will be different, but the idea is to identify areas your organization needs to analyze.
 
-####Gather Categorical Quantitative Data
+#### Gather Categorical Quantitative Data
 
 Here, for Year 1, NES spending was as follows:
 
@@ -102,7 +102,7 @@ For Year 2, NES spending habits made a pinnacle shift:
 5. Magazine ($100,000)
 {% endhighlight %}
 
-####Plot Your Radar Chart
+#### Plot Your Radar Chart
 
 Here we'll use our RadarChart component from our JavaScript Charts Suite. First, we'll create an HTML element to bind our chart too:
 
@@ -136,7 +136,7 @@ Since we'd like to give our audience a quick legend for identifying which set is
 
 There are over thirty (30) properties we could set for our RadarChart, but these few should suffice for this example. Just know that our RadarChart is as flexible as the times call for.
 
-####Analyze Your Radar Chart Data
+#### Analyze Your Radar Chart Data
 
 What is happening to NES here is what advertisers refer to as [The Great Shift][4]. The Great Shift refers to the time when companies will increase Internet advertising while simultaneously decreasing traditional advertising channels.
 
@@ -148,7 +148,7 @@ From a Human Resources standpoint, Radar charts help you quickly understand you'
 
 From a Sourcing & Purchasing standpoint, Radar charts help you quickly understand that you'll need tools to monitor internet traffic and conversions so you can effectively measure your Return on Investment (ROI).
 
-###Thoughts and Reflections
+### Thoughts and Reflections
 
 What Great Shifts are taking place in your industry? What is your data telling you that you cannot see yet?
 

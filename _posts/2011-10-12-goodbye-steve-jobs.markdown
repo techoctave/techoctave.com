@@ -14,7 +14,7 @@ permalink: /c7/posts/59-goodbye-steve-jobs
 
 I listen to fate more than most men. I also love her more than most men. Sometimes I like to think she shows us her presence in men like Castruccio and Steve. Somewhere between obscurity and greatness; during those moments when we can only ask, "How?" That's the moment fate shows her hand.
 
-###The life of Steve Jobs of California
+### The life of Steve Jobs of California
 
 I miss Steve Jobs. I miss his leadership. I miss his relentless focus on products. I miss his thoughtfulness. 
 
@@ -24,7 +24,7 @@ I sell products. I believe software should be beautiful and inspired. Most impor
 
 In that moment, you effectively say, "I believe this product has value to me and I am willing to trade my very hard earned cash for it." That's intimacy. We knew Steve Jobs intimately. We mourn him intimately.
 
-###Goodbye Steve Jobs
+### Goodbye Steve Jobs
 
 Goodbye Steve Jobs. You are missed and you are loved. If it wasn't for you, I'd still be programming on Windows. You convinced me I deserved better. Thank You!
 
@@ -36,7 +36,7 @@ Our World is a better place because you were in it:
 
 {% highlight ruby %}
 def eulogy
-  #Rubyists miss you
+  # Rubyists miss you
   puts "Goodbye Steve Jobs."
 end
 {% endhighlight %}

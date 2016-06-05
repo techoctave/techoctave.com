@@ -20,7 +20,7 @@ When there are over 500,000 people who never have to ask, "How do I subscribe to
 
 But this is not about Google Reader.
 
-###This is about the State of the Open Web
+### This is about the State of the Open Web
 
 Platforms with user generated content are becoming increasingly closed. This concerns me. [Twitter and Facebook both quietly killed RSS][4]; Opting for a proprietary API over an open standard in its place.
 
@@ -35,7 +35,7 @@ The you create content, we sell your content business model of Twitter and Faceb
 Chillin. 
 
 
-###We should all be concerned
+### We should all be concerned
 
 If the giants of industry, companies we helped build, don't support open standards, then why should your local congressman support open government?
 

@@ -11,7 +11,7 @@ permalink: /c7/posts/69-entourage-js-download-tracking-made-simple-for-thousands
 
 Six months ago, I set out to change the way people [track file downloads with Google Analytics][1]. Amidst great success, lo and behold, entourage.js version 1.1.2 has arrived:
 
-###Lights. Cameras. Action.
+### Lights. Cameras. Action.
 
 After nearly 10,000 downloads, I'm happy to say [entourage.js][2] can be found on websites large and small. 
 
@@ -26,7 +26,7 @@ Entourage.js remains unobtrusive and standards based. It's an excellent choice f
 
 Need to track a large amount or even a small amount of file downloads? Checkout [entourage.js][3]. It's the only automatic download tracking for asynchronous Google Analytics that just works!
 
-####Changelog
+#### Changelog
 
 {% highlight bash %}
 - Previously attached Entourage to "every" link. Here, the issue was Entourage clobbered existing link events - that's bad. Upgrade to attach Entourage only to links with a whitelisted download type.

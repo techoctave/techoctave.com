@@ -27,8 +27,8 @@ Thanks for your support everyone!
 Are you working on any projects in the flight simulation field? Know a friend in the same? We'd love if you'd introduce them to our [JavaScript Flight Gauges][1] suite.
 
 
-####Release Notes: 2.3.0
-####GaugeJS
+#### Release Notes: 2.3.0
+#### GaugeJS
 
 ========================================
 [Enhancements]

@@ -14,7 +14,7 @@ Blogcast 1.0.5 is the start of my vision to make writing fun for a lot more peop
 
 Should they be condemned to a blogging platform that no longer caters to their needs as a writer? I don't believe that. I won't believe that!
 
-###Release Notes
+### Release Notes
 
 Blogcast 1.0.5 features four enhancements:
 
@@ -28,7 +28,7 @@ Blogcast 1.0.5 features four enhancements:
 - Cleaned up generic error pages
 {% endhighlight %}
 
-###Blogcast WordPress migrator
+### Blogcast WordPress migrator
 
 Why WordPress? Simple. Many of us in the Ruby and Rails community use WordPress as our blogging engine. But more importantly, fans of Blogcast have reached out to me and asked for a migration tool.
 
@@ -36,7 +36,7 @@ Jason Fried once said, "No is easier to do. Yes is easier to say." I wholehearte
 
 Yet, a migration tool aligned with my vision to make writing accessible and fun. So, a migration tool is something I support with a resounding and unequivocal Yes!
  
-####Usage
+#### Usage
 
 Go to your Blogcast installation and run *rake --tasks* to see your available options. One of those options will be rebirth:wordpress:
 
@@ -91,7 +91,7 @@ The bad news is semantic tags like those used in WYSIWYM editors aren't preserve
 Finally, if you inserted any manual tags for code highlighting, then you can remove those tags. Highlight.js is smart enough to figure out what programming language you're using automatically.
 
 
-###Removed all db/migrate Migrations
+### Removed all db/migrate Migrations
 
 I removed all migrations from this release because they added more confusion than benefit. Migrations are a development tool.
 
@@ -137,7 +137,7 @@ A successful run will look like this:
    -> 0.0077s
 {% endhighlight %}
 
-###Admin user seed instance now available
+### Admin user seed instance now available
 
 By default, the admin user is available in the development database that comes with Blogcast. To help with deployment and automated tasks, I added the default instance of the user model to db/seeds.rb.
 
@@ -171,7 +171,7 @@ A successful run will look like:
 --->From this seed may you forever bear fruit.
 {% endhighlight %}
 
-###Cleaned up generic error pages
+### Cleaned up generic error pages
 
 Depending on your setup, some of you may have had some issues getting your 404 and 500 error pages to render properly.
 
@@ -181,7 +181,7 @@ In Blogcast 1.0.5, I moved the error.css and cute koala.png to the same director
 
 It gets the job done. Plus with this change I still get to maintain separation of concerns. So, overall I'm happy with the results.
 
-###Special thanks
+### Special thanks
 
 Special thanks to everyone that made this release possible. A very special thanks to the WordPress Veterans who graciously donated their blog exports to the cause. Thank you!
 

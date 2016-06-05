@@ -12,11 +12,11 @@ I like to chillax just as much as the other guy. But when it comes to [cross bro
 
 XHTML Strict 1.0 did not validate and after the upgrade to Rails 3, HTML5 didn't validate either! I needed a better way to integrate with Twitter and Facebook. I needed a way that didn't compromise validation and thus, maintainability.
 
-###Pure JavaScript Buttons for Twitter & Facebook
+### Pure JavaScript Buttons for Twitter & Facebook
 
 Inspired by the Digg Button, here's the XHTML Strict version of Twitter's Tweet Button and Facebook's Like Button:
 
-####Twitter's Tweet Button
+#### Twitter's Tweet Button
 
 *Pure JavaScript Solution: Asynchronous.*
 
@@ -69,7 +69,7 @@ For speed, reliability and maintainability, better to go with the asynchronous T
 
 NOTE: Change the data-via attribute from "YourTwitter" to your actual twitter account. *See above.*
 
-####Facebook's Like Button
+#### Facebook's Like Button
 
 *Pure JavaScript Solution: Asynchronous.*
 
@@ -92,7 +92,7 @@ The same benefits achieved in the Tweet Button are achieved here with the Facebo
 
 In particular, I avoid placing the FBML tag directly in my XHTML code. It goes without saying that FBML is thoroughly not standards-compliant code. In addition, I see no reason to chase non-standard HTML headers just because Facebook thinks it's cool to have its own custom markup.
 
-###A Note on Maintainability
+### A Note on Maintainability
 
 XHTML Strict concerns go beyond validation and truly speak to maintainability. The more XHTML Strict your code is, the less likely it is to break a piece of JavaScript. 
 

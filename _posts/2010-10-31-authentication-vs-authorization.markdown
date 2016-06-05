@@ -10,9 +10,9 @@ permalink: /c7/posts/34-authentication-vs-authorization
 
 <img src="/c7/static/lock.jpg" alt="Authentication vs Authorization" width="100%"/>
 
-###The Difference Matters
+### The Difference Matters
 
-####Authentication
+#### Authentication
 
 Authentication is the process of verifying that a user has the right to access an application. The canonical example is the login screen. A successful login indicates the user is *authorized* and has the right to use the application. A failed login means the user does not have the right to access the application.
 
@@ -21,7 +21,7 @@ Authentication often precedes authorization, but doesn't always have to. For exa
 This behavior is the same for each article - even popular articles like my [JavaScript Dashboard Gauge Set][2].
 
 
-####Authorization
+#### Authorization
 
 Authorization determines what actions a user has the right to take within an application. Here, the canonical example is *Role Management*.
 

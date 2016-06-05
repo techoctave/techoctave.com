@@ -16,17 +16,17 @@ For the functional programming crowd, we have an entire section dedicated to tra
 
 We've got a deep dive into JavaScript, building games on Windows 8 and Windows Phone and even a solid hardware track using Raspberry Pi and Arduino.
 
-###The Keynote
+### The Keynote
 
 This year, we're trying something different with a Keynote presentation. This year's Keynote will be given by one of the world's leading experts on the C and C++ programming languages and their use in developing embedded systems.
 
 If you make your living writing Java, C#, JavaScript or any other C based language, then this keynote is sure to be something special for you. The threads and influence of C/C++ run deep in many languages we touch today.
 
-###Columbus Code Camp 2012 Presentations
+### Columbus Code Camp 2012 Presentations
 
 Of course, the presentations will be awesome as well. Jump in and learn a little bit more about each.
 
-####Auditorium
+#### Auditorium
 
 **Websites with Noir**
 
@@ -57,7 +57,7 @@ The Single Responsibility Principle states that a class should have one (and onl
 
 We'll look at how to identify these classes, and how to clean them up using refactoring tools, design patterns, and even aspect-oriented programming.
 
-####Classroom A
+#### Classroom A
 
 **Hybrid Approach to Moving to the Cloud**
 
@@ -97,7 +97,7 @@ SQL injection is at the top of the Open Web Application Security Project (OWASP)
 
 This talk will focus on using the Microsoft stack (IIS, ASP.Net, and SQL Server), but the lessons will apply to all web systems everywhere.
 
-####Foster Room
+#### Foster Room
 
 **Optimizing Regular Expressions**
 
@@ -134,7 +134,7 @@ Installation and Configuration of NetBeans for PHP
 Editing / Running / Debugging / Unit Testing a program 
 Database (MySQL) support
 
-####Beta Box
+#### Beta Box
 
 **Raspberry Pi**
 
@@ -152,7 +152,7 @@ In this session you will learn how to program this remarkable little device, lea
 
 But don't be surprised if, after attending this session, you have an urge to go buy one yourself and start hacking.
 
-####Board Room
+#### Board Room
 
 **OAuth for Authentication and Data Access**
 
@@ -181,7 +181,7 @@ game show format -- complete with prizes.
 
 You will learn about functions, objects, closures, and revealing modules. And you'll leave a more informed JavaScript programmer (unless, of course, you already knew JavaScript in which case you'll just leave with a prize).
 
-###Join Us on Saturday, October 13th @ TechColumbus
+### Join Us on Saturday, October 13th @ TechColumbus
 
 Columbus Code Camp 2012
 

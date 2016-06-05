@@ -7,50 +7,50 @@ permalink: /
 
 ![Lion](/images/lion-hero.png)
 
-#TECHOCTAVE<em class="trademark">®</em>
+# TECHOCTAVE<em class="trademark">®</em>
 
-####We believe software should be beautiful & inspired
+#### We believe software should be beautiful & inspired
 
 ![javascript-charts-gauges](/images/javascript-charts-gauges.png)
 
 <br/>
 
-#Partner with us on your project
+# Partner with us on your project
 
-####We're Ember & Rails experts and we know how to ship...!
+#### We're Ember & Rails experts and we know how to ship...!
 
 [![capabilities](/images/capabilities.png)](mailto:sales@techoctave.com?subject=We want to work with the best)
 
 <br/>
 
 
-#Beautiful flight gauges for the sophisticated developer
+# Beautiful flight gauges for the sophisticated developer
 
-####Next Generation Aerospace Simulation & Training Gauges
+#### Next Generation Aerospace Simulation & Training Gauges
 
 [![flight_gauges_six](/images/flight_gauges_six.png)](/simulation/)
 
 <br/>
 
 
-#Beautiful dashboard gauges for the sophisticated developer
+# Beautiful dashboard gauges for the sophisticated developer
 
-####Beautifully illustrate your data. Start reaching your goals.
+#### Beautifully illustrate your data. Start reaching your goals.
 
 [![gauges](/images/gauges.png)](/gauges/)
 
 <br/>
 
 
-#Beautiful JavaScript Charts for the sophisticated developer
+# Beautiful JavaScript Charts for the sophisticated developer
 
-####Powerful API. Easy to get started.
+#### Powerful API. Easy to get started.
 
 [![highly_customizable_charts](/images/highly_customizable_charts.png)](/charts/)
 
 <br/>
 
-#We build our software on six core principles
+# We build our software on six core principles
 
 <dl class="principles">
 	<dt>Beautifully Illustrated</dt>
@@ -75,16 +75,16 @@ permalink: /
 <br/>
 
 
-#We believe in giving back
+# We believe in giving back
 
-####On our company <a href="/c7/">blog</a> we share best practice development techniques with best-in-class software developers
+#### On our company <a href="/c7/">blog</a> we share best practice development techniques with best-in-class software developers
 
 [![push](/images/push.jpg)](/c7/posts/60-simple-long-polling-example-with-javascript-and-jquery)
 
 <br/>
 
 
-#So, what's next exactly?
+# So, what's next exactly?
 
 Purchase a library package. Within a few seconds, you'll receive a receipt for your purchase and a secure link to download the package. Each package comes with tons of examples to get you up and running in no time.
 

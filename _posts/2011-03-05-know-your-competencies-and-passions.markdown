@@ -15,19 +15,19 @@ Perhaps at some point, we forgot to first focus on ourselves. When I say focus o
 
 I believe the key to being great at what you do is knowing yourself - what your true competencies are and what you're passionate about. Only when you know this, can you decide what projects or business will be a successful fit for you. 
 
-###Competencies
+### Competencies
 So what are you knowledgeable about? What skills and abilities do you have? What are your normal behavioral patterns? 
 
 For example, over time, you may have gained practical and theoretical knowledge about software and you may have the skills to develop software. You may also have a gift of being inspiring and motivating to others. 
 
 Make a list of those competencies and then ask yourself if you are developing all of them. If not, think of ways you can start. 
 
-###Passions
+### Passions
 The next thing you want to do is identify your passions. Ask yourself what makes you excited. Apart from doing interface design or programming, are you excited about other things? Do you enjoy public speaking? Do you enjoy cooking?  
 
 If so, maybe you can find opportunities to do more speaking. Maybe you can one day give a speech about how cooking relates to interface design. I know, it may sound weird at first to a designer that's not into cooking, but to you, it may make perfect sense. 
 
-###Be great
+### Be great
 
 We all have the potential to be great. But we sometimes forget to ask, *"At what can I be great?"* We can only know this if we know our competencies and our passions. 
 

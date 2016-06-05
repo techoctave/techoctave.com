@@ -8,9 +8,9 @@ permalink: /c7/posts/30-hello-i-m-an-entj
 
 [Hello World][1]! I'm an **ENTJ**. How I perceive the world and make decisions are wrapped into four letters *(more or less)*.
 
-###ENTJ - Life's Natural Leaders
+### ENTJ - Life's Natural Leaders
 
-####E -  Extroverted
+#### E -  Extroverted
 
 I am action oriented and draw energy from being social as I'm often motivated by interactions with others.   
 
@@ -18,15 +18,15 @@ I am action oriented and draw energy from being social as I'm often motivated by
 
 I translate my social alertness into future possibilities, meanings and connections. I usually focus more on the big picture rather than the details.  
 
-####T- Thinking
+#### T- Thinking
 
 I'm an objective thinker. When making decisions, I tend to give more weight to logic than to social considerations. I can be tolerant of established procedures. However, if any procedure is shown to be indifferent to the goal it seemingly serves, I am sure to abandon it.
 
-####J - Judging
+#### J - Judging
 
 I find creating a strategy to be extremely important when it comes to plan execution. I often try to predict outcomes and plan accordingly. When pursuing goals, it's important that visions and strategies are not left undone but are implemented. Life is like a game of chess! 
 
-###ENTJ - More than these four letters.
+### ENTJ - More than these four letters.
 
 As a consultant, I'm your point man. My basic driving force is to lead and I have the experience to deliver in a variety of situations.
 
@@ -34,7 +34,7 @@ That said, I'm very much about building strong, cohesive teams. Business is the 
 
 Would you rather own 10% of a $10,000,000 team or 100% of a $10,000 team? Think about it! Oh yeah, and *they* call me a [fieldmarshal][2]. Something about looking forward to getting my hands on a prepped and hungry squad. Well, for once, *they're* right!
 
-###Understanding Myers Briggs personality types
+### Understanding Myers Briggs personality types
 
 It refreshes me to understand my personality type and that of my family and friends. People tend to think and make decisions differently and that's because we each have different personality types. We're each [unique and that is beautiful][3].
 

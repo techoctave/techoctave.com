@@ -15,7 +15,7 @@ Knowing that number gives you keen insight into the value of that white paper an
 
 Watch Lead SEO Consultant, [@MikeCP][2] discuss Entourage.js and other tips and tricks in his [SearchFest 2012][3] presentation titled, "Making Google Analytics Work For You":
 
-<iframe src="//www.slideshare.net/slideshow/embed_code/key/3KBjc0ukHmbcys" width="100%" height="500" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/MikeCP/advance-google-analytics-searchfest" title="Advanced Google Analytics #SearchFest" target="_blank">Advanced Google Analytics #SearchFest</a> </strong> from <strong><a href="//www.slideshare.net/MikeCP" target="_blank">Mike P.</a></strong> </div>
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/3KBjc0ukHmbcys" width="100%" height="500" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid # CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/MikeCP/advance-google-analytics-searchfest" title="Advanced Google Analytics # SearchFest" target="_blank">Advanced Google Analytics # SearchFest</a> </strong> from <strong><a href="//www.slideshare.net/MikeCP" target="_blank">Mike P.</a></strong> </div>
 
 
 Need to track a large amount or even a small amount of file downloads? Checkout [Entourage.js][4]. It's the only automatic download tracking for asynchronous Google Analytics that just works!

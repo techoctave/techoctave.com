@@ -10,7 +10,7 @@ You are an internet savvy Starter. So, I hope you're [paying attention to your u
 
 I've [written][2] [quite][3] a few [Ruby][4] on [Rails][5] tutorials so far. I hope this Rails tutorial also helps you reach your destination.
 
-###Using Rails Request.env
+### Using Rails Request.env
 
 Here's an example of using the Rails *request.env* object:
 
@@ -20,12 +20,12 @@ Here's an example of using the Rails *request.env* object:
 @contact.user_agent = request.env["HTTP_USER_AGENT"]
 {% endhighlight %}
 
-###Rails Request.env List
+### Rails Request.env List
 
 Request.env is a Rails object that contains information on your visitor's environment (e.g. browser, referrer) and information on your server's environment. The *request.env* object is a key/value pair Ruby array. Here is the list of the environment variables you have access to:
 
 {% highlight ruby %}
-#Rails Request.env Variables
+# Rails Request.env Variables
 SERVER_NAME
 PATH_INFO
 REMOTE_HOST

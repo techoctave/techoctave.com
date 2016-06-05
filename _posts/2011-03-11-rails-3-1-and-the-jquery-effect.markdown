@@ -13,7 +13,7 @@ In Rails 3.0 I saw a strategic change in the way the Rails Core Team viewed itse
 
 That opened the door for JavaScript options when using Rails. And dare I say, it was a venerable extension of diplomacy to the rest of the JavaScript community.
 
-###The jQuery Effect
+### The jQuery Effect
 
 There I stood as a Rails developer - proud as ever - because above all this move showed that the Rails Core Team leads. I call this *The jQuery Effect* and it's about getting out of the way of progress:
 
@@ -24,7 +24,7 @@ There I stood as a Rails developer - proud as ever - because above all this move
 
 jQuery has built a vibrant community of developers. And dare I say it was this single line of code that turned the tides in the JavaScript Framework Wars.
 
-###The JavaScript Framework Wars
+### The JavaScript Framework Wars
 
 Not to long ago the JavaScript Framework Wars were armed for battle and at conflict. Who threw the first punch? We'll never know. One thing's for sure, it was on!
 
@@ -32,7 +32,7 @@ I consider these frameworks the major Contenders: Prototype, jQuery, MooTools an
 
 All this over a dollar ($) sign? Yes! Only one framework at a time could use the dollar ($) sign. Since the $() function was an integral part of each of these frameworks, no one wanted to change there use of the dollar ($) sign just to suit "that other framework."
 
-###Finding Common Ground
+### Finding Common Ground
 
 What John Resig and the jQuery Core Team realized was that people used the $ for efficiency not identity. So let other frameworks use the $ and give jQuery developers the best of both worlds:
 
@@ -49,7 +49,7 @@ What John Resig and the jQuery Core Team realized was that people used the $ for
 
 As a result jQuery developers didn't have to choose efficiency over flexibility. While the other frameworks pandered, "One Framework to Rule Them ALL." jQuery played it's hand and moved aside.
 
-###One Developer's Story
+### One Developer's Story
 
 jQuery was young and I was an accomplished Prototype developer. I had my favorite Prototype modal dialog I just had to use for a recent project - I had too. But I also wanted to broaden my horizons and try another framework as my main.
 
@@ -59,7 +59,7 @@ I really liked how polished MooTools plugins were, but choosing MooTools meant I
 
 So I went with jQuery. I went with jQuery because it gave me options. And in a world of uncertainty, options are the currency of progress. With a single line of code, I was able to use jQuery as my foundation and still got to use my "favorite" Prototype Modal Dialog.
 
-###The Aftermath
+### The Aftermath
 
 After that project, I never used that Modal Dialog again! And you know what? Something surprising happened - something I didn't even expect to happen: *I never used another JavaScript framework again either.* I was bit by the jQuery bug and I was a convert for life.
 
@@ -69,7 +69,7 @@ The jQuery team knew its JavaScript framework was great and so it decreased the 
 
 I often wonder how many developers converted to jQuery in that fashion. How many picked up jQuery and never looked back because of *The jQuery Effect*. We may never know the true numbers, but I'd gamble the numbers would be both shocking and impressive.
 
-###Rails 3.1 and jQuery Sitting in a Tree
+### Rails 3.1 and jQuery Sitting in a Tree
 
 When Rails 3.0 was released, I believe DHH and the Rails Core Team took a similar stance as the jQuery team did so long ago: Give developers options and get out of the way of progress - let evolution play its course.
 
@@ -81,7 +81,7 @@ I believe Ruby on Rails is the most powerful and beautiful web application frame
 
 DHH and the Rails Core Team know Rails is the best framework out there and it is up to them to reduce the friction needed to adopt the framework. With the countless number of developers using jQuery, shipping Rails 3.1 with jQuery is a powerful move indeed.
 
-###The Lesson
+### The Lesson
 
 The lesson here is simple. Reduce the friction between your Product and potential Customer. Make it easy for your customer to access your product. Then the product can stand on its own and wow the customer.
 

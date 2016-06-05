@@ -14,7 +14,7 @@ I believe this so much that I refuse to support people and institutions that tur
 
 I turn my back to institutions that preach the value of knowledge in one-hand and hide the most liberating truths in the other. I lower the flag on propaganda meant to trick good people into becoming cash cows when we need conscious producers more now than ever before.
 
-###My gift to starters everywhere
+### My gift to starters everywhere
 
 As a Starter, I have learned many lessons over the years. Many of those lessons were learned from mistakes and others from influencers who shared their experiences with the community.
 
@@ -36,7 +36,7 @@ Marketing for Geeks is built on four principles:
 
 This is the strength at the base of the pillar that is Marketing for Geeks. From this foundation flows knowledge, inspiration and tactics that you can start using right now. That's the beauty of the book.
 
-###Shining light on the practical
+### Shining light on the practical
 
 In Academia marketing is always glamorized. There is a lot of emphasis on pretty ads, company tag lines and websites. The truth is, it is very easy in Academia to get caught up in the dazzle, the meaningless.
 
@@ -44,7 +44,7 @@ Academia often introduces you to marketing as an idea. But, there are useful les
 
 Marketing for Geeks introduces those practical lessons that can help you begin to deliver value and start selling.
 
-###The start is really about us
+### The start is really about us
 
 It's time we step up. This is our generation's time. We didn't ask for a morally and financially bankrupt government - this was the hand we were played. So be it.
 
@@ -54,7 +54,7 @@ We can do this. We need to do this. I wrote [Marketing for Geeks][4] because I w
 
 Show with your pocket books. Tell your friends and coworkers. Tell all who will listen that this is our time.
 
-###Academia can take a backseat
+### Academia can take a backseat
 
 Academia can take a backseat. I say this often, but why? I say this because every single institution of higher learning is delusional. The average student graduates with between $80,000 and $160,000 in student loans. Many pray for a decent $30,000/year job.
 
@@ -66,7 +66,7 @@ If you went to school to make beautiful things - Engineers, Scientists, Artists,
 
 How in the world does this happen? How do you spend 4 to 5+ years and over $100,000 and still can't stand on your own two feet? 
 
-###Times a changing and so must we
+### Times a changing and so must we
 
 While other countries were building centers of industry, we built the largest and most sturdy middle class to support both the rich and the poor. Well, now the middle class isn't large or sturdy anymore. Funny how that works! We can do better.
 

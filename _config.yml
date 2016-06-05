@@ -7,8 +7,10 @@ url: "https://techoctave.com"
 baseurl: ""
 
 #markdown: rdiscount
+markdown: kramdown
 permalink: /c7/:year/:month/:title.html
-highlighter: pygments
+#highlighter: pygments
+highlighter: rouge
 
 # Google Analytics
 ga_domain: techoctave.com

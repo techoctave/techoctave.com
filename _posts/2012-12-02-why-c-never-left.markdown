@@ -10,7 +10,7 @@ permalink: /c7/posts/97-why-c-never-left
 
 Some really good points are discussed in the article, [Why C++ Is Not "Back"][1]. I simply disagree with the entire premise.
 
-###C++ Is Transcending
+### C++ Is Transcending
 
 We use C++ every single day. It has so transcended our daily routines and informed our daily decisions that we don't even notice it is there. 
 
@@ -36,7 +36,7 @@ All of these languages that we know and love. All of these frameworks that disru
 
 My point isn't to be exhaustive - that I leave to you. My point is there is no "come back" to be had. C++ never stopped being an integral part of our development lives.
 
-###C++ Is Transformative
+### C++ Is Transformative
 
 I simply don't agree with people who tell developers C/C++ is not important to learn. In fact, I find the whole notion disheartening.
 
@@ -50,7 +50,7 @@ There must come a time when you Stop Writing CRUD and [Do Hard Things][4]. Learn
 
 C++ is one of those transformative languages that opens the door to so many opportunities and possibilities. That's been my experience with the language and that's why I believe [Foundation is Everything][5].
 
-###C++ Is Foundational
+### C++ Is Foundational
 
 For me it's simple...
 

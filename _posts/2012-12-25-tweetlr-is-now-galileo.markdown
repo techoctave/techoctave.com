@@ -14,7 +14,7 @@ Earlier this month, we got an email from someone at [Twitter][1] claiming people
 
 They felt our use of the name Tweetlr was infringing on their Tweet trademark. Ironic, since the word Tweet was organically created by the users of the Twitter platform itself. I doubt a single employee of Twitter was involved in creating the word Tweet.
 
-###Twitter's claim is groundless
+### Twitter's claim is groundless
 
 We traded a few emails back and forth. Needless to say, we didn't agree with their claim. Fundamentally, Twitter's claim is groundless.
 
@@ -34,7 +34,7 @@ While we disagreed with Twitter's claim, we didn't want to get into a protracted
 
 In the end we decided we'd just rename our Tweetlr app. Tweetlr hasn't been on the market too long so renaming wouldn't be a huge deal. But, more importantly, we play the long game because that's what matters most.
 
-###Galileo
+### Galileo
 
 So today we announce that Tweetlr is now called [Galileo][2]. Galileo is beautiful and inspired by Galileo Galilei - Italian physicist, mathematician, astronomer, and philosopher who played a major role in the Scientific Revolution.
 

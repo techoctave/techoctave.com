@@ -12,7 +12,7 @@ What better way to populate your blog's meta description than with your blog's c
 
 For me, having my meta description created automatically is one less thing I have to worry about. That way I can focus on writing. That's why I created it and that's why I use it in [Blogcast][1].
 
-###Time for Some Rails Goodness
+### Time for Some Rails Goodness
 
 ####helpers/posts_helper.rb
 I put the code in a helper to make integration in the Post view a little cleaner. I'm happy with the results. The code is a bit involved, so I break down the details in the algorithm below.
@@ -37,7 +37,7 @@ Here, I deliver a nice neat little present for Google. Hello Google!
 <% end %>
 {% endhighlight %}
 
-####Here's the algorithm:
+#### Here's the algorithm:
 
 {% highlight ruby %}
 1. Remove any code blocks from the content

@@ -13,7 +13,7 @@ permalink: /c7/posts/38-blogcast-is-a-better-way-to-blog
 This belief flows so thick through my veins that I believe we should all give back when our time comes. Call it a right of passage if you must. I call it a duty!
 
 
-###The Status Quo
+### The Status Quo
 
 Yet, when I started [Seventh Octave][2] and started evaluating blogging apps, I found that duty hampered. Hampered by what I can only describe as a lack of understanding about the writing process. As a writer, I need constant feedback and illustration of what my finished product will look like.
 
@@ -23,7 +23,7 @@ Then there were the endless menus, features, click-ty-clacks and fancy whizz-ban
 
 When I use a blogging app, what I'm primarily there to do is write! Having to click and wait to see how my blog post will look gets in the way of my writing. WYSIWYG Editors get in the way of my writing! Endless features get in the way of my writing!
 
-###Blogcast is a better way to blog.
+### Blogcast is a better way to blog.
 
 The Status Quo can take a backseat for all I care! I needed a blogging app that encouraged rapid writing iterations - so I wrote one.
 
@@ -59,7 +59,7 @@ Blogcast is built on six principles:
 6. No [crappy-admin-screen][6] syndrome - ever.
 {% endhighlight %}
 
-###Blogcast is Open Source & Built on Rails
+### Blogcast is Open Source & Built on Rails
 
 Under the hood, I built Blogcast with Ruby and all the Open Source glory of Rails 3. Better yet, Blogcast loves [Phusion Passenger for Nginx][7] and it plays well with MySQL and PostgreSQL.
 
@@ -67,7 +67,7 @@ Blogcast uses Rails 3 style unobtrusive JavaScript. I combine Rails 3's HTML5 da
 
 I believe [solutions should be simple, not simplistic][8]. So, top-down, I wrote Blogcast to be simple. Blogcast uses Bundler for systematic & consistent dependency management.
 
-###Installing Blogcast
+### Installing Blogcast
 
 First, go to Blogcast's root directory and install the dependences:
 
@@ -87,11 +87,11 @@ Fire up your favorite browser and point it to *http://localhost:3000*. This is t
 
 Welcome to [Blogcast][9]. It's going to be a pleasure to get to know you.
 
-###Configuring Blogcast
+### Configuring Blogcast
 
 Blogcast has a few configuration items you should know about: Users, Akismet, Google Search, Google Analytics and RSS.
 
-####Create your own user
+#### Create your own user
 
 Click on the Users link in the upper right-hand corner of Blogcast. Then click on the Add User button:
 
@@ -99,7 +99,7 @@ Click on the Users link in the upper right-hand corner of Blogcast. Then click o
 #Name
 Used as Post author and Draft author
 
-#Initials
+# Initials
 Used as Comment author
 {% endhighlight %}
 
@@ -108,7 +108,7 @@ At that point, either remove the admin user or update its password to something 
 ####config/application.rb
 
 {% highlight ruby %}
-#Akismet
+# Akismet
 config.rakismet.key  = '0000X000000X'
 config.rakismet.url  = 'http://domain.com/blog'
 config.rakismet.host = 'rest.akismet.com'

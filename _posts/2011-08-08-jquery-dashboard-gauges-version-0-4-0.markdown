@@ -22,7 +22,7 @@ TechOctave's [jQuery Dashboard Gauges][1] have reached version 0.4.0. We're happ
 6. More Example Code - More Quick Startups
 {% endhighlight %}
 
-####More Robust Dashboard.html Example
+#### More Robust Dashboard.html Example
 
 Beefed up! Fully functional jQuery Dashboard Gauge example showing how to use our:
 
@@ -40,7 +40,7 @@ Beefed up! Fully functional jQuery Dashboard Gauge example showing how to use ou
 - Temperature Gauge
 {% endhighlight %}
 
-####Pure JavaScript Dashboard Gauges (HTML5 Ready!)
+#### Pure JavaScript Dashboard Gauges (HTML5 Ready!)
 
 The best part is the gauges are pure, native JavaScript gauges. No messing around with Flash or other proprietary platforms. No overwhelming API to get used too. Shorter startup time. HTML5 Ready!
 

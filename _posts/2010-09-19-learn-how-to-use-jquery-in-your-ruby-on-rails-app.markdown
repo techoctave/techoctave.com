@@ -10,7 +10,7 @@ Prototype is great, but you want to use Rails and AJAX in your application with 
 
 We need to take a couple steps before we start using jQuery in-place of RJS, so let's jump right in. Pretend you have a blog and you want to preview Comments using AJAX. That should set the scene:
 
-###Help Rails recognize AJAX requests
+### Help Rails recognize AJAX requests
 
 You need to set each AJAX request header to "text/javascript". This gives Rails the ability to recognize AJAX requests.
 
@@ -41,16 +41,16 @@ app/views/posts/show.html.erb
 <% end %>
 {% endhighlight %}
 
-###Remove layouts for AJAX requests automatically
+### Remove layouts for AJAX requests automatically
 
 app/controllers/application_controller.rb
 
 {% highlight ruby %}
-#Remove layouts for all ajax calls
+# Remove layouts for all ajax calls
 layout proc{ |c| c.request.xhr? ? false : "application" }
 {% endhighlight %}
 
-###Preview your Rails blog Comment
+### Preview your Rails blog Comment
 
 app/controllers/comments_controller.rb
 

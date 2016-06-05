@@ -14,7 +14,7 @@ Today I'm going to run you through getting your Rails app running on Ubuntu, Rub
 
 Here are my notes from one of my client's latest Rails deployment.
 
-###Ruby Enterprise Edition (REE):
+### Ruby Enterprise Edition (REE):
 
 We're going to start by installing Ruby Enterprise Edition (REE). Download the latest .deb REE package, then install it:
 
@@ -33,7 +33,7 @@ sudo gem update --system
 sudo gem update
 {% endhighlight %}
 
-###Ruby on Rails
+### Ruby on Rails
 
 At this point you should make sure you've installed the Ruby on Rails gem. Don't worry, you've probably already done that. Here's the command to install Rails (just in case):
 
@@ -42,9 +42,9 @@ sudo gem install rails
 rails -v
 {% endhighlight %}
 
-###Install, Configure and Manage Nginx
+### Install, Configure and Manage Nginx
 
-####Install Nginx
+#### Install Nginx
 
 First, let's install the Open SSL library. You're going to need this later for SSL support and management:
 
@@ -170,7 +170,7 @@ sudo /etc/init.d/nginx start
 
 Navigate to your server's IP address using Firefox or your favorite browser. You should see "Welcome to Nginx!" This means Nginx is up-and-running. Now we can focus on configuring Nginx for your Rails web application.
 
-####Configure Nginx
+#### Configure Nginx
 
 Edit your Nginx configuration:
 
@@ -234,7 +234,7 @@ When you're finished, save the file and restart Nginx:
 sudo /etc/init.d/nginx restart
 {% endhighlight %}
 
-####Manage Nginx
+#### Manage Nginx
 
 In the future you can restart the entire Nginx server or only restart your application with the following command:
 

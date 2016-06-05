@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+      <title>JavaScript is the Target Language for the Web and that's OK.</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta http-equiv="content-language" content="en-gb" />
+      
+      <meta name="description" content="JavaScript is indeed a target language. Time and good sense has shown us it is a high-level language, so far removed from either low-level or assembly. Yet, it is a target language non-the-less. A target language whose value, I posit, is maximized for only a specific class of software development - Game Development. For all the examples we can think of to use asm.js, game development seems to me to be the only time this...">
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10">
+      <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" type="text/css" href="/css/main.css" />
+      <link rel="stylesheet" type="text/css" href="/css/syntax.css" />
+      <link href="atom.xml" type="application/atom+xml" rel="alternate" title="Site ATOM Feed">
+  </head>
+
+  <body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
+    <main>
+      <section id="single-wrap">
+  <article class="single-content" itemscope itemtype="//schema.org/BlogPosting">
+	
+    <div class="feat">
+      <h5 class="page-date">
+        <time datetime="2013-06-03T06:23:19-04:00" itemprop="datePublished">
+          03 June 2013
+        </time>
+      </h5>
+    </div>
+
+    <h1 class="page-title" itemprop="name headline">JavaScript is the Target Language for the Web and that's OK.</h1>
+    
+    <h5 class="page-author">Handwritten by TVD</h5>
+
+    <div itemprop="articleBody">
+      <p><img src="https://techoctave.com/c7/static/unreal-engine-epic-citadel-mozilla.jpg" alt="Asm.js is for game developers, not web developers." title="Asm.js is for game developers, not web developers." /></p>
+
+<p>JavaScript is indeed a target language. Time and good sense has shown us it is a <a href="https://techoctave.com/posts/102-the-only-higher-level-than-javascript-is-god-s-word">high-level language</a>, so far removed from either low-level or assembly. Yet, it is a target language non-the-less.</p>
+
+<p>A target language whose value, I posit, is maximized for only a specific class of software development - Game Development.</p>
+
+<p>For <a href="http://blog.mozilla.org/blog/2013/03/27/mozilla-is-unlocking-the-power-of-the-web-as-a-platform-for-gaming/">all the</a> <a href="http://www.hanselman.com/blog/JavaScriptIsWebAssemblyLanguageAndThatsOK.aspx">examples</a> we can think of to use asm.js, game development seems to me to be the only time this assembly analogy makes any good sense. In fact, game development is the only use case at all.</p>
+
+<p>Unless I missed something, are there any other necessary uses for asm.js? And please don’t tell me it can be used to transpile {<a href="https://github.com/jashkenas/coffee-script/wiki/List-of-languages-that-compile-to-JS">Some</a> <a href="https://techoctave.com/posts/90-designer-languages">Designer Language</a>} to JavaScript . . . Been there. Done that. We all have the T-Shirt.</p>
+
+<p>As we all know, game development - although a discipline of software development - is a separate practice from web development entirely. Pragmatically speaking, asm.js is for game developers, not web developers.</p>
+
+<p>Similar to how web developers use JavaScript, game developers use C/C++ and OpenGL or DirectX to breathe life into their work. The only reason video games are able to run on the web is because developers can access <a href="https://developer.mozilla.org/en-US/docs/Web/WebGL/Getting_started_with_WebGL?redirectlocale=en-US&amp;redirectslug=WebGL%2FGetting_started_with_WebGL">WebGL/OpenGL</a> through an HTML5 canvas element.</p>
+
+<p>In fact, <a href="http://www.unrealengine.com/html5_faq/">game developers target JavaScript</a> because that’s the <u>ONLY</u> way they can access OpenGL:</p>
+
+<p><img src="https://techoctave.com/c7/static/asmjs-compilation-execution-pipeline.jpg" alt="Game developers target JavaScript that is the only way they can access WebGL via HTML5." title="Game developers target JavaScript that is the only way they can access WebGL via HTML5." /></p>
+
+<p>But for WebGL, game developers would have no use for JavaScript. Instead of three (3) layers between game developers and WebGL/OpenGL, what if there were zero (0)? Think how much faster the games would be. In fact, there would be no need for asm.js at all.</p>
+
+<p>Why is game development the optimal use case? Simple. It’s optimal because it gives game developers another venue to display their work. Asm.js could be the jQuery of game development. Opening markets from only consoles and desktops to a larger market via the web.</p>
+
+<p>Yet, the game developer’s day-to-day activities don’t change. Asm.js doesn’t get in their way. It doesn’t relegate C/C++ to second class citizenry. They’ll still go about their day as they’ve always have. Except, now they have a new environment a build script can target.</p>
+
+<p>With game development, asm.js isn’t an unnecessary intermediary…</p>
+
+<p>Listen, <a href="https://techoctave.com/posts/97-why-c-never-left">I love C/C++</a>, but clearly web developers are not going to develop front-end code in it. I’m sure not, would any of you?</p>
+
+<p>In fact, the folks unlucky enough to maintain GWT Java code would love to meet the fella who made that call because it makes their day-to-day development experience a complete nightmare (Think classic ASP.NET WebForms, but with Java and Eclipse). That’s not good for them and it’s not good for any of you either.</p>
+
+<p>Game developers who want to run their software on web browsers can target JavaScript. Asm.js serves that purpose. That’s it. Nothing more. Nothing less.</p>
+
+<p>That makes JavaScript the Target Language for the Web and that’s OK.</p>
+
+
+    </div>
+    
+    <div id="share" class="feat">      
+      <p>discuss on twitter</p>
+      
+      <a href="//twitter.com/share" class="popup">
+        <span class="icon-twitter"></span>
+      </a>
+      
+      <div class="line"></div>
+      
+      <br/>
+      
+      <p>every day thousands of developers use our charts & gauges to get the job done right</p>
+      
+      <img src="/images/blog-header.png" usemap="#map" />
+      
+      <map name="map">
+        <area shape="rect" coords="4, 4, 247, 276" href="/charts/" alt="JavaScript Charts" target="_blank"/>
+        <area shape="rect" coords="317, 3, 582, 277" href="/gauges/" alt="JavaScript Gauges" target="_blank"/>
+        <area shape="rect" coords="652, 4, 906, 277" href="/simulation/" alt="JavaScript Flight Gauges" target="_blank"/>  
+      </map>
+      
+      <br><br><br>
+      <p><a href="/c7/" style="text-decoration: none;">← return to all articles</a></p>
+    </div>
+    
+  </article>
+</section>
+
+
+
+    </main>
+
+    <footer>
+        <p style="font-size: 80%;">TechOctave, The Lion, "Beautiful & Inspired" are Registered Trademarks of TechOctave, LLC.</p>
+        <p style="font-size: 65%;">HANDCRAFTED WITH <abbr style="color: #FF2400; font-variant: none" title="love">❤</abbr> IN COLUMBUS OHIO</p>
+    </footer>
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/imageMapResizer.js"></script>
+    <script src="/js/moment.js"></script>
+    <script>
+    jQuery(document).ready(function($) {
+      	$("map").imageMapResize();
+        
+        var date = moment().format('DD MMMM YYYY');
+        $(".date").html(date);
+    });
+    </script>
+    
+    
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-17961498-1', 'techoctave.com');
+        ga('send', 'pageview');
+      </script>
+    
+
+  </body>
+</html>

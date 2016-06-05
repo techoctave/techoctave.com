@@ -13,7 +13,7 @@ Google Analytics doesn't track file downloads automatically. I needed unobtrusiv
 Entourage.js is Automatic Download Tracking for Asynchronous Google Analytics.
 
 
-###Why Entourage?
+### Why Entourage?
 
 To be honest, I wish this extension wasn't necessary. I wish Google Analytics tracked file downloads automatically and out-of-the-box, but it doesn't. An extension was needed - so be it. But if it was going to be done, I wanted to make sure it was done right!
 
@@ -26,7 +26,7 @@ I set goals for Entourage.js before a single line of code was written. Entourage
 4. Small Footprint
 {% endhighlight %}
 
-####Automatic
+#### Automatic
 Google suggests adding an onClick event to each anchor tag you use for file downloads. I don't want to have to do that each time I have a download. I would rather drop an extension that would do this consistently and automatically each time.
 
 Entourage.js automatically tracks the name and extension of each file downloaded with the following convention:
@@ -41,7 +41,7 @@ For example, in Google Analytics Top Content, the downloads Entourage.js would l
 /download/entourage.zip       1,504
 {% endhighlight %}
 
-####Framework Agnostic
+#### Framework Agnostic
 
 Entourage.js also had to be framework agnostic. I know a lot of people have or will roll framework specific solutions. That's great for them, but it wasn't going to work for me.
 
@@ -49,7 +49,7 @@ I use and love jQuery just as much as the other guy. In fact, I use it in all of
 
 I respect that. I don't believe they should have to download another framework in this case. I don't believe a framework is critical to this solution scope at all.
 
-####Unobtrusive JavaScript
+#### Unobtrusive JavaScript
 
 This is Google's recommended way to track downloads:
 
@@ -63,7 +63,7 @@ Inline JavaScript is not a best practice. Inline JavaScript mixes structure with
 
 I believed then and I believe now that the spirit of the solution is best honored with an Unobtrusive implementation that leaves the structure of the HTML5 markup clean and readable. Entourage.js does just that.
 
-####Small Footprint
+#### Small Footprint
 
 The final goal of the project was to have a small footprint. I needed something that was fast to download and painless to install in each project. I needed the extension to be as small as possible.
 
@@ -80,7 +80,7 @@ Saved **63.21%** off the original size (**56.09%** off the gzipped size)
 Compiled and gzipped, Entourage.js is less than 1kb. It's fast, dependable and - for now - I'm happy with the results.
 
 
-###Installation Guide
+### Installation Guide
 
 Installation is clean and simple. Download [Entourage.js][2]. Place the following script declaration in you head tag:
 
@@ -112,13 +112,13 @@ Then place your asynchronous call to load Google Analytics to somewhere just bef
 
 Follow a similar hierarchy and you are set.
 
-###Code Review
+### Code Review
 
 The simplicity and ease-of-use speak for themselves. But, I also believe in sharing and I think there is much we can learn from dissecting the internals of Entourage.js.
 
 All 579 bytes of the code base are broken up into three top level modules: The Event *Handler*, *Entourage* and *GetFileName*.
 
-####Finding Closure
+#### Finding Closure
 
 [Closures][3] are often considered an advanced feature in JavaScript. A closure is a special kind of object that combines two things: a function, and the environment in which that function was created.
 
@@ -143,7 +143,7 @@ This means Entourage.js introduces no new Global variables. So there is no chanc
 Entourage.js is completely independent and self-contained. This means you can plug it into your own project - worry free! There's value there.
 
 
-####Event Handler
+#### Event Handler
 
 The event handler caches a list of document links. Then it assigns the Entourage callback to each link's *onclick* event. Many would create custom events to monitor this behavior, but I find the native onclick event more than adequate for the job.
 
@@ -177,7 +177,7 @@ The problem here is each link object is [not ordered as you would expect][4]. Al
 Overall, I found the simple for loop fast, adequate and less prone to logic errors.
 
 
-####Entourage
+#### Entourage
 
 Some interesting parts here too. JavaScript implements perl-style regular expressions. The *fileTypes* variable is a regular expression literal that lists the acceptable file types.
 
@@ -213,7 +213,7 @@ I chose to use _trackPageview to track the file download. The download metric wo
 
 Another option is to use _trackEvent to track the file download. In my mind, _trackPageview via Top Content felt more simple and accessible, so I chose that route. Reasonable minds could differ here, so I'll leave it to the SEO Experts to debate which is "best".
 
-####Get True FileName from Link Pathname
+#### Get True FileName from Link Pathname
 
 Still with me? Good! *GetFileName* is probably thee most important method in Entourage.js!
 
@@ -244,13 +244,13 @@ And, of course, there is the fully qualified URL preceding the *fileName*. You h
 You have to account for each situation and most times that isn't easy. Entourage.js accomplishes each scenario well, without bloated code or overcomplicated algorithms. Clean and Simple.
 
 
-###The Big Picture
+### The Big Picture
 
 The Big Picture is I believe you'll love Entourage.js. It's lightweight and standards based with measurable goals and forethought. 
 
 Bottom line is if you need to track downloads with Google Analytics, then don't roll your own framework. Download [Entourage.js][5] and spend less time coding and more time working on your core business.
 
-###Update: Entourage.js 1.1.0
+### Update: Entourage.js 1.1.0
 
 ####10,000 Foot View
 
@@ -268,7 +268,7 @@ Bottom line is if you need to track downloads with Google Analytics, then don't 
 
 **JSHint:** Ran Entourage.js through JSHint - a fork of Douglas Crockford's JSLint. The Google Analytics Queue doesn't exist until the onclick event. It didn't like that, but that's expected. Also, it didn't like the *new* operator. Called it a "Weird construction". I can deal with a little weird...Barring those two expected, I'd say Entourage.js passed 100%.
 
-####The Code
+#### The Code
 
 See an overview of the code at 10,000 FT:
 
@@ -324,7 +324,7 @@ window.onload = entourage.initialize;
 })();
 {% endhighlight %}
 
-####Usability and User Experience
+#### Usability and User Experience
 
 I follow a couple core principles when it comes to designing products. At the base of the pillar is Usability and User Experience. I kept _trackPageview because I believe it is more usable and provides a better tracking experience.
 
@@ -357,7 +357,7 @@ Maybe it's just me, but maybe our Google Overloads want us to realize something:
 *It's more important how you use the data than how you view it.*
 
 
-####Special Thanks!
+#### Special Thanks!
 @Rene: Thanks for suggesting to make the whitelist more readable.
 
 @Justo @Scott: For highlighting the _trackPageview and _trackEvent issue and putting it up for discussion.

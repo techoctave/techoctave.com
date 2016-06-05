@@ -12,7 +12,7 @@ People say the world is getting smaller. That there just isn't that much left to
 
 The other day, we spent an absurd amount of time trying to find the best way to serialize a simple document for use in an XML Web Service call. Our wish is that this code snippet helps someone else.
 
-###Serialize Binary Documents
+### Serialize Binary Documents
 Here's how we serialized a binary file to a string based format in C#:
 
 {% highlight js %}
@@ -39,7 +39,7 @@ Well, now you know how.
 
 **As an aside, if you're not familiar with the term Plain Old C# Object, I encourage you to read up on design principles in leading ["Enterprise" Architecture][3]. It's truly a fascinating read. And yes, I know POCO stands for Plain Old CLR Object, but who are we kidding right? :)* 
 
-###Deserialize Binary Documents
+### Deserialize Binary Documents
 
 Deserialization - that is converting a Base64String to a binary document - is just as simple. Here's how:
 

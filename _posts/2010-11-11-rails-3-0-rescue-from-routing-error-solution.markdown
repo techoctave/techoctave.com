@@ -12,7 +12,7 @@ Well, I've got good news and I've got bad news. As of Rails 3.0.1, using rescue_
 
 The good news is I have a solution that will keep you in unison with the Rails Core Team. The [Rails team has promised a fix some time in Rails 3.1][1]. Until then, I've got readers and I've got customers and I *shudder* at the thought of showing them a generic error page.
 
-###The Situation
+### The Situation
 
 It's bad enough an error has occurred in the first place. At that point I want to take control of the situation and rescue my audience from a bad experience back to enjoyment!
 
@@ -39,7 +39,7 @@ Now, for those of you who don't know, [I'm a realist][2]. So, I'm not expecting 
 
 Personally, I'm going to wait for the Official fix from the Rails Core Team. In the meantime, I need a simple, no side effects solution that I can use right now!
 
-###Simple Solution
+### Simple Solution
 
 This is one of those times [when it's great to be a developer][3]. There is nothing we can't solve with a little [elbow grease and ingenuity][4]. 
 
@@ -51,7 +51,7 @@ This code should go to the end of your routes.rb file. That way it will be given
 
 {% highlight ruby %}
 Yourapp::Application.routes.draw do
-  #Last route in routes.rb
+  # Last route in routes.rb
   match '*a', :to => 'errors#routing'
 end
 {% endhighlight %}

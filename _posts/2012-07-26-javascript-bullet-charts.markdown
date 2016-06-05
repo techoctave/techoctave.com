@@ -14,15 +14,15 @@ Now given, our customers are no lightweights. I can say, without a single doubt,
 
 No small feat indeed, but a very very extremely smart one. Not only were we able to knock out the new Bullet Chart quicker, but now the chart will be supported indefinitely. And our customer saved a ton of time.
 
-###What are Bullet Charts anyway?
+### What are Bullet Charts anyway?
 
-####Introduction to the Bullet Chart
+#### Introduction to the Bullet Chart
 
 The [Bullet Chart][3] is a type of chart envisioned by business intelligence consultant Stephen Few circa 1995. The Bullet Chart was designed to convey a rich story clearly in little space.
 
 Its linear and no-frills design provides a rich display of data in a small space, which is essential on a dashboard. Like most meters and [circular gauges][4], bullet graphs feature a single quantitative measure (for example, year-to-date revenue) along with complementary measures to enrich the meaning of the featured measure.
 
-####Breaking down the Bullet Chart
+#### Breaking down the Bullet Chart
 
 The bullet graph consists of five primary components:
 
@@ -40,7 +40,7 @@ The bullet graph consists of five primary components:
 
 <img src="http://upload.wikimedia.org/wikipedia/en/thumb/e/e1/Bullet_graph_labeled.png/500px-Bullet_graph_labeled.png" alt="520" alt="JavaScript Bullet Graph" />
 
-####Applying the Bullet Chart to Hustle & Code, LLC
+#### Applying the Bullet Chart to Hustle & Code, LLC
 
 Here, maybe between $0 and $200,000 in revenue is considered "Low". Next, between $200,000 and $250,000 in revenue could be considered "Medium". Finally, between $250,000 and $300,000 in revenue could be considered "High".
 
@@ -52,23 +52,23 @@ At a glance, it's clear they did excellent! Lo and Behold, the Hustle & Code Tea
 
 Quick data visualization results, at a glance and clean. That's the power of the Bullet Graph and we love that we're able to offer this chart as part of our [JavaScript Charts Library][5].
 
-###Using our Bullet Chart
+### Using our Bullet Chart
 
 Our JavaScript Bullet Chart stands on the base of our [Six Core Principles for JavaScript chart libraries][6]. It's crisp, clear, cross-browser and mobile ready JavaScript. But, at it's core, it's framework agnostic.
 
 That means whether you're using jQuery or Prototype or Mootools or Google Web Toolkit (GWT), our charts just work. So pick your favorite and jump right in...
 
-####Horizontal Bullet Chart
+#### Horizontal Bullet Chart
 
 Creating a horizontal Bullet Chart library is as simple as this:
 
-####HTML
+#### HTML
 
 {% highlight js %}
     <div id="revenue"></div>
 {% endhighlight %}
 
-####JavaScript
+#### JavaScript
 
 {% highlight js %}
 var revenue = new BulletChart("revenue", {
@@ -84,7 +84,7 @@ The above instance of the BulletChart class creates the sample Bullet Chart deta
 
 Simplicity the ultimate arbiter, our BulletChart library is flushed with smart defaults and multiple example implementations to speed up your project timeline.
 
-####Vertical Bullet Chart
+#### Vertical Bullet Chart
 
 Creating a vertical Bullet Chart is just as simple. Simply set the *vertical* property to true:
 
@@ -115,7 +115,7 @@ revenue.setMarkers([125]);
 
 That simple.
 
-####Customizing our Bullet Charts
+#### Customizing our Bullet Charts
 
 Like all of our JavaScript gauges and JavaScript charts, our Bullet Chart is highly customizable.
 

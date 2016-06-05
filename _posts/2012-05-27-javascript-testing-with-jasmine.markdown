@@ -15,7 +15,7 @@ The [Jasmine documentation][2] is really good. So I won't go into every single d
 
 Here's an inside look at our gauge library's test suite:
 
-###Getting started with Jasmine
+### Getting started with Jasmine
 
 First, download the latest [Jasmine][3] build from Github. Then rename the folders to tests. Then add a new spec to the spec folder.
 
@@ -48,11 +48,11 @@ SpecRunner is also handy for setting up DOM test harnesses:
 <div id="tests" style="display: none;"></div>
 {% endhighlight %}    
 
-###Suites and Specs
+### Suites and Specs
 
 Jasmine is composed of suites and specs.
 
-####Specs
+#### Specs
 A spec is just a JavaScript function that takes two parameters:
 
 {% highlight js %}
@@ -65,7 +65,7 @@ it("should be able to set a width", function() {
 
 The first parameter is the spec description. The second parameter is an anonymous JavaScript function that implements the spec. Here, we expect a new gauge instance to have a default width of 195.
 
-####Suites
+#### Suites
 
 A suite is composed of a list of specs:
 
@@ -90,7 +90,7 @@ describe("Gauge", function() {
 
 Once you get this core concept, you're up and running. Things can get really interesting after that. But, the crux of the matter is you're testing and that's great.
 
-###You can't test all the things all the time
+### You can't test all the things all the time
 
 A great man once said, "Errors using inadequate data are much less than those using no data at all." That man was [Charles Babbage][4], a pioneer of computer engineering and science.
 
@@ -100,7 +100,7 @@ Initially, we had around 55 tests. At first, you think Jasmine will be just anot
 
 Listen, you can't test all the things all the time. Our gauge library currently has 72 exposed properties and that's not even including class methods. Do you think any developer can code new features and still validate existing features at the same time? Hell no! Well, maybe [Jon Skeet][5] can. But you, my friend, are no Jon Skeet.
 
-###Jasmine is beautiful
+### Jasmine is beautiful
 
 In each of the scenarios above, you see me using a gauge object.
 Every spec must have access to an instance of the Gauge class to run.
@@ -127,7 +127,7 @@ describe("Gauge", function() {
 
 After awhile, creating instance-after-instance becomes tedious at-best. There are better ways.
 
-####Setup and Teardown
+#### Setup and Teardown
 
 Jasmine provides methods to help you Don't Repeat Yourself (DRY):
 
@@ -161,7 +161,7 @@ Before each spec is called, I create an instance of the Gauge class and attach i
 
 This DOM element is located in SpecRunner.html. After each spec has finished executing, I delete the gauge instance. This technique works remarkably well for many scenarios.
 
-####Using Jasmine Matchers
+#### Using Jasmine Matchers
 
 Jasmine BDD has several built-in matchers. A full list of [Jasmine matchers][6] are available on the Jasmin Wiki. Here are a few of the matchers we use and how to implement them:
 
@@ -209,7 +209,7 @@ The matcher *toContain* passes if array or string x contains y.
 
 You can even extend Jasmine to write your own custom matchers.
 
-###Closing thoughts on using Jasmine BDD
+### Closing thoughts on using Jasmine BDD
 
 With Jasmine, we're able to focus our limited time and energy to refactor and craft killer features. Jasmine gives us the confidence to know we're not breaking existing functionality.
 

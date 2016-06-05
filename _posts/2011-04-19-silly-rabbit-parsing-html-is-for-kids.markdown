@@ -12,7 +12,7 @@ If I had a nickel for every time a developer says, "Don't worry, I'll just whip 
 
 To be honest, I've been there done that. That's why I know it's generally a bad idea. Given, there are times when you have to suck it up and use a Regular Expression. But experience has shown me that this is rarely one of those times.
 
-###Red Pill - Do you even have to ask?
+### Red Pill - Do you even have to ask?
 
 Whether it's reading HTML or stripping HTML tags out of user generated content, the feeling is always the same - utter shock!
 Talking a developer out of using RegEx to parse HTML is like talking a good friend off the ledge. Curiously, no one ever says, "Hey, let's use RegEx to parse XML!" So what's the deal with HTML? Is it the familiarity?
@@ -21,7 +21,7 @@ Hell, even Jon Skeet cannot parse HTML using regular expressions and the last gu
 
 Time is too valuable to start down this path. Spend what little time you have implementing your core requirements and business logic. This is not a fight you need to pursue. Just say no and get back to the primary task at hand.
 
-###The problem
+### The problem
 
 Where do I begin? Where do I even begin? What can I say that hasn't [already been said][2].
 
@@ -31,7 +31,7 @@ What this boils down to is simple: You will set your project in a never ending c
 
 You don't want that! Believe me, you don't need that! Technical Debt is not something to take on lightly. It's not something to take on at all. But for God's sake, don't take it on to parse HTML.
 
-###The solution
+### The solution
 
 Don't take on Technical Debt by rolling your own RegEx HTML parser. Don't do it because the solution is simple - use an HTML parser library. Preferably, one with XPath and CSS3 Selector support.
 
@@ -60,7 +60,7 @@ There, now all you have to do is get up to speed. Then see if one of these full-
 
 Using an HTML Parser isn't some new bag of tricks either. Don't be surprised to see jQuery-like syntax for some of the more syntactically pleasing libraries.
 
-###Toss that cowboy hat out the door
+### Toss that cowboy hat out the door
 
 This is not about being a Cowboy Coder. You do not have to be a Hero. I'm pretty sure you have a business task to accomplish. And I'm equally sure that task isn't to write an HTML Parser. So don't do it - just say no!
 

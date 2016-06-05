@@ -117,7 +117,7 @@ em.trademark {
 	position: relative;
 	font: normal 200% Time New Roman;
 	padding: 4px 0 10px 0;
-	color: #A40000;
+	color: # A40000;
 }
 
 .principles dt:before {
@@ -458,16 +458,16 @@ section#single-wrap #share {
 section#single-wrap #share .line,
 section#single-wrap .posts .line,
 section#single-wrap .line {
-    border-bottom: 1px dotted #E0E1E6;
+    border-bottom: 1px dotted # E0E1E6;
 }
 
 section#single-wrap .hits h1 a {
     text-decoration: none;
-    border-bottom: 1px solid #E0E1E6;
+    border-bottom: 1px solid # E0E1E6;
 }
 
 section#single-wrap .hits h1 a:hover {
-    border-bottom: 3px solid #E0E1E6;
+    border-bottom: 3px solid # E0E1E6;
 }
 
 section#single-wrap .posts h1 a {
@@ -574,7 +574,7 @@ section#single-wrap p.testimonial em {
 }
 
 section#single-wrap p strong {
-	background-color: #FFFFCC;
+	background-color: # FFFFCC;
 }
 
 section#single-wrap footer { 
@@ -858,9 +858,9 @@ table.plans {
 
 table.plans td {
 	padding: 15px;
-    border-right: 1px dotted #DDDDDD;
-	border-left: 1px dotted #DDDDDD;
-	border-bottom: 1px dotted #DDDDDD; 
+    border-right: 1px dotted # DDDDDD;
+	border-left: 1px dotted # DDDDDD;
+	border-bottom: 1px dotted # DDDDDD; 
 	text-align: center; 
 	vertical-align: bottom;	
     
@@ -868,7 +868,7 @@ table.plans td {
 }
 
 table.plans th {
-	border-bottom: 3px solid #DDDDDD;
+	border-bottom: 3px solid # DDDDDD;
 	padding-top: 30px;
 	padding-bottom: 15px;
     
@@ -891,7 +891,7 @@ table.plans tr td.product{
     text-align: left;
 }
 table.plans tr td.product a.i {
-    color: #FFFFFF;
+    color: # FFFFFF;
     display: block;
     float: right;
     font-size: 20px;
@@ -899,23 +899,23 @@ table.plans tr td.product a.i {
     padding: 2px 6px;
 	border-radius: 3px 3px 3px 3px;
 	text-decoration: none;
-	background-color: #CC0000;
+	background-color: # CC0000;
 }
 
 table.plans th.Supreme {
-	color: #CC0000;
+	color: # CC0000;
 }
 
 table.plans td.Supreme {
-	background: #F9F9F9;
+	background: # F9F9F9;
 }
 
 
 table.plans tr.details td {
     font: 11px/16px verdana,sans-serif;
     text-align: left;
-	border-bottom: 3px solid #DDDDDD;
-	border-top: 3px solid #DDDDDD;
+	border-bottom: 3px solid # DDDDDD;
+	border-top: 3px solid # DDDDDD;
 }
 
 /*-----------------------------------------------------------
@@ -926,9 +926,9 @@ table.plans tr.details td {
 }
 
 a.buy {
-	background: #CC0000;
+	background: # CC0000;
     border-radius: 10px 10px 10px 10px;
-    color: #FFFFFF;
+    color: # FFFFFF;
     display: block;
     font: 35px arial,sans-serif;
     overflow: hidden;
@@ -1027,7 +1027,7 @@ section#single-wrap .enterprise p {
 	font-size: 12px;
 	text-align: center;
 	
-	background-color: #F9F9F9;
+	background-color: # F9F9F9;
     border-radius: 7px 7px 7px 7px;
     padding: 10px 7px;
 }
@@ -1039,8 +1039,8 @@ section#single-wrap .enterprise p {
 .top {
 	text-decoration: none;
 	
-	background: #CC0000;
-    color: #FFFFFF;
+	background: # CC0000;
+    color: # FFFFFF;
     display: block;
     font: 180% arial,sans-serif;
     overflow: hidden;
@@ -1226,18 +1226,18 @@ section#single-wrap h1.galileo a {
 	padding-bottom: 10px;
     text-decoration: none;
 	
-	color: #DEF1F8;
+	color: # DEF1F8;
     font-family: "InsolentRegular",Arial,sans-serif;
 	text-shadow: 1px 1px 0 black, 2px 2px 0 #476871, 3px 3px 0 #476871, 4px 4px 0 #476871, 5px 5px 0 #476871, 6px 6px 0 #476871, 7px 7px 0 #476871;
 }
 
 section#single-wrap strong.one {
 	font-weight: normal;
-	border-bottom: 3px solid #CC0000;
+	border-bottom: 3px solid # CC0000;
 }
 
 section#single-wrap h3.buy a {
-	color: #CC0000;
+	color: # CC0000;
 	font-size: 35px;
 	text-decoration: underline;
 }

@@ -14,7 +14,7 @@ Our Gauge Suite includes a [highly configurable API][2]. Choose from over 40+ cu
 
 They've been my passion and baby for almost three years now. It's an honor to share them with you. I hope you enjoy.
 
-###Long Live JavaScript
+### Long Live JavaScript
 The [framework wars][3] have long passed and we all know who won. Much good came out of those days. Developers learned the many intricacies of cross-browser development. But most importantly, we came to appreciate those frameworks which normalized that environment for us.
 
 [jQuery][4] is one of those frameworks and I love it. But there are many other great frameworks out there too. I want our customers to use our dashboard gauges with whichever frameworks they choose.
@@ -37,7 +37,7 @@ That's why we based our [Dashboard Gauge Suite][5] on Six Core Principles. We fe
 
 In today's JavaScript environment, I believe framework agnosticism is central to developer happiness. Sometimes you simply don't have the time to fiddle with yet-another-javascript-framework. Sometimes you just need the software to work. Our gauges just work!
 
-###JavaScript and Raphael.js
+### JavaScript and Raphael.js
 
 Our dashboard gauges were forged on principled engineering and JavaScript best practices. For one, we strive for 100% cross-browser compatibility. Our dashboard gauges are based on high-quality vector graphics, SVG and VML (IE7+).
 
@@ -47,7 +47,7 @@ Think of HTML5 Canvas as Adobe Photoshop and SVG as Adobe Illustrator. Both are 
 
 From the very beginning, we aimed for highly configurable gauges with a very intuitive API. Setting your first gauge is as simple as this:
 
-####JavaScript Code
+#### JavaScript Code
 Load Raphael.js and our Gauge.js package. Wait for the DOM to load and then create an instance of our Gauge class:
 
 {% highlight js %}
@@ -72,7 +72,7 @@ window.onload = function() {
 
 Note, label, minValue, maxValue, majorTicks and minorTicks are only five of 40+ configurable gauge properties.
 
-####HTML5 Code
+#### HTML5 Code
 Minimum requirement for a gauge instance is a unique DOM identifier to attach the gauge instance:
 
 {% highlight html %}
@@ -87,7 +87,7 @@ Many of you will need to poll a remote server to update your gauges. For an adva
 
 Setting the value causes the needle to move to the value entered. Set different minValue and maxValue and give it a whirl. Focus on implementing your business logic. We've got you covered in the browser department.
 
-###Dashboards and Business Intelligence
+### Dashboards and Business Intelligence
 
 Think data visualization. Our dashboard gauges are a great way for Senior Management to get a pulse on the company. Get your very own copy of our Dashboard Gauges today - you'll be happy you did!
 
@@ -101,7 +101,7 @@ We believe we've found that magic point with our [Dashboard Gauge Suite][8]. We 
 
 Analyze tons of data in a visually appealing manner. Build a Business Intelligence dashboard you'll be proud of and will love working on. Give your Senior Management an intuitive pulse on the company's metrics.
 
-###Pragmatic Point-of-View
+### Pragmatic Point-of-View
 
 Data visualization is about having fun, but it's about getting real work done too. Our Dashboard Gauge Suite works in every major browser that supports vector graphics - Chrome, Firefox, Internet Explorer (IE7+), Safari (iPad and iPhone). Our Dashboard Gauge Suite also runs on top of the [jQuery Mobile][9] framework and other client-side mobile frameworks.
 
@@ -109,7 +109,7 @@ In addition, you can also run our gauge suite using your favorite server-side te
 
 Focus on your core business needs. We've got you covered in the data visualization department.
 
-###Download
+### Download
 
 Download all of our [JavaScript Dashboard Gauges][10] today!
 

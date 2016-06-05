@@ -50,6 +50,6 @@ Blogcast is a simplistic Rails 3 blogging engine which has some real nice intell
 
 <footer>
     <p style="font-size: 80%;">TechOctave, The Lion, "Beautiful & Inspired" are Registered Trademarks of TechOctave, LLC.</p>
-    <p style="font-size: 65%;">HANDCRAFTED WITH <abbr style="color: #FF2400; font-variant: none" title="love">❤</abbr> IN COLUMBUS OHIO</p>
+    <p style="font-size: 65%;">HANDCRAFTED WITH <abbr style="color: # FF2400; font-variant: none" title="love">❤</abbr> IN COLUMBUS OHIO</p>
 </footer>
 

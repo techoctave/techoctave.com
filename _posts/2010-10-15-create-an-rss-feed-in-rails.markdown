@@ -10,7 +10,7 @@ Not too long ago, I showed you [how to create a blog archive for your Rails blog
 
 Here's a walk through for integrating RSS with your Rails blog.
 
-###RSS and Ruby on Rails - The Full Story
+### RSS and Ruby on Rails - The Full Story
 
 ####app/controllers/posts_controller.rb
 

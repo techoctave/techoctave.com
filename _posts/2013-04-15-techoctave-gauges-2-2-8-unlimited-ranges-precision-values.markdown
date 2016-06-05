@@ -12,7 +12,7 @@ The latest version of our [JavaScript Gauges][1] Suite is here! :)
 
 The biggest enhancements are Multiple Bands (Ranges) and Custom Value Precision. Now you can have Unlimited Bands and Unlimited Poowerrr (muahahaha) - Wait...
 
-###Release Notes: 2.2.8 Gauge.js
+### Release Notes: 2.2.8 Gauge.js
 
 ####[Enhancements]
 

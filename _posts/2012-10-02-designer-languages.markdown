@@ -14,15 +14,15 @@ The designer language usually compiles to its parent language and its compiler i
 
 But all this is nothing new. The Java language has survived its share of designer languages over the past decade or so.
 
-###Designer Languages: The Java Frontier
+### Designer Languages: The Java Frontier
 
-####Groovy
+#### Groovy
 
 James Strachan introduced the Java world to [Groovy][1] in early 2007. Dynamic and loosely typed, Groovy built upon the strengths of Java but had additional power features inspired by languages like Python, Ruby and Smalltalk.
 
 With the invention of web frameworks like Grails, Groovy continues to influence the J2EE landscape to this day. However, it wouldn't be long before the J2EE landscape would again be rocked.
 
-####Scala
+#### Scala
 
 Similar to Groovy, but with an increased focus on Functional Programming, [Scala][2] is another interesting designer language built on top of Java.
 
@@ -32,12 +32,12 @@ Twitter's move to Scala sent ripples through the Rails community and ushered in 
 
 Designer languages are the forest fires of the computer science world. And it wouldn't be long before sparks flew towards the JavaScript world.
 
-###Designer Languages: The JavaScript Frontier
+### Designer Languages: The JavaScript Frontier
 
 <img src="https://techoctave.com/c7/static/mona-lisa-javascript-designer-language-Comparison.jpg" alt="Designer Languages: TypeScript, CoffeeScript, GWT and Dart"/>
 
 
-####CoffeeScript
+#### CoffeeScript
 
 Jeremy Ashkenas, quietly committed [CoffeeScript][3] to the JavaScript world in late 2009. A year later, a stable CoffeeScript 1.0 was released.
 
@@ -81,7 +81,7 @@ That hope without action is little more than madness. That action with thoughtfu
 
 CoffeeScript went on to influence and spur further designer languages in both the static and dynamic space.
 
-####Dart
+#### Dart
 
 Google introduced the [Dart][5] language as a final solution to JavaScript in late 2011. The predecessor to Google Web Toolkit (GWT), Dart introduced static typing to the JavaScript landscape.
 
@@ -93,7 +93,7 @@ With a web server or desktop app, who cares what the compiler outputs - regardle
 
 Most would have thought it the end of big brand collision with JavaScript. But, like life itself, the unexpected happened and Microsoft entered the designer language scene.
 
-####TypeScript
+#### TypeScript
 
 Microsoft introduced a superset of JavaScript called [TypeScript][7] in late 2012. Some called TypeScript an improved Dart. Yet, others saw TypeScript as a more [verbose CoffeeScript][8]. 
 
@@ -139,7 +139,7 @@ I predict TypeScript adoption will be lack luster at best. Not because the langu
 In fact, TypeScript is much more pleasing to read than Dart. That itself is a success for the TypeScript Team. TypeScript will fail because it doesn't improve the development experience.
 
 
-###Designer Languages: JavaScript Afterthoughts
+### Designer Languages: JavaScript Afterthoughts
 
 Folks tried to bring dynamic features to a static Java. Then, interestingly enough, other folks clamor to add static features to a dynamic JavaScript.
 
@@ -166,4 +166,4 @@ My point is JavaScript was never broken. It's beautiful and timeless. As John Re
   [6]: http://news.ycombinator.com/item?id=3097105
   [7]: http://www.typescriptlang.org/
   [8]: https://plus.google.com/118095276221607585885/posts/MgzNUSTwjRt
-  [9]: http://en.wikipedia.org/wiki/Dart_(programming_language)#Criticism
+  [9]: http://en.wikipedia.org/wiki/Dart_(programming_language)# Criticism

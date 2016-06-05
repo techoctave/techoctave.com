@@ -12,7 +12,7 @@ For awhile now, folks have been asking whether our [JavaScript Gauges][1] and [J
 
 More importantly, I wanted to take some time to walk you through how the integration might look for you.
 
-###Google Web Toolkit (GWT)
+### Google Web Toolkit (GWT)
 
 For those who don't know, [GWT is a development toolkit][3] for building and optimizing browser-based web applications. Specifically, developers write their applications in Java, then GWT cross-compiles the Java source code into JavaScript.
 
@@ -21,7 +21,7 @@ Often, you will need to integrate GWT with existing handwritten JavaScript or wi
 
 The JavaScript Native Interface (JSNI) feature of GWT can solve both of these problems by allowing you to integrate JavaScript directly into your application's Java source code.
 
-###JavaScript Native Interface (JSNI)
+### JavaScript Native Interface (JSNI)
 
 GWT borrows from the Java Native Interface (JNI) concept to implement JavaScript Native Interface (JSNI).
 

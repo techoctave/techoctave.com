@@ -8,7 +8,7 @@ permalink: c7/posts/3-passenger-for-nginx-is-the-jquery-of-web-server-software
 
 Update: Check out my tutorial on [How to host a Rails app with Phusion Passenger for Nginx][1].
 
-###Be Careful with that Latte
+### Be Careful with that Latte
 
 Earlier this week, I consulted on a client's Rails app deployment. The client was trying to deploy his Software as a Service Rails app on an Ubuntu distro using Apache and modruby. Everything sounded decent until I heard modruby.
 
@@ -24,7 +24,7 @@ Nginx is a powerful, lightweight, high-performance Web server. Phusion passenger
 
 Combined with Ruby Enterprise Edition (REE), your next Rails app could use 33% less memory. On average, that's about 250MB less memory footprint versus another infrastructure strategy. All that cost savings for the same app!
 
-###Finally Some Syntactic Sugar with your Coffee
+### Finally Some Syntactic Sugar with your Coffee
 
 When I say Nginx is the jQuery of Web servers, I mean Nginx is simple without being simplistic. With its C like configuration syntax, you can express Web server related tasks in a developer appealing way. I predict Nginx will do for Web server deployment what jQuery did for JavaScript development - revolutionize!
 

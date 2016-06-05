@@ -18,7 +18,7 @@ Less software is our fight against complexity. [Less software][2] means less fea
 
 For me, less software is also about preparing my mind to spot and eliminate pain points. For any of you who have started a new business, I don't have to tell you how difficult spotting pain points can be.
 
-###Less Software is Ascension
+### Less Software is Ascension
 
 Luck plays a factor in revealing those pain points. Yes. I respect Lady Luck and honor her as I do [Our Lady of the Code][3]. Yet, at my core, I fundamentally believe in human talent.
 
@@ -28,7 +28,7 @@ A human mind must be cultivated to recognize opportunity, imbued with the courag
 
 One could easily spend anywhere from $30,000 to $100,000 cultivating such talents. How many people do you think have the will or resources to do this? Not many. This is why great software is so rare. Still, great software is not impossible to proliferate.
 
-###Less Software is Human Potential
+### Less Software is Human Potential
 
 What does human potential have to do with Less Software? Everything. Usable software isn't powered by the latest framework or the next shiny storage engine. The best software is powered by a more intimate energy source - YOU.
 
@@ -42,7 +42,7 @@ The Status Quo is stuck in this seemingly infinite cycle of *wannabes* and *what
 
 Many good developers quit giving back as bloggers. Why? Because writing with the Status Quo is painful. Blogcast is the pain killer.
 
-###Less Software takes a walk in your shoes
+### Less Software takes a walk in your shoes
 
 Blogcast is different. From the moment I started development, my aim was to get out of your way so you could express yourself fully and passionately. 
 
@@ -60,7 +60,7 @@ I am laser focused on one goal - making the writing experience fun. To me, anyth
 
 I've come to the consensus that either the Status Quo doesn't use its own software or doesn't care about you as a writer! Some would say both.
 
-###Less Software is the Cure to Bloatware
+### Less Software is the Cure to Bloatware
 
 The time has passed to prevent Bloatware. As a community, we are too far gone. The *what's next* disease took hold long before our time and infects us as we speak.
 
