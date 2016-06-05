@@ -9,7 +9,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <meta http-equiv="content-language" content="en-gb" />
       
-      <meta name="description" content="If I had a nickel for every time a developer says, "Don't worry, I'll just whip up a RegEx and parse that HTML in no time." I'd retire right this very second. I've grown less and less shocked over the years. Still I'm left surprised every time. To be honest, I've been there done that. That's why I know it's generally a bad idea. Given, there are times when you have to suck it up...">
+      <meta name="description" content="If I had a nickel for every time a developer says, “Don’t worry, I’ll just whip up a RegEx and parse that HTML in no time.” I’d retire right this very second. I’ve grown less and less shocked over the years. Still I’m left surprised every time. To be honest, I’ve been there done that. That’s why I know it’s generally a bad idea. Given, there are times when you have to suck it up...">
       
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10">
       <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
@@ -42,36 +42,36 @@
     <div itemprop="articleBody">
       <p><img src="/c7/static/trix.jpg" alt="trix" /></p>
 
-<p>If I had a nickel for every time a developer says, "Don't worry, I'll just whip up a RegEx and parse that HTML in no time." I'd retire right this very second. I've grown less and less shocked over the years. Still I'm left surprised every time.</p>
+<p>If I had a nickel for every time a developer says, “Don’t worry, I’ll just whip up a RegEx and parse that HTML in no time.” I’d retire right this very second. I’ve grown less and less shocked over the years. Still I’m left surprised every time.</p>
 
-<p>To be honest, I've been there done that. That's why I know it's generally a bad idea. Given, there are times when you have to suck it up and use a Regular Expression. But experience has shown me that this is rarely one of those times.</p>
+<p>To be honest, I’ve been there done that. That’s why I know it’s generally a bad idea. Given, there are times when you have to suck it up and use a Regular Expression. But experience has shown me that this is rarely one of those times.</p>
 
-<h3>Red Pill - Do you even have to ask?</h3>
+<h3 id="red-pill---do-you-even-have-to-ask">Red Pill - Do you even have to ask?</h3>
 
-<p>Whether it's reading HTML or stripping HTML tags out of user generated content, the feeling is always the same - utter shock!
-Talking a developer out of using RegEx to parse HTML is like talking a good friend off the ledge. Curiously, no one ever says, "Hey, let's use RegEx to parse XML!" So what's the deal with HTML? Is it the familiarity?</p>
+<p>Whether it’s reading HTML or stripping HTML tags out of user generated content, the feeling is always the same - utter shock!
+Talking a developer out of using RegEx to parse HTML is like talking a good friend off the ledge. Curiously, no one ever says, “Hey, let’s use RegEx to parse XML!” So what’s the deal with HTML? Is it the familiarity?</p>
 
 <p>Hell, even Jon Skeet cannot parse HTML using regular expressions and the last guy to try went <a href="http://www.codinghorror.com/blog/2009/11/parsing-html-the-cthulhu-way.html">batshit crazy</a>.</p>
 
 <p>Time is too valuable to start down this path. Spend what little time you have implementing your core requirements and business logic. This is not a fight you need to pursue. Just say no and get back to the primary task at hand.</p>
 
-<h3>The problem</h3>
+<h3 id="the-problem">The problem</h3>
 
-<p>Where do I begin? Where do I even begin? What can I say that hasn't <a href="http://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags#answer-1732454">already been said</a>.</p>
+<p>Where do I begin? Where do I even begin? What can I say that hasn’t <a href="http://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags#answer-1732454">already been said</a>.</p>
 
-<p>Honestly, I don't know where to begin. The truth is there will be hundreds of scenarios that you didn't or couldn't or will never think about. Maybe even thousands.</p>
+<p>Honestly, I don’t know where to begin. The truth is there will be hundreds of scenarios that you didn’t or couldn’t or will never think about. Maybe even thousands.</p>
 
 <p>What this boils down to is simple: You will set your project in a never ending cycle of fix-break-fix because chances are there will always be HTML to break your little RegEx parser.</p>
 
-<p>You don't want that! Believe me, you don't need that! Technical Debt is not something to take on lightly. It's not something to take on at all. But for God's sake, don't take it on to parse HTML.</p>
+<p>You don’t want that! Believe me, you don’t need that! Technical Debt is not something to take on lightly. It’s not something to take on at all. But for God’s sake, don’t take it on to parse HTML.</p>
 
-<h3>The solution</h3>
+<h3 id="the-solution">The solution</h3>
 
-<p>Don't take on Technical Debt by rolling your own RegEx HTML parser. Don't do it because the solution is simple - use an HTML parser library. Preferably, one with XPath and CSS3 Selector support.</p>
+<p>Don’t take on Technical Debt by rolling your own RegEx HTML parser. Don’t do it because the solution is simple - use an HTML parser library. Preferably, one with XPath and CSS3 Selector support.</p>
 
 <p>Depending on your language and platform, I understand this is easier said than done. But if you can pull it off, the benefits will far far outweigh the thrill of slinging on your mouse and riding into the sunset with your trusty Aeron deluxe chair.</p>
 
-<p>In fact, I'll do you one better. Instead of just saying, "Grab an HTML Parser." I'll point out fine HTML Parsers for different platforms:</p>
+<p>In fact, I’ll do you one better. Instead of just saying, “Grab an HTML Parser.” I’ll point out fine HTML Parsers for different platforms:</p>
 
 <p>Ruby: Try <a href="http://nokogiri.org/">Nokogiri</a></p>
 
@@ -91,13 +91,14 @@ Talking a developer out of using RegEx to parse HTML is like talking a good frie
 
 <p>There, now all you have to do is get up to speed. Then see if one of these full-fledged HTML Parsers will do the trick.</p>
 
-<p>Using an HTML Parser isn't some new bag of tricks either. Don't be surprised to see jQuery-like syntax for some of the more syntactically pleasing libraries.</p>
+<p>Using an HTML Parser isn’t some new bag of tricks either. Don’t be surprised to see jQuery-like syntax for some of the more syntactically pleasing libraries.</p>
 
-<h3>Toss that cowboy hat out the door</h3>
+<h3 id="toss-that-cowboy-hat-out-the-door">Toss that cowboy hat out the door</h3>
 
-<p>This is not about being a Cowboy Coder. You do not have to be a Hero. I'm pretty sure you have a business task to accomplish. And I'm equally sure that task isn't to write an HTML Parser. So don't do it - just say no!</p>
+<p>This is not about being a Cowboy Coder. You do not have to be a Hero. I’m pretty sure you have a business task to accomplish. And I’m equally sure that task isn’t to write an HTML Parser. So don’t do it - just say no!</p>
 
-<p>You'll thank yourself in a couple weeks when the Red Bull and adrenaline wears off. It's really not worth it! Granted we all have to start from somewhere. Think of this as your new beginning.</p>
+<p>You’ll thank yourself in a couple weeks when the Red Bull and adrenaline wears off. It’s really not worth it! Granted we all have to start from somewhere. Think of this as your new beginning.</p>
+
 
     </div>
     

@@ -9,7 +9,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <meta http-equiv="content-language" content="en-gb" />
       
-      <meta name="description" content="Objects, Ruby Classes and Mixins are the topics today. Ruby is a dynamic language with a focus on simplicity and productivity. Object Oriented programming in Ruby is at once elegant and simple. Ready for more power and flexibility? Let's get started... Most academics approach object oriented discussions with Tonka toys and furry kittens. Well, academia can take a backseat. From here on out, dump the Tonka toys and put the kittens to bed - we're...">
+      <meta name="description" content="Objects, Ruby Classes and Mixins are the topics today. Ruby is a dynamic language with a focus on simplicity and productivity. Object Oriented programming in Ruby is at once elegant and simple. Ready for more power and flexibility? Let’s get started… Most academics approach object oriented discussions with Tonka toys and furry kittens. Well, academia can take a backseat. From here on out, dump the Tonka toys and put the kittens to bed - we’re...">
       
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10">
       <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
@@ -40,18 +40,17 @@
     <h5 class="page-author">Handwritten by TVD</h5>
 
     <div itemprop="articleBody">
-      <p>Objects, Ruby Classes and Mixins are the topics today. Ruby is a dynamic language with a focus on simplicity and productivity. Object Oriented programming in Ruby is at once elegant and simple. Ready for more power and flexibility? Let's get started...</p>
+      <p>Objects, Ruby Classes and Mixins are the topics today. Ruby is a dynamic language with a focus on simplicity and productivity. Object Oriented programming in Ruby is at once elegant and simple. Ready for more power and flexibility? Let’s get started…</p>
 
-<p>Most academics approach object oriented discussions with Tonka toys and furry kittens. Well, <a href="http://techoctave.com/marketing-for-geeks">academia can take a backseat</a>. From here on out, dump the Tonka toys and put the kittens to bed - we're talking Lightsabers and Jedi baby!</p>
+<p>Most academics approach object oriented discussions with Tonka toys and furry kittens. Well, <a href="http://techoctave.com/marketing-for-geeks">academia can take a backseat</a>. From here on out, dump the Tonka toys and put the kittens to bed - we’re talking Lightsabers and Jedi baby!</p>
 
-<iframe width="100%" height="500" src="http://www.youtube.com/embed/_xP3fI7yn5s" frameborder="0" allowfullscreen></iframe>
+<iframe width="100%" height="500" src="http://www.youtube.com/embed/_xP3fI7yn5s" frameborder="0" allowfullscreen=""></iframe>
 
-
-<h3>Objects</h3>
+<h3 id="objects">Objects</h3>
 
 <p>An object is an instance of a class. Each instance having its own unique attributes and state.</p>
 
-<h4>dojo.rb</h4>
+<h4 id="dojorb">dojo.rb</h4>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">&#39;Jedi&#39;</span>
 
@@ -60,20 +59,19 @@
 <span class="n">anakin</span><span class="o">.</span><span class="n">lightsaber</span><span class="p">(</span><span class="s2">&quot;Ruby&quot;</span><span class="p">)</span>
 <span class="n">anakin</span><span class="o">.</span><span class="n">juyo</span></code></pre></div>
 
-
 <p>Here, the <em>anakin</em> object is an instance of the Jedi class. Apparently, Anakin is having trouble with some galactic fraktards and fires up his Ruby lightsaber using the <em>lightsaber</em> method. Then Anakin proceeds to bring the hurt using a lightsaber combat form called <a href="http://starwars.wikia.com/wiki/Lightsaber_combat">Juyo</a>.</p>
 
 <p>Using the Jedi class is deceivingly simple. That simplicity is possible because of a well designed domain model (collection of ruby classes that model a particular system).</p>
 
-<p>In this article, I'll take you behind the scenes and show you the techniques you need to write clean, maintainable and awesome Ruby code.</p>
+<p>In this article, I’ll take you behind the scenes and show you the techniques you need to write clean, maintainable and awesome Ruby code.</p>
 
-<h3>Ruby Classes</h3>
+<h3 id="ruby-classes">Ruby Classes</h3>
 
-<p>In Ruby, an class (object) encapsulates a group of attributes (state) and methods (operations). A developer manipulates an object's state (instance variables) only through class accessors and methods.</p>
+<p>In Ruby, an class (object) encapsulates a group of attributes (state) and methods (operations). A developer manipulates an object’s state (instance variables) only through class accessors and methods.</p>
 
-<h4>Jedi.rb</h4>
+<h4 id="jedirb">Jedi.rb</h4>
 
-<p>Here's how a Jedi class might look:</p>
+<p>Here’s how a Jedi class might look:</p>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">&#39;Padawan&#39;</span>
 <span class="nb">require</span> <span class="s1">&#39;Forms&#39;</span>
@@ -91,8 +89,7 @@
   <span class="k">end</span>
 <span class="k">end</span></code></pre></div>
 
-
-<h4>Padawan.rb</h4>
+<h4 id="padawanrb">Padawan.rb</h4>
 
 <p>And the Padawan class might look like this:</p>
 
@@ -110,16 +107,14 @@
   <span class="k">end</span>
 <span class="k">end</span></code></pre></div>
 
+<p>Padawan would be derived from maybe a <em>Sentient</em> class. But for simplicity I’m including in the Padawan class attributes you might have seen in a class like <em>Sentient</em>. For example, the <em>@name</em> attribute.</p>
 
-<p>Padawan would be derived from maybe a <em>Sentient</em> class. But for simplicity I'm including in the Padawan class attributes you might have seen in a class like <em>Sentient</em>. For example, the <em>@name</em> attribute.</p>
+<h4 id="constructor-initialization">Constructor (Initialization)</h4>
 
-<h4>Constructor (Initialization)</h4>
-
-<p>The initialized method is Ruby's constructor method for class implementations. It's called whenever a new instance of a class is created. For example, here a new instance of the Jedi class is called. The result is the <em>anakin</em> object:</p>
+<p>The initialized method is Ruby’s constructor method for class implementations. It’s called whenever a new instance of a class is created. For example, here a new instance of the Jedi class is called. The result is the <em>anakin</em> object:</p>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1">#dojo.rb</span>
 <span class="n">anakin</span> <span class="o">=</span> <span class="no">Jedi</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;Anakin&quot;</span><span class="p">)</span></code></pre></div>
-
 
 <p>This example illustrates a beautiful feature of Ruby - <em>Flexible Initialization</em>. This means you have the option to pass a parameter or not:</p>
 
@@ -129,29 +124,26 @@
 <span class="o">.</span> <span class="o">.</span> <span class="o">.</span>
 <span class="k">end</span></code></pre></div>
 
-
 <p>You can choose not to pass a parameter. In that case, creating an instance of the Jedi object might look like this:</p>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">sith</span> <span class="o">=</span> <span class="no">Jedi</span><span class="o">.</span><span class="n">new</span></code></pre></div>
 
-
 <p>And the default value of the <em>@name</em> attribute would be <em>Unknown</em>.</p>
 
-<h4>Inspect</h4>
-
-<p>You've noticed by now that when we try to look at an object directly, we are shown something cryptic like <em>&lt;#Jedi:0x101237498 @name="Anakin"></em>. This is just a default behavior, and we are free to change it.</p>
+<h4 id="inspect">Inspect</h4>
+<p>You’ve noticed by now that when we try to look at an object directly, we are shown something cryptic like <em>&lt;#Jedi:0x101237498 @name=”Anakin”&gt;</em>. This is just a default behavior, and we are free to change it.</p>
 
 <p>All we need to do is add a method named <em>inspect</em>. You should return a string that describes the object in some meaningful way - including the states of some or all of its instance attributes.</p>
 
 <p>Here, we return the value of the <em>@name</em> attribute on the Padawan class. In this instance of the Jedi object, the value of the <em>@name</em> attribute is Anakin. So I setup the <em>inspect</em> method to return  <em>Force-Sensitive: Anakin</em>.</p>
 
-<p>Run <em>irb</em> from Terminal. Then <em>load 'dojo.rb'</em>. And type <em>Anakin</em>. Type <em>Exit</em> to leave irb.</p>
+<p>Run <em>irb</em> from Terminal. Then <em>load ‘dojo.rb’</em>. And type <em>Anakin</em>. Type <em>Exit</em> to leave irb.</p>
 
-<h4>Accessors</h4>
+<h4 id="accessors">Accessors</h4>
 
-<p>A class may have many attributes. It really all depends on the domain you're trying to model. Accessing those attributes directly is not a good practice. Instead, you should create accessors to read and write to those attributes.</p>
+<p>A class may have many attributes. It really all depends on the domain you’re trying to model. Accessing those attributes directly is not a good practice. Instead, you should create accessors to read and write to those attributes.</p>
 
-<p>To accomplish this in some languages is a pain. You would have to define a <em>getter</em> method and <em>setter</em> method for each class attribute. Imagine having 10 attributes. That's 20 different accessors you would have to write - in addition to writing your attributes!</p>
+<p>To accomplish this in some languages is a pain. You would have to define a <em>getter</em> method and <em>setter</em> method for each class attribute. Imagine having 10 attributes. That’s 20 different accessors you would have to write - in addition to writing your attributes!</p>
 
 <p>Ruby has a more elegant solution - the attr_accessor shortcut:</p>
 
@@ -159,7 +151,6 @@
   <span class="kp">attr_accessor</span> <span class="ss">:name</span>
   <span class="o">.</span> <span class="o">.</span> <span class="o">.</span>
 <span class="k">end</span></code></pre></div>
-
 
 <p>This gets you the following Ruby class methods for FREE:</p>
 
@@ -173,18 +164,16 @@
   <span class="vi">@name</span> <span class="o">=</span> <span class="n">value</span>
 <span class="k">end</span></code></pre></div>
 
-
 <p>Awesome! This is at once elegant and beautiful. You can add as much attribute accessors as you like: attr_accessor :name, :weight, :etc.</p>
 
-<p>You're not going to always want a <em>getter</em> and <em>setter</em>. Sometimes you might only need one. You can do that in Ruby:</p>
+<p>You’re not going to always want a <em>getter</em> and <em>setter</em>. Sometimes you might only need one. You can do that in Ruby:</p>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="kp">attr_reader</span> <span class="ss">:midi_chlorian</span>
 <span class="kp">attr_writer</span> <span class="ss">:heart_rate</span></code></pre></div>
 
-
 <p>You get the picture!</p>
 
-<h4>Methods</h4>
+<h4 id="methods">Methods</h4>
 
 <p>Methods are how we interact with our Ruby classes. Methods allow us to encapsulate activities specific to the particular class:</p>
 
@@ -193,8 +182,7 @@
   <span class="nb">puts</span> <span class="s2">&quot;Only a Sith deals in absolutes.&quot;</span>
 <span class="k">end</span></code></pre></div>
 
-
-<p>Methods sometimes perform work on a Ruby classes' attributes. Sometimes a method just performs work specific to the class. In our Jedi class, we have a <em>duel</em> method. This method is used to convey some Jedi axiom just before battle begins.</p>
+<p>Methods sometimes perform work on a Ruby classes’ attributes. Sometimes a method just performs work specific to the class. In our Jedi class, we have a <em>duel</em> method. This method is used to convey some Jedi axiom just before battle begins.</p>
 
 <p>Like an initialize constructor, a method can take parameters. A Ruby method can even have a default parameter. So our <em>duel</em> method could have looked like:</p>
 
@@ -204,14 +192,13 @@
   <span class="nb">puts</span> <span class="s2">&quot;Only a Sith deals in absolutes.&quot;</span>
 <span class="k">end</span></code></pre></div>
 
+<p>Coming from static languages, Ruby’s minimalistic approach to object oriented programming is at once refreshing and inspiring.</p>
 
-<p>Coming from static languages, Ruby's minimalistic approach to object oriented programming is at once refreshing and inspiring.</p>
+<p>Still with me? Great! Let’s move on to more advanced topics.</p>
 
-<p>Still with me? Great! Let's move on to more advanced topics.</p>
+<h3 id="inheritance">Inheritance</h3>
 
-<h3>Inheritance</h3>
-
-<p>Eventually, you'll reach a situation where different Ruby classes have the same attribute and perform the same basic actions.</p>
+<p>Eventually, you’ll reach a situation where different Ruby classes have the same attribute and perform the same basic actions.</p>
 
 <p>We know that a Jedi evolved from a Padawan. Therefore, a Jedi should posses the skills of a Padawan with the further developed skills of a Jedi Knight.</p>
 
@@ -221,17 +208,15 @@
 <span class="o">.</span> <span class="o">.</span> <span class="o">.</span>
 <span class="k">end</span></code></pre></div>
 
-
-<p>In this way we can reuse the Padawan class for other force-sensitives that we wouldn't consider Jedi. For example, we could have a Sith class:</p>
+<p>In this way we can reuse the Padawan class for other force-sensitives that we wouldn’t consider Jedi. For example, we could have a Sith class:</p>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Sith</span> <span class="o">&lt;</span> <span class="no">Padawan</span>
 <span class="o">.</span> <span class="o">.</span> <span class="o">.</span>
 <span class="k">end</span></code></pre></div>
 
-
 <p>Darth Vader was once a Padawan until he turned to the Dark Side and became a Sith Lord. As such, you would expect him to have the knowledge and training of a Padawan with the learning of a Dark Knight.</p>
 
-<h4>Polymorphism</h4>
+<h4 id="polymorphism">Polymorphism</h4>
 
 <p>There will be cases where certain methods of the parent class will need to be implemented differently in the inheriting class. For example:</p>
 
@@ -241,18 +226,17 @@
   <span class="k">end</span>
 <span class="k">end</span></code></pre></div>
 
-
 <p>Here, the <em>inspect</em> method from the <em>Sith</em> class will be used instead of the <em>inspect</em> method from the <em>Padawan</em> class. Object oriented languages (like Ruby) that facilitate this type of behavior are said to be polymorphic. Therefore, the above is an example of Polymorphism.</p>
 
 <p>Rather than exhaustively define every characteristic of every new class, we only need to redefine the differences between the parent class and the child class.</p>
 
-<h4>Does Ruby support multiple inheritance?</h4>
+<h4 id="does-ruby-support-multiple-inheritance">Does Ruby support multiple inheritance?</h4>
 
 <p>No. Ruby was designed with single inheritance. This was on purpose. Single inheritance encourages you to develop a deeper understanding of your domain model.</p>
 
-<p>That said, there are times when a domain model could benefit from sharing methods that do not require a full blown class. That's where Ruby Mixins come in.</p>
+<p>That said, there are times when a domain model could benefit from sharing methods that do not require a full blown class. That’s where Ruby Mixins come in.</p>
 
-<h3>Mixins</h3>
+<h3 id="mixins">Mixins</h3>
 
 <p>Mixins are Ruby modules. Modules are a collection of methods. You cannot create an instance of a module. Therefore, modules do not maintain state.</p>
 
@@ -266,8 +250,7 @@
   <span class="o">.</span> <span class="o">.</span> <span class="o">.</span>
 <span class="k">end</span></code></pre></div>
 
-
-<h4>Lightsaber.rb</h4>
+<h4 id="lightsaberrb">Lightsaber.rb</h4>
 
 <p>Here is the Mixin Lightsaber module:</p>
 
@@ -276,7 +259,6 @@
     <span class="nb">puts</span> <span class="s2">&quot;Lightsaber.initialized: &quot;</span> <span class="o">+</span> <span class="n">crystal</span>
   <span class="k">end</span>
 <span class="k">end</span></code></pre></div>
-
 
 <p>So when I instantiate an instance of the Jedi class, I get access to the Lightsaber module - pure Mixin love:</p>
 
@@ -288,10 +270,9 @@
 <span class="n">anakin</span><span class="o">.</span><span class="n">lightsaber</span><span class="p">(</span><span class="s2">&quot;Ruby&quot;</span><span class="p">)</span>
 <span class="o">.</span> <span class="o">.</span> <span class="o">.</span></code></pre></div>
 
-
 <p>Modules are for sharing behavior (methods), while classes are for modeling relationships between objects. Ruby classes can Mixin a module and receive all its methods for free.</p>
 
-<h4>Active Record - Base Class or Mixin?</h4>
+<h4 id="active-record---base-class-or-mixin">Active Record - Base Class or Mixin?</h4>
 
 <p>We might think Active Record should have been included rather than extended by a subclass. You can use your own parent class at that point right?</p>
 
@@ -299,25 +280,26 @@
 
 <p>Saying it should is a half-truth at best. What never follows such statements is a disclosure that you will spend exorbitant amounts of time mapping your class attributes to a database DSL (domain specific language).</p>
 
-<p>This behavior really adds up to your detriment when dealing with larger domain models. But this is never said. It's that little gotcha that, not surprisingly, never gets mentioned.</p>
+<p>This behavior really adds up to your detriment when dealing with larger domain models. But this is never said. It’s that little gotcha that, not surprisingly, never gets mentioned.</p>
 
 <p>I believe for the best speed, simplicity and maintainability, Active Record is best implemented as a base class that you inherit with a single line.</p>
 
 <p>Compare that to the many lines you will spend to map your class attributes to database types. It really is a no-brainer.</p>
 
-<p>I could stop here, but I believe you'll be able to make better judgments when you have a fuller picture of the issue. So I'm going to tell you when implementing Active Record as a mixin makes sense.</p>
+<p>I could stop here, but I believe you’ll be able to make better judgments when you have a fuller picture of the issue. So I’m going to tell you when implementing Active Record as a mixin makes sense.</p>
 
-<p>It makes sense when you're dealing with legacy code that already has a base class coupled with an inefficient, custom data access layer. Then I recommend using a Ruby ORM like <a href="http://datamapper.org/">Datamapper</a>.</p>
+<p>It makes sense when you’re dealing with legacy code that already has a base class coupled with an inefficient, custom data access layer. Then I recommend using a Ruby ORM like <a href="http://datamapper.org/">Datamapper</a>.</p>
 
-<p>You will spend a lot of time wiring up your domain models, but you'll get a mature and flexible data layer - just the type of sprucing up any legacy app could use.</p>
+<p>You will spend a lot of time wiring up your domain models, but you’ll get a mature and flexible data layer - just the type of sprucing up any legacy app could use.</p>
 
-<h3>Try it out for yourself</h3>
+<h3 id="try-it-out-for-yourself">Try it out for yourself</h3>
 
-<p>Use either <em>ruby dojo.rb</em> to run the example or better yet - run <em>irb</em>, then <em>load 'dojo.rb'</em> to interact with the Jedi Ruby objects live.</p>
+<p>Use either <em>ruby dojo.rb</em> to run the example or better yet - run <em>irb</em>, then <em>load ‘dojo.rb’</em> to interact with the Jedi Ruby objects live.</p>
 
 <p>What do you get when you mix Ruby, Jedi and Mixins? A helluva good time! Join the fun:</p>
 
 <p><a href="https://techoctave.com/c7/static/jedi.zip">Download the Ruby Object Oriented Jedi Tutorial</a></p>
+
 
     </div>
     

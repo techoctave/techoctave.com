@@ -40,24 +40,23 @@
     <h5 class="page-author">Handwritten by TVD</h5>
 
     <div itemprop="articleBody">
-      <p><img src="https://techoctave.com/c7/static/ferrari-california-overlay.png" alt="The Ferrari California is a grand touring sports car. The car revives the ‘California’ name used for the late-1950s Ferrari 250 GT."/></p>
+      <p><img src="https://techoctave.com/c7/static/ferrari-california-overlay.png" alt="The Ferrari California is a grand touring sports car. The car revives the ‘California’ name used for the late-1950s Ferrari 250 GT." /></p>
 
 <p>We all know accessibility and SEO are important facets of web application development. Accessibility, itself, speaks to the heart of what the web is all about. Namely, the ability for people to break free from whatever bonds hold them at bay and explore a world vast and wild. I know first hand the power of that freedom.</p>
 
 <p>While writing this article, I got to see live and in-person how magnificent the Ferrari California truly is. Inspired and pumped, I implemented one of its dashboard gauges. You can find the Ferrari California dashboard gauge in our <a href="http://techoctave.com/gauges/">JavaScript Gauge Suite</a>.</p>
 
-<h3>SEO and Accessibility Matter</h3>
+<h3 id="seo-and-accessibility-matter">SEO and Accessibility Matter</h3>
 
-<p>Accessibility and SEO come into play particularly with image rich applications. Think Instagram for example. With these types of applications, it is important to specify the alt attribute on each and every image:</p>
+<p>Accessibility and SEO come into play particularly with image rich applications. Think Instagram for example. With these types of applications, it is important to specify the alt attribute on each and every image: </p>
 
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="o">&lt;</span><span class="nx">img</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;overlay&quot;</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;ferrari.jpg&quot;</span> <span class="nx">alt</span><span class="o">=</span><span class="s2">&quot;The Ferrari California is a grand touring sports car. The car revives the &#39;California&#39; name used for the late-1950s Ferrari 250 GT.&quot;</span><span class="o">/&gt;</span></code></pre></div>
 
+<p>This ensures the application is readable to a whole host of folks who otherwise wouldn’t be privy to the information. Wouldn’t it be cool if we could reuse that alt attribute to enhance our application? That’s exactly what we are going to do in this lesson — JavaScript style.</p>
 
-<p>This ensures the application is readable to a whole host of folks who otherwise wouldn't be privy to the information. Wouldn't it be cool if we could reuse that alt attribute to enhance our application? That's exactly what we are going to do in this lesson — JavaScript style.</p>
+<h3 id="adding-image-overlays-automatically">Adding Image Overlays (Automatically)</h3>
 
-<h3>Adding Image Overlays (Automatically)</h3>
-
-<p>The image must have an <em>overlay</em> class attribute. Then we'll write code to reuse each image's alt tag to create a description overlay on hover.</p>
+<p>The image must have an <em>overlay</em> class attribute. Then we’ll write code to reuse each image’s alt tag to create a description overlay on hover.</p>
 
 <p>Here is the jQuery and JavaScript code to add the image overlay:</p>
 
@@ -65,13 +64,13 @@
   <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;img.overlay&quot;</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
     <span class="c1">//Wrap the image with an overlay</span>
     <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">wrap</span><span class="p">(</span><span class="s2">&quot;&lt;div class=&#39;description_overlay&#39;&gt;&lt;/div&gt;&quot;</span><span class="p">);</span>
-    
+	
     <span class="c1">//Cache description overlay object</span>
     <span class="kd">var</span> <span class="nx">o</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">parent</span><span class="p">(</span><span class="s2">&quot;.description_overlay&quot;</span><span class="p">);</span>
-    
+	
     <span class="c1">//Append the description to the overlay</span>
     <span class="nx">o</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s2">&quot;&lt;div class=&#39;description&#39;&gt;&lt;div class=&#39;description_content&#39;&gt;&lt;/div&gt;&lt;/div&gt;&quot;</span><span class="p">);</span>
-    
+	
     <span class="c1">//Align the description with the image</span>
     <span class="nx">o</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;.description&quot;</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s2">&quot;opacity&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
     <span class="nx">o</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;.description&quot;</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s2">&quot;width&quot;</span><span class="p">,</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">width</span><span class="p">());</span>
@@ -80,7 +79,7 @@
 
     <span class="c1">//Set the description from the img alt attribute</span>
     <span class="nx">o</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;.description_content&quot;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;alt&quot;</span><span class="p">));</span>
-    
+	
     <span class="c1">//Apply the hover effects</span>
     <span class="nx">o</span><span class="p">.</span><span class="nx">mouseover</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
       <span class="nx">o</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;.description&quot;</span><span class="p">).</span><span class="nx">stop</span><span class="p">().</span><span class="nx">fadeTo</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">);</span>
@@ -92,15 +91,14 @@
   <span class="p">});</span>
 <span class="p">});</span></code></pre></div>
 
-
 <p>For each image with the class overlay, we start to apply our techniques. First, we wrap that image with description_overlay div and append placeholders for the description content.</p>
 
 <p>Some CSS needs to be messaged a little:</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.description_overlay</span> <span class="p">{</span>  
     <span class="k">position</span><span class="o">:</span> <span class="k">relative</span><span class="p">;</span>
-    <span class="k">margin-left</span><span class="o">:</span> <span class="m">21em</span><span class="p">;</span>
-    <span class="k">margin-top</span><span class="o">:</span> <span class="m">5em</span><span class="p">;</span>
+	<span class="k">margin-left</span><span class="o">:</span> <span class="m">21em</span><span class="p">;</span>
+	<span class="k">margin-top</span><span class="o">:</span> <span class="m">5em</span><span class="p">;</span>
 <span class="p">}</span>  
 
 <span class="nc">.description</span> <span class="p">{</span>  
@@ -120,18 +118,18 @@
 <span class="p">}</span>
 
 <span class="nc">.description</span><span class="o">,</span> <span class="nt">img</span> <span class="p">{</span>
-    <span class="k">cursor</span><span class="o">:</span> <span class="k">pointer</span><span class="p">;</span>
+	<span class="k">cursor</span><span class="o">:</span> <span class="k">pointer</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
-
-<p>See, not as much CSS as you would think...</p>
+<p>See, not as much CSS as you would think…</p>
 
 <p>After some CSS messaging, we then apply the alt content to the description placeholder. Finally, we apply the mouseover and mouseout hover effects.</p>
 
 <p>It’s great isn’t it!
-It’s still JavaScript, but it's clean and beautiful. Just like that Ferrari California you’ll be driving if you stick with me. :-)</p>
+It’s still JavaScript, but it’s clean and beautiful. Just like that Ferrari California you’ll be driving if you stick with me. :-)</p>
 
-<p>Oh and before I forget...Yes - I drove the hell outta it!!! ;)</p>
+<p>Oh and before I forget…Yes - I drove the hell outta it!!! ;)</p>
+
 
     </div>
     

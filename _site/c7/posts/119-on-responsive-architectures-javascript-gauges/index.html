@@ -9,7 +9,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <meta http-equiv="content-language" content="en-gb" />
       
-      <meta name="description" content="Use Responsive Web Design breakpoints and each Gauge's refresh method to build the right JavaScript Gauge for the right resolution. We're Deprecating The AutoResize Feature Autoresize was written with the best of intentions. It was early 2010. Barely anyone had heard of the term Responsive Web Design (RWD) and we were trying to help an early customer with a "very dynamic website" - as it was described. So we wrote autoresize with the goal to...">
+      <meta name="description" content="Use Responsive Web Design breakpoints and each Gauge’s refresh method to build the right JavaScript Gauge for the right resolution. We’re Deprecating The AutoResize Feature Autoresize was written with the best of intentions. It was early 2010. Barely anyone had heard of the term Responsive Web Design (RWD) and we were trying to help an early customer with a “very dynamic website” - as it was described. So we wrote autoresize with the goal to...">
       
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10">
       <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
@@ -40,27 +40,27 @@
     <h5 class="page-author">Handwritten by TVD</h5>
 
     <div itemprop="articleBody">
-      <p><img src="https://techoctave.com/c7/static/samurai.1.gif" alt="Responsive Architecture"/></p>
+      <p><img src="https://techoctave.com/c7/static/samurai.1.gif" alt="Responsive Architecture" /></p>
 
-<p>Use Responsive Web Design breakpoints and each Gauge's refresh method to build the right <a href="http://techoctave.com/gauges/">JavaScript Gauge</a> for the right resolution.</p>
+<p>Use Responsive Web Design breakpoints and each Gauge’s refresh method to build the right <a href="http://techoctave.com/gauges/">JavaScript Gauge</a> for the right resolution.</p>
 
-<h3>We're Deprecating The AutoResize Feature</h3>
+<h3 id="were-deprecating-the-autoresize-feature">We’re Deprecating The AutoResize Feature</h3>
 
-<p>Autoresize was written with the best of intentions. It was early 2010. Barely anyone had heard of the term <a href="http://en.wikipedia.org/wiki/Responsive_web_design">Responsive Web Design</a> (RWD) and we were trying to help an early customer with a "very dynamic website" - as it was described. So we wrote autoresize with the goal to calculate our Gauge's DOM container and resize accordingly.</p>
+<p>Autoresize was written with the best of intentions. It was early 2010. Barely anyone had heard of the term <a href="http://en.wikipedia.org/wiki/Responsive_web_design">Responsive Web Design</a> (RWD) and we were trying to help an early customer with a “very dynamic website” - as it was described. So we wrote autoresize with the goal to calculate our Gauge’s DOM container and resize accordingly.</p>
 
-<p>It worked for the customer's specific use case. But we now believe it was a bad approach overall because only the actual developer can 100% know what Gauge size will work for him.</p>
+<p>It worked for the customer’s specific use case. But we now believe it was a bad approach overall because only the actual developer can 100% know what Gauge size will work for him.</p>
 
-<p>Our Gauge (any component really) can only approximate the best dimensions since the DOM container's offsetWidth and offsetHeight doesn't always return the expected results and that's if those properties even exist for the specific browser - That's the best case.</p>
+<p>Our Gauge (any component really) can only approximate the best dimensions since the DOM container’s offsetWidth and offsetHeight doesn’t always return the expected results and that’s if those properties even exist for the specific browser - That’s the best case. </p>
 
 <p>Worst case is we, inadvertently, deny our developers the needed control of the end user experience. Either result is no longer acceptable for us.</p>
 
-<h3>The Recommendation</h3>
+<h3 id="the-recommendation">The Recommendation</h3>
 
-<p>Fast forward 3 years later and we've made <a href="http://coding.smashingmagazine.com/2011/01/12/guidelines-for-responsive-web-design/">leaps</a> and <a href="http://blog.teamtreehouse.com/beginners-guide-to-responsive-web-design">bounds</a> towards our understanding of RWD. Using the discipline of Responsive Architecture and techniques like Flexible Grids, Flexible Images and CSS3 Media Queries, we can write an application once and it will run in every environment we target.</p>
+<p>Fast forward 3 years later and we’ve made <a href="http://coding.smashingmagazine.com/2011/01/12/guidelines-for-responsive-web-design/">leaps</a> and <a href="http://blog.teamtreehouse.com/beginners-guide-to-responsive-web-design">bounds</a> towards our understanding of RWD. Using the discipline of Responsive Architecture and techniques like Flexible Grids, Flexible Images and CSS3 Media Queries, we can write an application once and it will run in every environment we target. </p>
 
 <p>With RWD, we the Developer, decide which breakpoints - a <a href="http://www.netmagazine.com/tutorials/build-responsive-site-week-media-queries-part-4">breakpoint</a> is a value at which a layout adapts - we will design for. Once we decide that, then we design how we want our web application to look for each breakpoint.</p>
 
-<p>Using these techniques, the same app you write for a desktop can run great on a mobile device. The UI will simply look crystal clear at any breakpoint because our JavaScript Gauges are based on vector graphics and are scalable.</p>
+<p>Using these techniques, the same app you write for a desktop can run great on a mobile device. The UI will simply look crystal clear at any breakpoint because our JavaScript Gauges are based on vector graphics and are scalable. </p>
 
 <p>Once the UI hits a breakpoint, simply update our Gauge with the width and height that looks best for that breakpoint:</p>
 
@@ -71,12 +71,12 @@
 <span class="p">.</span> <span class="p">.</span> <span class="p">.</span>    
 <span class="nx">knots</span><span class="p">.</span><span class="nx">refresh</span><span class="p">();</span></code></pre></div>
 
+<p>Using a Responsive Architecture will set your application up for success - You don’t need autoresize to make that happen. We’ll keep autoresize in for backwards compatibility, for a few releases at least, but we’ll no longer promote it as a feature. </p>
 
-<p>Using a Responsive Architecture will set your application up for success - You don't need autoresize to make that happen. We'll keep autoresize in for backwards compatibility, for a few releases at least, but we'll no longer promote it as a feature.</p>
+<p>Instead we’ll promote refresh and RWD for best results - Which was the real intent of autoresize, however lofty the goal was. Our Gauge API has outgrown autoresize. Frankly, the web has outgrown autoresize.</p>
 
-<p>Instead we'll promote refresh and RWD for best results - Which was the real intent of autoresize, however lofty the goal was. Our Gauge API has outgrown autoresize. Frankly, the web has outgrown autoresize.</p>
+<p>Use Responsive Web Design breakpoints and each Gauge’s refresh method to build the right Gauge for the right resolution and Code for the moments that take your breathe away.</p>
 
-<p>Use Responsive Web Design breakpoints and each Gauge's refresh method to build the right Gauge for the right resolution and Code for the moments that take your breathe away.</p>
 
     </div>
     

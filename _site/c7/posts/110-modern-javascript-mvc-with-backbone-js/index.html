@@ -9,7 +9,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <meta http-equiv="content-language" content="en-gb" />
       
-      <meta name="description" content="Modern JavaScript and HTML5 applications depend on a consistent RESTful JSON API. However, consistency is not always an option when you don't control the server API. Still, even in those situations, Backbone.js can be a useful tool in taming your JavaScript. Today walk through a simple example of how to connect the dots between Backbone's Model, Collection and View. The Backbone Basics A basic single page application boils down to three distinct parts: Model, Collection...">
+      <meta name="description" content="&lt;img src=”https://techoctave.com/c7/static/gangnam-style-feature.jpg” width=520 alt=”Modern JavaScript MVC With Backbone.js”/&gt; Modern JavaScript and HTML5 applications depend on a consistent RESTful JSON API. However, consistency is not always an option when you don’t control the server API. Still, even in those situations, Backbone.js can be a useful tool in taming your JavaScript. Today walk through a simple example of how to connect the dots between Backbone’s Model, Collection and View. The Backbone Basics A basic single page application...">
       
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10">
       <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
@@ -40,139 +40,136 @@
     <h5 class="page-author">Handwritten by TVD</h5>
 
     <div itemprop="articleBody">
-      <p><img src="https://techoctave.com/c7/static/gangnam-style-feature.jpg" width=520 alt="Modern JavaScript MVC With Backbone.js"/></p>
+      <p>&lt;img src=”https://techoctave.com/c7/static/gangnam-style-feature.jpg” width=520 alt=”Modern JavaScript MVC With Backbone.js”/&gt;</p>
 
-<p>Modern JavaScript and HTML5 applications depend on a consistent RESTful JSON API. However, consistency is not always an option when you don't control the server API.</p>
+<p>Modern JavaScript and HTML5 applications depend on a consistent RESTful JSON API. However, consistency is not always an option when you don’t control the server API.</p>
 
-<p>Still, even in those situations, Backbone.js can be a useful tool in taming your JavaScript. Today walk through a simple example of how to connect the dots between Backbone's Model, Collection and View.</p>
+<p>Still, even in those situations, Backbone.js can be a useful tool in taming your JavaScript. Today walk through a simple example of how to connect the dots between Backbone’s Model, Collection and View.</p>
 
-<h3>The Backbone Basics</h3>
+<h3 id="the-backbone-basics">The Backbone Basics</h3>
 
 <p>A basic single page application boils down to three distinct parts: Model, Collection and View.</p>
 
-<h4>The Model</h4>
+<h4 id="the-model">The Model</h4>
 
 <p>The Model defines your class properties and methods. Here we define a class called Knot:</p>
 
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">Knot</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Model</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
-    <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nx">_</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="k">new</span> <span class="nx">Gauge</span><span class="p">(</span><span class="s2">&quot;knots&quot;</span><span class="p">,</span> <span class="p">{</span>
-            <span class="nx">hasGlass</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-            <span class="nx">glassColor</span><span class="o">:</span> <span class="s2">&quot;#aa0000&quot;</span>
-        <span class="p">}));</span>
-    <span class="p">}</span>
+	<span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+		<span class="nx">_</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="k">new</span> <span class="nx">Gauge</span><span class="p">(</span><span class="s2">&quot;knots&quot;</span><span class="p">,</span> <span class="p">{</span>
+			<span class="nx">hasGlass</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+			<span class="nx">glassColor</span><span class="o">:</span> <span class="s2">&quot;#aa0000&quot;</span>
+		<span class="p">}));</span>
+	<span class="p">}</span>
 <span class="p">});</span></code></pre></div>
 
+<p>Whenever a new instance of the Knot class is created, we also inherit an instance of our <a href="http://techoctave.com/gauges/">JavaScript Gauges</a> using Underscore’s extend method.</p>
 
-<p>Whenever a new instance of the Knot class is created, we also inherit an instance of our <a href="http://techoctave.com/gauges/">JavaScript Gauges</a> using Underscore's extend method.</p>
-
-<h4>The Collection</h4>
+<h4 id="the-collection">The Collection</h4>
 
 <p>The Collection defines a list of class instances. Here we define a Collection called Knots:</p>
 
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">Knots</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Collection</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
-        <span class="nx">model</span><span class="o">:</span> <span class="nx">Knot</span><span class="p">,</span>
-    
-        <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;http://query.yahooapis.com/v1/public/yql?q=select * from google.igoogle.stock where stock=&#39;lmt&#39;&amp;format=json&amp;env=store://datatables.org/alltableswithkeys&amp;callback=&quot;</span><span class="p">,</span>
-    
-        <span class="nx">parse</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="nx">response</span><span class="p">.</span><span class="nx">query</span><span class="p">.</span><span class="nx">results</span><span class="p">.</span><span class="nx">xml_api_reply</span><span class="p">.</span><span class="nx">finance</span><span class="p">;</span>
-        <span class="p">}</span>
+	    <span class="nx">model</span><span class="o">:</span> <span class="nx">Knot</span><span class="p">,</span>
+	
+		<span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;http://query.yahooapis.com/v1/public/yql?q=select * from google.igoogle.stock where stock=&#39;lmt&#39;&amp;format=json&amp;env=store://datatables.org/alltableswithkeys&amp;callback=&quot;</span><span class="p">,</span>
+	
+		<span class="nx">parse</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+			<span class="k">return</span> <span class="nx">response</span><span class="p">.</span><span class="nx">query</span><span class="p">.</span><span class="nx">results</span><span class="p">.</span><span class="nx">xml_api_reply</span><span class="p">.</span><span class="nx">finance</span><span class="p">;</span>
+		<span class="p">}</span>
 <span class="p">});</span>
 
 <span class="nb">window</span><span class="p">.</span><span class="nx">knots</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Knots</span><span class="p">();</span></code></pre></div>
 
-
-<p>First, you define which model the Collection will create a list of. Here, we also specify the collection's data source using the URL property.</p>
+<p>First, you define which model the Collection will create a list of. Here, we also specify the collection’s data source using the URL property.</p>
 
 <p>Here, the data source is deeply nested. You can use the parse method to intercept the data source and get the data in a more manageable state before creating your model instance.</p>
 
 <p>Finally, we immediately execute the collection to get it ready for use in our single page application (SPA).</p>
 
-<h4>The View</h4>
+<h4 id="the-view">The View</h4>
 
 <p>The View updates the User Interface (UI) with the data fetched from the collection:</p>
 
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">KnotsView</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
-    <span class="nx">el</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#knots&quot;</span><span class="p">),</span>
+	<span class="nx">el</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#knots&quot;</span><span class="p">),</span>
 
-    <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nb">window</span><span class="p">.</span><span class="nx">knots</span><span class="p">.</span><span class="nx">reset</span><span class="p">();</span>
+	<span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+		<span class="nb">window</span><span class="p">.</span><span class="nx">knots</span><span class="p">.</span><span class="nx">reset</span><span class="p">();</span>
 
-        <span class="nb">window</span><span class="p">.</span><span class="nx">knots</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="s2">&quot;add&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">render</span><span class="p">);</span>
+		<span class="nb">window</span><span class="p">.</span><span class="nx">knots</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="s2">&quot;add&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">render</span><span class="p">);</span>
 
-        <span class="nb">window</span><span class="p">.</span><span class="nx">knots</span><span class="p">.</span><span class="nx">fetch</span><span class="p">();</span>
-    <span class="p">},</span>
+		<span class="nb">window</span><span class="p">.</span><span class="nx">knots</span><span class="p">.</span><span class="nx">fetch</span><span class="p">();</span>
+	<span class="p">},</span>
 
-    <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nb">window</span><span class="p">.</span><span class="nx">knots</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">knot</span><span class="p">)</span> <span class="p">{</span>
-            <span class="kd">var</span> <span class="nx">value</span> <span class="o">=</span> <span class="nx">knot</span><span class="p">.</span><span class="nx">attributes</span><span class="p">.</span><span class="nx">high</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
-                
-            <span class="nx">knot</span><span class="p">.</span><span class="nx">setValue</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
-        <span class="p">});</span>
-    <span class="p">}</span>
+	<span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+		<span class="nb">window</span><span class="p">.</span><span class="nx">knots</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">knot</span><span class="p">)</span> <span class="p">{</span>
+			<span class="kd">var</span> <span class="nx">value</span> <span class="o">=</span> <span class="nx">knot</span><span class="p">.</span><span class="nx">attributes</span><span class="p">.</span><span class="nx">high</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
+				
+			<span class="nx">knot</span><span class="p">.</span><span class="nx">setValue</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
+		<span class="p">});</span>
+	<span class="p">}</span>
 <span class="p">});</span>
 
 <span class="nb">window</span><span class="p">.</span><span class="nx">knotsView</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">KnotsView</span><span class="p">();</span></code></pre></div>
 
+<p>First, we reset the knots collection. Next, we bind our View’s render method to our Collection’s add event. What this means is each time a Knot object is added to the Knots collections, we will call the Views render method to update the web application.</p>
 
-<p>First, we reset the knots collection. Next, we bind our View's render method to our Collection's add event. What this means is each time a Knot object is added to the Knots collections, we will call the Views render method to update the web application.</p>
+<p>Then we make the actual call to the Collection’s fetch method to retrieve the data from the data source. Here, we basically make a call to Google’s stock webservice to retrieve some data on a company called Lockheed Martin.</p>
 
-<p>Then we make the actual call to the Collection's fetch method to retrieve the data from the data source. Here, we basically make a call to Google's stock webservice to retrieve some data on a company called Lockheed Martin.</p>
+<p>Finally, in our View’s render method we update each Knot Gauge with the corresponding value passed back from the server call.</p>
 
-<p>Finally, in our View's render method we update each Knot Gauge with the corresponding value passed back from the server call.</p>
+<h4 id="putting-it-all-together">Putting It All Together</h4>
 
-<h4>Putting It All Together</h4>
-
-<p>Here's the final backbone example end-to-end:</p>
+<p>Here’s the final backbone example end-to-end:</p>
 
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="nx">Knot</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Model</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
-        <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-            <span class="nx">_</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="k">new</span> <span class="nx">Gauge</span><span class="p">(</span><span class="s2">&quot;knots&quot;</span><span class="p">,</span> <span class="p">{</span>
-                <span class="nx">hasGlass</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-                <span class="nx">glassColor</span><span class="o">:</span> <span class="s2">&quot;#aa0000&quot;</span>
-            <span class="p">}));</span>
-        <span class="p">}</span>
-    <span class="p">});</span>
+	<span class="kd">var</span> <span class="nx">Knot</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Model</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+		<span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+			<span class="nx">_</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="k">new</span> <span class="nx">Gauge</span><span class="p">(</span><span class="s2">&quot;knots&quot;</span><span class="p">,</span> <span class="p">{</span>
+				<span class="nx">hasGlass</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+				<span class="nx">glassColor</span><span class="o">:</span> <span class="s2">&quot;#aa0000&quot;</span>
+			<span class="p">}));</span>
+		<span class="p">}</span>
+	<span class="p">});</span>
 
-    <span class="kd">var</span> <span class="nx">Knots</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Collection</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
-        <span class="nx">model</span><span class="o">:</span> <span class="nx">Knot</span><span class="p">,</span>
-    
-        <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;http://query.yahooapis.com/v1/public/yql?q=select * from google.igoogle.stock where stock=&#39;lmt&#39;&amp;format=json&amp;env=store://datatables.org/alltableswithkeys&amp;callback=&quot;</span><span class="p">,</span>
-    
-        <span class="nx">parse</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="nx">response</span><span class="p">.</span><span class="nx">query</span><span class="p">.</span><span class="nx">results</span><span class="p">.</span><span class="nx">xml_api_reply</span><span class="p">.</span><span class="nx">finance</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="p">});</span>
+	<span class="kd">var</span> <span class="nx">Knots</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Collection</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+	    <span class="nx">model</span><span class="o">:</span> <span class="nx">Knot</span><span class="p">,</span>
+	
+		<span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;http://query.yahooapis.com/v1/public/yql?q=select * from google.igoogle.stock where stock=&#39;lmt&#39;&amp;format=json&amp;env=store://datatables.org/alltableswithkeys&amp;callback=&quot;</span><span class="p">,</span>
+	
+		<span class="nx">parse</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+			<span class="k">return</span> <span class="nx">response</span><span class="p">.</span><span class="nx">query</span><span class="p">.</span><span class="nx">results</span><span class="p">.</span><span class="nx">xml_api_reply</span><span class="p">.</span><span class="nx">finance</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">});</span>
 
-    <span class="nb">window</span><span class="p">.</span><span class="nx">knots</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Knots</span><span class="p">();</span>
+	<span class="nb">window</span><span class="p">.</span><span class="nx">knots</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Knots</span><span class="p">();</span>
 
-    <span class="kd">var</span> <span class="nx">KnotsView</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
-        <span class="nx">el</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#knots&quot;</span><span class="p">),</span>
+	<span class="kd">var</span> <span class="nx">KnotsView</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+		<span class="nx">el</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#knots&quot;</span><span class="p">),</span>
 
-        <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-            <span class="nb">window</span><span class="p">.</span><span class="nx">knots</span><span class="p">.</span><span class="nx">reset</span><span class="p">();</span>
+		<span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+			<span class="nb">window</span><span class="p">.</span><span class="nx">knots</span><span class="p">.</span><span class="nx">reset</span><span class="p">();</span>
 
-            <span class="nb">window</span><span class="p">.</span><span class="nx">knots</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="s2">&quot;add&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">render</span><span class="p">);</span>
+			<span class="nb">window</span><span class="p">.</span><span class="nx">knots</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="s2">&quot;add&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">render</span><span class="p">);</span>
 
-            <span class="nb">window</span><span class="p">.</span><span class="nx">knots</span><span class="p">.</span><span class="nx">fetch</span><span class="p">();</span>
-        <span class="p">},</span>
+			<span class="nb">window</span><span class="p">.</span><span class="nx">knots</span><span class="p">.</span><span class="nx">fetch</span><span class="p">();</span>
+		<span class="p">},</span>
 
-        <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-            <span class="nb">window</span><span class="p">.</span><span class="nx">knots</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">knot</span><span class="p">)</span> <span class="p">{</span>
-                <span class="kd">var</span> <span class="nx">value</span> <span class="o">=</span> <span class="nx">knot</span><span class="p">.</span><span class="nx">attributes</span><span class="p">.</span><span class="nx">high</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
-                
-                <span class="nx">knot</span><span class="p">.</span><span class="nx">setValue</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
-            <span class="p">});</span>
-        <span class="p">}</span>
-    <span class="p">});</span>
+		<span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+			<span class="nb">window</span><span class="p">.</span><span class="nx">knots</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">knot</span><span class="p">)</span> <span class="p">{</span>
+				<span class="kd">var</span> <span class="nx">value</span> <span class="o">=</span> <span class="nx">knot</span><span class="p">.</span><span class="nx">attributes</span><span class="p">.</span><span class="nx">high</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
+				
+				<span class="nx">knot</span><span class="p">.</span><span class="nx">setValue</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
+			<span class="p">});</span>
+		<span class="p">}</span>
+	<span class="p">});</span>
 
-    <span class="nb">window</span><span class="p">.</span><span class="nx">knotsView</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">KnotsView</span><span class="p">();</span>
+	<span class="nb">window</span><span class="p">.</span><span class="nx">knotsView</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">KnotsView</span><span class="p">();</span>
 <span class="p">};</span></code></pre></div>
 
+<p>Backbone is a really good framework for organizing your JavaScript code. It’s lightweight and gives you everything you need. It’s prescriptive without being heavy-handed. I like it. Enjoy!</p>
 
-<p>Backbone is a really good framework for organizing your JavaScript code. It's lightweight and gives you everything you need. It's prescriptive without being heavy-handed. I like it. Enjoy!</p>
 
     </div>
     

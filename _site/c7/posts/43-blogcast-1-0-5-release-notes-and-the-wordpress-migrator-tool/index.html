@@ -9,7 +9,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <meta http-equiv="content-language" content="en-gb" />
       
-      <meta name="description" content="A couple months ago I made a bet with a friend. He felt developers don't blog as much because they don't have the time to. But I felt differently. I told him the issue was much deeper than time. I said, "We would blog more if writing was fun!" That realization was the beginning of Blogcast. Simple as that. Blogcast 1.0.5 is the start of my vision to make writing fun for a lot more...">
+      <meta name="description" content="A couple months ago I made a bet with a friend. He felt developers don’t blog as much because they don’t have the time to. But I felt differently. I told him the issue was much deeper than time. I said, “We would blog more if writing was fun!” That realization was the beginning of Blogcast. Simple as that. Blogcast 1.0.5 is the start of my vision to make writing fun for a lot more...">
       
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10">
       <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
@@ -40,15 +40,15 @@
     <h5 class="page-author">Handwritten by TVD</h5>
 
     <div itemprop="articleBody">
-      <p>A couple months ago I made a bet with a friend. He felt developers don't blog as much because they don't have the time to. But I felt differently. I told him the issue was much deeper than time.</p>
+      <p>A couple months ago I made a bet with a friend. He felt developers don’t blog as much because they don’t have the time to. But I felt differently. I told him the issue was much deeper than time.</p>
 
-<p>I said, "We would blog more if writing was fun!" That realization was the beginning of <a href="http://techoctave.com/blogcast">Blogcast</a>. Simple as that.</p>
+<p>I said, “We would blog more if writing was fun!” That realization was the beginning of <a href="http://techoctave.com/blogcast">Blogcast</a>. Simple as that.</p>
 
 <p>Blogcast 1.0.5 is the start of my vision to make writing fun for a lot more people. Initially, I focused on new writers because many needed encouragement to start. But, what about seasoned writers with years of blog posts under their belt?</p>
 
-<p>Should they be condemned to a blogging platform that no longer caters to their needs as a writer? I don't believe that. I won't believe that!</p>
+<p>Should they be condemned to a blogging platform that no longer caters to their needs as a writer? I don’t believe that. I won’t believe that!</p>
 
-<h3>Release Notes</h3>
+<h3 id="release-notes">Release Notes</h3>
 
 <p>Blogcast 1.0.5 features four enhancements:</p>
 
@@ -60,28 +60,25 @@
 
 <span class="o">-</span> <span class="no">Cleaned</span> <span class="n">up</span> <span class="n">generic</span> <span class="n">error</span> <span class="n">pages</span></code></pre></div>
 
-
-<h3>Blogcast WordPress migrator</h3>
+<h3 id="blogcast-wordpress-migrator">Blogcast WordPress migrator</h3>
 
 <p>Why WordPress? Simple. Many of us in the Ruby and Rails community use WordPress as our blogging engine. But more importantly, fans of Blogcast have reached out to me and asked for a migration tool.</p>
 
-<p>Jason Fried once said, "No is easier to do. Yes is easier to say." I wholeheartedly believe this because you can't be everything to everybody.</p>
+<p>Jason Fried once said, “No is easier to do. Yes is easier to say.” I wholeheartedly believe this because you can’t be everything to everybody.</p>
 
 <p>Yet, a migration tool aligned with my vision to make writing accessible and fun. So, a migration tool is something I support with a resounding and unequivocal Yes!</p>
 
-<h4>Usage</h4>
+<h4 id="usage">Usage</h4>
 
-<p>Go to your Blogcast installation and run <em>rake --tasks</em> to see your available options. One of those options will be rebirth:wordpress:</p>
+<p>Go to your Blogcast installation and run <em>rake –tasks</em> to see your available options. One of those options will be rebirth:wordpress:</p>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">rake</span> <span class="ss">rebirth</span><span class="p">:</span><span class="n">wordpress</span><span class="o">[</span><span class="n">scroll</span><span class="o">]</span></code></pre></div>
 
-
-<p>This is Blogcast's WordPress migrator tool. The scroll parameter is the location and name of your WordPress export file.</p>
+<p>This is Blogcast’s WordPress migrator tool. The scroll parameter is the location and name of your WordPress export file.</p>
 
 <p>Use the migrator tool like so:</p>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">rake</span> <span class="ss">rebirth</span><span class="p">:</span><span class="n">wordpress</span><span class="o">[</span><span class="sr">/path/</span><span class="n">to</span><span class="o">/</span><span class="n">wordpress</span><span class="o">.</span><span class="n">xml</span><span class="o">]</span></code></pre></div>
-
 
 <p>A successful run will look similar to this:</p>
 
@@ -103,32 +100,32 @@
 <span class="o">---&gt;</span><span class="no">God</span> <span class="n">created</span> <span class="no">Rails</span> <span class="n">to</span> <span class="n">train</span> <span class="n">the</span> <span class="n">faithful</span><span class="o">.</span>
 <span class="o">---&gt;</span><span class="no">Rise</span> <span class="no">Acolyte</span><span class="o">.</span> <span class="no">Rise</span> <span class="ow">and</span> <span class="n">bath</span> <span class="k">in</span> <span class="n">deliverance</span><span class="o">.</span></code></pre></div>
 
+<h4 id="notes">Notes</h4>
 
-<h4>Notes</h4>
-
-<p>There should be no spaces between rebirth:wordpress and [...]. The correct syntax is rebirth:wordpress[...].</p>
+<p>There should be no spaces between rebirth:wordpress and […]. The correct syntax is rebirth:wordpress[…].</p>
 
 <p>Blogcast uses <a href="http://softwaremaniacs.org/soft/highlight/en/download/" rel="nofollow">highlight.js</a> for client-side syntax highlighting. If you need to, create your own custom language package. Blogcast uses Bash, C++, CSS, XHTML, Javascript and Ruby by default.</p>
 
 <p>I use the excellent <a href="http://nokogiri.org/tutorials/installing_nokogiri.html">Nokogiri</a> for wordpress.xml parsing. So, if you need to use the migration tool, go there to find out how to install Nokogiri properly on your specific system.</p>
 
-<p>Also, make sure your Gemfile is up-to-date with the Nokogiri gem. If you don't need to use the migrator tool, then you don't need to have a dependency on Nokogiri.</p>
+<p>Also, make sure your Gemfile is up-to-date with the Nokogiri gem. If you don’t need to use the migrator tool, then you don’t need to have a dependency on Nokogiri.</p>
 
-<p>The wordpress.xml export file doesn't maintain formatting details. That's good news and bad news. The good news is you don't have the extraneous formatting associated with WYSIWYG editors.</p>
+<p>The wordpress.xml export file doesn’t maintain formatting details. That’s good news and bad news. The good news is you don’t have the extraneous formatting associated with WYSIWYG editors.</p>
 
-<p>The bad news is semantic tags like those used in WYSIWYM editors aren't preserved either. What you're left with is pure unformatted data. You'll have to edit your old posts and add the line breaks (new paragraphs) and Markdown headers that you need.</p>
+<p>The bad news is semantic tags like those used in WYSIWYM editors aren’t preserved either. What you’re left with is pure unformatted data. You’ll have to edit your old posts and add the line breaks (new paragraphs) and Markdown headers that you need.</p>
 
-<p>Finally, if you inserted any manual tags for code highlighting, then you can remove those tags. Highlight.js is smart enough to figure out what programming language you're using automatically.</p>
+<p>Finally, if you inserted any manual tags for code highlighting, then you can remove those tags. Highlight.js is smart enough to figure out what programming language you’re using automatically.</p>
 
-<h3>Removed all db/migrate Migrations</h3>
+<h3 id="removed-all-dbmigrate-migrations">Removed all db/migrate Migrations</h3>
 
 <p>I removed all migrations from this release because they added more confusion than benefit. Migrations are a development tool.</p>
 
-<p>A lot of people were using the migrations for deployment and then proclaiming it was a bug when it didn't work. Keep in mind, you are not supposed to use migrations to deploy your Rails database.</p>
+<p>A lot of people were using the migrations for deployment and then proclaiming it was a bug when it didn’t work. Keep in mind, you are not supposed to use migrations to deploy your Rails database.</p>
 
 <p>Most of you already know schema.rb is the canonical definition of your Rails app database structure. The Rails Core Team has already spoken on the issue (copied directly from the Rails generators):</p>
 
-<blockquote><p>Note that this schema.rb definition is
+<blockquote>
+  <p>Note that this schema.rb definition is
 the authoritative source for your
 database schema. If you need to create
 the application database on another
@@ -136,14 +133,14 @@ system, you should be using
 db:schema:load, not running all the
 migrations from scratch. The latter is
 a flawed and unsustainable approach
-(the more migrations you'll amass, the
-slower it'll run and the greater
-likelihood for issues).</p></blockquote>
+(the more migrations you’ll amass, the
+slower it’ll run and the greater
+likelihood for issues).</p>
+</blockquote>
 
-<p>For Pete's sake run <em>rake db:schema:load</em> so you're not pulling your hair out. If you need to make specific changes for yourself or a client, then implement and execute your additional migrations. But, you should not run migrations to load the database from scratch.</p>
+<p>For Pete’s sake run <em>rake db:schema:load</em> so you’re not pulling your hair out. If you need to make specific changes for yourself or a client, then implement and execute your additional migrations. But, you should not run migrations to load the database from scratch.</p>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">rake</span> <span class="ss">db</span><span class="p">:</span><span class="ss">schema</span><span class="p">:</span><span class="nb">load</span></code></pre></div>
-
 
 <p>A successful run will look like this:</p>
 
@@ -162,8 +159,7 @@ likelihood for issues).</p></blockquote>
 <span class="o">--</span> <span class="n">assume_migrated_upto_version</span><span class="p">(</span><span class="mi">20100704180607</span><span class="p">,</span> <span class="s2">&quot;db/migrate&quot;</span><span class="p">)</span>
    <span class="o">-&gt;</span> <span class="mi">0</span><span class="o">.</span><span class="mo">0077</span><span class="n">s</span></code></pre></div>
 
-
-<h3>Admin user seed instance now available</h3>
+<h3 id="admin-user-seed-instance-now-available">Admin user seed instance now available</h3>
 
 <p>By default, the admin user is available in the development database that comes with Blogcast. To help with deployment and automated tasks, I added the default instance of the user model to db/seeds.rb.</p>
 
@@ -181,11 +177,9 @@ likelihood for issues).</p></blockquote>
 
 <span class="n">user</span><span class="o">.</span><span class="n">save</span></code></pre></div>
 
-
 <p>Use the following Rails rake task to load the default admin user seed:</p>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">rake</span> <span class="ss">db</span><span class="p">:</span><span class="n">seed</span></code></pre></div>
-
 
 <p>A successful run will look like:</p>
 
@@ -193,22 +187,22 @@ likelihood for issues).</p></blockquote>
 <span class="o">------&gt;</span><span class="no">Blogcast</span> <span class="n">admin</span> <span class="n">user</span> <span class="n">created</span><span class="o">.</span> <span class="ss">Username</span><span class="p">:</span> <span class="n">admin</span><span class="p">,</span> <span class="ss">Password</span><span class="p">:</span> <span class="n">admin</span>
 <span class="o">---&gt;</span><span class="no">From</span> <span class="n">this</span> <span class="n">seed</span> <span class="n">may</span> <span class="n">you</span> <span class="n">forever</span> <span class="n">bear</span> <span class="n">fruit</span><span class="o">.</span></code></pre></div>
 
-
-<h3>Cleaned up generic error pages</h3>
+<h3 id="cleaned-up-generic-error-pages">Cleaned up generic error pages</h3>
 
 <p>Depending on your setup, some of you may have had some issues getting your 404 and 500 error pages to render properly.</p>
 
-<p>I looked into the issue. The problem was a generic error page didn't have access to an asset deeper than its current directory. The solution was to move any required assets to the same directory level.</p>
+<p>I looked into the issue. The problem was a generic error page didn’t have access to an asset deeper than its current directory. The solution was to move any required assets to the same directory level.</p>
 
 <p>In Blogcast 1.0.5, I moved the error.css and cute koala.png to the same directory level as the 404.html and 500.html generic error pages.</p>
 
-<p>It gets the job done. Plus with this change I still get to maintain separation of concerns. So, overall I'm happy with the results.</p>
+<p>It gets the job done. Plus with this change I still get to maintain separation of concerns. So, overall I’m happy with the results.</p>
 
-<h3>Special thanks</h3>
+<h3 id="special-thanks">Special thanks</h3>
 
 <p>Special thanks to everyone that made this release possible. A very special thanks to the WordPress Veterans who graciously donated their blog exports to the cause. Thank you!</p>
 
 <p>Happy New Year folks!</p>
+
 
     </div>
     

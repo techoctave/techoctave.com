@@ -9,7 +9,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <meta http-equiv="content-language" content="en-gb" />
       
-      <meta name="description" content="I believe solutions should be simple not simplistic. That's why I wasn't surprised when my client couldn't get the forked branch of Authlogic to work in his production Rails 3.0 environment. Well, I got Authlogic to work with the Official Branch and I'll show you how! For those of you who are interested, he's running the Phusion Passenger for Nginx stack I recommend for hosted Rails applications. Like you and me, my client is a...">
+      <meta name="description" content="I believe solutions should be simple not simplistic. That’s why I wasn’t surprised when my client couldn’t get the forked branch of Authlogic to work in his production Rails 3.0 environment. Well, I got Authlogic to work with the Official Branch and I’ll show you how! For those of you who are interested, he’s running the Phusion Passenger for Nginx stack I recommend for hosted Rails applications. Like you and me, my client is a...">
       
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10">
       <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
@@ -40,21 +40,20 @@
     <h5 class="page-author">Handwritten by TVD</h5>
 
     <div itemprop="articleBody">
-      <p>I believe <a href="https://techoctave.com/posts/36-rails-3-0-rescue-from-routing-error-solution">solutions should be simple not simplistic</a>. That's why I wasn't surprised when my client couldn't get the forked branch of Authlogic to work in his production Rails 3.0 environment. Well, I got <a href="https://github.com/binarylogic/authlogic">Authlogic</a> to work with the Official Branch and I'll show you how!</p>
+      <p>I believe <a href="https://techoctave.com/posts/36-rails-3-0-rescue-from-routing-error-solution">solutions should be simple not simplistic</a>. That’s why I wasn’t surprised when my client couldn’t get the forked branch of Authlogic to work in his production Rails 3.0 environment. Well, I got <a href="https://github.com/binarylogic/authlogic">Authlogic</a> to work with the Official Branch and I’ll show you how!</p>
 
-<p>For those of you who are interested, he's running the <a href="https://techoctave.com/posts/16-how-to-host-a-rails-app-with-phusion-passenger-for-nginx">Phusion Passenger for Nginx</a> stack I recommend for hosted Rails applications.</p>
+<p>For those of you who are interested, he’s running the <a href="https://techoctave.com/posts/16-how-to-host-a-rails-app-with-phusion-passenger-for-nginx">Phusion Passenger for Nginx</a> stack I recommend for hosted Rails applications.</p>
 
-<p>Like you and me, my client is a developer, so I knew there had to be a problem if he switched to a fork'ed branch. But, still, switching to a forked branch just seemed too drastic to be the <em>simple</em> solution.</p>
+<p>Like you and me, my client is a developer, so I knew there had to be a problem if he switched to a fork’ed branch. But, still, switching to a forked branch just seemed too drastic to be the <em>simple</em> solution.</p>
 
 <p>As an open source developer for <a href="http://techoctave.com/blogcast">Blogcast</a>, this fork left me with nagging questions. Was the developer of Authlogic contacted about the issue? Has the developer abandoned Authlogic? If not, are we diverting support away from where it should be - the developer of Authlogic?</p>
 
 <p>My gut tells me the answers to the above look something like: Maybe. No. Yes. Well, we all make mistakes. The best in us tries to learn from those mistakes. Time to move on!</p>
 
-<h3>The Problem</h3>
-
+<h3 id="the-problem">The Problem</h3>
 <p>Some of you might be facing an issue with Authlogic 2.1.6 and Rails 3.0.3.</p>
 
-<h4>Gemfile</h4>
+<h4 id="gemfile">Gemfile</h4>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">source</span> <span class="s1">&#39;http://rubygems.org&#39;</span>
 
@@ -63,15 +62,13 @@
 <span class="n">gem</span> <span class="s1">&#39;mysql2&#39;</span>
 <span class="n">gem</span> <span class="s1">&#39;authlogic&#39;</span></code></pre></div>
 
-
-<p>With a Gemfile that looks like that, you're running into an error that looks like this:</p>
+<p>With a Gemfile that looks like that, you’re running into an error that looks like this:</p>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">undefined</span> <span class="nb">method</span> <span class="sb">`to_key&#39; for #&lt;UserSession: no credentials provided&gt;</span></code></pre></div>
 
+<p>What this means is your Authlogic <a href="https://techoctave.com/posts/34-authentication-vs-authorization">authentication</a> is failing. Why? It’s failing because Authlogic’s UserSession.new constructor is being called without passing a username and password:</p>
 
-<p>What this means is your Authlogic <a href="https://techoctave.com/posts/34-authentication-vs-authorization">authentication</a> is failing. Why? It's failing because Authlogic's UserSession.new constructor is being called without passing a username and password:</p>
-
-<h4>app/controllers/UserSessionsController</h4>
+<h4 id="appcontrollersusersessionscontroller">app/controllers/UserSessionsController</h4>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">create</span>
   <span class="vi">@user_session</span> <span class="o">=</span> <span class="no">UserSession</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">params</span><span class="o">[</span><span class="ss">:user_session</span><span class="o">]</span><span class="p">)</span>
@@ -82,24 +79,20 @@
   <span class="k">end</span>
 <span class="k">end</span></code></pre></div>
 
-
-<p>How could this happen? Routing in Rails 3.0 is different. As a result, Authlogic can't do two things:</p>
+<p>How could this happen? Routing in Rails 3.0 is different. As a result, Authlogic can’t do two things: </p>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="mi">1</span><span class="o">.</span> <span class="no">First</span><span class="p">,</span> <span class="no">Authlogic</span> <span class="n">can</span><span class="s1">&#39;t create a hash of your username/password and store it in *:user_session*, so params[...] will fail.</span>
 
 <span class="s1">2. Finally, Authlogic doesn&#39;</span><span class="n">t</span> <span class="n">know</span> <span class="n">which</span> <span class="no">REST</span> <span class="nb">method</span> <span class="n">to</span> <span class="n">bind</span> <span class="n">the</span> <span class="n">authentication</span> <span class="n">routine</span> <span class="n">to</span><span class="p">,</span> <span class="n">so</span> <span class="n">it</span> <span class="n">will</span> <span class="nb">fail</span> <span class="n">to</span> <span class="n">execute</span> <span class="n">your</span> <span class="o">*</span><span class="n">create</span><span class="o">*</span> <span class="nb">method</span><span class="o">.</span></code></pre></div>
 
+<p>My solution addresses each concern the Rails 3.0 way. As a result, I’ll show you how to keep the Official Authlogic and the bonus is it will actually work in production.</p>
 
-<p>My solution addresses each concern the Rails 3.0 way. As a result, I'll show you how to keep the Official Authlogic and the bonus is it will actually work in production.</p>
-
-<h3>The Unofficial Branch</h3>
-
+<h3 id="the-unofficial-branch">The Unofficial Branch</h3>
 <p>First, I want to address the route many are purporting in the Rails Community. Many people are recommending we use the unofficial fork of Authlogic:</p>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">gem</span> <span class="s1">&#39;authlogic&#39;</span><span class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s1">&#39;git://github.com/odorcicd/authlogic.git&#39;</span><span class="p">,</span> <span class="ss">:branch</span> <span class="o">=&gt;</span> <span class="s1">&#39;rails3&#39;</span></code></pre></div>
 
-
-<p>Essentially, they are suggesting you abandon the Authlogic core. I think such a decision is premature at best. At worst you're going to run into a host of support issues and I recommend against it! I'm not going to use the unofficial fork and I'll tell you why:</p>
+<p>Essentially, they are suggesting you abandon the Authlogic core. I think such a decision is premature at best. At worst you’re going to run into a host of support issues and I recommend against it! I’m not going to use the unofficial fork and I’ll tell you why:</p>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="mi">1</span><span class="o">.</span> <span class="no">It</span><span class="s1">&#39;s unnecessary since Ben has not abandoned Authlogic</span>
 
@@ -107,38 +100,34 @@
 
 <span class="mi">3</span><span class="o">.</span> <span class="n">I</span> <span class="n">have</span> <span class="n">a</span> <span class="n">more</span> <span class="n">simple</span> <span class="n">solution</span> <span class="k">for</span> <span class="n">you</span><span class="o">.</span></code></pre></div>
 
-
-<h3>Think Simple not Simplistic</h3>
+<h3 id="think-simple-not-simplistic">Think Simple not Simplistic</h3>
 
 <p>In discussing the problem, I mentioned two points of failure for Authlogic. My solution is to address the two points of failure so you can move on to better things like shipping your application.</p>
 
-<p>Here, I'm going to show you the solution to getting Authlogic to play nice with Rail 3.0. Then I'm going to explain how my solution addresses each point of failure.</p>
+<p>Here, I’m going to show you the solution to getting Authlogic to play nice with Rail 3.0. Then I’m going to explain how my solution addresses each point of failure.</p>
 
-<h4>app/views/user_sessions/new.html.erb</h4>
+<h4 id="appviewsusersessionsnewhtmlerb">app/views/user_sessions/new.html.erb</h4>
 
-<p>This is a one line of code deal and it's clean. Very clean! So, just update your form_for helper.</p>
+<p>This is a one line of code deal and it’s clean. Very clean! So, just update your form_for helper.</p>
 
 <p>This is how it might look originally:</p>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;%=</span> <span class="n">form_for</span> <span class="vi">@user_session</span> <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span> <span class="o">%&gt;</span></code></pre></div>
 
-
 <p>Update your form_for helper to this:</p>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;</span><span class="sx">%= form_for @user_session, :as =</span><span class="o">&gt;</span> <span class="ss">:user_session</span><span class="p">,</span> <span class="ss">:url</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="ss">:action</span> <span class="o">=&gt;</span> <span class="s2">&quot;create&quot;</span> <span class="p">}</span> <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span> <span class="o">%&gt;</span></code></pre></div>
 
+<p>The first problem was Authlogic couldn’t create a hash of your username/password. Here, the solution is to create your own user session hash using Rails 3.0 syntax :as =&gt; :user_session.</p>
 
-<p>The first problem was Authlogic couldn't create a hash of your username/password. Here, the solution is to create your own user session hash using Rails 3.0 syntax :as => :user_session.</p>
+<p>Finally, Authlogic couldn’t find which REST method to bind for authentication. So, tell Authlogic explicitly which method to execute :url =&gt; { :action =&gt; “create” }.</p>
 
-<p>Finally, Authlogic couldn't find which REST method to bind for authentication. So, tell Authlogic explicitly which method to execute :url => { :action => "create" }.</p>
+<p>That’s it! You’re good to go!</p>
 
-<p>That's it! You're good to go!</p>
+<h4 id="stock-options-and-technical-debt">Stock Options and Technical Debt</h4>
+<p>There is a second option that I don’t recommend as I feel it adds technical debt to your code base. That option overwrites the to_key method in the UserSession model. You also must overwrite the persisted? method as well.</p>
 
-<h4>Stock Options and Technical Debt</h4>
-
-<p>There is a second option that I don't recommend as I feel it adds technical debt to your code base. That option overwrites the to_key method in the UserSession model. You also must overwrite the persisted? method as well.</p>
-
-<p>Do this and you don't have to update your <em>new.html.erb</em> View:</p>
+<p>Do this and you don’t have to update your <em>new.html.erb</em> View:</p>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">to_key</span>
   <span class="n">new_record?</span> <span class="p">?</span> <span class="kp">nil</span> <span class="p">:</span> <span class="o">[</span> <span class="nb">self</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="nb">self</span><span class="o">.</span><span class="n">class</span><span class="o">.</span><span class="n">primary_key</span><span class="p">)</span> <span class="o">]</span>
@@ -148,12 +137,12 @@
   <span class="kp">false</span>
 <span class="k">end</span></code></pre></div>
 
+<p>This option adds technical debt to the UserSession model since now you have to maintain Authlogic specific code. Such a move is best addressed by Authlogic’s author.</p>
 
-<p>This option adds technical debt to the UserSession model since now you have to maintain Authlogic specific code. Such a move is best addressed by Authlogic's author.</p>
+<p>I’m going to continue to support Ben Johnson because I believe Authlogic is a fine project for simple <a href="https://techoctave.com/posts/34-authentication-vs-authorization">Authentication</a>. I hope this solution gets you back on the Official Authlogic branch.</p>
 
-<p>I'm going to continue to support Ben Johnson because I believe Authlogic is a fine project for simple <a href="https://techoctave.com/posts/34-authentication-vs-authorization">Authentication</a>. I hope this solution gets you back on the Official Authlogic branch.</p>
+<p>I know upgrading to Rails 3.0 is challenging. But I’m rooting for you and the entire Rails Community is rooting for you. So pick yourself up, dust yourself off and keep moving forward. Until next time Beloved, take care!</p>
 
-<p>I know upgrading to Rails 3.0 is challenging. But I'm rooting for you and the entire Rails Community is rooting for you. So pick yourself up, dust yourself off and keep moving forward. Until next time Beloved, take care!</p>
 
     </div>
     

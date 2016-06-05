@@ -9,7 +9,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <meta http-equiv="content-language" content="en-gb" />
       
-      <meta name="description" content="The fine folks over at LayerVault have released PSD.rb, allowing Ruby developers to easily work with Photoshop documents. If you use and love Ruby like we do, then you love this idea like we do. What once was a black box is now open for innovation. What's more is the surrounding context; Mans ever compulsion to control his environment, no matter the cost. All great narratives have their version of the pit of hell. If...">
+      <meta name="description" content="The fine folks over at LayerVault have released PSD.rb, allowing Ruby developers to easily work with Photoshop documents. If you use and love Ruby like we do, then you love this idea like we do. What once was a black box is now open for innovation. What’s more is the surrounding context; Mans ever compulsion to control his environment, no matter the cost. All great narratives have their version of the pit of hell. If...">
       
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10">
       <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
@@ -40,13 +40,13 @@
     <h5 class="page-author">Handwritten by TVD</h5>
 
     <div itemprop="articleBody">
-      <p><img src="https://techoctave.com/c7/static/psd.rb.png" alt="Ruby Photoshop Parser"/></p>
+      <p><img src="https://techoctave.com/c7/static/psd.rb.png" alt="Ruby Photoshop Parser" /></p>
 
 <p>The fine folks over at LayerVault have released <a href="http://cosmos.layervault.com/psdrb.html">PSD.rb</a>, allowing Ruby developers to easily work with Photoshop documents.</p>
 
-<p>If you use and love Ruby like we do, then you love this idea like we do. What once was a black box is now open for innovation. What's more is the surrounding context; Mans ever compulsion to control his environment, no matter the cost.</p>
+<p>If you use and love Ruby like we do, then you love this idea like we do. What once was a black box is now open for innovation. What’s more is the surrounding context; Mans ever compulsion to control his environment, no matter the cost.</p>
 
-<p>All great narratives have their version of the pit of hell. If you've ever read <a href="http://en.wikipedia.org/wiki/Inferno_(Dante)">Dante's Inferno</a> or did the same thing over and over expecting a different result, then you too have danced with the devil.</p>
+<p>All great narratives have their version of the pit of hell. If you’ve ever read <a href="http://en.wikipedia.org/wiki/Inferno_(Dante)">Dante’s Inferno</a> or did the same thing over and over expecting a different result, then you too have danced with the devil. </p>
 
 <p>Development is no different.</p>
 
@@ -54,11 +54,11 @@
 
 <p>Madness.</p>
 
-<p>Photoshop's PSD format is not our favorite file format either. For many, to parse PSD is their last dance with sanity. It's not easy.</p>
+<p>Photoshop’s PSD format is not our favorite file format either. For many, to parse PSD is their last dance with sanity. It’s not easy.</p>
 
 <p>Many simply go mad.</p>
 
-<p>And in their fall is a glimpse into honesty and bravery few seldom experience. I wanted to share that experience with you. Here's a code snippet from the <a href="https://code.google.com/p/xee/source/browse/XeePhotoshopLoader.m#102">last guy who tried to parse PSD</a> in the Xee project:</p>
+<p>And in their fall is a glimpse into honesty and bravery few seldom experience. I wanted to share that experience with you. Here’s a code snippet from the <a href="https://code.google.com/p/xee/source/browse/XeePhotoshopLoader.m#102">last guy who tried to parse PSD</a> in the Xee project:</p>
 
 <p><em>===================================================</em></p>
 
@@ -66,43 +66,44 @@
 
 <p><em>off_t nextchunk=[fh offsetInFile]+((chunklen+3)&amp;~3);</em></p>
 
-<p><em>At this point, I'd like to take a moment to speak to you about the Adobe PSD format. PSD is not a good format. PSD is not even a bad format. Calling it such would be an insult to other bad formats, such as PCX or JPEG. No, PSD is an abysmal format.</em></p>
+<p><em>At this point, I’d like to take a moment to speak to you about the Adobe PSD format. PSD is not a good format. PSD is not even a bad format. Calling it such would be an insult to other bad formats, such as PCX or JPEG. No, PSD is an abysmal format.</em> </p>
 
-<p><em>Having worked on this code for several weeks now, my hate for PSD has grown to a raging fire that burns with the fierce passion of a million suns.</em></p>
+<p><em>Having worked on this code for several weeks now, my hate for PSD has grown to a raging fire that burns with the fierce passion of a million suns.</em> </p>
 
 <p><em>If there are two different ways of doing something, PSD will do both, in different places. It will then make up three more ways no sane human would think of, and do those too. PSD makes inconsistency an art form.</em></p>
 
-<p><em>Why, for instance, did it suddenly decide that </em>these<em> particular chunks should be aligned to four bytes, and that this alignement should </em>not<em> be included in the size? Other chunks in other places are either unaligned, or aligned with the alignment included in the size. Here, though, it is not included.</em></p>
+<p><em>Why, for instance, did it suddenly decide that *these</em> particular chunks should be aligned to four bytes, and that this alignement should <em>not</em> be included in the size? Other chunks in other places are either unaligned, or aligned with the alignment included in the size. Here, though, it is not included.* </p>
 
 <p><em>Either one of these three behaviours would be fine. A sane format would pick one. PSD, of course, uses all three, and more.</em></p>
 
-<p><em>Trying to get data out of a PSD file is like trying to find something in the attic of your eccentric old uncle who died in a freak freshwater shark attack on his 58th birthday. That last detail may not be important for the purposes of the simile, but at this point I am spending a lot of time imagining amusing fates for the people responsible for this Rube Goldberg of a file format.</em></p>
+<p><em>Trying to get data out of a PSD file is like trying to find something in the attic of your eccentric old uncle who died in a freak freshwater shark attack on his 58th birthday. That last detail may not be important for the purposes of the simile, but at this point I am spending a lot of time imagining amusing fates for the people responsible for this Rube Goldberg of a file format.</em> </p>
 
-<p><em>Earlier, I tried to get a hold of the latest specs for the PSD file format. To do this, I had to apply to them for permission to apply to them to have them consider sending me this sacred tome.</em></p>
+<p><em>Earlier, I tried to get a hold of the latest specs for the PSD file format. To do this, I had to apply to them for permission to apply to them to have them consider sending me this sacred tome.</em> </p>
 
-<p><em>This would have involved faxing them a copy of some document or other, probably signed in blood. I can only imagine that they make this process so difficult because they are intensely ashamed of having created this abomination.</em></p>
+<p><em>This would have involved faxing them a copy of some document or other, probably signed in blood. I can only imagine that they make this process so difficult because they are intensely ashamed of having created this abomination.</em> </p>
 
 <p><em>I was naturally not gullible enough to go through with this procedure, but if I had done so, I would have printed out every single page of the spec, and set them all on fire. Were it within my power, I would gather every single copy of those specs, and launch them on a spaceship directly into the sun.</em></p>
 
 <p><em>PSD is not my favourite file format.</em></p>
 
-<p><em>if(sign!='8BIM') break; // sanity check</em></p>
+<p><em>if(sign!=’8BIM’) break; // sanity check</em></p>
 
 <p><em>===================================================</em></p>
 
-<p>But there is a happy ending to this story...</p>
+<p>But there is a happy ending to this story…</p>
 
 <p>The truth is for all our shortcomings as developers, every line of code we commit contributes to the greater good. With every project and every passion we lay the foundation for a brighter tomorrow.</p>
 
-<p>Without the <a href="https://techoctave.com/posts/57-hustle-and-code">hustle and code</a> of the Xee developers, who knows where we might be with PSD.rb or PSD.js or PSD.*</p>
+<p>Without the <a href="https://techoctave.com/posts/57-hustle-and-code">hustle and code</a> of the Xee developers, who knows where we might be with PSD.rb or PSD.js or PSD.* </p>
 
-<p>We contribute to the greater good...Remember that.</p>
+<p>We contribute to the greater good…Remember that. </p>
 
-<p>When you're down-and-out...Remember that. When it's time for you to push back on that project deadline...Remember that. When the code is too hard, the frustration too great...Remember that.</p>
+<p>When you’re down-and-out…Remember that. When it’s time for you to push back on that project deadline…Remember that. When the code is too hard, the frustration too great…Remember that.</p>
 
-<p>Remember that after all the hustle, just beyond the field of "finished" is a brighter tomorrow for all of us.</p>
+<p>Remember that after all the hustle, just beyond the field of “finished” is a brighter tomorrow for all of us.</p>
 
 <p>Code for the moments that take your breath away.</p>
+
 
     </div>
     

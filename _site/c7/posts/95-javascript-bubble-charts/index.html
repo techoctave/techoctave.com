@@ -9,7 +9,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <meta http-equiv="content-language" content="en-gb" />
       
-      <meta name="description" content="Today marks a milestone for our JavaScript Charts. Release 1.2.0 ushers in many technological advancements to our chart library, but most importantly, this release affirms our commitment to providing best-of-breed solutions for best-in-class development teams: Teams change. Customers change. Requirements change. That's why we built our JavaScript charts to be highly configurable. Changing times require agile solutions. Look. For us it's simple. We believe our JavaScript charts do something no one else can...We put your...">
+      <meta name="description" content="&lt;img src=”http://techoctave.com/images/highly_customizable_charts.png” alt=”TechOctave JavaScript Charts Suite: Bar Chart, Bubble Chart, Line Chart and Scatter Chart.” width=100% /&gt; Today marks a milestone for our JavaScript Charts. Release 1.2.0 ushers in many technological advancements to our chart library, but most importantly, this release affirms our commitment to providing best-of-breed solutions for best-in-class development teams: Teams change. Customers change. Requirements change. That’s why we built our JavaScript charts to be highly configurable. Changing times require agile solutions. Look....">
       
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10">
       <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
@@ -40,21 +40,21 @@
     <h5 class="page-author">Handwritten by TVD</h5>
 
     <div itemprop="articleBody">
-      <p><img src="http://techoctave.com/images/highly_customizable_charts.png" alt="TechOctave JavaScript Charts Suite: Bar Chart, Bubble Chart, Line Chart and Scatter Chart." width=100% /></p>
+      <p>&lt;img src=”http://techoctave.com/images/highly_customizable_charts.png” alt=”TechOctave JavaScript Charts Suite: Bar Chart, Bubble Chart, Line Chart and Scatter Chart.” width=100% /&gt;</p>
 
 <p>Today marks a milestone for our <a href="http://techoctave.com/charts/">JavaScript Charts</a>.</p>
 
 <p>Release 1.2.0 ushers in many technological advancements to our chart library, but most importantly, this release affirms our commitment to providing best-of-breed solutions for best-in-class development teams:</p>
 
-<p>Teams change. Customers change. Requirements change. That's why we built our JavaScript charts to be highly configurable. Changing times require agile solutions.</p>
+<p>Teams change. Customers change. Requirements change. That’s why we built our JavaScript charts to be highly configurable. Changing times require agile solutions.</p>
 
-<p>Look. For us it's simple. We believe our JavaScript charts do something no one else can...We put your success in your hands - as it should be.</p>
+<p>Look. For us it’s simple. We believe our JavaScript charts do something no one else can…We put your success in your hands - as it should be.</p>
 
 <p>To that end, we build products that inspire you to your better end and offer support that helps you get there. Every enhancement. Every release. Every time.</p>
 
-<h3>Release Notes</h3>
+<h3 id="release-notes">Release Notes</h3>
 
-<h4>Enhancements</h4>
+<h4 id="enhancements">Enhancements</h4>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">-</span> <span class="no">Created</span> <span class="no">BubbleChart</span> <span class="n">component</span>
 
@@ -68,8 +68,7 @@
 
 <span class="o">-</span> <span class="no">Implemented</span> <span class="no">LineChart</span> <span class="n">data</span> <span class="n">point</span> <span class="n">dots</span></code></pre></div>
 
-
-<h4>API Improvements</h4>
+<h4 id="api-improvements">API Improvements</h4>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">-</span> <span class="no">Raphael</span><span class="o">.</span><span class="n">js</span><span class="p">:</span> <span class="no">Upgraded</span> <span class="n">to</span> <span class="n">version</span> <span class="mi">2</span><span class="o">.</span><span class="mi">1</span><span class="o">.</span><span class="mi">0</span>
 
@@ -79,59 +78,57 @@
 
 <span class="o">-</span> <span class="no">Added</span> <span class="n">opacity</span> <span class="n">properties</span> <span class="n">to</span> <span class="n">data</span> <span class="n">points</span> <span class="ow">and</span> <span class="n">chart</span> <span class="n">objects</span></code></pre></div>
 
-
-<h3>Bubble Charts</h3>
+<h3 id="bubble-charts">Bubble Charts</h3>
 
 <p>Bubble charts are used to visualize a data set with 2 to 4 dimensions. The first two dimensions are visualized as coordinates, the 3rd as color and the 4th as size:</p>
 
-<p><img src="http://techoctave.com/images/bubblechart.png" alt="Bubble Chart - TechOctave JavaScript Charts." width=100%/></p>
+<p>&lt;img src=”http://techoctave.com/images/bubblechart.png” alt=”Bubble Chart - TechOctave JavaScript Charts.” width=100%/&gt;</p>
 
-<p>Here, we have a Bubble Chart displaying a "Correlation between Estimated Sales, Annual Income and Vehicle Price of some luxury brands." Using our Bubble Chart would look something like this:</p>
+<p>Here, we have a Bubble Chart displaying a “Correlation between Estimated Sales, Annual Income and Vehicle Price of some luxury brands.” Using our Bubble Chart would look something like this:</p>
 
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">vehicles</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BubbleChart</span><span class="p">(</span><span class="s2">&quot;vehicles&quot;</span><span class="p">,</span> <span class="p">{</span>
-    <span class="nx">data</span><span class="o">:</span> <span class="p">[...],</span>
-    <span class="nx">legendTitle</span><span class="o">:</span> <span class="s2">&quot;Luxury Brands&quot;</span><span class="p">,</span>
-    <span class="nx">XAxisLabel</span><span class="o">:</span> <span class="s2">&quot;Estimated Sales ($ Millions)&quot;</span><span class="p">,</span>
-    <span class="nx">YAxisLabel</span><span class="o">:</span> <span class="s2">&quot;Annual Income ($ Millions)&quot;</span><span class="p">,</span>
-    <span class="nx">minValueX</span><span class="o">:</span> <span class="o">-</span><span class="mi">20</span><span class="p">,</span>
-    <span class="nx">maxValueX</span><span class="o">:</span> <span class="mi">70</span><span class="p">,</span>
-    <span class="nx">minValueY</span><span class="o">:</span> <span class="o">-</span><span class="mi">50</span><span class="p">,</span>
-    <span class="nx">maxValueY</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
-    <span class="nx">majorTicksX</span><span class="o">:</span> <span class="mi">9</span><span class="p">,</span>
-    <span class="nx">majorTicksY</span><span class="o">:</span> <span class="mi">5</span>
+	<span class="nx">data</span><span class="o">:</span> <span class="p">[...],</span>
+	<span class="nx">legendTitle</span><span class="o">:</span> <span class="s2">&quot;Luxury Brands&quot;</span><span class="p">,</span>
+	<span class="nx">XAxisLabel</span><span class="o">:</span> <span class="s2">&quot;Estimated Sales ($ Millions)&quot;</span><span class="p">,</span>
+	<span class="nx">YAxisLabel</span><span class="o">:</span> <span class="s2">&quot;Annual Income ($ Millions)&quot;</span><span class="p">,</span>
+	<span class="nx">minValueX</span><span class="o">:</span> <span class="o">-</span><span class="mi">20</span><span class="p">,</span>
+	<span class="nx">maxValueX</span><span class="o">:</span> <span class="mi">70</span><span class="p">,</span>
+	<span class="nx">minValueY</span><span class="o">:</span> <span class="o">-</span><span class="mi">50</span><span class="p">,</span>
+	<span class="nx">maxValueY</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+	<span class="nx">majorTicksX</span><span class="o">:</span> <span class="mi">9</span><span class="p">,</span>
+	<span class="nx">majorTicksY</span><span class="o">:</span> <span class="mi">5</span>
 <span class="p">});</span></code></pre></div>
-
 
 <p>We need a DOM element to bind the BubbleChart instance to. That element is created with a simple div tag:</p>
 
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;vehicles&quot;</span><span class="nt">&gt;&lt;/div&gt;</span></code></pre></div>
 
-
 <p>There are seven (7) brands: Acura, Alfa Romeo, AM General, Aston Martin, Audi, BMW and Bugatti.</p>
 
 <p>However, there are nine (9) vehicles: Acura TSX, Acura RDX, Alfa Romeo Giulietta, AM General Humvee, Aston Martin Lagonda, Aston Martin Vanquish, Audi A3, BMW 528i and Bugatti Vitesse.</p>
 
-<p>Each vehicle is plotted based on Estimated Sales relative to the purchaser's Annual Income. That means the first two dimensions are Estimated Sales and Annual Income.</p>
+<p>Each vehicle is plotted based on Estimated Sales relative to the purchaser’s Annual Income. That means the first two dimensions are Estimated Sales and Annual Income.</p>
 
 <p>Next, each vehicle is grouped by brand using the third dimension - Color. The Acura vehicles are grouped by the color red; Bugatti by blue; etc. etc.</p>
 
 <p>The fourth and last dimension is represented by the Cost of each vehicle. As the cost of the vehicle increases, so too does the size of its circle. The size of the circle gives the user a quick comparison of how much more or less costly a vehicle is to another vehicle in the sample.</p>
 
-<h3>Looking Ahead</h3>
+<h3 id="looking-ahead">Looking Ahead</h3>
 
 <p>Put together all of these dimensions and you get a succinct way to tell a compelling story about your business. Done well and your executives and leaders can make decisions that were seemingly impossible before.</p>
 
-<p>And that's what Business Intelligence is about - shining light on big data and empowering decision makers.</p>
+<p>And that’s what Business Intelligence is about - shining light on big data and empowering decision makers.</p>
 
 <p>What distinguishes your leadership team from your competition? What would it mean for you and your team if you could leverage data to be as agile as the market demands?</p>
 
-<p>What would it take for you to try? Do you know what happens if you don't?</p>
+<p>What would it take for you to try? Do you know what happens if you don’t?</p>
 
 <p>Nothing.</p>
 
-<p>If you're looking for a team that will be with you every step of the way...If you're looking for a company that will stand with you, while the rest stand aside, then welcome home friend.</p>
+<p>If you’re looking for a team that will be with you every step of the way…If you’re looking for a company that will stand with you, while the rest stand aside, then welcome home friend.</p>
 
-<p>Purchase our <a href="http://techoctave.com/charts/">JavaScript Charts</a> and let's make something happen together.</p>
+<p>Purchase our <a href="http://techoctave.com/charts/">JavaScript Charts</a> and let’s make something happen together.</p>
+
 
     </div>
     

@@ -9,7 +9,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <meta http-equiv="content-language" content="en-gb" />
       
-      <meta name="description" content="For awhile now, folks have been asking whether our JavaScript Gauges and JavaScript Charts work with Google Web Toolkit (GWT). I'm happy to say the answer is a resounding Yes. More importantly, I wanted to take some time to walk you through how the integration might look for you. Google Web Toolkit (GWT) For those who don't know, GWT is a development toolkit for building and optimizing browser-based web applications. Specifically, developers write their applications...">
+      <meta name="description" content="For awhile now, folks have been asking whether our JavaScript Gauges and JavaScript Charts work with Google Web Toolkit (GWT). I’m happy to say the answer is a resounding Yes. More importantly, I wanted to take some time to walk you through how the integration might look for you. Google Web Toolkit (GWT) For those who don’t know, GWT is a development toolkit for building and optimizing browser-based web applications. Specifically, developers write their applications...">
       
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10">
       <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
@@ -40,54 +40,52 @@
     <h5 class="page-author">Handwritten by TVD</h5>
 
     <div itemprop="articleBody">
-      <p><img src="https://techoctave.com/c7/static/gwt-techoctave-gauges-charts.png" alt="Google Web Toolkit (GWT) - TechOctave Gauges and Charts Integration"/></p>
+      <p><img src="https://techoctave.com/c7/static/gwt-techoctave-gauges-charts.png" alt="Google Web Toolkit (GWT) - TechOctave Gauges and Charts Integration" /></p>
 
-<p>For awhile now, folks have been asking whether our <a href="http://techoctave.com/gauges">JavaScript Gauges</a> and <a href="http://techoctave.com/charts">JavaScript Charts</a> work with Google Web Toolkit (GWT). I'm happy to say the answer is a resounding Yes.</p>
+<p>For awhile now, folks have been asking whether our <a href="http://techoctave.com/gauges">JavaScript Gauges</a> and <a href="http://techoctave.com/charts">JavaScript Charts</a> work with Google Web Toolkit (GWT). I’m happy to say the answer is a resounding Yes.</p>
 
 <p>More importantly, I wanted to take some time to walk you through how the integration might look for you.</p>
 
-<h3>Google Web Toolkit (GWT)</h3>
+<h3 id="google-web-toolkit-gwt">Google Web Toolkit (GWT)</h3>
 
-<p>For those who don't know, <a href="http://googlewebtoolkit.blogspot.com/2008/07/getting-to-really-know-gwt-part-1-jsni.html">GWT is a development toolkit</a> for building and optimizing browser-based web applications. Specifically, developers write their applications in Java, then GWT cross-compiles the Java source code into JavaScript.</p>
+<p>For those who don’t know, <a href="http://googlewebtoolkit.blogspot.com/2008/07/getting-to-really-know-gwt-part-1-jsni.html">GWT is a development toolkit</a> for building and optimizing browser-based web applications. Specifically, developers write their applications in Java, then GWT cross-compiles the Java source code into JavaScript.</p>
 
-<p>Often, you will need to integrate GWT with existing handwritten JavaScript or with a third-party JavaScript library. Occasionally you may need to access low-level browser functionality not exposed by the GWT class API's.</p>
+<p>Often, you will need to integrate GWT with existing handwritten JavaScript or with a third-party JavaScript library. Occasionally you may need to access low-level browser functionality not exposed by the GWT class API’s.</p>
 
-<p>The JavaScript Native Interface (JSNI) feature of GWT can solve both of these problems by allowing you to integrate JavaScript directly into your application's Java source code.</p>
+<p>The JavaScript Native Interface (JSNI) feature of GWT can solve both of these problems by allowing you to integrate JavaScript directly into your application’s Java source code.</p>
 
-<h3>JavaScript Native Interface (JSNI)</h3>
+<h3 id="javascript-native-interface-jsni">JavaScript Native Interface (JSNI)</h3>
 
 <p>GWT borrows from the Java Native Interface (JNI) concept to implement JavaScript Native Interface (JSNI).</p>
 
-<p><a href="http://www.ibm.com/developerworks/web/library/j-ajax4/">JSNI methods are declared native</a> and contain JavaScript code in a specially formatted comment block between the end of the parameter list and the trailing semicolon.</p>
+<p><a href="http://www.ibm.com/developerworks/web/library/j-ajax4/">JSNI methods are declared native</a> and contain JavaScript code in a specially formatted comment block between the end of the parameter list and the trailing semicolon. </p>
 
 <p>A JSNI comment block looks like this:</p>
 
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="err">`</span><span class="cm">/*-{ and ends with the exact token }-*/</span><span class="err">`</span></code></pre></div>
 
-
 <p>JSNI methods are called just like any normal Java method. They can be static or instance methods. Here, we create an instance method of the Gauge class:</p>
 
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kr">public</span> <span class="kr">static</span> <span class="kr">native</span> <span class="k">void</span> <span class="nx">someEvent</span><span class="p">()</span> <span class="cm">/*-{</span>
-<span class="cm">   var cash = $entry(@...myClass::getCashSum());</span>
+<span class="cm">	var cash = $entry(@...myClass::getCashSum());</span>
 
-<span class="cm">   var settlements = new $wnd.Gauge(&quot;sales&quot;, { </span>
-<span class="cm">       label: &quot;Sales&quot;, </span>
-<span class="cm">       minValue: 0, </span>
-<span class="cm">       maxValue: 100, </span>
-<span class="cm">       majorTicks: 11, </span>
-<span class="cm">       minorTicks: 4 </span>
-<span class="cm">   });</span>
+<span class="cm">	var settlements = new $wnd.Gauge(&quot;sales&quot;, { </span>
+<span class="cm">		label: &quot;Sales&quot;, </span>
+<span class="cm">		minValue: 0, </span>
+<span class="cm">		maxValue: 100, </span>
+<span class="cm">		majorTicks: 11, </span>
+<span class="cm">		minorTicks: 4 </span>
+<span class="cm">	});</span>
 
-<span class="cm">   settlements.setValue(cash);</span>
+<span class="cm">	settlements.setValue(cash);</span>
 
 <span class="cm">}-*/</span><span class="p">;</span></code></pre></div>
 
-
 <p>This is perfectly valid Java code because the compiler sees only private static native void someEvent();. GWT parses the contents of the comment block and outputs the JavaScript verbatim.</p>
 
-<p>GWT provides the $wnd and $doc variables to refer to the window and document objects. The code of your GWT app runs in a (hidden) iframe, so document references that iframe's document (and window the iframe's browsing context).</p>
+<p>GWT provides the $wnd and $doc variables to refer to the window and document objects. The code of your GWT app runs in a (hidden) iframe, so document references that iframe’s document (and window the iframe’s browsing context).</p>
 
-<p>GWT thus initializes the variables $doc and $wnd to let you easily reference the document and browsing context (window) of the "host page" that loads the GWT app.</p>
+<p>GWT thus initializes the variables $doc and $wnd to let you easily reference the document and browsing context (window) of the “host page” that loads the GWT app.</p>
 
 <p>Linkers decide how the compiled code is loaded, the default one (std) and the newer xsiframe use iframes, whereas the deprecated xs loads your code in the same browsing context (so $doc == document and $wnd == window).</p>
 
@@ -97,7 +95,8 @@
 
 <p>Since JSNI code is just regular JavaScript, you will not be able to use Java debugging tools inside your JSNI methods when running in development mode.</p>
 
-<p>You just want to make sure you're accessing your JavaScript objects in a meaningful and maintainable way. Everything else is gravy.</p>
+<p>You just want to make sure you’re accessing your JavaScript objects in a meaningful and maintainable way. Everything else is gravy.</p>
+
 
     </div>
     

@@ -9,7 +9,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <meta http-equiv="content-language" content="en-gb" />
       
-      <meta name="description" content="NHibernate is an Object Relational Mapper (ORM) for the .NET Runtime. XML Mappings are still the most popular method of mapping persistent classes to their relational tables: Inspired by the success of Fluent NHibernate and what Martin Fowler calls the Fluent Interface, NHibernate 3.2 will feature its own NHibernate Mapping by Code API. With such change abound, I thought it a great opportunity to layout the fundamentals of XML Mappings. In the process, we'll also...">
+      <meta name="description" content="NHibernate is an Object Relational Mapper (ORM) for the .NET Runtime. XML Mappings are still the most popular method of mapping persistent classes to their relational tables: Inspired by the success of Fluent NHibernate and what Martin Fowler calls the Fluent Interface, NHibernate 3.2 will feature its own NHibernate Mapping by Code API. With such change abound, I thought it a great opportunity to layout the fundamentals of XML Mappings. In the process, we’ll also...">
       
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10">
       <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
@@ -40,15 +40,15 @@
     <h5 class="page-author">Handwritten by TVD</h5>
 
     <div itemprop="articleBody">
-      <p><img src="https://techoctave.com/c7/static/samurai.jpg" width="100%"/></p>
+      <p><img src="https://techoctave.com/c7/static/samurai.jpg" width="100%" /></p>
 
 <p>NHibernate is an Object Relational Mapper (ORM) for the .NET Runtime. XML Mappings are still the most popular method of mapping persistent classes to their relational tables:</p>
 
 <p>Inspired by the success of <a href="http://lostechies.com/jamesgregory/2011/04/13/me-on-nhibernate-3-2/">Fluent NHibernate</a> and what <a href="http://martinfowler.com/bliki/FluentInterface.html">Martin Fowler calls the Fluent Interface</a>, NHibernate 3.2 will feature its own <a href="http://nhforge.org/blogs/nhibernate/archive/2011/09/12/nh-mapping-by-code-vs-the-untouchable-db.aspx">NHibernate Mapping by Code</a> API.</p>
 
-<p>With such change abound, I thought it a great opportunity to layout the fundamentals of XML Mappings. In the process, we'll also delve into a few core development laws I use regardless of platform.</p>
+<p>With such change abound, I thought it a great opportunity to layout the fundamentals of XML Mappings. In the process, we’ll also delve into a few core development laws I use regardless of platform.</p>
 
-<h3>Elements of Object Oriented Software</h3>
+<h3 id="elements-of-object-oriented-software">Elements of Object Oriented Software</h3>
 
 <p>Particularly with static languages, I adhere to two core object oriented design principles. These principles were first applied in <a href="http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612">Design Patterns:
 Elements of Reusable Object-Oriented Software</a> by The Gang of Four - Erich Gamma, Richard Helm, Ralph Johnson and John Vlissides:</p>
@@ -56,12 +56,11 @@ Elements of Reusable Object-Oriented Software</a> by The Gang of Four - Erich Ga
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">1. Program to an interface, not an implementation.
 2. Favor object composition over class inheritance.</code></pre></div>
 
+<p>These design principles form the basis for maintainable NTier’d applications both on the J2EE and .NET Runtimes.</p>
 
-<p>These design principles form the basis for maintainable NTier'd applications both on the J2EE and .NET Runtimes.</p>
+<p>Let’s take a look at a domain model that implements these core object oriented design principles. Let’s model a blog Post:</p>
 
-<p>Let's take a look at a domain model that implements these core object oriented design principles. Let's model a blog Post:</p>
-
-<h4>The Post Interface (IPost.cs)</h4>
+<h4 id="the-post-interface-ipostcs">The Post Interface (IPost.cs)</h4>
 
 <p>The interface exposes the public properties and methods of a persistent class in your domain:</p>
 
@@ -74,8 +73,7 @@ Elements of Reusable Object-Oriented Software</a> by The Gang of Four - Erich Ga
     <span class="nx">IList</span><span class="o">&lt;</span><span class="nx">Comment</span><span class="o">&gt;</span> <span class="nx">Comments</span> <span class="p">{</span> <span class="nx">get</span><span class="p">;</span> <span class="nx">set</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">}</span></code></pre></div>
 
-
-<h4>The Post Implementation (Post.cs)</h4>
+<h4 id="the-post-implementation-postcs">The Post Implementation (Post.cs)</h4>
 
 <p>The Post class implements the IPost interface. Here, we assume the <em>Author</em> class and the <em>Comment</em> class are defined elsewhere:</p>
 
@@ -124,32 +122,31 @@ Elements of Reusable Object-Oriented Software</a> by The Gang of Four - Erich Ga
     <span class="p">}</span>
 <span class="p">}</span></code></pre></div>
 
-
 <p>Each Post has an <em>Author</em> and a list of <em>Comments</em>. In the Post constructor, I create instances of each domain object.</p>
 
 <p>Rarely does a problem domain ever break down to neat hierarchical entities. The majority of domain models are usually composed of another model or a collection of other models that it does work on or relies on.</p>
 
-<p>That's why understanding object composition is so important. Object composition gives you the freedom to model the world as you see it without the self-imposed restrictions that come with being inheritance focused.</p>
+<p>That’s why understanding object composition is so important. Object composition gives you the freedom to model the world as you see it without the self-imposed restrictions that come with being inheritance focused.</p>
 
-<p>The real problem is <a href="http://books.google.com/books?id=6oHuKQe3TjQC&amp;pg=PT56&amp;lpg=PT56&amp;dq=design+patterns+elements+of+reusable+object-oriented+software+inheritance+breaks+encapsulation&amp;source=bl&amp;ots=lNkNCR6NFI&amp;sig=TvcfMsh_tav8Cm2cue1xoExBKpk&amp;hl=en&amp;sa=X&amp;ei=v04vT9zWMsbc0QHHj830Cg&amp;sqi=2&amp;ved=0CEUQ6AEwBA#v=onepage&amp;q&amp;f=false">inheritance breaks encapsulation</a> because it exposes a subclass to details of it's parents implementation.</p>
+<p>The real problem is <a href="http://books.google.com/books?id=6oHuKQe3TjQC&amp;pg=PT56&amp;lpg=PT56&amp;dq=design+patterns+elements+of+reusable+object-oriented+software+inheritance+breaks+encapsulation&amp;source=bl&amp;ots=lNkNCR6NFI&amp;sig=TvcfMsh_tav8Cm2cue1xoExBKpk&amp;hl=en&amp;sa=X&amp;ei=v04vT9zWMsbc0QHHj830Cg&amp;sqi=2&amp;ved=0CEUQ6AEwBA#v=onepage&amp;q&amp;f=false">inheritance breaks encapsulation</a> because it exposes a subclass to details of it’s parents implementation.</p>
 
 <p>These implementation dependencies can cause problems when trying to reuse a subclass. Should any aspect of the inherited implementation not be appropriate for new problem domains, the parent class must be rewritten or replaced by something more appropriate. This dependency limits flexibility and ultimately reusability.</p>
 
-<p>On the other hand, Object Composition requires objects to respect each others interfaces, which in turn requires us to carefully design interfaces that don't stop you from using one object with many others. Because objects are accessed solely through their interfaces, we don't break encapsulation.</p>
+<p>On the other hand, Object Composition requires objects to respect each others interfaces, which in turn requires us to carefully design interfaces that don’t stop you from using one object with many others. Because objects are accessed solely through their interfaces, we don’t break encapsulation.</p>
 
 <p>Favoring object composition over class inheritance helps you keep each class focused on one task - The Single Responsibility Rule. You classes and class hierarchies will remain small and will be less likely to grow into unmanageable monsters.</p>
 
-<h3>NHibernate XML Mappings</h3>
+<h3 id="nhibernate-xml-mappings">NHibernate XML Mappings</h3>
 
 <p>NHibernate XML Mappings are a way to map our domain objects to their corresponding database tables.</p>
 
 <p>Using NHibernate, the database becomes an implementation detail and you can spend more time understanding your problem domain and less time fiddling with database tables.</p>
 
-<p>Here's how we would map our Post class:</p>
+<p>Here’s how we would map our Post class:</p>
 
-<h4>The NHibernate Mapping (Post.hbm.xml)</h4>
+<h4 id="the-nhibernate-mapping-posthbmxml">The NHibernate Mapping (Post.hbm.xml)</h4>
 
-<p>Here, we'll assume the Author class is mapped in Author.hbm.xml and the Comment class is mapped in Comment.hbm.xml:</p>
+<p>Here, we’ll assume the Author class is mapped in Author.hbm.xml and the Comment class is mapped in Comment.hbm.xml:</p>
 
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="o">&lt;?</span><span class="nx">xml</span> <span class="nx">version</span><span class="o">=</span><span class="s2">&quot;1.0&quot;</span> <span class="nx">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span> <span class="o">?&gt;</span>
 <span class="o">&lt;</span><span class="nx">hibernate</span><span class="o">-</span><span class="nx">mapping</span> <span class="nx">xmlns</span><span class="o">=</span><span class="s2">&quot;urn:nhibernate-mapping-2.2&quot;</span>
@@ -175,20 +172,19 @@ Elements of Reusable Object-Oriented Software</a> by The Gang of Four - Erich Ga
   <span class="o">&lt;</span><span class="err">/class&gt;</span>
 <span class="o">&lt;</span><span class="err">/hibernate-mapping&gt;</span></code></pre></div>
 
-
 <p>Top to bottom, here are some major key points to take away from this NHibernate class map:</p>
 
-<h4>Lazy Loading</h4>
+<h4 id="lazy-loading">Lazy Loading</h4>
 
-<p>There are time when you don't need to fetch the entire object graph. Setting <em>default-lazy="true"</em> ensures NHibernate will only request the entity data you requested at a given time.</p>
+<p>There are time when you don’t need to fetch the entire object graph. Setting <em>default-lazy=”true”</em> ensures NHibernate will only request the entity data you requested at a given time. </p>
 
-<p>Also, if you use lazy loading (which I highly recommend you do), you need to add the virtual keyword to each of your classes' public properties and methods.</p>
+<p>Also, if you use lazy loading (which I highly recommend you do), you need to add the virtual keyword to each of your classes’ public properties and methods.</p>
 
-<h4>Orphaned Data</h4>
+<h4 id="orphaned-data">Orphaned Data</h4>
 
-<p>We can all agree orphaned data isn't a good thing. Set the <em>cascade</em> property to "all-delete-orphan" to delete data that would otherwise have been orphaned forever. This issue generally comes to light when handling custom types or lists of custom types.</p>
+<p>We can all agree orphaned data isn’t a good thing. Set the <em>cascade</em> property to “all-delete-orphan” to delete data that would otherwise have been orphaned forever. This issue generally comes to light when handling custom types or lists of custom types.</p>
 
-<h4>Class Properties</h4>
+<h4 id="class-properties">Class Properties</h4>
 
 <p>System Types - (int, string, bool) are defined using the <em>property</em> tag.</p>
 
@@ -196,13 +192,14 @@ Elements of Reusable Object-Oriented Software</a> by The Gang of Four - Erich Ga
 
 <p>Lists of Custom Types - (List of Comments) are defined using the <em>bag</em> tag with a <em>one-to-many</em> relationship to the Custom Type (Comment). Here, each instance of a Comment has an associated unique Post instance. Therefore, PostId needs to be a public property on the Comment class. Then NHibernate an properly associate each Comment to the correct Post.</p>
 
-<h3>Take away</h3>
+<h3 id="take-away">Take away</h3>
 
 <p>Today we covered a modern approach to object oriented programming. We also covered how to flush out a domain model and how to map its custom types in NHibernate.</p>
 
-<p>NHibernate is a fine piece of software. Sometimes the hardest part is understanding how to map your custom classes. I hope this article helps in understanding the mapping between your domain's custom types and lists of custom types.</p>
+<p>NHibernate is a fine piece of software. Sometimes the hardest part is understanding how to map your custom classes. I hope this article helps in understanding the mapping between your domain’s custom types and lists of custom types.</p>
 
-<p>Don't worry, you'll be an ORM Boss in no time. Godspeed and Happy Coding. Go get 'em!</p>
+<p>Don’t worry, you’ll be an ORM Boss in no time. Godspeed and Happy Coding. Go get ‘em!</p>
+
 
     </div>
     

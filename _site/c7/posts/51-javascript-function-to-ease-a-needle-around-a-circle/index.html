@@ -9,7 +9,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <meta http-equiv="content-language" content="en-gb" />
       
-      <meta name="description" content="Raphael makes rotating a needle around a speedometer or fuel gauge intuitive. But, what if you wanted a smooth easing of the needle from the gauge's starting vector to its ending vector. The first thing that should come to mind is acceleration and what you are really searching for is Circular Easing. You may need to modify the code to fit your specific needs, but here is the JavaScript code to implement Circular Easing: {%...">
+      <meta name="description" content="Raphael makes rotating a needle around a speedometer or fuel gauge intuitive. But, what if you wanted a smooth easing of the needle from the gauge’s starting vector to its ending vector. The first thing that should come to mind is acceleration and what you are really searching for is Circular Easing. You may need to modify the code to fit your specific needs, but here is the JavaScript code to implement Circular Easing: {%...">
       
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10">
       <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
@@ -40,11 +40,11 @@
     <h5 class="page-author">Handwritten by TVD</h5>
 
     <div itemprop="articleBody">
-      <p><img src="/c7/static/Circle_center_a_b_radius_r.svg" alt="Ease a Needle around a Circle with this JavaScript Function" width="100%"/></p>
+      <p><img src="/c7/static/Circle_center_a_b_radius_r.svg" alt="Ease a Needle around a Circle with this JavaScript Function" width="100%" /></p>
 
-<p><a href="http://raphaeljs.com/">Raphael</a> makes <a href="http://techoctave.com/gauges">rotating a needle around a speedometer or fuel gauge</a> intuitive. But, what if you wanted a smooth easing of the needle from the gauge's starting vector to its ending vector.</p>
+<p><a href="http://raphaeljs.com/">Raphael</a> makes <a href="http://techoctave.com/gauges">rotating a needle around a speedometer or fuel gauge</a> intuitive. But, what if you wanted a smooth easing of the needle from the gauge’s starting vector to its ending vector.</p>
 
-<p>The first thing that should come to mind is acceleration and what you are really searching for is Circular Easing.</p>
+<p>The first thing that should come to mind is acceleration and what you are really searching for is Circular Easing. </p>
 
 <p>You may need to modify the code to fit your specific needs, but here is the JavaScript code to implement Circular Easing:</p>
 
@@ -52,34 +52,32 @@
 <span class="c1">// t: current time, b: beginning value</span>
 <span class="c1">// c: change in position, d: duration</span>
 <span class="nx">easeInCirc</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">t</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span><span class="p">,</span> <span class="nx">d</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="o">-</span><span class="nx">c</span> <span class="o">*</span> <span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="nx">t</span><span class="o">/=</span><span class="nx">d</span><span class="p">)</span><span class="o">*</span><span class="nx">t</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
+	<span class="k">return</span> <span class="o">-</span><span class="nx">c</span> <span class="o">*</span> <span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="nx">t</span><span class="o">/=</span><span class="nx">d</span><span class="p">)</span><span class="o">*</span><span class="nx">t</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
-
 
 <p>Here, the output is in radians. So, for my <a href="https://techoctave.com/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css">jquery dashboard speedometer gauge</a>, that means I need a way to map each radian to a degree on my gauge, which will in turn map to a miles-per-hour (mph) on the texture itself.</p>
 
 <p>Here is my mapping the needle texture to each easing point:</p>
 
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">Speedometer</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">mph2deg</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="p">((</span><span class="k">this</span><span class="p">.</span><span class="nx">mph</span> <span class="o">-</span> <span class="mi">50</span><span class="p">)</span> <span class="o">*</span> <span class="mf">2.62</span><span class="p">)</span> <span class="o">+</span> 
+	<span class="k">return</span> <span class="p">((</span><span class="k">this</span><span class="p">.</span><span class="nx">mph</span> <span class="o">-</span> <span class="mi">50</span><span class="p">)</span> <span class="o">*</span> <span class="mf">2.62</span><span class="p">)</span> <span class="o">+</span> 
    <span class="p">(((</span><span class="k">this</span><span class="p">.</span><span class="nx">mph</span> <span class="o">-</span> <span class="mi">50</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1.8999</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.022900763</span><span class="p">);</span>
 <span class="p">}</span></code></pre></div>
 
+<p>The result is a degree value that directly corresponds to the needle’s position on my <a href="https://techoctave.com/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css">speedometer gauge</a>. This creates the degree that I need to pass to Raphael’s rotation methods.</p>
 
-<p>The result is a degree value that directly corresponds to the needle's position on my <a href="https://techoctave.com/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css">speedometer gauge</a>. This creates the degree that I need to pass to Raphael's rotation methods.</p>
-
-<p>The exact Euclidean translation is a bit involved here and very much specific to the gauge texture you're working with. Yet the results are a familiar part of our everyday lives - informational intelligence.</p>
+<p>The exact Euclidean translation is a bit involved here and very much specific to the gauge texture you’re working with. Yet the results are a familiar part of our everyday lives - informational intelligence.</p>
 
 <p>Each needle instance I create inherits the rotate function from the Raphael prototype. So the actual image processing is handled by the Raphael core like so:</p>
 
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">Gauge</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">RotateNeedle</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">deg</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">needle</span><span class="p">.</span><span class="nx">rotate</span><span class="p">(</span><span class="nx">deg</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">cX</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">cY</span><span class="p">);</span>
+	<span class="k">this</span><span class="p">.</span><span class="nx">needle</span><span class="p">.</span><span class="nx">rotate</span><span class="p">(</span><span class="nx">deg</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">cX</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">cY</span><span class="p">);</span>
 <span class="p">}</span></code></pre></div>
 
+<p>TechOctave’s <a href="http://techoctave.com/gauges">JavaScript Gauge Suite</a> really is a unique partnership between business and open source.</p>
 
-<p>TechOctave's <a href="http://techoctave.com/gauges">JavaScript Gauge Suite</a> really is a unique partnership between business and open source.</p>
+<p>If Gauges interest you or you are a Business Intelligence junkie, feel free to check the project out - it’s open source! A portion of each sale goes toward maintaining the project and extending it for the benefit of the development community. Happy Coding and Take Care!</p>
 
-<p>If Gauges interest you or you are a Business Intelligence junkie, feel free to check the project out - it's open source! A portion of each sale goes toward maintaining the project and extending it for the benefit of the development community. Happy Coding and Take Care!</p>
 
     </div>
     

@@ -6,7 +6,7 @@ author: "TechOctave, LLC"
 url: "https://techoctave.com"
 baseurl: ""
 
-markdown: rdiscount
+#markdown: rdiscount
 permalink: /c7/:year/:month/:title.html
 highlighter: pygments
 

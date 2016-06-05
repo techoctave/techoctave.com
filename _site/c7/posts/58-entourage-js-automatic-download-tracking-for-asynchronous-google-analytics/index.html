@@ -9,7 +9,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <meta http-equiv="content-language" content="en-gb" />
       
-      <meta name="description" content="Google Analytics doesn't track file downloads automatically. I needed unobtrusive and framework agnostic download tracking for Google Analytics. That's when Entourage.js was born. Entourage.js is Automatic Download Tracking for Asynchronous Google Analytics. Why Entourage? To be honest, I wish this extension wasn't necessary. I wish Google Analytics tracked file downloads automatically and out-of-the-box, but it doesn't. An extension was needed - so be it. But if it was going to be done, I wanted to...">
+      <meta name="description" content="Google Analytics doesn’t track file downloads automatically. I needed unobtrusive and framework agnostic download tracking for Google Analytics. That’s when Entourage.js was born. Entourage.js is Automatic Download Tracking for Asynchronous Google Analytics. Why Entourage? To be honest, I wish this extension wasn’t necessary. I wish Google Analytics tracked file downloads automatically and out-of-the-box, but it doesn’t. An extension was needed - so be it. But if it was going to be done, I wanted to...">
       
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10">
       <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
@@ -42,13 +42,13 @@
     <div itemprop="articleBody">
       <p><img src="/c7/static/entourage-js.jpg" alt="entourage-js" /></p>
 
-<p>Google Analytics doesn't track file downloads automatically. I needed unobtrusive and framework agnostic download tracking for Google Analytics. That's when <a href="http://techoctave.com/entourage/">Entourage.js</a> was born.</p>
+<p>Google Analytics doesn’t track file downloads automatically. I needed unobtrusive and framework agnostic download tracking for Google Analytics. That’s when <a href="http://techoctave.com/entourage/">Entourage.js</a> was born.</p>
 
 <p>Entourage.js is Automatic Download Tracking for Asynchronous Google Analytics.</p>
 
-<h3>Why Entourage?</h3>
+<h3 id="why-entourage">Why Entourage?</h3>
 
-<p>To be honest, I wish this extension wasn't necessary. I wish Google Analytics tracked file downloads automatically and out-of-the-box, but it doesn't. An extension was needed - so be it. But if it was going to be done, I wanted to make sure it was done right!</p>
+<p>To be honest, I wish this extension wasn’t necessary. I wish Google Analytics tracked file downloads automatically and out-of-the-box, but it doesn’t. An extension was needed - so be it. But if it was going to be done, I wanted to make sure it was done right!</p>
 
 <p>I set goals for Entourage.js before a single line of code was written. Entourage.js needed to embody the following:</p>
 
@@ -57,63 +57,56 @@
 <span class="mi">3</span><span class="p">.</span> <span class="nx">Unobtrusive</span> <span class="nx">JavaScript</span>
 <span class="mi">4</span><span class="p">.</span> <span class="nx">Small</span> <span class="nx">Footprint</span></code></pre></div>
 
-
-<h4>Automatic</h4>
-
-<p>Google suggests adding an onClick event to each anchor tag you use for file downloads. I don't want to have to do that each time I have a download. I would rather drop an extension that would do this consistently and automatically each time.</p>
+<h4 id="automatic">Automatic</h4>
+<p>Google suggests adding an onClick event to each anchor tag you use for file downloads. I don’t want to have to do that each time I have a download. I would rather drop an extension that would do this consistently and automatically each time.</p>
 
 <p>Entourage.js automatically tracks the name and extension of each file downloaded with the following convention:</p>
 
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="err">/download/fileName.extension</span></code></pre></div>
 
-
 <p>For example, in Google Analytics Top Content, the downloads Entourage.js would look like:</p>
 
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="err">/download/entourage.zip       1,504</span></code></pre></div>
 
+<h4 id="framework-agnostic">Framework Agnostic</h4>
 
-<h4>Framework Agnostic</h4>
+<p>Entourage.js also had to be framework agnostic. I know a lot of people have or will roll framework specific solutions. That’s great for them, but it wasn’t going to work for me.</p>
 
-<p>Entourage.js also had to be framework agnostic. I know a lot of people have or will roll framework specific solutions. That's great for them, but it wasn't going to work for me.</p>
+<p>I use and love jQuery just as much as the other guy. In fact, I use it in all of my company’s products. That said, there are people with just as much love for Prototype.js or MooTools.</p>
 
-<p>I use and love jQuery just as much as the other guy. In fact, I use it in all of my company's products. That said, there are people with just as much love for Prototype.js or MooTools.</p>
+<p>I respect that. I don’t believe they should have to download another framework in this case. I don’t believe a framework is critical to this solution scope at all.</p>
 
-<p>I respect that. I don't believe they should have to download another framework in this case. I don't believe a framework is critical to this solution scope at all.</p>
+<h4 id="unobtrusive-javascript">Unobtrusive JavaScript</h4>
 
-<h4>Unobtrusive JavaScript</h4>
-
-<p>This is Google's recommended way to track downloads:</p>
+<p>This is Google’s recommended way to track downloads:</p>
 
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="o">&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="o">=</span><span class="s2">&quot;http://www.example.com/files/map.pdf&quot;</span> <span class="nx">onClick</span><span class="o">=</span><span class="s2">&quot;javascript: _gaq.push([&#39;_trackPageview&#39;, &#39;/downloads/map&#39;]);&quot;</span><span class="o">&gt;</span></code></pre></div>
 
-
 <p>I believe in standards based development. I believe we honor our profession when we encourage each other towards best practices.</p>
 
-<p>Inline JavaScript is not a best practice. Inline JavaScript mixes structure with behavior in a most unnecessary mixing of concerns. The example is just plain sloppy.</p>
+<p>Inline JavaScript is not a best practice. Inline JavaScript mixes structure with behavior in a most unnecessary mixing of concerns. The example is just plain sloppy. </p>
 
 <p>I believed then and I believe now that the spirit of the solution is best honored with an Unobtrusive implementation that leaves the structure of the HTML5 markup clean and readable. Entourage.js does just that.</p>
 
-<h4>Small Footprint</h4>
+<h4 id="small-footprint">Small Footprint</h4>
 
 <p>The final goal of the project was to have a small footprint. I needed something that was fast to download and painless to install in each project. I needed the extension to be as small as possible.</p>
 
-<p>Here's were we are at today:</p>
+<p>Here’s were we are at today:</p>
 
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="o">**</span><span class="nx">Original</span> <span class="nx">Size</span><span class="o">:**</span>   <span class="mf">1.54</span><span class="nx">KB</span> <span class="p">(</span><span class="mi">772</span> <span class="nx">bytes</span> <span class="nx">gzipped</span><span class="p">)</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="o">**</span><span class="nx">Original</span> <span class="nx">Size</span><span class="o">:**</span>	<span class="mf">1.54</span><span class="nx">KB</span> <span class="p">(</span><span class="mi">772</span> <span class="nx">bytes</span> <span class="nx">gzipped</span><span class="p">)</span>
 
-<span class="o">**</span><span class="nx">Compiled</span> <span class="nx">Size</span><span class="o">:**</span>    <span class="mi">579</span> <span class="nx">bytes</span> <span class="p">(</span><span class="mi">339</span> <span class="nx">bytes</span> <span class="nx">gzipped</span><span class="p">)</span>
+<span class="o">**</span><span class="nx">Compiled</span> <span class="nx">Size</span><span class="o">:**</span>	<span class="mi">579</span> <span class="nx">bytes</span> <span class="p">(</span><span class="mi">339</span> <span class="nx">bytes</span> <span class="nx">gzipped</span><span class="p">)</span>
 
 <span class="nx">Saved</span> <span class="o">**</span><span class="mf">63.21</span><span class="o">%**</span> <span class="nx">off</span> <span class="nx">the</span> <span class="nx">original</span> <span class="nx">size</span> <span class="p">(</span><span class="o">**</span><span class="mf">56.09</span><span class="o">%**</span> <span class="nx">off</span> <span class="nx">the</span> <span class="nx">gzipped</span> <span class="nx">size</span><span class="p">)</span></code></pre></div>
 
+<p>Compiled and gzipped, Entourage.js is less than 1kb. It’s fast, dependable and - for now - I’m happy with the results.</p>
 
-<p>Compiled and gzipped, Entourage.js is less than 1kb. It's fast, dependable and - for now - I'm happy with the results.</p>
-
-<h3>Installation Guide</h3>
+<h3 id="installation-guide">Installation Guide</h3>
 
 <p>Installation is clean and simple. Download <a href="http://techoctave.com/entourage/">Entourage.js</a>. Place the following script declaration in you head tag:</p>
 
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;javascripts/entourage.js&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span></code></pre></div>
-
 
 <p>Just above your Google Analytics Queue array declaration:</p>
 
@@ -122,7 +115,6 @@
   <span class="nx">_gaq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;_setAccount&#39;</span><span class="p">,</span> <span class="s1">&#39;UA-XXXXXXXX-X&#39;</span><span class="p">]);</span>
   <span class="nx">_gaq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;_trackPageview&#39;</span><span class="p">]);</span>
 <span class="o">&lt;</span><span class="err">/script&gt;</span></code></pre></div>
-
 
 <p>Then place your asynchronous call to load Google Analytics to somewhere just before your body tag:</p>
 
@@ -134,16 +126,15 @@
   <span class="p">})();</span>
 <span class="o">&lt;</span><span class="err">/script&gt;</span></code></pre></div>
 
-
 <p>Follow a similar hierarchy and you are set.</p>
 
-<h3>Code Review</h3>
+<h3 id="code-review">Code Review</h3>
 
 <p>The simplicity and ease-of-use speak for themselves. But, I also believe in sharing and I think there is much we can learn from dissecting the internals of Entourage.js.</p>
 
 <p>All 579 bytes of the code base are broken up into three top level modules: The Event <em>Handler</em>, <em>Entourage</em> and <em>GetFileName</em>.</p>
 
-<h4>Finding Closure</h4>
+<h4 id="finding-closure">Finding Closure</h4>
 
 <p><a href="https://developer.mozilla.org/en/JavaScript/Guide/Closures">Closures</a> are often considered an advanced feature in JavaScript. A closure is a special kind of object that combines two things: a function, and the environment in which that function was created.</p>
 
@@ -157,18 +148,17 @@
 
 <span class="p">})();</span></code></pre></div>
 
-
-<p>Note the repeating open-and-close parenthesis. These tell the JavaScript interpreter to execute the anonymous function and it's internal business logic immediately.</p>
+<p>Note the repeating open-and-close parenthesis. These tell the JavaScript interpreter to execute the anonymous function and it’s internal business logic immediately.</p>
 
 <p>Closures in JavaScript have many practical uses. Here, Entourage.js operates in its own scope with its own private methods and variables.</p>
 
 <p>This means Entourage.js introduces no new Global variables. So there is no chance of objects from extension clobbering objects in your project.</p>
 
-<p>Entourage.js is completely independent and self-contained. This means you can plug it into your own project - worry free! There's value there.</p>
+<p>Entourage.js is completely independent and self-contained. This means you can plug it into your own project - worry free! There’s value there.</p>
 
-<h4>Event Handler</h4>
+<h4 id="event-handler">Event Handler</h4>
 
-<p>The event handler caches a list of document links. Then it assigns the Entourage callback to each link's <em>onclick</em> event. Many would create custom events to monitor this behavior, but I find the native onclick event more than adequate for the job.</p>
+<p>The event handler caches a list of document links. Then it assigns the Entourage callback to each link’s <em>onclick</em> event. Many would create custom events to monitor this behavior, but I find the native onclick event more than adequate for the job.</p>
 
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">//Event Handler</span>
 <span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
@@ -180,8 +170,7 @@
      <span class="p">}</span>
  <span class="p">};</span></code></pre></div>
 
-
-<p>Also, it's important to note the <em>onload</em> event. Executing after the <em>onload</em> event has fired ensures the DOM is loaded by the time Entourage is ready to go to work.</p>
+<p>Also, it’s important to note the <em>onload</em> event. Executing after the <em>onload</em> event has fired ensures the DOM is loaded by the time Entourage is ready to go to work.</p>
 
 <p>Another interesting note here is the ever vigilant <em>for</em> loop. I could have used a for in loop like this:</p>
 
@@ -192,12 +181,11 @@
    <span class="p">}</span>
 <span class="p">}</span></code></pre></div>
 
-
 <p>The problem here is each link object is <a href="http://stackoverflow.com/questions/242841/javascript-foreach-vs-for">not ordered as you would expect</a>. Also, since hasOwnProperty is a method, it could be overwritten or replaced with an unexpected value. This could cause bugs that are hard to track.</p>
 
 <p>Overall, I found the simple for loop fast, adequate and less prone to logic errors.</p>
 
-<h4>Entourage</h4>
+<h4 id="entourage">Entourage</h4>
 
 <p>Some interesting parts here too. JavaScript implements perl-style regular expressions. The <em>fileTypes</em> variable is a regular expression literal that lists the acceptable file types.</p>
 
@@ -209,30 +197,29 @@
     <span class="kd">var</span> <span class="nx">pathname</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">pathname</span><span class="p">;</span> 
     <span class="kd">var</span> <span class="nx">fileName</span><span class="p">;</span>
     <span class="kd">var</span> <span class="nx">autograph</span><span class="p">;</span>
-        
+    	
     <span class="c1">//File type match found</span>
     <span class="k">if</span><span class="p">(</span><span class="nx">pathname</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="nx">fileTypes</span><span class="p">))</span> <span class="p">{</span>
-        <span class="c1">//Get the file name</span>
-        <span class="nx">fileName</span> <span class="o">=</span> <span class="nx">GetFileName</span><span class="p">(</span><span class="nx">pathname</span><span class="p">);</span>
-            
-        <span class="c1">//Add file to the Google Analytics Queue</span>
-        <span class="nx">autograph</span> <span class="o">=</span> <span class="s1">&#39;/download/&#39;</span> <span class="o">+</span> <span class="nx">fileName</span><span class="p">;</span>
-        <span class="nx">_gaq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;_trackPageview&#39;</span><span class="p">,</span> <span class="nx">autograph</span><span class="p">]);</span>
+    	<span class="c1">//Get the file name</span>
+    	<span class="nx">fileName</span> <span class="o">=</span> <span class="nx">GetFileName</span><span class="p">(</span><span class="nx">pathname</span><span class="p">);</span>
+    		
+    	<span class="c1">//Add file to the Google Analytics Queue</span>
+    	<span class="nx">autograph</span> <span class="o">=</span> <span class="s1">&#39;/download/&#39;</span> <span class="o">+</span> <span class="nx">fileName</span><span class="p">;</span>
+    	<span class="nx">_gaq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;_trackPageview&#39;</span><span class="p">,</span> <span class="nx">autograph</span><span class="p">]);</span>
     <span class="p">}</span>
 <span class="p">};</span></code></pre></div>
 
+<p>Some of the more popular file downloads to track are: *.pdf and *.zip</p>
 
-<p>Some of the more popular file downloads to track are: <em>.pdf and </em>.zip</p>
+<p>Once you’re in Entourage, that means the link’s callback was called. At that point, the variable <em>this</em> now contains the link object. Here, the <em>pathname</em> is the link property of concern to us.</p>
 
-<p>Once you're in Entourage, that means the link's callback was called. At that point, the variable <em>this</em> now contains the link object. Here, the <em>pathname</em> is the link property of concern to us.</p>
-
-<p>If the fileType is present in the whitelist, the <em>pathname</em> is used to extract the download's <em>fileName</em>. Then the download's <em>autograph</em> is added to the Google Analytics Queue.</p>
+<p>If the fileType is present in the whitelist, the <em>pathname</em> is used to extract the download’s <em>fileName</em>. Then the download’s <em>autograph</em> is added to the Google Analytics Queue.</p>
 
 <p>I chose to use _trackPageview to track the file download. The download metric would then show under Top Content as a PageView metric.</p>
 
-<p>Another option is to use <em>trackEvent to track the file download. In my mind, </em>trackPageview via Top Content felt more simple and accessible, so I chose that route. Reasonable minds could differ here, so I'll leave it to the SEO Experts to debate which is "best".</p>
+<p>Another option is to use _trackEvent to track the file download. In my mind, _trackPageview via Top Content felt more simple and accessible, so I chose that route. Reasonable minds could differ here, so I’ll leave it to the SEO Experts to debate which is “best”.</p>
 
-<h4>Get True FileName from Link Pathname</h4>
+<h4 id="get-true-filename-from-link-pathname">Get True FileName from Link Pathname</h4>
 
 <p>Still with me? Good! <em>GetFileName</em> is probably thee most important method in Entourage.js!</p>
 
@@ -240,95 +227,94 @@
 <span class="nx">GetFileName</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">pathname</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">//Remove the anchor at the end</span>
     <span class="nx">pathname</span> <span class="o">=</span> <span class="nx">pathname</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="nx">pathname</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">?</span> <span class="nx">pathname</span><span class="p">.</span><span class="nx">length</span> <span class="o">:</span> <span class="nx">pathname</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">));</span>
-        
+    	
     <span class="c1">//Removes the query after the file pathname</span>
     <span class="nx">pathname</span> <span class="o">=</span> <span class="nx">pathname</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="nx">pathname</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&quot;?&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">?</span> <span class="nx">pathname</span><span class="p">.</span><span class="nx">length</span> <span class="o">:</span> <span class="nx">pathname</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&quot;?&quot;</span><span class="p">));</span>
-        
+    	
     <span class="c1">//Removes everything before the last slash in the path</span>
     <span class="nx">pathname</span> <span class="o">=</span> <span class="nx">pathname</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="nx">pathname</span><span class="p">.</span><span class="nx">lastIndexOf</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">pathname</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
-    
-    <span class="k">return</span> <span class="nx">pathname</span><span class="p">;</span>
+	
+	<span class="k">return</span> <span class="nx">pathname</span><span class="p">;</span>
 <span class="p">};</span></code></pre></div>
 
-
-<p>It is incredibly difficult to extract a download's <em>fileName</em> from a link's <em>pathname</em> property.</p>
+<p>It is incredibly difficult to extract a download’s <em>fileName</em> from a link’s <em>pathname</em> property.</p>
 
 <p>There could be a hash (#) in the URL. You have to account for this.</p>
 
-<p>There could also be a query (?) in the URL. You have to account for this.</p>
+<p>There could also be a query (?) in the URL. You have to account for this. </p>
 
 <p>And, of course, there is the fully qualified URL preceding the <em>fileName</em>. You have to account for this too.</p>
 
-<p>You have to account for each situation and most times that isn't easy. Entourage.js accomplishes each scenario well, without bloated code or overcomplicated algorithms. Clean and Simple.</p>
+<p>You have to account for each situation and most times that isn’t easy. Entourage.js accomplishes each scenario well, without bloated code or overcomplicated algorithms. Clean and Simple.</p>
 
-<h3>The Big Picture</h3>
+<h3 id="the-big-picture">The Big Picture</h3>
 
-<p>The Big Picture is I believe you'll love Entourage.js. It's lightweight and standards based with measurable goals and forethought.</p>
+<p>The Big Picture is I believe you’ll love Entourage.js. It’s lightweight and standards based with measurable goals and forethought. </p>
 
-<p>Bottom line is if you need to track downloads with Google Analytics, then don't roll your own framework. Download <a href="http://techoctave.com/entourage/">Entourage.js</a> and spend less time coding and more time working on your core business.</p>
+<p>Bottom line is if you need to track downloads with Google Analytics, then don’t roll your own framework. Download <a href="http://techoctave.com/entourage/">Entourage.js</a> and spend less time coding and more time working on your core business.</p>
 
-<h3>Update: Entourage.js 1.1.0</h3>
+<h3 id="update-entouragejs-110">Update: Entourage.js 1.1.0</h3>
 
-<h4>10,000 Foot View</h4>
+<h4 id="foot-view">10,000 Foot View</h4>
 
-<p><strong>Single Global Variable:</strong> Inspect the DOM, you'll find a single Global Variable called <em>entourage</em>.</p>
+<p><strong>Single Global Variable:</strong> Inspect the DOM, you’ll find a single Global Variable called <em>entourage</em>.</p>
 
-<p><strong>Public and Private Members:</strong> Used the Module Design Pattern to establish both public and private object members. It's a little less restrictive than Object Literal Notation and gets the job done! Check the DOM, <em>getFileName</em> and <em>autograph</em> are not accessible outside the entourage namespace.</p>
+<p><strong>Public and Private Members:</strong> Used the Module Design Pattern to establish both public and private object members. It’s a little less restrictive than Object Literal Notation and gets the job done! Check the DOM, <em>getFileName</em> and <em>autograph</em> are not accessible outside the entourage namespace.</p>
 
 <p><strong>Cleaner FileType Whitelist:</strong> Reduced the whitelist to the most popular file extensions. Added support for Office 2007 documents and Open Office documents.</p>
 
 <p><strong>Strict Comparison:</strong> Used strict comparison on conditionals. Increases reliability and increases speed.</p>
 
-<p><strong>Link Count Cache:</strong> Cached link.length for comparison during initialization. Link.length doesn't have to be calculated each iteration - this increases the performance.</p>
+<p><strong>Link Count Cache:</strong> Cached link.length for comparison during initialization. Link.length doesn’t have to be calculated each iteration - this increases the performance.</p>
 
 <p><strong>Global Namespace:</strong> Explicitly added Entourage to the Global Namespace.</p>
 
-<p><strong>JSHint:</strong> Ran Entourage.js through JSHint - a fork of Douglas Crockford's JSLint. The Google Analytics Queue doesn't exist until the onclick event. It didn't like that, but that's expected. Also, it didn't like the <em>new</em> operator. Called it a "Weird construction". I can deal with a little weird...Barring those two expected, I'd say Entourage.js passed 100%.</p>
+<p><strong>JSHint:</strong> Ran Entourage.js through JSHint - a fork of Douglas Crockford’s JSLint. The Google Analytics Queue doesn’t exist until the onclick event. It didn’t like that, but that’s expected. Also, it didn’t like the <em>new</em> operator. Called it a “Weird construction”. I can deal with a little weird…Barring those two expected, I’d say Entourage.js passed 100%.</p>
 
-<h4>The Code</h4>
+<h4 id="the-code">The Code</h4>
 
 <p>See an overview of the code at 10,000 FT:</p>
 
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
 <span class="kd">var</span> <span class="nx">entourage</span> <span class="o">=</span> <span class="k">new</span> <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">VERSION</span> <span class="o">=</span> <span class="s2">&quot;1.1.0&quot;</span><span class="p">;</span>
-    
-    <span class="c1">//Get true FileName from link pathname</span>
-    <span class="kd">var</span> <span class="nx">getFileName</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">pathname</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">//No updates...</span>
+	<span class="k">this</span><span class="p">.</span><span class="nx">VERSION</span> <span class="o">=</span> <span class="s2">&quot;1.1.0&quot;</span><span class="p">;</span>
+	
+	<span class="c1">//Get true FileName from link pathname</span>
+	<span class="kd">var</span> <span class="nx">getFileName</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">pathname</span><span class="p">)</span> <span class="p">{</span>
+		<span class="c1">//No updates...</span>
 
-        <span class="k">return</span> <span class="nx">pathname</span><span class="p">;</span>
-    <span class="p">};</span>
+		<span class="k">return</span> <span class="nx">pathname</span><span class="p">;</span>
+	<span class="p">};</span>
 
-    <span class="kd">var</span> <span class="nx">autograph</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">whitelist</span><span class="p">,</span> <span class="nx">pathname</span><span class="p">,</span> <span class="nx">match</span><span class="p">,</span> <span class="nx">fileName</span><span class="p">,</span> <span class="nx">associate</span><span class="p">;</span>
-        
-        <span class="nx">whitelist</span> <span class="o">=</span> <span class="sr">/\.pdf$|\.zip$|\.od*|\.doc*|\.xls*|\.ppt*|\.exe$|\.dmg$|\.mov$|\.avi$|\.mp3$/i</span><span class="p">;</span>
+	<span class="kd">var</span> <span class="nx">autograph</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+		<span class="kd">var</span> <span class="nx">whitelist</span><span class="p">,</span> <span class="nx">pathname</span><span class="p">,</span> <span class="nx">match</span><span class="p">,</span> <span class="nx">fileName</span><span class="p">,</span> <span class="nx">associate</span><span class="p">;</span>
+		
+		<span class="nx">whitelist</span> <span class="o">=</span> <span class="sr">/\.pdf$|\.zip$|\.od*|\.doc*|\.xls*|\.ppt*|\.exe$|\.dmg$|\.mov$|\.avi$|\.mp3$/i</span><span class="p">;</span>
 
         <span class="c1">//The link object is now available in &quot;this&quot;</span>
-        <span class="nx">pathname</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">pathname</span><span class="p">;</span>
-        
-        <span class="c1">//Compare the fileType to the whitelist</span>
-        <span class="nx">match</span> <span class="o">=</span> <span class="nx">pathname</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="nx">whitelist</span><span class="p">);</span>
-        
-        <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">match</span> <span class="o">!==</span> <span class="s2">&quot;undefined&quot;</span> <span class="o">&amp;&amp;</span> <span class="nx">match</span> <span class="o">!==</span> <span class="kc">null</span><span class="p">)</span> 
+		<span class="nx">pathname</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">pathname</span><span class="p">;</span>
+		
+		<span class="c1">//Compare the fileType to the whitelist</span>
+		<span class="nx">match</span> <span class="o">=</span> <span class="nx">pathname</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="nx">whitelist</span><span class="p">);</span>
+		
+		<span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">match</span> <span class="o">!==</span> <span class="s2">&quot;undefined&quot;</span> <span class="o">&amp;&amp;</span> <span class="nx">match</span> <span class="o">!==</span> <span class="kc">null</span><span class="p">)</span> 
         <span class="p">{</span>
-            <span class="c1">//Get the file name</span>
-            <span class="nx">fileName</span> <span class="o">=</span> <span class="nx">getFileName</span><span class="p">(</span><span class="nx">pathname</span><span class="p">);</span>
+			<span class="c1">//Get the file name</span>
+			<span class="nx">fileName</span> <span class="o">=</span> <span class="nx">getFileName</span><span class="p">(</span><span class="nx">pathname</span><span class="p">);</span>
 
-            <span class="c1">//Add file to the Google Analytics Queue</span>
-            <span class="nx">associate</span> <span class="o">=</span> <span class="s1">&#39;/download/&#39;</span> <span class="o">+</span> <span class="nx">fileName</span><span class="p">;</span>
-            <span class="nx">_gaq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;_trackPageview&#39;</span><span class="p">,</span> <span class="nx">associate</span><span class="p">]);</span>
-        <span class="p">}</span>
+			<span class="c1">//Add file to the Google Analytics Queue</span>
+			<span class="nx">associate</span> <span class="o">=</span> <span class="s1">&#39;/download/&#39;</span> <span class="o">+</span> <span class="nx">fileName</span><span class="p">;</span>
+			<span class="nx">_gaq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;_trackPageview&#39;</span><span class="p">,</span> <span class="nx">associate</span><span class="p">]);</span>
+		<span class="p">}</span>
     <span class="p">};</span>
 
-    <span class="k">this</span><span class="p">.</span><span class="nx">initialize</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">links</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">links</span><span class="p">;</span>
-        
-        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nx">l</span><span class="o">=</span><span class="nx">links</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">l</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="c1">//Call Entourage whenever the link is clicked</span>
-            <span class="nx">links</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">onclick</span> <span class="o">=</span> <span class="nx">autograph</span><span class="p">;</span>
-        <span class="p">}</span>
+	<span class="k">this</span><span class="p">.</span><span class="nx">initialize</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+		<span class="kd">var</span> <span class="nx">links</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">links</span><span class="p">;</span>
+		
+	    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nx">l</span><span class="o">=</span><span class="nx">links</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">l</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+			<span class="c1">//Call Entourage whenever the link is clicked</span>
+	        <span class="nx">links</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">onclick</span> <span class="o">=</span> <span class="nx">autograph</span><span class="p">;</span>
+	    <span class="p">}</span>
     <span class="p">};</span>
 <span class="p">})();</span> <span class="c1">//Entourage.js</span>
 
@@ -339,16 +325,15 @@
 <span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="nx">entourage</span><span class="p">.</span><span class="nx">initialize</span><span class="p">;</span>
 <span class="p">})();</span></code></pre></div>
 
-
-<h4>Usability and User Experience</h4>
+<h4 id="usability-and-user-experience">Usability and User Experience</h4>
 
 <p>I follow a couple core principles when it comes to designing products. At the base of the pillar is Usability and User Experience. I kept _trackPageview because I believe it is more usable and provides a better tracking experience.</p>
 
-<p>From discussion, I think we've seen that neither <em>trackEvent or </em>trackPreview offer the "perfect" solution. Both skew the data. Analyzing my own Google Analytics data, I can say - with peace of mind - the skew is neglible at best.</p>
+<p>From discussion, I think we’ve seen that neither _trackEvent or _trackPreview offer the “perfect” solution. Both skew the data. Analyzing my own Google Analytics data, I can say - with peace of mind - the skew is neglible at best.</p>
 
 <p>Once the data is skewed, I believe the question of which method skews the data most is less relevant than thee most important metric - Usuability.</p>
 
-<p>I setup an experiment to test this idea. One implemented Entourage.js as a <em>trackEvent and the other as a </em>trackPreview. To get access to download count for a file, I found this:</p>
+<p>I setup an experiment to test this idea. One implemented Entourage.js as a _trackEvent and the other as a _trackPreview. To get access to download count for a file, I found this:</p>
 
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="o">**</span><span class="nx">_trackPageview</span><span class="o">**</span>
 <span class="mi">2</span> <span class="nx">clicks</span>
@@ -356,26 +341,24 @@
 <span class="o">**</span><span class="nx">_trackEvent</span><span class="o">**</span>
 <span class="mi">4</span> <span class="nx">clicks</span></code></pre></div>
 
-
-<p>Two extra clicks for <em>trackEvent. That really is a big deal! But, even if I find it negligible, what wasn't negligible was how I felt using Top Content via </em>trackPageview versus Event Tracking via _trackEvent.</p>
+<p>Two extra clicks for _trackEvent. That really is a big deal! But, even if I find it negligible, what wasn’t negligible was how I felt using Top Content via _trackPageview versus Event Tracking via _trackEvent.</p>
 
 <p>Using Top Content, I felt the User Interface was easier to use and I felt like I could get to my data quicker. I felt the opposite with Event Tracking.</p>
 
-<p>With Event Tracking, I felt the segmentation was overkill and I felt it wasn't necessarily suited for the file tracking problem domain. I could understand if I had an app or video where I wanted to track feature usage - I get that! But here, all I want to do is track file downloads and I felt Event Tracking got in the way more than it helped.</p>
+<p>With Event Tracking, I felt the segmentation was overkill and I felt it wasn’t necessarily suited for the file tracking problem domain. I could understand if I had an app or video where I wanted to track feature usage - I get that! But here, all I want to do is track file downloads and I felt Event Tracking got in the way more than it helped.</p>
 
-<p>Of course, other than the extra two clicks, everything I've said about Event Tracking is purely subjective. It's how I feel about that aspect of Google Analytics' Interface. Others - no doubt - will have their own personal opinion. I'm Ok with that! Please feel free to express the same in the comments.</p>
+<p>Of course, other than the extra two clicks, everything I’ve said about Event Tracking is purely subjective. It’s how I feel about that aspect of Google Analytics’ Interface. Others - no doubt - will have their own personal opinion. I’m Ok with that! Please feel free to express the same in the comments.</p>
 
-<p>Unfortunately or Fortunately - I'm undecided - you can find sources supporting either side on whether we should use <em>trackPageview or </em>trackEvent.</p>
+<p>Unfortunately or Fortunately - I’m undecided - you can find sources supporting either side on whether we should use _trackPageview or _trackEvent.</p>
 
-<p>Maybe it's just me, but maybe our Google Overloads want us to realize something:</p>
+<p>Maybe it’s just me, but maybe our Google Overloads want us to realize something:</p>
 
-<p><em>It's more important how you use the data than how you view it.</em></p>
+<p><em>It’s more important how you use the data than how you view it.</em></p>
 
-<h4>Special Thanks!</h4>
-
+<h4 id="special-thanks">Special Thanks!</h4>
 <p>@Rene: Thanks for suggesting to make the whitelist more readable.</p>
 
-<p>@Justo @Scott: For highlighting the <em>trackPageview and </em>trackEvent issue and putting it up for discussion.</p>
+<p>@Justo @Scott: For highlighting the _trackPageview and _trackEvent issue and putting it up for discussion.</p>
 
 <p>@X10: For catching the repeating file type.</p>
 
@@ -384,6 +367,7 @@
 <p>@Stjepan: For suggesting the faster <em>for</em> loop and bringing some technical depth to the discussion.</p>
 
 <p>Thanks everyone!</p>
+
 
     </div>
     

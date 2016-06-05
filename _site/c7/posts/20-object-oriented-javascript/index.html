@@ -42,13 +42,13 @@
     <div itemprop="articleBody">
       <p>In search of guidance many developers ask on StackOverflow, <em>How do I write Object Oriented JavaScript?</em> Each desperately seeking guidance on how to structure their code to take advantage of a more modular, reusable and maintainable code base.</p>
 
-<h3>Plain Old JavaScript Objects (POJOs)</h3>
+<h3 id="plain-old-javascript-objects-pojos">Plain Old JavaScript Objects (POJOs)</h3>
 
 <p>One of my consulting areas is advising clients on the use of JavaScript and JavaScript Frameworks like jQuery. Recently, I released a set of <a href="https://techoctave.com/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css">JavaScript Dashboard Gauges</a> for use in charting and business intelligence applications.</p>
 
-<p>Today, I'm going to talk about Object Oriented JavaScript and help you think about ways to move away from the procedural mess many good developers find themselves in. We'll focus on building a Plain Old JavaScript Object (POJO) and examine the inherent Object Oriented principles.</p>
+<p>Today, I’m going to talk about Object Oriented JavaScript and help you think about ways to move away from the procedural mess many good developers find themselves in. We’ll focus on building a Plain Old JavaScript Object (POJO) and examine the inherent Object Oriented principles.</p>
 
-<h3>Speedometer Class</h3>
+<h3 id="speedometer-class">Speedometer Class</h3>
 
 <p>We are going to use the <a href="http://en.wikipedia.org/wiki/Prototype_pattern">Prototype Design Pattern</a>. Take for example a Speedometer. A Speedometer is derived from a Gauge. So, we say the speedometer inherits functionality from the Gauge. The following code would be in a single JavaScript file:</p>
 
@@ -65,13 +65,11 @@
     <span class="k">this</span><span class="p">.</span><span class="nx">SetMPH</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 <span class="p">}</span></code></pre></div>
 
-
 <p>Inherit base functionality from Gauge class:</p>
 
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">Speedometer</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Gauge</span><span class="p">();</span></code></pre></div>
 
-
-<p>This type of inheritance is called Prototypal Inheritance. Under the hood, it's different from classical class based inheritance. But, should be very familiar.</p>
+<p>This type of inheritance is called Prototypal Inheritance. Under the hood, it’s different from classical class based inheritance. But, should be very familiar.</p>
 
 <p>Properties (Accessors):</p>
 
@@ -80,19 +78,17 @@
     <span class="k">this</span><span class="p">.</span><span class="nx">RotateNeedle</span><span class="p">(...);</span> <span class="c1">//inherited from Gauge</span>
 <span class="p">}</span></code></pre></div>
 
-
 <p>Methods (Do the work for the Speedometer Class):</p>
 
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">Speedometer</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">Accelerate</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="c1">//Do some work here...</span>
 <span class="p">}</span></code></pre></div>
 
-
 <p>The accelerate method is only within the scope of the Speedometer class. So only instances of a Speedometer object or children of the Speedometer class have access to the method.</p>
 
-<h3>Using the Speedomter Class</h3>
+<h3 id="using-the-speedomter-class">Using the Speedomter Class</h3>
 
-<p>Well, we so deliciously put together our Speedometer class. Now, it's <a href="https://techoctave.com/posts/1-hello-world">time to have some fun</a> and use an instance of the Speedometer object. Let's take this Teslar Roadster for a spin:</p>
+<p>Well, we so deliciously put together our Speedometer class. Now, it’s <a href="https://techoctave.com/posts/1-hello-world">time to have some fun</a> and use an instance of the Speedometer object. Let’s take this Teslar Roadster for a spin:</p>
 
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">//Create a new instance of a Speedometer object</span>
 <span class="kd">var</span> <span class="nx">speedGauge</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Speedometer</span><span class="p">(</span><span class="s2">&quot;speedometer&quot;</span><span class="p">);</span>
@@ -103,10 +99,10 @@
 <span class="c1">//Time to put the pedal to the metal</span>
 <span class="nx">speedGauge</span><span class="p">.</span><span class="nx">Accelerate</span><span class="p">();</span></code></pre></div>
 
+<p>Hey, the good news is if you’re here, that means you’re looking for help and that makes you awesome! It also means you already have the necessary prerequisites to develop cleaner, more reusable, Object Oriented JavaScript.</p>
 
-<p>Hey, the good news is if you're here, that means you're looking for help and that makes you awesome! It also means you already have the necessary prerequisites to develop cleaner, more reusable, Object Oriented JavaScript.</p>
+<p>My gut tells me you’re not here to write the next <a href="http://jquery.com/">jQuery JavaScript Framework</a>. But, you do want to be a better developer and write better code. I can help you with that!</p>
 
-<p>My gut tells me you're not here to write the next <a href="http://jquery.com/">jQuery JavaScript Framework</a>. But, you do want to be a better developer and write better code. I can help you with that!</p>
 
     </div>
     

@@ -9,7 +9,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <meta http-equiv="content-language" content="en-gb" />
       
-      <meta name="description" content=".NET is a ghetto. People say the world is getting smaller. That there just isn't that much left to explore. I suspect the people who say that haven't coded yet. The other day, we spent an absurd amount of time trying to find the best way to serialize a simple document for use in an XML Web Service call. Our wish is that this code snippet helps someone else. Serialize Binary Documents Here's how we...">
+      <meta name="description" content=".NET is a ghetto. People say the world is getting smaller. That there just isn’t that much left to explore. I suspect the people who say that haven’t coded yet. The other day, we spent an absurd amount of time trying to find the best way to serialize a simple document for use in an XML Web Service call. Our wish is that this code snippet helps someone else. Serialize Binary Documents Here’s how we...">
       
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10">
       <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
@@ -42,20 +42,18 @@
     <div itemprop="articleBody">
       <p>.NET is a <a href="https://techoctave.com/posts/113-c-reading-xml-with-namespace">ghetto</a>.</p>
 
-<p>People say the world is getting smaller. That there just isn't that much left to explore. I suspect the people who say that haven't coded yet.</p>
+<p>People say the world is getting smaller. That there just isn’t that much left to explore. I suspect the people who say that haven’t coded yet.</p>
 
 <p>The other day, we spent an absurd amount of time trying to find the best way to serialize a simple document for use in an XML Web Service call. Our wish is that this code snippet helps someone else.</p>
 
-<h3>Serialize Binary Documents</h3>
-
-<p>Here's how we serialized a binary file to a string based format in C#:</p>
+<h3 id="serialize-binary-documents">Serialize Binary Documents</h3>
+<p>Here’s how we serialized a binary file to a string based format in C#:</p>
 
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">string</span> <span class="nx">filePath</span> <span class="o">=</span> <span class="err">@</span><span class="s2">&quot;C:\OBEY\Word.doc&quot;</span><span class="p">;</span>
 
 <span class="kr">byte</span><span class="p">[]</span> <span class="nx">file</span> <span class="o">=</span> <span class="nx">File</span><span class="p">.</span><span class="nx">ReadAllBytes</span><span class="p">(</span><span class="nx">filePath</span><span class="p">);</span>
 
 <span class="nx">string</span> <span class="nx">serializeDocument</span> <span class="o">=</span> <span class="nx">Convert</span><span class="p">.</span><span class="nx">ToBase64String</span><span class="p">(</span><span class="nx">file</span><span class="p">);</span></code></pre></div>
-
 
 <p>High level, the steps are:</p>
 
@@ -65,23 +63,22 @@
 
 <span class="mi">3</span><span class="p">.</span> <span class="nx">Convert</span> <span class="nx">the</span> <span class="kr">byte</span> <span class="nx">array</span> <span class="nx">to</span> <span class="nx">a</span> <span class="nx">Base64</span> <span class="nx">string</span></code></pre></div>
 
-
-<p>It's crazy, during research, everyone wanted to talk about serializing <a href="http://www.martinfowler.com/bliki/POJO.html">POCOs</a>* to send across the wire. EVERYONE. But, that's only one application of serialization. How about the most simple use case, serializing a simple document.</p>
+<p>It’s crazy, during research, everyone wanted to talk about serializing <a href="http://www.martinfowler.com/bliki/POJO.html">POCOs</a>* to send across the wire. EVERYONE. But, that’s only one application of serialization. How about the most simple use case, serializing a simple document.</p>
 
 <p>Well, now you know how.</p>
 
-<p><em>*As an aside, if you're not familiar with the term Plain Old C# Object, I encourage you to read up on design principles in leading <a href="http://en.wikipedia.org/wiki/Enterprise_Architect_(software)">"Enterprise" Architecture</a>. It's truly a fascinating read. And yes, I know POCO stands for Plain Old CLR Object, but who are we kidding right? :)</em></p>
+<p><em>*As an aside, if you’re not familiar with the term Plain Old C# Object, I encourage you to read up on design principles in leading <a href="http://en.wikipedia.org/wiki/Enterprise_Architect_(software)">“Enterprise” Architecture</a>. It’s truly a fascinating read. And yes, I know POCO stands for Plain Old CLR Object, but who are we kidding right? :)</em> </p>
 
-<h3>Deserialize Binary Documents</h3>
+<h3 id="deserialize-binary-documents">Deserialize Binary Documents</h3>
 
-<p>Deserialization - that is converting a Base64String to a binary document - is just as simple. Here's how:</p>
+<p>Deserialization - that is converting a Base64String to a binary document - is just as simple. Here’s how:</p>
 
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kr">byte</span><span class="p">[]</span> <span class="nb">document</span> <span class="o">=</span> <span class="nx">Convert</span><span class="p">.</span><span class="nx">FromBase64String</span><span class="p">(</span><span class="nx">string</span><span class="p">);</span></code></pre></div>
 
-
 <p>Where the variable <em>string</em> is a serialized Base64String string. From there you can make tender love to the document. Or whatever else you were planning to do.</p>
 
-<p>'Till next time...Peace, Love and Happy Coding! :)</p>
+<p>‘Till next time…Peace, Love and Happy Coding! :)</p>
+
 
     </div>
     

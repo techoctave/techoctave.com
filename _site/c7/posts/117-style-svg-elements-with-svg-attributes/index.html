@@ -9,7 +9,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <meta http-equiv="content-language" content="en-gb" />
       
-      <meta name="description" content="Best practice is to style SVG elements using SVG attributes. This approach strengthens the separation between application View and application Components. It also adheres to the W3C SVG Spec, thereby providing the necessary stability required for cross-browser compatibility. Our Gauges Look-and-Feel and Dynamic Updates Some of you will have requirements or features where you may need to change your application's look-and-feel on the fly. Best to leverage our JavaScript Gauges API and Raphael.js to handle...">
+      <meta name="description" content="Best practice is to style SVG elements using SVG attributes. This approach strengthens the separation between application View and application Components. It also adheres to the W3C SVG Spec, thereby providing the necessary stability required for cross-browser compatibility. Our Gauges Look-and-Feel and Dynamic Updates Some of you will have requirements or features where you may need to change your application’s look-and-feel on the fly. Best to leverage our JavaScript Gauges API and Raphael.js to handle...">
       
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10">
       <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
@@ -40,15 +40,15 @@
     <h5 class="page-author">Handwritten by TVD</h5>
 
     <div itemprop="articleBody">
-      <p><img src="https://techoctave.com/c7/static/designer-langauges-steampunk.jpg" alt="Should we style SVG elements with CSS?"/></p>
+      <p><img src="https://techoctave.com/c7/static/designer-langauges-steampunk.jpg" alt="Should we style SVG elements with CSS?" /></p>
 
 <p>Best practice is to style SVG elements using SVG attributes. This approach strengthens the separation between application View and application Components. It also adheres to the <a href="http://www.w3.org/TR/SVG/">W3C SVG Spec</a>, thereby providing the necessary stability required for cross-browser compatibility.</p>
 
-<h3>Our Gauges Look-and-Feel and Dynamic Updates</h3>
+<h3 id="our-gauges-look-and-feel-and-dynamic-updates">Our Gauges Look-and-Feel and Dynamic Updates</h3>
 
-<p>Some of you will have requirements or features where you may need to change your application's look-and-feel on the fly. Best to leverage our <a href="http://techoctave.com/gauges/">JavaScript Gauges</a> API and <a href="http://raphaeljs.com/">Raphael.js</a> to handle cross browser, cross platform concerns.</p>
+<p>Some of you will have requirements or features where you may need to change your application’s look-and-feel on the fly. Best to leverage our <a href="http://techoctave.com/gauges/">JavaScript Gauges</a> API and <a href="http://raphaeljs.com/">Raphael.js</a> to handle cross browser, cross platform concerns.</p>
 
-<p>If the entire application look-and-feel changes - Light to Dark for example. Use the set "method" to update a style property and "refresh" the gauge instance. E.g.</p>
+<p>If the entire application look-and-feel changes - Light to Dark for example. Use the set “method” to update a style property and “refresh” the gauge instance. E.g.</p>
 
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">knots</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Gauge</span><span class="p">(</span><span class="s2">&quot;knots&quot;</span><span class="p">);</span>
 <span class="p">.</span> <span class="p">.</span> <span class="p">.</span>    
@@ -56,24 +56,22 @@
 <span class="p">.</span> <span class="p">.</span> <span class="p">.</span>
 <span class="nx">knots</span><span class="p">.</span><span class="nx">refresh</span><span class="p">();</span></code></pre></div>
 
-
 <p>That will allow you to theme the application and still maintain browser and device flexibility because we strictly use SVG attributes to style SVG elements.</p>
 
-<h3>Modern Web Application Development</h3>
-
+<h3 id="modern-web-application-development">Modern Web Application Development</h3>
 <p>Modern web application development necessitates separation of concerns. Here, best practice is to use HTML5 to reinforce the meaning and structure of your application. CSS3 is very useful in defining our look-and-feel or presentation for human users. Together, this use of HTML and CSS forms the basis of semantic web application development.</p>
 
-<h3>Best Practice</h3>
-
+<h3 id="best-practice">Best Practice</h3>
 <p>Styling SVG elements basically works the same way as in regular HTML elements. SVG, in fact, shares some common properties with HTML as well. However, there are other properties that are intended specifically for SVG elements which have their own specification apart from CSS.</p>
 
-<p>For example, in a regular HTML element, we can add a background color either with the "background-color" or the "background" CSS property. However, with an SVG element, it is a little bit different.</p>
+<p>For example, in a regular HTML element, we can add a background color either with the “background-color” or the “background” CSS property. However, with an SVG element, it is a little bit different.</p>
 
-<p>With an SVG element, the background color is specified with the "fill" property instead. Also, an SVG element's border is specified with "stroke" property, not with the "border" property like we do in regular CSS. You can see the complete list of <a href="http://www.w3.org/TR/SVG/propidx.html">SVG element attributes</a> on the W3C spec.</p>
+<p>With an SVG element, the background color is specified with the “fill” property instead. Also, an SVG element’s border is specified with “stroke” property, not with the “border” property like we do in regular CSS. You can see the complete list of <a href="http://www.w3.org/TR/SVG/propidx.html">SVG element attributes</a> on the W3C spec.</p>
 
 <p>What this means for us as Developers is we need to apply CSS properties to style HTML elements and SVG attributes to style SVG elements. This is the cornerstone of the semantic web.</p>
 
 <p>Following this best practice provides the necessary stability we need to succeed at cross-browser compatibility. Indeed, this strict adherence to semantic development is what allows us to build applications that run on Windows/Mac OSX Browsers, then turn around and run that very same application on an iPhone, iPad and Android.</p>
+
 
     </div>
     

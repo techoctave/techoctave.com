@@ -9,7 +9,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <meta http-equiv="content-language" content="en-gb" />
       
-      <meta name="description" content="Consuming a RESTful Web Service is non trivial at best. Building our Twitter CRM - Tweetlr - showed me first hand how verbosity and inconsistencies manifest in web service design. Building a RESTful Web Service for others to consume is a whole other story. It's not easy. While I don't believe we need to be saved from REST, I do believe clarity on the principles of REST is both prudent and necessary. Especially, when it...">
+      <meta name="description" content="Consuming a RESTful Web Service is non trivial at best. Building our Twitter CRM - Tweetlr - showed me first hand how verbosity and inconsistencies manifest in web service design. Building a RESTful Web Service for others to consume is a whole other story. It’s not easy. While I don’t believe we need to be saved from REST, I do believe clarity on the principles of REST is both prudent and necessary. Especially, when it...">
       
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10">
       <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
@@ -40,19 +40,19 @@
     <h5 class="page-author">Handwritten by TVD</h5>
 
     <div itemprop="articleBody">
-      <p><img src="/c7/static/rest.jpg" width="100%" alt="Twitter's REST API Dissected"/></p>
+      <p><img src="/c7/static/rest.jpg" width="100%" alt="Twitter's REST API Dissected" /></p>
 
 <p>Consuming a RESTful Web Service is non trivial at best. Building our Twitter CRM - <a href="http://techoctave.com/tweetlr">Tweetlr</a> - showed me first hand how verbosity and inconsistencies manifest in web service design.</p>
 
-<p>Building a RESTful Web Service for others to consume is a whole other story. It's not easy. While I don't believe we need to be <a href="http://wekeroad.com/2012/02/28/someone-save-us-from-rest/">saved from REST</a>, I do believe clarity on the principles of REST is both prudent and necessary. Especially, when it comes to <a href="http://codebetter.com/glennblock/2012/02/28/why-are-there-2-controllers-in-the-asp-net-web-api-contactmanager-example-rest-has-nothing-to-with-it-2/">best practices in the forth coming ASP.NET Web API</a>.</p>
+<p>Building a RESTful Web Service for others to consume is a whole other story. It’s not easy. While I don’t believe we need to be <a href="http://wekeroad.com/2012/02/28/someone-save-us-from-rest/">saved from REST</a>, I do believe clarity on the principles of REST is both prudent and necessary. Especially, when it comes to <a href="http://codebetter.com/glennblock/2012/02/28/why-are-there-2-controllers-in-the-asp-net-web-api-contactmanager-example-rest-has-nothing-to-with-it-2/">best practices in the forth coming ASP.NET Web API</a>.</p>
 
-<h3>Working through some examples</h3>
+<h3 id="working-through-some-examples">Working through some examples</h3>
 
-<p>At its core, <a href="http://martinfowler.com/articles/richardsonMaturityModel.html">REST</a> is a combination of HTTP Verbs (GET, POST, PUT, DELETE), Resources (e.g. http://twitter.com/tweets/) and the Internet Media Type returned (e.g. JSON, XML, SOAP).</p>
+<p>At its core, <a href="http://martinfowler.com/articles/richardsonMaturityModel.html">REST</a> is a combination of HTTP Verbs (GET, POST, PUT, DELETE), Resources (e.g. http://twitter.com/tweets/) and the Internet Media Type returned (e.g. JSON, XML, SOAP). </p>
 
-<p>Let's work through some modified examples from David's presentation. Please see the presentation for original examples:</p>
+<p>Let’s work through some modified examples from David’s presentation. Please see the presentation for original examples:</p>
 
-<h4>Example #1: Statuses/Show</h4>
+<h4 id="example-1-statusesshow">Example #1: Statuses/Show</h4>
 
 <p>GET http://api.twitter.com/1/statuses/show/id.format</p>
 
@@ -61,15 +61,13 @@
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">-</span> <span class="no">Operation</span> <span class="p">(</span><span class="s2">&quot;Show&quot;</span><span class="p">)</span> <span class="n">included</span> <span class="k">in</span> <span class="n">the</span> <span class="no">URL</span>
 <span class="o">-</span> <span class="no">Status</span> <span class="no">ID</span> <span class="ow">not</span> <span class="n">a</span> <span class="n">child</span> <span class="n">of</span> <span class="n">the</span> <span class="s2">&quot;statuses&quot;</span> <span class="n">collection</span></code></pre></div>
 
-
 <p><strong>Better:</strong> GET http://twitter.com/tweets/id.format</p>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">-</span> <span class="no">Show</span> <span class="n">via</span> <span class="n">combo</span> <span class="n">of</span> <span class="no">GET</span> <span class="no">HTTP</span> <span class="no">Verb</span> <span class="ow">and</span> <span class="n">tweets</span> <span class="no">Resource</span>
 
 <span class="o">-</span> <span class="no">Internet</span> <span class="no">Media</span> <span class="n">type</span> <span class="n">returned</span> <span class="n">could</span> <span class="n">be</span> <span class="no">JSON</span><span class="p">,</span> <span class="no">XML</span><span class="p">,</span> <span class="no">SOAP</span><span class="p">,</span> <span class="n">etc</span><span class="o">.</span></code></pre></div>
 
-
-<h4>Example #2: Statuses/Update</h4>
+<h4 id="example-2-statusesupdate">Example #2: Statuses/Update</h4>
 
 <p>POST http://api.twitter.com/1/statuses/update.format</p>
 
@@ -77,7 +75,6 @@
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">-</span> <span class="no">Operation</span> <span class="p">(</span><span class="s2">&quot;update&quot;</span><span class="p">)</span> <span class="n">included</span> <span class="k">in</span> <span class="n">the</span> <span class="no">URL</span>
 <span class="o">-</span> <span class="no">Uses</span> <span class="n">the</span> <span class="n">authenticated</span> <span class="n">user</span> <span class="n">implicitly</span></code></pre></div>
-
 
 <p><strong>Better:</strong> PUT http://twitter.com/tweets/id.format</p>
 
@@ -87,8 +84,7 @@
 
 <span class="o">-</span> <span class="no">Internet</span> <span class="no">Media</span> <span class="n">type</span> <span class="n">returned</span> <span class="n">could</span> <span class="n">be</span> <span class="no">JSON</span><span class="p">,</span> <span class="no">XML</span><span class="p">,</span> <span class="no">SOAP</span><span class="p">,</span> <span class="n">etc</span><span class="o">.</span></code></pre></div>
 
-
-<h4>Example #3: Statuses/Destroy</h4>
+<h4 id="example-3-statusesdestroy">Example #3: Statuses/Destroy</h4>
 
 <p>POST http://api.twitter.com/1/statuses/destroy/id.format</p>
 
@@ -98,42 +94,35 @@
 <span class="o">-</span> <span class="no">Odd</span><span class="p">,</span> <span class="n">illogical</span> <span class="n">hierarchy</span> <span class="n">again</span>
 <span class="o">-</span> <span class="no">Allows</span> <span class="n">both</span> <span class="s2">&quot;POST&quot;</span> <span class="ow">and</span> <span class="s2">&quot;DELETE&quot;</span> <span class="n">as</span> <span class="n">verbs</span></code></pre></div>
 
-
 <p><strong>Better:</strong> DELETE http://twitter.com/tweets/id.format</p>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">-</span> <span class="no">Delete</span> <span class="n">via</span> <span class="n">combo</span> <span class="n">of</span> <span class="no">DELETE</span> <span class="no">HTTP</span> <span class="no">Verb</span> <span class="ow">and</span> <span class="n">tweets</span> <span class="no">Resource</span>
 
 <span class="o">-</span> <span class="no">Internet</span> <span class="no">Media</span> <span class="n">type</span> <span class="n">returned</span> <span class="n">could</span> <span class="n">be</span> <span class="no">JSON</span><span class="p">,</span> <span class="no">XML</span><span class="p">,</span> <span class="no">SOAP</span><span class="p">,</span> <span class="n">etc</span><span class="o">.</span></code></pre></div>
 
-
-<h3>Summary</h3>
+<h3 id="summary">Summary</h3>
 
 <p>At University, during heated debates, a good friend always reminded me not to throw the baby out with the bath water. I think that advice is prudent here.</p>
 
 <p><a href="http://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven">REST</a> is no more a framework than Agile is. Both are fundamental principles we should use to guide our actions, not restrain them. Fundamentalism is no substitute for passion, reason and debate.</p>
 
-<p>Let's recap:</p>
+<p>Let’s recap:</p>
 
 <p>GET http://twitter.com/tweets/</p>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">-</span> <span class="no">GET</span> <span class="n">to</span> <span class="n">fetch</span> <span class="n">a</span> <span class="n">list</span> <span class="n">tweets</span> <span class="k">for</span> <span class="n">the</span> <span class="n">authenticated</span> <span class="n">user</span><span class="o">.</span></code></pre></div>
 
-
 <p>POST http://twitter.com/tweets/</p>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">-</span> <span class="no">POST</span> <span class="n">to</span> <span class="n">create</span> <span class="n">a</span> <span class="kp">new</span> <span class="n">tweet</span></code></pre></div>
-
 
 <p>PUT http://twitter.com/tweets/12345</p>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">-</span> <span class="no">PUT</span> <span class="n">to</span> <span class="n">update</span> <span class="n">tweet</span> <span class="mi">12345</span></code></pre></div>
 
-
 <p>DELETE http://twitter.com/tweets/12345</p>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">-</span> <span class="no">DELETE</span> <span class="n">to</span> <span class="n">delete</span> <span class="n">tweet</span> <span class="mi">12345</span></code></pre></div>
-
-
 
 
     </div>

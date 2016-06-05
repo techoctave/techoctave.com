@@ -9,7 +9,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <meta http-equiv="content-language" content="en-gb" />
       
-      <meta name="description" content="Update: Check out my tutorial on How to host a Rails app with Phusion Passenger for Nginx. Be Careful with that Latte Earlier this week, I consulted on a client's Rails app deployment. The client was trying to deploy his Software as a Service Rails app on an Ubuntu distro using Apache and modruby. Everything sounded decent until I heard modruby. I nearly fell off my overpriced Starbucks bar stool! I couldn't phantom someone using...">
+      <meta name="description" content="Update: Check out my tutorial on How to host a Rails app with Phusion Passenger for Nginx. Be Careful with that Latte Earlier this week, I consulted on a client’s Rails app deployment. The client was trying to deploy his Software as a Service Rails app on an Ubuntu distro using Apache and modruby. Everything sounded decent until I heard modruby. I nearly fell off my overpriced Starbucks bar stool! I couldn’t phantom someone using...">
       
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10">
       <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
@@ -42,23 +42,23 @@
     <div itemprop="articleBody">
       <p>Update: Check out my tutorial on <a href="https://techoctave.com/posts/16-how-to-host-a-rails-app-with-phusion-passenger-for-nginx">How to host a Rails app with Phusion Passenger for Nginx</a>.</p>
 
-<h3>Be Careful with that Latte</h3>
+<h3 id="be-careful-with-that-latte">Be Careful with that Latte</h3>
 
-<p>Earlier this week, I consulted on a client's Rails app deployment. The client was trying to deploy his Software as a Service Rails app on an Ubuntu distro using Apache and modruby. Everything sounded decent until I heard modruby.</p>
+<p>Earlier this week, I consulted on a client’s Rails app deployment. The client was trying to deploy his Software as a Service Rails app on an Ubuntu distro using Apache and modruby. Everything sounded decent until I heard modruby.</p>
 
-<p>I nearly fell off my overpriced Starbucks bar stool! I couldn't phantom someone using modruby. Its unbelievable class sharing issue coupled with its lack of maintenance is a disaster waiting to happen.</p>
+<p>I nearly fell off my overpriced Starbucks bar stool! I couldn’t phantom someone using modruby. Its unbelievable class sharing issue coupled with its lack of maintenance is a disaster waiting to happen. </p>
 
-<p>I couldn't let my client do that. "Have you heard of <em>Phusion Passenger for Nginx</em>?" I said. "Let me tell you all about it..." That's why they pay me the big bucks!</p>
+<p>I couldn’t let my client do that. “Have you heard of <em>Phusion Passenger for Nginx</em>?” I said. “Let me tell you all about it…” That’s why they pay me the big bucks!</p>
 
-<h3>Nginx, Passenger and Ruby Enterprise Edition (REE)</h3>
+<h3 id="nginx-passenger-and-ruby-enterprise-edition-ree">Nginx, Passenger and Ruby Enterprise Edition (REE)</h3>
 
-<p>Nginx is a powerful, lightweight, high-performance Web server. Phusion passenger a.k.a. mod rails is thee pre-eminent Ruby on Rails application server.</p>
+<p>Nginx is a powerful, lightweight, high-performance Web server. Phusion passenger a.k.a. mod rails is thee pre-eminent Ruby on Rails application server. </p>
 
 <p><img src="/images/nginx.png" alt="nginx" /></p>
 
-<p>Combined with Ruby Enterprise Edition (REE), your next Rails app could use 33% less memory. On average, that's about 250MB less memory footprint versus another infrastructure strategy. All that cost savings for the same app!</p>
+<p>Combined with Ruby Enterprise Edition (REE), your next Rails app could use 33% less memory. On average, that’s about 250MB less memory footprint versus another infrastructure strategy. All that cost savings for the same app!</p>
 
-<h3>Finally Some Syntactic Sugar with your Coffee</h3>
+<h3 id="finally-some-syntactic-sugar-with-your-coffee">Finally Some Syntactic Sugar with your Coffee</h3>
 
 <p>When I say Nginx is the jQuery of Web servers, I mean Nginx is simple without being simplistic. With its C like configuration syntax, you can express Web server related tasks in a developer appealing way. I predict Nginx will do for Web server deployment what jQuery did for JavaScript development - revolutionize!</p>
 
@@ -66,9 +66,8 @@
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">## Redirect from www to non-www</span>
 <span class="k">if</span> <span class="o">(</span><span class="nv">$host</span> <span class="o">=</span> <span class="s1">&#39;www.domain.com&#39;</span><span class="o">)</span> <span class="o">{</span>
-     rewrite  ^/<span class="o">(</span>.*<span class="o">)</span><span class="nv">$ </span> http://domain.com/<span class="nv">$1</span>  permanent<span class="p">;</span>
+	 rewrite  ^/<span class="o">(</span>.*<span class="o">)</span><span class="nv">$ </span> http://domain.com/<span class="nv">$1</span>  permanent<span class="p">;</span>
 <span class="o">}</span></code></pre></div>
-
 
 <p>Compare this same task in Apache:</p>
 
@@ -77,8 +76,8 @@
     Redirect permanent / http://domain.com/
 &lt;/VirtualHost&gt;</code></pre></div>
 
-
 <p>Nginx is intuitive and expressive and as a developer I choose to write this task in Nginx. It just feels less heavy and I appreciate not having to deal with the XML hell in the long run. Thanks Nginx!</p>
+
 
     </div>
     

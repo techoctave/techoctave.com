@@ -6,7 +6,7 @@ date: 2013-11-18 09:17:02
 permalink: /c7/posts/131-airline-transport-pilot-license-atpl-essentials-study-guide
 ---
 
-<a href="http://techoctave.com/simulation"><img src="http://techoctave.com/images/flight_gauges_six.png" alt="JavaScript Flight Gauges" /></a>
+<a href="http://techoctave.com/simulation"><img src="https://techoctave.com/images/flight_gauges_six.png" alt="JavaScript Flight Gauges" /></a>
 
 The [Wright Brothers][1] were the first in flight. I write this post not very far from those historic grounds where they changed man's relationship with the sky and stars forever.
 

@@ -40,7 +40,7 @@
     <h5 class="page-author">Handwritten by TVD</h5>
 
     <div itemprop="articleBody">
-      <p><img src="https://techoctave.com/c7/static/radarchart_product_analysis.png" alt="JavaScript Radar Chart, Spider Chart, Star Chart."/></p>
+      <p><img src="https://techoctave.com/c7/static/radarchart_product_analysis.png" alt="JavaScript Radar Chart, Spider Chart, Star Chart." /></p>
 
 <p>Recently, one of our customers needed a Radar Chart for an Enterprise Resource Planning (ERP) application. They thought a Radar Chart would be a great addition to our <a href="http://techoctave.com/charts/">JavaScript Charts</a> Suite:</p>
 
@@ -60,10 +60,9 @@
 
 <span class="mi">6</span><span class="p">.</span> <span class="nx">Framework</span> <span class="nx">Agnostic</span></code></pre></div>
 
-
 <p>I believed then as I believe now that these principles are central to developer happiness. They inform what we do each and every day.</p>
 
-<h3>What are Radar Charts?</h3>
+<h3 id="what-are-radar-charts">What are Radar Charts?</h3>
 
 <p>Radar charts plot the values of each category along a separate axis starting from the center of the chart and ending at the outer ring. In a Radar chart, a point close to the center indicates a low value and a point near the perimeter indicates a high value.</p>
 
@@ -71,23 +70,23 @@
 
 <p>Take a look at the radar chart above. This is a typical radar chart - sometimes called a spider chart or star chart for the way it looks. It makes concentrations, strengths and weaknesses much more visible.</p>
 
-<p>If it's done well, it clearly defines full performance in each category. A well executed radar chart is a good way to answer the question, "How are we doing?"</p>
+<p>If it’s done well, it clearly defines full performance in each category. A well executed radar chart is a good way to answer the question, “How are we doing?”</p>
 
-<h3>When should you use a Radar Chart?</h3>
+<h3 id="when-should-you-use-a-radar-chart">When should you use a Radar Chart?</h3>
 
-<p>Use it to identify gaps among both current organizational KPI and ideal organizational KPI. You can use it to compare a variety of organizational data - Individuals, Teams and even whole Organizations.</p>
+<p>Use it to identify gaps among both current organizational KPI and ideal organizational KPI. You can use it to compare a variety of organizational data - Individuals, Teams and even whole Organizations. </p>
 
-<p>That's why you'll often see radar charts used in the scope of Human Resources and Portfolio Management application development projects.</p>
+<p>That’s why you’ll often see radar charts used in the scope of Human Resources and Portfolio Management application development projects.</p>
 
-<h3>How to use our Radar Chart?</h3>
+<h3 id="how-to-use-our-radar-chart">How to use our Radar Chart?</h3>
 
-<p>So let's see how we go about drawing our Radar Chart. The first thing to do is identify the categories or performances you want to compare. Then you'll want to gather the quantitative data for each category. Finally, plot the radar chart using your favorite <a href="http://techoctave.com/charts/">JavaScript Charts</a> library.</p>
+<p>So let’s see how we go about drawing our Radar Chart. The first thing to do is identify the categories or performances you want to compare. Then you’ll want to gather the quantitative data for each category. Finally, plot the radar chart using your favorite <a href="http://techoctave.com/charts/">JavaScript Charts</a> library.</p>
 
-<p>For our example, we'll analyze the change in advertising spending for National ERP Solutions, Inc. (NES) over two consecutive years:</p>
+<p>For our example, we’ll analyze the change in advertising spending for National ERP Solutions, Inc. (NES) over two consecutive years:</p>
 
-<p><img src="https://techoctave.com/c7/static/radarchart_advertising_spending_analysis.png" alt="Radar Chart advertising spending analysis."/></p>
+<p><img src="https://techoctave.com/c7/static/radarchart_advertising_spending_analysis.png" alt="Radar Chart advertising spending analysis." /></p>
 
-<h4>Identify Key Categories or Performances</h4>
+<h4 id="identify-key-categories-or-performances">Identify Key Categories or Performances</h4>
 
 <p>Here, NES advertising channels were:</p>
 
@@ -101,10 +100,9 @@
 
 <span class="mi">5</span><span class="p">.</span> <span class="nx">Magazine</span></code></pre></div>
 
-
 <p>These advertising channels will make perfect Radar Categories for our example. For you, your categories will be different, but the idea is to identify areas your organization needs to analyze.</p>
 
-<h4>Gather Categorical Quantitative Data</h4>
+<h4 id="gather-categorical-quantitative-data">Gather Categorical Quantitative Data</h4>
 
 <p>Here, for Year 1, NES spending was as follows:</p>
 
@@ -118,7 +116,6 @@
 
 <span class="mi">5</span><span class="p">.</span> <span class="nx">Magazine</span> <span class="p">(</span><span class="nx">$100</span><span class="p">,</span><span class="mi">000</span><span class="p">)</span></code></pre></div>
 
-
 <p>For Year 2, NES spending habits made a pinnacle shift:</p>
 
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="mi">1</span><span class="p">.</span> <span class="nx">Internet</span> <span class="p">(</span><span class="nx">$200</span><span class="p">,</span><span class="mi">000</span><span class="p">)</span>
@@ -131,40 +128,37 @@
 
 <span class="mi">5</span><span class="p">.</span> <span class="nx">Magazine</span> <span class="p">(</span><span class="nx">$100</span><span class="p">,</span><span class="mi">000</span><span class="p">)</span></code></pre></div>
 
+<h4 id="plot-your-radar-chart">Plot Your Radar Chart</h4>
 
-<h4>Plot Your Radar Chart</h4>
-
-<p>Here we'll use our RadarChart component from our JavaScript Charts Suite. First, we'll create an HTML element to bind our chart too:</p>
+<p>Here we’ll use our RadarChart component from our JavaScript Charts Suite. First, we’ll create an HTML element to bind our chart too:</p>
 
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;advertising&quot;</span><span class="nt">&gt;&lt;/div&gt;</span></code></pre></div>
 
-
-<p>Next, we'll create an instance of our RadarChart class:</p>
+<p>Next, we’ll create an instance of our RadarChart class:</p>
 
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">advertising</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">RadarChart</span><span class="p">(</span><span class="s2">&quot;advertising&quot;</span><span class="p">,</span> <span class="p">{</span>
-    <span class="nx">data</span><span class="o">:</span> <span class="p">[[</span><span class="mi">100000</span><span class="p">,</span> <span class="mi">200000</span><span class="p">,</span> <span class="mi">175000</span><span class="p">,</span> <span class="mi">100000</span><span class="p">,</span> <span class="mi">100000</span><span class="p">],</span> 
+	<span class="nx">data</span><span class="o">:</span> <span class="p">[[</span><span class="mi">100000</span><span class="p">,</span> <span class="mi">200000</span><span class="p">,</span> <span class="mi">175000</span><span class="p">,</span> <span class="mi">100000</span><span class="p">,</span> <span class="mi">100000</span><span class="p">],</span> 
            <span class="p">[</span><span class="mi">200000</span><span class="p">,</span> <span class="mi">125000</span><span class="p">,</span> <span class="mi">105000</span><span class="p">,</span> <span class="mi">100000</span><span class="p">,</span> <span class="mi">100000</span><span class="p">]],</span>
     
-    <span class="nx">maxValue</span><span class="o">:</span> <span class="mi">250000</span><span class="p">,</span>
-        
-    <span class="nx">categories</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;Internet&quot;</span><span class="p">,</span> <span class="s2">&quot;Television&quot;</span><span class="p">,</span> <span class="s2">&quot;Radio&quot;</span><span class="p">,</span> 
+	<span class="nx">maxValue</span><span class="o">:</span> <span class="mi">250000</span><span class="p">,</span>
+		
+	<span class="nx">categories</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;Internet&quot;</span><span class="p">,</span> <span class="s2">&quot;Television&quot;</span><span class="p">,</span> <span class="s2">&quot;Radio&quot;</span><span class="p">,</span> 
                  <span class="s2">&quot;Newspaper&quot;</span><span class="p">,</span> <span class="s2">&quot;Magazine&quot;</span><span class="p">],</span>
 
-    <span class="nx">legend</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nx">legendTitle</span><span class="o">:</span> <span class="s2">&quot;Advertising&quot;</span><span class="p">,</span>
-    <span class="nx">legendLabels</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;Year 1&quot;</span><span class="p">,</span> <span class="s2">&quot;Year 2&quot;</span><span class="p">],</span>
+	<span class="nx">legend</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+	<span class="nx">legendTitle</span><span class="o">:</span> <span class="s2">&quot;Advertising&quot;</span><span class="p">,</span>
+	<span class="nx">legendLabels</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;Year 1&quot;</span><span class="p">,</span> <span class="s2">&quot;Year 2&quot;</span><span class="p">],</span>
 <span class="p">});</span></code></pre></div>
-
 
 <p>Our data property can handle multiple sets of data. Here, the first set is the advertising spend gathered for Year 1. Finally, the last set is the advertising spend gathered for Year 2.</p>
 
-<p>The key categories are listed in the categories property of the RadarChart class. This particular instance has the following categories: "Internet", "Television", "Radio", "Newspaper", "Magazine".</p>
+<p>The key categories are listed in the categories property of the RadarChart class. This particular instance has the following categories: “Internet”, “Television”, “Radio”, “Newspaper”, “Magazine”.</p>
 
-<p>Since we'd like to give our audience a quick legend for identifying which set is which, we've turned on the legend for our RadarChart. Then we set its title to "Advertising". Finally, we label each data set: Year 1 followed by Year 2.</p>
+<p>Since we’d like to give our audience a quick legend for identifying which set is which, we’ve turned on the legend for our RadarChart. Then we set its title to “Advertising”. Finally, we label each data set: Year 1 followed by Year 2.</p>
 
 <p>There are over thirty (30) properties we could set for our RadarChart, but these few should suffice for this example. Just know that our RadarChart is as flexible as the times call for.</p>
 
-<h4>Analyze Your Radar Chart Data</h4>
+<h4 id="analyze-your-radar-chart-data">Analyze Your Radar Chart Data</h4>
 
 <p>What is happening to NES here is what advertisers refer to as <a href="http://www.forbes.com/sites/roberthof/2011/08/26/online-ad-spend-to-overtake-tv/">The Great Shift</a>. The Great Shift refers to the time when companies will increase Internet advertising while simultaneously decreasing traditional advertising channels.</p>
 
@@ -172,17 +166,18 @@
 
 <p>As a best-in-class company, being able to comprehend and take action on these trends is mission critical. They help you to understand where the business is heading and what type of talent your organization needs to recruit.</p>
 
-<p>From a Human Resources standpoint, Radar charts help you quickly understand you'll need to seek out folks with digital skills so you can be competitive in the market place. People like software developers, designers, user experience specialists and community managers.</p>
+<p>From a Human Resources standpoint, Radar charts help you quickly understand you’ll need to seek out folks with digital skills so you can be competitive in the market place. People like software developers, designers, user experience specialists and community managers.</p>
 
-<p>From a Sourcing &amp; Purchasing standpoint, Radar charts help you quickly understand that you'll need tools to monitor internet traffic and conversions so you can effectively measure your Return on Investment (ROI).</p>
+<p>From a Sourcing &amp; Purchasing standpoint, Radar charts help you quickly understand that you’ll need tools to monitor internet traffic and conversions so you can effectively measure your Return on Investment (ROI).</p>
 
-<h3>Thoughts and Reflections</h3>
+<h3 id="thoughts-and-reflections">Thoughts and Reflections</h3>
 
 <p>What Great Shifts are taking place in your industry? What is your data telling you that you cannot see yet?</p>
 
 <p>You have the data and you have the opportunity. Now is the time to take a fresh perspective on both. This is your day to seize.</p>
 
-<p>Listen, I'm not telling you it's going to be easy. I'm telling you it's going to be worth it. We're the team to help you get there.</p>
+<p>Listen, I’m not telling you it’s going to be easy. I’m telling you it’s going to be worth it. We’re the team to help you get there.</p>
+
 
     </div>
     

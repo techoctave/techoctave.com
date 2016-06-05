@@ -9,7 +9,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <meta http-equiv="content-language" content="en-gb" />
       
-      <meta name="description" content="Well, I've got good news and I've got bad news. As of Rails 3.0.1, using rescue_from in your ApplicationController to recover from a routing error is broken! That's the bad news. The good news is I have a solution that will keep you in unison with the Rails Core Team. The Rails team has promised a fix some time in Rails 3.1. Until then, I've got readers and I've got customers and I shudder at...">
+      <meta name="description" content="Well, I’ve got good news and I’ve got bad news. As of Rails 3.0.1, using rescue_from in your ApplicationController to recover from a routing error is broken! That’s the bad news. The good news is I have a solution that will keep you in unison with the Rails Core Team. The Rails team has promised a fix some time in Rails 3.1. Until then, I’ve got readers and I’ve got customers and I shudder at...">
       
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10">
       <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
@@ -42,13 +42,13 @@
     <div itemprop="articleBody">
       <p><img src="/c7/static/wizard.jpg" alt="wizard" /></p>
 
-<p>Well, I've got good news and I've got bad news. As of Rails 3.0.1, using rescue_from in your ApplicationController to recover from a routing error is broken! That's the bad news.</p>
+<p>Well, I’ve got good news and I’ve got bad news. As of Rails 3.0.1, using rescue_from in your ApplicationController to recover from a routing error is broken! That’s the bad news.</p>
 
-<p>The good news is I have a solution that will keep you in unison with the Rails Core Team. The <a href="https://rails.lighthouseapp.com/projects/8994/tickets/4444-can-no-longer-rescue_from-actioncontrollerroutingerror">Rails team has promised a fix some time in Rails 3.1</a>. Until then, I've got readers and I've got customers and I <em>shudder</em> at the thought of showing them a generic error page.</p>
+<p>The good news is I have a solution that will keep you in unison with the Rails Core Team. The <a href="https://rails.lighthouseapp.com/projects/8994/tickets/4444-can-no-longer-rescue_from-actioncontrollerroutingerror">Rails team has promised a fix some time in Rails 3.1</a>. Until then, I’ve got readers and I’ve got customers and I <em>shudder</em> at the thought of showing them a generic error page.</p>
 
-<h3>The Situation</h3>
+<h3 id="the-situation">The Situation</h3>
 
-<p>It's bad enough an error has occurred in the first place. At that point I want to take control of the situation and rescue my audience from a bad experience back to enjoyment!</p>
+<p>It’s bad enough an error has occurred in the first place. At that point I want to take control of the situation and rescue my audience from a bad experience back to enjoyment!</p>
 
 <p>Previously in Rails 2.3.8 and below you could handle routing errors elegantly using rescue_from ActionController::RoutingError:</p>
 
@@ -65,20 +65,19 @@
   <span class="k">end</span>
 <span class="k">end</span></code></pre></div>
 
+<p>However, things are a little different in Rails 3. The reality is, as of Rails 3.0.1, ApplicationController can’t catch ActionController::RoutingError and thus, we cannot take advantage of rescue_from like we used to.</p>
 
-<p>However, things are a little different in Rails 3. The reality is, as of Rails 3.0.1, ApplicationController can't catch ActionController::RoutingError and thus, we cannot take advantage of rescue_from like we used to.</p>
+<p>Now, for those of you who don’t know, <a href="https://techoctave.com/posts/30-hello-i-m-an-entj">I’m a realist</a>. So, I’m not expecting the Rails team to spring a solution overnight.</p>
 
-<p>Now, for those of you who don't know, <a href="https://techoctave.com/posts/30-hello-i-m-an-entj">I'm a realist</a>. So, I'm not expecting the Rails team to spring a solution overnight.</p>
+<p>Personally, I’m going to wait for the Official fix from the Rails Core Team. In the meantime, I need a simple, no side effects solution that I can use right now!</p>
 
-<p>Personally, I'm going to wait for the Official fix from the Rails Core Team. In the meantime, I need a simple, no side effects solution that I can use right now!</p>
+<h3 id="simple-solution">Simple Solution</h3>
 
-<h3>Simple Solution</h3>
+<p>This is one of those times <a href="https://techoctave.com/posts/35-designer-developer-sweeper">when it’s great to be a developer</a>. There is nothing we can’t solve with a little <a href="https://techoctave.com/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css">elbow grease and ingenuity</a>. </p>
 
-<p>This is one of those times <a href="https://techoctave.com/posts/35-designer-developer-sweeper">when it's great to be a developer</a>. There is nothing we can't solve with a little <a href="https://techoctave.com/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css">elbow grease and ingenuity</a>.</p>
+<p>Expanding on the suggestion given by the Rails core team, here’s the solution I use to handle routing errors in Rails 3.0:</p>
 
-<p>Expanding on the suggestion given by the Rails core team, here's the solution I use to handle routing errors in Rails 3.0:</p>
-
-<h4>config/routes.rb</h4>
+<h4 id="configroutesrb">config/routes.rb</h4>
 
 <p>This code should go to the end of your routes.rb file. That way it will be given the least priority and therefore, act as a wildcard catchall for all those rogue url resources.</p>
 
@@ -87,11 +86,9 @@
   <span class="n">match</span> <span class="s1">&#39;*a&#39;</span><span class="p">,</span> <span class="ss">:to</span> <span class="o">=&gt;</span> <span class="s1">&#39;errors#routing&#39;</span>
 <span class="k">end</span></code></pre></div>
 
+<p>NOTE: The “a” is actually a parameter in the Rails 3 Route Globbing technique. For example, if your url was <em>/this-url-does-not-exist</em>, then params[:a] equals “<em>/this-url-does-not-exist</em>”. So be as creative as you’d like handling that rogue route.</p>
 
-<p>NOTE: The "a" is actually a parameter in the Rails 3 Route Globbing technique. For example, if your url was <em>/this-url-does-not-exist</em>, then params[:a] equals "<em>/this-url-does-not-exist</em>". So be as creative as you'd like handling that rogue route.</p>
-
-<h4>app/controllers/errors_controller.rb</h4>
-
+<h4 id="appcontrollerserrorscontrollerrb">app/controllers/errors_controller.rb</h4>
 <p>Here, I handle my routing errors. I leverage previous 404 handling code from my original ApplicationController mentioned above. So, my errors_controller.rb looks like this:</p>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">ErrorsController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>
@@ -100,8 +97,7 @@
   <span class="k">end</span>
 <span class="k">end</span></code></pre></div>
 
-
-<p>However, feel free to modify to fit your individual needs. Everyone's situation will be slightly different. For example, if you're not going to reuse your 404 error handling logic, then here's the full ErrorsController without inheritance:</p>
+<p>However, feel free to modify to fit your individual needs. Everyone’s situation will be slightly different. For example, if you’re not going to reuse your 404 error handling logic, then here’s the full ErrorsController without inheritance:</p>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">ErrorsController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>
   <span class="k">def</span> <span class="nf">routing</span>
@@ -109,10 +105,10 @@
   <span class="k">end</span>
 <span class="k">end</span></code></pre></div>
 
-
-<p>I'm big on keeping things simple. I believe solutions should be simple without being simplistic. Like I said earlier, I look forward to an Official solution from the Rails Core Team. Until then, this gets the job done!</p>
+<p>I’m big on keeping things simple. I believe solutions should be simple without being simplistic. Like I said earlier, I look forward to an Official solution from the Rails Core Team. Until then, this gets the job done!</p>
 
 <p>Well, I encourage you to dig into Rails 3 and <a href="https://techoctave.com/posts/1-hello-world">have a little fun</a>. And if you have another solution, post here so we can discuss. Until next time Beloved, take care!</p>
+
 
     </div>
     

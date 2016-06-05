@@ -9,7 +9,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <meta http-equiv="content-language" content="en-gb" />
       
-      <meta name="description" content="Google uses your blog's meta description to create a synopsis of your link's content. This description shows up when someone Googles key terms. The better the description, the more likely someone will spot your link and click it. What better way to populate your blog's meta description than with your blog's content! I've created an algorithm to extract the first 250 characters of your blog's content for dynamic insertion into your blog's meta description. For...">
+      <meta name="description" content="Google uses your blog’s meta description to create a synopsis of your link’s content. This description shows up when someone Googles key terms. The better the description, the more likely someone will spot your link and click it. What better way to populate your blog’s meta description than with your blog’s content! I’ve created an algorithm to extract the first 250 characters of your blog’s content for dynamic insertion into your blog’s meta description. For...">
       
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10">
       <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
@@ -40,17 +40,16 @@
     <h5 class="page-author">Handwritten by TVD</h5>
 
     <div itemprop="articleBody">
-      <p>Google uses your blog's meta description to create a synopsis of your link's content. This description shows up when someone Googles key terms. The better the description, the more likely someone will spot your link and click it.</p>
+      <p>Google uses your blog’s meta description to create a synopsis of your link’s content. This description shows up when someone Googles key terms. The better the description, the more likely someone will spot your link and click it.</p>
 
-<p>What better way to populate your blog's meta description than with your blog's content! I've created an algorithm to extract the first 250 characters of your blog's content for dynamic insertion into your blog's meta description.</p>
+<p>What better way to populate your blog’s meta description than with your blog’s content! I’ve created an algorithm to extract the first 250 characters of your blog’s content for dynamic insertion into your blog’s meta description. </p>
 
-<p>For me, having my meta description created automatically is one less thing I have to worry about. That way I can focus on writing. That's why I created it and that's why I use it in <a href="http://techoctave.com/blogcast">Blogcast</a>.</p>
+<p>For me, having my meta description created automatically is one less thing I have to worry about. That way I can focus on writing. That’s why I created it and that’s why I use it in <a href="http://techoctave.com/blogcast">Blogcast</a>.</p>
 
-<h3>Time for Some Rails Goodness</h3>
+<h3 id="time-for-some-rails-goodness">Time for Some Rails Goodness</h3>
 
-<h4>helpers/posts_helper.rb</h4>
-
-<p>I put the code in a helper to make integration in the Post view a little cleaner. I'm happy with the results. The code is a bit involved, so I break down the details in the algorithm below.</p>
+<h4 id="helperspostshelperrb">helpers/posts_helper.rb</h4>
+<p>I put the code in a helper to make integration in the Post view a little cleaner. I’m happy with the results. The code is a bit involved, so I break down the details in the algorithm below.</p>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">module</span> <span class="nn">PostsHelper</span>
   <span class="k">def</span> <span class="nf">description</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
@@ -58,10 +57,9 @@
   <span class="k">end</span>
 <span class="k">end</span></code></pre></div>
 
-
 <p>I use the sanitize core method to clean up any HTML blocks hanging around. I also use a little regular expression to make sure none of our beautiful code samples clog up our SEO pipeline.</p>
 
-<h4>views/posts/show.html.erb</h4>
+<h4 id="viewspostsshowhtmlerb">views/posts/show.html.erb</h4>
 
 <p>Here, I deliver a nice neat little present for Google. Hello Google!</p>
 
@@ -69,8 +67,7 @@
 <span class="sx">   &lt;%= description(@post.content) %&gt;</span>
 <span class="o">&lt;</span><span class="sx">% end </span><span class="o">%&gt;</span></code></pre></div>
 
-
-<h4>Here's the algorithm:</h4>
+<h4 id="heres-the-algorithm">Here’s the algorithm:</h4>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="mi">1</span><span class="o">.</span> <span class="no">Remove</span> <span class="n">any</span> <span class="n">code</span> <span class="n">blocks</span> <span class="n">from</span> <span class="n">the</span> <span class="n">content</span>
 
@@ -86,14 +83,14 @@
 
 <span class="mi">7</span><span class="o">.</span> <span class="no">Trim</span> <span class="n">out</span> <span class="n">any</span> <span class="n">extra</span> <span class="n">spaces</span> <span class="n">hanging</span> <span class="n">around</span></code></pre></div>
 
+<p>Why grab 250 characters? Well, there’s been reports that Google uses anywhere from 150-180 characters of the meta description for your link’s description snippet. Either way, Google doesn’t penalize for having extra characters.</p>
 
-<p>Why grab 250 characters? Well, there's been reports that Google uses anywhere from 150-180 characters of the meta description for your link's description snippet. Either way, Google doesn't penalize for having extra characters.</p>
+<p>That said, Google hasn’t confirmed exactly how much characters they use. So, I think 250 is good because you can ensure more description of the link, even if just a little bit.</p>
 
-<p>That said, Google hasn't confirmed exactly how much characters they use. So, I think 250 is good because you can ensure more description of the link, even if just a little bit.</p>
-
-<p>Of course, if you don't provide a meta description, Google will discern one from the content of your page. Which is best? Well, it really depends. You should make a judgment call based on your situation.</p>
+<p>Of course, if you don’t provide a meta description, Google will discern one from the content of your page. Which is best? Well, it really depends. You should make a judgment call based on your situation.</p>
 
 <p>Until next time Beloved, take care!</p>
+
 
     </div>
     

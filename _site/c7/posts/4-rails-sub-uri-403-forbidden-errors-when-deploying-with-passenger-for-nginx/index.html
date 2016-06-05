@@ -9,7 +9,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <meta http-equiv="content-language" content="en-gb" />
       
-      <meta name="description" content="Update: Check out my tutorial on How to host a Rails app with Phusion Passenger for Nginx. Beware of Symlink and 403 Forbidden Errors In my last post, I sold a client on using Passenger for Nginx and predicted Nginx will do for Web server deployment what jQuery did for JavaScript development. Not too long after, the client's developer calls me freaking out! He'd been working for 72 hours (non-stop) trying to get the client's...">
+      <meta name="description" content="Update: Check out my tutorial on How to host a Rails app with Phusion Passenger for Nginx. Beware of Symlink and 403 Forbidden Errors In my last post, I sold a client on using Passenger for Nginx and predicted Nginx will do for Web server deployment what jQuery did for JavaScript development. Not too long after, the client’s developer calls me freaking out! He’d been working for 72 hours (non-stop) trying to get the client’s...">
       
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10">
       <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
@@ -42,22 +42,21 @@
     <div itemprop="articleBody">
       <p>Update: Check out my tutorial on <a href="https://techoctave.com/posts/16-how-to-host-a-rails-app-with-phusion-passenger-for-nginx">How to host a Rails app with Phusion Passenger for Nginx</a>.</p>
 
-<h3>Beware of Symlink and 403 Forbidden Errors</h3>
-
+<h3 id="beware-of-symlink-and-403-forbidden-errors">Beware of Symlink and 403 Forbidden Errors</h3>
 <p>In my last post, I sold a client on using <a href="https://techoctave.com/posts/3-passenger-for-nginx-is-the-jquery-of-web-server-software">Passenger for Nginx</a> and predicted Nginx will do for Web server deployment what jQuery did for JavaScript development.</p>
 
-<p>Not too long after, the client's developer calls me freaking out! He'd been working for 72 hours (non-stop) trying to get the client's blog deployed to a sub URI of the client's domain and couldn't. Everything he did gave him a nasty 403 Forbidden error. I really felt for the guy. I remember those days!</p>
+<p>Not too long after, the client’s developer calls me freaking out! He’d been working for 72 hours (non-stop) trying to get the client’s blog deployed to a sub URI of the client’s domain and couldn’t. Everything he did gave him a nasty 403 Forbidden error. I really felt for the guy. I remember those days!</p>
 
-<p>After hearing 403 Forbidden, immediately I knew he had a symlink issue. The problem is a very subtle misunderstanding in the way the Passenger for Nginx documentation reads. To create a sub URI, you want to create a symlink of your Rails app's public directory to your domain's public_html directory:</p>
+<p>After hearing 403 Forbidden, immediately I knew he had a symlink issue. The problem is a very subtle misunderstanding in the way the Passenger for Nginx documentation reads. To create a sub URI, you want to create a symlink of your Rails app’s public directory to your domain’s public_html directory:</p>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">ln -s /webapps/mycook/public /websites/phusion/rails</code></pre></div>
 
-
 <p>The problem is many developers mistakenly create a <em>rails</em> folder in the public_html directory. So when the above code is executed, a symlink named public will be created in that directory. This will create nasty 403 Forbidden errors because no index.html file exists in the folder and directory listing is disabled by Nginx.</p>
 
-<p>The solution is DO NOT make a directory called rails. Instead, just run the symlink command and it will create a symlink called <em>rails</em> in the domain's public_html root directory.</p>
+<p>The solution is DO NOT make a directory called rails. Instead, just run the symlink command and it will create a symlink called <em>rails</em> in the domain’s public_html root directory. </p>
 
 <p>No one told you to create a directory before running the symlink command, did they? Think about it!</p>
+
 
     </div>
     
