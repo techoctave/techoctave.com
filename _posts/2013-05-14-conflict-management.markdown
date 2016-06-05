@@ -6,7 +6,7 @@ date: 2013-05-14 11:22:39
 permalink: /c7/posts/112-conflict-management
 ---
 
-<img src="https://techoctave.com/static/conflict-words.jpg"Conflict definition." alt="Conflict Definition" width="100%"/> 
+<img src="https://techoctave.com/c7/static/conflict-words.jpg"Conflict definition." alt="Conflict Definition" width="100%"/> 
 
 Many are uncomfortable with conflict. When faced with conflict, they are either crippled by it or don't know the best approach to use to transcend it. 
 
@@ -19,7 +19,7 @@ The truth is, we should not view conflict as negative. Instead we should focus o
 
 While one may think that conflict always leads to a win/lose situation where someone wins while the other loses. This way of managing conflict is very competitive in nature and is not always the best approach.  
 
-<img src="https://techoctave.com/static/you-lose-i-win.jpg" alt="I Win. You Lose." width="100%"/>
+<img src="https://techoctave.com/c7/static/you-lose-i-win.jpg" alt="I Win. You Lose." width="100%"/>
 
 
 ###Conflict Management Strategies 
@@ -27,7 +27,7 @@ While one may think that conflict always leads to a win/lose situation where som
 I recently came across the Thomas-Kilmann Conflict Mode Instrument which serves as an interesting model for handling conflict. 
 
 
-<img src="https://techoctave.com/static/thomas-kilmann-conflict-mode-instrument.jpg" alt="Thomas Kilmann Conflict Mode Instrument" width="100%"/>
+<img src="https://techoctave.com/c7/static/thomas-kilmann-conflict-mode-instrument.jpg" alt="Thomas Kilmann Conflict Mode Instrument" width="100%"/>
 
 
 Kenneth Thomas and Ralph Kilmann's model shows us that there are actually five conflict handling strategies -- Accommodation, Avoidance, Compromise, Collaboration and Competition. And, each of these are useful in different situations. 

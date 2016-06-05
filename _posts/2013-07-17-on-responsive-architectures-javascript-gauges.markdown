@@ -6,7 +6,7 @@ date: 2013-07-17 12:00:18
 permalink: /c7/posts/119-on-responsive-architectures-javascript-gauges
 ---
 
-<img src="https://techoctave.com/static/samurai.1.gif" alt="Responsive Architecture"/>
+<img src="https://techoctave.com/c7/static/samurai.1.gif" alt="Responsive Architecture"/>
 
 Use Responsive Web Design breakpoints and each Gauge's refresh method to build the right [JavaScript Gauge][1] for the right resolution.
 

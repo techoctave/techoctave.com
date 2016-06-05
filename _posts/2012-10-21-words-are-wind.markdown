@@ -6,7 +6,7 @@ date: 2012-10-21 05:21:15
 permalink: /c7/posts/92-words-are-wind
 ---
 
-<img src="https://techoctave.com/static/javascript-dont-thread-on-me.png" alt="JavaScript: Don't Thread On Me"/>
+<img src="https://techoctave.com/c7/static/javascript-dont-thread-on-me.png" alt="JavaScript: Don't Thread On Me"/>
 
 I love JavaScript. [The Future is JavaScript][1] - I believe this. They say figure out what you love and do that for the rest of your life. For some time now, I've been past the infatuation stage. With JavaScript, it is now a love affair run deep. Others share my passion as well.
 

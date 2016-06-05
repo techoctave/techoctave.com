@@ -9,7 +9,7 @@ permalink: /marketing-for-geeks/
 
 ####The Secrets of Making that First Sale.
 
-<img src="https://techoctave.com/static/marketing-for-geeks-front-and-back-cover.png" alt="Marketing for Geeks - Pragmatic Marketing for Information Age Starters"/>
+<img src="https://techoctave.com/c7/static/marketing-for-geeks-front-and-back-cover.png" alt="Marketing for Geeks - Pragmatic Marketing for Information Age Starters"/>
 
 <h3 class="buy"><a href="https://sites.fastspring.com/techoctave/instant/marketingforgeeks">Buy Now</a></h3>
 

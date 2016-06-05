@@ -6,7 +6,7 @@ date: 2012-08-27 09:11:59
 permalink: /c7/posts/87-columbus-code-camp-2012
 ---
 
-<img src="https://techoctave.com/static/standing_together.jpg" width="520" alt="2012 Olympics: United States and Iran"/>
+<img src="https://techoctave.com/c7/static/standing_together.jpg" width="520" alt="2012 Olympics: United States and Iran"/>
 
 Our lives are not our own. We are bound to others - past and present. And by each crime and every kindness, we birth our future.
 

@@ -6,7 +6,7 @@ date: 2013-04-21 08:40:42
 permalink: /c7/posts/110-modern-javascript-mvc-with-backbone-js
 ---
 
-<img src="https://techoctave.com/static/gangnam-style-feature.jpg" width=520 alt="Modern JavaScript MVC With Backbone.js"/>
+<img src="https://techoctave.com/c7/static/gangnam-style-feature.jpg" width=520 alt="Modern JavaScript MVC With Backbone.js"/>
 
 Modern JavaScript and HTML5 applications depend on a consistent RESTful JSON API. However, consistency is not always an option when you don't control the server API.
 

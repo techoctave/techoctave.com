@@ -8,7 +8,7 @@ permalink: /c7/posts/47-marketing-for-geeks-pragmatic-marketing-for-information-
 
 I am stronger because you are stronger. I wrote [Marketing for Geeks][1] for Starters like me everywhere because I truly believe this.
 
-<a href="http://techoctave.com/marketing-for-geeks"><img src="https://techoctave.com/static/marketing-for-geeks-front-and-back-cover.png" alt="Marketing for Geeks - Pragmatic Marketing for Information Age Starters"/></a>
+<a href="http://techoctave.com/marketing-for-geeks"><img src="https://techoctave.com/c7/static/marketing-for-geeks-front-and-back-cover.png" alt="Marketing for Geeks - Pragmatic Marketing for Information Age Starters"/></a>
 
 I believe this so much that I refuse to support people and institutions that turn a deaf ear to this truth. Without hesitation I turn my back to colleagues who keep knowledge to themselves.
 
@@ -80,7 +80,7 @@ Our inheritance may have been squandered, but we can take this country back one 
 
 
   [1]: http://techoctave.com/marketing-for-geeks
-  [2]: https://techoctave.com/static/marketing-for-geeks-front-and-back-cover.png
+  [2]: https://techoctave.com/c7/static/marketing-for-geeks-front-and-back-cover.png
   [3]: http://techoctave.com/marketing-for-geeks
   [4]: http://techoctave.com/marketing-for-geeks
   [5]: http://techoctave.com/marketing-for-geeks

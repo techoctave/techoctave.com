@@ -8,7 +8,7 @@ permalink: /c7/posts/133-javascript-flight-gauges
 
 We don't know where most developers start, but this is where we start:
 
-<img src="https://techoctave.com/static/artificial_horizon_gauge.png" alt="Artificial Horizon Attitude Indicator Gauge Concept JavaScript"/>
+<img src="https://techoctave.com/c7/static/artificial_horizon_gauge.png" alt="Artificial Horizon Attitude Indicator Gauge Concept JavaScript"/>
 
 *Artificial Horizon Concept - December 2012*
 

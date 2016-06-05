@@ -6,7 +6,7 @@ date: 2013-11-12 12:33:24
 permalink: /c7/posts/130-save-raphael-svg-chart-as-image
 ---
 
-<img src="https://techoctave.com/static/svg-to-png.png" alt="Save Raphael SVG As Image"/>
+<img src="https://techoctave.com/c7/static/svg-to-png.png" alt="Save Raphael SVG As Image"/>
 
 We work with the best developers in the craft. They push the envelope. They make the right decisions. Do the right work and [ship][1].
 

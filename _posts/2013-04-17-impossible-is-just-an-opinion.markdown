@@ -6,7 +6,7 @@ date: 2013-04-17 10:38:48
 permalink: /c7/posts/109-impossible-is-just-an-opinion
 ---
 
-<img src="https://techoctave.com/static/javascript-raphael-jquery-gauge.png" width="100%" alt="javascript gauge" />
+<img src="https://techoctave.com/c7/static/javascript-raphael-jquery-gauge.png" width="100%" alt="javascript gauge" />
 *Version 1.0 of TechOctave [JavaScript Gauges][2], Circa Early 2010*
 
 

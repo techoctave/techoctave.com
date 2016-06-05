@@ -6,7 +6,7 @@ date: 2013-04-15 03:48:12
 permalink: /c7/posts/108-techoctave-gauges-2-2-8-unlimited-ranges-precision-values
 ---
 
-<img src="https://techoctave.com/static/multiple-ranges-javascript-gauges-raphael-svg.png"/>
+<img src="https://techoctave.com/c7/static/multiple-ranges-javascript-gauges-raphael-svg.png"/>
 
 The latest version of our [JavaScript Gauges][1] Suite is here! :)
 

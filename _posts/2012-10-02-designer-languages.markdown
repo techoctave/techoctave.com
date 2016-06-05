@@ -6,7 +6,7 @@ date: 2012-10-02 02:22:25
 permalink: /c7/posts/90-designer-languages
 ---
 
-<img src="https://techoctave.com/static/designer-languages.png" alt="Designer Languages"/>
+<img src="https://techoctave.com/c7/static/designer-languages.png" alt="Designer Languages"/>
 
 Designer Language: a programming language created to avoid the perceived shortcomings of an existing language, usually by creating a superset of the existing language by modifying syntax or modifying programming constructs.
 
@@ -34,7 +34,7 @@ Designer languages are the forest fires of the computer science world. And it wo
 
 ###Designer Languages: The JavaScript Frontier
 
-<img src="https://techoctave.com/static/mona-lisa-javascript-designer-language-Comparison.jpg" alt="Designer Languages: TypeScript, CoffeeScript, GWT and Dart"/>
+<img src="https://techoctave.com/c7/static/mona-lisa-javascript-designer-language-Comparison.jpg" alt="Designer Languages: TypeScript, CoffeeScript, GWT and Dart"/>
 
 
 ####CoffeeScript

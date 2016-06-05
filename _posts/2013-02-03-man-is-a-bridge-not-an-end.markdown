@@ -8,7 +8,7 @@ permalink: /c7/posts/101-man-is-a-bridge-not-an-end
 
 What you are and what you could be are two different sides of the same equation. Too much abstract thought is wasted on pointless comparison between what is and what could be.
 
-<img src="https://techoctave.com/static/pont_du_gard.jpg" width="520"/>
+<img src="https://techoctave.com/c7/static/pont_du_gard.jpg" width="520"/>
 Pont du Gard: A masterpiece of Roman aqueduct engineering.
 
 As if individual progress is somehow a combination of snapshots in time. Therein lies the greatest of fallacies...Social porn at its best.

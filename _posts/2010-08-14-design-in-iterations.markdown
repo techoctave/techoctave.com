@@ -28,7 +28,7 @@ So, when you do begin designing your search box, don't forget to make it a [fun 
 
 
   [1]: https://techoctave.com
-  [2]: https://techoctave.com/static/c7_searchbox_intial.png
-  [3]: https://techoctave.com/static/c7_searchbox_rework.png
-  [4]: https://techoctave.com/static/c7_searchbox_final.png
+  [2]: https://techoctave.com/c7/static/c7_searchbox_intial.png
+  [3]: https://techoctave.com/c7/static/c7_searchbox_rework.png
+  [4]: https://techoctave.com/c7/static/c7_searchbox_final.png
   [5]: https://techoctave.com/posts/1-hello-world

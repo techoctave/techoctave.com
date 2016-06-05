@@ -6,7 +6,7 @@ date: 2013-07-31 12:43:19
 permalink: /c7/posts/122-code-the-pit-of-hell
 ---
 
-<img src="https://techoctave.com/static/psd.rb.png" alt="Ruby Photoshop Parser"/>
+<img src="https://techoctave.com/c7/static/psd.rb.png" alt="Ruby Photoshop Parser"/>
 
 The fine folks over at LayerVault have released [PSD.rb][1], allowing Ruby developers to easily work with Photoshop documents.
 

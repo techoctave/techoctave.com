@@ -43,5 +43,5 @@ So, think again about submitting your site to Google. Google can certainly find 
  
 
 
-  [1]: https://techoctave.com/static/google_services.jpg
+  [1]: https://techoctave.com/c7/static/google_services.jpg
   [2]: https://techoctave.com/posts/6-embed-youtube-videos-with-xhtml-strict-code

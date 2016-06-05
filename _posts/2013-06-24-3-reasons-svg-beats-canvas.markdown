@@ -6,7 +6,7 @@ date: 2013-06-24 12:43:16
 permalink: /c7/posts/116-3-reasons-svg-beats-canvas
 ---
 
-<img src="https://techoctave.com/static/vader-vs-batman-things-just-got-real.png" alt="3 Reasons SVG Beats Canvas"/>
+<img src="https://techoctave.com/c7/static/vader-vs-batman-things-just-got-real.png" alt="3 Reasons SVG Beats Canvas"/>
 
 We often get asked, "Should we use SVG or Canvas?" The consensus is pretty clear, use SVG.
 

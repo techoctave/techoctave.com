@@ -34,7 +34,7 @@ We trust Tweetlr everyday to help us do just that. And we're betting that you wi
 
 I joke about Buddhists and Ninjas and High-Priestesses - You do know I was joking right? But, believe it or not, Tweetlr was inspired by the beauty and rolling enclaves of the real [Machu Picchu][4]:
 
-<img src="https://techoctave.com/static/machu_picchu.jpg" alt="Machu Picchu - Tweetlr - Twitter Management Tool"/>
+<img src="https://techoctave.com/c7/static/machu_picchu.jpg" alt="Machu Picchu - Tweetlr - Twitter Management Tool"/>
 
 The idea is we wanted to be immersed in such  a way as to be inspired during the search process. Yet, have the tools and functionality to actually get things done.
 

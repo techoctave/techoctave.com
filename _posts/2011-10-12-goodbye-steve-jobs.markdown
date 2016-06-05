@@ -6,7 +6,7 @@ date: 2011-10-12 02:52:33
 permalink: /c7/posts/59-goodbye-steve-jobs
 ---
 
-<img width="100%" alt="Steve Jobs 1955-2011 - Apple" src="https://techoctave.com/static/hero.png"/>
+<img width="100%" alt="Steve Jobs 1955-2011 - Apple" src="https://techoctave.com/c7/static/hero.png"/>
 
 *It appears, a wonderful thing to those who have considered the matter, that all men, or the larger number of them, who have performed great deeds in the world, and excelled all others in their day, have had their birth and beginning in baseness and obscurity.* -Nicolo Machiavelli, [The life of Castruccio Castracani of Lucca][1]
 
@@ -60,7 +60,7 @@ eulogy.farewell();
 
 Rest in peace Steve Jobs. May fate love you in the next life as much as she loved you in this. Say hello to Biggie and Tupac for me.
 
-<img style="margin-left: 50px;" alt="Steve Jobs 1955-2011 - Pixar" src="https://techoctave.com/static/pixargoodbye.png"/>
+<img style="margin-left: 50px;" alt="Steve Jobs 1955-2011 - Pixar" src="https://techoctave.com/c7/static/pixargoodbye.png"/>
 
 
   [1]: http://ebooks.adelaide.edu.au/m/machiavelli/niccolo/m149c/

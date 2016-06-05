@@ -304,7 +304,7 @@ What do you get when you mix Ruby, Jedi and Mixins? A helluva good time! Join th
   [1]: http://techoctave.com/marketing-for-geeks
   [2]: http://starwars.wikia.com/wiki/Lightsaber_combat
   [3]: http://datamapper.org/
-  [4]: https://techoctave.com/static/jedi.zip
+  [4]: https://techoctave.com/c7/static/jedi.zip
 
 
 

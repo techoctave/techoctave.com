@@ -6,7 +6,7 @@ date: 2012-12-02 02:14:00
 permalink: /c7/posts/96-google-web-toolkit-gwt-javascript-gauges-charts
 ---
 
-<img src="https://techoctave.com/static/gwt-techoctave-gauges-charts.png" alt="Google Web Toolkit (GWT) - TechOctave Gauges and Charts Integration"/>
+<img src="https://techoctave.com/c7/static/gwt-techoctave-gauges-charts.png" alt="Google Web Toolkit (GWT) - TechOctave Gauges and Charts Integration"/>
 
 For awhile now, folks have been asking whether our [JavaScript Gauges][1] and [JavaScript Charts][2] work with Google Web Toolkit (GWT). I'm happy to say the answer is a resounding Yes.
 

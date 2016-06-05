@@ -6,7 +6,7 @@ date: 2011-12-30 01:06:17
 permalink: /c7/posts/65-prototypes-and-the-law-of-conservation-of-quality
 ---
 
-<img src="https://techoctave.com/static/column-chart-concept.png" alt="TechOctave Column Chart Concept"/>
+<img src="https://techoctave.com/c7/static/column-chart-concept.png" alt="TechOctave Column Chart Concept"/>
 
 Prototyping is hard, but good for business. It's a necessary phase between idea and product. It's the double rainbow between you and your customer. No Unicorns.
 
@@ -29,7 +29,7 @@ Prototypes should help you: 1) Get a feel for the problem domain; 2) Get somethi
 
 Our Dashboard Chart Suite has several prototypes we feel represent core functionality. For example, here are two:
 
-<img src="https://techoctave.com/static/scatter-chart-concept.png" alt="TechOctave Scatter Chart Concept"/>
+<img src="https://techoctave.com/c7/static/scatter-chart-concept.png" alt="TechOctave Scatter Chart Concept"/>
 
 Left: Scatter Chart, Right: Column Chart
 

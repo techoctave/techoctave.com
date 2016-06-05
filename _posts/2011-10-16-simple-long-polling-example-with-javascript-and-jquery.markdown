@@ -6,7 +6,7 @@ date: 2011-10-16 02:20:07
 permalink: /c7/posts/60-simple-long-polling-example-with-javascript-and-jquery
 ---
 
-<img alt="Advanced JavaScript Long Polling Techniques (Server Push Techniques)" src="https://techoctave.com/static/push.jpg"/>
+<img alt="Advanced JavaScript Long Polling Techniques (Server Push Techniques)" src="https://techoctave.com/c7/static/push.jpg"/>
 
 There are many reasons you might need to poll a web server. Recently, one of our [Dashboard Gauge Suite][1] customers needed to poll sales data from his company's data warehouse and update his executive dashboard with the fresh data.
 

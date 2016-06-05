@@ -6,7 +6,7 @@
   <link href="https://techoctave.com" />
   <link href="https://techoctave.com/atom.xml" rel="self" />
   
-  <updated>2016-06-04T22:32:27-04:00</updated>
+  <updated>2016-06-04T22:40:03-04:00</updated>
   
   <rights>Copyright 2016, TechOctave, LLC</rights>
   
@@ -53,7 +53,7 @@ Have you seen those parking spot detectors used in some mall parking garages? Th
     <entry>
       <title>Digital JavaScript Gauges</title>
       <link href="https://techoctave.com/c7/posts/134-digital-javascript-gauges" />
-      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/digital-gauges.png&quot; title=&quot;digital JavaScript gauges&quot;/&gt;&lt;/p&gt;
+      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/digital-gauges.png&quot; title=&quot;digital JavaScript gauges&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;G&#39;day Mate,&lt;/p&gt;
 
@@ -104,7 +104,7 @@ Have you seen those parking spot detectors used in some mall parking garages? Th
       <link href="https://techoctave.com/c7/posts/133-javascript-flight-gauges" />
       <summary type="html">&lt;p&gt;We don&#39;t know where most developers start, but this is where we start:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/artificial_horizon_gauge.png&quot; alt=&quot;Artificial Horizon Attitude Indicator Gauge Concept JavaScript&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/artificial_horizon_gauge.png&quot; alt=&quot;Artificial Horizon Attitude Indicator Gauge Concept JavaScript&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Artificial Horizon Concept - December 2012&lt;/em&gt;&lt;/p&gt;
 
@@ -264,7 +264,7 @@ Have you seen those parking spot detectors used in some mall parking garages? Th
     <entry>
       <title>Save Raphael SVG Chart As Image</title>
       <link href="https://techoctave.com/c7/posts/130-save-raphael-svg-chart-as-image" />
-      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/svg-to-png.png&quot; alt=&quot;Save Raphael SVG As Image&quot;/&gt;&lt;/p&gt;
+      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/svg-to-png.png&quot; alt=&quot;Save Raphael SVG As Image&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;We work with the best developers in the craft. They push the envelope. They make the right decisions. Do the right work and &lt;a href=&quot;https://techoctave.com/posts/79-never-save-anything-for-the-swim-back&quot;&gt;ship&lt;/a&gt;.&lt;/p&gt;
 
@@ -402,7 +402,7 @@ Have you seen those parking spot detectors used in some mall parking garages? Th
     <entry>
       <title>Raphael.js JavaScript Charts 1.2.4</title>
       <link href="https://techoctave.com/c7/posts/129-raphael-js-javascript-charts-1-2-4" />
-      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/techoctave-charts-gauges-api-docs.png&quot; alt=&quot;TechOctave JavaScript Charts and Gauges API Documentation.&quot;/&gt;&lt;/p&gt;
+      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/techoctave-charts-gauges-api-docs.png&quot; alt=&quot;TechOctave JavaScript Charts and Gauges API Documentation.&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;Hi Everyone - The latest version of our &lt;a href=&quot;http://techoctave.com/charts/&quot;&gt;JavaScript Charts&lt;/a&gt; Suite and &lt;a href=&quot;http://techoctave.com/gauges/&quot;&gt;JavaScript Gauges&lt;/a&gt; Suite is here! :)&lt;/p&gt;
 
@@ -412,7 +412,7 @@ Have you seen those parking spot detectors used in some mall parking garages? Th
 
 &lt;p&gt;Also, this release fixes a major bug limiting the number of Columns and Bars on the ColumnChart and BarChart - along with misaligned label positions. See, example of bug report showing shifting labels and bars:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/charts-shifting-bug-screenshot.png&quot; alt=&quot;Charts shifting bug screenshot.&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/charts-shifting-bug-screenshot.png&quot; alt=&quot;Charts shifting bug screenshot.&quot;/&gt;&lt;/p&gt;
 
 &lt;h3&gt;Release Notes: 1.2.4&lt;/h3&gt;
 
@@ -467,21 +467,21 @@ Have you seen those parking spot detectors used in some mall parking garages? Th
 
 &lt;p&gt;The club and spear gave early mankind dominance over its  Neanderthal competition. The chariot dominated the Nile, transforming Nubian Kings to Pharaohs. From the bosom of Greece to the steppes of Asia, the Macedonian Phalanx took Alexander The Great from boy King to Ruler of the Known World:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/macedonian-phalanx.jpg&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/macedonian-phalanx.jpg&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;The Roman Legion turned an upstart King in the foothills of Italy into the greatest super power the ancient world had ever known. Not many generations later, the world hailed Caesar from all its four corners:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/roman-legion.jpg&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/roman-legion.jpg&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;Military superiority spreads progress at the civilization level.  Indeed, it brings change to the very face of a people. History is steeped in such lessons. Mankind the progeny of the teacher.&lt;/p&gt;
 
 &lt;p&gt;The Bowman on horseback turned a young Temujin from orphan to the great Genghis Khan, allowing him to conquer every stretch of territory from China to the eastern flanks of Europe. To this day, I dare you to travel to Kazakhstan and not see the face of Khan in all you survey:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/mongol-horde.jpg&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/mongol-horde.jpg&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Guns, Germs and Steel turned the Royal Family of Europe from Kings to CEOs - overnight successes. And from people to property for those who hadn&#39;t the good sense to keep pace:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/spanish-conquistadors.jpg&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/spanish-conquistadors.jpg&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;And here we are...&lt;/p&gt;
 
@@ -504,18 +504,18 @@ Have you seen those parking spot detectors used in some mall parking garages? Th
 &lt;p&gt;But how would the first generation TALOS system look? Here&#39;s a potential imagining from the BLR VFX Team that brought us Keloid:&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;The Mech Suit:&lt;/strong&gt;
-&lt;img src=&quot;https://techoctave.com/static/mech-1.jpg&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://techoctave.com/c7/static/mech-1.jpg&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/mech-2.jpg&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/mech-2.jpg&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/mech-3.jpg&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/mech-3.jpg&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;The Super Solider:&lt;/strong&gt;
-&lt;img src=&quot;https://techoctave.com/static/super-soldier-1.jpg&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://techoctave.com/c7/static/super-soldier-1.jpg&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/super-soldier-2.jpg&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/super-soldier-2.jpg&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/super-soldier-3.jpg&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/super-soldier-3.jpg&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;How do you think the TALOS system will look?&lt;/p&gt;
 </summary>
@@ -529,7 +529,7 @@ Have you seen those parking spot detectors used in some mall parking garages? Th
     <entry>
       <title>But For Stack Overflow</title>
       <link href="https://techoctave.com/c7/posts/127-but-for-stack-overflow" />
-      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/msdn-library-box.png&quot; alt=&quot;MSDN Subscription Library&quot;/&gt;&lt;/p&gt;
+      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/msdn-library-box.png&quot; alt=&quot;MSDN Subscription Library&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;Sometimes I wonder where we would be without &lt;a href=&quot;http://stackoverflow.com/&quot;&gt;Stack Overflow&lt;/a&gt;. I also wonder how many truly remember the days before it existed. People see old, poorly designed software forums and think, &quot;Ick!&quot; Today, you&#39;re not one of those people. Today, you&#39;re one of the people who remember when there weren&#39;t any software forums at all.&lt;/p&gt;
 
@@ -561,7 +561,7 @@ Have you seen those parking spot detectors used in some mall parking garages? Th
 
 &lt;p&gt;Before Stack Overflow, documentation wasn&#39;t born of real world scenarios and pain points. So there was never an answer to the question &quot;you&quot; had. Just some brisk points on what &quot;some guy&quot; thought was a cool exposition. Or some vague reference to some static documentarian to check &quot;over there&quot;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/stackoverflow.png&quot; alt=&quot;But FOr Stack Overflow&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/stackoverflow.png&quot; alt=&quot;But FOr Stack Overflow&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;Real world examples. Real world answers. Accessible and freely distributed. That changed everything. In fact, I fundamentally believe that changed our entire profession all together.&lt;/p&gt;
 
@@ -601,7 +601,7 @@ Have you seen those parking spot detectors used in some mall parking garages? Th
     <entry>
       <title>Cool Error, Bro</title>
       <link href="https://techoctave.com/c7/posts/125-cool-error-bro" />
-      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/cool-story-bro-meme.jpg&quot;/&gt;&lt;/p&gt;
+      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/cool-story-bro-meme.jpg&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;Some error messages simply need no introduction:&lt;/p&gt;
 
@@ -639,7 +639,7 @@ Have you seen those parking spot detectors used in some mall parking garages? Th
 
 &lt;p&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/code-ninja.jpg&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/code-ninja.jpg&quot;/&gt;&lt;/p&gt;
 </summary>
       <id>https://techoctave.com/c7/posts/123-ninjas-considered-harmful</id>
       <updated>2013-08-31T03:20:30-04:00</updated>
@@ -651,7 +651,7 @@ Have you seen those parking spot detectors used in some mall parking garages? Th
     <entry>
       <title>Code &amp; The Pit of Hell</title>
       <link href="https://techoctave.com/c7/posts/122-code-the-pit-of-hell" />
-      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/psd.rb.png&quot; alt=&quot;Ruby Photoshop Parser&quot;/&gt;&lt;/p&gt;
+      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/psd.rb.png&quot; alt=&quot;Ruby Photoshop Parser&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;The fine folks over at LayerVault have released &lt;a href=&quot;http://cosmos.layervault.com/psdrb.html&quot;&gt;PSD.rb&lt;/a&gt;, allowing Ruby developers to easily work with Photoshop documents.&lt;/p&gt;
 
@@ -725,7 +725,7 @@ Have you seen those parking spot detectors used in some mall parking garages? Th
     <entry>
       <title>Welcome to someday.</title>
       <link href="https://techoctave.com/c7/posts/121-welcome-to-someday" />
-      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/welcome-to-someday.jpg&quot; alt=&quot;Someday - CompuServe&quot;/&gt;&lt;/p&gt;
+      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/welcome-to-someday.jpg&quot; alt=&quot;Someday - CompuServe&quot;/&gt;&lt;/p&gt;
 </summary>
       <id>https://techoctave.com/c7/posts/121-welcome-to-someday</id>
       <updated>2013-07-26T08:28:31-04:00</updated>
@@ -790,7 +790,7 @@ Have you seen those parking spot detectors used in some mall parking garages? Th
     <entry>
       <title>On Responsive Architectures &amp; JavaScript Gauges</title>
       <link href="https://techoctave.com/c7/posts/119-on-responsive-architectures-javascript-gauges" />
-      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/samurai.1.gif&quot; alt=&quot;Responsive Architecture&quot;/&gt;&lt;/p&gt;
+      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/samurai.1.gif&quot; alt=&quot;Responsive Architecture&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;Use Responsive Web Design breakpoints and each Gauge&#39;s refresh method to build the right &lt;a href=&quot;http://techoctave.com/gauges/&quot;&gt;JavaScript Gauge&lt;/a&gt; for the right resolution.&lt;/p&gt;
 
@@ -872,7 +872,7 @@ Have you seen those parking spot detectors used in some mall parking garages? Th
     <entry>
       <title>Style SVG Elements With SVG Attributes</title>
       <link href="https://techoctave.com/c7/posts/117-style-svg-elements-with-svg-attributes" />
-      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/designer-langauges-steampunk.jpg&quot; alt=&quot;Should we style SVG elements with CSS?&quot;/&gt;&lt;/p&gt;
+      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/designer-langauges-steampunk.jpg&quot; alt=&quot;Should we style SVG elements with CSS?&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;Best practice is to style SVG elements using SVG attributes. This approach strengthens the separation between application View and application Components. It also adheres to the &lt;a href=&quot;http://www.w3.org/TR/SVG/&quot;&gt;W3C SVG Spec&lt;/a&gt;, thereby providing the necessary stability required for cross-browser compatibility.&lt;/p&gt;
 
@@ -917,7 +917,7 @@ Have you seen those parking spot detectors used in some mall parking garages? Th
     <entry>
       <title>3 Reasons SVG Beats Canvas</title>
       <link href="https://techoctave.com/c7/posts/116-3-reasons-svg-beats-canvas" />
-      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/vader-vs-batman-things-just-got-real.png&quot; alt=&quot;3 Reasons SVG Beats Canvas&quot;/&gt;&lt;/p&gt;
+      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/vader-vs-batman-things-just-got-real.png&quot; alt=&quot;3 Reasons SVG Beats Canvas&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;We often get asked, &quot;Should we use SVG or Canvas?&quot; The consensus is pretty clear, use SVG.&lt;/p&gt;
 
@@ -953,7 +953,7 @@ Have you seen those parking spot detectors used in some mall parking garages? Th
     <entry>
       <title>JavaScript is the Target Language for the Web and that&#39;s OK.</title>
       <link href="https://techoctave.com/c7/posts/115-javascript-is-the-target-language-for-the-web-and-that-s-ok" />
-      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/unreal-engine-epic-citadel-mozilla.jpg&quot; alt=&quot;Asm.js is for game developers, not web developers.&quot; title=&quot;Asm.js is for game developers, not web developers.&quot;/&gt;&lt;/p&gt;
+      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/unreal-engine-epic-citadel-mozilla.jpg&quot; alt=&quot;Asm.js is for game developers, not web developers.&quot; title=&quot;Asm.js is for game developers, not web developers.&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;JavaScript is indeed a target language. Time and good sense has shown us it is a &lt;a href=&quot;https://techoctave.com/posts/102-the-only-higher-level-than-javascript-is-god-s-word&quot;&gt;high-level language&lt;/a&gt;, so far removed from either low-level or assembly. Yet, it is a target language non-the-less.&lt;/p&gt;
 
@@ -969,7 +969,7 @@ Have you seen those parking spot detectors used in some mall parking garages? Th
 
 &lt;p&gt;In fact, &lt;a href=&quot;http://www.unrealengine.com/html5_faq/&quot;&gt;game developers target JavaScript&lt;/a&gt; because that&#39;s the &lt;u&gt;ONLY&lt;/u&gt; way they can access OpenGL:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/asmjs-compilation-execution-pipeline.jpg&quot; alt=&quot;Game developers target JavaScript that is the only way they can access WebGL via HTML5.&quot; title=&quot;Game developers target JavaScript that is the only way they can access WebGL via HTML5.&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/asmjs-compilation-execution-pipeline.jpg&quot; alt=&quot;Game developers target JavaScript that is the only way they can access WebGL via HTML5.&quot; title=&quot;Game developers target JavaScript that is the only way they can access WebGL via HTML5.&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;But for WebGL, game developers would have no use for JavaScript. Instead of three (3) layers between game developers and WebGL/OpenGL, what if there were zero (0)? Think how much faster the games would be. In fact, there would be no need for asm.js at all.&lt;/p&gt;
 
@@ -1125,7 +1125,7 @@ Have you seen those parking spot detectors used in some mall parking garages? Th
     <entry>
       <title>Conflict Management</title>
       <link href="https://techoctave.com/c7/posts/112-conflict-management" />
-      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/conflict-words.jpg&quot;Conflict definition.&quot; alt=&quot;Conflict Definition&quot; width=&quot;100%&quot;/&gt;&lt;/p&gt;
+      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/conflict-words.jpg&quot;Conflict definition.&quot; alt=&quot;Conflict Definition&quot; width=&quot;100%&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;Many are uncomfortable with conflict. When faced with conflict, they are either crippled by it or don&#39;t know the best approach to use to transcend it.&lt;/p&gt;
 
@@ -1137,13 +1137,13 @@ Have you seen those parking spot detectors used in some mall parking garages? Th
 
 &lt;p&gt;While one may think that conflict always leads to a win/lose situation where someone wins while the other loses. This way of managing conflict is very competitive in nature and is not always the best approach.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/you-lose-i-win.jpg&quot; alt=&quot;I Win. You Lose.&quot; width=&quot;100%&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/you-lose-i-win.jpg&quot; alt=&quot;I Win. You Lose.&quot; width=&quot;100%&quot;/&gt;&lt;/p&gt;
 
 &lt;h3&gt;Conflict Management Strategies&lt;/h3&gt;
 
 &lt;p&gt;I recently came across the Thomas-Kilmann Conflict Mode Instrument which serves as an interesting model for handling conflict.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/thomas-kilmann-conflict-mode-instrument.jpg&quot; alt=&quot;Thomas Kilmann Conflict Mode Instrument&quot; width=&quot;100%&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/thomas-kilmann-conflict-mode-instrument.jpg&quot; alt=&quot;Thomas Kilmann Conflict Mode Instrument&quot; width=&quot;100%&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;Kenneth Thomas and Ralph Kilmann&#39;s model shows us that there are actually five conflict handling strategies -- Accommodation, Avoidance, Compromise, Collaboration and Competition. And, each of these are useful in different situations.&lt;/p&gt;
 
@@ -1204,7 +1204,7 @@ May the conflicts you face lead to your growth and opportunities to positively t
     <entry>
       <title>Modern JavaScript MVC With Backbone.js</title>
       <link href="https://techoctave.com/c7/posts/110-modern-javascript-mvc-with-backbone-js" />
-      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/gangnam-style-feature.jpg&quot; width=520 alt=&quot;Modern JavaScript MVC With Backbone.js&quot;/&gt;&lt;/p&gt;
+      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/gangnam-style-feature.jpg&quot; width=520 alt=&quot;Modern JavaScript MVC With Backbone.js&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;Modern JavaScript and HTML5 applications depend on a consistent RESTful JSON API. However, consistency is not always an option when you don&#39;t control the server API.&lt;/p&gt;
 
@@ -1348,7 +1348,7 @@ May the conflicts you face lead to your growth and opportunities to positively t
     <entry>
       <title>Impossible is just an opinion</title>
       <link href="https://techoctave.com/c7/posts/109-impossible-is-just-an-opinion" />
-      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/javascript-raphael-jquery-gauge.png&quot; width=&quot;100%&quot; alt=&quot;javascript gauge&quot; /&gt;
+      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/javascript-raphael-jquery-gauge.png&quot; width=&quot;100%&quot; alt=&quot;javascript gauge&quot; /&gt;
 &lt;em&gt;Version 1.0 of TechOctave &lt;a href=&quot;http://techoctave.com/gauges/&quot;&gt;JavaScript Gauges&lt;/a&gt;, Circa Early 2010&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;We&#39;re gearing up to launch our suite of &lt;a href=&quot;http://techoctave.com/simulation/&quot;&gt;JavaScript Flight Gauges&lt;/a&gt;. Here&#39;s a look back on how we got where we are today. Enjoy!&lt;/em&gt;&lt;/p&gt;
@@ -1492,7 +1492,7 @@ May the conflicts you face lead to your growth and opportunities to positively t
     <entry>
       <title>TechOctave Gauges 2.2.8: Unlimited Ranges, Precision Values</title>
       <link href="https://techoctave.com/c7/posts/108-techoctave-gauges-2-2-8-unlimited-ranges-precision-values" />
-      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/multiple-ranges-javascript-gauges-raphael-svg.png&quot;/&gt;&lt;/p&gt;
+      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/multiple-ranges-javascript-gauges-raphael-svg.png&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;The latest version of our &lt;a href=&quot;http://techoctave.com/gauges/&quot;&gt;JavaScript Gauges&lt;/a&gt; Suite is here! :)&lt;/p&gt;
 
@@ -1561,23 +1561,23 @@ May the conflicts you face lead to your growth and opportunities to positively t
     <entry>
       <title>We Live In The Future</title>
       <link href="https://techoctave.com/c7/posts/106-we-live-in-the-future" />
-      <summary type="html">&lt;p&gt; &lt;img src=&quot;https://techoctave.com/static/bell1.jpg&quot; title=&quot;Bell Labs 1970s&quot;/&gt;&lt;/p&gt;
+      <summary type="html">&lt;p&gt; &lt;img src=&quot;https://techoctave.com/c7/static/bell1.jpg&quot; title=&quot;Bell Labs 1970s&quot;/&gt;&lt;/p&gt;
 
-&lt;p&gt; &lt;img src=&quot;https://techoctave.com/static/bell2.jpg&quot; title=&quot;Bell Labs 1970s&quot;/&gt;&lt;/p&gt;
+&lt;p&gt; &lt;img src=&quot;https://techoctave.com/c7/static/bell2.jpg&quot; title=&quot;Bell Labs 1970s&quot;/&gt;&lt;/p&gt;
 
-&lt;p&gt; &lt;img src=&quot;https://techoctave.com/static/bell3.jpg&quot; title=&quot;Bell Labs 1970s&quot;/&gt;&lt;/p&gt;
+&lt;p&gt; &lt;img src=&quot;https://techoctave.com/c7/static/bell3.jpg&quot; title=&quot;Bell Labs 1970s&quot;/&gt;&lt;/p&gt;
 
-&lt;p&gt; &lt;img src=&quot;https://techoctave.com/static/bell4.jpg&quot; title=&quot;Bell Labs 1970s&quot;/&gt;&lt;/p&gt;
+&lt;p&gt; &lt;img src=&quot;https://techoctave.com/c7/static/bell4.jpg&quot; title=&quot;Bell Labs 1970s&quot;/&gt;&lt;/p&gt;
 
-&lt;p&gt; &lt;img src=&quot;https://techoctave.com/static/bell5.jpg&quot; title=&quot;Bell Labs 1970s&quot;/&gt;&lt;/p&gt;
+&lt;p&gt; &lt;img src=&quot;https://techoctave.com/c7/static/bell5.jpg&quot; title=&quot;Bell Labs 1970s&quot;/&gt;&lt;/p&gt;
 
-&lt;p&gt; &lt;img src=&quot;https://techoctave.com/static/bell6.jpg&quot; title=&quot;Bell Labs 1970s&quot;/&gt;&lt;/p&gt;
+&lt;p&gt; &lt;img src=&quot;https://techoctave.com/c7/static/bell6.jpg&quot; title=&quot;Bell Labs 1970s&quot;/&gt;&lt;/p&gt;
 
-&lt;p&gt; &lt;img src=&quot;https://techoctave.com/static/bell7.jpg&quot; title=&quot;Bell Labs 1970s&quot;/&gt;&lt;/p&gt;
+&lt;p&gt; &lt;img src=&quot;https://techoctave.com/c7/static/bell7.jpg&quot; title=&quot;Bell Labs 1970s&quot;/&gt;&lt;/p&gt;
 
-&lt;p&gt; &lt;img src=&quot;https://techoctave.com/static/bell8.jpg&quot; title=&quot;Bell Labs 1970s&quot;/&gt;&lt;/p&gt;
+&lt;p&gt; &lt;img src=&quot;https://techoctave.com/c7/static/bell8.jpg&quot; title=&quot;Bell Labs 1970s&quot;/&gt;&lt;/p&gt;
 
-&lt;p&gt; &lt;img src=&quot;https://techoctave.com/static/bell9.jpg&quot; title=&quot;Bell Labs 1970s&quot;/&gt;&lt;/p&gt;
+&lt;p&gt; &lt;img src=&quot;https://techoctave.com/c7/static/bell9.jpg&quot; title=&quot;Bell Labs 1970s&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;Bell Labs Circa 1970s&lt;/p&gt;
 </summary>
@@ -1622,7 +1622,7 @@ May the conflicts you face lead to your growth and opportunities to positively t
     <entry>
       <title>This is not about Google Reader</title>
       <link href="https://techoctave.com/c7/posts/104-this-is-not-about-google-reader" />
-      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/google_reader_rip.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/google_reader_rip.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I don&#39;t use &lt;a href=&quot;https://reader.google.com&quot;&gt;Google Reader&lt;/a&gt;. I find the UI brings very little excitement. And the UX (ugh)...Unread post counts make me feel like I have chores to complete, a never ending todo list. I have a large enough todo list already - believe me.&lt;/p&gt;
 
@@ -1697,7 +1697,7 @@ May the conflicts you face lead to your growth and opportunities to positively t
     <entry>
       <title>The Only Higher Level Than JavaScript Is God&#39;s Word.</title>
       <link href="https://techoctave.com/c7/posts/102-the-only-higher-level-than-javascript-is-god-s-word" />
-      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/javascript-is-not-low-level.jpg&quot; width=&quot;100%&quot;/&gt;&lt;/p&gt;
+      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/javascript-is-not-low-level.jpg&quot; width=&quot;100%&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;I&#39;m so sick and tired of people describing JavaScript as &quot;low-level&quot;. If you&#39;re not &quot;MOV AL, 61h&quot; all damn day, you&#39;re not doing low-level programming; so give it a rest.&lt;/p&gt;
 
@@ -1781,7 +1781,7 @@ May the conflicts you face lead to your growth and opportunities to positively t
 
 &lt;p&gt;It&#39;s just stinking wrong. Absolutely, unequivocally wrong:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/say-low-level-one-more-goddamn-time.jpg&quot; width=&quot;520&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/say-low-level-one-more-goddamn-time.jpg&quot; width=&quot;520&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;In computer science, a high-level programming language is a programming language with strong abstraction from the details of the computer and it&#39;s machine code.&lt;/p&gt;
 
@@ -1889,7 +1889,7 @@ May the conflicts you face lead to your growth and opportunities to positively t
       <link href="https://techoctave.com/c7/posts/101-man-is-a-bridge-not-an-end" />
       <summary type="html">&lt;p&gt;What you are and what you could be are two different sides of the same equation. Too much abstract thought is wasted on pointless comparison between what is and what could be.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/pont_du_gard.jpg&quot; width=&quot;520&quot;/&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/pont_du_gard.jpg&quot; width=&quot;520&quot;/&gt;
 Pont du Gard: A masterpiece of Roman aqueduct engineering.&lt;/p&gt;
 
 &lt;p&gt;As if individual progress is somehow a combination of snapshots in time. Therein lies the greatest of fallacies...Social porn at its best.&lt;/p&gt;
@@ -1932,7 +1932,7 @@ Pont du Gard: A masterpiece of Roman aqueduct engineering.&lt;/p&gt;
     <entry>
       <title>JavaScript Radar Charts</title>
       <link href="https://techoctave.com/c7/posts/100-javascript-radar-charts" />
-      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/radarchart_product_analysis.png&quot; alt=&quot;JavaScript Radar Chart, Spider Chart, Star Chart.&quot;/&gt;&lt;/p&gt;
+      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/radarchart_product_analysis.png&quot; alt=&quot;JavaScript Radar Chart, Spider Chart, Star Chart.&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;Recently, one of our customers needed a Radar Chart for an Enterprise Resource Planning (ERP) application. They thought a Radar Chart would be a great addition to our &lt;a href=&quot;http://techoctave.com/charts/&quot;&gt;JavaScript Charts&lt;/a&gt; Suite:&lt;/p&gt;
 
@@ -1977,7 +1977,7 @@ Pont du Gard: A masterpiece of Roman aqueduct engineering.&lt;/p&gt;
 
 &lt;p&gt;For our example, we&#39;ll analyze the change in advertising spending for National ERP Solutions, Inc. (NES) over two consecutive years:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/radarchart_advertising_spending_analysis.png&quot; alt=&quot;Radar Chart advertising spending analysis.&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/radarchart_advertising_spending_analysis.png&quot; alt=&quot;Radar Chart advertising spending analysis.&quot;/&gt;&lt;/p&gt;
 
 &lt;h4&gt;Identify Key Categories or Performances&lt;/h4&gt;
 
@@ -2086,7 +2086,7 @@ Pont du Gard: A masterpiece of Roman aqueduct engineering.&lt;/p&gt;
     <entry>
       <title>Tweetlr is now Galileo</title>
       <link href="https://techoctave.com/c7/posts/99-tweetlr-is-now-galileo" />
-      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/galileo-facing-the-roman-inquisition.jpg&quot; width=&quot;100%&quot; alt=&quot;Galileo facing the Roman Inquisition&quot;/&gt;
+      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/galileo-facing-the-roman-inquisition.jpg&quot; width=&quot;100%&quot; alt=&quot;Galileo facing the Roman Inquisition&quot;/&gt;
 Galileo facing the Roman Inquisition, Cristiano Banti 1857&lt;/p&gt;
 
 &lt;p&gt;Earlier this month, we got an email from someone at &lt;a href=&quot;http://twitter.com/&quot;&gt;Twitter&lt;/a&gt; claiming people could confuse whether Tweetlr was developed by us or them. To their credit, the email was calm. No legalese, no pointed cease and desist, just a &quot;Hey, this is probably something we should talk about.&quot;&lt;/p&gt;
@@ -2188,7 +2188,7 @@ Galileo facing the Roman Inquisition, Cristiano Banti 1857&lt;/p&gt;
     <entry>
       <title>Why C++ Never Left</title>
       <link href="https://techoctave.com/c7/posts/97-why-c-never-left" />
-      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/c-never-left.png&quot; alt=&quot;C++ is transcending, transformative and foundational.&quot;/&gt;&lt;/p&gt;
+      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/c-never-left.png&quot; alt=&quot;C++ is transcending, transformative and foundational.&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;Some really good points are discussed in the article, &lt;a href=&quot;http://simpleprogrammer.com/2012/12/01/why-c-is-not-back/&quot;&gt;Why C++ Is Not &quot;Back&quot;&lt;/a&gt;. I simply disagree with the entire premise.&lt;/p&gt;
 
@@ -2249,7 +2249,7 @@ Galileo facing the Roman Inquisition, Cristiano Banti 1857&lt;/p&gt;
     <entry>
       <title>Google Web Toolkit (GWT): JavaScript Gauges &amp; Charts</title>
       <link href="https://techoctave.com/c7/posts/96-google-web-toolkit-gwt-javascript-gauges-charts" />
-      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/gwt-techoctave-gauges-charts.png&quot; alt=&quot;Google Web Toolkit (GWT) - TechOctave Gauges and Charts Integration&quot;/&gt;&lt;/p&gt;
+      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/gwt-techoctave-gauges-charts.png&quot; alt=&quot;Google Web Toolkit (GWT) - TechOctave Gauges and Charts Integration&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;For awhile now, folks have been asking whether our &lt;a href=&quot;http://techoctave.com/gauges&quot;&gt;JavaScript Gauges&lt;/a&gt; and &lt;a href=&quot;http://techoctave.com/charts&quot;&gt;JavaScript Charts&lt;/a&gt; work with Google Web Toolkit (GWT). I&#39;m happy to say the answer is a resounding Yes.&lt;/p&gt;
 
@@ -2441,7 +2441,7 @@ Galileo facing the Roman Inquisition, Cristiano Banti 1857&lt;/p&gt;
     <entry>
       <title>Simple JavaScript Inheritance Using CoffeeScript Extends</title>
       <link href="https://techoctave.com/c7/posts/93-simple-javascript-inheritance-using-coffeescript-extends" />
-      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/most-attractive-photo-on-internet.jpg&quot; alt=&quot;The Most Attractive Photo On The Internet&quot;/&gt;&lt;/p&gt;
+      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/most-attractive-photo-on-internet.jpg&quot; alt=&quot;The Most Attractive Photo On The Internet&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;I tend to &lt;a href=&quot;https://techoctave.com/posts/68-nhibernate-the-good-parts&quot;&gt;favor object composition&lt;/a&gt; over class inheritance. This is especially true when I&#39;m modeling a business process because business is about distinct people coming together to produce a particular result.&lt;/p&gt;
 
@@ -2459,7 +2459,7 @@ Galileo facing the Roman Inquisition, Cristiano Banti 1857&lt;/p&gt;
 
 &lt;p&gt;Take the power panel for example:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/power-panel-2.jpg&quot; alt=&quot;JavaScript Power Panel&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/power-panel-2.jpg&quot; alt=&quot;JavaScript Power Panel&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;In particular, let&#39;s focus on two components of the power panel:&lt;/p&gt;
 
@@ -2592,7 +2592,7 @@ Galileo facing the Roman Inquisition, Cristiano Banti 1857&lt;/p&gt;
 
 &lt;p&gt;Yet, only the Light Class methods exist:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/light-class-before-extend.png&quot; alt=&quot;JavaScript Light Class Before CoffeeScript Extends&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/light-class-before-extend.png&quot; alt=&quot;JavaScript Light Class Before CoffeeScript Extends&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;Not a complete loss. You could still write wrappers over the parent methods. After all, you still have access to _super. But, for large code bases, this can become unmaintainable. Better if child instances just magically had access to parent methods.&lt;/p&gt;
 
@@ -2648,7 +2648,7 @@ Galileo facing the Roman Inquisition, Cristiano Banti 1857&lt;/p&gt;
 
 &lt;p&gt;The result is parent methods are accessible in the child class without having to rewrite those same methods:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/light-class-after-extend.png&quot; alt=&quot;JavaScript Light Class After CoffeeScript Extends&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/light-class-after-extend.png&quot; alt=&quot;JavaScript Light Class After CoffeeScript Extends&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;This time when we count we get the four expected methods: drawTerminal, getId, setColor and getColor. Which is great because an instance of the child class can access the parent method with ease:&lt;/p&gt;
 
@@ -2678,7 +2678,7 @@ Galileo facing the Roman Inquisition, Cristiano Banti 1857&lt;/p&gt;
     <entry>
       <title>Words Are Wind</title>
       <link href="https://techoctave.com/c7/posts/92-words-are-wind" />
-      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/javascript-dont-thread-on-me.png&quot; alt=&quot;JavaScript: Don&#39;t Thread On Me&quot;/&gt;&lt;/p&gt;
+      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/javascript-dont-thread-on-me.png&quot; alt=&quot;JavaScript: Don&#39;t Thread On Me&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;I love JavaScript. &lt;a href=&quot;https://techoctave.com/posts/67-the-future-is-javascript&quot;&gt;The Future is JavaScript&lt;/a&gt; - I believe this. They say figure out what you love and do that for the rest of your life. For some time now, I&#39;ve been past the infatuation stage. With JavaScript, it is now a love affair run deep. Others share my passion as well.&lt;/p&gt;
 
@@ -2720,7 +2720,7 @@ Galileo facing the Roman Inquisition, Cristiano Banti 1857&lt;/p&gt;
 
 &lt;p&gt;Truly, what better measure of success than what attendees had to say about the event themselves:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/columbus-code-camp-2012-responses.png&quot; alt=&quot;Columbus Code Camp 2012 Feedback&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/columbus-code-camp-2012-responses.png&quot; alt=&quot;Columbus Code Camp 2012 Feedback&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;Marked with great food - Thanks &lt;a href=&quot;http://www.elarepazolatingrill.com/&quot;&gt;El Arepazo&lt;/a&gt; - and great company, Columbus Code Camp 2012 was one helluva event. Personally, I can&#39;t wait until next year...&lt;/p&gt;
 
@@ -2746,7 +2746,7 @@ Galileo facing the Roman Inquisition, Cristiano Banti 1857&lt;/p&gt;
     <entry>
       <title>Designer Languages</title>
       <link href="https://techoctave.com/c7/posts/90-designer-languages" />
-      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/designer-languages.png&quot; alt=&quot;Designer Languages&quot;/&gt;&lt;/p&gt;
+      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/designer-languages.png&quot; alt=&quot;Designer Languages&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;Designer Language: a programming language created to avoid the perceived shortcomings of an existing language, usually by creating a superset of the existing language by modifying syntax or modifying programming constructs.&lt;/p&gt;
 
@@ -2774,7 +2774,7 @@ Galileo facing the Roman Inquisition, Cristiano Banti 1857&lt;/p&gt;
 
 &lt;h3&gt;Designer Languages: The JavaScript Frontier&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/mona-lisa-javascript-designer-language-Comparison.jpg&quot; alt=&quot;Designer Languages: TypeScript, CoffeeScript, GWT and Dart&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/mona-lisa-javascript-designer-language-Comparison.jpg&quot; alt=&quot;Designer Languages: TypeScript, CoffeeScript, GWT and Dart&quot;/&gt;&lt;/p&gt;
 
 &lt;h4&gt;CoffeeScript&lt;/h4&gt;
 
@@ -2907,7 +2907,7 @@ Galileo facing the Roman Inquisition, Cristiano Banti 1857&lt;/p&gt;
 
 &lt;p&gt;This year&#39;s sessions are as action packed as they come. We&#39;ve got a little something for everybody:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://columbuscodecamp.com/presentations.html&quot;&gt;&lt;img src=&quot;https://techoctave.com/static/columbus-code-camp-2012-presentations.png&quot; alt=&quot;Columbus Code Camp 2012 Presentations&quot;/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://columbuscodecamp.com/presentations.html&quot;&gt;&lt;img src=&quot;https://techoctave.com/c7/static/columbus-code-camp-2012-presentations.png&quot; alt=&quot;Columbus Code Camp 2012 Presentations&quot;/&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;For the functional programming crowd, we have an entire section dedicated to training with Clojure. We even have a talk diving into the hottest Clojure web framework - Noir.&lt;/p&gt;
 
@@ -3142,7 +3142,7 @@ game show format -- complete with prizes.&lt;/p&gt;
     <entry>
       <title>Columbus Code Camp 2012</title>
       <link href="https://techoctave.com/c7/posts/87-columbus-code-camp-2012" />
-      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/standing_together.jpg&quot; width=&quot;520&quot; alt=&quot;2012 Olympics: United States and Iran&quot;/&gt;&lt;/p&gt;
+      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/standing_together.jpg&quot; width=&quot;520&quot; alt=&quot;2012 Olympics: United States and Iran&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;Our lives are not our own. We are bound to others - past and present. And by each crime and every kindness, we birth our future.&lt;/p&gt;
 
@@ -3287,7 +3287,7 @@ out how the strong man stumbles, or where the doer of deeds could have done them
     <entry>
       <title>Image Description Overlay using JavaScript and jQuery</title>
       <link href="https://techoctave.com/c7/posts/84-image-description-overlay-using-javascript-and-jquery" />
-      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/ferrari-california-overlay.png&quot; alt=&quot;The Ferrari California is a grand touring sports car. The car revives the ‘California’ name used for the late-1950s Ferrari 250 GT.&quot;/&gt;&lt;/p&gt;
+      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/ferrari-california-overlay.png&quot; alt=&quot;The Ferrari California is a grand touring sports car. The car revives the ‘California’ name used for the late-1950s Ferrari 250 GT.&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;We all know accessibility and SEO are important facets of web application development. Accessibility, itself, speaks to the heart of what the web is all about. Namely, the ability for people to break free from whatever bonds hold them at bay and explore a world vast and wild. I know first hand the power of that freedom.&lt;/p&gt;
 
@@ -3576,7 +3576,7 @@ It’s still JavaScript, but it&#39;s clean and beautiful. Just like that Ferrar
 
 &lt;p&gt;I joke about Buddhists and Ninjas and High-Priestesses - You do know I was joking right? But, believe it or not, Tweetlr was inspired by the beauty and rolling enclaves of the real &lt;a href=&quot;http://en.wikipedia.org/wiki/Machu_Picchu&quot;&gt;Machu Picchu&lt;/a&gt;:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/machu_picchu.jpg&quot; alt=&quot;Machu Picchu - Tweetlr - Twitter Management Tool&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/machu_picchu.jpg&quot; alt=&quot;Machu Picchu - Tweetlr - Twitter Management Tool&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;The idea is we wanted to be immersed in such  a way as to be inspired during the search process. Yet, have the tools and functionality to actually get things done.&lt;/p&gt;
 
@@ -3654,7 +3654,7 @@ It’s still JavaScript, but it&#39;s clean and beautiful. Just like that Ferrar
 
 &lt;h4&gt;Adolescence&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/gattaca-vincent-anton-first-swim.jpg&quot; width=&quot;520&quot; alt=&quot;Gattaca: Vincent and Anton&#39;s First Swim&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/gattaca-vincent-anton-first-swim.jpg&quot; width=&quot;520&quot; alt=&quot;Gattaca: Vincent and Anton&#39;s First Swim&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Vincent:&lt;/strong&gt; Our favorite game was chicken. When our parents weren&#39;t watching, we used to swim as far out as we dared. It was about who would get scared and turn back first.&lt;/p&gt;
 
@@ -3664,7 +3664,7 @@ It’s still JavaScript, but it&#39;s clean and beautiful. Just like that Ferrar
 
 &lt;h4&gt;Early Adulthood&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/gattaca-vincent-anton-second-swim.jpg&quot; width=&quot;520&quot; alt=&quot;Gattaca: Vincent and Anton&#39;s Second Swim&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/gattaca-vincent-anton-second-swim.jpg&quot; width=&quot;520&quot; alt=&quot;Gattaca: Vincent and Anton&#39;s Second Swim&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Anton:&lt;/strong&gt; Are you sure you want to do this? You know you&#39;re &#39;gonna lose.&lt;/p&gt;
 
@@ -3759,7 +3759,7 @@ Merging ideas with action. Birthing forth nascent reality. Forging steel from ma
 
 &lt;p&gt;Let&#39;s call him Hercules:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/hercules.jpg&quot; alt=&quot;Hercules&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/hercules.jpg&quot; alt=&quot;Hercules&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;Hercules created a welcoming environment where I could explore C++ and literally ask him any questions I wanted. Talk about lucking out!&lt;/p&gt;
 
@@ -3777,7 +3777,7 @@ Merging ideas with action. Birthing forth nascent reality. Forging steel from ma
 
 &lt;p&gt;Then there were the Twins. I affectionately called them &lt;a href=&quot;http://en.wikipedia.org/wiki/Cerberus&quot;&gt;Cerberus&lt;/a&gt;:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/cerberus.jpg&quot; alt=&quot;Cerberus&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/cerberus.jpg&quot; alt=&quot;Cerberus&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;The title wasn&#39;t as glamorous as Hercules. Naturally, they didn&#39;t care for it. I understood. It&#39;s not like they were guarding anything in particular. Quite the opposite actually.&lt;/p&gt;
 
@@ -3803,7 +3803,7 @@ Merging ideas with action. Birthing forth nascent reality. Forging steel from ma
 
 &lt;p&gt;I worked on my first &lt;a href=&quot;http://techoctave.com/gauges/&quot;&gt;dashboard gauge&lt;/a&gt; application with Cerberus:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/engine-dashboard-gauges.png&quot; alt=&quot;Engine Dashboard Gauges - Flight Management System&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/engine-dashboard-gauges.png&quot; alt=&quot;Engine Dashboard Gauges - Flight Management System&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;It was a Flight Management System - aptly code named Krull. Unmanaged and free C++ with an OpenGL and OpenAL core.&lt;/p&gt;
 
@@ -3839,7 +3839,7 @@ Merging ideas with action. Birthing forth nascent reality. Forging steel from ma
     <entry>
       <title>JavaScript Testing with Jasmine</title>
       <link href="https://techoctave.com/c7/posts/77-javascript-testing-with-jasmine" />
-      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/jasmine.png&quot;/&gt;&lt;/p&gt;
+      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/jasmine.png&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;Jasmine is a testing framework for JavaScript. It&#39;s framework agnostic and does not require a DOM. We use Jasmine to run both our &lt;a href=&quot;http://techoctave.com/gauges&quot;&gt;JavaScript Gauges&lt;/a&gt; and JavaScript Charts test suites:&lt;/p&gt;
 
@@ -4402,7 +4402,7 @@ Every spec must have access to an instance of the Gauge class to run.&lt;/p&gt;
     <entry>
       <title>Entourage.js - download tracking made simple for thousands</title>
       <link href="https://techoctave.com/c7/posts/69-entourage-js-download-tracking-made-simple-for-thousands" />
-      <summary type="html">&lt;p&gt;&lt;a href=&quot;http://techoctave.com/entourage/&quot;&gt;&lt;img src=&quot;https://techoctave.com/static/entourage.png&quot;/&gt;&lt;/a&gt;&lt;/p&gt;
+      <summary type="html">&lt;p&gt;&lt;a href=&quot;http://techoctave.com/entourage/&quot;&gt;&lt;img src=&quot;https://techoctave.com/c7/static/entourage.png&quot;/&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Six months ago, I set out to change the way people &lt;a href=&quot;https://techoctave.com/posts/58-entourage-js-automatic-download-tracking-for-asynchronous-google-analytics&quot;&gt;track file downloads with Google Analytics&lt;/a&gt;. Amidst great success, lo and behold, entourage.js version 1.1.2 has arrived:&lt;/p&gt;
 
@@ -4438,7 +4438,7 @@ Every spec must have access to an instance of the Gauge class to run.&lt;/p&gt;
     <entry>
       <title>NHibernate: The Good Parts</title>
       <link href="https://techoctave.com/c7/posts/68-nhibernate-the-good-parts" />
-      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/samurai.jpg&quot; width=&quot;100%&quot;/&gt;&lt;/p&gt;
+      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/samurai.jpg&quot; width=&quot;100%&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;NHibernate is an Object Relational Mapper (ORM) for the .NET Runtime. XML Mappings are still the most popular method of mapping persistent classes to their relational tables:&lt;/p&gt;
 
@@ -4622,7 +4622,7 @@ Elements of Reusable Object-Oriented Software&lt;/a&gt; by The Gang of Four - Er
 
 &lt;p&gt;The Mozilla Corporation - the fine folks behind the Firefox Web Browser - recently invested heavily in &lt;a href=&quot;https://addons.mozilla.org/en-US/developers/builder&quot;&gt;modernizing Firefox&#39;s add-on development infrastructure&lt;/a&gt; and now we have Firefox JetPack:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/mozilla-jetpack.png&quot; alt=&quot;Firefox JetPack&quot; style=&quot;margin-left: 50px;&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/mozilla-jetpack.png&quot; alt=&quot;Firefox JetPack&quot; style=&quot;margin-left: 50px;&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;With JetPack, you can create add-ons for Firefox using modern web standards like HTML5, CSS3 and JavaScript. Prior to this advancement, our only option was to use Mozilla&#39;s proprietary XML User-Interface Language or XUL.&lt;/p&gt;
 
@@ -4632,7 +4632,7 @@ Elements of Reusable Object-Oriented Software&lt;/a&gt; by The Gang of Four - Er
 
 &lt;p&gt;Google is also betting that heavy client-side JavaScript is the future. From day one, the promise of the Chrome Web Store has always been apps built on open standards (HTML5, CSS3 and JavaScript). In fact, one of our products - &lt;a href=&quot;http://techoctave.com/tweetlr&quot;&gt;Tweetlr - A Powerful Twitter CRM&lt;/a&gt; - is built on the foundations of that promise. Open standards and a monetization platform could have been enough - should have been enough. But for a company where innovation is everything, enough is never enough. Enter Native Client:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/chrome-native-client-architecture.png&quot; alt=&quot;Google Chrome Native Client&quot; style=&quot;margin-left: 50px;&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/chrome-native-client-architecture.png&quot; alt=&quot;Google Chrome Native Client&quot; style=&quot;margin-left: 50px;&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;Recently, Google released functionality in Google Chrome that gives Chrome developers the ability to &lt;a href=&quot;https://developers.google.com/native-client/overview&quot;&gt;run native C or C++ code in their Chrome web applications&lt;/a&gt;. Google calls this Native Client and promises you can run your native code on the web. Combine the back-end power of C/C++ with the responsiveness of HTML5, CSS3 and JavaScript and I believe you get a powerful architecture that doesn&#39;t even need a server.&lt;/p&gt;
 
@@ -4668,39 +4668,39 @@ Elements of Reusable Object-Oriented Software&lt;/a&gt; by The Gang of Four - Er
 
 &lt;p&gt;I absolutely love data visualization, so this experiment was a top pick for me. Yes, those are &lt;a href=&quot;http://techoctave.com/charts&quot;&gt;JavaScript Charts&lt;/a&gt; on those continents.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.chromeexperiments.com/globe&quot;&gt;&lt;img src=&quot;https://techoctave.com/static/chrome-globe-charts.png&quot; alt=&quot;WebGL Globe by Google Data Arts Team&quot; style=&quot;margin-left: 50px;&quot;/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.chromeexperiments.com/globe&quot;&gt;&lt;img src=&quot;https://techoctave.com/c7/static/chrome-globe-charts.png&quot; alt=&quot;WebGL Globe by Google Data Arts Team&quot; style=&quot;margin-left: 50px;&quot;/&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h4&gt;WebGL Bookcase by Google Data Arts Team:&lt;/h4&gt;
 
 &lt;p&gt;WebGL Bookcase is an experimental interface for the Google Books API.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.chromeexperiments.com/detail/webgl-bookcase/&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;https://techoctave.com/static/chrome-bookstore.png&quot; alt=&quot;WebGL Bookcase by Google Data Arts Team&quot; style=&quot;margin-left: 50px;&quot;/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.chromeexperiments.com/detail/webgl-bookcase/&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;https://techoctave.com/c7/static/chrome-bookstore.png&quot; alt=&quot;WebGL Bookcase by Google Data Arts Team&quot; style=&quot;margin-left: 50px;&quot;/&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.chromeexperiments.com/detail/webgl-bookcase/&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;https://techoctave.com/static/chrome-bookstore-frankenstein.png&quot; alt=&quot;WebGL Bookcase by Google Data Arts Team&quot; style=&quot;margin-left: 50px;&quot;/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.chromeexperiments.com/detail/webgl-bookcase/&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;https://techoctave.com/c7/static/chrome-bookstore-frankenstein.png&quot; alt=&quot;WebGL Bookcase by Google Data Arts Team&quot; style=&quot;margin-left: 50px;&quot;/&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h4&gt;Baroque.me by Alexander Chen:&lt;/h4&gt;
 
 &lt;p&gt;Baroque.me visualizes the first Prelude from Bach&#39;s Cello Suites. Using HTML5 and JavaScript to highlight the music&#39;s underlying structure and subtle shifts.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.chromeexperiments.com/detail/baroqueme/&quot;&gt;&lt;img src=&quot;https://techoctave.com/static/chrome-baroque.png&quot; alt=&quot;Baroque.me by Alexander Chen&quot; style=&quot;margin-left: 50px;&quot;/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.chromeexperiments.com/detail/baroqueme/&quot;&gt;&lt;img src=&quot;https://techoctave.com/c7/static/chrome-baroque.png&quot; alt=&quot;Baroque.me by Alexander Chen&quot; style=&quot;margin-left: 50px;&quot;/&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h4&gt;3 Dreams of Black by Google Data Arts Team:&lt;/h4&gt;
 
 &lt;p&gt;3 Dreams of Black is truly an experience you don&#39;t want to miss. I recommend grabbing some Kombucha for this one.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.chromeexperiments.com/detail/3-dreams-of-black/&quot;&gt;&lt;img src=&quot;https://techoctave.com/static/chrome-dreams-black.png&quot; alt=&quot;3 Dreams of Black by Google Data Arts Team&quot; style=&quot;margin-left: 50px;&quot;/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.chromeexperiments.com/detail/3-dreams-of-black/&quot;&gt;&lt;img src=&quot;https://techoctave.com/c7/static/chrome-dreams-black.png&quot; alt=&quot;3 Dreams of Black by Google Data Arts Team&quot; style=&quot;margin-left: 50px;&quot;/&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h4&gt;Impress.js by Bartek Szopka:&lt;/h4&gt;
 
 &lt;p&gt;Impress.js struck me as a truly remarkable presentation platform. I&#39;m pretty sure I&#39;m using it for my next talk.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.chromeexperiments.com/detail/impressjs/&quot;&gt;&lt;img src=&quot;https://techoctave.com/static/chrome-impress.png&quot; alt=&quot;Impress.js by Bartek Szopka&quot; style=&quot;margin-left: 50px;&quot;/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.chromeexperiments.com/detail/impressjs/&quot;&gt;&lt;img src=&quot;https://techoctave.com/c7/static/chrome-impress.png&quot; alt=&quot;Impress.js by Bartek Szopka&quot; style=&quot;margin-left: 50px;&quot;/&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h4&gt;X-Wing by OutsideOfSociety:&lt;/h4&gt;
 
 &lt;p&gt;It&#39;s a combination of JavaScript, code and Star Wars. This is the pinnacle of Geekdom.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.chromeexperiments.com/detail/x-wing/&quot;&gt;&lt;img src=&quot;https://techoctave.com/static/chrome-xwing.png&quot; alt=&quot;X-Wing by OutsideOfSociety&quot; style=&quot;margin-left: 50px;&quot;/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.chromeexperiments.com/detail/x-wing/&quot;&gt;&lt;img src=&quot;https://techoctave.com/c7/static/chrome-xwing.png&quot; alt=&quot;X-Wing by OutsideOfSociety&quot; style=&quot;margin-left: 50px;&quot;/&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3&gt;The Smart Money&#39;s on JavaScript&lt;/h3&gt;
 
@@ -4813,7 +4813,7 @@ Elements of Reusable Object-Oriented Software&lt;/a&gt; by The Gang of Four - Er
     <entry>
       <title>Prototypes and The Law of Conservation of Quality</title>
       <link href="https://techoctave.com/c7/posts/65-prototypes-and-the-law-of-conservation-of-quality" />
-      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/column-chart-concept.png&quot; alt=&quot;TechOctave Column Chart Concept&quot;/&gt;&lt;/p&gt;
+      <summary type="html">&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/column-chart-concept.png&quot; alt=&quot;TechOctave Column Chart Concept&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;Prototyping is hard, but good for business. It&#39;s a necessary phase between idea and product. It&#39;s the double rainbow between you and your customer. No Unicorns.&lt;/p&gt;
 
@@ -4835,7 +4835,7 @@ Elements of Reusable Object-Oriented Software&lt;/a&gt; by The Gang of Four - Er
 
 &lt;p&gt;Our Dashboard Chart Suite has several prototypes we feel represent core functionality. For example, here are two:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/scatter-chart-concept.png&quot; alt=&quot;TechOctave Scatter Chart Concept&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/scatter-chart-concept.png&quot; alt=&quot;TechOctave Scatter Chart Concept&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;Left: Scatter Chart, Right: Column Chart&lt;/p&gt;
 
@@ -5127,7 +5127,7 @@ Take for example our &lt;a href=&quot;http://techoctave.com/gauges/&quot;&gt;Das
     <entry>
       <title>Simple Long Polling Example with JavaScript and jQuery</title>
       <link href="https://techoctave.com/c7/posts/60-simple-long-polling-example-with-javascript-and-jquery" />
-      <summary type="html">&lt;p&gt;&lt;img alt=&quot;Advanced JavaScript Long Polling Techniques (Server Push Techniques)&quot; src=&quot;https://techoctave.com/static/push.jpg&quot;/&gt;&lt;/p&gt;
+      <summary type="html">&lt;p&gt;&lt;img alt=&quot;Advanced JavaScript Long Polling Techniques (Server Push Techniques)&quot; src=&quot;https://techoctave.com/c7/static/push.jpg&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;There are many reasons you might need to poll a web server. Recently, one of our &lt;a href=&quot;http://techoctave.com/gauges&quot;&gt;Dashboard Gauge Suite&lt;/a&gt; customers needed to poll sales data from his company&#39;s data warehouse and update his executive dashboard with the fresh data.&lt;/p&gt;
 
@@ -5255,7 +5255,7 @@ Take for example our &lt;a href=&quot;http://techoctave.com/gauges/&quot;&gt;Das
     <entry>
       <title>Goodbye Steve Jobs</title>
       <link href="https://techoctave.com/c7/posts/59-goodbye-steve-jobs" />
-      <summary type="html">&lt;p&gt;&lt;img width=&quot;100%&quot; alt=&quot;Steve Jobs 1955-2011 - Apple&quot; src=&quot;https://techoctave.com/static/hero.png&quot;/&gt;&lt;/p&gt;
+      <summary type="html">&lt;p&gt;&lt;img width=&quot;100%&quot; alt=&quot;Steve Jobs 1955-2011 - Apple&quot; src=&quot;https://techoctave.com/c7/static/hero.png&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;It appears, a wonderful thing to those who have considered the matter, that all men, or the larger number of them, who have performed great deeds in the world, and excelled all others in their day, have had their birth and beginning in baseness and obscurity.&lt;/em&gt; -Nicolo Machiavelli, &lt;a href=&quot;http://ebooks.adelaide.edu.au/m/machiavelli/niccolo/m149c/&quot;&gt;The life of Castruccio Castracani of Lucca&lt;/a&gt;&lt;/p&gt;
 
@@ -5307,7 +5307,7 @@ Take for example our &lt;a href=&quot;http://techoctave.com/gauges/&quot;&gt;Das
 
 &lt;p&gt;Rest in peace Steve Jobs. May fate love you in the next life as much as she loved you in this. Say hello to Biggie and Tupac for me.&lt;/p&gt;
 
-&lt;p&gt;&lt;img style=&quot;margin-left: 50px;&quot; alt=&quot;Steve Jobs 1955-2011 - Pixar&quot; src=&quot;https://techoctave.com/static/pixargoodbye.png&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img style=&quot;margin-left: 50px;&quot; alt=&quot;Steve Jobs 1955-2011 - Pixar&quot; src=&quot;https://techoctave.com/c7/static/pixargoodbye.png&quot;/&gt;&lt;/p&gt;
 </summary>
       <id>https://techoctave.com/c7/posts/59-goodbye-steve-jobs</id>
       <updated>2011-10-11T22:52:33-04:00</updated>
@@ -5805,7 +5805,7 @@ Slow down. Learn the Fundamentals. And Hustle. Because learning to develop good 
       <link href="https://techoctave.com/c7/posts/55-the-mba-dilemma" />
       <summary type="html">&lt;p&gt;An MBA isn&#39;t inherently a bad thing. It&#39;s just an impossible dilemma. On one hand, you come out with tons of theory. In the next, you come out with little experience actually running a business. Neither of which is practically acceptable. &lt;a href=&quot;http://techoctave.com/marketing-for-geeks/&quot;&gt;Pragmatism&lt;/a&gt; being the remedy to each.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/watson.jpg&quot; alt=&quot;Watson is an artificial intelligence computer system - developed by IBM - capable of answering questions posed in natural language.&quot; width=&quot;260&quot; style=&quot;display: inline-block;&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/watson.jpg&quot; alt=&quot;Watson is an artificial intelligence computer system - developed by IBM - capable of answering questions posed in natural language.&quot; width=&quot;260&quot; style=&quot;display: inline-block;&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;There is no extra sale for hypothesizing your SWOT analysis. Try getting a customer to pay you double because you spent 120 hours on your Porter Five Forces. If you spent that much time on analysis, how much time could you have spent on development? How much of that time you could have spent actually reaching out to customers? Exactly!&lt;/p&gt;
 
@@ -5929,7 +5929,7 @@ Slow down. Learn the Fundamentals. And Hustle. Because learning to develop good 
 
 &lt;p&gt;Make no mistake, one of your biggest assets is being a real person. Even the big boys are starting to get the picture. Case in point - &lt;a href=&quot;http://www.effie.org/winners/showcase/2011/5367&quot;&gt;The MINI vs Porsche Challenge&lt;/a&gt;:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/mini-vs-porche-1.jpg&quot; width=&quot;520&quot; alt=&quot;The Mighty MINI COOPER vs Fancy Pants Porsche 911&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/mini-vs-porche-1.jpg&quot; width=&quot;520&quot; alt=&quot;The Mighty MINI COOPER vs Fancy Pants Porsche 911&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;THE MIGHTY MINI COOPER VS FANCY PANTS PORSCHE 911&lt;/p&gt;
 
@@ -5954,7 +5954,7 @@ Slow down. Learn the Fundamentals. And Hustle. Because learning to develop good 
 
 &lt;p&gt;Still, do make your marketing materials both beautiful and memorable. Just like the MINI Team did here:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/mini-vs-porche-2.png&quot; width=&quot;520&quot; alt=&quot;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/mini-vs-porche-2.png&quot; width=&quot;520&quot; alt=&quot;
 WE WENT. WE RACED. WE ALMOST BEAT FRICKIN&#39; PORSCHE!&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;WE WENT. WE RACED. WE ALMOST BEAT FRICKIN&#39; PORSCHE!&lt;/p&gt;
@@ -5965,7 +5965,7 @@ WE WENT. WE RACED. WE ALMOST BEAT FRICKIN&#39; PORSCHE!&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;Here&#39;s another beautiful and memorable piece by the MINI Team:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/mini-vs-porche-3.jpg&quot; width=&quot;520&quot;  alt=&quot;The Rumble on the Racetrack&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/mini-vs-porche-3.jpg&quot; width=&quot;520&quot;  alt=&quot;The Rumble on the Racetrack&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;THE RUMBLE ON THE RACETRACK&lt;/p&gt;
 
@@ -6375,7 +6375,7 @@ Perhaps at some point, we forgot to first focus on ourselves. When I say focus o
       <link href="https://techoctave.com/c7/posts/47-marketing-for-geeks-pragmatic-marketing-for-information-age-starters" />
       <summary type="html">&lt;p&gt;I am stronger because you are stronger. I wrote &lt;a href=&quot;http://techoctave.com/marketing-for-geeks&quot;&gt;Marketing for Geeks&lt;/a&gt; for Starters like me everywhere because I truly believe this.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://techoctave.com/marketing-for-geeks&quot;&gt;&lt;img src=&quot;https://techoctave.com/static/marketing-for-geeks-front-and-back-cover.png&quot; alt=&quot;Marketing for Geeks - Pragmatic Marketing for Information Age Starters&quot;/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://techoctave.com/marketing-for-geeks&quot;&gt;&lt;img src=&quot;https://techoctave.com/c7/static/marketing-for-geeks-front-and-back-cover.png&quot; alt=&quot;Marketing for Geeks - Pragmatic Marketing for Information Age Starters&quot;/&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;I believe this so much that I refuse to support people and institutions that turn a deaf ear to this truth. Without hesitation I turn my back to colleagues who keep knowledge to themselves.&lt;/p&gt;
 
@@ -6731,7 +6731,7 @@ Perhaps at some point, we forgot to first focus on ourselves. When I say focus o
 
 &lt;p&gt;What do you get when you mix Ruby, Jedi and Mixins? A helluva good time! Join the fun:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://techoctave.com/static/jedi.zip&quot;&gt;Download the Ruby Object Oriented Jedi Tutorial&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://techoctave.com/c7/static/jedi.zip&quot;&gt;Download the Ruby Object Oriented Jedi Tutorial&lt;/a&gt;&lt;/p&gt;
 </summary>
       <id>https://techoctave.com/c7/posts/46-object-oriented-ruby-classes-mixins-and-jedi</id>
       <updated>2011-01-27T22:40:24-05:00</updated>
@@ -6809,7 +6809,7 @@ that in a good way. -Banksy&lt;/p&gt;&lt;/blockquote&gt;
 
 &lt;p&gt;No doubt, Curtis is a Manager of One:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/blogcast-is-for-starters.png&quot; alt=&quot;Blogcast is for Starters&quot; title=&quot;Blogcast is for Starters&quot; width=&quot;520&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/blogcast-is-for-starters.png&quot; alt=&quot;Blogcast is for Starters&quot; title=&quot;Blogcast is for Starters&quot; width=&quot;520&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;He could have just stopped there but didn&#39;t. Instead, he went to work and released his design work on the Ashley dedicated blog. That&#39;s giving back 100% - no question about it!&lt;/p&gt;
 
@@ -6819,7 +6819,7 @@ that in a good way. -Banksy&lt;/p&gt;&lt;/blockquote&gt;
 
 &lt;p&gt;REWORK&#39;s pragmatic insight into business sets the tone for just what Blogcast is - a REWORK of blogging:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/blogcast-is-a-rework-of-blogging.jpg&quot; alt=&quot;Blogcast is a REWORK of blogging&quot; title=&quot;Blogcast is a REWORK of blogging&quot; width=&quot;520&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/blogcast-is-a-rework-of-blogging.jpg&quot; alt=&quot;Blogcast is a REWORK of blogging&quot; title=&quot;Blogcast is a REWORK of blogging&quot; width=&quot;520&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;I&#39;ll tell you straight up, if I&#39;m looking at two developers - one has read REWORK and the other hasn&#39;t - I&#39;m going with the guy that has read REWORK - Done Deal.&lt;/p&gt;
 
@@ -9186,7 +9186,7 @@ He&#39;s at that point where he is wondering how to incorporate the right Google
 
 &lt;p&gt;As you begin to incorporate techniques to enhance your sites usability and visibility, there are really three main things that you&#39;ll definitely want to consider:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/google_services.jpg&quot; alt=&quot;The Three Most Important Google Services&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/google_services.jpg&quot; alt=&quot;The Three Most Important Google Services&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This is the actual napkin from the meeting with my client. See, Starbucks isn&#39;t completely useless.&lt;/p&gt;
 
@@ -9232,18 +9232,18 @@ He&#39;s at that point where he is wondering how to incorporate the right Google
 
 &lt;p&gt;This was the original concept. I really thought that it was a good starting point. But, I decided it could use a little rework.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/c7_searchbox_intial.png&quot; alt=&quot;Seventh Octave Search Concept Initial&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/c7_searchbox_intial.png&quot; alt=&quot;Seventh Octave Search Concept Initial&quot; /&gt;&lt;/p&gt;
 
 &lt;h3&gt;Rework Concept&lt;/h3&gt;
 
 &lt;p&gt;Here&#39;s my second concept. You can see that I altered a few things. I made the link text more succinct to give it a cleaner look. I also, decided to emphasize the search box area; so I removed the search box button on the right, expanded the search box area and added some depth to it by creating a drop shadow on the top and left corner.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://techoctave.com/static/c7_searchbox_rework.png&quot; alt=&quot;Seventh Octave Search Concept Rework&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://techoctave.com/c7/static/c7_searchbox_rework.png&quot; alt=&quot;Seventh Octave Search Concept Rework&quot; /&gt;&lt;/p&gt;
 
 &lt;h3&gt;Final Concept&lt;/h3&gt;
 
 &lt;p&gt;For a final touch, I added the magnifying glass to symbolize the purpose for the box (to search of course.) ... And Whoalah! My search box is now complete.
-&lt;img src=&quot;https://techoctave.com/static/c7_searchbox_final.png&quot; alt=&quot;Seventh Octave Search Concept Final&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://techoctave.com/c7/static/c7_searchbox_final.png&quot; alt=&quot;Seventh Octave Search Concept Final&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;So, when you do begin designing your search box, don&#39;t forget to make it a &lt;a href=&quot;https://techoctave.com/posts/1-hello-world&quot;&gt;fun experience&lt;/a&gt;. After all, your search box is the beginning to an enjoyable search experience for your visitors.&lt;/p&gt;
 </summary>

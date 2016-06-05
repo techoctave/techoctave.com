@@ -6,7 +6,7 @@ date: 2012-07-31 01:59:54
 permalink: /c7/posts/84-image-description-overlay-using-javascript-and-jquery
 ---
 
-<img src="https://techoctave.com/static/ferrari-california-overlay.png" alt="The Ferrari California is a grand touring sports car. The car revives the ‘California’ name used for the late-1950s Ferrari 250 GT."/>
+<img src="https://techoctave.com/c7/static/ferrari-california-overlay.png" alt="The Ferrari California is a grand touring sports car. The car revives the ‘California’ name used for the late-1950s Ferrari 250 GT."/>
 
 We all know accessibility and SEO are important facets of web application development. Accessibility, itself, speaks to the heart of what the web is all about. Namely, the ability for people to break free from whatever bonds hold them at bay and explore a world vast and wild. I know first hand the power of that freedom.
 

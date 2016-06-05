@@ -28,7 +28,7 @@ It doesn't have to be a big deal. But, it can be a big deal to the bottom line. 
 
 Make no mistake, one of your biggest assets is being a real person. Even the big boys are starting to get the picture. Case in point - [The MINI vs Porsche Challenge][1]:
 
-<img src="https://techoctave.com/static/mini-vs-porche-1.jpg" width="520" alt="The Mighty MINI COOPER vs Fancy Pants Porsche 911"/>
+<img src="https://techoctave.com/c7/static/mini-vs-porche-1.jpg" width="520" alt="The Mighty MINI COOPER vs Fancy Pants Porsche 911"/>
 
 THE MIGHTY MINI COOPER VS FANCY PANTS PORSCHE 911
 
@@ -52,7 +52,7 @@ So bring value to the market and do your lovely print and web advertisements. Ju
 
 Still, do make your marketing materials both beautiful and memorable. Just like the MINI Team did here:
 
-<img src="https://techoctave.com/static/mini-vs-porche-2.png" width="520" alt="
+<img src="https://techoctave.com/c7/static/mini-vs-porche-2.png" width="520" alt="
 WE WENT. WE RACED. WE ALMOST BEAT FRICKIN' PORSCHE!"/>
 
 WE WENT. WE RACED. WE ALMOST BEAT FRICKIN' PORSCHE!
@@ -63,7 +63,7 @@ The only way I know how to do that is simply to be me. And that's what you need 
 
 Here's another beautiful and memorable piece by the MINI Team:
 
-<img src="https://techoctave.com/static/mini-vs-porche-3.jpg" width="520"  alt="The Rumble on the Racetrack"/>
+<img src="https://techoctave.com/c7/static/mini-vs-porche-3.jpg" width="520"  alt="The Rumble on the Racetrack"/>
 
 THE RUMBLE ON THE RACETRACK
 

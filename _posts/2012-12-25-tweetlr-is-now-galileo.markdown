@@ -6,7 +6,7 @@ date: 2012-12-25 05:26:50
 permalink: /c7/posts/99-tweetlr-is-now-galileo
 ---
 
-<img src="https://techoctave.com/static/galileo-facing-the-roman-inquisition.jpg" width="100%" alt="Galileo facing the Roman Inquisition"/>
+<img src="https://techoctave.com/c7/static/galileo-facing-the-roman-inquisition.jpg" width="100%" alt="Galileo facing the Roman Inquisition"/>
 Galileo facing the Roman Inquisition, Cristiano Banti 1857
 
 

@@ -6,7 +6,7 @@ date: 2012-02-17 02:58:44
 permalink: /c7/posts/69-entourage-js-download-tracking-made-simple-for-thousands
 ---
 
-<a href="http://techoctave.com/entourage/"><img src="https://techoctave.com/static/entourage.png"/></a>
+<a href="http://techoctave.com/entourage/"><img src="https://techoctave.com/c7/static/entourage.png"/></a>
 
 
 Six months ago, I set out to change the way people [track file downloads with Google Analytics][1]. Amidst great success, lo and behold, entourage.js version 1.1.2 has arrived:

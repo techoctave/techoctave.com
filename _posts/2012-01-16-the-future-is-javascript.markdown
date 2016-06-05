@@ -16,7 +16,7 @@ From [JavaScript Charts][1], to presentation platforms, to games - JavaScript is
 
 The Mozilla Corporation - the fine folks behind the Firefox Web Browser - recently invested heavily in [modernizing Firefox's add-on development infrastructure][2] and now we have Firefox JetPack:
  
-<img src="https://techoctave.com/static/mozilla-jetpack.png" alt="Firefox JetPack" style="margin-left: 50px;"/>
+<img src="https://techoctave.com/c7/static/mozilla-jetpack.png" alt="Firefox JetPack" style="margin-left: 50px;"/>
 
 With JetPack, you can create add-ons for Firefox using modern web standards like HTML5, CSS3 and JavaScript. Prior to this advancement, our only option was to use Mozilla's proprietary XML User-Interface Language or XUL. 
 
@@ -26,7 +26,7 @@ XUL was cross-platform - yes. But, it was a pain to work with and not exactly be
 
 Google is also betting that heavy client-side JavaScript is the future. From day one, the promise of the Chrome Web Store has always been apps built on open standards (HTML5, CSS3 and JavaScript). In fact, one of our products - [Tweetlr - A Powerful Twitter CRM][3] - is built on the foundations of that promise. Open standards and a monetization platform could have been enough - should have been enough. But for a company where innovation is everything, enough is never enough. Enter Native Client:
 
-<img src="https://techoctave.com/static/chrome-native-client-architecture.png" alt="Google Chrome Native Client" style="margin-left: 50px;"/>
+<img src="https://techoctave.com/c7/static/chrome-native-client-architecture.png" alt="Google Chrome Native Client" style="margin-left: 50px;"/>
 
 Recently, Google released functionality in Google Chrome that gives Chrome developers the ability to [run native C or C++ code in their Chrome web applications][4]. Google calls this Native Client and promises you can run your native code on the web. Combine the back-end power of C/C++ with the responsiveness of HTML5, CSS3 and JavaScript and I believe you get a powerful architecture that doesn't even need a server.
 
@@ -63,39 +63,39 @@ They believe JavaScript is awesome and browsers are awesome and that together, t
 
 I absolutely love data visualization, so this experiment was a top pick for me. Yes, those are [JavaScript Charts][8] on those continents.
 
-<a href="http://www.chromeexperiments.com/globe"><img src="https://techoctave.com/static/chrome-globe-charts.png" alt="WebGL Globe by Google Data Arts Team" style="margin-left: 50px;"/></a>
+<a href="http://www.chromeexperiments.com/globe"><img src="https://techoctave.com/c7/static/chrome-globe-charts.png" alt="WebGL Globe by Google Data Arts Team" style="margin-left: 50px;"/></a>
 
 ####WebGL Bookcase by Google Data Arts Team:
 
 WebGL Bookcase is an experimental interface for the Google Books API. 
 
-<a href="http://www.chromeexperiments.com/detail/webgl-bookcase/"><img alt="" src="https://techoctave.com/static/chrome-bookstore.png" alt="WebGL Bookcase by Google Data Arts Team" style="margin-left: 50px;"/></a>
+<a href="http://www.chromeexperiments.com/detail/webgl-bookcase/"><img alt="" src="https://techoctave.com/c7/static/chrome-bookstore.png" alt="WebGL Bookcase by Google Data Arts Team" style="margin-left: 50px;"/></a>
 
-<a href="http://www.chromeexperiments.com/detail/webgl-bookcase/"><img alt="" src="https://techoctave.com/static/chrome-bookstore-frankenstein.png" alt="WebGL Bookcase by Google Data Arts Team" style="margin-left: 50px;"/></a>
+<a href="http://www.chromeexperiments.com/detail/webgl-bookcase/"><img alt="" src="https://techoctave.com/c7/static/chrome-bookstore-frankenstein.png" alt="WebGL Bookcase by Google Data Arts Team" style="margin-left: 50px;"/></a>
 
 ####Baroque.me by Alexander Chen:
 
 Baroque.me visualizes the first Prelude from Bach's Cello Suites. Using HTML5 and JavaScript to highlight the music's underlying structure and subtle shifts.
 
-<a href="http://www.chromeexperiments.com/detail/baroqueme/"><img src="https://techoctave.com/static/chrome-baroque.png" alt="Baroque.me by Alexander Chen" style="margin-left: 50px;"/></a>
+<a href="http://www.chromeexperiments.com/detail/baroqueme/"><img src="https://techoctave.com/c7/static/chrome-baroque.png" alt="Baroque.me by Alexander Chen" style="margin-left: 50px;"/></a>
 
 ####3 Dreams of Black by Google Data Arts Team:
 
 3 Dreams of Black is truly an experience you don't want to miss. I recommend grabbing some Kombucha for this one.
 
-<a href="http://www.chromeexperiments.com/detail/3-dreams-of-black/"><img src="https://techoctave.com/static/chrome-dreams-black.png" alt="3 Dreams of Black by Google Data Arts Team" style="margin-left: 50px;"/></a>
+<a href="http://www.chromeexperiments.com/detail/3-dreams-of-black/"><img src="https://techoctave.com/c7/static/chrome-dreams-black.png" alt="3 Dreams of Black by Google Data Arts Team" style="margin-left: 50px;"/></a>
 
 ####Impress.js by Bartek Szopka:
 
 Impress.js struck me as a truly remarkable presentation platform. I'm pretty sure I'm using it for my next talk.
 
-<a href="http://www.chromeexperiments.com/detail/impressjs/"><img src="https://techoctave.com/static/chrome-impress.png" alt="Impress.js by Bartek Szopka" style="margin-left: 50px;"/></a>
+<a href="http://www.chromeexperiments.com/detail/impressjs/"><img src="https://techoctave.com/c7/static/chrome-impress.png" alt="Impress.js by Bartek Szopka" style="margin-left: 50px;"/></a>
 
 ####X-Wing by OutsideOfSociety:
 
 It's a combination of JavaScript, code and Star Wars. This is the pinnacle of Geekdom.
 
-<a href="http://www.chromeexperiments.com/detail/x-wing/"><img src="https://techoctave.com/static/chrome-xwing.png" alt="X-Wing by OutsideOfSociety" style="margin-left: 50px;"/></a>
+<a href="http://www.chromeexperiments.com/detail/x-wing/"><img src="https://techoctave.com/c7/static/chrome-xwing.png" alt="X-Wing by OutsideOfSociety" style="margin-left: 50px;"/></a>
 
 
 ###The Smart Money's on JavaScript

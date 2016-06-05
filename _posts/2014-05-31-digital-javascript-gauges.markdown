@@ -6,7 +6,7 @@ date: 2014-05-31 07:35:42
 permalink: /c7/posts/134-digital-javascript-gauges
 ---
 
-<img src="https://techoctave.com/static/digital-gauges.png" title="digital JavaScript gauges"/>
+<img src="https://techoctave.com/c7/static/digital-gauges.png" title="digital JavaScript gauges"/>
 
 G'day Mate,
 

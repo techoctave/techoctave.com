@@ -18,21 +18,21 @@ If successful, the TALOS project could literally change warfare as we know it. F
 
 The club and spear gave early mankind dominance over its  Neanderthal competition. The chariot dominated the Nile, transforming Nubian Kings to Pharaohs. From the bosom of Greece to the steppes of Asia, the Macedonian Phalanx took Alexander The Great from boy King to Ruler of the Known World:
 
-<img src="https://techoctave.com/static/macedonian-phalanx.jpg"/>
+<img src="https://techoctave.com/c7/static/macedonian-phalanx.jpg"/>
 
 The Roman Legion turned an upstart King in the foothills of Italy into the greatest super power the ancient world had ever known. Not many generations later, the world hailed Caesar from all its four corners:
 
-<img src="https://techoctave.com/static/roman-legion.jpg"/>
+<img src="https://techoctave.com/c7/static/roman-legion.jpg"/>
 
 Military superiority spreads progress at the civilization level.  Indeed, it brings change to the very face of a people. History is steeped in such lessons. Mankind the progeny of the teacher.
 
 The Bowman on horseback turned a young Temujin from orphan to the great Genghis Khan, allowing him to conquer every stretch of territory from China to the eastern flanks of Europe. To this day, I dare you to travel to Kazakhstan and not see the face of Khan in all you survey:
 
-<img src="https://techoctave.com/static/mongol-horde.jpg" />
+<img src="https://techoctave.com/c7/static/mongol-horde.jpg" />
 
 Guns, Germs and Steel turned the Royal Family of Europe from Kings to CEOs - overnight successes. And from people to property for those who hadn't the good sense to keep pace:
 
-<img src="https://techoctave.com/static/spanish-conquistadors.jpg" />
+<img src="https://techoctave.com/c7/static/spanish-conquistadors.jpg" />
 
 And here we are...
 
@@ -56,19 +56,19 @@ But how would the first generation TALOS system look? Here's a potential imagini
 
 
 **The Mech Suit:**
-<img src="https://techoctave.com/static/mech-1.jpg" />
+<img src="https://techoctave.com/c7/static/mech-1.jpg" />
 
-<img src="https://techoctave.com/static/mech-2.jpg" />
+<img src="https://techoctave.com/c7/static/mech-2.jpg" />
 
-<img src="https://techoctave.com/static/mech-3.jpg" />
+<img src="https://techoctave.com/c7/static/mech-3.jpg" />
 
 
 **The Super Solider:**
-<img src="https://techoctave.com/static/super-soldier-1.jpg" />
+<img src="https://techoctave.com/c7/static/super-soldier-1.jpg" />
 
-<img src="https://techoctave.com/static/super-soldier-2.jpg" />
+<img src="https://techoctave.com/c7/static/super-soldier-2.jpg" />
 
-<img src="https://techoctave.com/static/super-soldier-3.jpg" />
+<img src="https://techoctave.com/c7/static/super-soldier-3.jpg" />
 
 
 How do you think the TALOS system will look?

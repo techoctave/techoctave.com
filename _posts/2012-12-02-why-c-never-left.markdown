@@ -6,7 +6,7 @@ date: 2012-12-02 06:02:08
 permalink: /c7/posts/97-why-c-never-left
 ---
 
-<img src="https://techoctave.com/static/c-never-left.png" alt="C++ is transcending, transformative and foundational."/>
+<img src="https://techoctave.com/c7/static/c-never-left.png" alt="C++ is transcending, transformative and foundational."/>
 
 Some really good points are discussed in the article, [Why C++ Is Not "Back"][1]. I simply disagree with the entire premise.
 

@@ -6,7 +6,7 @@ date: 2013-02-23 03:51:54
 permalink: /c7/posts/102-the-only-higher-level-than-javascript-is-god-s-word
 ---
 
-<img src="https://techoctave.com/static/javascript-is-not-low-level.jpg" width="100%"/>
+<img src="https://techoctave.com/c7/static/javascript-is-not-low-level.jpg" width="100%"/>
 
 I'm so sick and tired of people describing JavaScript as "low-level". If you're not "MOV AL, 61h" all damn day, you're not doing low-level programming; so give it a rest.
 
@@ -92,7 +92,7 @@ The latest trend is folks regurgitating phrases like "JavaScript is the lowest l
 
 It's just stinking wrong. Absolutely, unequivocally wrong:
 
-<img src="https://techoctave.com/static/say-low-level-one-more-goddamn-time.jpg" width="520"/>
+<img src="https://techoctave.com/c7/static/say-low-level-one-more-goddamn-time.jpg" width="520"/>
 
 In computer science, a high-level programming language is a programming language with strong abstraction from the details of the computer and it's machine code.
 

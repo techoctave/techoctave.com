@@ -6,7 +6,7 @@ date: 2013-06-03 10:23:19
 permalink: /c7/posts/115-javascript-is-the-target-language-for-the-web-and-that-s-ok
 ---
 
-<img src="https://techoctave.com/static/unreal-engine-epic-citadel-mozilla.jpg" alt="Asm.js is for game developers, not web developers." title="Asm.js is for game developers, not web developers."/>
+<img src="https://techoctave.com/c7/static/unreal-engine-epic-citadel-mozilla.jpg" alt="Asm.js is for game developers, not web developers." title="Asm.js is for game developers, not web developers."/>
 
 JavaScript is indeed a target language. Time and good sense has shown us it is a [high-level language][1], so far removed from either low-level or assembly. Yet, it is a target language non-the-less. 
 
@@ -22,7 +22,7 @@ Similar to how web developers use JavaScript, game developers use C/C++ and Open
 
 In fact, [game developers target JavaScript][7] because that's the <u>ONLY</u> way they can access OpenGL:
 
-<img src="https://techoctave.com/static/asmjs-compilation-execution-pipeline.jpg" alt="Game developers target JavaScript that is the only way they can access WebGL via HTML5." title="Game developers target JavaScript that is the only way they can access WebGL via HTML5."/>
+<img src="https://techoctave.com/c7/static/asmjs-compilation-execution-pipeline.jpg" alt="Game developers target JavaScript that is the only way they can access WebGL via HTML5." title="Game developers target JavaScript that is the only way they can access WebGL via HTML5."/>
 
 But for WebGL, game developers would have no use for JavaScript. Instead of three (3) layers between game developers and WebGL/OpenGL, what if there were zero (0)? Think how much faster the games would be. In fact, there would be no need for asm.js at all.
 
