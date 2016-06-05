@@ -16,11 +16,11 @@ The Artificial Horizon gauge was the first concept we executed on and it all sta
 
 What started as 0 lines of code and a dream is now 2,316 lines of code and a reality:
 
-<img src="http://techoctave.com/images/artificial-horizon-attitude-indicator.png" alt="JavaScript Artificial Horizon Gauge"/>
+<img src="https://techoctave.com/images/artificial-horizon-attitude-indicator.png" alt="JavaScript Artificial Horizon Gauge"/>
 
 Today, we officially unveil, not just our JavaScript Horizon Gauge, but our entire suite of [JavaScript Flight Gauges][1]:
 
-<img src="http://techoctave.com/images/flight_gauges_six.png" alt="JavaScript Flight Gauges"/>
+<img src="https://techoctave.com/images/flight_gauges_six.png" alt="JavaScript Flight Gauges"/>
 
 After 12 months of R&D, over 4 months of bugs fixes and enhancements and 20,000 lines of code later, we're pretty damn proud of the results.
 
