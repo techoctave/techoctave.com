@@ -32,5 +32,5 @@ On the other hand, you may have a *Moderator* role. As a Moderator, you can dele
 So, basically, *authentication* determines access, whereas *authorization* determines actions. Now you know, and knowing is half the battle.
 
 
-  [1]: http://techoctave.com/c7
-  [2]: http://techoctave.com/c7/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css
+  [1]: https://techoctave.com
+  [2]: https://techoctave.com/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css

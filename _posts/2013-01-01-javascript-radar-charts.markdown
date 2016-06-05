@@ -6,7 +6,7 @@ date: 2013-01-01 02:38:31
 permalink: /c7/posts/100-javascript-radar-charts
 ---
 
-<img src="http://techoctave.com/c7/static/radarchart_product_analysis.png" alt="JavaScript Radar Chart, Spider Chart, Star Chart."/>
+<img src="https://techoctave.com/static/radarchart_product_analysis.png" alt="JavaScript Radar Chart, Spider Chart, Star Chart."/>
 
 Recently, one of our customers needed a Radar Chart for an Enterprise Resource Planning (ERP) application. They thought a Radar Chart would be a great addition to our [JavaScript Charts][1] Suite:
 
@@ -52,7 +52,7 @@ So let's see how we go about drawing our Radar Chart. The first thing to do is i
 
 For our example, we'll analyze the change in advertising spending for National ERP Solutions, Inc. (NES) over two consecutive years:
 
-<img src="http://techoctave.com/c7/static/radarchart_advertising_spending_analysis.png" alt="Radar Chart advertising spending analysis."/>
+<img src="https://techoctave.com/static/radarchart_advertising_spending_analysis.png" alt="Radar Chart advertising spending analysis."/>
 
 #### Identify Key Categories or Performances
 
@@ -160,6 +160,6 @@ Listen, I'm not telling you it's going to be easy. I'm telling you it's going to
 
 
   [1]: http://techoctave.com/charts/
-  [2]: http://techoctave.com/c7/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css
+  [2]: https://techoctave.com/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css
   [3]: http://techoctave.com/charts/
   [4]: http://www.forbes.com/sites/roberthof/2011/08/26/online-ad-spend-to-overtake-tv/

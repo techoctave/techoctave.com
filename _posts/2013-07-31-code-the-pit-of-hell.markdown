@@ -6,7 +6,7 @@ date: 2013-07-31 12:43:19
 permalink: /c7/posts/122-code-the-pit-of-hell
 ---
 
-<img src="http://techoctave.com/c7/static/psd.rb.png" alt="Ruby Photoshop Parser"/>
+<img src="https://techoctave.com/static/psd.rb.png" alt="Ruby Photoshop Parser"/>
 
 The fine folks over at LayerVault have released [PSD.rb][1], allowing Ruby developers to easily work with Photoshop documents.
 
@@ -75,7 +75,7 @@ Code for the moments that take your breath away.
 
   [1]: http://cosmos.layervault.com/psdrb.html
   [2]: http://en.wikipedia.org/wiki/Inferno_(Dante)
-  [3]: http://techoctave.com/c7/posts/50-silly-rabbit-parsing-html-is-for-kids
+  [3]: https://techoctave.com/posts/50-silly-rabbit-parsing-html-is-for-kids
   [4]: https://github.com/jashkenas/coffee-script/wiki/List-of-languages-that-compile-to-JS
   [5]: https://code.google.com/p/xee/source/browse/XeePhotoshopLoader.m#102
-  [6]: http://techoctave.com/c7/posts/57-hustle-and-code
+  [6]: https://techoctave.com/posts/57-hustle-and-code

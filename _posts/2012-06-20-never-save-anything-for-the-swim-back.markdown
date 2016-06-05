@@ -14,7 +14,7 @@ Many years ago, a movie debuted that pushed the boundaries of both scientific an
 
 ####Adolescence
 
-<img src="http://techoctave.com/c7/static/gattaca-vincent-anton-first-swim.jpg" width="520" alt="Gattaca: Vincent and Anton's First Swim"/>
+<img src="https://techoctave.com/static/gattaca-vincent-anton-first-swim.jpg" width="520" alt="Gattaca: Vincent and Anton's First Swim"/>
 
 **Vincent:** Our favorite game was chicken. When our parents weren't watching, we used to swim as far out as we dared. It was about who would get scared and turn back first.
 
@@ -24,7 +24,7 @@ Many years ago, a movie debuted that pushed the boundaries of both scientific an
 
 ####Early Adulthood
 
-<img src="http://techoctave.com/c7/static/gattaca-vincent-anton-second-swim.jpg" width="520" alt="Gattaca: Vincent and Anton's Second Swim"/>
+<img src="https://techoctave.com/static/gattaca-vincent-anton-second-swim.jpg" width="520" alt="Gattaca: Vincent and Anton's Second Swim"/>
 
 **Anton:** Are you sure you want to do this? You know you're 'gonna lose.
 

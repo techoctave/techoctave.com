@@ -10,7 +10,7 @@ Columbus Code Camp 2012 sold out earlier this week (200/200). Luckily, we were a
 
 This year's sessions are as action packed as they come. We've got a little something for everybody:
 
-<a href="http://columbuscodecamp.com/presentations.html"><img src="http://techoctave.com/c7/static/columbus-code-camp-2012-presentations.png" alt="Columbus Code Camp 2012 Presentations"/></a>
+<a href="http://columbuscodecamp.com/presentations.html"><img src="https://techoctave.com/static/columbus-code-camp-2012-presentations.png" alt="Columbus Code Camp 2012 Presentations"/></a>
 
 For the functional programming crowd, we have an entire section dedicated to training with Clojure. We even have a talk diving into the hottest Clojure web framework - Noir.
 

@@ -6,7 +6,7 @@ date: 2012-05-27 01:21:01
 permalink: /c7/posts/77-javascript-testing-with-jasmine
 ---
 
-<img src="http://techoctave.com/c7/static/jasmine.png"/>
+<img src="https://techoctave.com/static/jasmine.png"/>
 
 
 Jasmine is a testing framework for JavaScript. It's framework agnostic and does not require a DOM. We use Jasmine to run both our [JavaScript Gauges][1] and JavaScript Charts test suites:

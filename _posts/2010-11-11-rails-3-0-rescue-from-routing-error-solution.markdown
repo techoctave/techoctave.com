@@ -85,8 +85,8 @@ Well, I encourage you to dig into Rails 3 and [have a little fun][5]. And if you
 
 
   [1]: https://rails.lighthouseapp.com/projects/8994/tickets/4444-can-no-longer-rescue_from-actioncontrollerroutingerror
-  [2]: http://techoctave.com/c7/posts/30-hello-i-m-an-entj
-  [3]: http://techoctave.com/c7/posts/35-designer-developer-sweeper
-  [4]: http://techoctave.com/c7/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css
-  [5]: http://techoctave.com/c7/posts/1-hello-world
+  [2]: https://techoctave.com/posts/30-hello-i-m-an-entj
+  [3]: https://techoctave.com/posts/35-designer-developer-sweeper
+  [4]: https://techoctave.com/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css
+  [5]: https://techoctave.com/posts/1-hello-world
   [6]: http://techoctave.com/charts

@@ -66,8 +66,8 @@ Take care folks! Have a Merry Christmas and a Happy New Year! Be excellent to ea
 
 
 
-  [1]: http://techoctave.com/c7/posts/38-blogcast-is-a-better-way-to-blog
-  [2]: http://techoctave.com/c7/posts/34-authentication-vs-authorization
+  [1]: https://techoctave.com/posts/38-blogcast-is-a-better-way-to-blog
+  [2]: https://techoctave.com/posts/34-authentication-vs-authorization
   [3]: https://github.com/ryanb
   [4]: http://techoctave.com/blogcast/
   [5]: https://github.com/techoctave/blogcast

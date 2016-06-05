@@ -128,9 +128,9 @@ I'm going to continue to support Ben Johnson because I believe Authlogic is a fi
 I know upgrading to Rails 3.0 is challenging. But I'm rooting for you and the entire Rails Community is rooting for you. So pick yourself up, dust yourself off and keep moving forward. Until next time Beloved, take care!
 
 
-  [1]: http://techoctave.com/c7/posts/36-rails-3-0-rescue-from-routing-error-solution
+  [1]: https://techoctave.com/posts/36-rails-3-0-rescue-from-routing-error-solution
   [2]: https://github.com/binarylogic/authlogic
-  [3]: http://techoctave.com/c7/posts/16-how-to-host-a-rails-app-with-phusion-passenger-for-nginx
+  [3]: https://techoctave.com/posts/16-how-to-host-a-rails-app-with-phusion-passenger-for-nginx
   [4]: http://techoctave.com/blogcast
-  [5]: http://techoctave.com/c7/posts/34-authentication-vs-authorization
-  [6]: http://techoctave.com/c7/posts/34-authentication-vs-authorization
+  [5]: https://techoctave.com/posts/34-authentication-vs-authorization
+  [6]: https://techoctave.com/posts/34-authentication-vs-authorization

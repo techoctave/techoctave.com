@@ -6,7 +6,7 @@ date: 2013-09-21 12:47:13
 permalink: /c7/posts/125-cool-error-bro
 ---
 
-<img src="http://techoctave.com/c7/static/cool-story-bro-meme.jpg"/>
+<img src="https://techoctave.com/static/cool-story-bro-meme.jpg"/>
 
 Some error messages simply need no introduction:
 

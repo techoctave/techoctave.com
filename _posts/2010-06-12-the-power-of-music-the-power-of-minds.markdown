@@ -22,4 +22,4 @@ So, let's not forget to grab those headsets as we aspire towards progress. Belie
  
 
 
-  [1]: http://techoctave.com/c7/posts/1-hello-world
+  [1]: https://techoctave.com/posts/1-hello-world

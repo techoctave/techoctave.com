@@ -341,7 +341,7 @@ Here, we used jQuery to make an Ajax call for some JSON data. What this means is
 
 <strong>Smart and intuitive API design.</strong> Each purchase includes sample projects with tons of examples on how to use our chart's API. This includes a live example of how to feed data to our charts from a remote server using Ajax.
 
-For an advanced discussion on client-side polling techniques, see [Long Polling with JavaScript and jQuery](http://techoctave.com/c7/posts/60-simple-long-polling-example-with-javascript-and-jquery) on the TechOctave blog. There we discuss various options for feeding data to our charts from a remote server.
+For an advanced discussion on client-side polling techniques, see [Long Polling with JavaScript and jQuery](https://techoctave.com/posts/60-simple-long-polling-example-with-javascript-and-jquery) on the TechOctave blog. There we discuss various options for feeding data to our charts from a remote server.
 
 <br/>
 

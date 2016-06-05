@@ -45,7 +45,7 @@ This makes me a better communicator and empowers me to form healthier personal a
 Don't know your personality type? [Take the Myers Briggs Personality Test][4]. Then leave your mark below.
 
 
-  [1]: http://techoctave.com/c7/posts/1-hello-world
+  [1]: https://techoctave.com/posts/1-hello-world
   [2]: http://en.wikipedia.org/wiki/Fieldmarshal
-  [3]: http://techoctave.com/c7/posts/27-stop-faking-the-plural
+  [3]: https://techoctave.com/posts/27-stop-faking-the-plural
   [4]: http://www.humanmetrics.com/cgi-win/JTypes2.asp

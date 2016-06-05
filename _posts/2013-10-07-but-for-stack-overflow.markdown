@@ -6,7 +6,7 @@ date: 2013-10-07 05:24:24
 permalink: /c7/posts/127-but-for-stack-overflow
 ---
 
-<img src="http://techoctave.com/c7/static/msdn-library-box.png" alt="MSDN Subscription Library"/>
+<img src="https://techoctave.com/static/msdn-library-box.png" alt="MSDN Subscription Library"/>
 
 Sometimes I wonder where we would be without [Stack Overflow][1]. I also wonder how many truly remember the days before it existed. People see old, poorly designed software forums and think, "Ick!" Today, you're not one of those people. Today, you're one of the people who remember when there weren't any software forums at all.
 
@@ -38,7 +38,7 @@ That's the fundamental difference between Stack Overflow and what came before it
 
 Before Stack Overflow, documentation wasn't born of real world scenarios and pain points. So there was never an answer to the question "you" had. Just some brisk points on what "some guy" thought was a cool exposition. Or some vague reference to some static documentarian to check "over there".
 
-<img src="http://techoctave.com/c7/static/stackoverflow.png" alt="But FOr Stack Overflow"/>
+<img src="https://techoctave.com/static/stackoverflow.png" alt="But FOr Stack Overflow"/>
 
 Real world examples. Real world answers. Accessible and freely distributed. That changed everything. In fact, I fundamentally believe that changed our entire profession all together.
 

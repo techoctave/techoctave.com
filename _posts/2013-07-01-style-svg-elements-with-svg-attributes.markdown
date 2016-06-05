@@ -6,7 +6,7 @@ date: 2013-07-01 11:58:38
 permalink: /c7/posts/117-style-svg-elements-with-svg-attributes
 ---
 
-<img src="http://techoctave.com/c7/static/designer-langauges-steampunk.jpg" alt="Should we style SVG elements with CSS?"/>
+<img src="https://techoctave.com/static/designer-langauges-steampunk.jpg" alt="Should we style SVG elements with CSS?"/>
 
 Best practice is to style SVG elements using SVG attributes. This approach strengthens the separation between application View and application Components. It also adheres to the [W3C SVG Spec][1], thereby providing the necessary stability required for cross-browser compatibility.
 

@@ -116,11 +116,11 @@ Download all of our [JavaScript Dashboard Gauges][10] today!
 
   [1]: http://techoctave.com/gauges
   [2]: http://techoctave.com/gauges
-  [3]: http://techoctave.com/c7/posts/49-rails-3-1-and-the-jquery-effect
+  [3]: https://techoctave.com/posts/49-rails-3-1-and-the-jquery-effect
   [4]: http://jquery.com
   [5]: http://techoctave.com/gauges
   [6]: http://raphaeljs.com/
-  [7]: http://techoctave.com/c7/posts/60-simple-long-polling-example-with-javascript-and-jquery
+  [7]: https://techoctave.com/posts/60-simple-long-polling-example-with-javascript-and-jquery
   [8]: http://techoctave.com/gauges
   [9]: http://jquerymobile.com/
   [10]: http://techoctave.com/gauges

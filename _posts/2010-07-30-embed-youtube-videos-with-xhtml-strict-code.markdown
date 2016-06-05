@@ -31,4 +31,4 @@ For those of you that didn't know, the < embed /> tag has been deprecated since 
 Look down. Look up. I'm on a horse.
 
 
-  [1]: http://techoctave.com/c7/posts/5-think-you-know-ferris-bueller-think-again-ferris-club
+  [1]: https://techoctave.com/posts/5-think-you-know-ferris-bueller-think-again-ferris-club

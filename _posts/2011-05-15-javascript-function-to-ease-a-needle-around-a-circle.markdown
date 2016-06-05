@@ -53,6 +53,6 @@ If Gauges interest you or you are a Business Intelligence junkie, feel free to c
 
   [1]: http://raphaeljs.com/
   [2]: http://techoctave.com/gauges
-  [3]: http://techoctave.com/c7/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css
-  [4]: http://techoctave.com/c7/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css
+  [3]: https://techoctave.com/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css
+  [4]: https://techoctave.com/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css
   [5]: http://techoctave.com/gauges

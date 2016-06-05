@@ -72,4 +72,4 @@ With Rails you crack open a big bottle of Awesome and BAMM! You've got SEO frien
 Either way, you run into trouble, you drop me a line!
 
 
-  [1]: http://techoctave.com/c7/posts/16-how-to-host-a-rails-app-with-phusion-passenger-for-nginx
+  [1]: https://techoctave.com/posts/16-how-to-host-a-rails-app-with-phusion-passenger-for-nginx

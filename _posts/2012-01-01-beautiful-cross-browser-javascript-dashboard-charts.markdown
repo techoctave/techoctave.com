@@ -100,7 +100,7 @@ Looking for a JavaScript Charts Suite that Rocks? Checkout our [JavaScript Chart
 
   [1]: http://techoctave.com/charts
   [2]: http://techoctave.com/charts
-  [3]: http://techoctave.com/c7/posts/65-prototypes-and-the-law-of-conservation-of-quality
-  [4]: http://techoctave.com/c7/posts/60-simple-long-polling-example-with-javascript-and-jquery
+  [3]: https://techoctave.com/posts/65-prototypes-and-the-law-of-conservation-of-quality
+  [4]: https://techoctave.com/posts/60-simple-long-polling-example-with-javascript-and-jquery
   [5]: http://techoctave.com/charts/
   [6]: http://techoctave.com/charts

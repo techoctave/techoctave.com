@@ -6,7 +6,7 @@ date: 2013-03-19 01:06:56
 permalink: /c7/posts/104-this-is-not-about-google-reader
 ---
 
-<img src="http://techoctave.com/c7/static/google_reader_rip.png" width="100%" />
+<img src="https://techoctave.com/static/google_reader_rip.png" width="100%" />
 
 I don't use [Google Reader][1]. I find the UI brings very little excitement. And the UX (ugh)...Unread post counts make me feel like I have chores to complete, a never ending todo list. I have a large enough todo list already - believe me.
 

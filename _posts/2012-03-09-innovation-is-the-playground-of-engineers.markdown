@@ -28,8 +28,8 @@ Everything else you can learn and be advised on. That's not easily said in rever
 Looking forward to seeing where Reddit goes next. Happy coding and go get 'em!
 
 
-  [1]: http://techoctave.com/c7/posts/55-the-mba-dilemma
+  [1]: https://techoctave.com/posts/55-the-mba-dilemma
   [2]: http://blog.reddit.com/2012/03/new-reddit-ceo-reporting-for-duty.html
-  [3]: http://techoctave.com/c7/posts/57-hustle-and-code
-  [4]: http://techoctave.com/c7/posts/59-goodbye-steve-jobs
+  [3]: https://techoctave.com/posts/57-hustle-and-code
+  [4]: https://techoctave.com/posts/59-goodbye-steve-jobs
   [5]: https://twitter.com/yishan

@@ -8,7 +8,7 @@ permalink: /c7/posts/55-the-mba-dilemma
 
 An MBA isn't inherently a bad thing. It's just an impossible dilemma. On one hand, you come out with tons of theory. In the next, you come out with little experience actually running a business. Neither of which is practically acceptable. [Pragmatism][1] being the remedy to each.
 
-<img src="http://techoctave.com/c7/static/watson.jpg" alt="Watson is an artificial intelligence computer system - developed by IBM - capable of answering questions posed in natural language." width="260" style="display: inline-block;"/>
+<img src="https://techoctave.com/static/watson.jpg" alt="Watson is an artificial intelligence computer system - developed by IBM - capable of answering questions posed in natural language." width="260" style="display: inline-block;"/>
 
 There is no extra sale for hypothesizing your SWOT analysis. Try getting a customer to pay you double because you spent 120 hours on your Porter Five Forces. If you spent that much time on analysis, how much time could you have spent on development? How much of that time you could have spent actually reaching out to customers? Exactly!
 

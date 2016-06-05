@@ -6,7 +6,7 @@ date: 2013-04-17 10:38:48
 permalink: /c7/posts/109-impossible-is-just-an-opinion
 ---
 
-<img src="http://techoctave.com/c7/static/javascript-raphael-jquery-gauge.png" width="100%" alt="javascript gauge" />
+<img src="https://techoctave.com/static/javascript-raphael-jquery-gauge.png" width="100%" alt="javascript gauge" />
 *Version 1.0 of TechOctave [JavaScript Gauges][2], Circa Early 2010*
 
 
@@ -145,8 +145,8 @@ All I ask is you grow with us.
 
   [1]: http://techoctave.com/simulation/
   [2]: http://techoctave.com/gauges/
-  [3]: http://techoctave.com/c7/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css
-  [4]: http://techoctave.com/c7/posts/79-never-save-anything-for-the-swim-back
+  [3]: https://techoctave.com/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css
+  [4]: https://techoctave.com/posts/79-never-save-anything-for-the-swim-back
   [5]: http://techoctave.com/gauges/
   [6]: http://techoctave.com/charts/
   [7]: http://techoctave.com/simulation/

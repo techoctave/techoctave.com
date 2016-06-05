@@ -6,7 +6,7 @@ date: 2013-11-12 12:33:24
 permalink: /c7/posts/130-save-raphael-svg-chart-as-image
 ---
 
-<img src="http://techoctave.com/c7/static/svg-to-png.png" alt="Save Raphael SVG As Image"/>
+<img src="https://techoctave.com/static/svg-to-png.png" alt="Save Raphael SVG As Image"/>
 
 We work with the best developers in the craft. They push the envelope. They make the right decisions. Do the right work and [ship][1].
 
@@ -145,7 +145,7 @@ That will get you the customization you need.Step 5 is an implementation detail.
 
 Happy Coding and Godspeed!
 
-  [1]: http://techoctave.com/c7/posts/79-never-save-anything-for-the-swim-back
+  [1]: https://techoctave.com/posts/79-never-save-anything-for-the-swim-back
   [2]: http://stackoverflow.com/questions/14631408/save-svg-html5-to-png-or-image
   [3]: http://stackoverflow.com/questions/4086703/convert-raphael-svg-to-image-png-etc-client-side
   [4]: http://stackoverflow.com/questions/15981394/save-svgin-div-to-png-or-convert-to-png-raphael-js

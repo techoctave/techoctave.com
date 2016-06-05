@@ -19,7 +19,7 @@ This year's Columbus Code Camp saw everyone from seasoned veterans, to college s
 
 Truly, what better measure of success than what attendees had to say about the event themselves:
 
-<img src="http://techoctave.com/c7/static/columbus-code-camp-2012-responses.png" alt="Columbus Code Camp 2012 Feedback"/>
+<img src="https://techoctave.com/static/columbus-code-camp-2012-responses.png" alt="Columbus Code Camp 2012 Feedback"/>
 
 Marked with great food - Thanks <a href="http://www.elarepazolatingrill.com/">El Arepazo</a> - and great company, Columbus Code Camp 2012 was one helluva event. Personally, I can't wait until next year...
 

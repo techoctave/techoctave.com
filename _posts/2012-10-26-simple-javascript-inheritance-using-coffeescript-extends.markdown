@@ -6,7 +6,7 @@ date: 2012-10-26 04:03:03
 permalink: /c7/posts/93-simple-javascript-inheritance-using-coffeescript-extends
 ---
 
-<img src="http://techoctave.com/c7/static/most-attractive-photo-on-internet.jpg" alt="The Most Attractive Photo On The Internet"/>
+<img src="https://techoctave.com/static/most-attractive-photo-on-internet.jpg" alt="The Most Attractive Photo On The Internet"/>
 
 I tend to [favor object composition][1] over class inheritance. This is especially true when I'm modeling a business process because business is about distinct people coming together to produce a particular result.
 
@@ -24,7 +24,7 @@ For example, I find class inheritance particular useful when [modeling a distinc
 
 Take the power panel for example:
 
-<img src="http://techoctave.com/c7/static/power-panel-2.jpg" alt="JavaScript Power Panel"/>
+<img src="https://techoctave.com/static/power-panel-2.jpg" alt="JavaScript Power Panel"/>
 
 In particular, let's focus on two components of the power panel:
 
@@ -165,7 +165,7 @@ If inheritence worked, the Light Class would have four methods on the prototype 
 
 Yet, only the Light Class methods exist:
 
-<img src="http://techoctave.com/c7/static/light-class-before-extend.png" alt="JavaScript Light Class Before CoffeeScript Extends"/>
+<img src="https://techoctave.com/static/light-class-before-extend.png" alt="JavaScript Light Class Before CoffeeScript Extends"/>
 
 Not a complete loss. You could still write wrappers over the parent methods. After all, you still have access to _super. But, for large code bases, this can become unmaintainable. Better if child instances just magically had access to parent methods.
 
@@ -223,7 +223,7 @@ var Light = (function(_super) {
 
 The result is parent methods are accessible in the child class without having to rewrite those same methods:
 
-<img src="http://techoctave.com/c7/static/light-class-after-extend.png" alt="JavaScript Light Class After CoffeeScript Extends"/>
+<img src="https://techoctave.com/static/light-class-after-extend.png" alt="JavaScript Light Class After CoffeeScript Extends"/>
 
 This time when we count we get the four expected methods: drawTerminal, getId, setColor and getColor. Which is great because an instance of the child class can access the parent method with ease:
 
@@ -246,9 +246,9 @@ Yet, many a language and community is ripe for innovation. Each standing at its 
 
 
 
-  [1]: http://techoctave.com/c7/posts/68-nhibernate-the-good-parts
+  [1]: https://techoctave.com/posts/68-nhibernate-the-good-parts
   [2]: http://techoctave.com/gauges/
   [3]: https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/call
   [4]: http://coffeescript.org/
-  [5]: http://techoctave.com/c7/posts/90-designer-languages
-  [6]: http://techoctave.com/c7/posts/92-words-are-wind
+  [5]: https://techoctave.com/posts/90-designer-languages
+  [6]: https://techoctave.com/posts/92-words-are-wind

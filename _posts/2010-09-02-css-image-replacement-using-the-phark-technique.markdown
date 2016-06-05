@@ -42,4 +42,4 @@ Using this CSS image replacement technique will also help you code more semantic
 Hey, it's semantic XHMTL markup at its sexiest. Use the Phark CSS image replacement technique! Think of the baby kittens...
 
 
-  [1]: http://techoctave.com/c7/posts/10-scream-seo-karma-with-a-google-sitemap-for-your-rails-blog
+  [1]: https://techoctave.com/posts/10-scream-seo-karma-with-a-google-sitemap-for-your-rails-blog

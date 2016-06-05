@@ -6,7 +6,7 @@ date: 2013-06-03 10:23:19
 permalink: /c7/posts/115-javascript-is-the-target-language-for-the-web-and-that-s-ok
 ---
 
-<img src="http://techoctave.com/c7/static/unreal-engine-epic-citadel-mozilla.jpg" alt="Asm.js is for game developers, not web developers." title="Asm.js is for game developers, not web developers."/>
+<img src="https://techoctave.com/static/unreal-engine-epic-citadel-mozilla.jpg" alt="Asm.js is for game developers, not web developers." title="Asm.js is for game developers, not web developers."/>
 
 JavaScript is indeed a target language. Time and good sense has shown us it is a [high-level language][1], so far removed from either low-level or assembly. Yet, it is a target language non-the-less. 
 
@@ -22,7 +22,7 @@ Similar to how web developers use JavaScript, game developers use C/C++ and Open
 
 In fact, [game developers target JavaScript][7] because that's the <u>ONLY</u> way they can access OpenGL:
 
-<img src="http://techoctave.com/c7/static/asmjs-compilation-execution-pipeline.jpg" alt="Game developers target JavaScript that is the only way they can access WebGL via HTML5." title="Game developers target JavaScript that is the only way they can access WebGL via HTML5."/>
+<img src="https://techoctave.com/static/asmjs-compilation-execution-pipeline.jpg" alt="Game developers target JavaScript that is the only way they can access WebGL via HTML5." title="Game developers target JavaScript that is the only way they can access WebGL via HTML5."/>
 
 But for WebGL, game developers would have no use for JavaScript. Instead of three (3) layers between game developers and WebGL/OpenGL, what if there were zero (0)? Think how much faster the games would be. In fact, there would be no need for asm.js at all.
 
@@ -41,11 +41,11 @@ Game developers who want to run their software on web browsers can target JavaSc
 That makes JavaScript the Target Language for the Web and that's OK.
 
 
-  [1]: http://techoctave.com/c7/posts/102-the-only-higher-level-than-javascript-is-god-s-word
+  [1]: https://techoctave.com/posts/102-the-only-higher-level-than-javascript-is-god-s-word
   [2]: http://blog.mozilla.org/blog/2013/03/27/mozilla-is-unlocking-the-power-of-the-web-as-a-platform-for-gaming/
   [3]: http://www.hanselman.com/blog/JavaScriptIsWebAssemblyLanguageAndThatsOK.aspx
   [4]: https://github.com/jashkenas/coffee-script/wiki/List-of-languages-that-compile-to-JS
-  [5]: http://techoctave.com/c7/posts/90-designer-languages
+  [5]: https://techoctave.com/posts/90-designer-languages
   [6]: https://developer.mozilla.org/en-US/docs/Web/WebGL/Getting_started_with_WebGL?redirectlocale=en-US&redirectslug=WebGL%2FGetting_started_with_WebGL
   [7]: http://www.unrealengine.com/html5_faq/
-  [8]: http://techoctave.com/c7/posts/97-why-c-never-left
+  [8]: https://techoctave.com/posts/97-why-c-never-left

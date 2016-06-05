@@ -263,7 +263,7 @@ Well, you're done really! I hope this helps.
 For the uninitiated, deploying to Ubuntu (or any Linux distro) can be daunting. But, once you get over having nothing but a black screen to work with, you'll realize how unshackled and productive you feel. Good luck Beloved!
 
 
-  [1]: http://techoctave.com/c7/posts/3-passenger-for-nginx-is-the-jquery-of-web-server-software
-  [2]: http://techoctave.com/c7/posts/4-rails-sub-uri-403-forbidden-errors-when-deploying-with-passenger-for-nginx
-  [3]: http://techoctave.com/c7/posts/4-rails-sub-uri-403-forbidden-errors-when-deploying-with-passenger-for-nginx
+  [1]: https://techoctave.com/posts/3-passenger-for-nginx-is-the-jquery-of-web-server-software
+  [2]: https://techoctave.com/posts/4-rails-sub-uri-403-forbidden-errors-when-deploying-with-passenger-for-nginx
+  [3]: https://techoctave.com/posts/4-rails-sub-uri-403-forbidden-errors-when-deploying-with-passenger-for-nginx
   [4]: http://modrails.com/documentation/Users%20guide%20Nginx.html#PassengerMaxPoolSize

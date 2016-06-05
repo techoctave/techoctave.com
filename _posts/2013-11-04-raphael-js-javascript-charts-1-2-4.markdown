@@ -6,7 +6,7 @@ date: 2013-11-04 12:42:56
 permalink: /c7/posts/129-raphael-js-javascript-charts-1-2-4
 ---
 
-<img src="http://techoctave.com/c7/static/techoctave-charts-gauges-api-docs.png" alt="TechOctave JavaScript Charts and Gauges API Documentation."/>
+<img src="https://techoctave.com/static/techoctave-charts-gauges-api-docs.png" alt="TechOctave JavaScript Charts and Gauges API Documentation."/>
 
 Hi Everyone - The latest version of our [JavaScript Charts][1] Suite and [JavaScript Gauges][2] Suite is here! :) 
 
@@ -17,7 +17,7 @@ We love the look and feel. Every time we use the new documentation it's like spe
 
 Also, this release fixes a major bug limiting the number of Columns and Bars on the ColumnChart and BarChart - along with misaligned label positions. See, example of bug report showing shifting labels and bars:
 
-<img src="http://techoctave.com/c7/static/charts-shifting-bug-screenshot.png" alt="Charts shifting bug screenshot."/>
+<img src="https://techoctave.com/static/charts-shifting-bug-screenshot.png" alt="Charts shifting bug screenshot."/>
 
 ###Release Notes: 1.2.4
 ####TechOctave Charts Suite

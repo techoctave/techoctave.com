@@ -151,14 +151,14 @@ Blogcast is for developers who are ready to share their passions with the world.
 
 
   [1]: http://twitter.com/tiandavis/statuses/27180591945
-  [2]: http://techoctave.com/c7
+  [2]: https://techoctave.com
   [3]: http://techoctave.com/blogcast
   [4]: http://gettingreal.37signals.com/ch09_Interface_First.php
-  [5]: http://techoctave.com/c7/posts/26-seo-friendly-urls-in-rails
+  [5]: https://techoctave.com/posts/26-seo-friendly-urls-in-rails
   [6]: http://gettingreal.37signals.com/ch09_One_Interface.php
-  [7]: http://techoctave.com/c7/posts/16-how-to-host-a-rails-app-with-phusion-passenger-for-nginx
-  [8]: http://techoctave.com/c7/posts/37-authlogic-and-rails-3-0-solution
+  [7]: https://techoctave.com/posts/16-how-to-host-a-rails-app-with-phusion-passenger-for-nginx
+  [8]: https://techoctave.com/posts/37-authlogic-and-rails-3-0-solution
   [9]: http://techoctave.com/blogcast
   [10]: http://akismet.com/
   [11]: http://techoctave.com/blogcast
-  [12]: http://techoctave.com/c7/posts/43-blogcast-1-0-5-release-notes-and-the-wordpress-migrator-tool
+  [12]: https://techoctave.com/posts/43-blogcast-1-0-5-release-notes-and-the-wordpress-migrator-tool

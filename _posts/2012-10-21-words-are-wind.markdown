@@ -6,7 +6,7 @@ date: 2012-10-21 05:21:15
 permalink: /c7/posts/92-words-are-wind
 ---
 
-<img src="http://techoctave.com/c7/static/javascript-dont-thread-on-me.png" alt="JavaScript: Don't Thread On Me"/>
+<img src="https://techoctave.com/static/javascript-dont-thread-on-me.png" alt="JavaScript: Don't Thread On Me"/>
 
 I love JavaScript. [The Future is JavaScript][1] - I believe this. They say figure out what you love and do that for the rest of your life. For some time now, I've been past the infatuation stage. With JavaScript, it is now a love affair run deep. Others share my passion as well.
 
@@ -25,7 +25,7 @@ Chances at bay, only one thing is certain...
 On the road to JavaScript mastery, there is no perfect step. There is only a step and I suggest you take it.
 
 
-  [1]: http://techoctave.com/c7/posts/67-the-future-is-javascript
-  [2]: http://techoctave.com/c7/posts/90-designer-languages
-  [3]: http://techoctave.com/c7/posts/49-rails-3-1-and-the-jquery-effect
+  [1]: https://techoctave.com/posts/67-the-future-is-javascript
+  [2]: https://techoctave.com/posts/90-designer-languages
+  [3]: https://techoctave.com/posts/49-rails-3-1-and-the-jquery-effect
   [4]: http://techoctave.com/gauges/

@@ -75,11 +75,11 @@ Such an ability is a gift! Nothing short of a burning light. A light I've seen t
 Where do you fit in? Are you a Designer, Developer or Sweeper?
 
 
-  [1]: http://techoctave.com/c7/posts/33-the-truth-about-cross-browser-development-and-3-secrets-to-better-compatibility
-  [2]: http://techoctave.com/c7/posts/7-design-in-iterations
-  [3]: http://techoctave.com/c7/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css
-  [4]: http://techoctave.com/c7/posts/26-seo-friendly-urls-in-rails
+  [1]: https://techoctave.com/posts/33-the-truth-about-cross-browser-development-and-3-secrets-to-better-compatibility
+  [2]: https://techoctave.com/posts/7-design-in-iterations
+  [3]: https://techoctave.com/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css
+  [4]: https://techoctave.com/posts/26-seo-friendly-urls-in-rails
   [5]: http://twitter.com/tiandavis/statuses/1261761877512192
-  [6]: http://techoctave.com/c7/posts/1-hello-world
+  [6]: https://techoctave.com/posts/1-hello-world
 
 

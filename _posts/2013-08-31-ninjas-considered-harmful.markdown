@@ -10,6 +10,6 @@ Please stop posting jobs for "_ _ _ ninjas." It is disrespectful to the ninja co
 
 <iframe src="http://fast.wistia.net/embed/iframe/b579134c72?playerColor=bb6b29&version=v1&videoHeight=315&videoWidth=560&volumeControl=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="100%" height="500"></iframe> 
 
-<img src="http://techoctave.com/c7/static/code-ninja.jpg"/>
+<img src="https://techoctave.com/static/code-ninja.jpg"/>
 
                        

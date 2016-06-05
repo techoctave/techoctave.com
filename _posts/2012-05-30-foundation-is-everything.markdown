@@ -15,7 +15,7 @@ One of them was a very good friend. I never got to tell him, but sometimes I fel
 
 Let's call him Hercules:
 
-<img src="http://techoctave.com/c7/static/hercules.jpg" alt="Hercules"/>
+<img src="https://techoctave.com/static/hercules.jpg" alt="Hercules"/>
 
 Hercules created a welcoming environment where I could explore C++ and literally ask him any questions I wanted. Talk about lucking out!
 
@@ -34,7 +34,7 @@ You see, what I learned most from Hercules was less about being a coding BAMF an
 
 Then there were the Twins. I affectionately called them [Cerberus][2]:
 
-<img src="http://techoctave.com/c7/static/cerberus.jpg" alt="Cerberus"/>
+<img src="https://techoctave.com/static/cerberus.jpg" alt="Cerberus"/>
 
 The title wasn't as glamorous as Hercules. Naturally, they didn't care for it. I understood. It's not like they were guarding anything in particular. Quite the opposite actually.
 
@@ -60,7 +60,7 @@ They taught me how to find out which code libraries were best and how to realize
 
 I worked on my first [dashboard gauge][3] application with Cerberus:
 
-<img src="http://techoctave.com/c7/static/engine-dashboard-gauges.png" alt="Engine Dashboard Gauges - Flight Management System"/>
+<img src="https://techoctave.com/static/engine-dashboard-gauges.png" alt="Engine Dashboard Gauges - Flight Management System"/>
 
 It was a Flight Management System - aptly code named Krull. Unmanaged and free C++ with an OpenGL and OpenAL core.
 

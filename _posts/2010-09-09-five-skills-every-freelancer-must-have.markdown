@@ -34,5 +34,5 @@ Have you learned any other helpful tips for freelancers? Leave a comment and we 
 
 
   [1]: http://techoctave.com
-  [2]: http://techoctave.com/c7/posts/16-how-to-host-a-rails-app-with-phusion-passenger-for-nginx
+  [2]: https://techoctave.com/posts/16-how-to-host-a-rails-app-with-phusion-passenger-for-nginx
   [3]:  http://terralien.com/blog/articles/2009/02/27/five-skills-every-freelancer-must-have

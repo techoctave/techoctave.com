@@ -18,7 +18,7 @@ Not to be outdone by himself and in true [Sweeper][4] fashion, Curtis rolled his
 
 No doubt, Curtis is a Manager of One:
 
-<img src="http://techoctave.com/c7/static/blogcast-is-for-starters.png" alt="Blogcast is for Starters" title="Blogcast is for Starters" width="520"/>
+<img src="https://techoctave.com/static/blogcast-is-for-starters.png" alt="Blogcast is for Starters" title="Blogcast is for Starters" width="520"/>
 
 He could have just stopped there but didn't. Instead, he went to work and released his design work on the Ashley dedicated blog. That's giving back 100% - no question about it!
 
@@ -28,7 +28,7 @@ I've read both Getting Real and REWORK by Jason Fried and David Heinemeier Hanss
 
 REWORK's pragmatic insight into business sets the tone for just what Blogcast is - a REWORK of blogging:
 
-<img src="http://techoctave.com/c7/static/blogcast-is-a-rework-of-blogging.jpg" alt="Blogcast is a REWORK of blogging" title="Blogcast is a REWORK of blogging" width="520"/>
+<img src="https://techoctave.com/static/blogcast-is-a-rework-of-blogging.jpg" alt="Blogcast is a REWORK of blogging" title="Blogcast is a REWORK of blogging" width="520"/>
 
 
 I'll tell you straight up, if I'm looking at two developers - one has read REWORK and the other hasn't - I'm going with the guy that has read REWORK - Done Deal. 
@@ -59,11 +59,11 @@ Up for the challenge?
   [1]: http://twitter.com/kgwapo
   [2]: http://techoctave.com/blogcast
   [3]: http://supreme.dfm.asia/
-  [4]: http://techoctave.com/c7/posts/35-designer-developer-sweeper
+  [4]: https://techoctave.com/posts/35-designer-developer-sweeper
   [5]: http://ashley.loves.curtisgwapo.com/
-  [6]: http://techoctave.com/c7/posts/39-less-software-lessons-from-the-front-line-of-the-war-on-bloatware
+  [6]: https://techoctave.com/posts/39-less-software-lessons-from-the-front-line-of-the-war-on-bloatware
   [7]: http://twitter.com/tiandavis
-  [8]: http://techoctave.com/c7
+  [8]: https://techoctave.com
   [9]: https://github.com/tiandavis
 
 

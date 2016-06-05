@@ -6,7 +6,7 @@ date: 2013-02-23 03:51:54
 permalink: /c7/posts/102-the-only-higher-level-than-javascript-is-god-s-word
 ---
 
-<img src="http://techoctave.com/c7/static/javascript-is-not-low-level.jpg" width="100%"/>
+<img src="https://techoctave.com/static/javascript-is-not-low-level.jpg" width="100%"/>
 
 I'm so sick and tired of people describing JavaScript as "low-level". If you're not "MOV AL, 61h" all damn day, you're not doing low-level programming; so give it a rest.
 
@@ -92,7 +92,7 @@ The latest trend is folks regurgitating phrases like "JavaScript is the lowest l
 
 It's just stinking wrong. Absolutely, unequivocally wrong:
 
-<img src="http://techoctave.com/c7/static/say-low-level-one-more-goddamn-time.jpg" width="520"/>
+<img src="https://techoctave.com/static/say-low-level-one-more-goddamn-time.jpg" width="520"/>
 
 In computer science, a high-level programming language is a programming language with strong abstraction from the details of the computer and it's machine code.
 
@@ -191,12 +191,12 @@ I'm not saying these languages aren't innovative because they are. I'm not sayin
 What I am saying is don't confuse science with fashion.
 
 
-  [1]: http://techoctave.com/c7/posts/57-hustle-and-code
+  [1]: https://techoctave.com/posts/57-hustle-and-code
   [2]: http://flint.cs.yale.edu/cs422/doc/art-of-asm/pdf/CH08.PDF
   [3]: http://msdn.microsoft.com/en-us/library/afzk3475(v=vs.80).aspx
   [4]: http://www.hanselman.com/blog/JavaScriptIsAssemblyLanguageForTheWebPart2MadnessOrJustInsanity.aspx
   [5]: https://twitter.com/andraganescu/status/305006413959290882
   [6]: https://twitter.com/HexstreamSoft/status/305050017180291073
-  [7]: http://techoctave.com/c7/posts/97-why-c-never-left
-  [8]: http://techoctave.com/c7/posts/90-designer-languages
+  [7]: https://techoctave.com/posts/97-why-c-never-left
+  [8]: https://techoctave.com/posts/90-designer-languages
   [9]: http://blog.izs.me/post/10213512387/javascript-is-not-web-assembly

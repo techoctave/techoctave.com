@@ -8,7 +8,7 @@ permalink: /c7/posts/133-javascript-flight-gauges
 
 We don't know where most developers start, but this is where we start:
 
-<img src="http://techoctave.com/c7/static/artificial_horizon_gauge.png" alt="Artificial Horizon Attitude Indicator Gauge Concept JavaScript"/>
+<img src="https://techoctave.com/static/artificial_horizon_gauge.png" alt="Artificial Horizon Attitude Indicator Gauge Concept JavaScript"/>
 
 *Artificial Horizon Concept - December 2012*
 
@@ -70,6 +70,6 @@ Great people develop on principle. Great software develops on principle too. Get
 
 
   [1]: http://techoctave.com/simulation
-  [2]: http://techoctave.com/c7/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css
-  [3]: http://techoctave.com/c7/posts/66-beautiful-cross-browser-javascript-dashboard-charts
-  [4]: http://techoctave.com/c7/posts/57-hustle-and-code
+  [2]: https://techoctave.com/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css
+  [3]: https://techoctave.com/posts/66-beautiful-cross-browser-javascript-dashboard-charts
+  [4]: https://techoctave.com/posts/57-hustle-and-code

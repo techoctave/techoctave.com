@@ -6,7 +6,7 @@ date: 2012-02-09 12:18:12
 permalink: /c7/posts/68-nhibernate-the-good-parts
 ---
 
-<img src="http://techoctave.com/c7/static/samurai.jpg" width="100%"/>
+<img src="https://techoctave.com/static/samurai.jpg" width="100%"/>
 
 
 NHibernate is an Object Relational Mapper (ORM) for the .NET Runtime. XML Mappings are still the most popular method of mapping persistent classes to their relational tables:
