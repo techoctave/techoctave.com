@@ -12,7 +12,7 @@
       <meta name="description" content="&lt;h1 class="page-title" itemprop="name headline"&gt;{{ page.title }}&lt;/h1&gt; {%for post in site.posts %} {% unless post.next %} &lt;h3 class="archives-date"&gt;{{ post.date | date: '%Y' }}&lt;/h3&gt; &lt;ul class="archives"&gt; {% else %} {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %} {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %} {% if year != nyear %} &lt;/ul&gt; &lt;h3&gt;{{ post.date | date: '%Y' }}&lt;/h3&gt; &lt;ul class="archives"&gt; {% endif %} {% endunless %} &lt;li&gt; &lt;a href="{{ post.url }}"&gt;{{...">
       
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10">
-      <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
+      <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
       <link rel="stylesheet" type="text/css" href="/css/main.css" />
       <link rel="stylesheet" type="text/css" href="/css/syntax.css" />
       <link href="atom.xml" type="application/atom+xml" rel="alternate" title="Site ATOM Feed">
