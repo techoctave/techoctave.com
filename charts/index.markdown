@@ -12,14 +12,16 @@ permalink: /charts/
 ![highly_customizable_charts](/images/highly_customizable_charts.png)
 
 
+<strong>30-day money back guarantee.</strong> Support by developers for developers. Quick software integration. Top notch customer service. 1-year major updates & support.
+
 <div class="products clearfix">
 	<table class="plans">
 	<thead>
 		<tr>
-			<th class="product">Product options</th>
+			<!--<th class="product">Product options</th>
 			<th class="Basic">Basic</th>
-			<th class="Premium">Premium</th>
-			<th class="Supreme">Supreme</th>
+			<th class="Premium">Premium</th>-->
+			<th class="Supreme">Supreme Package</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -27,12 +29,12 @@ permalink: /charts/
 			<td class="product">
 				Gauges <a href="javascript:void(0);" class="i" title="Learn more...">+</a>
 			</td>
-			<td class="Basic"></td>
+			<!--<td class="Basic"></td>
 			<td class="Premium"></td>
-			<td class="Supreme">Yes</td>
+			<td class="Supreme">Yes</td>-->
 		</tr>
 		<tr class="details" style="display: none;">
-			<td colspan="4">
+			<td colspan="1">
 				<div style="visibility: visible; opacity: 1;">Our dynamic gauges make it easy to customize appearance.  We include over 70+ customizable properties and 30+ sample gauges to jumpstart your project. Great for executive dashboards, simulations and winning new business. <a href="http://techoctave.com/gauges" target="_blank">Learn more</a></div>
 			</td>
 		</tr>
@@ -40,12 +42,12 @@ permalink: /charts/
 		<tr class="active">
 			<td class="product">
 				<a href="javascript:void(0)" class="i" title="Learn more...">+</a>Bar charts</td>
-			<td class="Basic">Yes</td>
+			<!--<td class="Basic">Yes</td>
 			<td class="Premium">Yes</td>
-			<td class="Supreme">Yes</td>
+			<td class="Supreme">Yes</td>-->
 		</tr>
 		<tr class="details" style="display: none;">
-			<td colspan="4">
+			<td colspan="1">
 				<div style="visibility: visible; opacity: 1;">Includes our Bar Chart and Stacked Bar Chart. Bar charts show the changes in a data series over time and can be used to compare one or more categories of data. Stacked bar charts compare the value that each data point contributes to a total across categories. <a href="http://techoctave.com/charts" target="_blank">Learn more</a></div>
 			</td>
 		</tr>
@@ -53,12 +55,12 @@ permalink: /charts/
 		<tr class="active">
 			<td class="product">
 				<a href="javascript:void(0)" class="i" title="Learn more...">+</a>Column charts</td>
-			<td class="Basic"></td>
+			<!--<td class="Basic"></td>
 			<td class="Premium">Yes</td>
-			<td class="Supreme">Yes</td>
+			<td class="Supreme">Yes</td>-->
 		</tr>
 		<tr class="details" style="display: none;">
-			<td colspan="4">
+			<td colspan="1">
 				<div style="visibility: visible; opacity: 1;">Includes our Column Chart and Stacked Column Chart.  Column charts are vertical bar charts. Like bar charts, they can be used to compare one or more categories of data. Stacked column charts compare the value that each data point contributes to a total. <a href="http://techoctave.com/charts" target="_blank">Learn more</a></div>
 			</td>
 		</tr>
@@ -66,12 +68,12 @@ permalink: /charts/
 		<tr class="active">
 			<td class="product">
 				<a href="javascript:void(0)" class="i" title="Learn more...">+</a>Line charts</td>
-			<td class="Basic">Yes</td>
+			<!--<td class="Basic">Yes</td>
 			<td class="Premium">Yes</td>
-			<td class="Supreme">Yes</td>
+			<td class="Supreme">Yes</td>-->
 		</tr>
 		<tr class="details" style="display: none;">
-			<td colspan="4">
+			<td colspan="1">
 				<div style="visibility: visible; opacity: 1;">Includes our Line Chart and Area Chart.  Line charts and Area charts display information as a series of data points connected by straight line segments. <a href="http://techoctave.com/charts" target="_blank">Learn more</a></div>
 			</td>
 		</tr>
@@ -79,12 +81,12 @@ permalink: /charts/
 		<tr class="active">
 			<td class="product">
 				<a href="javascript:void(0)" class="i" title="Learn more...">+</a>Scatter charts</td>
-			<td class="Basic"></td>
+			<!--<td class="Basic"></td>
 			<td class="Premium">Yes</td>
-			<td class="Supreme">Yes</td>
+			<td class="Supreme">Yes</td>-->
 		</tr>
 		<tr class="details" style="display: none;">
-			<td colspan="4">
+			<td colspan="1">
 				<div style="visibility: visible; opacity: 1;">Includes our Scatter charts that can be used to show the relationship between two variables. The relationship is displayed as a collection of points using Cartesian coordinates. <a href="http://techoctave.com/charts" target="_blank">Learn more</a></div>
 			</td>
 		</tr>
@@ -92,12 +94,12 @@ permalink: /charts/
 		<tr class="active">
 			<td class="product">
 				<a href="javascript:void(0)" class="i" title="Learn more...">+</a>Pie charts</td>
-			<td class="Basic">Yes</td>
+			<!--<td class="Basic">Yes</td>
 			<td class="Premium">Yes</td>
-			<td class="Supreme">Yes</td>
+			<td class="Supreme">Yes</td>-->
 		</tr>
 		<tr class="details" style="display: none;">
-			<td colspan="4">
+			<td colspan="1">
 				<div style="visibility: visible; opacity: 1;">Includes our famous Pie Chart and two bonus variations: Donut Chart and Spie Chart. Pie charts are circular charts subdivided into pie slices. Pie charts are used to illustrate the size relationship between each pie slice and the whole pie. Yummy! <a href="http://techoctave.com/charts" target="_blank">Learn more</a></div>
 			</td>
 		</tr>
@@ -105,12 +107,12 @@ permalink: /charts/
 		<tr class="active">
 			<td class="product">
 				<a href="javascript:void(0)" class="i" title="Learn more...">+</a>Bullet charts</td>
-			<td class="Basic"></td>
+			<!--<td class="Basic"></td>
 			<td class="Premium"></td>
-			<td class="Supreme">Yes</td>
+			<td class="Supreme">Yes</td>-->
 		</tr>
 		<tr class="details" style="display: none;">
-			<td colspan="4">
+			<td colspan="1">
 				<div style="visibility: visible; opacity: 1;">Bullet charts feature a primary measure (e.g. revenue) and give you the ability to compare that measure to a target measure. Using color bands, you can relate the primary measure to qualitative ranges of performance (e.g. poor, satisfactory, and good). Our chart can display horizontally and vertically. <a href="http://techoctave.com/charts" target="_blank">Learn more</a></div>
 			</td>
 		</tr>
@@ -118,12 +120,12 @@ permalink: /charts/
 		<tr class="active">
 			<td class="product">
 				<a href="javascript:void(0)" class="i" title="Learn more...">+</a>Bubble charts</td>
-			<td class="Basic"></td>
+			<!--<td class="Basic"></td>
 			<td class="Premium"></td>
-			<td class="Supreme">Yes</td>
+			<td class="Supreme">Yes</td>-->
 		</tr>
 		<tr class="details" style="display: none;">
-			<td colspan="4">
+			<td colspan="1">
 				<div style="visibility: visible; opacity: 1;">Bubble charts are used to visualize a data set with 2 to 4 dimensions. The first two dimensions are visualized as coordinates, the 3rd as color and the 4th as size. Our chart is highly flexible and beautiful too. <a href="http://techoctave.com/charts" target="_blank">Learn more</a></div>
 			</td>
 		</tr>
@@ -131,19 +133,27 @@ permalink: /charts/
 		<tr class="active">
 			<td class="product">
 				<a href="javascript:void(0)" class="i" title="Learn more...">+</a>Radar charts</td>
-			<td class="Basic"></td>
+			<!--<td class="Basic"></td>
 			<td class="Premium"></td>
-			<td class="Supreme">Yes</td>
+			<td class="Supreme">Yes</td>-->
 		</tr>
 		<tr class="details" style="display: none;">
-			<td colspan="4">
+			<td colspan="1">
 				<div style="visibility: visible; opacity: 1;">Radar charts plot the values of each category along a separate axis starting from the center of the chart and ending at the outer ring. In a Radar chart, a point close to the center indicates a low value and a point near the perimeter indicates a high value. Expect only the best from our Radar chart. <a href="http://techoctave.com/charts" target="_blank">Learn more</a></div>
 			</td>
 		</tr>
 	</tbody>
+	<tfoot>
+		<tr>
+			<!--<th class="product-footer" style="width: 260px;"></th>
+			<th class="Basic">Buy</th>
+			<th class="Premium">Buy</th>-->
+			<th class="Supreme edges buy-now"><a href="https://sites.fastspring.com/techoctave/instant/charts">Buy Now</a></th>
+		</tr>
+	</tfoot>
 	</table>
 
-	<div class="purchase">
+	<!--<div class="purchase">
 		<a class="buy checkout" href="https://sites.fastspring.com/techoctave/instant/charts">Buy Now <em>Safe Secure Checkout</em></a>
 		
 		<ul class="list extras">
@@ -157,8 +167,9 @@ permalink: /charts/
 			<h2>Enterprise Customers</h2>
 			<p><a href="mailto:sales@techoctave.com">Need custom integration? Hire us. We live and breathe awesome.</a></p>
 		</div>
-	</div><!--purchase-->
+	</div>--><!--purchase-->
 </div><!--products-->
+
 
 ## Great products begin with great components.
 
@@ -353,11 +364,19 @@ Or contact us to schedule a demo. We'll walk you through the example projects an
 
 <br/>
 
+## So, what's next exactly?
+
+<strong>Purchase a library package.</strong> Within a few seconds, you'll receive a receipt for your purchase and a secure link to download the package. Each package comes with tons of examples to get you up and running in no time.
+
+Or contact us to start a trial. We'll answer any questions you may have and get you started on the path to integration.
+
+<br/>
+
 ## Support for developers by developers.
 
-<strong>We built our charts to help you meet your goals.</strong> This is why we offer one year of guaranteed support with your purchase to make sure that happens.
+<strong>We built our gauges to help you meet your goals.</strong> This is why we offer guaranteed support, for all active licenses, for the life of our product.
 
-Have a few questions or just need to chat - contact [sales@techoctave.com](mailto: sales@techoctave.com) or give us a call at +1 (614) 398-1220. We are here to help you succeed and experience a return on your investment!
+Have a few questions or just need to chat - contact [sales@techoctave.com](mailto: sales@techoctave.com) or give us a call at +1 (614) 398-1220. We succeed when you succeed.
 
 
 
@@ -368,6 +387,7 @@ Have a few questions or just need to chat - contact [sales@techoctave.com](mailt
 
 <footer>
     <p style="font-size: 80%;">TechOctave, The Lion, "Beautiful & Inspired" are Registered Trademarks of TechOctave, LLC.</p>
-    <p style="font-size: 65%;">HANDCRAFTED WITH <abbr style="color: # FF2400; font-variant: none" title="love">❤</abbr> IN COLUMBUS OHIO</p>
+    <p style="font-size: 65%;">HANDCRAFTED WITH <abbr style="color: #FF2400; font-variant: none" title="love">❤</abbr> IN COLUMBUS OHIO</p>
 </footer>
+
 

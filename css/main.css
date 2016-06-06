@@ -842,6 +842,10 @@ section#single-wrap img {
 /*-----------------------------------------------------------
 						PLANS
 -----------------------------------------------------------*/
+.products {
+	margin: 0.5em 0;
+}
+
 .products .purchase {
 	float: right;
 	width: 210px;
@@ -849,8 +853,8 @@ section#single-wrap img {
 }
 
 table.plans {
-	width: 580px;
-	font-size: 25px;
+	width: 100%;
+	font-size: 120%;
 	table-layout: fixed;
 	float: left;
     margin-bottom: 40px;
@@ -869,10 +873,29 @@ table.plans td {
 
 table.plans th {
 	border-bottom: 3px solid #DDDDDD;
-	padding-top: 30px;
+	padding-top: 15px;
 	padding-bottom: 15px;
     
-    font-size: 88%;
+    font-size: 100%;
+}
+
+table.plans th a {
+	text-decoration: none;
+	color: #CC0000;
+}
+
+table.plans th.edges {
+    border-right: 1px dotted #DDDDDD;
+	border-left: 1px dotted #DDDDDD;
+	border-bottom: 3px solid #DDDDDD;
+}
+
+table.plans th.product-footer {
+	border-bottom: 3px solid #ffffff;
+}
+
+table.plans tfoot th {
+	cursor: pointer;
 }
 
 table.plans th.product {
@@ -894,7 +917,7 @@ table.plans tr td.product a.i {
     color: #FFFFFF;
     display: block;
     float: right;
-    font-size: 20px;
+    font-size: 100%;
     font-weight: bold;
     padding: 2px 6px;
 	border-radius: 3px 3px 3px 3px;
@@ -917,6 +940,39 @@ table.plans tr.details td {
 	border-bottom: 3px solid #DDDDDD;
 	border-top: 3px solid #DDDDDD;
 }
+
+/*-----------------------------------------------------------
+						PLAN
+-----------------------------------------------------------*/
+
+section#single-wrap .plan {
+	margin: 2em;
+}
+
+section#single-wrap h3.plan-title {
+    -webkit-font-smoothing: antialiased;
+    font-family: Whitney SSm A,Whitney SSm B,Helvetica,Arial;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 1.0em;
+    text-align: center;
+    padding: 35px 0 20px;
+    margin: 0 auto 20px;
+    /* color: #086b80; */
+    width: 80%;
+    border-bottom: 1px solid rgba(7,96,115,.07);
+}
+
+section#single-wrap .pricing .price {
+	font-family: Whitney SSm A,Whitney SSm B,Helvetica,Arial;
+    display: inline-block;
+    font-size: 6em;
+    line-height: 60px;
+    letter-spacing: -.05em;
+    vertical-align: middle;
+    color: #035162;
+}
+
 
 /*-----------------------------------------------------------
 						BUY BUTTON
@@ -1153,14 +1209,14 @@ section#single-wrap .video-js-box {
 
 
 @media only screen and (max-width : 825px) {
-    table.plans {
+    /*table.plans {
         display: none;
     }
 
     section#single-wrap .purchase {
         margin: 0 auto;
         float: none;
-    }
+    }*/
 }
 
 
