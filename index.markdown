@@ -88,7 +88,7 @@ permalink: /
 
 Purchase a library package. Within a few seconds, you'll receive a receipt for your purchase and a secure link to download the package. Each package comes with tons of examples to get you up and running in no time.
 
-Or contact us to schedule a demo. We'll walk you through the example projects and answer any questions you may have. Want to partner with us on your next project? We love talking about those too and even better, "We know how to ship...!"
+Or contact us to start a trial. We'll answer any questions you may have and get you started on the path to integration. Want to partner with us on your next project? We love talking about those too and even better, "We know how to ship...!"
 
 Email us [sales@techoctave.com](mailto:sales@techoctave.com) or give us a call +1 (614) 398-1220. We look forward to helping you ship product you'll be proud of.
 
