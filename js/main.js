@@ -24,24 +24,21 @@ jQuery(document).ready(function($) {
 	
 	//Checkout
 	var stripe = StripeCheckout.configure({
-		key: "pk_test_tzEqhD4Grs6H7VkkHxpVTdHD",
+		key: "pk_live_BOYYmal1pN2cEZrzYwRum5cL",
 		image: "https://s3.amazonaws.com/stripe-uploads/acct_16JEWjKbOzLc5qpXmerchant-icon-1465516562655-lion.png",
 		locale: "auto",
 		billingAddress: false,
 		zipCode: false,
-		allowRememberMe: false,
+		allowRememberMe: true,
 		token: function(token) {
 			// You can access the token ID with `token.id`.
 			// Get the token ID to your server-side code for use.
-			
-			
 			token.plan = $(".buy").data("plan");
 			token.description = $(".buy").data("description");
-			console.log("token", token);
 			
 			$.ajax({
 				type: "POST",
-				url: "http://localhost:3000/charge",
+				url: "https://checkout.techoctave.com/charge",
 				cache: false,
 				data: JSON.stringify({ 
 					token: token
@@ -50,22 +47,25 @@ jQuery(document).ready(function($) {
 				contentType: 'application/json',
 				
 				success: function(response) {
-					console.log("success", response);
+					//console.log("success", response);
+					if(response.status === 200) {
+						window.location = "/confirmation";
+					}
 				},
 				
 				error: function(error) {
-					console.log("error", error);
+					//console.log("error", error);
 				},
 				
 				complete: function(response) {
-					console.log("complete", response);
+					//console.log("complete", response);
 				}
 			});
 		},
 		closed: function() {
 			// The callback to invoke when Checkout is closed (not supported in IE6 and IE7). 
 			// Called after the token callback (for successful tokenizations).
-			console.log("closed");
+			//console.log("closed");
 		}
 	});
 
@@ -76,9 +76,6 @@ jQuery(document).ready(function($) {
 		var description = $(this).data("description") + " " + money + "/year";
 		var cents = amount * 100;
 		
-		console.log(description, amount);
-		
-		// Tests Credit Card: 4242 4242 4242 4242
 		stripe.open({
 			panelLabel: "Buy Now",
 			name: "TECHOCTAVE",

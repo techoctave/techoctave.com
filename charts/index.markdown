@@ -148,27 +148,23 @@ permalink: /charts/
 			<!--<th class="product-footer" style="width: 260px;"></th>
 			<th class="Basic">Buy</th>
 			<th class="Premium">Buy</th>-->
-			<th class="Supreme edges buy-now"><a href="https://sites.fastspring.com/techoctave/instant/charts">Buy Now</a></th>
+			<th class="Supreme edges buy" data-description="Charts Supreme" data-amount="495" data-plan="charts">Buy Now</th>
 		</tr>
 	</tfoot>
 	</table>
-
-	<!--<div class="purchase">
-		<a class="buy checkout" href="https://sites.fastspring.com/techoctave/instant/charts">Buy Now <em>Safe Secure Checkout</em></a>
-		
-		<ul class="list extras">
-			<li>30-day money back guarantee</li>
-			<li>Quick software integration</li>
-			<li>Top notch customer service</li>
-			<li>1-year major updates & support</li>
-		</ul>
-		
-		<div class="enterprise">
-			<h2>Enterprise Customers</h2>
-			<p><a href="mailto:sales@techoctave.com">Need custom integration? Hire us. We live and breathe awesome.</a></p>
-		</div>
-	</div>--><!--purchase-->
 </div><!--products-->
+
+## Why choose TechOctave?
+
+Let's be clear, you have choices, but there's a reason we're the #1 choice.
+
+<strong>Clear and simple licensing.</strong> Never worry about having to release your source code to meet GPL or unknown licensing requirements. Simple licensing always.
+
+<strong>We'll never leave you in the cold.</strong> You will always have the support of our development team. Your bugs are our bugs. Your success is our success. 
+
+<strong>Unparalleled customization.</strong> Using our fully customizable properties, you can design a solution that's familiar and yet unique at the same time.
+
+<br/>
 
 
 ## Great products begin with great components.
