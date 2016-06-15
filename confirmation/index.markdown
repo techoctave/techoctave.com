@@ -1,7 +1,7 @@
 ---
 layout: posts
 title:  "Every day thousands of developers use our charts & gauges to get the job done right."
-permalink: /confirmation.html
+permalink: /confirmation/
 ---
 
 <section id="single-wrap">
