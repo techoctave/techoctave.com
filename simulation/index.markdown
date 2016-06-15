@@ -11,38 +11,6 @@ permalink: /simulation/
 
 ![flight_gauges_six](/images/flight_gauges_six.png)
 
-<!--<div id="plan">
-  <h3 class="plan-title">30-day money back guarantee</h3>
-
-  <div class="pricing">
-    <div class="price">
-      $4,999
-    </div>
-
-    <div class="description">
-      per year, floating license
-    </div>
-  </div>
-
-
-  <ol class="features">
-    <li>Airspeed Indicator</li>
-    <li>Artificial Horizon</li>
-    <li>Altimeter</li>
-    <li>Turn Coordinator</li>
-    <li>Horizontal Situation Indicator</li>
-    <li>Variometer</li>
-    <li>RPM Indicator</li>
-    <li>Heading Indicator</li>
-  </ol>
-  
-  <a href="https://dashboard.stripe.com/register" class="Plan-button">Buy Now</a>
-  
-  <p>
-    <strong>Support by developers for developers.</strong> Quick software integration. Top notch customer service. 1-year major updates & support.
-  </p>
-</div>--><!--plan-->
-
 <strong>30-day money back guarantee.</strong> Support by developers for developers. Quick software integration. Top notch customer service. 1-year major updates & support.
 
 <div class="products clearfix">
