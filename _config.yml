@@ -8,7 +8,7 @@ baseurl: ""
 
 #markdown: rdiscount
 markdown: kramdown
-permalink: /c7/:year/:month/:title.html/
+permalink: /c7/:year/:month/:title.html
 #highlighter: pygments
 highlighter: rouge
 
