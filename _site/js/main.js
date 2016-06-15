@@ -14,13 +14,13 @@ jQuery(document).ready(function($) {
   	});
 
   	//Affiliates
-  	$(".checkout").click(function() {
+  	/*$(".checkout").click(function() {
   		//Grab the affiliate source
   		var parameters = $.deparam.querystring();
 
   		//Update checkout link with affiliate source
   		$(".checkout").querystring(parameters);
-  	});
+  	});*/
 	
 	//Checkout
 	var stripe = StripeCheckout.configure({
