@@ -9,7 +9,7 @@ permalink: /confirmation.html
 
     <h1 class="page-title" itemprop="name headline" style="font-size: 500%; margin: 0;">Thank You!</h1>
     
-    <h1 class="page-title" itemprop="name headline" style="font-size: 150%;">Shortly you will recieve a confirmation email which includes your brand new license key and a secure download link. Welcome to the TechOctave family!</h1>
+    <h1 class="page-title" itemprop="name headline" style="font-size: 150%;">Shortly you'll recieve a receipt and confirmation email with your brand new license key and a secure download link. Welcome to the TechOctave family!</h1>
     
     <img src="/images/blog-header.png" usemap="#map" style="margin-top: -20px;" />
     
