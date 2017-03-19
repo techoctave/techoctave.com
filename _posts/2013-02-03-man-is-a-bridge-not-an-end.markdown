@@ -43,4 +43,4 @@ Like all things of value, our commitment to each other, our individual responsib
 But progress is worth the time. Truth be told, what higher concurrency could the Gods demand?
 
 
-  [1]: https://techoctave.com/posts/1-hello-world
+  [1]: https://techoctave.com/c7/posts/1-hello-world

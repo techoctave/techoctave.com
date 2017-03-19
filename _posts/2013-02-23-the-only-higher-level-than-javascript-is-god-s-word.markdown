@@ -191,12 +191,12 @@ I'm not saying these languages aren't innovative because they are. I'm not sayin
 What I am saying is don't confuse science with fashion.
 
 
-  [1]: https://techoctave.com/posts/57-hustle-and-code
+  [1]: https://techoctave.com/c7/posts/57-hustle-and-code
   [2]: http://flint.cs.yale.edu/cs422/doc/art-of-asm/pdf/CH08.PDF
   [3]: http://msdn.microsoft.com/en-us/library/afzk3475(v=vs.80).aspx
   [4]: http://www.hanselman.com/blog/JavaScriptIsAssemblyLanguageForTheWebPart2MadnessOrJustInsanity.aspx
   [5]: https://twitter.com/andraganescu/status/305006413959290882
   [6]: https://twitter.com/HexstreamSoft/status/305050017180291073
-  [7]: https://techoctave.com/posts/97-why-c-never-left
-  [8]: https://techoctave.com/posts/90-designer-languages
+  [7]: https://techoctave.com/c7/posts/97-why-c-never-left
+  [8]: https://techoctave.com/c7/posts/90-designer-languages
   [9]: http://blog.izs.me/post/10213512387/javascript-is-not-web-assembly

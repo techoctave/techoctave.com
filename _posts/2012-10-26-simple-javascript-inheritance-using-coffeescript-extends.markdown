@@ -246,9 +246,9 @@ Yet, many a language and community is ripe for innovation. Each standing at its 
 
 
 
-  [1]: https://techoctave.com/posts/68-nhibernate-the-good-parts
+  [1]: https://techoctave.com/c7/posts/68-nhibernate-the-good-parts
   [2]: http://techoctave.com/gauges/
   [3]: https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/call
   [4]: http://coffeescript.org/
-  [5]: https://techoctave.com/posts/90-designer-languages
-  [6]: https://techoctave.com/posts/92-words-are-wind
+  [5]: https://techoctave.com/c7/posts/90-designer-languages
+  [6]: https://techoctave.com/c7/posts/92-words-are-wind

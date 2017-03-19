@@ -145,8 +145,8 @@ All I ask is you grow with us.
 
   [1]: http://techoctave.com/simulation/
   [2]: http://techoctave.com/gauges/
-  [3]: https://techoctave.com/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css
-  [4]: https://techoctave.com/posts/79-never-save-anything-for-the-swim-back
+  [3]: https://techoctave.com/c7/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css
+  [4]: https://techoctave.com/c7/posts/79-never-save-anything-for-the-swim-back
   [5]: http://techoctave.com/gauges/
   [6]: http://techoctave.com/charts/
   [7]: http://techoctave.com/simulation/

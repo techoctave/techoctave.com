@@ -55,7 +55,7 @@
 	<span class="k">return</span> <span class="o">-</span><span class="nx">c</span> <span class="o">*</span> <span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="nx">t</span><span class="o">/=</span><span class="nx">d</span><span class="p">)</span><span class="o">*</span><span class="nx">t</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>Here, the output is in radians. So, for my <a href="https://techoctave.com/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css">jquery dashboard speedometer gauge</a>, that means I need a way to map each radian to a degree on my gauge, which will in turn map to a miles-per-hour (mph) on the texture itself.</p>
+<p>Here, the output is in radians. So, for my <a href="https://techoctave.com/c7/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css">jquery dashboard speedometer gauge</a>, that means I need a way to map each radian to a degree on my gauge, which will in turn map to a miles-per-hour (mph) on the texture itself.</p>
 
 <p>Here is my mapping the needle texture to each easing point:</p>
 
@@ -64,7 +64,7 @@
    <span class="p">(((</span><span class="k">this</span><span class="p">.</span><span class="nx">mph</span> <span class="o">-</span> <span class="mi">50</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1.8999</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.022900763</span><span class="p">);</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>The result is a degree value that directly corresponds to the needle’s position on my <a href="https://techoctave.com/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css">speedometer gauge</a>. This creates the degree that I need to pass to Raphael’s rotation methods.</p>
+<p>The result is a degree value that directly corresponds to the needle’s position on my <a href="https://techoctave.com/c7/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css">speedometer gauge</a>. This creates the degree that I need to pass to Raphael’s rotation methods.</p>
 
 <p>The exact Euclidean translation is a bit involved here and very much specific to the gauge texture you’re working with. Yet the results are a familiar part of our everyday lives - informational intelligence.</p>
 

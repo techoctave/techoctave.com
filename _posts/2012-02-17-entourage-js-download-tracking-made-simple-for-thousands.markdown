@@ -38,7 +38,7 @@ Need to track a large amount or even a small amount of file downloads? Checkout 
 A big shoutout to [@MikeCP][4] for identifying, analyzing and submitting the issue. Entourage wouldn't be as great without such a talented and passionate community. Enjoy!
 
 
-  [1]: https://techoctave.com/posts/58-entourage-js-automatic-download-tracking-for-asynchronous-google-analytics
+  [1]: https://techoctave.com/c7/posts/58-entourage-js-automatic-download-tracking-for-asynchronous-google-analytics
   [2]: http://techoctave.com/entourage/
   [3]: http://techoctave.com/entourage/
   [4]: https://twitter.com/#!/MikeCP

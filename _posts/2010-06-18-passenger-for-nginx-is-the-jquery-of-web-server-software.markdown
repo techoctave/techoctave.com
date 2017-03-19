@@ -50,4 +50,4 @@ Compare this same task in Apache:
 Nginx is intuitive and expressive and as a developer I choose to write this task in Nginx. It just feels less heavy and I appreciate not having to deal with the XML hell in the long run. Thanks Nginx!
 
 
-  [1]: https://techoctave.com/posts/16-how-to-host-a-rails-app-with-phusion-passenger-for-nginx
+  [1]: https://techoctave.com/c7/posts/16-how-to-host-a-rails-app-with-phusion-passenger-for-nginx

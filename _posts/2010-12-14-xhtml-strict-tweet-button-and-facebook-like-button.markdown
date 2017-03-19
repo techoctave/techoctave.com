@@ -106,5 +106,5 @@ Until next time, take care Beloved!
 
 
   [1]: http://techoctave.com/tweetlr
-  [2]: https://techoctave.com/posts/33-the-truth-about-cross-browser-development-and-3-secrets-to-better-compatibility
+  [2]: https://techoctave.com/c7/posts/33-the-truth-about-cross-browser-development-and-3-secrets-to-better-compatibility
   [3]: http://techoctave.com/blogcast

@@ -72,4 +72,4 @@ Happy Coding and Enjoy!
 
   [1]: http://codegolf.stackexchange.com/
   [2]: http://codegolf.stackexchange.com/questions/1034/reinvent-the-for-loop
-  [3]: https://techoctave.com/posts/67-the-future-is-javascript
+  [3]: https://techoctave.com/c7/posts/67-the-future-is-javascript

@@ -54,6 +54,6 @@ Where the variable *string* is a serialized Base64String string. From there you 
 
 
 
-  [1]: https://techoctave.com/posts/113-c-reading-xml-with-namespace
+  [1]: https://techoctave.com/c7/posts/113-c-reading-xml-with-namespace
   [2]: http://www.martinfowler.com/bliki/POJO.html
   [3]: http://en.wikipedia.org/wiki/Enterprise_Architect_(software)

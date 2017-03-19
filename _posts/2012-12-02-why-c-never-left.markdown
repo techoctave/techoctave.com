@@ -64,4 +64,4 @@ I pray we do not devolve so low as to forget our roots in this life. For we, as 
   [2]: http://en.wikipedia.org/wiki/Invisible_hand
   [3]: http://www.rubymotion.com/
   [4]: http://sealedabstract.com/rants/do-hard-things/
-  [5]: https://techoctave.com/posts/78-foundation-is-everything
+  [5]: https://techoctave.com/c7/posts/78-foundation-is-everything

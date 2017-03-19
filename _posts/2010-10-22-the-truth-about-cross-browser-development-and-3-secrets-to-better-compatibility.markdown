@@ -49,14 +49,14 @@ I can't overstate that enough - test often and test religiously! And for Pete's 
 [Firefox Web Developer][11] is another great Firefox add-on. Use Firefox Web Developer to make sure you are always in *Standards Compliance Mode*. Use the same tool to validate your XHTML markup against the W3C Markup Validation Service. Also use it to keep constant tabs on whether you are in *Standards Compliance Mode*.
 
 
-  [1]: https://techoctave.com/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css
-  [2]: https://techoctave.com/posts/22-ie7-and-ie8-browser-compatibility-testing-online-with-adobe-browserlab
+  [1]: https://techoctave.com/c7/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css
+  [2]: https://techoctave.com/c7/posts/22-ie7-and-ie8-browser-compatibility-testing-online-with-adobe-browserlab
   [3]: http://jquery.com/
-  [4]: https://techoctave.com/posts/3-passenger-for-nginx-is-the-jquery-of-web-server-software
+  [4]: https://techoctave.com/c7/posts/3-passenger-for-nginx-is-the-jquery-of-web-server-software
   [5]: http://getfirebug.com/
   [6]: http://www.mozilla.com/en-US/firefox/
-  [7]: https://techoctave.com/posts/40-xhtml-strict-tweet-button-and-facebook-like-button
-  [8]: https://techoctave.com/posts/22-ie7-and-ie8-browser-compatibility-testing-online-with-adobe-browserlab
+  [7]: https://techoctave.com/c7/posts/40-xhtml-strict-tweet-button-and-facebook-like-button
+  [8]: https://techoctave.com/c7/posts/22-ie7-and-ie8-browser-compatibility-testing-online-with-adobe-browserlab
   [9]: http://en.wikipedia.org/wiki/Firefox
   [10]: http://validator.w3.org/
   [11]: http://chrispederick.com/work/web-developer/

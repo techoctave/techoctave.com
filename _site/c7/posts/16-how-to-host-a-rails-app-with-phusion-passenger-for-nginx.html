@@ -42,9 +42,9 @@
     <div itemprop="articleBody">
       <p><img src="/c7/static/ruby-enterprise-edition.png" alt="ruby-enterprise-edition" /></p>
 
-<p>I believe <a href="https://techoctave.com/posts/3-passenger-for-nginx-is-the-jquery-of-web-server-software">Phusion Passenger for Nginx will do for Rails Deployment what jQuery did for JavaScript Development</a>. So it should come as no surprise that this will be an opinionated Rails deployment tutorial. Simply put, I couldn’t phantom deploying Rails without Passenger for Nginx.</p>
+<p>I believe <a href="https://techoctave.com/c7/posts/3-passenger-for-nginx-is-the-jquery-of-web-server-software">Phusion Passenger for Nginx will do for Rails Deployment what jQuery did for JavaScript Development</a>. So it should come as no surprise that this will be an opinionated Rails deployment tutorial. Simply put, I couldn’t phantom deploying Rails without Passenger for Nginx.</p>
 
-<p>Today I’m going to run you through getting your Rails app running on Ubuntu, Ruby Enterprise Edition (REE), Rails, Nginx and Phusion Passenger for Nginx. Lastly, I’ll quickly show you how to successfully <a href="https://techoctave.com/posts/4-rails-sub-uri-403-forbidden-errors-when-deploying-with-passenger-for-nginx">deploy your Rails app to a sub URI without any 403 Forbidden errors</a>.</p>
+<p>Today I’m going to run you through getting your Rails app running on Ubuntu, Ruby Enterprise Edition (REE), Rails, Nginx and Phusion Passenger for Nginx. Lastly, I’ll quickly show you how to successfully <a href="https://techoctave.com/c7/posts/4-rails-sub-uri-403-forbidden-errors-when-deploying-with-passenger-for-nginx">deploy your Rails app to a sub URI without any 403 Forbidden errors</a>.</p>
 
 <p>Here are my notes from one of my client’s latest Rails deployment.</p>
 
@@ -219,7 +219,7 @@ http <span class="o">{</span>
 
 <p>This command will create a symlink called <em>blog</em> in the document root <em>/www/domain.com/public_html/</em>.</p>
 
-<p>Remember, if you want to make the sub uri work, do not create a folder called <em>blog</em> in the document root. This will get you a nice <a href="https://techoctave.com/posts/4-rails-sub-uri-403-forbidden-errors-when-deploying-with-passenger-for-nginx">Rails sub uri 403 Forbidden error</a> from your passenger Nginx setup.</p>
+<p>Remember, if you want to make the sub uri work, do not create a folder called <em>blog</em> in the document root. This will get you a nice <a href="https://techoctave.com/c7/posts/4-rails-sub-uri-403-forbidden-errors-when-deploying-with-passenger-for-nginx">Rails sub uri 403 Forbidden error</a> from your passenger Nginx setup.</p>
 
 <p>For a typical Xen VPS setup, you should also think about adding the following tweaks to your Nginx conf:</p>
 

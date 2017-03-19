@@ -70,6 +70,6 @@ Great people develop on principle. Great software develops on principle too. Get
 
 
   [1]: http://techoctave.com/simulation
-  [2]: https://techoctave.com/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css
-  [3]: https://techoctave.com/posts/66-beautiful-cross-browser-javascript-dashboard-charts
-  [4]: https://techoctave.com/posts/57-hustle-and-code
+  [2]: https://techoctave.com/c7/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css
+  [3]: https://techoctave.com/c7/posts/66-beautiful-cross-browser-javascript-dashboard-charts
+  [4]: https://techoctave.com/c7/posts/57-hustle-and-code

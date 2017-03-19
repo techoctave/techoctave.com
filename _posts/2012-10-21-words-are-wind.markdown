@@ -25,7 +25,7 @@ Chances at bay, only one thing is certain...
 On the road to JavaScript mastery, there is no perfect step. There is only a step and I suggest you take it.
 
 
-  [1]: https://techoctave.com/posts/67-the-future-is-javascript
-  [2]: https://techoctave.com/posts/90-designer-languages
-  [3]: https://techoctave.com/posts/49-rails-3-1-and-the-jquery-effect
+  [1]: https://techoctave.com/c7/posts/67-the-future-is-javascript
+  [2]: https://techoctave.com/c7/posts/90-designer-languages
+  [3]: https://techoctave.com/c7/posts/49-rails-3-1-and-the-jquery-effect
   [4]: http://techoctave.com/gauges/

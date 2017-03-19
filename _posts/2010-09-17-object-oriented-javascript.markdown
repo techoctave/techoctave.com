@@ -81,7 +81,7 @@ Hey, the good news is if you're here, that means you're looking for help and tha
 My gut tells me you're not here to write the next [jQuery JavaScript Framework][4]. But, you do want to be a better developer and write better code. I can help you with that!
 
 
-  [1]: https://techoctave.com/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css
+  [1]: https://techoctave.com/c7/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css
   [2]: http://en.wikipedia.org/wiki/Prototype_pattern
-  [3]: https://techoctave.com/posts/1-hello-world
+  [3]: https://techoctave.com/c7/posts/1-hello-world
   [4]: http://jquery.com/

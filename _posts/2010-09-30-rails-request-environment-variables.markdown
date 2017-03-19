@@ -55,8 +55,8 @@ Good Luck Beloved! Have Fun!
 
 
   [1]: http://www.google.com/analytics/
-  [2]: https://techoctave.com/posts/10-scream-seo-karma-with-a-google-sitemap-for-your-rails-blog
-  [3]: https://techoctave.com/posts/16-how-to-host-a-rails-app-with-phusion-passenger-for-nginx
-  [4]: https://techoctave.com/posts/21-learn-how-to-use-jquery-in-your-ruby-on-rails-app
-  [5]: https://techoctave.com/posts/23-rails-date-formats
+  [2]: https://techoctave.com/c7/posts/10-scream-seo-karma-with-a-google-sitemap-for-your-rails-blog
+  [3]: https://techoctave.com/c7/posts/16-how-to-host-a-rails-app-with-phusion-passenger-for-nginx
+  [4]: https://techoctave.com/c7/posts/21-learn-how-to-use-jquery-in-your-ruby-on-rails-app
+  [5]: https://techoctave.com/c7/posts/23-rails-date-formats
 

@@ -75,7 +75,7 @@ Code for the moments that take your breath away.
 
   [1]: http://cosmos.layervault.com/psdrb.html
   [2]: http://en.wikipedia.org/wiki/Inferno_(Dante)
-  [3]: https://techoctave.com/posts/50-silly-rabbit-parsing-html-is-for-kids
+  [3]: https://techoctave.com/c7/posts/50-silly-rabbit-parsing-html-is-for-kids
   [4]: https://github.com/jashkenas/coffee-script/wiki/List-of-languages-that-compile-to-JS
   [5]: https://code.google.com/p/xee/source/browse/XeePhotoshopLoader.m#102
-  [6]: https://techoctave.com/posts/57-hustle-and-code
+  [6]: https://techoctave.com/c7/posts/57-hustle-and-code

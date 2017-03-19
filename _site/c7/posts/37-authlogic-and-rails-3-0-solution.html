@@ -40,9 +40,9 @@
     <h5 class="page-author">Handwritten by TVD</h5>
 
     <div itemprop="articleBody">
-      <p>I believe <a href="https://techoctave.com/posts/36-rails-3-0-rescue-from-routing-error-solution">solutions should be simple not simplistic</a>. That’s why I wasn’t surprised when my client couldn’t get the forked branch of Authlogic to work in his production Rails 3.0 environment. Well, I got <a href="https://github.com/binarylogic/authlogic">Authlogic</a> to work with the Official Branch and I’ll show you how!</p>
+      <p>I believe <a href="https://techoctave.com/c7/posts/36-rails-3-0-rescue-from-routing-error-solution">solutions should be simple not simplistic</a>. That’s why I wasn’t surprised when my client couldn’t get the forked branch of Authlogic to work in his production Rails 3.0 environment. Well, I got <a href="https://github.com/binarylogic/authlogic">Authlogic</a> to work with the Official Branch and I’ll show you how!</p>
 
-<p>For those of you who are interested, he’s running the <a href="https://techoctave.com/posts/16-how-to-host-a-rails-app-with-phusion-passenger-for-nginx">Phusion Passenger for Nginx</a> stack I recommend for hosted Rails applications.</p>
+<p>For those of you who are interested, he’s running the <a href="https://techoctave.com/c7/posts/16-how-to-host-a-rails-app-with-phusion-passenger-for-nginx">Phusion Passenger for Nginx</a> stack I recommend for hosted Rails applications.</p>
 
 <p>Like you and me, my client is a developer, so I knew there had to be a problem if he switched to a fork’ed branch. But, still, switching to a forked branch just seemed too drastic to be the <em>simple</em> solution.</p>
 
@@ -66,7 +66,7 @@
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">undefined</span> <span class="nb">method</span> <span class="sb">`to_key' for #&lt;UserSession: no credentials provided&gt;</span></code></pre></figure>
 
-<p>What this means is your Authlogic <a href="https://techoctave.com/posts/34-authentication-vs-authorization">authentication</a> is failing. Why? It’s failing because Authlogic’s UserSession.new constructor is being called without passing a username and password:</p>
+<p>What this means is your Authlogic <a href="https://techoctave.com/c7/posts/34-authentication-vs-authorization">authentication</a> is failing. Why? It’s failing because Authlogic’s UserSession.new constructor is being called without passing a username and password:</p>
 
 <p>####app/controllers/UserSessionsController</p>
 
@@ -139,7 +139,7 @@
 
 <p>This option adds technical debt to the UserSession model since now you have to maintain Authlogic specific code. Such a move is best addressed by Authlogic’s author.</p>
 
-<p>I’m going to continue to support Ben Johnson because I believe Authlogic is a fine project for simple <a href="https://techoctave.com/posts/34-authentication-vs-authorization">Authentication</a>. I hope this solution gets you back on the Official Authlogic branch.</p>
+<p>I’m going to continue to support Ben Johnson because I believe Authlogic is a fine project for simple <a href="https://techoctave.com/c7/posts/34-authentication-vs-authorization">Authentication</a>. I hope this solution gets you back on the Official Authlogic branch.</p>
 
 <p>I know upgrading to Rails 3.0 is challenging. But I’m rooting for you and the entire Rails Community is rooting for you. So pick yourself up, dust yourself off and keep moving forward. Until next time Beloved, take care!</p>
 

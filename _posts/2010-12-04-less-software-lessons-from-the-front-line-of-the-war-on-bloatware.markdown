@@ -73,7 +73,7 @@ As a developer, you are a soldier on the front line of better software. In a wor
 
   [1]: http://techoctave.com/blogcast
   [2]: http://gettingreal.37signals.com/ch10_Less_Software.php
-  [3]: https://techoctave.com/posts/1-hello-world
+  [3]: https://techoctave.com/c7/posts/1-hello-world
   [4]: http://techoctave.com/blogcast
   [5]: http://techoctave.com/blogcast
   [6]: http://techoctave.com/blogcast

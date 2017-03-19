@@ -110,7 +110,7 @@ Have fun, take care and be awesome!
 
 
   [1]: http://techoctave.com/gauges/
-  [2]: https://techoctave.com/posts/51-javascript-function-to-ease-a-needle-around-a-circle
+  [2]: https://techoctave.com/c7/posts/51-javascript-function-to-ease-a-needle-around-a-circle
   [3]: http://plugins.jquery.com/project/timers
   [4]: http://techoctave.com/gauges/#business
   [5]: http://techoctave.com/gauges/#enterprise

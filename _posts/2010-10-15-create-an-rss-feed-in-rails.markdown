@@ -70,7 +70,7 @@ That's it, now mere mortals can subscribe to your feed and get inside the mind o
 Have fun and Good Luck! 
 
 
-  [1]: https://techoctave.com/posts/29-create-a-blog-archive-with-rails
-  [2]: https://techoctave.com/posts/10-scream-seo-karma-with-a-google-sitemap-for-your-rails-blog
+  [1]: https://techoctave.com/c7/posts/29-create-a-blog-archive-with-rails
+  [2]: https://techoctave.com/c7/posts/10-scream-seo-karma-with-a-google-sitemap-for-your-rails-blog
 
 

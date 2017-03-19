@@ -134,9 +134,9 @@ And let me be the first to Welcome You to the TechOctave Family.
 
 
   [1]: http://techoctave.com/charts
-  [2]: https://techoctave.com/posts/78-foundation-is-everything
+  [2]: https://techoctave.com/c7/posts/78-foundation-is-everything
   [3]: http://www.perceptualedge.com/blog/?p=217
   [4]: http://techoctave.com/gauges
   [5]: http://techoctave.com/charts
-  [6]: https://techoctave.com/posts/66-beautiful-cross-browser-javascript-dashboard-charts
-  [7]: https://techoctave.com/posts/60-simple-long-polling-example-with-javascript-and-jquery
+  [6]: https://techoctave.com/c7/posts/66-beautiful-cross-browser-javascript-dashboard-charts
+  [7]: https://techoctave.com/c7/posts/60-simple-long-polling-example-with-javascript-and-jquery

@@ -77,5 +77,5 @@ Do pay attention to the */user/bin/curl* directive. You must give the *absolute*
 Good luck with your next social media venture. And remember to take some time to [have fun][2] with it!
 
 
-  [1]: https://techoctave.com/posts/9-three-important-google-services-youre-probably-missing
-  [2]: https://techoctave.com/posts/1-hello-world
+  [1]: https://techoctave.com/c7/posts/9-three-important-google-services-youre-probably-missing
+  [2]: https://techoctave.com/c7/posts/1-hello-world

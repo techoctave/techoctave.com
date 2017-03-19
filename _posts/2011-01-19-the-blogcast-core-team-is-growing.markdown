@@ -59,9 +59,9 @@ Up for the challenge?
   [1]: http://twitter.com/kgwapo
   [2]: http://techoctave.com/blogcast
   [3]: http://supreme.dfm.asia/
-  [4]: https://techoctave.com/posts/35-designer-developer-sweeper
+  [4]: https://techoctave.com/c7/posts/35-designer-developer-sweeper
   [5]: http://ashley.loves.curtisgwapo.com/
-  [6]: https://techoctave.com/posts/39-less-software-lessons-from-the-front-line-of-the-war-on-bloatware
+  [6]: https://techoctave.com/c7/posts/39-less-software-lessons-from-the-front-line-of-the-war-on-bloatware
   [7]: http://twitter.com/tiandavis
   [8]: https://techoctave.com
   [9]: https://github.com/tiandavis

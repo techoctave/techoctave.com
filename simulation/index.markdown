@@ -369,7 +369,7 @@ We produce quality documentation of how our software works, insuring you spend m
 
 Is it really that easy? Yes it is my friend. Yes it is.
 
-Most of the time you'll need to feed data to your flight gauges from a remote server. For an advanced discussion on client-side polling techniques, see [Long Polling with JavaScript and jQuery](https://techoctave.com/posts/60-simple-long-polling-example-with-javascript-and-jquery) on the TechOctave blog. There we discuss various options for feeding data to our components from a remote server.
+Most of the time you'll need to feed data to your flight gauges from a remote server. For an advanced discussion on client-side polling techniques, see [Long Polling with JavaScript and jQuery](https://techoctave.com/c7/posts/60-simple-long-polling-example-with-javascript-and-jquery) on the TechOctave blog. There we discuss various options for feeding data to our components from a remote server.
 
 For real-time server-push solutions, our flight gauges work great with HTML5 WebSockets, so grab your favorite WebSockets library.
 

@@ -8,7 +8,7 @@ permalink: /c7/posts/34-authentication-vs-authorization
 
 *Sounds the same to me!* Surprisingly, I hear this all the time from developers. So much, in fact, that it shocks me less and less each time. Well, they're not the same! Authentication and Authorization play two very distinct roles in application security. Let me explain.
 
-<img src="/c7/static/lock.jpg" alt="Authentication vs Authorization" width="100%"/>
+<img src="/c7/static/lock.png" alt="Authentication vs Authorization" width="100%"/>
 
 ### The Difference Matters
 
@@ -33,4 +33,4 @@ So, basically, *authentication* determines access, whereas *authorization* deter
 
 
   [1]: https://techoctave.com
-  [2]: https://techoctave.com/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css
+  [2]: https://techoctave.com/c7/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css

@@ -23,6 +23,6 @@ Say it with me:
 Besides, there will come a time when using *we* makes sense. Like when you've built a real team of passionate, like-minded people. Until then, let me be the first to tell you that you don't have to feel less than. Honor yourself and have the strength to be you.
 
 
-  [1]: https://techoctave.com/posts/1-hello-world
-  [2]: https://techoctave.com/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css
+  [1]: https://techoctave.com/c7/posts/1-hello-world
+  [2]: https://techoctave.com/c7/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css
   [3]: http://37signals.com/rework/

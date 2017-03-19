@@ -41,11 +41,11 @@ Game developers who want to run their software on web browsers can target JavaSc
 That makes JavaScript the Target Language for the Web and that's OK.
 
 
-  [1]: https://techoctave.com/posts/102-the-only-higher-level-than-javascript-is-god-s-word
+  [1]: https://techoctave.com/c7/posts/102-the-only-higher-level-than-javascript-is-god-s-word
   [2]: http://blog.mozilla.org/blog/2013/03/27/mozilla-is-unlocking-the-power-of-the-web-as-a-platform-for-gaming/
   [3]: http://www.hanselman.com/blog/JavaScriptIsWebAssemblyLanguageAndThatsOK.aspx
   [4]: https://github.com/jashkenas/coffee-script/wiki/List-of-languages-that-compile-to-JS
-  [5]: https://techoctave.com/posts/90-designer-languages
+  [5]: https://techoctave.com/c7/posts/90-designer-languages
   [6]: https://developer.mozilla.org/en-US/docs/Web/WebGL/Getting_started_with_WebGL?redirectlocale=en-US&redirectslug=WebGL%2FGetting_started_with_WebGL
   [7]: http://www.unrealengine.com/html5_faq/
-  [8]: https://techoctave.com/posts/97-why-c-never-left
+  [8]: https://techoctave.com/c7/posts/97-why-c-never-left

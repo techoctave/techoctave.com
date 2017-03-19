@@ -164,6 +164,6 @@ Looking for an easy to use JavaScript Charts library with a powerful API? Checko
 
 
   [1]: http://techoctave.com/charts
-  [2]: https://techoctave.com/posts/63-libertango
+  [2]: https://techoctave.com/c7/posts/63-libertango
   [3]: http://techoctave.com/gauges
   [4]: http://techoctave.com/charts 

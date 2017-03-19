@@ -26,5 +26,5 @@ The solution is DO NOT make a directory called rails. Instead, just run the syml
 No one told you to create a directory before running the symlink command, did they? Think about it!
 
 
-  [1]: https://techoctave.com/posts/16-how-to-host-a-rails-app-with-phusion-passenger-for-nginx
-  [2]: https://techoctave.com/posts/3-passenger-for-nginx-is-the-jquery-of-web-server-software
+  [1]: https://techoctave.com/c7/posts/16-how-to-host-a-rails-app-with-phusion-passenger-for-nginx
+  [2]: https://techoctave.com/c7/posts/3-passenger-for-nginx-is-the-jquery-of-web-server-software

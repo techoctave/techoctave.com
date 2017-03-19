@@ -44,8 +44,8 @@ Well, get out there and give it a shot and be sure to let me know your thoughts 
 
 
   [1]: http://twitter.com/tiandavis/statuses/22206188948
-  [2]: https://techoctave.com/posts/11-hello-google-voice
+  [2]: https://techoctave.com/c7/posts/11-hello-google-voice
   [3]: http://mrgeckosmedia.com/applications/info/VoiceMac
   [4]: http://rstoeber.com/apps/Google_Voice_Utility.html
-  [6]: https://techoctave.com/posts/11-hello-google-voice
+  [6]: https://techoctave.com/c7/posts/11-hello-google-voice
   [7]: https://chrome.google.com/extensions/detail/kcnhkahnjcbndmmehfkdnkjomaanaooo

@@ -118,4 +118,4 @@ Code Long & Prosper!
     
 
 
-  [1]: https://techoctave.com/posts/50-silly-rabbit-parsing-html-is-for-kids
+  [1]: https://techoctave.com/c7/posts/50-silly-rabbit-parsing-html-is-for-kids

@@ -55,9 +55,9 @@ But, if you're like me, you want to display your blog archive posts from newest 
 That's it! Good luck and happy coding!
 
 
-  [1]: https://techoctave.com/posts/26-seo-friendly-urls-in-rails
+  [1]: https://techoctave.com/c7/posts/26-seo-friendly-urls-in-rails
   [2]: https://techoctave.com/archives
-  [3]: https://techoctave.com/posts/10-scream-seo-karma-with-a-google-sitemap-for-your-rails-blog
+  [3]: https://techoctave.com/c7/posts/10-scream-seo-karma-with-a-google-sitemap-for-your-rails-blog
 
 
 

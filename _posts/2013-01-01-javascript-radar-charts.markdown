@@ -160,6 +160,6 @@ Listen, I'm not telling you it's going to be easy. I'm telling you it's going to
 
 
   [1]: http://techoctave.com/charts/
-  [2]: https://techoctave.com/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css
+  [2]: https://techoctave.com/c7/posts/17-jquery-dashboard-gauges-using-raphael-xhtml-and-css
   [3]: http://techoctave.com/charts/
   [4]: http://www.forbes.com/sites/roberthof/2011/08/26/online-ad-spend-to-overtake-tv/

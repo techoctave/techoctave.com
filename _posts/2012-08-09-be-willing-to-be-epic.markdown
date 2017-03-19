@@ -92,4 +92,4 @@ Be willing to be epic.
 
   [1]: http://www.nytimes.com/2012/08/06/science/space/curiosity-rover-lands-safely-on-mars.html
   [2]: http://www.spacex.com/press.php?page=20120803
-  [3]: https://techoctave.com/posts/75-how-much-would-you-pay-for-the-universe
+  [3]: https://techoctave.com/c7/posts/75-how-much-would-you-pay-for-the-universe
