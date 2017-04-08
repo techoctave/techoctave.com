@@ -8,7 +8,7 @@ permalink: /galileo/
 <h1 class="galileo"><a href="https://chrome.google.com/webstore/detail/mcagkgdbdbbgfielgggafkpjhdbiafha">Galileo ★ Rocks!</a></h1>
 
 #### Targeted & Relevant Twitter Followers
-####<strong class="one">Single</strong> Click Twitter Management
+<h4><strong class="one">Single</strong></h4> Click Twitter Management
 
 
 <h3 class="buy"><a href="https://chrome.google.com/webstore/detail/mcagkgdbdbbgfielgggafkpjhdbiafha">Install Now</a></h3>
@@ -56,4 +56,3 @@ Have a feature suggestion? Need help? Or just want to show some love? You can re
     <p style="font-size: 80%;">TechOctave, The Lion, "Beautiful & Inspired" are Registered Trademarks of TechOctave, LLC.</p>
     <p style="font-size: 65%;">HANDCRAFTED WITH <abbr style="color: #FF2400; font-variant: none" title="love">❤</abbr> IN COLUMBUS OHIO</p>
 </footer>
-
