@@ -8,7 +8,7 @@ permalink: /galileo/
 <h1 class="galileo"><a href="https://chrome.google.com/webstore/detail/mcagkgdbdbbgfielgggafkpjhdbiafha">Galileo ★ Rocks!</a></h1>
 
 #### Targeted & Relevant Twitter Followers
-<h4><strong class="one">Single</strong></h4> Click Twitter Management
+<h4><strong class="one">Single</strong> Click Twitter Management</h4>
 
 
 <h3 class="buy"><a href="https://chrome.google.com/webstore/detail/mcagkgdbdbbgfielgggafkpjhdbiafha">Install Now</a></h3>
