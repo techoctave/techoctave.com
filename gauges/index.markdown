@@ -33,7 +33,7 @@ permalink: /gauges/
 			<td class="Supreme">Yes</td>
 		</tr>
 		<tr class="details" style="display: none;">
-			<td colspan="1">
+			<td colspan="4">
 				<div style="visibility: visible; opacity: 1;">Our dynamic gauges make it easy to customize appearance.  We include over 70+ customizable properties and 30+ sample gauges to jumpstart your project. Great for executive dashboards, simulations and winning new business. <a href="http://techoctave.com/gauges" target="_blank">Learn more</a></div>
 			</td>
 		</tr>
@@ -46,7 +46,7 @@ permalink: /gauges/
 			<td class="Supreme">Yes</td>
 		</tr>
 		<tr class="details" style="display: none;">
-			<td colspan="1">
+			<td colspan="4">
 				<div style="visibility: visible; opacity: 1;">Includes our Bar Chart and Stacked Bar Chart. Bar charts show the changes in a data series over time and can be used to compare one or more categories of data. Stacked bar charts compare the value that each data point contributes to a total across categories. <a href="http://techoctave.com/charts" target="_blank">Learn more</a></div>
 			</td>
 		</tr>
@@ -59,7 +59,7 @@ permalink: /gauges/
 			<td class="Supreme">Yes</td>
 		</tr>
 		<tr class="details" style="display: none;">
-			<td colspan="1">
+			<td colspan="4">
 				<div style="visibility: visible; opacity: 1;">Includes our Column Chart and Stacked Column Chart.  Column charts are vertical bar charts. Like bar charts, they can be used to compare one or more categories of data. Stacked column charts compare the value that each data point contributes to a total. <a href="http://techoctave.com/charts" target="_blank">Learn more</a></div>
 			</td>
 		</tr>
@@ -72,7 +72,7 @@ permalink: /gauges/
 			<td class="Supreme">Yes</td>
 		</tr>
 		<tr class="details" style="display: none;">
-			<td colspan="1">
+			<td colspan="4">
 				<div style="visibility: visible; opacity: 1;">Includes our Line Chart and Area Chart.  Line charts and Area charts display information as a series of data points connected by straight line segments. <a href="http://techoctave.com/charts" target="_blank">Learn more</a></div>
 			</td>
 		</tr>
@@ -85,7 +85,7 @@ permalink: /gauges/
 			<td class="Supreme">Yes</td>
 		</tr>
 		<tr class="details" style="display: none;">
-			<td colspan="1">
+			<td colspan="4">
 				<div style="visibility: visible; opacity: 1;">Includes our Scatter charts that can be used to show the relationship between two variables. The relationship is displayed as a collection of points using Cartesian coordinates. <a href="http://techoctave.com/charts" target="_blank">Learn more</a></div>
 			</td>
 		</tr>
@@ -98,7 +98,7 @@ permalink: /gauges/
 			<td class="Supreme">Yes</td>
 		</tr>
 		<tr class="details" style="display: none;">
-			<td colspan="1">
+			<td colspan="4">
 				<div style="visibility: visible; opacity: 1;">Includes our famous Pie Chart and two bonus variations: Donut Chart and Spie Chart. Pie charts are circular charts subdivided into pie slices. Pie charts are used to illustrate the size relationship between each pie slice and the whole pie. Yummy! <a href="http://techoctave.com/charts" target="_blank">Learn more</a></div>
 			</td>
 		</tr>
@@ -111,7 +111,7 @@ permalink: /gauges/
 			<td class="Supreme">Yes</td>
 		</tr>
 		<tr class="details" style="display: none;">
-			<td colspan="1">
+			<td colspan="4">
 				<div style="visibility: visible; opacity: 1;">Bullet charts feature a primary measure (e.g. revenue) and give you the ability to compare that measure to a target measure. Using color bands, you can relate the primary measure to qualitative ranges of performance (e.g. poor, satisfactory, and good). Our chart can display horizontally and vertically. <a href="http://techoctave.com/charts" target="_blank">Learn more</a></div>
 			</td>
 		</tr>
@@ -124,7 +124,7 @@ permalink: /gauges/
 			<td class="Supreme">Yes</td>
 		</tr>
 		<tr class="details" style="display: none;">
-			<td colspan="1">
+			<td colspan="4">
 				<div style="visibility: visible; opacity: 1;">Bubble charts are used to visualize a data set with 2 to 4 dimensions. The first two dimensions are visualized as coordinates, the 3rd as color and the 4th as size. Our chart is highly flexible and beautiful too. <a href="http://techoctave.com/charts" target="_blank">Learn more</a></div>
 			</td>
 		</tr>
@@ -137,7 +137,7 @@ permalink: /gauges/
 			<td class="Supreme">Yes</td>
 		</tr>
 		<tr class="details" style="display: none;">
-			<td colspan="1">
+			<td colspan="4">
 				<div style="visibility: visible; opacity: 1;">Radar charts plot the values of each category along a separate axis starting from the center of the chart and ending at the outer ring. In a Radar chart, a point close to the center indicates a low value and a point near the perimeter indicates a high value. Expect only the best from our Radar chart. <a href="http://techoctave.com/charts" target="_blank">Learn more</a></div>
 			</td>
 		</tr>

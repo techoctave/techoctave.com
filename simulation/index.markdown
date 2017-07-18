@@ -33,7 +33,7 @@ permalink: /simulation/
 			<td class="Supreme">Yes</td>
 		</tr>
 		<tr class="details" style="display: none;">
-			<td colspan="1">
+			<td colspan="4">
 				<div style="visibility: visible; opacity: 1;">The Airspeed Indicator is an instrument that displays an aircraft's airspeed. The Airspeed Indicator is both complex and beautiful, featuring adjustable True Airspeed and Temperature components. <a href="http://techoctave.com/simulation" target="_blank">Learn more</a></div>
 			</td>
 		</tr>
@@ -46,7 +46,7 @@ permalink: /simulation/
 			<td class="Supreme">Yes</td>
 		</tr>
 		<tr class="details" style="display: none;">
-			<td colspan="1">
+			<td colspan="4">
 				<div style="visibility: visible; opacity: 1;">The Artificial Horizon informs the pilot of the orientation of the aircraft relative to Earth's horizon. The Artificial Horizon provides the smoothest experience while showing the aircraft's pitch (fore and aft tilt) and bank or roll (side to side tilt). <a href="http://techoctave.com/simulation" target="_blank">Learn more</a></div>
 			</td>
 		</tr>
@@ -59,7 +59,7 @@ permalink: /simulation/
 			<td class="Supreme">Yes</td>
 		</tr>
 		<tr class="details" style="display: none;">
-			<td colspan="1">
+			<td colspan="4">
 				<div style="visibility: visible; opacity: 1;">The Altimeter is an instrument used to measure the altitude of the aircraft above sea level. Beautifully rendered and highly customizable, our electronic Altimeter perfectly simulates modern aircraft altimeter gauges. <a href="http://techoctave.com/simulation" target="_blank">Learn more</a></div>
 			</td>
 		</tr>
@@ -72,7 +72,7 @@ permalink: /simulation/
 			<td class="Supreme">Yes</td>
 		</tr>
 		<tr class="details" style="display: none;">
-			<td colspan="1">
+			<td colspan="4">
 				<div style="visibility: visible; opacity: 1;">The Turn Coordinator is used to show an aircraft's roll rate, as well as its turn rate. When the aircraft is in a balanced turn, the ball is centered. When the aircrafts skids, the ball is left of center. As the aircrafts slips, the ball is right of center. <a href="http://techoctave.com/simulation" target="_blank">Learn more</a></div>
 			</td>
 		</tr>
@@ -85,7 +85,7 @@ permalink: /simulation/
 			<td class="Supreme">Yes</td>
 		</tr>
 		<tr class="details" style="display: none;">
-			<td colspan="1">
+			<td colspan="4">
 				<div style="visibility: visible; opacity: 1;">The Horizontal Situation Indicator (HSI) combines a traditional Directional Gyro with a VOR/ILS display. Undoubtedly the most complex flight instrument, we've painstakingly engineered the API to refine its complexity into a brew of simplicity you'll love to use. <a href="http://techoctave.com/simulation" target="_blank">Learn more</a></div>
 			</td>
 		</tr>
@@ -98,7 +98,7 @@ permalink: /simulation/
 			<td class="Supreme">Yes</td>
 		</tr>
 		<tr class="details" style="display: none;">
-			<td colspan="1">
+			<td colspan="4">
 				<div style="visibility: visible; opacity: 1;">The Vertical Speed Indicator (VSI) or Variometer is a flight instrument used to show the near instantaneous (rather than averaged) rate of descent or climb. Pilots rely on the VSI to ascertain whether level flight is maintained, especially during turning maneuvers. <a href="http://techoctave.com/simulation" target="_blank">Learn more</a></div>
 			</td>
 		</tr>
@@ -111,7 +111,7 @@ permalink: /simulation/
 			<td class="Supreme">Yes</td>
 		</tr>
 		<tr class="details" style="display: none;">
-			<td colspan="1">
+			<td colspan="4">
 				<div style="visibility: visible; opacity: 1;">The RPM Indicator or Tachometer is a flight instrument measuring the rotation speed of the aircraft's engine. The RPM Indicator is equipped to display color ranges to indicate a safe range of rotation speeds. Unlimited color ranges are available and optional. <a href="http://techoctave.com/simulation" target="_blank">Learn more</a></div>
 			</td>
 		</tr>
@@ -124,7 +124,7 @@ permalink: /simulation/
 			<td class="Supreme">Yes</td>
 		</tr>
 		<tr class="details" style="display: none;">
-			<td  colspan="1">
+			<td  colspan="4">
 				<div style="visibility: visible; opacity: 1;">The Heading Indicator, sometimes referred to as a Directional Gyro, informs the pilot of the aircraft's heading and course setting. Here, our Heading Indicator features a unique World War 2 (WW2) fighter rendition for its aircraft pointer. <a href="http://techoctave.com/simulation" target="_blank">Learn more</a></div>
 			</td>
 		</tr>

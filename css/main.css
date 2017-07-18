@@ -1,4 +1,4 @@
-/* 
+/*
 Title: Hikari
 Description: : A responsive & simple theme for Jekyll
 Version: 1.0
@@ -73,7 +73,7 @@ h1, h2, h3, h4, h5 {
 	color: #232323;
 	font-style: normal;
 	font-weight: 500;
-	line-height: 1em;	
+	line-height: 1em;
 }
 
 h1 {
@@ -220,9 +220,9 @@ header .h-wrap .menu-icon .lines::after {
   content: '';
   transform-origin:         50% 50%;
   -webkit-transform-origin: 50% 50%;
-  transition:         top .3s .6s ease, 
+  transition:         top .3s .6s ease,
                       transform .3s ease;
-  -webkit-transition: top .3s .6s ease, 
+  -webkit-transition: top .3s .6s ease,
                       transform .3s ease;
 }
 
@@ -252,10 +252,10 @@ header .h-wrap .close .lines::before,
 header .h-wrap .close .lines::after {
   top:0;
   width: 30px;
-  -webkit-transition: top .3s ease, 
-                      transform .3s .5s ease;   
-  transition:         top .3s ease, 
-                      transform .3s .5s ease;     
+  -webkit-transition: top .3s ease,
+                      transform .3s .5s ease;
+  transition:         top .3s ease,
+                      transform .3s .5s ease;
 }
 
 header .h-wrap .close .lines::before {
@@ -279,13 +279,13 @@ header .h-wrap .close .lines::after {
   padding: 0px 40px;
   background: #fafafa;
   border-bottom: 0px solid #f1f1f1;
-  -webkit-transition: max-height .35s ease, 
-                      padding-top .35s ease, 
-                      padding-bottom .35s ease, 
+  -webkit-transition: max-height .35s ease,
+                      padding-top .35s ease,
+                      padding-bottom .35s ease,
                       border-width .35s ease;
-  transition:         max-height .35s ease, 
-                      padding-top .35s ease, 
-                      padding-bottom .35s ease, 
+  transition:         max-height .35s ease,
+                      padding-top .35s ease,
+                      padding-bottom .35s ease,
                       border-width .35s ease;
 }
 
@@ -293,13 +293,13 @@ header .h-wrap .close .lines::after {
   max-height: 90%;
   padding: 40px;
   border-width: 1px;
-  -webkit-transition: max-height .35s ease, 
-                      padding-top .35s ease, 
-                      padding-bottom .35s ease, 
+  -webkit-transition: max-height .35s ease,
+                      padding-top .35s ease,
+                      padding-bottom .35s ease,
                       border-width .35s ease;
-  transition:         max-height .35s ease, 
-                      padding-top .35s ease, 
-                      padding-bottom .35s ease, 
+  transition:         max-height .35s ease,
+                      padding-top .35s ease,
+                      padding-bottom .35s ease,
                       border-width .35s ease;
 }
 
@@ -528,48 +528,48 @@ section#single-wrap h2,
 section#single-wrap h3,
 section#single-wrap h4,
 section#single-wrap h5,
-section#single-wrap h6 { 
+section#single-wrap h6 {
   /*padding: 0 40px; */
   margin: 10px 0;
 }
 
-section#single-wrap h1 { 
-    font-size: 320%; 
+section#single-wrap h1 {
+    font-size: 320%;
 }
 
-section#single-wrap h2 { 
-    font-size: 215%; 
+section#single-wrap h2 {
+    font-size: 215%;
 }
 
-section#single-wrap h3 { 
+section#single-wrap h3 {
     font-size: 160%;
 }
 
-section#single-wrap h4 { 
-    font-size: 160%; 
-    font-weight: lighter; 
-    text-decoration: none; 
-    text-align: center; 
+section#single-wrap h4 {
+    font-size: 160%;
+    font-weight: lighter;
+    text-decoration: none;
+    text-align: center;
 }
 
-section#single-wrap h5 { 
-    font-size: 110%; 
+section#single-wrap h5 {
+    font-size: 110%;
 }
 
-section#single-wrap h6 { 
-    font-size: 100%; 
+section#single-wrap h6 {
+    font-size: 100%;
 }
 
-section#single-wrap p { 
-    font-size: 120%; 
-    line-height: 140%; 
+section#single-wrap p {
+    font-size: 120%;
+    line-height: 140%;
 }
 
-section#single-wrap p.testimonial { 
-    text-align: center; 
+section#single-wrap p.testimonial {
+    text-align: center;
 }
 
-section#single-wrap p.testimonial em { 
+section#single-wrap p.testimonial em {
     display: block;
 }
 
@@ -577,20 +577,20 @@ section#single-wrap p strong {
 	background-color: #FFFFCC;
 }
 
-section#single-wrap footer { 
+section#single-wrap footer {
     margin: 40px 0;
 }
 
-section#single-wrap footer p { 
-    text-align: center; 
+section#single-wrap footer p {
+    text-align: center;
 }
 
-footer { 
+footer {
     margin: 40px 0;
 }
 
-footer p { 
-    text-align: center; 
+footer p {
+    text-align: center;
 }
 
 section#single-wrap blockquote {
@@ -630,7 +630,7 @@ section#single-wrap img {
 #prev { left: 40px; }
 #next { right: 40px; }
 
-#prev:active, 
+#prev:active,
 #next:active {
   border-color: #39f;
 }
@@ -656,15 +656,15 @@ section#single-wrap img {
 
 /* highlights */
 
-.highlight { 
+.highlight {
     padding: 10px 5px;
-    margin: 20px 20px 20px; 
+    margin: 20px 20px 20px;
     font-size: 90%;
 }
 
 .highlight pre {
     text-align: left;
-    
+
 	white-space: pre-wrap;
     word-break: break-all;
 }
@@ -701,7 +701,7 @@ section#single-wrap img {
   content: "JavaScript";
 }
 
-.highlight code.html::before, 
+.highlight code.html::before,
 .highlight code.css::before,
 .highlight code.js::before {
   position: absolute;
@@ -710,7 +710,7 @@ section#single-wrap img {
   font-family: 'Open Sans', sans-serif;
   background-color: #fbfbfb;
   border: 1px solid #eee;
-  padding: 4px 10px; 
+  padding: 4px 10px;
   border-radius: 3px 3px 0 0;
 }*/
 
@@ -744,10 +744,10 @@ section#single-wrap img {
   ul.posts li .p-wrap:hover { padding-left: 40px; }
   ul.posts li .p-wrap:hover::after { content: none; margin: 0; }
   /*.highlight { margin: 30px 40px 40px; }
-  .highlight code.html::before, 
+  .highlight code.html::before,
   .highlight code.css::before,
   .highlight code.js::before {
-    display: none; 
+    display: none;
   }*/
 
 }
@@ -779,22 +779,22 @@ section#single-wrap img {
   section#single-wrap h3,
   section#single-wrap h4,
   section#single-wrap h5,
-  section#single-wrap h6 { 
-    padding: 0 20px; 
+  section#single-wrap h6 {
+    padding: 0 20px;
     margin-top: 30px;
   }
-  
+
   section#single-wrap h1 {
       font-size: 240%;
   }
 
   section#single-wrap blockquote { padding: 0 20px; border-left: 4px solid 333; }
 
-  /*.highlight { 
+  /*.highlight {
       padding: 10px 5px;
-      margin: 20px 20px 20px; 
+      margin: 20px 20px 20px;
   }*/
-  
+
 }
 
 /*****************************************************************************/
@@ -864,10 +864,10 @@ table.plans td {
 	padding: 15px;
     border-right: 1px dotted #DDDDDD;
 	border-left: 1px dotted #DDDDDD;
-	border-bottom: 1px dotted #DDDDDD; 
-	text-align: center; 
-	vertical-align: bottom;	
-    
+	border-bottom: 1px dotted #DDDDDD;
+	text-align: center;
+	vertical-align: bottom;
+
     font-size: 95%;
 }
 
@@ -875,7 +875,7 @@ table.plans th {
 	border-bottom: 3px solid #DDDDDD;
 	padding-top: 15px;
 	padding-bottom: 15px;
-    
+
     font-size: 100%;
 }
 
@@ -907,7 +907,7 @@ table.plans th.basic {
 }
 
 table.plans thead {
-	font-weight: bold;	
+	font-weight: bold;
 }
 
 table.plans tr td.product{
@@ -939,6 +939,10 @@ table.plans tr.details td {
     text-align: left;
 	border-bottom: 3px solid #DDDDDD;
 	border-top: 3px solid #DDDDDD;
+}
+
+@media only screen and (max-width : 685px) {
+
 }
 
 /*-----------------------------------------------------------
@@ -991,7 +995,7 @@ a.buy {
     padding: 5px 5px 10px 5px;
 	text-decoration: none;
 	font-weight: bold;
-	
+
 	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
 }
 
@@ -1082,7 +1086,7 @@ section#single-wrap .enterprise h2 {
 section#single-wrap .enterprise p {
 	font-size: 12px;
 	text-align: center;
-	
+
 	background-color: #F9F9F9;
     border-radius: 7px 7px 7px 7px;
     padding: 10px 7px;
@@ -1094,7 +1098,7 @@ section#single-wrap .enterprise p {
 
 .top {
 	text-decoration: none;
-	
+
 	background: #CC0000;
     color: #FFFFFF;
     display: block;
@@ -1105,11 +1109,11 @@ section#single-wrap .enterprise p {
 	font-weight: bold;
 
 	width: 2em;
-    
+
     margin: 0 auto;
-    
+
     cursor: pointer;
-	
+
 	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
 }
 
@@ -1188,7 +1192,7 @@ video, .vjs-flash-fallback {
 
 section#single-wrap .video-js-box {
 	margin-left: 2.5em;
-    
+
     margin: 0 auto;
 }
 
@@ -1200,7 +1204,7 @@ section#single-wrap .video-js-box {
     .video-js-box {
         display: none;
     }
-    
+
     /*#video-alt {
         display: block;
     }*/
@@ -1281,7 +1285,7 @@ section#single-wrap h1.galileo a {
 	letter-spacing: 2px;
 	padding-bottom: 10px;
     text-decoration: none;
-	
+
 	color: #DEF1F8;
     font-family: "InsolentRegular",Arial,sans-serif;
 	text-shadow: 1px 1px 0 black, 2px 2px 0 #476871, 3px 3px 0 #476871, 4px 4px 0 #476871, 5px 5px 0 #476871, 6px 6px 0 #476871, 7px 7px 0 #476871;
@@ -1331,5 +1335,3 @@ map area {
 .qtip-content {
     font-size: 80%;
 }
-
-
