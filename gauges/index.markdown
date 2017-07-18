@@ -17,9 +17,9 @@ permalink: /gauges/
 	<table class="plans">
 	<thead>
 		<tr>
-			<!--<th class="product">Product options</th>
+			<th class="product">Product options</th>
 			<th class="Basic">Basic</th>
-			<th class="Premium">Premium</th>-->
+			<th class="Premium">Premium</th>
 			<th class="Supreme">Supreme Package</th>
 		</tr>
 	</thead>
@@ -28,87 +28,87 @@ permalink: /gauges/
 			<td class="product">
 				Gauges <a href="javascript:void(0);" class="i" title="Learn more...">+</a>
 			</td>
-			<!--<td class="Basic"></td>
+			<td class="Basic"></td>
 			<td class="Premium"></td>
-			<td class="Supreme">Yes</td>-->
+			<td class="Supreme">Yes</td>
 		</tr>
 		<tr class="details" style="display: none;">
 			<td colspan="1">
 				<div style="visibility: visible; opacity: 1;">Our dynamic gauges make it easy to customize appearance.  We include over 70+ customizable properties and 30+ sample gauges to jumpstart your project. Great for executive dashboards, simulations and winning new business. <a href="http://techoctave.com/gauges" target="_blank">Learn more</a></div>
 			</td>
 		</tr>
-		
+
 		<tr class="active">
 			<td class="product">
 				<a href="javascript:void(0)" class="i" title="Learn more...">+</a>Bar charts</td>
-			<!--<td class="Basic">Yes</td>
+			<td class="Basic">Yes</td>
 			<td class="Premium">Yes</td>
-			<td class="Supreme">Yes</td>-->
+			<td class="Supreme">Yes</td>
 		</tr>
 		<tr class="details" style="display: none;">
 			<td colspan="1">
 				<div style="visibility: visible; opacity: 1;">Includes our Bar Chart and Stacked Bar Chart. Bar charts show the changes in a data series over time and can be used to compare one or more categories of data. Stacked bar charts compare the value that each data point contributes to a total across categories. <a href="http://techoctave.com/charts" target="_blank">Learn more</a></div>
 			</td>
 		</tr>
-		
+
 		<tr class="active">
 			<td class="product">
 				<a href="javascript:void(0)" class="i" title="Learn more...">+</a>Column charts</td>
-			<!--<td class="Basic"></td>
+			<td class="Basic"></td>
 			<td class="Premium">Yes</td>
-			<td class="Supreme">Yes</td>-->
+			<td class="Supreme">Yes</td>
 		</tr>
 		<tr class="details" style="display: none;">
 			<td colspan="1">
 				<div style="visibility: visible; opacity: 1;">Includes our Column Chart and Stacked Column Chart.  Column charts are vertical bar charts. Like bar charts, they can be used to compare one or more categories of data. Stacked column charts compare the value that each data point contributes to a total. <a href="http://techoctave.com/charts" target="_blank">Learn more</a></div>
 			</td>
 		</tr>
-		
+
 		<tr class="active">
 			<td class="product">
 				<a href="javascript:void(0)" class="i" title="Learn more...">+</a>Line charts</td>
-			<!--<td class="Basic">Yes</td>
+			<td class="Basic">Yes</td>
 			<td class="Premium">Yes</td>
-			<td class="Supreme">Yes</td>-->
+			<td class="Supreme">Yes</td>
 		</tr>
 		<tr class="details" style="display: none;">
 			<td colspan="1">
 				<div style="visibility: visible; opacity: 1;">Includes our Line Chart and Area Chart.  Line charts and Area charts display information as a series of data points connected by straight line segments. <a href="http://techoctave.com/charts" target="_blank">Learn more</a></div>
 			</td>
 		</tr>
-		
+
 		<tr class="active">
 			<td class="product">
 				<a href="javascript:void(0)" class="i" title="Learn more...">+</a>Scatter charts</td>
-			<!--<td class="Basic"></td>
+			<td class="Basic"></td>
 			<td class="Premium">Yes</td>
-			<td class="Supreme">Yes</td>-->
+			<td class="Supreme">Yes</td>
 		</tr>
 		<tr class="details" style="display: none;">
 			<td colspan="1">
 				<div style="visibility: visible; opacity: 1;">Includes our Scatter charts that can be used to show the relationship between two variables. The relationship is displayed as a collection of points using Cartesian coordinates. <a href="http://techoctave.com/charts" target="_blank">Learn more</a></div>
 			</td>
 		</tr>
-		
+
 		<tr class="active">
 			<td class="product">
 				<a href="javascript:void(0)" class="i" title="Learn more...">+</a>Pie charts</td>
-			<!--<td class="Basic">Yes</td>
+			<td class="Basic">Yes</td>
 			<td class="Premium">Yes</td>
-			<td class="Supreme">Yes</td>-->
+			<td class="Supreme">Yes</td>
 		</tr>
 		<tr class="details" style="display: none;">
 			<td colspan="1">
 				<div style="visibility: visible; opacity: 1;">Includes our famous Pie Chart and two bonus variations: Donut Chart and Spie Chart. Pie charts are circular charts subdivided into pie slices. Pie charts are used to illustrate the size relationship between each pie slice and the whole pie. Yummy! <a href="http://techoctave.com/charts" target="_blank">Learn more</a></div>
 			</td>
 		</tr>
-		
+
 		<tr class="active">
 			<td class="product">
 				<a href="javascript:void(0)" class="i" title="Learn more...">+</a>Bullet charts</td>
-			<!--<td class="Basic"></td>
+			<td class="Basic"></td>
 			<td class="Premium"></td>
-			<td class="Supreme">Yes</td>-->
+			<td class="Supreme">Yes</td>
 		</tr>
 		<tr class="details" style="display: none;">
 			<td colspan="1">
@@ -119,22 +119,22 @@ permalink: /gauges/
 		<tr class="active">
 			<td class="product">
 				<a href="javascript:void(0)" class="i" title="Learn more...">+</a>Bubble charts</td>
-			<!--<td class="Basic"></td>
+			<td class="Basic"></td>
 			<td class="Premium"></td>
-			<td class="Supreme">Yes</td>-->
+			<td class="Supreme">Yes</td>
 		</tr>
 		<tr class="details" style="display: none;">
 			<td colspan="1">
 				<div style="visibility: visible; opacity: 1;">Bubble charts are used to visualize a data set with 2 to 4 dimensions. The first two dimensions are visualized as coordinates, the 3rd as color and the 4th as size. Our chart is highly flexible and beautiful too. <a href="http://techoctave.com/charts" target="_blank">Learn more</a></div>
 			</td>
 		</tr>
-		
+
 		<tr class="active">
 			<td class="product">
 				<a href="javascript:void(0)" class="i" title="Learn more...">+</a>Radar charts</td>
-			<!--<td class="Basic"></td>
+			<td class="Basic"></td>
 			<td class="Premium"></td>
-			<td class="Supreme">Yes</td>-->
+			<td class="Supreme">Yes</td>
 		</tr>
 		<tr class="details" style="display: none;">
 			<td colspan="1">
@@ -147,7 +147,7 @@ permalink: /gauges/
 			<!--<th class="product-footer" style="width: 260px;"></th>
 			<th class="Basic">Buy</th>
 			<th class="Premium">Buy</th>-->
-			<th class="Supreme edges buy" data-description="Charts Supreme" data-amount="495" data-plan="charts">Buy Now</th>
+			<th colspan="4" class="Supreme edges buy" data-description="Charts Supreme" data-amount="495" data-plan="charts"><a href="https://sites.fastspring.com/techoctave/product/charts">Buy Now</a></th>
 		</tr>
 	</tfoot>
 	</table>
@@ -159,7 +159,7 @@ Let's be clear, you have choices, but there's a reason we're the #1 choice.
 
 <strong>Clear and simple licensing.</strong> Never worry about having to release your source code to meet GPL or unknown licensing requirements. Simple licensing always.
 
-<strong>We'll never leave you in the cold.</strong> You will always have the support of our development team. Your bugs are our bugs. Your success is our success. 
+<strong>We'll never leave you in the cold.</strong> You will always have the support of our development team. Your bugs are our bugs. Your success is our success.
 
 <strong>Unparalleled customization.</strong> Using our fully customizable properties, you can design a solution that's familiar and yet unique at the same time.
 
@@ -201,7 +201,7 @@ With our gauges you are ready for the next project or presentation. Here's why:
 	<li>Illustrate and analyze tons of data </li>
 	<li>Use gauges that are extensible and visually appealing</li>
 	<li>Enjoy versatile gauges built on standards-based vector graphics</li>
-	<li>Go mobile with iPad and iPhone</li> 
+	<li>Go mobile with iPad and iPhone</li>
 	<li>Zoom and scale without losing quality</li>
 	<li>Print high quality gauges at any resolution</li>
 	<li>Customize the look and feel of your gauges so it's a perfect fit</li>
@@ -224,12 +224,12 @@ With our gauges you are ready for the next project or presentation. Here's why:
 		<source src="/videos/dataviz.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
 		<source src="/videos/dataviz.webm" type='video/webm; codecs="vp8, vorbis"'/>
 		<source src="/videos/dataviz.theora.ogv" type='video/ogg; codecs="theora, vorbis"'/>
-		
+
 		<object id="flash_fallback" class="vjs-flash-fallback" width="750" height="365" type="application/x-shockwave-flash" data="/swf/flowplayer-3.2.7.swf">
 			<param name="movie" value="/swf/flowplayer-3.2.7.swf"/>
 			<param name="allowfullscreen" value="true"/>
 			<param name="flashvars" value='config={"playlist":["http://techoctave.com/images/poster.png", {"url": "/videos/dataviz.mp4", "autoPlay":false, "autoBuffering":true, "scaling":"fit"}]}'/>
-			
+
 			<img src="/images/poster.png" width="750" height="365" alt="Gauge Suite" title="Gauge Suite"/>
 		</object>
 	</video>
@@ -240,7 +240,7 @@ With our gauges you are ready for the next project or presentation. Here's why:
 
 <br/>
 
-##Need gauges? Get ready to be wowed!
+## Need gauges? Get ready to be wowed!
 
 <strong>You can start loving your gauges.</strong> Hey, life's to short to work with ugly gauges. Begin beautifully illustrating data today. Our dynamic gauges makes it easy to customize appearance. So now you can design your gauges to look just like you imagined. Here's what's included in the package:
 
@@ -321,7 +321,7 @@ Most of the time you'll need to feed data to your gauge from a remote server. Le
 <p class="code">
 	<span>$.getJSON(url, function(response) {</span>
 		<span class="content">var units = response.data.sales;</span>
-        
+
 		<span class="content">sales.setValue(units);</span>
 	<span>});</span>
 </p>
@@ -359,5 +359,3 @@ Have a few questions or just need to chat - contact [sales@techoctave.com](mailt
     <p style="font-size: 80%;">TechOctave, The Lion, "Beautiful & Inspired" are Registered Trademarks of TechOctave, LLC.</p>
     <p style="font-size: 65%;">HANDCRAFTED WITH <abbr style="color: #FF2400; font-variant: none" title="love">❤</abbr> IN COLUMBUS OHIO</p>
 </footer>
-
-
