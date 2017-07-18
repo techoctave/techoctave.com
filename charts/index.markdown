@@ -158,7 +158,7 @@ permalink: /charts/
 
 Let's be clear, you have choices, but there's a reason we're the #1 choice.
 
-<strong>Clear and simple licensing.</strong> Never worry about having to release your source code to meet GPL or unknown licensing requirements. Simple licensing always.
+<strong>Clear and simple licensing.</strong> One-time purchase & the product is yours. Never worry about having to release your source code to meet GPL or unknown licensing requirements. No draconian commercial licenses. Simple licensing always.
 
 <strong>We'll never leave you in the cold.</strong> You will always have the support of our development team. Your bugs are our bugs. Your success is our success.
 
