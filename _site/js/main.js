@@ -90,4 +90,10 @@ jQuery(document).ready(function($) {
 	$(window).on("popstate", function() {
 		stripe.close();
 	});
+
+  $(".buy").on("click", function(e) {
+    e.preventDefault();
+
+    window.location = $(".buy a[href]").attr("href");
+	});
 });
