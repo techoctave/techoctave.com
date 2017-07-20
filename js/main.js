@@ -23,7 +23,7 @@ jQuery(document).ready(function($) {
   	});*/
 
 	//Checkout
-	var stripe = StripeCheckout.configure({
+	/*var stripe = StripeCheckout.configure({
 		key: "pk_live_BOYYmal1pN2cEZrzYwRum5cL",
 		image: "https://s3.amazonaws.com/stripe-uploads/acct_16JEWjKbOzLc5qpXmerchant-icon-1465516562655-lion.png",
 		locale: "auto",
@@ -89,7 +89,7 @@ jQuery(document).ready(function($) {
 	// Close Checkout on page navigation:
 	$(window).on("popstate", function() {
 		stripe.close();
-	});
+	});*/
 
   $(".buy").on("click", function(e) {
     e.preventDefault();
