@@ -69,7 +69,7 @@
 
 <p>Originally, I only envisioned this method to be used for demo purposes. The scope was to have the gauge needle move from rest to the last value of the speedometer gauge:</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="sr">//</span><span class="n">var</span> <span class="n">speedGauge</span> <span class="o">=</span> <span class="kp">new</span> <span class="no">Speedometer</span><span class="p">(</span><span class="s2">"speedometer"</span><span class="p">);</span>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="sr">//</span><span class="n">var</span> <span class="n">speedGauge</span> <span class="o">=</span> <span class="n">new</span> <span class="no">Speedometer</span><span class="p">(</span><span class="s2">"speedometer"</span><span class="p">);</span>
 <span class="sr">//s</span><span class="n">peedGauge</span><span class="o">.</span><span class="no">Accelerate</span><span class="p">();</span>
 <span class="no">Speedometer</span><span class="p">.</span><span class="nf">prototype</span><span class="o">.</span><span class="no">Accelerate</span> <span class="o">=</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
 	<span class="n">jQuery</span><span class="p">(</span><span class="n">this</span><span class="p">).</span><span class="nf">everyTime</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
@@ -98,7 +98,7 @@
 
 <p>For now, I’m happy with the results of the refactored version. First, it’s closer to customer expectation. Second, it’s flexible as you can use it for both MPH and KPH. Finally, performance has increased immensely:</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="sr">//</span><span class="n">var</span> <span class="n">speedGauge</span> <span class="o">=</span> <span class="kp">new</span> <span class="no">Speedometer</span><span class="p">(</span><span class="s2">"speedometer"</span><span class="p">);</span>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="sr">//</span><span class="n">var</span> <span class="n">speedGauge</span> <span class="o">=</span> <span class="n">new</span> <span class="no">Speedometer</span><span class="p">(</span><span class="s2">"speedometer"</span><span class="p">);</span>
 <span class="sr">//s</span><span class="n">peedGauge</span><span class="o">.</span><span class="no">Accelerate</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span> <span class="s2">"mph"</span><span class="p">);</span>
 <span class="no">Speedometer</span><span class="p">.</span><span class="nf">prototype</span><span class="o">.</span><span class="no">Accelerate</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">speed</span><span class="p">,</span> <span class="n">unit</span><span class="p">)</span> <span class="p">{</span>
 	<span class="k">if</span> <span class="p">(</span><span class="n">unit</span> <span class="o">===</span> <span class="s2">"mph"</span><span class="p">)</span> <span class="p">{</span>
@@ -209,5 +209,9 @@
         ga('send', 'pageview');
       </script>
     
+
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/2651647.js"></script>
+    <!-- End of HubSpot Embed Code -->
   </body>
 </html>

@@ -71,7 +71,7 @@
 	<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">'&lt;a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="YourTwitter"&gt;Tweet&lt;/a&gt;'</span><span class="p">);</span>
 	<span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'SCRIPT'</span><span class="p">),</span> <span class="nx">s1</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">'SCRIPT'</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
 	<span class="nx">s</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="s1">'text/javascript'</span><span class="p">;</span>
-	<span class="nx">s</span><span class="p">.</span><span class="nx">async</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+	<span class="nx">s</span><span class="p">.</span><span class="k">async</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
 	<span class="nx">s</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">'http://platform.twitter.com/widgets.js'</span><span class="p">;</span>
 	<span class="nx">s1</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">.</span><span class="nx">insertBefore</span><span class="p">(</span><span class="nx">s</span><span class="p">,</span> <span class="nx">s1</span><span class="p">);</span>
 <span class="p">})();</span>
@@ -118,7 +118,7 @@
 	<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">'&lt;fb:like width="250"&gt;&lt;/fb:like&gt;'</span><span class="p">);</span>
 	<span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'SCRIPT'</span><span class="p">),</span> <span class="nx">s1</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">'SCRIPT'</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
 	<span class="nx">s</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="s1">'text/javascript'</span><span class="p">;</span>
-	<span class="nx">s</span><span class="p">.</span><span class="nx">async</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+	<span class="nx">s</span><span class="p">.</span><span class="k">async</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
 	<span class="nx">s</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">'http://connect.facebook.net/en_US/all.js#xfbml=1'</span><span class="p">;</span>
 	<span class="nx">s1</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">.</span><span class="nx">insertBefore</span><span class="p">(</span><span class="nx">s</span><span class="p">,</span> <span class="nx">s1</span><span class="p">);</span>
 <span class="p">})();</span>
@@ -202,5 +202,9 @@
         ga('send', 'pageview');
       </script>
     
+
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/2651647.js"></script>
+    <!-- End of HubSpot Embed Code -->
   </body>
 </html>

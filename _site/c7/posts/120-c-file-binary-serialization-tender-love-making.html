@@ -58,7 +58,7 @@
 <h3 id="serialize-binary-documents">Serialize Binary Documents</h3>
 <p>Here’s how we serialized a binary file to a string based format in C#:</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">string</span> <span class="nx">filePath</span> <span class="o">=</span> <span class="err">@</span><span class="s2">"C:\OBEY\Word.doc"</span><span class="p">;</span>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">string</span> <span class="nx">filePath</span> <span class="o">=</span> <span class="p">@</span><span class="s2">"C:</span><span class="err">\</span><span class="s2">OBEY</span><span class="err">\</span><span class="s2">Word.doc"</span><span class="p">;</span>
 
 <span class="kr">byte</span><span class="p">[]</span> <span class="nx">file</span> <span class="o">=</span> <span class="nx">File</span><span class="p">.</span><span class="nx">ReadAllBytes</span><span class="p">(</span><span class="nx">filePath</span><span class="p">);</span>
 
@@ -66,11 +66,11 @@
 
 <p>High level, the steps are:</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="mi">1</span><span class="p">.</span> <span class="nx">Get</span> <span class="nx">the</span> <span class="nb">document</span><span class="err">'</span><span class="nx">s</span> <span class="nx">file</span> <span class="nx">path</span>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="mi">1</span><span class="p">.</span> <span class="nx">Get</span> <span class="nx">the</span> <span class="nb">document</span><span class="s1">'s file path
 
-<span class="mi">2</span><span class="p">.</span> <span class="nx">Load</span> <span class="nx">the</span> <span class="nx">file</span> <span class="nx">into</span> <span class="nx">a</span> <span class="kr">byte</span> <span class="nx">array</span>
+2. Load the file into a byte array
 
-<span class="mi">3</span><span class="p">.</span> <span class="nx">Convert</span> <span class="nx">the</span> <span class="kr">byte</span> <span class="nx">array</span> <span class="nx">to</span> <span class="nx">a</span> <span class="nx">Base64</span> <span class="nx">string</span></code></pre></figure>
+3. Convert the byte array to a Base64 string</span></code></pre></figure>
 
 <p>It’s crazy, during research, everyone wanted to talk about serializing <a href="http://www.martinfowler.com/bliki/POJO.html">POCOs</a>* to send across the wire. EVERYONE. But, that’s only one application of serialization. How about the most simple use case, serializing a simple document.</p>
 
@@ -151,5 +151,9 @@
         ga('send', 'pageview');
       </script>
     
+
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/2651647.js"></script>
+    <!-- End of HubSpot Embed Code -->
   </body>
 </html>

@@ -495,17 +495,17 @@ Have you seen those parking spot detectors used in some mall parking garages? Th
 <p>Using Ruby and Rails would look something similar to:</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="err">#</span> <span class="nx">svg_controller</span><span class="p">.</span><span class="nx">rb</span>
-<span class="kr">class</span> <span class="nx">SvgController</span> <span class="o">&lt;</span> <span class="nx">ApplicationController</span>
+<span class="kd">class</span> <span class="nx">SvgController</span> <span class="o">&lt;</span> <span class="nx">ApplicationController</span>
   <span class="nx">require</span> <span class="s2">"base64"</span>
   
   <span class="nx">def</span> <span class="nx">show</span>
-    <span class="err">@</span><span class="nx">svg</span> <span class="o">=</span> <span class="nx">Svg</span><span class="p">.</span><span class="nx">where</span><span class="p">(</span><span class="nx">id</span><span class="err">:</span> <span class="nx">params</span><span class="p">[</span><span class="err">:</span><span class="nx">id</span><span class="p">]).</span><span class="nx">first</span>
+    <span class="p">@</span><span class="nd">svg</span> <span class="o">=</span> <span class="nx">Svg</span><span class="p">.</span><span class="nx">where</span><span class="p">(</span><span class="nx">id</span><span class="p">:</span> <span class="nx">params</span><span class="p">[:</span><span class="nx">id</span><span class="p">]).</span><span class="nx">first</span>
     <span class="nx">respond_to</span> <span class="k">do</span> <span class="o">|</span><span class="nx">format</span><span class="o">|</span>
       <span class="nx">format</span><span class="p">.</span><span class="nx">png</span> <span class="p">{</span>
         <span class="nx">headers</span><span class="p">[</span><span class="s1">'Content-type'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'image/png'</span>
-        <span class="nx">headers</span><span class="p">[</span><span class="s2">"Content-Disposition"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"attachment; filename=\"chart.png\""</span>
-        <span class="err">@</span><span class="nx">result</span> <span class="o">=</span> <span class="nx">Base64</span><span class="p">.</span><span class="nx">decode64</span><span class="p">(</span><span class="err">@</span><span class="nx">svg</span><span class="p">.</span><span class="nx">content</span><span class="p">.</span><span class="nx">gsub</span><span class="p">(</span><span class="s1">'data:image/png;base64,'</span><span class="p">,</span> <span class="s1">''</span><span class="p">))</span>
-        <span class="nl">render</span> <span class="p">:</span><span class="nx">text</span> <span class="o">=&gt;</span> <span class="err">@</span><span class="nx">result</span>
+        <span class="nx">headers</span><span class="p">[</span><span class="s2">"Content-Disposition"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"attachment; filename=</span><span class="se">\"</span><span class="s2">chart.png</span><span class="se">\"</span><span class="s2">"</span>
+        <span class="p">@</span><span class="nd">result</span> <span class="o">=</span> <span class="nx">Base64</span><span class="p">.</span><span class="nx">decode64</span><span class="p">(@</span><span class="nd">svg</span><span class="p">.</span><span class="nx">content</span><span class="p">.</span><span class="nx">gsub</span><span class="p">(</span><span class="s1">'data:image/png;base64,'</span><span class="p">,</span> <span class="s1">''</span><span class="p">))</span>
+        <span class="nx">render</span> <span class="p">:</span><span class="nx">text</span> <span class="o">=&gt;</span> <span class="p">@</span><span class="nd">result</span>
       <span class="p">}</span>
     <span class="nx">end</span>
   <span class="nx">end</span>
@@ -800,5 +800,9 @@ Have you seen those parking spot detectors used in some mall parking garages? Th
         ga('send', 'pageview');
       </script>
     
+
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/2651647.js"></script>
+    <!-- End of HubSpot Embed Code -->
   </body>
 </html>

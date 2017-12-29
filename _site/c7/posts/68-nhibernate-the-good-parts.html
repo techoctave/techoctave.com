@@ -75,18 +75,18 @@ Elements of Reusable Object-Oriented Software</a> by The Gang of Four - Erich Ga
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kr">public</span> <span class="kr">interface</span> <span class="nx">IPost</span>
 <span class="p">{</span>
-    <span class="kr">int</span> <span class="nx">Id</span> <span class="p">{</span> <span class="nx">get</span><span class="p">;</span> <span class="nx">set</span><span class="p">;</span> <span class="p">}</span>
-    <span class="nx">string</span> <span class="nx">Title</span> <span class="p">{</span> <span class="nx">get</span><span class="p">;</span> <span class="nx">set</span><span class="p">;</span> <span class="p">}</span>
-    <span class="nx">string</span> <span class="nx">Content</span> <span class="p">{</span> <span class="nx">get</span><span class="p">;</span> <span class="nx">set</span><span class="p">;</span> <span class="p">}</span>
-    <span class="nx">IAuthor</span> <span class="nx">Author</span> <span class="p">{</span> <span class="nx">get</span><span class="p">;</span> <span class="nx">set</span><span class="p">;</span> <span class="p">}</span>
-    <span class="nx">IList</span><span class="o">&lt;</span><span class="nx">Comment</span><span class="o">&gt;</span> <span class="nx">Comments</span> <span class="p">{</span> <span class="nx">get</span><span class="p">;</span> <span class="nx">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="kr">int</span> <span class="nx">Id</span> <span class="p">{</span> <span class="kd">get</span><span class="p">;</span> <span class="kd">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="nx">string</span> <span class="nx">Title</span> <span class="p">{</span> <span class="kd">get</span><span class="p">;</span> <span class="kd">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="nx">string</span> <span class="nx">Content</span> <span class="p">{</span> <span class="kd">get</span><span class="p">;</span> <span class="kd">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="nx">IAuthor</span> <span class="nx">Author</span> <span class="p">{</span> <span class="kd">get</span><span class="p">;</span> <span class="kd">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="nx">IList</span><span class="o">&lt;</span><span class="nx">Comment</span><span class="o">&gt;</span> <span class="nx">Comments</span> <span class="p">{</span> <span class="kd">get</span><span class="p">;</span> <span class="kd">set</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">}</span></code></pre></figure>
 
 <h4 id="the-post-implementation-postcs">The Post Implementation (Post.cs)</h4>
 
 <p>The Post class implements the IPost interface. Here, we assume the <em>Author</em> class and the <em>Comment</em> class are defined elsewhere:</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kr">public</span> <span class="kr">class</span> <span class="nx">Post</span> <span class="err">:</span> <span class="nx">IPost</span>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kr">public</span> <span class="kd">class</span> <span class="nx">Post</span> <span class="p">:</span> <span class="nx">IPost</span>
 <span class="p">{</span>
     <span class="kr">private</span> <span class="kr">int</span> <span class="nx">id</span><span class="p">;</span>
     <span class="kr">private</span> <span class="nx">string</span> <span class="nx">title</span><span class="p">;</span>
@@ -102,32 +102,32 @@ Elements of Reusable Object-Oriented Software</a> by The Gang of Four - Erich Ga
 
     <span class="kr">public</span> <span class="nx">virtual</span> <span class="kr">int</span> <span class="nx">Id</span> 
     <span class="p">{</span> 
-       <span class="nx">get</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">id</span><span class="p">;</span> <span class="p">}</span> 
-       <span class="nx">set</span> <span class="p">{</span> <span class="nx">id</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span> <span class="p">}</span> 
+       <span class="kd">get</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">id</span><span class="p">;</span> <span class="p">}</span> 
+       <span class="kd">set</span> <span class="p">{</span> <span class="nx">id</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span> <span class="p">}</span> 
     <span class="p">}</span>
 
     <span class="kr">public</span> <span class="nx">virtual</span> <span class="nx">string</span> <span class="nx">Title</span>
     <span class="p">{</span> 
-       <span class="nx">get</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">title</span><span class="p">;</span> <span class="p">}</span> 
-       <span class="nx">set</span> <span class="p">{</span> <span class="nx">title</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span> <span class="p">}</span> 
+       <span class="kd">get</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">title</span><span class="p">;</span> <span class="p">}</span> 
+       <span class="kd">set</span> <span class="p">{</span> <span class="nx">title</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span> <span class="p">}</span> 
     <span class="p">}</span>
 
     <span class="kr">public</span> <span class="nx">virtual</span> <span class="nx">string</span> <span class="nx">Content</span>
     <span class="p">{</span> 
-       <span class="nx">get</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">content</span><span class="p">;</span> <span class="p">}</span> 
-       <span class="nx">set</span> <span class="p">{</span> <span class="nx">content</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span> <span class="p">}</span> 
+       <span class="kd">get</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">content</span><span class="p">;</span> <span class="p">}</span> 
+       <span class="kd">set</span> <span class="p">{</span> <span class="nx">content</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span> <span class="p">}</span> 
     <span class="p">}</span>
 
     <span class="kr">public</span> <span class="nx">virtual</span> <span class="nx">IAuthor</span> <span class="nx">Author</span>
     <span class="p">{</span> 
-       <span class="nx">get</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">author</span><span class="p">;</span> <span class="p">}</span> 
-       <span class="nx">set</span> <span class="p">{</span> <span class="nx">author</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span> <span class="p">}</span> 
+       <span class="kd">get</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">author</span><span class="p">;</span> <span class="p">}</span> 
+       <span class="kd">set</span> <span class="p">{</span> <span class="nx">author</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span> <span class="p">}</span> 
     <span class="p">}</span>
 
     <span class="kr">public</span> <span class="nx">virtual</span> <span class="nx">IList</span><span class="o">&lt;</span><span class="nx">Comment</span><span class="o">&gt;</span> <span class="nx">Comments</span>
     <span class="p">{</span> 
-       <span class="nx">get</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">comments</span><span class="p">;</span> <span class="p">}</span> 
-       <span class="nx">set</span> <span class="p">{</span> <span class="nx">comments</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span> <span class="p">}</span> 
+       <span class="kd">get</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">comments</span><span class="p">;</span> <span class="p">}</span> 
+       <span class="kd">set</span> <span class="p">{</span> <span class="nx">comments</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span> <span class="p">}</span> 
     <span class="p">}</span>
 <span class="p">}</span></code></pre></figure>
 
@@ -163,20 +163,20 @@ Elements of Reusable Object-Oriented Software</a> by The Gang of Four - Erich Ga
                    <span class="nx">namespace</span><span class="o">=</span><span class="s2">"Blogcast.Domain"</span>
                    <span class="k">default</span><span class="o">-</span><span class="nx">lazy</span><span class="o">=</span><span class="s2">"true"</span><span class="o">&gt;</span>
 
-  <span class="o">&lt;</span><span class="kr">class</span> <span class="nx">name</span><span class="o">=</span><span class="s2">"Post"</span> <span class="nx">table</span><span class="o">=</span><span class="s2">"Posts"</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="kd">class</span> <span class="nx">name</span><span class="o">=</span><span class="s2">"Post"</span> <span class="nx">table</span><span class="o">=</span><span class="s2">"Posts"</span><span class="o">&gt;</span>
     <span class="o">&lt;</span><span class="nx">id</span> <span class="nx">name</span><span class="o">=</span><span class="s2">"Id"</span> <span class="nx">unsaved</span><span class="o">-</span><span class="nx">value</span><span class="o">=</span><span class="s2">"0"</span><span class="o">&gt;</span>
-      <span class="o">&lt;</span><span class="nx">generator</span> <span class="kr">class</span><span class="o">=</span><span class="s2">"native"</span><span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="nx">generator</span> <span class="kd">class</span><span class="o">=</span><span class="s2">"native"</span><span class="o">/&gt;</span>
     <span class="o">&lt;</span><span class="sr">/id</span><span class="err">&gt;
 </span>
     <span class="o">&lt;</span><span class="nx">property</span> <span class="nx">name</span><span class="o">=</span><span class="s2">"Title"</span><span class="o">/&gt;</span>
 
     <span class="o">&lt;</span><span class="nx">property</span> <span class="nx">name</span><span class="o">=</span><span class="s2">"Content"</span><span class="o">/&gt;</span>
 
-    <span class="o">&lt;</span><span class="nx">many</span><span class="o">-</span><span class="nx">to</span><span class="o">-</span><span class="nx">one</span> <span class="nx">name</span><span class="o">=</span><span class="s2">"Author"</span> <span class="kr">class</span><span class="o">=</span><span class="s2">"Author"</span> <span class="nx">cascade</span><span class="o">=</span><span class="s2">"all-delete-orphan"</span><span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="nx">many</span><span class="o">-</span><span class="nx">to</span><span class="o">-</span><span class="nx">one</span> <span class="nx">name</span><span class="o">=</span><span class="s2">"Author"</span> <span class="kd">class</span><span class="o">=</span><span class="s2">"Author"</span> <span class="nx">cascade</span><span class="o">=</span><span class="s2">"all-delete-orphan"</span><span class="o">/&gt;</span>
 
     <span class="o">&lt;</span><span class="nx">bag</span> <span class="nx">name</span><span class="o">=</span><span class="s2">"Comments"</span> <span class="nx">cascade</span><span class="o">=</span><span class="s2">"all-delete-orphan"</span><span class="o">&gt;</span>
       <span class="o">&lt;</span><span class="nx">key</span> <span class="nx">column</span><span class="o">=</span><span class="s2">"PostId"</span><span class="o">/&gt;</span>
-      <span class="o">&lt;</span><span class="nx">one</span><span class="o">-</span><span class="nx">to</span><span class="o">-</span><span class="nx">many</span> <span class="kr">class</span><span class="o">=</span><span class="s2">"Comment"</span><span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="nx">one</span><span class="o">-</span><span class="nx">to</span><span class="o">-</span><span class="nx">many</span> <span class="kd">class</span><span class="o">=</span><span class="s2">"Comment"</span><span class="o">/&gt;</span>
     <span class="o">&lt;</span><span class="sr">/bag</span><span class="err">&gt;
 </span>  <span class="o">&lt;</span><span class="sr">/class</span><span class="err">&gt;
 </span><span class="o">&lt;</span><span class="sr">/hibernate-mapping&gt;</span></code></pre></figure>
@@ -272,5 +272,9 @@ Elements of Reusable Object-Oriented Software</a> by The Gang of Four - Erich Ga
         ga('send', 'pageview');
       </script>
     
+
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/2651647.js"></script>
+    <!-- End of HubSpot Embed Code -->
   </body>
 </html>

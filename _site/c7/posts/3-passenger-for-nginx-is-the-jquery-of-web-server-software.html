@@ -75,7 +75,7 @@
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">## Redirect from www to non-www</span>
 <span class="k">if</span> <span class="o">(</span><span class="nv">$host</span> <span class="o">=</span> <span class="s1">'www.domain.com'</span><span class="o">)</span> <span class="o">{</span>
-	 rewrite  ^/<span class="o">(</span>.<span class="k">*</span><span class="o">)</span><span class="nv">$ </span> http://domain.com/<span class="nv">$1</span>  permanent;
+	 rewrite  ^/<span class="o">(</span>.<span class="k">*</span><span class="o">)</span><span class="nv">$ </span> http://domain.com/<span class="nv">$1</span>  permanent<span class="p">;</span>
 <span class="o">}</span></code></pre></figure>
 
 <p>Compare this same task in Apache:</p>
@@ -150,5 +150,9 @@
         ga('send', 'pageview');
       </script>
     
+
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/2651647.js"></script>
+    <!-- End of HubSpot Embed Code -->
   </body>
 </html>

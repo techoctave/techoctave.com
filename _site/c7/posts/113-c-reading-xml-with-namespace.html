@@ -128,7 +128,7 @@
 
 <p>This isn’t one of those scenarios. Here, Regex was not only necessary, it was downright welcomed:</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">string</span> <span class="nx">filter</span> <span class="o">=</span> <span class="err">@</span><span class="s2">"xmlns(:\w+)?=""([^""]+)""|xsi(:\w+)?=""([^""]+)"""</span><span class="p">;</span>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">string</span> <span class="nx">filter</span> <span class="o">=</span> <span class="p">@</span><span class="s2">"xmlns(:</span><span class="err">\</span><span class="s2">w+)?=""([^""]+)""|xsi(:</span><span class="err">\</span><span class="s2">w+)?=""([^""]+)"""</span><span class="p">;</span>
 <span class="nx">response</span> <span class="o">=</span> <span class="nx">Regex</span><span class="p">.</span><span class="nx">Replace</span><span class="p">(</span><span class="nx">response</span><span class="p">,</span> <span class="nx">filter</span><span class="p">,</span> <span class="s2">""</span><span class="p">);</span>
 
 <span class="nx">XmlDocument</span> <span class="nx">results</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XmlDocument</span><span class="p">();</span>
@@ -207,5 +207,9 @@
         ga('send', 'pageview');
       </script>
     
+
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/2651647.js"></script>
+    <!-- End of HubSpot Embed Code -->
   </body>
 </html>

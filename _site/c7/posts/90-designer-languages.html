@@ -85,21 +85,21 @@
 
 <p>In a short two years, CoffeeScript managed to influence legions of developers. Simplicity and clean output was the key:</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kr">class</span> <span class="nx">Animal</span>
-  <span class="nl">constructor</span><span class="p">:</span> <span class="p">(</span><span class="err">@</span><span class="nx">name</span><span class="p">)</span> <span class="o">-&gt;</span>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">class</span> <span class="nx">Animal</span>
+  <span class="kd">constructor</span><span class="p">:</span> <span class="p">(@</span><span class="nd">name</span><span class="p">)</span> <span class="o">-&gt;</span>
 
-  <span class="nx">move</span><span class="err">:</span> <span class="p">(</span><span class="nx">meters</span><span class="p">)</span> <span class="o">-&gt;</span>
-    <span class="nx">alert</span> <span class="err">@</span><span class="nx">name</span> <span class="o">+</span> <span class="s2">" moved #{meters}m."</span>
+  <span class="nx">move</span><span class="p">:</span> <span class="p">(</span><span class="nx">meters</span><span class="p">)</span> <span class="o">-&gt;</span>
+    <span class="nx">alert</span> <span class="p">@</span><span class="nd">name</span> <span class="o">+</span> <span class="s2">" moved #{meters}m."</span>
 
-<span class="kr">class</span> <span class="nx">Snake</span> <span class="kr">extends</span> <span class="nx">Animal</span>
-  <span class="nl">move</span><span class="p">:</span> <span class="o">-&gt;</span>
+<span class="kd">class</span> <span class="nx">Snake</span> <span class="kd">extends</span> <span class="nx">Animal</span>
+  <span class="nx">move</span><span class="p">:</span> <span class="o">-&gt;</span>
     <span class="nx">alert</span> <span class="s2">"Slithering..."</span>
-    <span class="kr">super</span> <span class="mi">5</span>
+    <span class="k">super</span> <span class="mi">5</span>
 
-<span class="kr">class</span> <span class="nx">Horse</span> <span class="kr">extends</span> <span class="nx">Animal</span>
-  <span class="nl">move</span><span class="p">:</span> <span class="o">-&gt;</span>
+<span class="kd">class</span> <span class="nx">Horse</span> <span class="kd">extends</span> <span class="nx">Animal</span>
+  <span class="nx">move</span><span class="p">:</span> <span class="o">-&gt;</span>
     <span class="nx">alert</span> <span class="s2">"Galloping..."</span>
-    <span class="kr">super</span> <span class="mi">45</span>
+    <span class="k">super</span> <span class="mi">45</span>
 
 <span class="nx">sam</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Snake</span> <span class="s2">"Sammy the Python"</span>
 <span class="nx">tom</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Horse</span> <span class="s2">"Tommy the Palomino"</span>
@@ -139,31 +139,31 @@
 
 <p>Based on TypeScript’s syntax, it’s not too hard to see why:</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kr">class</span> <span class="nx">Animal</span> <span class="p">{</span>
-    <span class="nx">constructor</span><span class="p">(</span><span class="kr">public</span> <span class="nx">name</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">class</span> <span class="nx">Animal</span> <span class="p">{</span>
+    <span class="kd">constructor</span><span class="p">(</span><span class="kr">public</span> <span class="nx">name</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
     <span class="nx">move</span><span class="p">(</span><span class="nx">meters</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">alert</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s2">" moved "</span> <span class="o">+</span> <span class="nx">meters</span> <span class="o">+</span> <span class="s2">"m."</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="kr">class</span> <span class="nx">Snake</span> <span class="kr">extends</span> <span class="nx">Animal</span> <span class="p">{</span>
-    <span class="nx">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span> <span class="kr">super</span><span class="p">(</span><span class="nx">name</span><span class="p">);</span> <span class="p">}</span>
+<span class="kd">class</span> <span class="nx">Snake</span> <span class="kd">extends</span> <span class="nx">Animal</span> <span class="p">{</span>
+    <span class="kd">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span> <span class="k">super</span><span class="p">(</span><span class="nx">name</span><span class="p">);</span> <span class="p">}</span>
     <span class="nx">move</span><span class="p">()</span> <span class="p">{</span>
         <span class="nx">alert</span><span class="p">(</span><span class="s2">"Slithering..."</span><span class="p">);</span>
-        <span class="kr">super</span><span class="p">.</span><span class="nx">move</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+        <span class="k">super</span><span class="p">.</span><span class="nx">move</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="kr">class</span> <span class="nx">Horse</span> <span class="kr">extends</span> <span class="nx">Animal</span> <span class="p">{</span>
-    <span class="nx">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span> <span class="kr">super</span><span class="p">(</span><span class="nx">name</span><span class="p">);</span> <span class="p">}</span>
+<span class="kd">class</span> <span class="nx">Horse</span> <span class="kd">extends</span> <span class="nx">Animal</span> <span class="p">{</span>
+    <span class="kd">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span> <span class="k">super</span><span class="p">(</span><span class="nx">name</span><span class="p">);</span> <span class="p">}</span>
     <span class="nx">move</span><span class="p">()</span> <span class="p">{</span>
         <span class="nx">alert</span><span class="p">(</span><span class="s2">"Galloping..."</span><span class="p">);</span>
-        <span class="kr">super</span><span class="p">.</span><span class="nx">move</span><span class="p">(</span><span class="mi">45</span><span class="p">);</span>
+        <span class="k">super</span><span class="p">.</span><span class="nx">move</span><span class="p">(</span><span class="mi">45</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
 <span class="kd">var</span> <span class="nx">sam</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Snake</span><span class="p">(</span><span class="s2">"Sammy the Python"</span><span class="p">)</span>
-<span class="kd">var</span> <span class="nx">tom</span><span class="err">:</span> <span class="nx">Animal</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Horse</span><span class="p">(</span><span class="s2">"Tommy the Palomino"</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">tom</span><span class="p">:</span> <span class="nx">Animal</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Horse</span><span class="p">(</span><span class="s2">"Tommy the Palomino"</span><span class="p">)</span>
 
 <span class="nx">sam</span><span class="p">.</span><span class="nx">move</span><span class="p">()</span>
 <span class="nx">tom</span><span class="p">.</span><span class="nx">move</span><span class="p">(</span><span class="mi">34</span><span class="p">)</span></code></pre></figure>
@@ -257,5 +257,9 @@
         ga('send', 'pageview');
       </script>
     
+
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/2651647.js"></script>
+    <!-- End of HubSpot Embed Code -->
   </body>
 </html>

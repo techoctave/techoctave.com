@@ -103,7 +103,7 @@ I know some of you are anxious to jump into the code, so let’s get to it:</p>
 <h3 id="submit-sitemap-to-google-automatically">Submit Sitemap to Google Automatically</h3>
 <p>You can also automate your sitemap.xml submissions to Google using this handy Cronjob on Ubuntu or any flavor of linux:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">0 20 <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> /usr/bin/curl http://www.google.com/webmasters/tools/ping?sitemap<span class="o">=</span>http://yourdomain.com/sitemap.xml &gt; /dev/null</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">0 20 <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> /usr/bin/curl http://www.google.com/webmasters/tools/ping?sitemap<span class="o">=</span>http://yourdomain.com/sitemap.xml <span class="o">&gt;</span> /dev/null</code></pre></figure>
 
 <p>Do pay attention to the <em>/user/bin/curl</em> directive. You must give the <em>absolute</em> path to your instance of curl. Also, I don’t want to handle any responses from Google, so I send any responses to <em>/dev/null</em>. Think of <em>/dev/null</em> as a black hole where data goes in and is never stored or seen again!</p>
 
@@ -172,5 +172,9 @@ I know some of you are anxious to jump into the code, so let’s get to it:</p>
         ga('send', 'pageview');
       </script>
     
+
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/2651647.js"></script>
+    <!-- End of HubSpot Embed Code -->
   </body>
 </html>

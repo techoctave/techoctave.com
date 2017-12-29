@@ -94,7 +94,7 @@
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Gauge Properties</span>
 <span class="c1">// ----------------</span>
 <span class="nx">it</span><span class="p">(</span><span class="s2">"should be able to set a width"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-	<span class="nx">expect</span><span class="p">(</span><span class="nx">gauge</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">"width"</span><span class="p">)).</span><span class="nx">toEqual</span><span class="p">(</span><span class="mi">195</span><span class="p">);</span>
+	<span class="nx">expect</span><span class="p">(</span><span class="nx">gauge</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s2">"width"</span><span class="p">)).</span><span class="nx">toEqual</span><span class="p">(</span><span class="mi">195</span><span class="p">);</span>
 <span class="p">});</span></code></pre></figure>
 
 <p>The first parameter is the spec description. The second parameter is an anonymous JavaScript function that implements the spec. Here, we expect a new gauge instance to have a default width of 195.</p>
@@ -107,7 +107,7 @@
     <span class="c1">// Gauge Properties</span>
 	<span class="c1">// ----------------</span>
 	<span class="nx">it</span><span class="p">(</span><span class="s2">"should be able to set a width"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-		<span class="nx">expect</span><span class="p">(</span><span class="nx">gauge</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">"width"</span><span class="p">)).</span><span class="nx">toEqual</span><span class="p">(</span><span class="mi">195</span><span class="p">);</span>
+		<span class="nx">expect</span><span class="p">(</span><span class="nx">gauge</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s2">"width"</span><span class="p">)).</span><span class="nx">toEqual</span><span class="p">(</span><span class="mi">195</span><span class="p">);</span>
 	<span class="p">});</span>
 
     <span class="p">.</span> <span class="p">.</span> <span class="p">.</span>
@@ -116,7 +116,7 @@
 	<span class="c1">// -------------</span>
     <span class="nx">it</span><span class="p">(</span><span class="s2">"should be able to set a setValue"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
       <span class="nx">gauge</span><span class="p">.</span><span class="nx">setValue</span><span class="p">(</span><span class="mi">25</span><span class="p">);</span>
-      <span class="nx">expect</span><span class="p">(</span><span class="nx">gauge</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">"value"</span><span class="p">)).</span><span class="nx">toEqual</span><span class="p">(</span><span class="mi">25</span><span class="p">);</span>
+      <span class="nx">expect</span><span class="p">(</span><span class="nx">gauge</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s2">"value"</span><span class="p">)).</span><span class="nx">toEqual</span><span class="p">(</span><span class="mi">25</span><span class="p">);</span>
     <span class="p">});</span>
 <span class="p">});</span></code></pre></figure>
 
@@ -144,7 +144,7 @@ Every spec must have access to an instance of the Gauge class to run.</p>
 	<span class="c1">// ----------------</span>
 	<span class="nx">it</span><span class="p">(</span><span class="s2">"should be able to set a width"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
         <span class="kd">var</span> <span class="nx">gauge</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Gauge</span><span class="p">(</span><span class="s2">"tests"</span><span class="p">);</span>
-        <span class="nx">expect</span><span class="p">(</span><span class="nx">gauge</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">"width"</span><span class="p">)).</span><span class="nx">toEqual</span><span class="p">(</span><span class="mi">195</span><span class="p">);</span>
+        <span class="nx">expect</span><span class="p">(</span><span class="nx">gauge</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s2">"width"</span><span class="p">)).</span><span class="nx">toEqual</span><span class="p">(</span><span class="mi">195</span><span class="p">);</span>
 	<span class="p">});</span>
 
     <span class="p">.</span> <span class="p">.</span> <span class="p">.</span>
@@ -175,7 +175,7 @@ Every spec must have access to an instance of the Gauge class to run.</p>
     <span class="c1">// Gauge Properties</span>
 	<span class="c1">// ----------------</span>
 	<span class="nx">it</span><span class="p">(</span><span class="s2">"should be able to set a width"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nx">expect</span><span class="p">(</span><span class="nx">gauge</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">"width"</span><span class="p">)).</span><span class="nx">toEqual</span><span class="p">(</span><span class="mi">195</span><span class="p">);</span>
+        <span class="nx">expect</span><span class="p">(</span><span class="nx">gauge</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s2">"width"</span><span class="p">)).</span><span class="nx">toEqual</span><span class="p">(</span><span class="mi">195</span><span class="p">);</span>
 	<span class="p">});</span> 
 
     <span class="p">.</span> <span class="p">.</span> <span class="p">.</span>
@@ -195,11 +195,11 @@ Every spec must have access to an instance of the Gauge class to run.</p>
     <span class="c1">// Gauge Properties</span>
 	<span class="c1">// ----------------</span>
 	<span class="nx">it</span><span class="p">(</span><span class="s2">"should be able to set a width"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nx">expect</span><span class="p">(</span><span class="nx">gauge</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">"width"</span><span class="p">)).</span><span class="nx">toEqual</span><span class="p">(</span><span class="mi">195</span><span class="p">);</span>
+        <span class="nx">expect</span><span class="p">(</span><span class="nx">gauge</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s2">"width"</span><span class="p">)).</span><span class="nx">toEqual</span><span class="p">(</span><span class="mi">195</span><span class="p">);</span>
 	<span class="p">});</span>
 
     <span class="nx">it</span><span class="p">(</span><span class="s2">"should be able to set a autoresize"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nx">expect</span><span class="p">(</span><span class="nx">gauge</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">"autoresize"</span><span class="p">)).</span><span class="nx">toBeUndefined</span><span class="p">();</span>
+        <span class="nx">expect</span><span class="p">(</span><span class="nx">gauge</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s2">"autoresize"</span><span class="p">)).</span><span class="nx">toBeUndefined</span><span class="p">();</span>
     <span class="p">});</span>
 
     <span class="p">.</span> <span class="p">.</span> <span class="p">.</span>
@@ -304,5 +304,9 @@ Every spec must have access to an instance of the Gauge class to run.</p>
         ga('send', 'pageview');
       </script>
     
+
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/2651647.js"></script>
+    <!-- End of HubSpot Embed Code -->
   </body>
 </html>

@@ -62,7 +62,7 @@ I put the code in a helper to make integration in the Post view a little cleaner
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">module</span> <span class="nn">PostsHelper</span>
   <span class="k">def</span> <span class="nf">description</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
-    <span class="n">sanitize</span><span class="p">(</span><span class="n">content</span><span class="p">.</span><span class="nf">gsub</span><span class="p">(</span><span class="sr">/&lt;code[^&lt;]*&lt;\/code&gt;/</span><span class="p">,</span> <span class="s2">""</span><span class="p">),</span> <span class="ss">:tags</span> <span class="o">=&gt;</span> <span class="sx">%w()</span><span class="p">,</span> <span class="ss">:attributes</span> <span class="o">=&gt;</span> <span class="sx">%w()</span><span class="p">).</span><span class="nf">gsub</span><span class="p">(</span><span class="sr">/[\r\n?]/</span><span class="p">,</span> <span class="s2">" "</span><span class="p">).</span><span class="nf">squeeze</span><span class="p">(</span><span class="s2">" "</span><span class="p">).</span><span class="nf">gsub</span><span class="p">(</span><span class="sr">/\"/</span><span class="p">,</span> <span class="s2">"'"</span><span class="p">)[</span><span class="mi">0</span><span class="p">.</span><span class="nf">.</span><span class="mi">250</span><span class="p">].</span><span class="nf">strip</span>
+    <span class="n">sanitize</span><span class="p">(</span><span class="n">content</span><span class="p">.</span><span class="nf">gsub</span><span class="p">(</span><span class="sr">/&lt;code[^&lt;]*&lt;\/code&gt;/</span><span class="p">,</span> <span class="s2">""</span><span class="p">),</span> <span class="ss">:tags</span> <span class="o">=&gt;</span> <span class="sx">%w()</span><span class="p">,</span> <span class="ss">:attributes</span> <span class="o">=&gt;</span> <span class="sx">%w()</span><span class="p">).</span><span class="nf">gsub</span><span class="p">(</span><span class="sr">/[\r\n?]/</span><span class="p">,</span> <span class="s2">" "</span><span class="p">).</span><span class="nf">squeeze</span><span class="p">(</span><span class="s2">" "</span><span class="p">).</span><span class="nf">gsub</span><span class="p">(</span><span class="sr">/\"/</span><span class="p">,</span> <span class="s2">"'"</span><span class="p">)[</span><span class="mi">0</span><span class="o">..</span><span class="mi">250</span><span class="p">].</span><span class="nf">strip</span>
   <span class="k">end</span>
 <span class="k">end</span></code></pre></figure>
 
@@ -163,5 +163,9 @@ I put the code in a helper to make integration in the Post view a little cleaner
         ga('send', 'pageview');
       </script>
     
+
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/2651647.js"></script>
+    <!-- End of HubSpot Embed Code -->
   </body>
 </html>

@@ -82,34 +82,34 @@
 
 <p>An <a href="http://flint.cs.yale.edu/cs422/doc/art-of-asm/pdf/CH08.PDF">assembly language</a> is a low-level programming language for a computer, microcontroller, or other programmable device, in which each statement corresponds to a single machine code instruction:</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">fib</span><span class="err">:</span>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">fib</span><span class="p">:</span>
     <span class="nx">mov</span> <span class="nx">edx</span><span class="p">,</span> <span class="p">[</span><span class="nx">esp</span><span class="o">+</span><span class="mi">8</span><span class="p">]</span>
     <span class="nx">cmp</span> <span class="nx">edx</span><span class="p">,</span> <span class="mi">0</span>
-    <span class="nx">ja</span> <span class="err">@</span><span class="nx">f</span>
+    <span class="nx">ja</span> <span class="p">@</span><span class="nd">f</span>
     <span class="nx">mov</span> <span class="nx">eax</span><span class="p">,</span> <span class="mi">0</span>
     <span class="nx">ret</span>
     
-    <span class="err">@@:</span>
+    <span class="p">@@:</span>
     <span class="nx">cmp</span> <span class="nx">edx</span><span class="p">,</span> <span class="mi">2</span>
-    <span class="nx">ja</span> <span class="err">@</span><span class="nx">f</span>
+    <span class="nx">ja</span> <span class="p">@</span><span class="nd">f</span>
     <span class="nx">mov</span> <span class="nx">eax</span><span class="p">,</span> <span class="mi">1</span>
     <span class="nx">ret</span>
     
-    <span class="err">@@:</span>
+    <span class="p">@@:</span>
     <span class="nx">push</span> <span class="nx">ebx</span>
     <span class="nx">mov</span> <span class="nx">ebx</span><span class="p">,</span> <span class="mi">1</span>
     <span class="nx">mov</span> <span class="nx">ecx</span><span class="p">,</span> <span class="mi">1</span>
     
-    <span class="err">@@:</span>
+    <span class="p">@@:</span>
         <span class="nx">lea</span> <span class="nx">eax</span><span class="p">,</span> <span class="p">[</span><span class="nx">ebx</span><span class="o">+</span><span class="nx">ecx</span><span class="p">]</span>
         <span class="nx">cmp</span> <span class="nx">edx</span><span class="p">,</span> <span class="mi">3</span>
-        <span class="nx">jbe</span> <span class="err">@</span><span class="nx">f</span>
+        <span class="nx">jbe</span> <span class="p">@</span><span class="nd">f</span>
         <span class="nx">mov</span> <span class="nx">ebx</span><span class="p">,</span> <span class="nx">ecx</span>
         <span class="nx">mov</span> <span class="nx">ecx</span><span class="p">,</span> <span class="nx">eax</span>
         <span class="nx">dec</span> <span class="nx">edx</span>
-    <span class="nx">jmp</span> <span class="err">@</span><span class="nx">b</span>
+    <span class="nx">jmp</span> <span class="p">@</span><span class="nd">b</span>
     
-    <span class="err">@@:</span>
+    <span class="p">@@:</span>
     <span class="nx">pop</span> <span class="nx">ebx</span>
     <span class="nx">ret</span></code></pre></figure>
 
@@ -288,5 +288,9 @@
         ga('send', 'pageview');
       </script>
     
+
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/2651647.js"></script>
+    <!-- End of HubSpot Embed Code -->
   </body>
 </html>

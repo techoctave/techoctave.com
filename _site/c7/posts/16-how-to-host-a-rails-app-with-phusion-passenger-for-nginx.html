@@ -63,21 +63,21 @@
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">wget http://rubyforge.org/frs/download.php/71100/ruby-enterprise_1.8.7-2010.02_i386_ubuntu10.04.deb
 
-sudo dpkg -i ruby-enterprise_1.8.7-2010.02_i386_ubuntu10.04.deb
+<span class="nb">sudo </span>dpkg <span class="nt">-i</span> ruby-enterprise_1.8.7-2010.02_i386_ubuntu10.04.deb
 
-ruby -v</code></pre></figure>
+ruby <span class="nt">-v</span></code></pre></figure>
 
 <p>You should see something similar to <em>ruby 1.8.7 (2010-04-19 patchlevel 253) … Ruby Enterprise Edition 2010.02</em>. Now, update your RubyGem package manager and all of your installed gems:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo gem update --system
-sudo gem update</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>gem update <span class="nt">--system</span>
+<span class="nb">sudo </span>gem update</code></pre></figure>
 
 <h3 id="ruby-on-rails">Ruby on Rails</h3>
 
 <p>At this point you should make sure you’ve installed the Ruby on Rails gem. Don’t worry, you’ve probably already done that. Here’s the command to install Rails (just in case):</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo gem install rails
-rails -v</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>gem install rails
+rails <span class="nt">-v</span></code></pre></figure>
 
 <h3 id="install-configure-and-manage-nginx">Install, Configure and Manage Nginx</h3>
 
@@ -85,11 +85,11 @@ rails -v</code></pre></figure>
 
 <p>First, let’s install the Open SSL library. You’re going to need this later for SSL support and management:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo aptitude install libssl-dev</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>aptitude install libssl-dev</code></pre></figure>
 
 <p>Next, we are going to install the Passenger for Nginx module. This module will install both Nginx and Passenger:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo passenger-install-nginx-module</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>passenger-install-nginx-module</code></pre></figure>
 
 <p>Follow the default options. Soon, you’ll be prompted with two options to either select 1 or to select 2.</p>
 
@@ -99,11 +99,11 @@ rails -v</code></pre></figure>
 
 <p>You will also need to create a user and group for nginx. Issue the following command to do so:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">adduser --system --no-create-home --disabled-login --disabled-password --group nginx</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">adduser <span class="nt">--system</span> <span class="nt">--no-create-home</span> <span class="nt">--disabled-login</span> <span class="nt">--disabled-password</span> <span class="nt">--group</span> nginx</code></pre></figure>
 
 <p>Finally, let’s create an init.d script and have it boot at startup. The init.d will allow us to control Nginx:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo nano /etc/init.d/nginx</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>nano /etc/init.d/nginx</code></pre></figure>
 
 <p>Copy and paste the following Nginx init script into the new file:</p>
 
@@ -124,51 +124,51 @@ rails -v</code></pre></figure>
   <span class="nv">NAME</span><span class="o">=</span>nginx
   <span class="nv">DESC</span><span class="o">=</span>nginx
 
-  <span class="nb">test</span> -x <span class="nv">$DAEMON</span> <span class="o">||</span> <span class="nb">exit </span>0
+  <span class="nb">test</span> <span class="nt">-x</span> <span class="nv">$DAEMON</span> <span class="o">||</span> <span class="nb">exit </span>0
 
   <span class="c"># Include nginx defaults if available</span>
-  <span class="k">if</span> <span class="o">[</span> -f /etc/default/nginx <span class="o">]</span> ; <span class="k">then</span>
-      . /etc/default/nginx
+  <span class="k">if</span> <span class="o">[</span> <span class="nt">-f</span> /etc/default/nginx <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+      <span class="nb">.</span> /etc/default/nginx
   <span class="k">fi
 
-  </span><span class="nb">set</span> -e
+  </span><span class="nb">set</span> <span class="nt">-e</span>
 
-  . /lib/lsb/init-functions
+  <span class="nb">.</span> /lib/lsb/init-functions
 
   <span class="k">case</span> <span class="s2">"</span><span class="nv">$1</span><span class="s2">"</span> <span class="k">in
     </span>start<span class="p">)</span>
-      <span class="nb">echo</span> -n <span class="s2">"Starting </span><span class="nv">$DESC</span><span class="s2">: "</span>
-      start-stop-daemon --start --quiet --pidfile /opt/nginx/logs/<span class="nv">$NAME</span>.pid <span class="se">\</span>
-          --exec <span class="nv">$DAEMON</span> -- <span class="nv">$DAEMON_OPTS</span> <span class="o">||</span> <span class="nb">true
+      <span class="nb">echo</span> <span class="nt">-n</span> <span class="s2">"Starting </span><span class="nv">$DESC</span><span class="s2">: "</span>
+      start-stop-daemon <span class="nt">--start</span> <span class="nt">--quiet</span> <span class="nt">--pidfile</span> /opt/nginx/logs/<span class="nv">$NAME</span>.pid <span class="se">\</span>
+          <span class="nt">--exec</span> <span class="nv">$DAEMON</span> <span class="nt">--</span> <span class="nv">$DAEMON_OPTS</span> <span class="o">||</span> <span class="nb">true
       echo</span> <span class="s2">"</span><span class="nv">$NAME</span><span class="s2">."</span>
       <span class="p">;;</span>
     stop<span class="p">)</span>
-      <span class="nb">echo</span> -n <span class="s2">"Stopping </span><span class="nv">$DESC</span><span class="s2">: "</span>
-      start-stop-daemon --stop --quiet --pidfile /opt/nginx/logs/<span class="nv">$NAME</span>.pid <span class="se">\</span>
-          --exec <span class="nv">$DAEMON</span> <span class="o">||</span> <span class="nb">true
+      <span class="nb">echo</span> <span class="nt">-n</span> <span class="s2">"Stopping </span><span class="nv">$DESC</span><span class="s2">: "</span>
+      start-stop-daemon <span class="nt">--stop</span> <span class="nt">--quiet</span> <span class="nt">--pidfile</span> /opt/nginx/logs/<span class="nv">$NAME</span>.pid <span class="se">\</span>
+          <span class="nt">--exec</span> <span class="nv">$DAEMON</span> <span class="o">||</span> <span class="nb">true
       echo</span> <span class="s2">"</span><span class="nv">$NAME</span><span class="s2">."</span>
       <span class="p">;;</span>
     restart|force-reload<span class="p">)</span>
-      <span class="nb">echo</span> -n <span class="s2">"Restarting </span><span class="nv">$DESC</span><span class="s2">: "</span>
-      start-stop-daemon --stop --quiet --pidfile <span class="se">\</span>
-          /opt/nginx/logs/<span class="nv">$NAME</span>.pid --exec <span class="nv">$DAEMON</span> <span class="o">||</span> <span class="nb">true
+      <span class="nb">echo</span> <span class="nt">-n</span> <span class="s2">"Restarting </span><span class="nv">$DESC</span><span class="s2">: "</span>
+      start-stop-daemon <span class="nt">--stop</span> <span class="nt">--quiet</span> <span class="nt">--pidfile</span> <span class="se">\</span>
+          /opt/nginx/logs/<span class="nv">$NAME</span>.pid <span class="nt">--exec</span> <span class="nv">$DAEMON</span> <span class="o">||</span> <span class="nb">true
       </span>sleep 1
-      start-stop-daemon --start --quiet --pidfile <span class="se">\</span>
-          /opt/nginx/logs/<span class="nv">$NAME</span>.pid --exec <span class="nv">$DAEMON</span> -- <span class="nv">$DAEMON_OPTS</span> <span class="o">||</span> <span class="nb">true
+      start-stop-daemon <span class="nt">--start</span> <span class="nt">--quiet</span> <span class="nt">--pidfile</span> <span class="se">\</span>
+          /opt/nginx/logs/<span class="nv">$NAME</span>.pid <span class="nt">--exec</span> <span class="nv">$DAEMON</span> <span class="nt">--</span> <span class="nv">$DAEMON_OPTS</span> <span class="o">||</span> <span class="nb">true
       echo</span> <span class="s2">"</span><span class="nv">$NAME</span><span class="s2">."</span>
       <span class="p">;;</span>
     reload<span class="p">)</span>
-        <span class="nb">echo</span> -n <span class="s2">"Reloading </span><span class="nv">$DESC</span><span class="s2"> configuration: "</span>
-        start-stop-daemon --stop --signal HUP --quiet --pidfile /opt/nginx/logs/<span class="nv">$NAME</span>.pid <span class="se">\</span>
-            --exec <span class="nv">$DAEMON</span> <span class="o">||</span> <span class="nb">true
+        <span class="nb">echo</span> <span class="nt">-n</span> <span class="s2">"Reloading </span><span class="nv">$DESC</span><span class="s2"> configuration: "</span>
+        start-stop-daemon <span class="nt">--stop</span> <span class="nt">--signal</span> HUP <span class="nt">--quiet</span> <span class="nt">--pidfile</span> /opt/nginx/logs/<span class="nv">$NAME</span>.pid <span class="se">\</span>
+            <span class="nt">--exec</span> <span class="nv">$DAEMON</span> <span class="o">||</span> <span class="nb">true
         echo</span> <span class="s2">"</span><span class="nv">$NAME</span><span class="s2">."</span>
         <span class="p">;;</span>
     status<span class="p">)</span>
-        status_of_proc -p /opt/nginx/logs/<span class="nv">$NAME</span>.pid <span class="s2">"</span><span class="nv">$DAEMON</span><span class="s2">"</span> nginx <span class="o">&amp;&amp;</span> <span class="nb">exit </span>0 <span class="o">||</span> <span class="nb">exit</span> <span class="nv">$?</span>
+        status_of_proc <span class="nt">-p</span> /opt/nginx/logs/<span class="nv">$NAME</span>.pid <span class="s2">"</span><span class="nv">$DAEMON</span><span class="s2">"</span> nginx <span class="o">&amp;&amp;</span> <span class="nb">exit </span>0 <span class="o">||</span> <span class="nb">exit</span> <span class="nv">$?</span>
         <span class="p">;;</span>
     <span class="k">*</span><span class="p">)</span>
       <span class="nv">N</span><span class="o">=</span>/etc/init.d/<span class="nv">$NAME</span>
-      <span class="nb">echo</span> <span class="s2">"Usage: </span><span class="nv">$N</span><span class="s2"> {start|stop|restart|reload|force-reload|status}"</span> &gt;&amp;2
+      <span class="nb">echo</span> <span class="s2">"Usage: </span><span class="nv">$N</span><span class="s2"> {start|stop|restart|reload|force-reload|status}"</span> <span class="o">&gt;</span>&amp;2
       <span class="nb">exit </span>1
       <span class="p">;;</span>
   <span class="k">esac</span>
@@ -179,15 +179,15 @@ rails -v</code></pre></figure>
 
 <p>Change permission on the script to make it an executable:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo chmod +x /etc/init.d/nginx</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>chmod +x /etc/init.d/nginx</code></pre></figure>
 
 <p>Have the new executable run at startup:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo /usr/sbin/update-rc.d -f nginx defaults</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo</span> /usr/sbin/update-rc.d <span class="nt">-f</span> nginx defaults</code></pre></figure>
 
 <p>Now, you have the power to start, stop and restart Nginx. Start your shiny new Nginx Webserver with this command:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo /etc/init.d/nginx start</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo</span> /etc/init.d/nginx start</code></pre></figure>
 
 <p>Navigate to your server’s IP address using Firefox or your favorite browser. You should see “Welcome to Nginx!” This means Nginx is up-and-running. Now we can focus on configuring Nginx for your Rails web application.</p>
 
@@ -195,36 +195,36 @@ rails -v</code></pre></figure>
 
 <p>Edit your Nginx configuration:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo nano /opt/nginx/conf/nginx.conf</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>nano /opt/nginx/conf/nginx.conf</code></pre></figure>
 
 <p>Make sure Nginx knows the location of your passenger and ruby installation:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">. . .
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">.</span> <span class="nb">.</span> <span class="nb">.</span>
 http <span class="o">{</span>
-    passenger_root /usr/local/lib/ruby/gems/1.8/gems/passenger-2.2.15;
-    passenger_ruby /usr/local/bin/ruby;
-. . .
+    passenger_root /usr/local/lib/ruby/gems/1.8/gems/passenger-2.2.15<span class="p">;</span>
+    passenger_ruby /usr/local/bin/ruby<span class="p">;</span>
+<span class="nb">.</span> <span class="nb">.</span> <span class="nb">.</span>
     server <span class="o">{</span>
-    . . .
+    <span class="nb">.</span> <span class="nb">.</span> <span class="nb">.</span>
     <span class="o">}</span>
 <span class="o">}</span></code></pre></figure>
 
 <p>For fun, let’s modify our Server section to deploy our Rails app to a Sub URI:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">    server <span class="o">{</span>
-        listen 80;
-        server_name domain.com;
-        charset utf-8;
-        root /www/domain.com/public_html;
-        passenger_enabled on;
-        passenger_base_uri /blog;
-        rails_spawn_method smart;
-        rails_env production;
+        listen 80<span class="p">;</span>
+        server_name domain.com<span class="p">;</span>
+        charset utf-8<span class="p">;</span>
+        root /www/domain.com/public_html<span class="p">;</span>
+        passenger_enabled on<span class="p">;</span>
+        passenger_base_uri /blog<span class="p">;</span>
+        rails_spawn_method smart<span class="p">;</span>
+        rails_env production<span class="p">;</span>
     <span class="o">}</span></code></pre></figure>
 
 <p>To do this, we have to make a symlink from our Rails app’s public directory to the document root of our static website:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ln -s /www/domain.com/railsapp/public /www/domain.com/public_html/blog</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ln <span class="nt">-s</span> /www/domain.com/railsapp/public /www/domain.com/public_html/blog</code></pre></figure>
 
 <p>This command will create a symlink called <em>blog</em> in the document root <em>/www/domain.com/public_html/</em>.</p>
 
@@ -232,16 +232,16 @@ http <span class="o">{</span>
 
 <p>For a typical Xen VPS setup, you should also think about adding the following tweaks to your Nginx conf:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">user                      nginx nginx;
-worker_processes          4;
-worker_connections        1024;
-passenger_max_pool_size   6;</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">user                      nginx nginx<span class="p">;</span>
+worker_processes          4<span class="p">;</span>
+worker_connections        1024<span class="p">;</span>
+passenger_max_pool_size   6<span class="p">;</span></code></pre></figure>
 
 <p>Read more about the the <em><a href="http://modrails.com/documentation/Users%20guide%20Nginx.html#PassengerMaxPoolSize">passenger_max_pool_size</a></em> directive. The maximum value depends on your server’s cpu processor and other factors. Do experiment!</p>
 
 <p>When you’re finished, save the file and restart Nginx:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo /etc/init.d/nginx restart</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo</span> /etc/init.d/nginx restart</code></pre></figure>
 
 <h4 id="manage-nginx">Manage Nginx</h4>
 
@@ -253,13 +253,13 @@ passenger_max_pool_size   6;</code></pre></figure>
 
 <p>Passenger also has some pretty cool built-in monitoring applications. You can access them using these commands:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo passenger-status
-sudo passenger-memory-stats</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>passenger-status
+<span class="nb">sudo </span>passenger-memory-stats</code></pre></figure>
 
 <p>I suggest installing another utility to see what’s using memory on your entire server. It’s called htop:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo apt-get install htop
-sudo htop</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>apt-get install htop
+<span class="nb">sudo </span>htop</code></pre></figure>
 
 <p>Well, you’re done really! I hope this helps.</p>
 
@@ -328,5 +328,9 @@ sudo htop</code></pre></figure>
         ga('send', 'pageview');
       </script>
     
+
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/2651647.js"></script>
+    <!-- End of HubSpot Embed Code -->
   </body>
 </html>
