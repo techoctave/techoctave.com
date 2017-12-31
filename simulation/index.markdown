@@ -134,7 +134,7 @@ permalink: /simulation/
 			<!--<th class="product-footer" style="width: 260px;"></th>
 			<th class="Basic">Buy</th>
 			<th class="Premium">Buy</th>-->
-			<th colspan="4" class="Supreme edges buy" data-description="Simulation Gold" data-amount="4995" data-plan="simulation"><a href="https://sites.fastspring.com/techoctave/product/simulation">Buy Now</a></th>
+			<th colspan="4" class="Supreme edges buy" data-description="Simulation Gold" data-amount="4995" data-plan="simulation"><a href="https://sites.fastspring.com/techoctave/product/simulation-subscription">Buy Now</a></th>
 		</tr>
 	</tfoot>
 	</table>

@@ -148,7 +148,7 @@ permalink: /charts/
 			<!--<th class="product-footer" style="width: 260px;"></th>
 			<th class="Basic">Buy</th>
 			<th class="Premium">Buy</th>-->
-			<th colspan="4" class="Supreme edges buy" data-description="Charts Supreme" data-amount="495" data-plan="charts"><a href="https://sites.fastspring.com/techoctave/product/charts">Buy Now</a></th>
+			<th colspan="4" class="Supreme edges buy" data-description="Charts Supreme" data-amount="495" data-plan="charts"><a href="https://sites.fastspring.com/techoctave/product/charts-subscription">Buy Now</a></th>
 		</tr>
 	</tfoot>
 	</table>
