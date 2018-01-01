@@ -1290,6 +1290,7 @@ section#single-wrap ul.flight-gauges li {
   display: block;
   padding: 15px;
   margin: 6px;
+  /*box-shadow: 1px 1px 2px -1px #333;*/
 }
 
 section#single-wrap ul.flight-gauges li h3 {
