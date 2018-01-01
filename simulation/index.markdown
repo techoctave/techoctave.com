@@ -20,7 +20,7 @@ permalink: /simulation/
 			<th class="product" style="width: 260px;">Product options</th>
 			<th class="Basic">Basic</th>
 			<th class="Premium">Silver</th>
-			<th class="Supreme">Gold Package</th>
+			<th class="Supreme">Gold</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -140,7 +140,7 @@ permalink: /simulation/
 	</table>
 </div><!--products-->
 
-## Why choose TechOctave?
+## The #1 choice for JavaScript developers.
 
 Let's be clear, you have choices, but there's a reason we're the #1 choice.
 

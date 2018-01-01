@@ -5,9 +5,9 @@ date:   2000-01-01 00:00:00
 permalink: /gauges/
 ---
 
-# Beautiful dashboard gauges for the sophisticated developer.
+# Beautiful JavaScript Gauges for the sophisticated developer.
 
-#### Beautifully illustrate your data. Start reaching your goals.
+#### Powerful API. Easy to get started.
 
 ![gauges](/images/gauges.png)
 
@@ -20,7 +20,7 @@ permalink: /gauges/
 			<th class="product">Product options</th>
 			<th class="Basic">Basic</th>
 			<th class="Premium">Premium</th>
-			<th class="Supreme">Supreme Package</th>
+			<th class="Supreme">Supreme</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -153,7 +153,7 @@ permalink: /gauges/
 	</table>
 </div><!--products-->
 
-## Why choose TechOctave?
+## The #1 choice for JavaScript developers.
 
 Let's be clear, you have choices, but there's a reason we're the #1 choice.
 

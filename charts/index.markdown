@@ -21,7 +21,7 @@ permalink: /charts/
 			<th class="product">Product options</th>
 			<th class="Basic">Basic</th>
 			<th class="Premium">Premium</th>
-			<th class="Supreme">Supreme Package</th>
+			<th class="Supreme">Supreme</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -154,7 +154,7 @@ permalink: /charts/
 	</table>
 </div><!--products-->
 
-## Why choose TechOctave?
+## The #1 choice for JavaScript developers.
 
 Let's be clear, you have choices, but there's a reason we're the #1 choice.
 
@@ -215,7 +215,11 @@ With our charts you can clearly present where you are and start seeing where you
 
 <br/>
 
-## Powerful JavaScript Charts Suite
+## Powerful JavaScript Charts
+
+<strong>Gauge Charts:</strong> No matter the range or depth of information, you can capture what’s important to you. Our gauges are meticulously designed so you can create the personalized look-and-feel you want. Learn more about our [JavaScript Gauges](/gauges).
+
+![gauges](/images/gauges-quad.png)
 
 <strong>Pie Charts:</strong> Pie charts are circular charts subdivided into pie slices. Pie charts are used to illustrate the size relationship between each pie slice and the whole pie. Our charts include the Pie Chart, Donut Chart and Spie Chart:
 
@@ -349,14 +353,6 @@ Here, we used jQuery to make an Ajax call for some JSON data. What this means is
 <strong>Smart and intuitive API design.</strong> Each purchase includes sample projects with tons of examples on how to use our chart's API. This includes a live example of how to feed data to our charts from a remote server using Ajax.
 
 For an advanced discussion on client-side polling techniques, see [Long Polling with JavaScript and jQuery](https://techoctave.com/c7/posts/60-simple-long-polling-example-with-javascript-and-jquery) on the TechOctave blog. There we discuss various options for feeding data to our charts from a remote server.
-
-<br/>
-
-## So, what's next exactly?
-
-<strong>Purchase a library package.</strong> Within a few seconds, you'll receive a receipt for your purchase and a secure link to download the package. Each package comes with tons of examples to get you up and running in no time.
-
-Or contact us to schedule a demo. We'll walk you through the example projects and answer any questions you may have.
 
 <br/>
 
