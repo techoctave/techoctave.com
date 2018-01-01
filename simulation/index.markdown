@@ -230,7 +230,7 @@ Our JavaScript Flight Gauges are beautiful and smart:
 	</li>
 	<li class="clearfix rpm">
 		<h3>RPM Indicator</h3>
-		<img src="/images/rpm-indicator.png" alt="RPM Indicator" title="The RPM Indicator or Tachometer is a flight instrument measuring the rotation speed of the aircraft's engine.The RPM Indicator is equipped to display color ranges to indicate a safe range of rotation speeds. Unlimited color ranges are available and optional."/>
+		<img src="/images/tachometer-rpm-indicator.png" alt="Tachometer RPM Indicator" title="The RPM Indicator or Tachometer is a flight instrument measuring the rotation speed of the aircraft's engine. The RPM Indicator is equipped to display color ranges to indicate a safe range of rotation speeds. Unlimited color ranges are available and optional."/>
 	</li>
 	<li class="clearfix heading">
 		<h3>Heading Indicator</h3>
