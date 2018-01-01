@@ -313,14 +313,15 @@ We've tested on both Windows and Mac OS X in every major browser. Including: IE7
 
 <strong>Fully exposed API.</strong> Every background, every line, every needle, every frame, everything is at your fingertips to control:
 
-![configurable_flight_gauges](/images/configurable_flight_gauges.png)
+![configurable_flight_gauges](/images/altimeter-electronic-configurable.png)
+
+We don't limit you to whatever comes in the box. Our flight gauges are flexible. Need to show the current value, set the *hasValue* property to *true*. Need a completely digital version of the Altimeter, there's a property for that.
 
 For us it's simple, give you the best software. Then get out of the way. We believe our JavaScript components do something no one else can. . .We put your success in your hands - as it should be.
 
-<img src="/images/glasscockpit.gif" style="border-radius: 18px;" alt="JavaScript flight gauge glass cockpit."/>
+<img src="/images/flight-gauges-glass-cockpit-live.gif" style="border-radius: 18px;" alt="JavaScript flight gauge glass cockpit."/>
 
-
-So go all digital and create your own custom glass cockpits. Or develop a custom multi-functional display. If you can dream it, our flight gauges can help you pull it off and then some.
+So go all digital and create your own custom glass cockpit flight instrument panel. Or develop a custom multi-functional display. If you can dream it, our flight gauges can help you pull it off and then some.
 
 No matter the requirement or client demand, we keep our flight gauges flexible so you can stay flexible too.
 
@@ -346,17 +347,16 @@ We produce quality documentation of how our software works, insuring you spend m
 <p class="code">
 	<span>var altimeter = new Altimeter("altimeter", {</span>
 		<span class="content">altitude: 0,</span>
-		<span class="content">reporting: 0,</span>
-		<span class="content">hundreds: 0,</span>
-		<span class="content">thousands: 0</span>
+		<span class="content">electric: 0,</span>
+		<span class="content">pressure: 0,</span>
+		<span class="content">pressureUnit: "hPa"</span>
 	<span>});</span>
 </p>
 
 <p class="code">
-	<span>altimeter.setAltitude(0);</span>
-	<span>altimeter.setReporting(2573);</span>
-	<span>altimeter.setHundreds(2);</span>
-	<span>altimeter.setThousands(1);</span>
+	<span>altimeter.setAltitude(30000);</span>
+	<span>altimeter.setElectric(30000);</span>
+	<span>altimeter.setPressure(250);</span>
 </p>
 
 <p class="code">
