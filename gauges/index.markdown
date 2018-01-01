@@ -346,7 +346,7 @@ Or contact us to start a trial. We'll answer any questions you may have and get 
 
 <strong>We built our gauges to help you meet your goals.</strong> This is why we offer guaranteed support, for all active licenses, for the life of our product.
 
-Have a few questions or want to schedule a demo? Contact [sales@techoctave.com](mailto: sales@techoctave.com) or give us a call at +1 (614) 398-1220. We succeed when you succeed.
+Have a few questions or want to start a trial? Contact [sales@techoctave.com](mailto: sales@techoctave.com) or give us a call at +1 (614) 398-1220. We succeed when you succeed.
 
 
 
