@@ -1245,9 +1245,9 @@ section#single-wrap .video-js-box {
 						  IMAGE LIST
 -----------------------------------------------------------*/
 section#single-wrap ul.gauges {
-    list-style-type: none;
-    padding: 0;
-	margin: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 section#single-wrap ul.gauges li {
@@ -1262,19 +1262,76 @@ section#single-wrap ul.gauges li div.title h3 {
 }
 
 section#single-wrap ul.gauges li div.title {
-    text-align: left;
-    margin-left: 32.5%;
+  text-align: left;
+  margin-left: 32.5%;
 }
 
 section#single-wrap ul.gauges li div.screenshot {
 	float: left;
 	width: 30%;
-    padding-right: 1em;
+  padding-right: 1em;
 }
 
 section#single-wrap ul.gauges li div.description {
     width: 100%;
 }
+
+/* Flight Gauges */
+section#single-wrap ul.flight-gauges {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+section#single-wrap ul.flight-gauges li {
+  background-color: #E7E7E7;
+  float: left;
+  border-radius: 10px;
+  display: block;
+  padding: 15px;
+  margin: 6px;
+}
+
+section#single-wrap ul.flight-gauges li h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15.5px;
+  margin-top: 0;
+  font-weight: bold;
+}
+
+section#single-wrap ul.flight-gauges li img {
+	width: 235px;
+  height: 233px;
+}
+
+@media only screen and (min-width : 914px) {
+  section#single-wrap ul.flight-gauges li.airspeed {
+    margin-left: 0;
+  }
+
+  section#single-wrap ul.flight-gauges li.altimeter {
+    margin-right: 0;
+  }
+
+  section#single-wrap ul.flight-gauges li.turn-coordinator {
+    margin-left: 0;
+  }
+
+  section#single-wrap ul.flight-gauges li.vsi {
+    margin-right: 0;
+  }
+
+  section#single-wrap ul.flight-gauges li.rpm {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width : 648px) {
+  section#single-wrap ul.flight-gauges li {
+    float: none;
+  }
+}
+
 
 
 /*-----------------------------------------------------------
