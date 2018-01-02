@@ -168,13 +168,13 @@ Let's be clear, you have choices, but there's a reason we're the #1 choice.
 
 ## Great products begin with great components.
 
-<strong>Every day respected brands rely on our Gauge Suite.</strong> From small proprietorships to research institutions and every thing in-between. All satisfied customers:
+<strong>Every day respected brands rely on our JavaScript Gauges.</strong> From small proprietorships to research institutions and every thing in-between. All satisfied customers:
 
 ![customers](/images/customers.png)
 
 
 <p class="testimonial">
-Beautiful interfaces. Clean code and cross-browser compatibility baked right in. The Dashboard Gauge Suite from TechOctave hit all the marks for us. <em>- Joseph Carerra, PhD, Sr. Research Scientist, CAE</em>
+Beautiful interfaces. Clean code and cross-browser compatibility baked right in. The JavaScript Gauges from TechOctave hit all the marks for us. <em>- Joseph Carerra, PhD, Sr. Research Scientist, CAE</em>
 </p>
 
 <p class="testimonial">
@@ -186,7 +186,7 @@ TechOctave used Raphael to produce some very good looking gauges. Best part is i
 </p>
 
 <p class="testimonial">
-The Dashboard Gauge Suite from TechOctave brings us a variety of great looking dashboard gauge options. It's been a pleasure working with them. <em>- Robert Herbert, PhD, Research Scientist, JPL</em>
+The JavaScript Gauges from TechOctave brings us a variety of great looking dashboard gauge options. It's been a pleasure working with them. <em>- Robert Herbert, PhD, Research Scientist, JPL</em>
 </p>
 
 <br/>
@@ -208,7 +208,7 @@ With our gauges you are ready for the next project or presentation. Here's why:
 	<li>Use our gauges offline (no internet connection needed)</li>
 	<li>Blends with any background color in any browser (including IE7+)</li>
 	<li>Never worry about cross-browser compatibility again</li>
-	<li>Seamless integration with our <a href="/charts">JavaScript Charts</a> Suite</li>
+	<li>Seamless integration with our <a href="/charts">JavaScript Charts</a></li>
 </ul>
 
 <br/>
@@ -230,7 +230,7 @@ With our gauges you are ready for the next project or presentation. Here's why:
 			<param name="allowfullscreen" value="true"/>
 			<param name="flashvars" value='config={"playlist":["http://techoctave.com/images/poster.png", {"url": "/videos/dataviz.mp4", "autoPlay":false, "autoBuffering":true, "scaling":"fit"}]}'/>
 
-			<img src="/images/poster.png" width="750" height="365" alt="Gauge Suite" title="Gauge Suite"/>
+			<img src="/images/poster.png" width="750" height="365" alt="JavaScript Gauges" title="JavaScript Gauges"/>
 		</object>
 	</video>
 </div>--><!--VideoJS-->
@@ -258,7 +258,7 @@ With our gauges you are ready for the next project or presentation. Here's why:
 	<li>License</li>
 </ul>
 
-Flexibility is the hallmark of our Dashboard Gauge Suite. Our gauges are built to give you a foundation for your imagination. With over 70+ customizable properties, the sky is literally the limit with our gauges.
+Flexibility is the hallmark of our JavaScript Gauges. Our gauges are built to give you a foundation for your imagination. With over 70+ customizable properties, the sky is literally the limit with our gauges.
 
 <br/>
 
@@ -326,7 +326,7 @@ Most of the time you'll need to feed data to your gauge from a remote server. Le
 	<span>});</span>
 </p>
 
-Here, we used jQuery to make an Ajax call for some JSON data. What this means is you can update each gauge without refreshing the page. You'll be able to do this with every gauge in our suite. Think of the possibilities!
+Here, we used jQuery to make an Ajax call for some JSON data. What this means is you can update each gauge without refreshing the page. You'll be able to do this with every single one of our JavaScript Gauges. Think of the possibilities!
 
 <strong>Smart and intuitive API design.</strong> Each purchase includes sample projects with tons of examples on how to use our gauge's API. This includes a live example of how to feed data to our gauges from a remote server using Ajax.
 

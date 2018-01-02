@@ -169,7 +169,7 @@ Let's be clear, you have choices, but there's a reason we're the #1 choice.
 
 ## Great products begin with great components.
 
-<strong>Every day respected brands rely on our Gauge Suite.</strong> From small proprietorships to research institutions and every thing in-between. All satisfied customers:
+<strong>Every day respected brands rely on our JavaScript Charts.</strong> From small proprietorships to research institutions and every thing in-between. All satisfied customers:
 
 ![customers](/images/customers.png)
 
@@ -183,7 +183,7 @@ Part of my job is setting the right foundation for success. With TechOctave's Ja
 </p>
 
 <p class="testimonial">
-Both beautiful and functional. The only thing that comes close to TechOctave's JavaScript Charts is its <a href="http://techoctave.com/gauges/">Dashboard Gauge Suite</a>. Both are based on Raphael - SVG & VML(IE7+). They just work in every browser, so I can focus on my application. <em>- Pratik Suresh, Tech Lead, Sr. Developer, CA</em>
+Both beautiful and functional. The only thing that comes close to TechOctave's JavaScript Charts is its <a href="https://techoctave.com/gauges/">JavaScript Gauges</a>. Both are based on Raphael - SVG & VML(IE7+). They just work in every browser, so I can focus on my application. <em>- Pratik Suresh, Tech Lead, Sr. Developer, CA</em>
 </p>
 
 
@@ -209,7 +209,7 @@ With our charts you can clearly present where you are and start seeing where you
 	<li>Use our charts offline (no internet connection needed)</li>
 	<li>Blends with any background color in any browser (including IE7+)</li>
 	<li>Never worry about cross-browser compatibility again</li>
-	<li>Seamless integration with our <a href="http://techoctave.com/gauges">JavaScript Gauges</a> Suite</li>
+	<li>Seamless integration with our <a href="http://techoctave.com/gauges">JavaScript Gauges</a></li>
 	<li>Over 30+ customizable properties</li>
 </ul>
 
@@ -348,7 +348,7 @@ Most of the time you'll need to feed data to your gauge from a remote server. Le
 	<span>});</span>
 </p>
 
-Here, we used jQuery to make an Ajax call for some JSON data. What this means is you can update each gauge without refreshing the page. You'll be able to do this with every gauge in our suite. Think of the possibilities!
+Here, we used jQuery to make an Ajax call for some JSON data. What this means is you can update each chart without refreshing the page. You'll be able to do this with every single one of our JavaScript Charts. Think of the possibilities!
 
 <strong>Smart and intuitive API design.</strong> Each purchase includes sample projects with tons of examples on how to use our chart's API. This includes a live example of how to feed data to our charts from a remote server using Ajax.
 
